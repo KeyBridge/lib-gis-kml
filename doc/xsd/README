@@ -1,0 +1,3 @@
+Compile with:
+
+xjc ogckml22.xsd kml22gx.xsd atom-author-link.xsd -b JAK_binding.xjb
