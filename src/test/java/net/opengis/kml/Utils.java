@@ -95,7 +95,7 @@ public final class Utils {
   private static Marshaller createMarshaller(JAXBContext jc) throws JAXBException, PropertyException {
     Marshaller m = jc.createMarshaller();
     m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
-    m.setProperty("com.sun.xml.bind.namespacePrefixMapper", new NameSpaceBeautyfier());
+//    m.setProperty("com.sun.xml.bind.namespacePrefixMapper", new NameSpaceBeautyfier());
     return m;
   }
 

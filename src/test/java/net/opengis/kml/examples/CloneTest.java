@@ -1,34 +1,27 @@
 package net.opengis.kml.examples;
 
 import java.io.File;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.List;
-
 import junit.framework.Assert;
-
+import net.opengis.kml.*;
 import org.junit.Test;
-
-import net.opengis.kml.Boundary;
-import net.opengis.kml.Coordinate;
-import net.opengis.kml.Document;
-import net.opengis.kml.Folder;
-import net.opengis.kml.Kml;
-import net.opengis.kml.MultiGeometry;
-import net.opengis.kml.Placemark;
-import net.opengis.kml.Polygon;
 
 public class CloneTest {
 
   @Test
-  public void testClonePlacemark() {
-    String path = "src/main/resources/exampledata/worldBorders.kml";
-    Kml kml = Kml.unmarshal(new File(path));
+  public void testClonePlacemark() throws URISyntaxException {
+    URL uri = getClass().getClassLoader().getResource("exampledata/worldBorders.kml");
+//    String path = "src/main/resources/exampledata/worldBorders.kml";
+    Kml kml = Kml.unmarshal(new File(uri.toURI()));
     Document document = (Document) kml.getFeature();
     Folder folder = (Folder) document.getFeature().get(0);
     Placemark pm = (Placemark) folder.getFeature().get(17);
 
     Placemark placemark = pm.clone();//Utils.clonePlacemark(pm);
-    Assert.assertEquals(placemark,pm); // country with multipolygon, outer and inner linear ring objects
-    
+    Assert.assertEquals(placemark, pm); // country with multipolygon, outer and inner linear ring objects
+
     Assert.assertEquals(pm.getId(), "BGD"); // country with multipolygon, outer and inner linear ring objects
     Assert.assertNotSame(pm, placemark);
     Assert.assertEquals(pm.getId(), placemark.getId());
