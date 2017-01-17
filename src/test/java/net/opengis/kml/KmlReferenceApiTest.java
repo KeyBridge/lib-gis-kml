@@ -210,13 +210,13 @@ public final class KmlReferenceApiTest implements IKMLReference
 
 	private AddressDetails createAddressDetails() {
 		PostBox postBox = new PostBox(new PostBox.PostBoxNumber());
-		PostalRoute postalRoute = new PostalRoute(new ArrayList<PostalRoute.PostalRouteName>(), new PostalRoute.PostalRouteNumber());
+		PostalRoute postalRoute = new PostalRoute(new ArrayList<>(), new PostalRoute.PostalRouteNumber());
 		Premise.PremiseNumberRange premisenumberrange = new Premise.PremiseNumberRange(new Premise.PremiseNumberRange.PremiseNumberRangeFrom(
-		    new ArrayList<PremiseNumber>()), new Premise.PremiseNumberRange.PremiseNumberRangeTo(new ArrayList<PremiseNumber>()));
-		Premise premise = new Premise(new Premise.PremiseLocation(), new ArrayList<PremiseNumber>(), premisenumberrange);
+		    new ArrayList<>()), new Premise.PremiseNumberRange.PremiseNumberRangeTo(new ArrayList<>()));
+		Premise premise = new Premise(new Premise.PremiseLocation(), new ArrayList<>(), premisenumberrange);
 
 		AddressDetails.Address xalAddress = new AddressDetails.Address();
-		AddressLines addressLines = new AddressLines(new ArrayList<AddressLine>());
+		AddressLines addressLines = new AddressLines(new ArrayList<>());
 		
 		Locality locality = new Locality(postBox, new LargeMailUser(), new PostOffice(), postalRoute);
 		AdministrativeArea administrativeArea = new AdministrativeArea(locality, new PostOffice(), new PostalCode());
@@ -1154,7 +1154,7 @@ public final class KmlReferenceApiTest implements IKMLReference
 		.withLinkDescription("...")
 		.withLinkSnippet(new Snippet().withMaxLines(2).withValue("..."))
 		.withExpires("...")
-		.withUpdate(KmlFactory.createUpdate("", new ArrayList<Object>()))
+		.withUpdate(KmlFactory.createUpdate("", new ArrayList<>()))
 		.withAbstractView(KmlFactory.createLookAt());
 		
 		networklinkcontrol.createAndSetLinkSnippet().withMaxLines(2).withValue("...");
@@ -1901,7 +1901,7 @@ public final class KmlReferenceApiTest implements IKMLReference
 	public void updateChange() {
 		final Change change = KmlFactory.createChange();
 		final NetworkLinkControl networklink = KmlFactory.createNetworkLinkControl();
-		networklink.createAndSetUpdate("http://www/~sam/January14Data/Point.kml",  new ArrayList<Object>())
+		networklink.createAndSetUpdate("http://www/~sam/January14Data/Point.kml",  new ArrayList<>())
 		.addToCreateOrDeleteOrChange(change);
 		
 		final Point point = new Point().withTargetId("point123").addToCoordinates("-95.48,40.43,0");
@@ -1921,7 +1921,7 @@ public final class KmlReferenceApiTest implements IKMLReference
 	public void updateCreate() {
 		
 		final Create create = KmlFactory.createCreate();
-		final Update update = KmlFactory.createUpdate("http://myserver.com/Point.kml",  new ArrayList<Object>()).addToCreateOrDeleteOrChange(create);
+		final Update update = KmlFactory.createUpdate("http://myserver.com/Point.kml",  new ArrayList<>()).addToCreateOrDeleteOrChange(create);
 		
 		create.createAndAddDocument().withTargetId("region24").createAndAddPlacemark().withId("placemark891")
 		.createAndSetPoint().addToCoordinates("-95.48,40.43,0");
@@ -1939,7 +1939,7 @@ public final class KmlReferenceApiTest implements IKMLReference
   @Override
 	public void updateDelete() {
 		final Delete delete = new Delete();
-		final Update update = KmlFactory.createUpdate("http://www.foo.com/Point.kml",  new ArrayList<Object>()).addToCreateOrDeleteOrChange(delete);
+		final Update update = KmlFactory.createUpdate("http://www.foo.com/Point.kml",  new ArrayList<>()).addToCreateOrDeleteOrChange(delete);
 		final Placemark placemark = new Placemark().withTargetId("pa3556");
 		
 		delete.addToFeature(placemark);

@@ -104,7 +104,7 @@ public final class Utils {
     if ("Kml".equals(name)) {
       name = name.toLowerCase();
     }
-    JAXBElement<T> jaxbRootElement = new JAXBElement<T>(new QName("http://www.opengis.net/kml/2.2", name), clazz, plainRootObject);
+    JAXBElement<T> jaxbRootElement = new JAXBElement<>(new QName("http://www.opengis.net/kml/2.2", name), clazz, plainRootObject);
     return jaxbRootElement;
   }
 

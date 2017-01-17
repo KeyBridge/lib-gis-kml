@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Key Bridge LLC
  *
  * This program is free software: you can redistribute it and/or modify
@@ -20,44 +20,42 @@ import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
  * DisplayMode
  * <p>
- * default, hide 
+ * default, hide
  * </p>
- * 
- * See Also: 
- * See <BalloonStyle>
- * 
- * 
- * 
+ * <p>
+ * See Also: See <BalloonStyle>
+ * <p>
+ * <p>
+ * <p>
  */
 @XmlType(name = "displayModeEnumType")
 @XmlEnum
 public enum DisplayMode {
 
-    @XmlEnumValue("default")
-    DEFAULT("default"),
-    @XmlEnumValue("hide")
-    HIDE("hide");
-    private final String value;
+  @XmlEnumValue("default")
+  DEFAULT("default"),
+  @XmlEnumValue("hide")
+  HIDE("hide");
+  private final String value;
 
-    DisplayMode(String v) {
-        value = v;
-    }
+  DisplayMode(String v) {
+    value = v;
+  }
 
-    public String value() {
-        return value;
-    }
+  public String value() {
+    return value;
+  }
 
-    public static DisplayMode fromValue(String v) {
-        for (DisplayMode c: DisplayMode.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+  public static DisplayMode fromValue(String v) {
+    for (DisplayMode c : DisplayMode.values()) {
+      if (c.value.equals(v)) {
+        return c;
+      }
     }
+    throw new IllegalArgumentException(v);
+  }
 
 }

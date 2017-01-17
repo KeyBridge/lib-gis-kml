@@ -45,7 +45,7 @@ public final class StressTest {
 
   private void coordinates(int repeat, int coordinates, boolean useStringConstructor) throws FileNotFoundException {
     String filename = null;
-    List<Statistics> stats = new ArrayList<Statistics>();
+    List<Statistics> stats = new ArrayList<>();
     for (int i = 0; i < repeat; i++) {
       filename = "coordinates_" + useStringConstructor + "_" + coordinates + "_" + i + ".kml";
       stats.add(coordinates(filename, coordinates, useStringConstructor));

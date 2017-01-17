@@ -19,7 +19,7 @@ public class ReadCsvFileTest {
   public void printAlphabeticalOrder() throws IOException {
 
     HashMap<String, Double> data = Utils.readCSVDoubleData("src/main/resources/exampledata/mobile_phone_2008.csv", 0, 3);
-    ArrayList<String> keys = new ArrayList<String>();
+    ArrayList<String> keys = new ArrayList<>();
     keys.addAll(data.keySet());
     Collections.sort(keys);
     Iterator<String> iterator = keys.iterator();
@@ -35,7 +35,7 @@ public class ReadCsvFileTest {
 
     Assert.assertEquals(153, data.size()); // check size
 
-    ArrayList<String> keys = new ArrayList<String>();
+    ArrayList<String> keys = new ArrayList<>();
     keys.addAll(data.keySet());
     Collections.sort(keys);
     Iterator<String> iterator = keys.iterator();
@@ -66,7 +66,7 @@ public class ReadCsvFileTest {
 
     HashMap<String, Double> afg = result.get("AFG");
     Assert.assertNotNull(afg);
-    ArrayList<String> afg_keys = new ArrayList<String>();
+    ArrayList<String> afg_keys = new ArrayList<>();
     afg_keys.addAll(afg.keySet());
     Collections.sort(afg_keys);
     Iterator<String> afg_iterator = afg_keys.iterator();

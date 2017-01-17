@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Key Bridge LLC
  *
  * This program is free software: you can redistribute it and/or modify
@@ -15,6 +15,6 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 @javax.xml.bind.annotation.XmlSchema(namespace = "http://www.w3.org/2005/Atom", xmlns = {
-    @javax.xml.bind.annotation.XmlNs( prefix = "atom", namespaceURI = "http://www.w3.org/2005/Atom" )
+  @javax.xml.bind.annotation.XmlNs(prefix = "atom", namespaceURI = "http://www.w3.org/2005/Atom")
 }, elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
 package net.opengis.kml.atom;

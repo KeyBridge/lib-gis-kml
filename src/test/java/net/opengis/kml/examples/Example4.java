@@ -45,7 +45,7 @@ int folderSize = oldFolder.getFeature().size();
 Folder folder = new Folder();
 folder.setName("Mobile Phone Subscriptions 1960 - 2008");
 // pick up a country (AFG) and geht the HashMap keys to sort the KML file by years
-ArrayList<String> yearKeys = new ArrayList<String>();
+ArrayList<String> yearKeys = new ArrayList<>();
 yearKeys.addAll(result.get("AFG").keySet());
 Collections.sort(yearKeys);
 Iterator<String> iterator = yearKeys.iterator();

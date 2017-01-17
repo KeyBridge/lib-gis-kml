@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Key Bridge LLC
  *
  * This program is free software: you can redistribute it and/or modify
@@ -20,50 +20,48 @@ import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
  * AltitudeMode
  * <p>
- * clampToGround, relativeToGround, absolute 
+ * clampToGround, relativeToGround, absolute
  * </p>
- * 
- * See Also: 
- * See <LookAt> and <Region>
- * 
- * 
- * 
+ * <p>
+ * See Also: See <LookAt> and <Region>
+ * <p>
+ * <p>
+ * <p>
  */
 @XmlType(name = "altitudeModeEnumType")
 @XmlEnum
 public enum AltitudeMode {
 
-    @XmlEnumValue("clampToGround")
-    CLAMP_TO_GROUND("clampToGround"),
-    @XmlEnumValue("relativeToGround")
-    RELATIVE_TO_GROUND("relativeToGround"),
-    @XmlEnumValue("absolute")
-    ABSOLUTE("absolute"),
-    @XmlEnumValue("clampToSeaFloor")
-    CLAMP_TO_SEA_FLOOR("clampToSeaFloor"),
-    @XmlEnumValue("relativeToSeaFloor")
-    RELATIVE_TO_SEA_FLOOR("relativeToSeaFloor");
-    private final String value;
+  @XmlEnumValue("clampToGround")
+  CLAMP_TO_GROUND("clampToGround"),
+  @XmlEnumValue("relativeToGround")
+  RELATIVE_TO_GROUND("relativeToGround"),
+  @XmlEnumValue("absolute")
+  ABSOLUTE("absolute"),
+  @XmlEnumValue("clampToSeaFloor")
+  CLAMP_TO_SEA_FLOOR("clampToSeaFloor"),
+  @XmlEnumValue("relativeToSeaFloor")
+  RELATIVE_TO_SEA_FLOOR("relativeToSeaFloor");
+  private final String value;
 
-    AltitudeMode(String v) {
-        value = v;
-    }
+  AltitudeMode(String v) {
+    value = v;
+  }
 
-    public String value() {
-        return value;
-    }
+  public String value() {
+    return value;
+  }
 
-    public static AltitudeMode fromValue(String v) {
-        for (AltitudeMode c: AltitudeMode.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+  public static AltitudeMode fromValue(String v) {
+    for (AltitudeMode c : AltitudeMode.values()) {
+      if (c.value.equals(v)) {
+        return c;
+      }
     }
+    throw new IllegalArgumentException(v);
+  }
 
 }

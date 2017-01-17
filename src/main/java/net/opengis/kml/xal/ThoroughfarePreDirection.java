@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Key Bridge LLC
  *
  * This program is free software: you can redistribute it and/or modify
@@ -18,215 +18,187 @@ package net.opengis.kml.xal;
 
 import java.util.HashMap;
 import java.util.Map;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAnyAttribute;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
+import javax.xml.bind.annotation.*;
 import javax.xml.namespace.QName;
 
-
 /**
- * 
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ThoroughfarePreDirectionType", propOrder = {
-    "content"
+  "content"
 })
 @XmlRootElement(name = "ThoroughfarePreDirection", namespace = "urn:oasis:names:tc:ciq:xsdschema:xAL:2.0")
-public class ThoroughfarePreDirection implements Cloneable
-{
+public class ThoroughfarePreDirection implements Cloneable {
 
-    @XmlValue
-    protected String content;
-    @XmlAttribute(name = "Type")
-    @XmlSchemaType(name = "anySimpleType")
-    protected String underscore;
-    @XmlAttribute(name = "Code")
-    @XmlSchemaType(name = "anySimpleType")
-    protected String code;
-    @XmlAnyAttribute
-    private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+  @XmlValue
+  protected String content;
+  @XmlAttribute(name = "Type")
+  @XmlSchemaType(name = "anySimpleType")
+  protected String underscore;
+  @XmlAttribute(name = "Code")
+  @XmlSchemaType(name = "anySimpleType")
+  protected String code;
+  @XmlAnyAttribute
+  private Map<QName, String> otherAttributes = new HashMap<>();
 
-    public ThoroughfarePreDirection() {
-        super();
+  public ThoroughfarePreDirection() {
+    super();
+  }
+
+  /**
+   *
+   * @return possible object is {@link String}
+   *
+   */
+  public String getContent() {
+    return content;
+  }
+
+  /**
+   *
+   * @param value allowed object is {@link String}
+   *
+   */
+  public void setContent(String value) {
+    this.content = value;
+  }
+
+  /**
+   *
+   * @return possible object is {@link String}
+   *
+   */
+  public String getUnderscore() {
+    return underscore;
+  }
+
+  /**
+   *
+   * @param value allowed object is {@link String}
+   *
+   */
+  public void setUnderscore(String value) {
+    this.underscore = value;
+  }
+
+  /**
+   *
+   * @return possible object is {@link String}
+   *
+   */
+  public String getCode() {
+    return code;
+  }
+
+  /**
+   *
+   * @param value allowed object is {@link String}
+   *
+   */
+  public void setCode(String value) {
+    this.code = value;
+  }
+
+  /**
+   *
+   * @return always non-null
+   */
+  public Map<QName, String> getOtherAttributes() {
+    return otherAttributes;
+  }
+
+  @Override
+  public int hashCode() {
+    final int prime = 31;
+    int result = 1;
+    result = ((prime * result) + ((content == null) ? 0 : content.hashCode()));
+    result = ((prime * result) + ((underscore == null) ? 0 : underscore.hashCode()));
+    result = ((prime * result) + ((code == null) ? 0 : code.hashCode()));
+    return result;
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) {
+      return true;
     }
-
-    /**
-     * 
-     * @return
-     *     possible object is
-     *     {@link String}
-     *     
-     */
-    public String getContent() {
-        return content;
+    if (obj == null) {
+      return false;
     }
-
-    /**
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String}
-     *     
-     */
-    public void setContent(String value) {
-        this.content = value;
+    if ((obj instanceof ThoroughfarePreDirection) == false) {
+      return false;
     }
-
-    /**
-     * 
-     * @return
-     *     possible object is
-     *     {@link String}
-     *     
-     */
-    public String getUnderscore() {
-        return underscore;
+    ThoroughfarePreDirection other = ((ThoroughfarePreDirection) obj);
+    if (content == null) {
+      if (other.content != null) {
+        return false;
+      }
+    } else if (content.equals(other.content) == false) {
+      return false;
     }
-
-    /**
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String}
-     *     
-     */
-    public void setUnderscore(String value) {
-        this.underscore = value;
+    if (underscore == null) {
+      if (other.underscore != null) {
+        return false;
+      }
+    } else if (underscore.equals(other.underscore) == false) {
+      return false;
     }
-
-    /**
-     * 
-     * @return
-     *     possible object is
-     *     {@link String}
-     *     
-     */
-    public String getCode() {
-        return code;
+    if (code == null) {
+      if (other.code != null) {
+        return false;
+      }
+    } else if (code.equals(other.code) == false) {
+      return false;
     }
+    return true;
+  }
 
-    /**
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String}
-     *     
-     */
-    public void setCode(String value) {
-        this.code = value;
-    }
+  /**
+   * fluent setter
+   *
+   * @see #setContent(String)
+   *
+   * @param content required parameter
+   */
+  public ThoroughfarePreDirection withContent(final String content) {
+    this.setContent(content);
+    return this;
+  }
 
-    /**
-     * 
-     * @return
-     *     always non-null
-     */
-    public Map<QName, String> getOtherAttributes() {
-        return otherAttributes;
-    }
+  /**
+   * fluent setter
+   *
+   * @see #setUnderscore(String)
+   *
+   * @param underscore required parameter
+   */
+  public ThoroughfarePreDirection withUnderscore(final String underscore) {
+    this.setUnderscore(underscore);
+    return this;
+  }
 
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = ((prime*result)+((content == null)? 0 :content.hashCode()));
-        result = ((prime*result)+((underscore == null)? 0 :underscore.hashCode()));
-        result = ((prime*result)+((code == null)? 0 :code.hashCode()));
-        return result;
-    }
+  /**
+   * fluent setter
+   *
+   * @see #setCode(String)
+   *
+   * @param code required parameter
+   */
+  public ThoroughfarePreDirection withCode(final String code) {
+    this.setCode(code);
+    return this;
+  }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if ((obj instanceof ThoroughfarePreDirection) == false) {
-            return false;
-        }
-        ThoroughfarePreDirection other = ((ThoroughfarePreDirection) obj);
-        if (content == null) {
-            if (other.content!= null) {
-                return false;
-            }
-        } else {
-            if (content.equals(other.content) == false) {
-                return false;
-            }
-        }
-        if (underscore == null) {
-            if (other.underscore!= null) {
-                return false;
-            }
-        } else {
-            if (underscore.equals(other.underscore) == false) {
-                return false;
-            }
-        }
-        if (code == null) {
-            if (other.code!= null) {
-                return false;
-            }
-        } else {
-            if (code.equals(other.code) == false) {
-                return false;
-            }
-        }
-        return true;
+  @Override
+  public ThoroughfarePreDirection clone() {
+    ThoroughfarePreDirection copy;
+    try {
+      copy = ((ThoroughfarePreDirection) super.clone());
+    } catch (CloneNotSupportedException _x) {
+      throw new InternalError((_x.toString()));
     }
-
-    /**
-     * fluent setter
-     * @see #setContent(String)
-     * 
-     * @param content
-     *     required parameter
-     */
-    public ThoroughfarePreDirection withContent(final String content) {
-        this.setContent(content);
-        return this;
-    }
-
-    /**
-     * fluent setter
-     * @see #setUnderscore(String)
-     * 
-     * @param underscore
-     *     required parameter
-     */
-    public ThoroughfarePreDirection withUnderscore(final String underscore) {
-        this.setUnderscore(underscore);
-        return this;
-    }
-
-    /**
-     * fluent setter
-     * @see #setCode(String)
-     * 
-     * @param code
-     *     required parameter
-     */
-    public ThoroughfarePreDirection withCode(final String code) {
-        this.setCode(code);
-        return this;
-    }
-
-    @Override
-    public ThoroughfarePreDirection clone() {
-        ThoroughfarePreDirection copy;
-        try {
-            copy = ((ThoroughfarePreDirection) super.clone());
-        } catch (CloneNotSupportedException _x) {
-            throw new InternalError((_x.toString()));
-        }
-        return copy;
-    }
+    return copy;
+  }
 
 }

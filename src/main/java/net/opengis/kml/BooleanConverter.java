@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Key Bridge LLC
  *
  * This program is free software: you can redistribute it and/or modify
@@ -19,22 +19,18 @@ package net.opengis.kml;
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 
 public final class BooleanConverter
-    extends XmlAdapter<Integer, Boolean>
-{
+        extends XmlAdapter<Integer, Boolean> {
 
+  @Override
+  public Boolean unmarshal(final Integer i)
+          throws Exception {
+    return ((i == null) ? null : (i == 1));
+  }
 
-    @Override
-    public Boolean unmarshal(final Integer i)
-        throws Exception
-    {
-        return ((i == null)?null:(i == 1));
-    }
-
-    @Override
-    public Integer marshal(final Boolean b)
-        throws Exception
-    {
-        return ((b == null)?null:(b? 1 : 0));
-    }
+  @Override
+  public Integer marshal(final Boolean b)
+          throws Exception {
+    return ((b == null) ? null : (b ? 1 : 0));
+  }
 
 }

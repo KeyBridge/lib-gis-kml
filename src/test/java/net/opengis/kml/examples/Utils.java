@@ -55,7 +55,7 @@ public class Utils {
 	 */
 	public static List<String[]> loadCsvFile(String fileWithPath, String delimiter) {
 		// read CSV file
-		Vector<String[]> list = new Vector<String[]>();
+		Vector<String[]> list = new Vector<>();
 		if (delimiter == null || delimiter.equals("")) {
 			delimiter = ",";
 		}
@@ -87,7 +87,7 @@ public class Utils {
 
 		List<String[]> stringVector = loadCsvFile(fileWithPath, ",\"");
 		int size = stringVector.size(); // size of rows in the CSV file
-		HashMap<String, Double> dataMap = new HashMap<String, Double>();
+		HashMap<String, Double> dataMap = new HashMap<>();
 		double max = Double.NEGATIVE_INFINITY;
 		double min = Double.POSITIVE_INFINITY;
 		String regex = "\"";
@@ -129,7 +129,7 @@ public class Utils {
 		// read CSV file
 		List<String[]> stringVector = loadCsvFile(fileWithPath, ",\"");
 		int size = stringVector.size(); // size of rows in the CSV file
-		HashMap<String, HashMap<String, Double>> dataMap = new HashMap<String, HashMap<String, Double>>();
+		HashMap<String, HashMap<String, Double>> dataMap = new HashMap<>();
 		double max = Double.NEGATIVE_INFINITY;
 		double min = Double.POSITIVE_INFINITY;
 		String regex = "\"";
@@ -144,7 +144,7 @@ public class Utils {
 			multiData = row[multiColumn].replaceAll(regex, replacement).trim();
 
 			if (!dataMap.containsKey(code)) {
-				HashMap<String, Double> tmp = new HashMap<String, Double>();
+				HashMap<String, Double> tmp = new HashMap<>();
 				dataMap.put(code, tmp);
 			}
 			HashMap<String, Double> nested = dataMap.get(code);
@@ -157,7 +157,7 @@ public class Utils {
 		}
 
 		// save min and max to HashMap
-		HashMap<String, Double> minmax = new HashMap<String, Double>();
+		HashMap<String, Double> minmax = new HashMap<>();
 		minmax.put("minimum", min);
 		minmax.put("maximum", max);
 		dataMap.put("info", minmax);

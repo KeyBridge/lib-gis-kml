@@ -33,7 +33,7 @@ public class KmlGxReferenceApiTest implements IKmlGxReference {
   public void altitudeModeReference() {
     AnimatedUpdate gxAnimatedUpdate = KmlFactory.createGxAnimatedUpdate();
     gxAnimatedUpdate.withDuration(0.0);
-    gxAnimatedUpdate.createAndSetUpdate("...", new ArrayList<Object>()).addToCreateOrDeleteOrChange(new Change())
+    gxAnimatedUpdate.createAndSetUpdate("...", new ArrayList<>()).addToCreateOrDeleteOrChange(new Change())
             .addToCreateOrDeleteOrChange(new Create()).addToCreateOrDeleteOrChange(new Delete());
 
     Utils.marshal(gxAnimatedUpdate);
@@ -50,7 +50,7 @@ public class KmlGxReferenceApiTest implements IKmlGxReference {
     Create create = new Create();
 
     AnimatedUpdate animatedUpdate = KmlFactory.createGxAnimatedUpdate().withDuration(0.0);
-    animatedUpdate.createAndSetUpdate("...", new ArrayList<Object>())
+    animatedUpdate.createAndSetUpdate("...", new ArrayList<>())
             .addToCreateOrDeleteOrChange(change)
             .addToCreateOrDeleteOrChange(delete)
             .addToCreateOrDeleteOrChange(create);
@@ -81,7 +81,7 @@ public class KmlGxReferenceApiTest implements IKmlGxReference {
     Change change = new Change()
             .addToAbstractObject(KmlFactory.createIconStyle().withId("mystyle").withTargetId("mystyle").withScale(10.0));
 
-    playlist.createAndAddAnimatedUpdate().withDuration(5).createAndSetUpdate("", new ArrayList<Object>()).addToCreateOrDeleteOrChange(
+    playlist.createAndAddAnimatedUpdate().withDuration(5).createAndSetUpdate("", new ArrayList<>()).addToCreateOrDeleteOrChange(
             change);
 
     playlist.createAndAddWait().withDuration(5);
@@ -127,7 +127,7 @@ public class KmlGxReferenceApiTest implements IKmlGxReference {
   @Test
   @Override
   public void durationAnimatedUpdate() {
-    KmlFactory.createGxFlyTo().withDuration(5).addToObjectSimpleExtension(new Update("....", new ArrayList<Object>()));
+    KmlFactory.createGxFlyTo().withDuration(5).addToObjectSimpleExtension(new Update("....", new ArrayList<>()));
   }
 
   /**

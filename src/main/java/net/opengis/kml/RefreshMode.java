@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Key Bridge LLC
  *
  * This program is free software: you can redistribute it and/or modify
@@ -20,46 +20,44 @@ import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
  * RefreshMode
  * <p>
- * onChange, onInterval, onExpire 
+ * onChange, onInterval, onExpire
  * </p>
- * 
- * See Also: 
- * See <Link>
- * 
- * 
- * 
+ * <p>
+ * See Also: See <Link>
+ * <p>
+ * <p>
+ * <p>
  */
 @XmlType(name = "refreshModeEnumType")
 @XmlEnum
 public enum RefreshMode {
 
-    @XmlEnumValue("onChange")
-    ON_CHANGE("onChange"),
-    @XmlEnumValue("onInterval")
-    ON_INTERVAL("onInterval"),
-    @XmlEnumValue("onExpire")
-    ON_EXPIRE("onExpire");
-    private final String value;
+  @XmlEnumValue("onChange")
+  ON_CHANGE("onChange"),
+  @XmlEnumValue("onInterval")
+  ON_INTERVAL("onInterval"),
+  @XmlEnumValue("onExpire")
+  ON_EXPIRE("onExpire");
+  private final String value;
 
-    RefreshMode(String v) {
-        value = v;
-    }
+  RefreshMode(String v) {
+    value = v;
+  }
 
-    public String value() {
-        return value;
-    }
+  public String value() {
+    return value;
+  }
 
-    public static RefreshMode fromValue(String v) {
-        for (RefreshMode c: RefreshMode.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+  public static RefreshMode fromValue(String v) {
+    for (RefreshMode c : RefreshMode.values()) {
+      if (c.value.equals(v)) {
+        return c;
+      }
     }
+    throw new IllegalArgumentException(v);
+  }
 
 }

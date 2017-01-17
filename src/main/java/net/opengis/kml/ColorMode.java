@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Key Bridge LLC
  *
  * This program is free software: you can redistribute it and/or modify
@@ -20,44 +20,42 @@ import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
  * ColorMode
  * <p>
- * normal, random 
+ * normal, random
  * </p>
- * 
- * See Also: 
- * See any element that extends <ColorStyle>
- * 
- * 
- * 
+ * <p>
+ * See Also: See any element that extends <ColorStyle>
+ * <p>
+ * <p>
+ * <p>
  */
 @XmlType(name = "colorModeEnumType")
 @XmlEnum
 public enum ColorMode {
 
-    @XmlEnumValue("normal")
-    NORMAL("normal"),
-    @XmlEnumValue("random")
-    RANDOM("random");
-    private final String value;
+  @XmlEnumValue("normal")
+  NORMAL("normal"),
+  @XmlEnumValue("random")
+  RANDOM("random");
+  private final String value;
 
-    ColorMode(String v) {
-        value = v;
-    }
+  ColorMode(String v) {
+    value = v;
+  }
 
-    public String value() {
-        return value;
-    }
+  public String value() {
+    return value;
+  }
 
-    public static ColorMode fromValue(String v) {
-        for (ColorMode c: ColorMode.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+  public static ColorMode fromValue(String v) {
+    for (ColorMode c : ColorMode.values()) {
+      if (c.value.equals(v)) {
+        return c;
+      }
     }
+    throw new IllegalArgumentException(v);
+  }
 
 }

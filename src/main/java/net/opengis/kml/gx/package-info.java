@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Key Bridge LLC
  *
  * This program is free software: you can redistribute it and/or modify
@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 @javax.xml.bind.annotation.XmlSchema(namespace = "http://www.google.com/kml/ext/2.2", xmlns = {
-    @javax.xml.bind.annotation.XmlNs( prefix = "gx", namespaceURI = "http://www.google.com/kml/ext/2.2" )
+  @javax.xml.bind.annotation.XmlNs(prefix = "gx", namespaceURI = "http://www.google.com/kml/ext/2.2")
 },
-elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
+                                     elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
 package net.opengis.kml.gx;

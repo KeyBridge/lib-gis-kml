@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Key Bridge LLC
  *
  * This program is free software: you can redistribute it and/or modify
@@ -20,46 +20,44 @@ import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
  * Shape
  * <p>
- * rectangle, cylinder, sphere 
+ * rectangle, cylinder, sphere
  * </p>
- * 
- * See Also: 
- * See <PhotoOverlay>
- * 
- * 
- * 
+ * <p>
+ * See Also: See <PhotoOverlay>
+ * <p>
+ * <p>
+ * <p>
  */
 @XmlType(name = "shapeEnumType")
 @XmlEnum
 public enum Shape {
 
-    @XmlEnumValue("rectangle")
-    RECTANGLE("rectangle"),
-    @XmlEnumValue("cylinder")
-    CYLINDER("cylinder"),
-    @XmlEnumValue("sphere")
-    SPHERE("sphere");
-    private final String value;
+  @XmlEnumValue("rectangle")
+  RECTANGLE("rectangle"),
+  @XmlEnumValue("cylinder")
+  CYLINDER("cylinder"),
+  @XmlEnumValue("sphere")
+  SPHERE("sphere");
+  private final String value;
 
-    Shape(String v) {
-        value = v;
-    }
+  Shape(String v) {
+    value = v;
+  }
 
-    public String value() {
-        return value;
-    }
+  public String value() {
+    return value;
+  }
 
-    public static Shape fromValue(String v) {
-        for (Shape c: Shape.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+  public static Shape fromValue(String v) {
+    for (Shape c : Shape.values()) {
+      if (c.value.equals(v)) {
+        return c;
+      }
     }
+    throw new IllegalArgumentException(v);
+  }
 
 }

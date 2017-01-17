@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Key Bridge LLC
  *
  * This program is free software: you can redistribute it and/or modify
@@ -16,7 +16,6 @@
  */
 package net.opengis.kml;
 
-import com.sun.xml.internal.bind.marshaller.NamespacePrefixMapper;
 import java.io.*;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
@@ -208,7 +207,8 @@ public class Kml implements Cloneable {
   /**
    * @see feature
    *
-   * @return possible object is null null null   {@code <}{@link Container}{@code>}
+   * @return possible object is null null null null null null null null null
+   *         null null null   {@code <}{@link Container}{@code>}
      *     {@code <}{@link GroundOverlay}{@code>}
    *     {@code <}{@link NetworkLink}{@code>}
    *     {@code <}{@link Folder}{@code>}
@@ -228,7 +228,8 @@ public class Kml implements Cloneable {
   /**
    * @see feature
    *
-   * @param value allowed object is null null null   {@code <}{@link Container}{@code>}
+   * @param value allowed object is null null null null null null null null null
+   *              null null null   {@code <}{@link Container}{@code>}
      *     {@code <}{@link GroundOverlay}{@code>}
    *     {@code <}{@link NetworkLink}{@code>}
    *     {@code <}{@link Folder}{@code>}
@@ -251,7 +252,7 @@ public class Kml implements Cloneable {
    */
   public List<Object> getKmlSimpleExtension() {
     if (kmlSimpleExtension == null) {
-      kmlSimpleExtension = new ArrayList<Object>();
+      kmlSimpleExtension = new ArrayList<>();
     }
     return this.kmlSimpleExtension;
   }
@@ -262,7 +263,7 @@ public class Kml implements Cloneable {
    */
   public List<AbstractObject> getKmlObjectExtension() {
     if (kmlObjectExtension == null) {
-      kmlObjectExtension = new ArrayList<AbstractObject>();
+      kmlObjectExtension = new ArrayList<>();
     }
     return this.kmlObjectExtension;
   }
@@ -591,20 +592,18 @@ public class Kml implements Cloneable {
    * @see jaxbContext
    *
    */
-  private JAXBContext getJaxbContext()
-          throws JAXBException {
+  private JAXBContext getJaxbContext() throws JAXBException {
     if (jc == null) {
       jc = JAXBContext.newInstance((Kml.class));
     }
     return jc;
   }
 
-  private Marshaller createMarshaller()
-          throws JAXBException {
+  private Marshaller createMarshaller() throws JAXBException {
     if (m == null) {
       m = this.getJaxbContext().createMarshaller();
       m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-      m.setProperty("com.sun.xml.bind.namespacePrefixMapper", new Kml.NameSpaceBeautyfier());
+//      m.setProperty("com.sun.xml.bind.namespacePrefixMapper", new Kml.NameSpaceBeautyfier());
     }
     return m;
   }
@@ -613,8 +612,7 @@ public class Kml implements Cloneable {
    * Internal method
    * <p>
    */
-  private void addKmzFile(Kml kmzFile, ZipOutputStream out, boolean mainfile)
-          throws IOException {
+  private void addKmzFile(Kml kmzFile, ZipOutputStream out, boolean mainfile) throws IOException {
     String fileName = null;
     if (((kmzFile.getFeature() == null) || (kmzFile.getFeature().getName() == null)) || (kmzFile.getFeature().getName().length() == 0)) {
       fileName = (("noFeatureNameSet" + missingNameCounter++) + ".kml");
@@ -671,7 +669,8 @@ public class Kml implements Cloneable {
 
   /**
    * Java to KML The object graph is marshalled to a Contenthandler object.
-   * Useful if marshaller cis needed to generate CDATA blocks. null null null   {@link https://jaxb.dev.java.net/faq/}
+   * Useful if marshaller cis needed to generate CDATA blocks. null null null
+   * null null null null null null null null null   {@link https://jaxb.dev.java.net/faq/}
      * {@link http://code.google.com/p/javaapiforkml/issues/detail?id=7} The
    * object is not saved as a zipped .kmz file.
    *
@@ -851,7 +850,7 @@ public class Kml implements Cloneable {
     if (!file.exists()) {
       return EMPTY_KML_ARRAY;
     }
-    ArrayList<Kml> kmlfiles = new ArrayList<Kml>();
+    ArrayList<Kml> kmlfiles = new ArrayList<>();
     while (entries.hasMoreElements()) {
       ZipEntry entry = ((ZipEntry) entries.nextElement());
       if (entry.getName().contains("__MACOSX") || entry.getName().contains(".DS_STORE")) {
@@ -879,52 +878,15 @@ public class Kml implements Cloneable {
     }
     copy.networkLinkControl = ((networkLinkControl == null) ? null : ((NetworkLinkControl) networkLinkControl.clone()));
     copy.feature = ((feature == null) ? null : ((Feature) feature.clone()));
-    copy.kmlSimpleExtension = new ArrayList<Object>((getKmlSimpleExtension().size()));
+    copy.kmlSimpleExtension = new ArrayList<>((getKmlSimpleExtension().size()));
     for (Object iter : kmlSimpleExtension) {
       copy.kmlSimpleExtension.add(iter);
     }
-    copy.kmlObjectExtension = new ArrayList<AbstractObject>((getKmlObjectExtension().size()));
+    copy.kmlObjectExtension = new ArrayList<>((getKmlObjectExtension().size()));
     for (AbstractObject iter : kmlObjectExtension) {
       copy.kmlObjectExtension.add(iter.clone());
     }
     return copy;
-  }
-
-  private final static class NameSpaceBeautyfier extends NamespacePrefixMapper {
-
-    /**
-     * Internal method!
-     * <p>
-     * Customizing Namespace Prefixes During Marshalling to a more readable
-     * format.</p>
-     * <p>
-     * The default output is like:</p>
-     * <pre>{@code&lt;kml ... xmlns:ns2="http://www.w3.org/2005/Atom" xmlns:ns3="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0" xmlns:ns4="http://www.google.com/kml/ext/2.2"&gt;}</pre>
-     * <p>
-     * is changed to:</p>
-     * <pre>{@code &lt;kml ... xmlns:atom="http://www.w3.org/2005/Atom" xmlns:xal="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0" xmlns:gx="http://www.google.com/kml/ext/2.2"&gt;}</pre><p>
-     * What it does:</p>
-     * <p>
-     * namespaceUri: http://www.w3.org/2005/Atom prefix: atom</p><p>
-     * namespaceUri: urn:oasis:names:tc:ciq:xsdschema:xAL:2.0 prefix: xal</p><p>
-     * namespaceUri: http://www.google.com/kml/ext/2.2 prefix: gx</p><p>
-     * namespaceUri: anything else prefix: null</p>
-     * <p>
-     */
-    @Override
-    public String getPreferredPrefix(String namespaceUri, String suggestion, boolean requirePrefix) {
-      if (namespaceUri.matches("http://www.w3.org/\\d{4}/Atom")) {
-        return "atom";
-      }
-      if (namespaceUri.matches("urn:oasis:names:tc:ciq:xsdschema:xAL:.*?")) {
-        return "xal";
-      }
-      if (namespaceUri.matches("http://www.google.com/kml/ext/.*?")) {
-        return "gx";
-      }
-      return null;
-    }
-
   }
 
 }

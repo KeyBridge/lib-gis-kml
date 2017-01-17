@@ -28,7 +28,7 @@ public class JAXBSample {
       JAXBContext jc = JAXBContext.newInstance("a");
       JustAType t = new JustAType();
       t.setFoo(true);
-      JAXBElement<JustAType> e = new JAXBElement<JustAType>(new QName("http://www.opengis.net/kml/2.2", "kml"), JustAType.class, t);
+      JAXBElement<JustAType> e = new JAXBElement<>(new QName("http://www.opengis.net/kml/2.2", "kml"), JustAType.class, t);
       marshal(jc, e, null);
 
       NamespacePrefixMapper m = new PreferredMapper();
