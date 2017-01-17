@@ -80,6 +80,18 @@
       <type>jar</type>
     </dependency>
 
+    <!--use the following will enable the GeoTools Encoder-->
+    <!--    <dependency>
+      <groupId>org.geotools</groupId>
+      <artifactId>gt-xml</artifactId>
+      <version>${geotools.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.geotools.xsd</groupId>
+      <artifactId>gt-xsd-kml</artifactId>
+      <version>${geotools.version}</version>
+    </dependency>-->
+
   </dependencies>
 
   <distributionManagement>
