@@ -23,13 +23,7 @@ import com.vividsolutions.jts.io.WKTReader;
 import java.io.IOException;
 import java.util.Arrays;
 import javax.xml.bind.JAXBException;
-import net.opengis.kml.Polygon;
-import org.geotools.feature.simple.SimpleFeatureBuilder;
-import org.geotools.feature.simple.SimpleFeatureTypeBuilder;
-import org.geotools.referencing.crs.DefaultGeographicCRS;
 import org.junit.Test;
-import org.opengis.feature.simple.SimpleFeature;
-import org.opengis.feature.simple.SimpleFeatureType;
 
 /**
  *
@@ -92,36 +86,4 @@ public class KMLWriterTest {
     return featureCollection;
   }
 
-  private SimpleFeature buildSimpleFeature1() throws IOException, ParseException {
-    SimpleFeatureTypeBuilder b = new SimpleFeatureTypeBuilder();
-//set the name
-    b.setName("property");
-
-//add some properties
-    b.add("name", String.class);
-    b.add("classification", Integer.class);
-    b.add("height", Double.class);
-    //set the coordinate reference system
-    b.setCRS(DefaultGeographicCRS.WGS84);
-
-    //add some geometry properties (first added is the default)
-    b.add("geometry", Polygon.class);
-
-    //set the default geometry
-//    b.setDefaultGeometry("region");
-    SimpleFeatureType featureType = b.buildFeatureType();
-    SimpleFeatureBuilder builder = new SimpleFeatureBuilder(featureType);
-    builder.add("contour1");
-    builder.add(200);
-    builder.add(300.55);
-
-    String polyWKT = "POLYGON((-118.16327459206458 32.53051522923972,-118.16327459206458 33.715278650109425,-116.03675535110257 33.715278650109425,-116.03675535110257 32.53051522923972,-118.16327459206458 32.53051522923972))";
-    WKTReader wktReader = new WKTReader();
-    builder.add(wktReader.read(polyWKT));
-
-    SimpleFeature feature = builder.buildFeature("id1");
-
-    return feature;
-
-  }
 }
