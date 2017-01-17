@@ -3,12 +3,40 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>keybridge.lib</groupId>
   <artifactId>gis-kml</artifactId>
-  <version>0.0.1</version>
+  <version>1.0.0</version>
   <packaging>jar</packaging>
   <name>lib-gis-kml</name>
   <description>A KML reader and writer.
 
-    v0.0.1 - testing and debugging
+    Provides automatically generated full reference implementation of the KML object
+    model defined by OGC’s KML standard and Google’s GX extensions. It is an object
+    orientated API that enables the convenient and easy use of KML in existing Java
+    environments.
+
+    KML is an XML-based language schema that describes and visualizes geographic
+    data. The language is often used in 2D web based maps and 3D virtual globes.
+    Originally developed for Google Earth as a means of maintaining and exchanging
+    geographical data, the language was defined by the Open Geospatial Consortium
+    (OGC) as a standard in April 2008. So far, many virtual globes, like for example
+    NASA’s Earth Wind and Microsoft’s Virtual Earth, have adopted the KML language
+    as their data format of choice.
+
+    In order to ensure convenient and easy use of KML in existing Java-systems, an
+    object oriented API is necessary. APIs for XML dialects are implemented using two
+    layers. The current official XML schema of KML in conjunction with the JAXB
+    technology is used to generate Java class representations automatically. KML’s
+    schema is a document describing the correct syntax of KML files and can, therefore,
+    be used for validating the corresponding KML files. The semantic application
+    layer, which is found on top of the JAXB layer, is abstracted from the raw generated
+    classes and defines a well-shaped API.
+
+    This library uses code from the micromata.de Jave API for KML (JAK) project.
+
+    History:
+    v0.0.1 - create new project and compile
+    v1.0.0 - writer working just fine, thank you
+
+
   </description>
 
 
@@ -21,10 +49,11 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <geotools.version>16.1</geotools.version>
+    <geotools.version>10.8</geotools.version>
   </properties>
 
   <dependencies>
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -37,6 +66,20 @@
       <version>1.3</version>
       <scope>test</scope>
     </dependency>
+
+    <dependency>
+      <groupId>keybridge.lib</groupId>
+      <artifactId>gis-dto</artifactId>
+      <version>1.0.0</version>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>org.geotools</groupId>
+      <artifactId>gt-api</artifactId>
+      <version>${geotools.version}</version>
+      <type>jar</type>
+    </dependency>
+
   </dependencies>
 
   <distributionManagement>
