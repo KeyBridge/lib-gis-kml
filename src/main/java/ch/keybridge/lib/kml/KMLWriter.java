@@ -134,7 +134,7 @@ public class KMLWriter {
     if (feature.isSetAddress()) {
       extendedData.addToData(new Data("address", feature.getAddress().format()));
     }
-    feature.getExtensions().entrySet().stream().forEach((entry) -> {
+    feature.getProperties().entrySet().stream().forEach((entry) -> {
       extendedData.addToData(new Data(entry.getKey(), entry.getValue()));
     });
     return extendedData;
