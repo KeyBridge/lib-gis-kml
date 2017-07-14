@@ -117,9 +117,23 @@ public abstract class Geometry extends AbstractObject implements Cloneable {
       case POLYGON:
         return Polygon.getInstance((com.vividsolutions.jts.geom.Polygon) geometry);
 
-      case MULTIPOINT:
+      case MULTIPOINT: {
+        MultiGeometry mg = new MultiGeometry();
+        for (int i = 0; i < geometry.getNumGeometries(); i++) {
+          mg.addToGeometry(Point.getInstance((com.vividsolutions.jts.geom.Point) geometry.getGeometryN(i)));
+        }
+        return mg;
+      }
+
+      case MULTIPOLYGON: {
+        MultiGeometry mg = new MultiGeometry();
+        for (int i = 0; i < geometry.getNumGeometries(); i++) {
+          mg.addToGeometry(Polygon.getInstance((com.vividsolutions.jts.geom.Polygon) geometry.getGeometryN(i)));
+        }
+        return mg;
+      }
+
       case MULTILINESTRING:
-      case MULTIPOLYGON:
       case GEOMETRY:
       case GEOMETRYCOLLECTION:
         throw new IllegalArgumentException(Geometries.get(geometry) + " not yet supported.");

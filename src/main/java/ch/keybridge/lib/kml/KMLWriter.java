@@ -79,11 +79,11 @@ public class KMLWriter {
    */
   private static Kml convertFeature(GISFeature feature) {
     Kml kml = new Kml();
-    Document document = new Document();
-    document.setName(feature.getName() + ".kml");
     Placemark placemark = new Placemark();
     placemark.setGeometry(Geometry.getInstance((com.vividsolutions.jts.geom.Geometry) feature.getGeometry()));
     placemark.setExtendedData(buildExtendedData(feature));
+    Document document = new Document();
+    document.setName(feature.getName() + ".kml");
     document.getFeature().add(placemark);
     kml.setFeature(document);
     return kml;
