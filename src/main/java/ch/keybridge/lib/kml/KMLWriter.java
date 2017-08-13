@@ -100,7 +100,7 @@ public class KMLWriter {
     Document document = new Document();
     document.setName(featureCollection.getName() + ".kml");
 
-    featureCollection.getFeatures().stream().forEach(feature -> {
+    featureCollection.getFeatures().forEach(feature -> {
       Placemark placemark = new Placemark();
       placemark.setGeometry(Geometry.getInstance((com.vividsolutions.jts.geom.Geometry) feature.getGeometry()));
       placemark.setExtendedData(buildExtendedData(feature));
