@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><kml:kml xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xal="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+  <kml:Document id="defaultID">
+    <kml:Placemark id="fid-2d96c7b8_159a8b1e58a_-8000">
+      <kml:name>Canada POINT</kml:name>
+      <kml:ExtendedData>
+        <kml:Data name="name">
+          <kml:value>Canada POINT</kml:value>
+        </kml:Data>
+        <kml:Data name="classification">
+          <kml:value>10</kml:value>
+        </kml:Data>
+        <kml:Data name="height">
+          <kml:value>20.5</kml:value>
+        </kml:Data>
+      </kml:ExtendedData>
+      <kml:Point>
+        <kml:coordinates>-124.0,52.0</kml:coordinates>
+      </kml:Point>
+    </kml:Placemark>
+    <kml:Placemark id="id2">
+      <kml:name>Canada contour2</kml:name>
+      <kml:ExtendedData>
+        <kml:Data name="name">
+          <kml:value>Canada contour2</kml:value>
+        </kml:Data>
+        <kml:Data name="classification">
+          <kml:value>200</kml:value>
+        </kml:Data>
+        <kml:Data name="height">
+          <kml:value>300.55</kml:value>
+        </kml:Data>
+      </kml:ExtendedData>
+      <kml:Polygon>
+        <kml:outerBoundaryIs>
+          <kml:LinearRing>
+            <kml:coordinates>-118.16327459206458,32.53051522923972 -118.16327459206458,33.715278650109425 -116.03675535110257,33.715278650109425 -116.03675535110257,32.53051522923972 -118.16327459206458,32.53051522923972</kml:coordinates>
+          </kml:LinearRing>
+        </kml:outerBoundaryIs>
+      </kml:Polygon>
+    </kml:Placemark>
+    <kml:Placemark id="id3">
+      <kml:name>Canada contour 3</kml:name>
+      <kml:ExtendedData>
+        <kml:Data name="name">
+          <kml:value>Canada contour 3</kml:value>
+        </kml:Data>
+        <kml:Data name="classification">
+          <kml:value>100</kml:value>
+        </kml:Data>
+        <kml:Data name="height">
+          <kml:value>200.5</kml:value>
+        </kml:Data>
+      </kml:ExtendedData>
+      <kml:Polygon>
+        <kml:outerBoundaryIs>
+          <kml:LinearRing>
+            <kml:coordinates>-118.16327459206458,32.53051522923972 -118.16327459206458,33.715278650109425 -116.03675535110257,33.715278650109425 -116.03675535110257,32.53051522923972 -118.16327459206458,32.53051522923972</kml:coordinates>
+          </kml:LinearRing>
+        </kml:outerBoundaryIs>
+      </kml:Polygon>
+    </kml:Placemark>
+  </kml:Document>
+</kml:kml>
