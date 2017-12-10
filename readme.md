@@ -1,6 +1,6 @@
 # lib-gis-kml
 
-*A KML reader and writer.*
+**A KML reader and writer.**
 
 Provides automatically generated full reference implementation of the KML object
 model defined by OGC’s KML standard and Google’s GX extensions. It is an object
