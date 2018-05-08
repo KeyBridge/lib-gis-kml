@@ -7,7 +7,7 @@ model defined by OGC’s KML standard and Google’s GX extensions. It is an obj
 orientated API that enables the convenient and easy use of KML in existing Java
 environments.
 
-[KML](doc/images/kml.png)
+![KML](doc/images/kml.png)
 
 KML is an XML-based language schema that describes and visualizes geographic
 data. The language is often used in 2D web based maps and 3D virtual globes.
