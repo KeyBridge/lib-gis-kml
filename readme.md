@@ -7,6 +7,8 @@ model defined by OGC’s KML standard and Google’s GX extensions. It is an obj
 orientated API that enables the convenient and easy use of KML in existing Java
 environments.
 
+[KML](doc/images/kml.png)
+
 KML is an XML-based language schema that describes and visualizes geographic
 data. The language is often used in 2D web based maps and 3D virtual globes.
 Originally developed for Google Earth as a means of maintaining and exchanging
@@ -28,7 +30,7 @@ This library started with a fork of code from the micromata.de Java API for KML
 (JAK) project, then made a quick u-turn to provide only standard-compliant
 functionality in support of our GIS DTO library.
 
-History:
+# History
 
  * v0.0.1 - create new project and compile
  * v1.0.0 - KML writer working just fine, thank you
@@ -36,3 +38,11 @@ History:
  * v1.1.0 - remove DTO KML writer - this lib is KML only
 
 
+
+# References
+
+  * [OGC KML v2.2](doc/xsd/ogckml22.xsd)  XML Schema Document for OGC KML
+  * [KML Extension v2.2](doc/xsd/kml22gx.xsd)  Google extensions to OGC KML
+  
+  
+  
