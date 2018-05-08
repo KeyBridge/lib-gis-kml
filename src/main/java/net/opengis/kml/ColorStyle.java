@@ -22,25 +22,26 @@ import javax.xml.bind.annotation.*;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- *  &lt;ColorStyle&gt;
- *   
+ * &lt;ColorStyle&gt;
+ * <p>
  * This is an abstract element and cannot be used directly in a KML file. It
  * provides elements for specifying the color and color mode of extended style
  * types. Syntax:
- *  <pre>&lt;!-- abstract element; do not create --&gt;
+ * <pre>&lt;!-- abstract element; do not create --&gt;
  *  &lt;strong&gt;&lt;! &lt;em&gt;-- ColorStyle &lt;/em&gt; id="ID" --&gt; &lt;/strong&gt;          &lt;!-- IconStyle,LabelStyle,LineStyle,PolyStyle --&gt;
  *   &lt;color&gt;ffffffff&lt;/color&gt;            &lt;!-- kml:color --&gt;
  *   &lt;colorMode&gt;normal&lt;/colorMode&gt;      &lt;!-- kml:colorModeEnum: normal  &lt;em&gt;or &lt;/em&gt; random --&gt;
- *  &lt;strong&gt;&lt;!-- / &lt;em&gt;ColorStyle &lt;/em&gt; --&gt; &lt;/strong&gt; </pre>
- *   
+ *  &lt;strong&gt;&lt;!-- / &lt;em&gt;ColorStyle &lt;/em&gt; --&gt; &lt;/strong&gt;
+ * </pre>
+ * <p>
  * Extends:
  *
- * @see:  &lt;Object&gt;
+ * @see: &lt;Object&gt;
  *
  * Extended By:
- * @see:  &lt;IconStyle&gt;
- * @see:  &lt;LabelStyle&gt;
- * @see:  &lt;LineStyle&gt;
+ * @see: &lt;IconStyle&gt;
+ * @see: &lt;LabelStyle&gt;
+ * @see: &lt;LineStyle&gt;
  * @see: PolyStyle
  *
  */
@@ -52,41 +53,42 @@ import net.opengis.kml.annotations.Obvious;
   "colorStyleObjectExtension"
 })
 @XmlSeeAlso({
+  IconStyle.class,
   LabelStyle.class,
   LineStyle.class,
-  PolyStyle.class,
-  IconStyle.class
+  PolyStyle.class
 })
 public abstract class ColorStyle
   extends SubStyle
   implements Cloneable {
 
   /**
-   *  &lt;color&gt;
-   *   
+   * &lt;color&gt;
+   * <p>
    * Color and opacity (alpha) values are expressed in hexadecimal notation. The
    * range of values for any one color is 0 to 255 (00 to ff). For alpha, 00 is
    * fully transparent and ff is fully opaque. The order of expression is
    * aabbggrr, where aa=alpha (00 to ff); bb=blue (00 to ff); gg=green (00 to
    * ff); rr=red (00 to ff). For example, if you want to apply a blue color with
    * 50 percent opacity to an overlay, you would specify the following:
-   *  &lt;color&gt;7fff0000 &lt;/color&gt;, where alpha=0x7f, blue=0xff, green=0x00, and
-   * red=0x00. Color values are expressed in hexadecimal notation, including
-   * opacity (alpha) values. The order of expression is alpha, blue, green, red
-   * (aabbggrr). The range of values for any one color is 0 to 255 (00 to ff).
-   * For opacity, 00 is fully transparent and ff is fully opaque. For example,
-   * if you want to apply a blue color with 50 percent opacity to an overlay,
-   * you would specify the following:  &lt;color&gt;7fff0000 &lt;/color&gt;
-   * Note: The  &lt;geomColor&gt; element has been deprecated. Use  &lt;color&gt; instead.
+   * &lt;color&gt;7fff0000 &lt;/color&gt;, where alpha=0x7f, blue=0xff,
+   * green=0x00, and red=0x00. Color values are expressed in hexadecimal
+   * notation, including opacity (alpha) values. The order of expression is
+   * alpha, blue, green, red (aabbggrr). The range of values for any one color
+   * is 0 to 255 (00 to ff). For opacity, 00 is fully transparent and ff is
+   * fully opaque. For example, if you want to apply a blue color with 50
+   * percent opacity to an overlay, you would specify the following:
+   * &lt;color&gt;7fff0000 &lt;/color&gt; Note: The &lt;geomColor&gt; element
+   * has been deprecated. Use &lt;color&gt; instead.
    */
   @XmlElement(defaultValue = "ffffffff")
 
   protected String color;
   /**
    * ColorMode
-   *   
-   * normal, random See Also: See any element that extends  &lt;ColorStyle&gt;
-   *   
+   * <p>
+   * normal, random See Also: See any element that extends &lt;ColorStyle&gt;
+   * <p>
    */
   @XmlElement(defaultValue = "normal")
   protected ColorMode colorMode;
@@ -94,17 +96,17 @@ public abstract class ColorStyle
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> colorStyleSimpleExtension;
   /**
-   *  &lt;Object&gt;
-   *   
+   * &lt;Object&gt;
+   * <p>
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the  &lt;Update&gt; mechanism is to be used. Syntax:
-   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * assigned if the &lt;Update&gt; mechanism is to be used. Syntax:
+   * <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
    * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
    * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
-   *   
+   * <p>
    */
   @XmlElement(name = "AbstractColorStyleObjectExtensionGroup")
   protected List<AbstractObject> colorStyleObjectExtension;
@@ -246,7 +248,8 @@ public abstract class ColorStyle
    *
    * @param colorStyleSimpleExtension Objects of the following type are allowed
    *                                  in the list: {@link Object}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public ColorStyle addToColorStyleSimpleExtension(final Object colorStyleSimpleExtension) {
     this.getColorStyleSimpleExtension().add(colorStyleSimpleExtension);
@@ -267,7 +270,8 @@ public abstract class ColorStyle
    *
    * @param colorStyleObjectExtension Objects of the following type are allowed
    *                                  in the list: {@link AbstractObject}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public ColorStyle addToColorStyleObjectExtension(final AbstractObject colorStyleObjectExtension) {
     this.getColorStyleObjectExtension().add(colorStyleObjectExtension);

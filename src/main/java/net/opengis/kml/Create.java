@@ -21,19 +21,20 @@ import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
- *  &lt;create&gt;
- *   
+ * &lt;create&gt;
+ * <p>
  * Adds new elements to a Folder or Document that has already been loaded via a
- *  &lt;NetworkLink&gt;. The  &lt;targetHref&gt; element in  &lt;Update&gt; specifies the URL of the
- * .kml or .kmz file that contained the original Folder or Document. Within that
- * file, the Folder or Document that is to contain the new data must already
- * have an explicit id defined for it. This id is referenced as the targetId
- * attribute of the Folder or Document within  &lt;Create&gt; that contains the element
- * to be added. Once an object has been created and loaded into Google Earth, it
- * takes on the URL of the original parent Document of Folder. To perform
- * subsequent updates to objects added with this Update/Create mechanism, set
- *  &lt;targetHref&gt; to the URL of the original Document or Folder (not the URL of
- * the file that loaded the intervening updates).
+ * &lt;NetworkLink&gt;. The &lt;targetHref&gt; element in &lt;Update&gt;
+ * specifies the URL of the .kml or .kmz file that contained the original Folder
+ * or Document. Within that file, the Folder or Document that is to contain the
+ * new data must already have an explicit id defined for it. This id is
+ * referenced as the targetId attribute of the Folder or Document within
+ * &lt;Create&gt; that contains the element to be added. Once an object has been
+ * created and loaded into Google Earth, it takes on the URL of the original
+ * parent Document of Folder. To perform subsequent updates to objects added
+ * with this Update/Create mechanism, set &lt;targetHref&gt; to the URL of the
+ * original Document or Folder (not the URL of the file that loaded the
+ * intervening updates).
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CreateType", propOrder = {
@@ -43,12 +44,12 @@ import javax.xml.bind.annotation.*;
 public class Create implements Cloneable {
 
   /**
-   *  &lt;Container&gt;
-   *   
+   * &lt;Container&gt;
+   * <p>
    * This is an abstract element and cannot be used directly in a KML file. A
    * Container element holds one or more Features and allows the creation of
    * nested hierarchies. Syntax:
-   *  <pre>&lt;!-- abstract element; do not create --&gt;
+   * <pre>&lt;!-- abstract element; do not create --&gt;
    *  &lt;strong&gt;&lt;!--  &lt;em&gt;Container &lt;/em&gt; id="ID" --&gt; &lt;/strong&gt;              &lt;!-- Document,Folder --&gt;
    *   &lt;!-- inherited from  &lt;em&gt;Feature &lt;/em&gt; element --&gt;
    *   &lt;name&gt; &lt;em&gt;... &lt;/em&gt;&lt;/name&gt;                      &lt;!-- string --&gt;
@@ -68,15 +69,16 @@ public class Create implements Cloneable {
    *   &lt;atom:link&gt;...&lt;/atom:link&gt; &lt;/span&gt;
    *
    *   &lt;!-- specific to  &lt;em&gt;Container &lt;/em&gt; --&gt;  &lt;br&gt;  &lt;!-- 0 or more Features --&gt;
-   *  &lt;strong&gt;&lt;!-- / &lt;em&gt;Container -- &lt;/em&gt;&gt; &lt;/strong&gt; </pre>
-   *   
+   *  &lt;strong&gt;&lt;!-- / &lt;em&gt;Container -- &lt;/em&gt;&gt; &lt;/strong&gt;
+   * </pre>
+   * <p>
    * Extends:
    *
-   * @see:  &lt;Feature&gt;
+   * @see: &lt;Feature&gt;
    *
    * Extended By:
-   * @see:  &lt;Document&gt;
-   * @see:  &lt;Folder&gt;
+   * @see: &lt;Document&gt;
+   * @see: &lt;Folder&gt;
    *
    */
   @XmlElementRef(name = "AbstractContainerGroup", namespace = "http://www.opengis.net/kml/2.2", required = false)
@@ -129,9 +131,8 @@ public class Create implements Cloneable {
 
   /**
    * Creates a new instance of {@link Folder} and adds it to container. This
-   * method is a short version for:     &lt;code&gt;
-   * Folder folder = new Folder();
-   * this.getContainer().add(folder);  &lt;/code&gt;
+   * method is a short version for: &lt;code&gt; Folder folder = new Folder();
+   * this.getContainer().add(folder); &lt;/code&gt;
    */
   public Folder createAndAddFolder() {
     Folder newValue = new Folder();
@@ -141,9 +142,8 @@ public class Create implements Cloneable {
 
   /**
    * Creates a new instance of {@link Document} and adds it to container. This
-   * method is a short version for:     &lt;code&gt;
-   * Document document = new Document();
-   * this.getContainer().add(document);  &lt;/code&gt;
+   * method is a short version for: &lt;code&gt; Document document = new
+   * Document(); this.getContainer().add(document); &lt;/code&gt;
    */
   public Document createAndAddDocument() {
     Document newValue = new Document();
@@ -165,7 +165,8 @@ public class Create implements Cloneable {
    *
    * @param container Objects of the following type are allowed in the list:
    *                  {@link Container}{@link JAXBElement}{@link Folder}{@link JAXBElement}{@link Document}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Create addToContainer(final Container container) {
     this.getContainer().add(container);

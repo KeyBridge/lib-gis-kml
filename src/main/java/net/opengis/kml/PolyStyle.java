@@ -23,24 +23,22 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- *  &lt;PolyStyle&gt;
- * Syntax:
- *  &lt;pre&gt; &lt;strong&gt;&lt;PolyStyle id="ID"&gt; &lt;/strong&gt;
- *   &lt;!-- inherited from  &lt;em&gt;ColorStyle &lt;/em&gt; --&gt;
- *   &lt;color&gt;ffffffff&lt;/color&gt;            &lt;!-- kml:color --&gt;
- *   &lt;colorMode&gt;normal&lt;/colorMode&gt;      &lt;!-- kml:colorModeEnum: normal  &lt;em&gt;or &lt;/em&gt; random --&gt;
- *
- *   &lt;!-- specific to PolyStyle --&gt;
- *   &lt;fill&gt;1&lt;/fill&gt;                     &lt;!-- boolean --&gt;
- *   &lt;outline&gt;1&lt;/outline&gt;               &lt;!-- boolean --&gt;
- *  &lt;strong&gt;&lt;/PolyStyle&gt; &lt;/strong&gt; </pre>
- *   
+ * &lt;PolyStyle&gt; Syntax: &lt;pre&gt; &lt;strong&gt;&lt;PolyStyle id="ID"&gt;
+ * &lt;/strong&gt; &lt;!-- inherited from &lt;em&gt;ColorStyle &lt;/em&gt;
+ * --&gt; &lt;color&gt;ffffffff&lt;/color&gt; &lt;!-- kml:color --&gt;
+ * &lt;colorMode&gt;normal&lt;/colorMode&gt; &lt;!-- kml:colorModeEnum: normal
+ * &lt;em&gt;or &lt;/em&gt; random --&gt;
+ * <p>
+ * &lt;!-- specific to PolyStyle --&gt; &lt;fill&gt;1&lt;/fill&gt; &lt;!--
+ * boolean --&gt; &lt;outline&gt;1&lt;/outline&gt; &lt;!-- boolean --&gt;
+ * &lt;strong&gt;&lt;/PolyStyle&gt; &lt;/strong&gt; </pre>
+ * <p>
  * Extends:
  *
- * @see:  &lt;ColorStyle&gt;
+ * @see: &lt;ColorStyle&gt;
  *
  * Contained By:
- * @see:  &lt;Style&gt;
+ * @see: &lt;Style&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -56,16 +54,16 @@ public class PolyStyle
   implements Cloneable {
 
   /**
-   *  &lt;fill&gt;
-   *   
+   * &lt;fill&gt;
+   * <p>
    * Boolean value. Specifies whether to fill the polygon.
    */
   @XmlElement(defaultValue = "1")
   @XmlJavaTypeAdapter(BooleanConverter.class)
   protected Boolean fill;
   /**
-   *  &lt;outline&gt;
-   *   
+   * &lt;outline&gt;
+   * <p>
    * Boolean value. Specifies whether to outline the polygon. Polygon outlines
    * use the current LineStyle.
    */
@@ -76,17 +74,17 @@ public class PolyStyle
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> polyStyleSimpleExtension;
   /**
-   *  &lt;Object&gt;
-   *   
+   * &lt;Object&gt;
+   * <p>
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the  &lt;Update&gt; mechanism is to be used. Syntax:
-   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * assigned if the &lt;Update&gt; mechanism is to be used. Syntax:
+   * <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
    * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
    * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
-   *   
+   * <p>
    */
   @XmlElement(name = "PolyStyleObjectExtensionGroup")
   protected List<AbstractObject> polyStyleObjectExtension;
@@ -224,7 +222,8 @@ public class PolyStyle
    *
    * @param polyStyleSimpleExtension Objects of the following type are allowed
    *                                 in the list: {@link Object}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public PolyStyle addToPolyStyleSimpleExtension(final Object polyStyleSimpleExtension) {
     this.getPolyStyleSimpleExtension().add(polyStyleSimpleExtension);
@@ -245,7 +244,8 @@ public class PolyStyle
    *
    * @param polyStyleObjectExtension Objects of the following type are allowed
    *                                 in the list: {@link AbstractObject}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public PolyStyle addToPolyStyleObjectExtension(final AbstractObject polyStyleObjectExtension) {
     this.getPolyStyleObjectExtension().add(polyStyleObjectExtension);

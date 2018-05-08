@@ -24,24 +24,22 @@ import net.opengis.kml.gx.MultiTrack;
 import net.opengis.kml.gx.Track;
 
 /**
- *  &lt;MultiGeometry&gt;
- *   
+ * &lt;MultiGeometry&gt;
+ * <p>
  * A container for zero or more geometry primitives associated with the same
- * feature. Note: The  &lt;GeometryCollection&gt; tag has been deprecated. Use
- *  &lt;MultiGeometry&gt;
- * instead. Syntax:
- *  &lt;pre&gt; &lt;strong&gt;&lt;MultiGeometry id="ID"&gt; &lt;/strong&gt;
- *   &lt;!-- specific to MultiGeometry --&gt;
- *   &lt;!-- 0 or more  &lt;em&gt;Geometry &lt;/em&gt; elements --&gt;
- *  &lt;strong&gt;&lt;/MultiGeometry&gt; &lt;/strong&gt; </pre>
- *   
+ * feature. Note: The &lt;GeometryCollection&gt; tag has been deprecated. Use
+ * &lt;MultiGeometry&gt; instead. Syntax: &lt;pre&gt;
+ * &lt;strong&gt;&lt;MultiGeometry id="ID"&gt; &lt;/strong&gt; &lt;!-- specific
+ * to MultiGeometry --&gt; &lt;!-- 0 or more &lt;em&gt;Geometry &lt;/em&gt;
+ * elements --&gt; &lt;strong&gt;&lt;/MultiGeometry&gt; &lt;/strong&gt; </pre>
+ * <p>
  * Extends:
  *
- * @see:  &lt;Geometry&gt;
+ * @see: &lt;Geometry&gt;
  *
  * Contained By:
- * @see:  &lt;MultiGeometry&gt;
- * @see:  &lt;Placemark&gt;
+ * @see: &lt;MultiGeometry&gt;
+ * @see: &lt;Placemark&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -54,24 +52,25 @@ import net.opengis.kml.gx.Track;
 public class MultiGeometry extends Geometry implements Cloneable {
 
   /**
-   *  &lt;Geometry&gt;
-   *   
+   * &lt;Geometry&gt;
+   * <p>
    * This is an abstract element and cannot be used directly in a KML file. It
    * provides a placeholder object for all derived Geometry objects. Syntax:
-   *  <pre>&lt;!-- abstract element; do not create --&gt;
+   * <pre>&lt;!-- abstract element; do not create --&gt;
    *  &lt;strong&gt;&lt;! &lt;em&gt;-- Geometry &lt;/em&gt; id="ID" --&gt;                 &lt;!-- Point,LineString,LinearRing,
    *                                                Polygon,MultiGeometry,Model --&gt; &lt;/strong&gt;
-   *  &lt;strong&gt;&lt;!-- / &lt;em&gt;Geometry -- &lt;/em&gt;&gt; &lt;/strong&gt; </pre>
-   *   
+   *  &lt;strong&gt;&lt;!-- / &lt;em&gt;Geometry -- &lt;/em&gt;&gt; &lt;/strong&gt;
+   * </pre>
+   * <p>
    * Extends:
    *
-   * @see:  &lt;Object&gt;
+   * @see: &lt;Object&gt;
    *
    * Extended By:
-   * @see:  &lt;LineString&gt;
-   * @see:  &lt;LinearRing&gt;
-   * @see:  &lt;Model&gt;
-   * @see:  &lt;Point&gt;
+   * @see: &lt;LineString&gt;
+   * @see: &lt;LinearRing&gt;
+   * @see: &lt;Model&gt;
+   * @see: &lt;Point&gt;
    * @see: MultiGeometry
    * @see: Polygon
    *
@@ -82,17 +81,17 @@ public class MultiGeometry extends Geometry implements Cloneable {
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> multiGeometrySimpleExtension;
   /**
-   *  &lt;Object&gt;
-   *   
+   * &lt;Object&gt;
+   * <p>
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the  &lt;Update&gt; mechanism is to be used. Syntax:
-   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * assigned if the &lt;Update&gt; mechanism is to be used. Syntax:
+   * <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
    * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
    * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
-   *   
+   * <p>
    */
   @XmlElement(name = "MultiGeometryObjectExtensionGroup")
   protected List<AbstractObject> multiGeometryObjectExtension;
@@ -185,9 +184,8 @@ public class MultiGeometry extends Geometry implements Cloneable {
 
   /**
    * Creates a new instance of {@link MultiTrack} and adds it to geometry. This
-   * method is a short version for:     &lt;code&gt;
-   * MultiTrack multiTrack = new MultiTrack();
-   * this.getGeometry().add(multiTrack);  &lt;/code&gt;
+   * method is a short version for: &lt;code&gt; MultiTrack multiTrack = new
+   * MultiTrack(); this.getGeometry().add(multiTrack); &lt;/code&gt;
    */
   public MultiTrack createAndAddMultiTrack() {
     MultiTrack newValue = new MultiTrack();
@@ -197,9 +195,8 @@ public class MultiGeometry extends Geometry implements Cloneable {
 
   /**
    * Creates a new instance of {@link Track} and adds it to geometry. This
-   * method is a short version for:     &lt;code&gt;
-   * Track track = new Track();
-   * this.getGeometry().add(track);  &lt;/code&gt;
+   * method is a short version for: &lt;code&gt; Track track = new Track();
+   * this.getGeometry().add(track); &lt;/code&gt;
    */
   public Track createAndAddTrack() {
     Track newValue = new Track();
@@ -209,9 +206,8 @@ public class MultiGeometry extends Geometry implements Cloneable {
 
   /**
    * Creates a new instance of {@link LinearRing} and adds it to geometry. This
-   * method is a short version for:     &lt;code&gt;
-   * LinearRing linearRing = new LinearRing();
-   * this.getGeometry().add(linearRing);  &lt;/code&gt;
+   * method is a short version for: &lt;code&gt; LinearRing linearRing = new
+   * LinearRing(); this.getGeometry().add(linearRing); &lt;/code&gt;
    */
   public LinearRing createAndAddLinearRing() {
     LinearRing newValue = new LinearRing();
@@ -221,9 +217,8 @@ public class MultiGeometry extends Geometry implements Cloneable {
 
   /**
    * Creates a new instance of {@link Point} and adds it to geometry. This
-   * method is a short version for:     &lt;code&gt;
-   * Point point = new Point();
-   * this.getGeometry().add(point);  &lt;/code&gt;
+   * method is a short version for: &lt;code&gt; Point point = new Point();
+   * this.getGeometry().add(point); &lt;/code&gt;
    */
   public Point createAndAddPoint() {
     Point newValue = new Point();
@@ -233,9 +228,8 @@ public class MultiGeometry extends Geometry implements Cloneable {
 
   /**
    * Creates a new instance of {@link Model} and adds it to geometry. This
-   * method is a short version for:     &lt;code&gt;
-   * Model model = new Model();
-   * this.getGeometry().add(model);  &lt;/code&gt;
+   * method is a short version for: &lt;code&gt; Model model = new Model();
+   * this.getGeometry().add(model); &lt;/code&gt;
    */
   public Model createAndAddModel() {
     Model newValue = new Model();
@@ -245,9 +239,9 @@ public class MultiGeometry extends Geometry implements Cloneable {
 
   /**
    * Creates a new instance of {@link MultiGeometry} and adds it to geometry.
-   * This method is a short version for:     &lt;code&gt;
-   * MultiGeometry multiGeometry = new MultiGeometry();
-   * this.getGeometry().add(multiGeometry);  &lt;/code&gt;
+   * This method is a short version for: &lt;code&gt; MultiGeometry
+   * multiGeometry = new MultiGeometry(); this.getGeometry().add(multiGeometry);
+   * &lt;/code&gt;
    */
   public MultiGeometry createAndAddMultiGeometry() {
     MultiGeometry newValue = new MultiGeometry();
@@ -257,9 +251,8 @@ public class MultiGeometry extends Geometry implements Cloneable {
 
   /**
    * Creates a new instance of {@link LineString} and adds it to geometry. This
-   * method is a short version for:     &lt;code&gt;
-   * LineString lineString = new LineString();
-   * this.getGeometry().add(lineString);  &lt;/code&gt;
+   * method is a short version for: &lt;code&gt; LineString lineString = new
+   * LineString(); this.getGeometry().add(lineString); &lt;/code&gt;
    */
   public LineString createAndAddLineString() {
     LineString newValue = new LineString();
@@ -269,9 +262,8 @@ public class MultiGeometry extends Geometry implements Cloneable {
 
   /**
    * Creates a new instance of {@link Polygon} and adds it to geometry. This
-   * method is a short version for:     &lt;code&gt;
-   * Polygon polygon = new Polygon();
-   * this.getGeometry().add(polygon);  &lt;/code&gt;
+   * method is a short version for: &lt;code&gt; Polygon polygon = new
+   * Polygon(); this.getGeometry().add(polygon); &lt;/code&gt;
    */
   public Polygon createAndAddPolygon() {
     Polygon newValue = new Polygon();
@@ -293,7 +285,8 @@ public class MultiGeometry extends Geometry implements Cloneable {
    *
    * @param geometry Objects of the following type are allowed in the list:
    *                 {@link Geometry}{@link JAXBElement}{@link Point}{@link JAXBElement}{@link LinearRing}{@link JAXBElement}{@link Polygon}{@link JAXBElement}{@link Track}{@link JAXBElement}{@link MultiTrack}{@link JAXBElement}{@link Model}{@link JAXBElement}{@link LineString}{@link JAXBElement}{@link MultiGeometry}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public MultiGeometry addToGeometry(final Geometry geometry) {
     this.getGeometry().add(geometry);
@@ -314,7 +307,8 @@ public class MultiGeometry extends Geometry implements Cloneable {
    *
    * @param multiGeometrySimpleExtension Objects of the following type are
    *                                     allowed in the list: {@link Object}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public MultiGeometry addToMultiGeometrySimpleExtension(final Object multiGeometrySimpleExtension) {
     this.getMultiGeometrySimpleExtension().add(multiGeometrySimpleExtension);
@@ -336,7 +330,8 @@ public class MultiGeometry extends Geometry implements Cloneable {
    * @param multiGeometryObjectExtension Objects of the following type are
    *                                     allowed in the list:
    *                                     {@link AbstractObject}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public MultiGeometry addToMultiGeometryObjectExtension(final AbstractObject multiGeometryObjectExtension) {
     this.getMultiGeometryObjectExtension().add(multiGeometryObjectExtension);

@@ -159,9 +159,9 @@ public class SimpleArrayField implements Cloneable {
   /**
    * Sets the value of the simpleArrayFieldExtension property Objects of the
    * following type(s) are allowed in the list List &lt;Object&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withSimpleArrayFieldExtension} instead.
    *
@@ -176,7 +176,8 @@ public class SimpleArrayField implements Cloneable {
    *
    * @param simpleArrayFieldExtension Objects of the following type are allowed
    *                                  in the list: {@link Object}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public SimpleArrayField addToSimpleArrayFieldExtension(final Object simpleArrayFieldExtension) {
     this.getSimpleArrayFieldExtension().add(simpleArrayFieldExtension);

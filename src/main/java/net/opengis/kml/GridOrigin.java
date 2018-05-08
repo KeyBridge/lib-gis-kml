@@ -22,9 +22,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * GridOrigin
- *   
- * lowerLeft, upperLeft See Also: See  &lt;PhotoOverlay&gt;
- *   
+ * <p>
+ * lowerLeft, upperLeft See Also: See &lt;PhotoOverlay&gt;
+ * <p>
  */
 @XmlType(name = "gridOriginEnumType")
 @XmlEnum

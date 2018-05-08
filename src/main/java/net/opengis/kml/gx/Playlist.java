@@ -86,9 +86,8 @@ public class Playlist
 
   /**
    * Creates a new instance of {@link Wait} and adds it to tourPrimitive. This
-   * method is a short version for:     &lt;code&gt;
-   * Wait wait = new Wait();
-   * this.getTourPrimitive().add(wait);  &lt;/code&gt;
+   * method is a short version for: &lt;code&gt; Wait wait = new Wait();
+   * this.getTourPrimitive().add(wait); &lt;/code&gt;
    */
   public Wait createAndAddWait() {
     Wait newValue = new Wait();
@@ -98,9 +97,9 @@ public class Playlist
 
   /**
    * Creates a new instance of {@link AnimatedUpdate} and adds it to
-   * tourPrimitive. This method is a short version for:     &lt;code&gt;
+   * tourPrimitive. This method is a short version for: &lt;code&gt;
    * AnimatedUpdate animatedUpdate = new AnimatedUpdate();
-   * this.getTourPrimitive().add(animatedUpdate);  &lt;/code&gt;
+   * this.getTourPrimitive().add(animatedUpdate); &lt;/code&gt;
    */
   public AnimatedUpdate createAndAddAnimatedUpdate() {
     AnimatedUpdate newValue = new AnimatedUpdate();
@@ -110,9 +109,8 @@ public class Playlist
 
   /**
    * Creates a new instance of {@link TourControl} and adds it to tourPrimitive.
-   * This method is a short version for:     &lt;code&gt;
-   * TourControl tourControl = new TourControl();
-   * this.getTourPrimitive().add(tourControl);  &lt;/code&gt;
+   * This method is a short version for: &lt;code&gt; TourControl tourControl =
+   * new TourControl(); this.getTourPrimitive().add(tourControl); &lt;/code&gt;
    */
   public TourControl createAndAddTourControl() {
     TourControl newValue = new TourControl();
@@ -122,9 +120,8 @@ public class Playlist
 
   /**
    * Creates a new instance of {@link FlyTo} and adds it to tourPrimitive. This
-   * method is a short version for:     &lt;code&gt;
-   * FlyTo flyTo = new FlyTo();
-   * this.getTourPrimitive().add(flyTo);  &lt;/code&gt;
+   * method is a short version for: &lt;code&gt; FlyTo flyTo = new FlyTo();
+   * this.getTourPrimitive().add(flyTo); &lt;/code&gt;
    */
   public FlyTo createAndAddFlyTo() {
     FlyTo newValue = new FlyTo();
@@ -134,9 +131,8 @@ public class Playlist
 
   /**
    * Creates a new instance of {@link SoundCue} and adds it to tourPrimitive.
-   * This method is a short version for:     &lt;code&gt;
-   * SoundCue soundCue = new SoundCue();
-   * this.getTourPrimitive().add(soundCue);  &lt;/code&gt;
+   * This method is a short version for: &lt;code&gt; SoundCue soundCue = new
+   * SoundCue(); this.getTourPrimitive().add(soundCue); &lt;/code&gt;
    */
   public SoundCue createAndAddSoundCue() {
     SoundCue newValue = new SoundCue();
@@ -147,9 +143,9 @@ public class Playlist
   /**
    * Sets the value of the tourPrimitive property Objects of the following
    * type(s) are allowed in the list List &lt;TourPrimitive&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withTourPrimitive} instead.
    *
@@ -164,7 +160,8 @@ public class Playlist
    *
    * @param tourPrimitive Objects of the following type are allowed in the list:
    *                      {@link AnimatedUpdate}{@link JAXBElement}{@link Wait}{@link JAXBElement}{@link SoundCue}{@link JAXBElement}{@link TourPrimitive}{@link JAXBElement}{@link FlyTo}{@link JAXBElement}{@link TourControl}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Playlist addToTourPrimitive(final TourPrimitive tourPrimitive) {
     this.getTourPrimitive().add(tourPrimitive);

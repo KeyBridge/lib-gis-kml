@@ -303,7 +303,7 @@ public class LookAt
   /**
    * @see altitudeMode
    *
-   * @return possible object is null null null null null null null null   {@link Object}
+   * @return possible object is null null null null null null null null null null   {@link Object}
      *     {@link net.opengis.kml.AltitudeMode}
    *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
@@ -315,7 +315,7 @@ public class LookAt
   /**
    * @see altitudeMode
    *
-   * @param value allowed object is null null null null null null null null   {@link Object}
+   * @param value allowed object is null null null null null null null null null null   {@link Object}
      *     {@link net.opengis.kml.AltitudeMode}
    *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *

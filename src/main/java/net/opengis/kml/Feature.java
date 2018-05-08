@@ -106,8 +106,8 @@ public abstract class Feature extends AbstractObject implements Cloneable {
    */
   protected String name;
   /**
-   * &lt;visibility&gt; Boolean value. Specifies whether the feature is drawn
-   * in the 3D viewer when it is initially loaded. In order for a feature to be
+   * &lt;visibility&gt; Boolean value. Specifies whether the feature is drawn in
+   * the 3D viewer when it is initially loaded. In order for a feature to be
    * visible, the &lt;visibility&gt; tag of all its ancestors must also be set
    * to 1. In the Google Earth List View, each Feature has a checkbox that
    * allows the user to control visibility of the Feature.
@@ -118,8 +118,8 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   /**
    * &lt;open&gt; Boolean value. Specifies whether a Document or Folder appears
    * closed or open when first loaded into the Places panel. 0=collapsed (the
-   * default), 1=expanded. See also &lt;ListStyle&gt;. This element applies
-   * only to Document, Folder, and NetworkLink.
+   * default), 1=expanded. See also &lt;ListStyle&gt;. This element applies only
+   * to Document, Folder, and NetworkLink.
    */
   @XmlElement(defaultValue = "0")
   @XmlJavaTypeAdapter(BooleanConverter.class)
@@ -129,34 +129,34 @@ public abstract class Feature extends AbstractObject implements Cloneable {
    * the author and related website in your KML file. This information is
    * displayed in geo search results, both in Earth browsers such as Google
    * Earth, and in other applications such as Google Maps. The ascription
-   * elements used in KML are as follows: The &lt;atom:author&gt; element is
-   * the parent element for &lt;atom:name&gt;, which specifies the author of
-   * the KML feature. These elements are defined in the Atom Syndication Format.
-   * The complete specification is found at http://atompub.org. (see the sample
-   * that follows). These elements are defined in the Atom Syndication Format.
-   * The complete specification is found at http://atompub.org. (see the sample
-   * that follows).
+   * elements used in KML are as follows: The &lt;atom:author&gt; element is the
+   * parent element for &lt;atom:name&gt;, which specifies the author of the KML
+   * feature. These elements are defined in the Atom Syndication Format. The
+   * complete specification is found at http://atompub.org. (see the sample that
+   * follows). These elements are defined in the Atom Syndication Format. The
+   * complete specification is found at http://atompub.org. (see the sample that
+   * follows).
    */
   @XmlElement(name = "author", namespace = "http://www.w3.org/2005/Atom")
   protected Author atomAuthor;
   /**
    * &lt;link&gt; (required). see &lt;link&gt;. &lt;Link&gt; specifies the
    * location of any of the following: If the file specified in &lt;href&gt; is
-   * a local file, the &lt;viewFormat&gt; and &lt;httpQuery&gt; elements are
-   * not used. KML files fetched by network links Image files used in any
-   * Overlay (the &lt;Icon&gt; element specifies the image in an Overlay;
-   * &lt;Icon&gt; has the same fields as &lt;Link&gt;) Model files used in the
-   * &lt;Model&gt; element Specifies the URL of the website containing this KML
-   * or KMZ file. Be sure to include the namespace for this element in any KML
-   * file that uses it: xmlns:atom="http://www.w3.org/2005/Atom" (see the sample
-   * that follows). Specifies the file to load and optional refresh parameters.
-   * See &lt;Link&gt;. The &lt;Link&gt; element replaces the &lt;Url&gt;
-   * element of &lt;NetworkLink&gt; contained in earlier KML releases and adds
+   * a local file, the &lt;viewFormat&gt; and &lt;httpQuery&gt; elements are not
+   * used. KML files fetched by network links Image files used in any Overlay
+   * (the &lt;Icon&gt; element specifies the image in an Overlay; &lt;Icon&gt;
+   * has the same fields as &lt;Link&gt;) Model files used in the &lt;Model&gt;
+   * element Specifies the URL of the website containing this KML or KMZ file.
+   * Be sure to include the namespace for this element in any KML file that uses
+   * it: xmlns:atom="http://www.w3.org/2005/Atom" (see the sample that follows).
+   * Specifies the file to load and optional refresh parameters. See
+   * &lt;Link&gt;. The &lt;Link&gt; element replaces the &lt;Url&gt; element of
+   * &lt;NetworkLink&gt; contained in earlier KML releases and adds
    * functionality for the &lt;Region&gt; element (introduced in KML 2.1). In
-   * Google Earth releases 3.0 and earlier, the &lt;Link&gt; element is
-   * ignored. The file is conditionally loaded and refreshed, depending on the
-   * refresh parameters supplied here. Two different sets of refresh parameters
-   * can be specified: one set is based on time ( &lt;refreshMode&gt; and
+   * Google Earth releases 3.0 and earlier, the &lt;Link&gt; element is ignored.
+   * The file is conditionally loaded and refreshed, depending on the refresh
+   * parameters supplied here. Two different sets of refresh parameters can be
+   * specified: one set is based on time ( &lt;refreshMode&gt; and
    * &lt;refreshInterval&gt;) and one is based on the current "camera" view (
    * &lt;viewRefreshMode&gt; and &lt;viewRefreshTime&gt;). In addition, Link
    * specifies whether to scale the bounding box parameters that are sent to the
@@ -173,9 +173,9 @@ public abstract class Feature extends AbstractObject implements Cloneable {
    * parameters (this is the default and is used if no &lt;viewFormat&gt;
    * element is included in the file). a second format string that is specified
    * in the &lt;httpQuery&gt; element. Syntax: &lt;pre&gt; &lt;strong
-   *&gt;&lt;Link id="ID"&gt; &lt;/strong&gt; &lt;!-- specific to Link --&gt;
+   * &gt;&lt;Link id="ID"&gt; &lt;/strong&gt; &lt;!-- specific to Link --&gt;
    * &lt;href&gt; &lt;em&gt;... &lt;/em&gt;&lt;/href&gt; &lt;!-- &lt;span
-   *&gt;string &lt;/span&gt; --&gt;
+   * &gt;string &lt;/span&gt; --&gt;
    * &lt;refreshMode&gt;onChange&lt;/refreshMode&gt; &lt;!-- refreshModeEnum:
    * onChange, onInterval, &lt;em&gt;or &lt;/em&gt; onExpire --&gt;
    * &lt;refreshInterval&gt;4&lt;/refreshInterval&gt; &lt;!-- float --&gt;
@@ -200,13 +200,13 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   @XmlElement(name = "link", namespace = "http://www.w3.org/2005/Atom")
   protected Link atomLink;
   /**
-   * &lt;address&gt; A string value representing an unstructured address
-   * written as a standard street, city, state address, and/or as a postal code.
-   * You can use the &lt;address&gt; tag to specify the location of a point
-   * instead of using latitude and longitude coordinates. (However, if a
-   * &lt;Point&gt; is provided, it takes precedence over the &lt;address&gt;.)
-   * To find out which locales are supported for this tag in Google Earth, go to
-   * the Google Maps Help.
+   * &lt;address&gt; A string value representing an unstructured address written
+   * as a standard street, city, state address, and/or as a postal code. You can
+   * use the &lt;address&gt; tag to specify the location of a point instead of
+   * using latitude and longitude coordinates. (However, if a &lt;Point&gt; is
+   * provided, it takes precedence over the &lt;address&gt;.) To find out which
+   * locales are supported for this tag in Google Earth, go to the Google Maps
+   * Help.
    */
   protected String address;
   /**
@@ -235,8 +235,8 @@ public abstract class Feature extends AbstractObject implements Cloneable {
    * &lt;snippet maxlines="2"&gt; A short description of the feature. In Google
    * Earth, this description is displayed in the Places panel under the name of
    * the feature. If a Snippet is not supplied, the first two lines of the
-   * &lt;description&gt; are used. In Google Earth, if a Placemark contains
-   * both a description and a Snippet, the &lt;Snippet&gt; appears beneath the
+   * &lt;description&gt; are used. In Google Earth, if a Placemark contains both
+   * a description and a Snippet, the &lt;Snippet&gt; appears beneath the
    * Placemark in the Places panel, and the &lt;description&gt; appears in the
    * Placemark's description balloon. This tag does not support HTML markup.
    * &lt;Snippet&gt; has a maxLines attribute, an integer that specifies the
@@ -261,13 +261,13 @@ public abstract class Feature extends AbstractObject implements Cloneable {
    * would be in any WebKit-based browser. General restrictions Links to local
    * files are generally not allowed. This prevents malicious code from damaging
    * your system or accessing your data. Should you wish to allow access to your
-   * local filesystem, select Preferences&gt; Allow placemark balloons to
-   * access local files and personal data. Links to image files on the local
-   * filesystem are always allowed, if contained within an &lt;img&gt; tag.
-   * Content that has been compressed into a KMZ file can be accessed, even if
-   * on the local filesystem. Cookies are completely disabled, including cookies
-   * set or read by content contained within a iFrame. There are no exceptions
-   * to this rule. Doctype declarations are ignored.
+   * local filesystem, select Preferences&gt; Allow placemark balloons to access
+   * local files and personal data. Links to image files on the local filesystem
+   * are always allowed, if contained within an &lt;img&gt; tag. Content that
+   * has been compressed into a KMZ file can be accessed, even if on the local
+   * filesystem. Cookies are completely disabled, including cookies set or read
+   * by content contained within a iFrame. There are no exceptions to this rule.
+   * Doctype declarations are ignored.
    */
   protected String description;
   /**
@@ -328,8 +328,8 @@ public abstract class Feature extends AbstractObject implements Cloneable {
    * &lt;StyleSelector&gt;, and the styles derived from &lt;ColorStyle&gt;.) A
    * style defined within a Feature is called an "inline style" and applies only
    * to the Feature that contains it. A style defined as the child of a
-   * &lt;Document&gt; is called a "shared style." A shared style must have an
-   * id defined for it. This id is referenced by one or more Features within the
+   * &lt;Document&gt; is called a "shared style." A shared style must have an id
+   * defined for it. This id is referenced by one or more Features within the
    * &lt;Document&gt;. In cases where a style element is defined both in a
    * shared style and in an inline style for a Feature—that is, a Folder,
    * GroundOverlay, NetworkLink, Placemark, or ScreenOverlay—the value for the
@@ -379,7 +379,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
    * &lt;minFadeExtent&gt;0&lt;/minFadeExtent&gt; &lt;!-- float --&gt;
    * &lt;maxFadeExtent&gt;0&lt;/maxFadeExtent&gt; &lt;!-- float --&gt;
    * &lt;/Lod&gt; &lt;strong&gt;&lt;/Region&gt; &lt;/strong&gt; </pre> &lt;p
-   *&gt; Extends:
+   * &gt; Extends:
    *
    * @see: &lt;Object&gt;
    *
@@ -390,14 +390,13 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   @XmlElement(name = "Region")
   protected Region region;
   /**
-   * &lt;metadata&gt; (deprecated in kml 2.2; use &lt;extendeddata&gt;
-   * instead)
+   * &lt;metadata&gt; (deprecated in kml 2.2; use &lt;extendeddata&gt; instead)
    */
   @XmlElement(name = "Metadata")
   protected Metadata metadata;
   /**
    * &lt;extendeddata&gt; Adding untyped data/value pairs using the &lt;Data
-   *&gt; element (basic) Declaring new typed fields using the &lt;Schema&gt;
+   * &gt; element (basic) Declaring new typed fields using the &lt;Schema&gt;
    * element and then instancing them using the &lt;SchemaData&gt; element
    * (advanced) Referring to XML elements defined in other namespaces by
    * referencing the external namespace within the KML file (basic) Allows you
@@ -416,8 +415,8 @@ public abstract class Feature extends AbstractObject implements Cloneable {
    * --&gt; &lt;br&gt; &nbsp;&nbsp;
    * &lt;value&gt;...&lt;/value&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
    * &lt;!-- string --&gt; &lt;br&gt; &lt;/Data&gt; &lt;SchemaData schemaUrl="
-   * &lt;em&gt;anyURI &lt;/em&gt;"&gt; &lt;br&gt; &lt;SimpleData name=""&gt;
-   * ... &lt;/SimpleData&gt;&nbsp;&nbsp; &lt;!-- string --&gt; &lt;br&gt;
+   * &lt;em&gt;anyURI &lt;/em&gt;"&gt; &lt;br&gt; &lt;SimpleData name=""&gt; ...
+   * &lt;/SimpleData&gt;&nbsp;&nbsp; &lt;!-- string --&gt; &lt;br&gt;
    * &lt;/SchemaData&gt;
    * &lt;namespace_prefix:other&gt;...&lt;/namespace_prefix:other&gt;
    * &lt;/ExtendedData&gt; </pre> Contained By:
@@ -718,7 +717,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
    * @see timePrimitive
    *
    * @param value allowed object is null null null null null null null null null
-   *              null null null null null null null null null   {@link TimeSpan}
+   *              null null null null null null null null null null null   {@link TimeSpan}
      *     {@link TimeStamp}
    *     {@link TimePrimitive}
    *
@@ -1027,7 +1026,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
 
   /**
    * Creates a new instance of {@link Author} and set it to atomAuthor. &lt;p
-   *&gt; This method is a short version for: &lt;code&gt; Author author = new
+   * &gt; This method is a short version for: &lt;code&gt; Author author = new
    * Author(); this.setAtomAuthor(author); &lt;/code&gt;
    */
   public Author createAndSetAtomAuthor() {
@@ -1081,7 +1080,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
 
   /**
    * Creates a new instance of {@link LookAt} and set it to abstractView. &lt;p
-   *&gt; This method is a short version for: &lt;code&gt; LookAt lookAt = new
+   * &gt; This method is a short version for: &lt;code&gt; LookAt lookAt = new
    * LookAt(); this.setAbstractView(lookAt); &lt;/code&gt;
    */
   public LookAt createAndSetLookAt() {
@@ -1092,7 +1091,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
 
   /**
    * Creates a new instance of {@link Camera} and set it to abstractView. &lt;p
-   *&gt; This method is a short version for: &lt;code&gt; Camera camera = new
+   * &gt; This method is a short version for: &lt;code&gt; Camera camera = new
    * Camera(); this.setAbstractView(camera); &lt;/code&gt;
    */
   public Camera createAndSetCamera() {
@@ -1158,7 +1157,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
 
   /**
    * Creates a new instance of {@link Metadata} and set it to metadata. &lt;p
-   *&gt; This method is a short version for: &lt;code&gt; Metadata metadata =
+   * &gt; This method is a short version for: &lt;code&gt; Metadata metadata =
    * new Metadata(); this.setMetadata(metadata); &lt;/code&gt;
    */
   public Metadata createAndSetMetadata() {
@@ -1193,7 +1192,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
    * @param styleSelector Objects of the following type are allowed in the list:
    *                      {@link Style}{@link JAXBElement}{@link StyleSelector}{@link JAXBElement}{@link StyleMap}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of &lt;tt
-   *        &gt;Collection.add &lt;/tt&gt;).
+   *         &gt;Collection.add &lt;/tt&gt;).
    */
   public Feature addToStyleSelector(final StyleSelector styleSelector) {
     this.getStyleSelector().add(styleSelector);
@@ -1216,7 +1215,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
    *                               the list:
    *                               {@link Double}{@link JAXBElement}{@link Object}{@link JAXBElement}{@link Boolean}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of &lt;tt
-   *        &gt;Collection.add &lt;/tt&gt;).
+   *         &gt;Collection.add &lt;/tt&gt;).
    */
   public Feature addToFeatureSimpleExtension(final Object featureSimpleExtension) {
     this.getFeatureSimpleExtension().add(featureSimpleExtension);
@@ -1238,7 +1237,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
    * @param featureObjectExtension Objects of the following type are allowed in
    *                               the list: {@link AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of &lt;tt
-   *        &gt;Collection.add &lt;/tt&gt;).
+   *         &gt;Collection.add &lt;/tt&gt;).
    */
   public Feature addToFeatureObjectExtension(final AbstractObject featureObjectExtension) {
     this.getFeatureObjectExtension().add(featureObjectExtension);

@@ -22,24 +22,24 @@ import javax.xml.bind.annotation.*;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- *  &lt;TimePrimitive&gt;
- *   
- * Associates this Feature with a period of time ( &lt;TimeSpan&gt;) or a point in time
- * ( &lt;TimeStamp&gt;). This is an abstract element and cannot be used directly in a
- * KML file. This element is extended by the  &lt;TimeSpan&gt; and  &lt;TimeStamp&gt;
- * elements. Syntax:
- *  <pre>&lt;!-- abstract element; do not create --&gt;
+ * &lt;TimePrimitive&gt;
+ * <p>
+ * Associates this Feature with a period of time ( &lt;TimeSpan&gt;) or a point
+ * in time ( &lt;TimeStamp&gt;). This is an abstract element and cannot be used
+ * directly in a KML file. This element is extended by the &lt;TimeSpan&gt; and
+ * &lt;TimeStamp&gt; elements. Syntax:
+ * <pre>&lt;!-- abstract element; do not create --&gt;
  *  &lt;strong&gt;&lt;!-- TimePrimitive id="ID" --&gt;            &lt;!-- TimeSpan,TimeStamp --&gt;
  *   &lt;/strong&gt; &lt;!-- extends Object --&gt; &lt;strong&gt;
  * &lt;!-- /TimePrimitive --&gt; &lt;/strong&gt; </pre>
- *   
+ * <p>
  * Extends:
  *
- * @see:  &lt;Object&gt;
+ * @see: &lt;Object&gt;
  *
  * Extended By:
- * @see:  &lt;TimeSpan&gt;
- * @see:  &lt;TimeStamp&gt;
+ * @see: &lt;TimeSpan&gt;
+ * @see: &lt;TimeStamp&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -59,17 +59,17 @@ public abstract class TimePrimitive
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> timePrimitiveSimpleExtension;
   /**
-   *  &lt;Object&gt;
-   *   
+   * &lt;Object&gt;
+   * <p>
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the  &lt;Update&gt; mechanism is to be used. Syntax:
-   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * assigned if the &lt;Update&gt; mechanism is to be used. Syntax:
+   * <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
    * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
    * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
-   *   
+   * <p>
    */
   @XmlElement(name = "AbstractTimePrimitiveObjectExtensionGroup")
   protected List<AbstractObject> timePrimitiveObjectExtension;
@@ -155,7 +155,8 @@ public abstract class TimePrimitive
    *
    * @param timePrimitiveSimpleExtension Objects of the following type are
    *                                     allowed in the list: {@link Object}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public TimePrimitive addToTimePrimitiveSimpleExtension(final Object timePrimitiveSimpleExtension) {
     this.getTimePrimitiveSimpleExtension().add(timePrimitiveSimpleExtension);
@@ -177,7 +178,8 @@ public abstract class TimePrimitive
    * @param timePrimitiveObjectExtension Objects of the following type are
    *                                     allowed in the list:
    *                                     {@link AbstractObject}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public TimePrimitive addToTimePrimitiveObjectExtension(final AbstractObject timePrimitiveObjectExtension) {
     this.getTimePrimitiveObjectExtension().add(timePrimitiveObjectExtension);

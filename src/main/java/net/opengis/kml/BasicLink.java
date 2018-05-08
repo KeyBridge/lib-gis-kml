@@ -138,9 +138,9 @@ public class BasicLink
   /**
    * Sets the value of the basicLinkSimpleExtension property Objects of the
    * following type(s) are allowed in the list List &lt;Object&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withBasicLinkSimpleExtension} instead.
    *
@@ -156,7 +156,8 @@ public class BasicLink
    * @param basicLinkSimpleExtension Objects of the following type are allowed
    *                                 in the list:
    *                                 {@link BigInteger}{@link JAXBElement}{@link BigInteger}{@link JAXBElement}{@link Object}{@link JAXBElement}{@link BigInteger}{@link JAXBElement}{@link BigInteger}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public BasicLink addToBasicLinkSimpleExtension(final Object basicLinkSimpleExtension) {
     this.getBasicLinkSimpleExtension().add(basicLinkSimpleExtension);
@@ -166,9 +167,9 @@ public class BasicLink
   /**
    * Sets the value of the basicLinkObjectExtension property Objects of the
    * following type(s) are allowed in the list List &lt;AbstractObject&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withBasicLinkObjectExtension} instead.
    *
@@ -183,7 +184,8 @@ public class BasicLink
    *
    * @param basicLinkObjectExtension Objects of the following type are allowed
    *                                 in the list: {@link AbstractObject}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public BasicLink addToBasicLinkObjectExtension(final AbstractObject basicLinkObjectExtension) {
     this.getBasicLinkObjectExtension().add(basicLinkObjectExtension);

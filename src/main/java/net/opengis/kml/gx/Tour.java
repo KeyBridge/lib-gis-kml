@@ -25,12 +25,12 @@ import net.opengis.kml.atom.Link;
 import net.opengis.kml.xal.AddressDetails;
 
 /**
- *  &lt;gx:Tour&gt;
- *   
- *  &lt;gx:Tour&gt; can contain a single  &lt;gx:Playlist&gt; element, which in turn contains
- * an ordered list of gx:TourPrimitive elements that define a tour in any KML
- * browser. Learn more about tours. Syntax:
- *  <pre>&lt;gx:Tour&gt;
+ * &lt;gx:Tour&gt;
+ * <p>
+ * &lt;gx:Tour&gt; can contain a single &lt;gx:Playlist&gt; element, which in
+ * turn contains an ordered list of gx:TourPrimitive elements that define a tour
+ * in any KML browser. Learn more about tours. Syntax:
+ * <pre>&lt;gx:Tour&gt;
  *   &lt;name&gt;...&lt;/name&gt;
  *   &lt;description&gt;...&lt;/description&gt;
  *   &lt;gx:Playlist&gt;
@@ -39,15 +39,14 @@ import net.opengis.kml.xal.AddressDetails;
  *
  *   &lt;/gx:Playlist&gt;
  * &lt;/gx:Tour&gt; </pre>
- *   
+ * <p>
  * Contains:
  *
- * @see:  &lt;gx:Playlist&gt;
- * @see:  &lt;gx:Tour&gt;
- * @see:  &lt;gx:Tour&gt;  &lt;gx:Playlist&gt;  &lt;!-- gx:TourPrimitive --&gt; ...
- *  &lt;!-- /gx:TourPrimitive --&gt;
- *  &lt;!--- Any number of gx:TourPrimitive elements can be included ---&gt;
- *  &lt;/gx:Playlist&gt;  &lt;/gx:Tour&gt;
+ * @see: &lt;gx:Playlist&gt;
+ * @see: &lt;gx:Tour&gt;
+ * @see: &lt;gx:Tour&gt; &lt;gx:Playlist&gt; &lt;!-- gx:TourPrimitive --&gt; ...
+ * &lt;!-- /gx:TourPrimitive --&gt; &lt;!--- Any number of gx:TourPrimitive
+ * elements can be included ---&gt; &lt;/gx:Playlist&gt; &lt;/gx:Tour&gt;
  * @see: gx:Playlist
  * @see: gx:TourPrimitive
  *
@@ -123,10 +122,9 @@ public class Tour
 
   /**
    * Creates a new instance of {@link Playlist} and set it to playlist.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * Playlist playlist = new Playlist();
-   * this.setPlaylist(playlist);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; Playlist playlist = new
+   * Playlist(); this.setPlaylist(playlist); &lt;/code&gt;
    */
   public Playlist createAndSetPlaylist() {
     Playlist newValue = new Playlist();

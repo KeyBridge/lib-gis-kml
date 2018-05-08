@@ -23,17 +23,17 @@ import javax.xml.bind.annotation.XmlType;
 import net.opengis.kml.AbstractObject;
 
 /**
- *  &lt;gx:TourPrimitive&gt;
- *   
+ * &lt;gx:TourPrimitive&gt;
+ * <p>
  * Elements extended from gx:TourPrimitive provide instructions to KML browsers
  * during tours, including points to fly to and the duration of those flights,
  * pauses, updates to KML features, and sound files to play. These elements must
- * be contained within a  &lt;gx:Playlist&gt; element, which in turn is contained with
- * a  &lt;gx:Tour&gt; element. This is an abstract element and cannot be used directly
- * in a KML file. This element is extended by the  &lt;gx:FlyTo&gt;,
- *  &lt;gx:AnimatedUpdate&gt;,  &lt;gx:TourControl&gt;,
- *  &lt;gx:Wait&gt;, and  &lt;gx:SoundCue&gt; elements. Syntax:
- *  <pre>&lt;gx:Tour&gt;
+ * be contained within a &lt;gx:Playlist&gt; element, which in turn is contained
+ * with a &lt;gx:Tour&gt; element. This is an abstract element and cannot be
+ * used directly in a KML file. This element is extended by the
+ * &lt;gx:FlyTo&gt;, &lt;gx:AnimatedUpdate&gt;, &lt;gx:TourControl&gt;,
+ * &lt;gx:Wait&gt;, and &lt;gx:SoundCue&gt; elements. Syntax:
+ * <pre>&lt;gx:Tour&gt;
  *   &lt;gx:Playlist&gt;
  *
  *     &lt;!-- abstract element; do not create --&gt;
@@ -43,21 +43,21 @@ import net.opengis.kml.AbstractObject;
  *
  *   &lt;/gx:Playlist&gt;
  * &lt;/gx:Tour&gt;
- *  </pre>
- *   
+ * </pre>
+ * <p>
  * Extends:
  *
- * @see:  &lt;Object&gt;
+ * @see: &lt;Object&gt;
  *
  * Extended By:
- * @see:  &lt;gx:AnimatedUpdate&gt;
- * @see:  &lt;gx:FlyTo&gt;
- * @see:  &lt;gx:SoundCue&gt;
- * @see:  &lt;gx:TourControl&gt;
- * @see:  &lt;gx:Wait&gt;
+ * @see: &lt;gx:AnimatedUpdate&gt;
+ * @see: &lt;gx:FlyTo&gt;
+ * @see: &lt;gx:SoundCue&gt;
+ * @see: &lt;gx:TourControl&gt;
+ * @see: &lt;gx:Wait&gt;
  *
  * Contained By:
- * @see:  &lt;gx:Playlist&gt;
+ * @see: &lt;gx:Playlist&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)

@@ -22,9 +22,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * DisplayMode
- *   
- * default, hide See Also: See  &lt;BalloonStyle&gt;
- *   
+ * <p>
+ * default, hide See Also: See &lt;BalloonStyle&gt;
+ * <p>
  */
 @XmlType(name = "displayModeEnumType")
 @XmlEnum

@@ -25,12 +25,12 @@ import net.opengis.kml.atom.Link;
 import net.opengis.kml.xal.AddressDetails;
 
 /**
- *  &lt;Container&gt;
- *   
+ * &lt;Container&gt;
+ * <p>
  * This is an abstract element and cannot be used directly in a KML file. A
  * Container element holds one or more Features and allows the creation of
  * nested hierarchies. Syntax:
- *  <pre>&lt;!-- abstract element; do not create --&gt;
+ * <pre>&lt;!-- abstract element; do not create --&gt;
  *  &lt;strong&gt;&lt;!--  &lt;em&gt;Container &lt;/em&gt; id="ID" --&gt; &lt;/strong&gt;              &lt;!-- Document,Folder --&gt;
  *   &lt;!-- inherited from  &lt;em&gt;Feature &lt;/em&gt; element --&gt;
  *   &lt;name&gt; &lt;em&gt;... &lt;/em&gt;&lt;/name&gt;                      &lt;!-- string --&gt;
@@ -50,15 +50,16 @@ import net.opengis.kml.xal.AddressDetails;
  *   &lt;atom:link&gt;...&lt;/atom:link&gt; &lt;/span&gt;
  *
  *   &lt;!-- specific to  &lt;em&gt;Container &lt;/em&gt; --&gt;  &lt;br&gt;  &lt;!-- 0 or more Features --&gt;
- *  &lt;strong&gt;&lt;!-- / &lt;em&gt;Container -- &lt;/em&gt;&gt; &lt;/strong&gt; </pre>
- *   
+ *  &lt;strong&gt;&lt;!-- / &lt;em&gt;Container -- &lt;/em&gt;&gt; &lt;/strong&gt;
+ * </pre>
+ * <p>
  * Extends:
  *
- * @see:  &lt;Feature&gt;
+ * @see: &lt;Feature&gt;
  *
  * Extended By:
- * @see:  &lt;Document&gt;
- * @see:  &lt;Folder&gt;
+ * @see: &lt;Document&gt;
+ * @see: &lt;Folder&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -76,17 +77,17 @@ public abstract class Container extends Feature implements Cloneable {
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> containerSimpleExtension;
   /**
-   *  &lt;Object&gt;
-   *   
+   * &lt;Object&gt;
+   * <p>
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the  &lt;Update&gt; mechanism is to be used. Syntax:
-   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * assigned if the &lt;Update&gt; mechanism is to be used. Syntax:
+   * <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
    * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
    * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
-   *   
+   * <p>
    */
   @XmlElement(name = "AbstractContainerObjectExtensionGroup")
   protected List<AbstractObject> containerObjectExtension;
@@ -172,7 +173,8 @@ public abstract class Container extends Feature implements Cloneable {
    *
    * @param containerSimpleExtension Objects of the following type are allowed
    *                                 in the list: {@link Object}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Container addToContainerSimpleExtension(final Object containerSimpleExtension) {
     this.getContainerSimpleExtension().add(containerSimpleExtension);
@@ -193,7 +195,8 @@ public abstract class Container extends Feature implements Cloneable {
    *
    * @param containerObjectExtension Objects of the following type are allowed
    *                                 in the list: {@link AbstractObject}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Container addToContainerObjectExtension(final AbstractObject containerObjectExtension) {
     this.getContainerObjectExtension().add(containerObjectExtension);

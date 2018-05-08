@@ -55,7 +55,7 @@ public class AddressLines implements Cloneable {
    * Default no-arg constructor is private. Use overloaded constructor instead!
    * (Temporary solution, till a better and more suitable ObjectFactory is
    * created.)
-   *   
+   * <p>
    */
   @Deprecated
   private AddressLines() {
@@ -129,9 +129,8 @@ public class AddressLines implements Cloneable {
 
   /**
    * Creates a new instance of {@link AddressLine} and adds it to addressLine.
-   * This method is a short version for:     &lt;code&gt;
-   * AddressLine addressLine = new AddressLine();
-   * this.getAddressLine().add(addressLine);  &lt;/code&gt;
+   * This method is a short version for: &lt;code&gt; AddressLine addressLine =
+   * new AddressLine(); this.getAddressLine().add(addressLine); &lt;/code&gt;
    */
   public AddressLine createAndAddAddressLine() {
     AddressLine newValue = new AddressLine();
@@ -142,9 +141,9 @@ public class AddressLines implements Cloneable {
   /**
    * Sets the value of the addressLine property Objects of the following type(s)
    * are allowed in the list List &lt;AddressLine&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withAddressLine} instead.
    *
@@ -159,7 +158,8 @@ public class AddressLines implements Cloneable {
    *
    * @param addressLine Objects of the following type are allowed in the list:
    *                    {@link AddressLine}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public AddressLines addToAddressLine(final AddressLine addressLine) {
     this.getAddressLine().add(addressLine);
@@ -169,9 +169,9 @@ public class AddressLines implements Cloneable {
   /**
    * Sets the value of the any property Objects of the following type(s) are
    * allowed in the list List &lt;Object&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withAny} instead.
    *
@@ -186,7 +186,8 @@ public class AddressLines implements Cloneable {
    *
    * @param any Objects of the following type are allowed in the list:
    *            {@link Object}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public AddressLines addToAny(final Object any) {
     this.getAny().add(any);

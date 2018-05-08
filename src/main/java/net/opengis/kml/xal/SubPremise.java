@@ -90,7 +90,7 @@ public class SubPremise implements Cloneable {
    * Default no-arg constructor is private. Use overloaded constructor instead!
    * (Temporary solution, till a better and more suitable ObjectFactory is
    * created.)
-   *   
+   * <p>
    */
   @Deprecated
   private SubPremise() {
@@ -398,9 +398,8 @@ public class SubPremise implements Cloneable {
 
   /**
    * Creates a new instance of {@link AddressLine} and adds it to addressLine.
-   * This method is a short version for:     &lt;code&gt;
-   * AddressLine addressLine = new AddressLine();
-   * this.getAddressLine().add(addressLine);  &lt;/code&gt;
+   * This method is a short version for: &lt;code&gt; AddressLine addressLine =
+   * new AddressLine(); this.getAddressLine().add(addressLine); &lt;/code&gt;
    */
   public AddressLine createAndAddAddressLine() {
     AddressLine newValue = new AddressLine();
@@ -410,9 +409,9 @@ public class SubPremise implements Cloneable {
 
   /**
    * Creates a new instance of {@link SubPremise.SubPremiseName} and adds it to
-   * subPremiseName. This method is a short version for:     &lt;code&gt;
+   * subPremiseName. This method is a short version for: &lt;code&gt;
    * SubPremiseName subPremiseName = new SubPremiseName();
-   * this.getSubPremiseName().add(subPremiseName);  &lt;/code&gt;
+   * this.getSubPremiseName().add(subPremiseName); &lt;/code&gt;
    */
   public SubPremise.SubPremiseName createAndAddSubPremiseName() {
     SubPremise.SubPremiseName newValue = new SubPremise.SubPremiseName();
@@ -423,10 +422,10 @@ public class SubPremise implements Cloneable {
   /**
    * Creates a new instance of {@link SubPremise.SubPremiseLocation} and set it
    * to subPremiseLocation.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * SubPremiseLocation subPremiseLocation = new SubPremiseLocation();
-   * this.setSubPremiseLocation(subPremiseLocation);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; SubPremiseLocation
+   * subPremiseLocation = new SubPremiseLocation();
+   * this.setSubPremiseLocation(subPremiseLocation); &lt;/code&gt;
    */
   public SubPremise.SubPremiseLocation createAndSetSubPremiseLocation() {
     SubPremise.SubPremiseLocation newValue = new SubPremise.SubPremiseLocation();
@@ -436,9 +435,9 @@ public class SubPremise implements Cloneable {
 
   /**
    * Creates a new instance of {@link SubPremise.SubPremiseNumber} and adds it
-   * to subPremiseNumber. This method is a short version for:     &lt;code&gt;
+   * to subPremiseNumber. This method is a short version for: &lt;code&gt;
    * SubPremiseNumber subPremiseNumber = new SubPremiseNumber();
-   * this.getSubPremiseNumber().add(subPremiseNumber);  &lt;/code&gt;
+   * this.getSubPremiseNumber().add(subPremiseNumber); &lt;/code&gt;
    */
   public SubPremise.SubPremiseNumber createAndAddSubPremiseNumber() {
     SubPremise.SubPremiseNumber newValue = new SubPremise.SubPremiseNumber();
@@ -448,9 +447,10 @@ public class SubPremise implements Cloneable {
 
   /**
    * Creates a new instance of {@link SubPremise.SubPremiseNumberPrefix} and
-   * adds it to subPremiseNumberPrefix. This method is a short version for:     &lt;code&gt;
-   * SubPremiseNumberPrefix subPremiseNumberPrefix = new SubPremiseNumberPrefix();
-   * this.getSubPremiseNumberPrefix().add(subPremiseNumberPrefix);  &lt;/code&gt;
+   * adds it to subPremiseNumberPrefix. This method is a short version for:
+   * &lt;code&gt; SubPremiseNumberPrefix subPremiseNumberPrefix = new
+   * SubPremiseNumberPrefix();
+   * this.getSubPremiseNumberPrefix().add(subPremiseNumberPrefix); &lt;/code&gt;
    */
   public SubPremise.SubPremiseNumberPrefix createAndAddSubPremiseNumberPrefix() {
     SubPremise.SubPremiseNumberPrefix newValue = new SubPremise.SubPremiseNumberPrefix();
@@ -460,9 +460,10 @@ public class SubPremise implements Cloneable {
 
   /**
    * Creates a new instance of {@link SubPremise.SubPremiseNumberSuffix} and
-   * adds it to subPremiseNumberSuffix. This method is a short version for:     &lt;code&gt;
-   * SubPremiseNumberSuffix subPremiseNumberSuffix = new SubPremiseNumberSuffix();
-   * this.getSubPremiseNumberSuffix().add(subPremiseNumberSuffix);  &lt;/code&gt;
+   * adds it to subPremiseNumberSuffix. This method is a short version for:
+   * &lt;code&gt; SubPremiseNumberSuffix subPremiseNumberSuffix = new
+   * SubPremiseNumberSuffix();
+   * this.getSubPremiseNumberSuffix().add(subPremiseNumberSuffix); &lt;/code&gt;
    */
   public SubPremise.SubPremiseNumberSuffix createAndAddSubPremiseNumberSuffix() {
     SubPremise.SubPremiseNumberSuffix newValue = new SubPremise.SubPremiseNumberSuffix();
@@ -472,9 +473,9 @@ public class SubPremise implements Cloneable {
 
   /**
    * Creates a new instance of {@link BuildingName} and adds it to buildingName.
-   * This method is a short version for:     &lt;code&gt;
-   * BuildingName buildingName = new BuildingName();
-   * this.getBuildingName().add(buildingName);  &lt;/code&gt;
+   * This method is a short version for: &lt;code&gt; BuildingName buildingName
+   * = new BuildingName(); this.getBuildingName().add(buildingName);
+   * &lt;/code&gt;
    */
   public BuildingName createAndAddBuildingName() {
     BuildingName newValue = new BuildingName();
@@ -484,10 +485,9 @@ public class SubPremise implements Cloneable {
 
   /**
    * Creates a new instance of {@link Firm} and set it to firm.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * Firm firm = new Firm();
-   * this.setFirm(firm);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; Firm firm = new Firm();
+   * this.setFirm(firm); &lt;/code&gt;
    */
   public Firm createAndSetFirm() {
     Firm newValue = new Firm();
@@ -497,10 +497,9 @@ public class SubPremise implements Cloneable {
 
   /**
    * Creates a new instance of {@link MailStop} and set it to mailStop.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * MailStop mailStop = new MailStop();
-   * this.setMailStop(mailStop);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; MailStop mailStop = new
+   * MailStop(); this.setMailStop(mailStop); &lt;/code&gt;
    */
   public MailStop createAndSetMailStop() {
     MailStop newValue = new MailStop();
@@ -510,10 +509,9 @@ public class SubPremise implements Cloneable {
 
   /**
    * Creates a new instance of {@link PostalCode} and set it to postalCode.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * PostalCode postalCode = new PostalCode();
-   * this.setPostalCode(postalCode);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; PostalCode postalCode =
+   * new PostalCode(); this.setPostalCode(postalCode); &lt;/code&gt;
    */
   public PostalCode createAndSetPostalCode() {
     PostalCode newValue = new PostalCode();
@@ -523,10 +521,9 @@ public class SubPremise implements Cloneable {
 
   /**
    * Creates a new instance of {@link SubPremise} and set it to subPremise.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * SubPremise subPremise = new SubPremise();
-   * this.setSubPremise(subPremise);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; SubPremise subPremise =
+   * new SubPremise(); this.setSubPremise(subPremise); &lt;/code&gt;
    *
    * @param subPremiseLocation required parameter
    */
@@ -539,9 +536,9 @@ public class SubPremise implements Cloneable {
   /**
    * Sets the value of the addressLine property Objects of the following type(s)
    * are allowed in the list List &lt;AddressLine&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withAddressLine} instead.
    *
@@ -556,7 +553,8 @@ public class SubPremise implements Cloneable {
    *
    * @param addressLine Objects of the following type are allowed in the list:
    *                    {@link AddressLine}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public SubPremise addToAddressLine(final AddressLine addressLine) {
     this.getAddressLine().add(addressLine);
@@ -566,9 +564,9 @@ public class SubPremise implements Cloneable {
   /**
    * Sets the value of the subPremiseName property Objects of the following
    * type(s) are allowed in the list List &lt;SubPremiseName&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withSubPremiseName} instead.
    *
@@ -583,7 +581,8 @@ public class SubPremise implements Cloneable {
    *
    * @param subPremiseName Objects of the following type are allowed in the
    *                       list: {@link SubPremise.SubPremiseName}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public SubPremise addToSubPremiseName(final SubPremise.SubPremiseName subPremiseName) {
     this.getSubPremiseName().add(subPremiseName);
@@ -593,9 +592,9 @@ public class SubPremise implements Cloneable {
   /**
    * Sets the value of the subPremiseNumber property Objects of the following
    * type(s) are allowed in the list List &lt;SubPremiseNumber&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withSubPremiseNumber} instead.
    *
@@ -610,7 +609,8 @@ public class SubPremise implements Cloneable {
    *
    * @param subPremiseNumber Objects of the following type are allowed in the
    *                         list: {@link SubPremise.SubPremiseNumber}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public SubPremise addToSubPremiseNumber(final SubPremise.SubPremiseNumber subPremiseNumber) {
     this.getSubPremiseNumber().add(subPremiseNumber);
@@ -619,10 +619,11 @@ public class SubPremise implements Cloneable {
 
   /**
    * Sets the value of the subPremiseNumberPrefix property Objects of the
-   * following type(s) are allowed in the list List &lt;SubPremiseNumberPrefix&gt;.
-   *   
+   * following type(s) are allowed in the list List
+   * &lt;SubPremiseNumberPrefix&gt;.
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withSubPremiseNumberPrefix} instead.
    *
@@ -638,7 +639,8 @@ public class SubPremise implements Cloneable {
    * @param subPremiseNumberPrefix Objects of the following type are allowed in
    *                               the list:
    *                               {@link SubPremise.SubPremiseNumberPrefix}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public SubPremise addToSubPremiseNumberPrefix(final SubPremise.SubPremiseNumberPrefix subPremiseNumberPrefix) {
     this.getSubPremiseNumberPrefix().add(subPremiseNumberPrefix);
@@ -647,10 +649,11 @@ public class SubPremise implements Cloneable {
 
   /**
    * Sets the value of the subPremiseNumberSuffix property Objects of the
-   * following type(s) are allowed in the list List &lt;SubPremiseNumberSuffix&gt;.
-   *   
+   * following type(s) are allowed in the list List
+   * &lt;SubPremiseNumberSuffix&gt;.
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withSubPremiseNumberSuffix} instead.
    *
@@ -666,7 +669,8 @@ public class SubPremise implements Cloneable {
    * @param subPremiseNumberSuffix Objects of the following type are allowed in
    *                               the list:
    *                               {@link SubPremise.SubPremiseNumberSuffix}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public SubPremise addToSubPremiseNumberSuffix(final SubPremise.SubPremiseNumberSuffix subPremiseNumberSuffix) {
     this.getSubPremiseNumberSuffix().add(subPremiseNumberSuffix);
@@ -676,9 +680,9 @@ public class SubPremise implements Cloneable {
   /**
    * Sets the value of the buildingName property Objects of the following
    * type(s) are allowed in the list List &lt;BuildingName&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withBuildingName} instead.
    *
@@ -693,7 +697,8 @@ public class SubPremise implements Cloneable {
    *
    * @param buildingName Objects of the following type are allowed in the list:
    *                     {@link BuildingName}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public SubPremise addToBuildingName(final BuildingName buildingName) {
     this.getBuildingName().add(buildingName);
@@ -703,9 +708,9 @@ public class SubPremise implements Cloneable {
   /**
    * Sets the value of the any property Objects of the following type(s) are
    * allowed in the list List &lt;Object&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withAny} instead.
    *
@@ -720,7 +725,8 @@ public class SubPremise implements Cloneable {
    *
    * @param any Objects of the following type are allowed in the list:
    *            {@link Object}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public SubPremise addToAny(final Object any) {
     this.getAny().add(any);

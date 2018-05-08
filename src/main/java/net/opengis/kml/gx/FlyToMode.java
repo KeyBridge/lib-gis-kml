@@ -23,15 +23,13 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * Java class for flyToModeEnumType. The following schema fragment specifies the
  * expected content contained within this class.
- *   
- *  &lt;
- * pre&gt;
- * &lt;simpleType name="flyToModeEnumType"&gt; &lt;restriction
+ * <p>
+ * &lt; pre&gt; &lt;simpleType name="flyToModeEnumType"&gt; &lt;restriction
  * base="{http://www.w3.org/2001/XMLSchema}string"&gt; &lt;enumeration
  * value="bounce"/&gt; &lt;enumeration value="smooth"/&gt; &lt;/restriction&gt;
  * &lt;/simpleType&gt;
- *  </pre>
- *   
+ * </pre>
+ * <p>
  */
 @XmlType(name = "flyToModeEnumType")
 @XmlEnum

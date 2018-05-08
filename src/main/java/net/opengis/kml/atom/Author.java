@@ -24,18 +24,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- *  &lt;atom:author&gt;
- *   
+ * &lt;atom:author&gt;
+ * <p>
  * KML 2.2 supports new elements for including data about the author and related
  * website in your KML file. This information is displayed in geo search
  * results, both in Earth browsers such as Google Earth, and in other
  * applications such as Google Maps. The ascription elements used in KML are as
- * follows: The  &lt;atom:author&gt; element is the parent element for  &lt;atom:name&gt;,
- * which specifies the author of the KML feature. These elements are defined in
- * the Atom Syndication Format. The complete specification is found at
- * http://atompub.org. (see the sample that follows). These elements are defined
- * in the Atom Syndication Format. The complete specification is found at
- * http://atompub.org. (see the sample that follows).
+ * follows: The &lt;atom:author&gt; element is the parent element for
+ * &lt;atom:name&gt;, which specifies the author of the KML feature. These
+ * elements are defined in the Atom Syndication Format. The complete
+ * specification is found at http://atompub.org. (see the sample that follows).
+ * These elements are defined in the Atom Syndication Format. The complete
+ * specification is found at http://atompub.org. (see the sample that follows).
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
@@ -106,7 +106,8 @@ public class Author implements Cloneable {
    * @param nameOrUriOrEmail Objects of the following type are allowed in the
    *                         list:
    *                         {@link String}{@link JAXBElement}{@link String}{@link JAXBElement}{@link String}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Author addToNameOrUriOrEmail(final String nameOrUriOrEmail) {
     this.getNameOrUriOrEmail().add(nameOrUriOrEmail);

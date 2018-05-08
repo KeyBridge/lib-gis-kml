@@ -24,51 +24,44 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- *  &lt;Polygon&gt;
- *   
+ * &lt;Polygon&gt;
+ * <p>
  * A Polygon is defined by an outer boundary and 0 or more inner boundaries. The
  * boundaries, in turn, are defined by LinearRings. When a Polygon is extruded,
  * its boundaries are connected to the ground to form additional polygons, which
  * gives the appearance of a building or a box. Extruded Polygons use
- *  &lt;PolyStyle&gt; for their color, color mode, and fill. Note: In Google Earth, a
- * Polygon with an  &lt;altitudeMode&gt; of clampToGround follows the great circle;
- * however, a LinearRing (by itself) with an
- *  &lt;altitudeMode&gt; of clampToGround follows lines of constant latitude. The
- *  &lt;coordinates&gt; for polygons must be specified in counterclockwise order.
- * Polygons follow the "right-hand rule," which states that if you place the
- * fingers of your right hand in the direction in which the coordinates are
- * specified, your thumb points in the general direction of the geometric normal
- * for the polygon. (In 3D graphics, the geometric normal is used for lighting
- * and points away from the front face of the polygon.) Since Google Earth fills
- * only the front face of polygons, you will achieve the desired effect only
- * when the coordinates are specified in the proper order. Otherwise, the
- * polygon will be gray. Syntax:
- *  &lt;pre&gt; &lt;strong&gt;&lt;Polygon id="ID"&gt; &lt;/strong&gt;
- *   &lt;!-- specific to Polygon --&gt;
- *   &lt;extrude&gt;0&lt;/extrude&gt;                       &lt;!-- boolean --&gt;
- *   &lt;tessellate&gt;0&lt;/tessellate&gt;                 &lt;!-- boolean --&gt;
- *   &lt;altitudeMode&gt;clampToGround&lt;/altitudeMode&gt;
- *         &lt;!-- kml:altitudeModeEnum: clampToGround, relativeToGround, or absolute --&gt;
- *         &lt;!-- or, substitute gx:altitudeMode: clampToSeaFloor, relativeToSeaFloor --&gt;
- *   &lt;outerBoundaryIs&gt;
- *     &lt;LinearRing&gt;
- *       &lt;coordinates&gt;...&lt;/coordinates&gt;         &lt;!-- lon,lat[,alt] --&gt;
- *     &lt;/LinearRing&gt;
- *   &lt;/outerBoundaryIs&gt;
- *   &lt;innerBoundaryIs&gt;
- *     &lt;LinearRing&gt;
- *       &lt;coordinates&gt;...&lt;/coordinates&gt;         &lt;!-- lon,lat[,alt] --&gt;
- *     &lt;/LinearRing&gt;
- *   &lt;/innerBoundaryIs&gt;
- *  &lt;strong&gt;&lt;/Polygon&gt; &lt;/strong&gt; </pre>
- *   
+ * &lt;PolyStyle&gt; for their color, color mode, and fill. Note: In Google
+ * Earth, a Polygon with an &lt;altitudeMode&gt; of clampToGround follows the
+ * great circle; however, a LinearRing (by itself) with an &lt;altitudeMode&gt;
+ * of clampToGround follows lines of constant latitude. The &lt;coordinates&gt;
+ * for polygons must be specified in counterclockwise order. Polygons follow the
+ * "right-hand rule," which states that if you place the fingers of your right
+ * hand in the direction in which the coordinates are specified, your thumb
+ * points in the general direction of the geometric normal for the polygon. (In
+ * 3D graphics, the geometric normal is used for lighting and points away from
+ * the front face of the polygon.) Since Google Earth fills only the front face
+ * of polygons, you will achieve the desired effect only when the coordinates
+ * are specified in the proper order. Otherwise, the polygon will be gray.
+ * Syntax: &lt;pre&gt; &lt;strong&gt;&lt;Polygon id="ID"&gt; &lt;/strong&gt;
+ * &lt;!-- specific to Polygon --&gt; &lt;extrude&gt;0&lt;/extrude&gt; &lt;!--
+ * boolean --&gt; &lt;tessellate&gt;0&lt;/tessellate&gt; &lt;!-- boolean --&gt;
+ * &lt;altitudeMode&gt;clampToGround&lt;/altitudeMode&gt; &lt;!--
+ * kml:altitudeModeEnum: clampToGround, relativeToGround, or absolute --&gt;
+ * &lt;!-- or, substitute gx:altitudeMode: clampToSeaFloor, relativeToSeaFloor
+ * --&gt; &lt;outerBoundaryIs&gt; &lt;LinearRing&gt;
+ * &lt;coordinates&gt;...&lt;/coordinates&gt; &lt;!-- lon,lat[,alt] --&gt;
+ * &lt;/LinearRing&gt; &lt;/outerBoundaryIs&gt; &lt;innerBoundaryIs&gt;
+ * &lt;LinearRing&gt; &lt;coordinates&gt;...&lt;/coordinates&gt; &lt;!--
+ * lon,lat[,alt] --&gt; &lt;/LinearRing&gt; &lt;/innerBoundaryIs&gt;
+ * &lt;strong&gt;&lt;/Polygon&gt; &lt;/strong&gt; </pre>
+ * <p>
  * Extends:
  *
- * @see:  &lt;Geometry&gt;
+ * @see: &lt;Geometry&gt;
  *
  * Contained By:
- * @see:  &lt;MultiGeometry&gt;
- * @see:  &lt;Placemark&gt;
+ * @see: &lt;MultiGeometry&gt;
+ * @see: &lt;Placemark&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -85,8 +78,8 @@ import net.opengis.kml.annotations.Obvious;
 public class Polygon extends Geometry implements Cloneable {
 
   /**
-   *  &lt;extrude&gt;
-   *   
+   * &lt;extrude&gt;
+   * <p>
    * Boolean value. Specifies whether to connect the LineString to the ground.
    * To extrude a LineString, the altitude mode must be either relativeToGround,
    * relativeToSeaFloor, or absolute. The vertices in the LineString are
@@ -102,71 +95,71 @@ public class Polygon extends Geometry implements Cloneable {
    * box with five faces. The vertices of the Polygon are extruded toward the
    * center of the Earth's sphere. Boolean value. Specifies whether to connect
    * the point to the ground with a line. To extrude a Point, the value for
-   *  &lt;altitudeMode&gt; must be either relativeToGround, relativeToSeaFloor, or
-   * absolute. The point is extruded toward the center of the Earth's sphere.
+   * &lt;altitudeMode&gt; must be either relativeToGround, relativeToSeaFloor,
+   * or absolute. The point is extruded toward the center of the Earth's sphere.
    */
   @XmlElement(defaultValue = "0")
   @XmlJavaTypeAdapter(BooleanConverter.class)
   protected Boolean extrude;
   /**
-   *  &lt;tessellate&gt;
-   *   
+   * &lt;tessellate&gt;
+   * <p>
    * Boolean value. Specifies whether to allow the LineString to follow the
    * terrain. To enable tessellation, the altitude mode must be clampToGround or
    * clampToSeaFloor. Very large LineStrings should enable tessellation so that
    * they follow the curvature of the earth (otherwise, they may go underground
    * and be hidden). Boolean value. Specifies whether to allow the LinearRing to
-   * follow the terrain. To enable tessellation, the value for  &lt;altitudeMode&gt;
-   * must be clampToGround or clampToSeaFloor. Very large LinearRings should
-   * enable tessellation so that they follow the curvature of the earth
-   * (otherwise, they may go underground and be hidden). Boolean value.
-   * Specifies whether to allow the Polygon to follow the terrain. To enable
-   * tessellation, the Polygon must have an altitude mode of clampToGround or
-   * clampToSeaFloor. Very large Polygons should enable tessellation so that
-   * they follow the curvature of the earth (otherwise, they may go underground
-   * and be hidden).
+   * follow the terrain. To enable tessellation, the value for
+   * &lt;altitudeMode&gt; must be clampToGround or clampToSeaFloor. Very large
+   * LinearRings should enable tessellation so that they follow the curvature of
+   * the earth (otherwise, they may go underground and be hidden). Boolean
+   * value. Specifies whether to allow the Polygon to follow the terrain. To
+   * enable tessellation, the Polygon must have an altitude mode of
+   * clampToGround or clampToSeaFloor. Very large Polygons should enable
+   * tessellation so that they follow the curvature of the earth (otherwise,
+   * they may go underground and be hidden).
    */
   @XmlElement(defaultValue = "0")
   @XmlJavaTypeAdapter(BooleanConverter.class)
   protected Boolean tessellate;
   /**
    * AltitudeMode
-   *   
-   * clampToGround, relativeToGround, absolute See Also: See  &lt;LookAt&gt; and
-   *  &lt;Region&gt;
-   *   
+   * <p>
+   * clampToGround, relativeToGround, absolute See Also: See &lt;LookAt&gt; and
+   * &lt;Region&gt;
+   * <p>
    */
   @XmlElement(defaultValue = "clampToGround")
   protected AltitudeMode altitudeMode;
   /**
-   *  &lt;outerboundaryis&gt; (required)
-   *   
-   * Contains a  &lt;LinearRing&gt; element.
+   * &lt;outerboundaryis&gt; (required)
+   * <p>
+   * Contains a &lt;LinearRing&gt; element.
    */
   protected Boundary outerBoundaryIs;
   /**
-   *  &lt;innerboundaryis&gt;
-   *   
-   * Contains a  &lt;LinearRing&gt; element. A Polygon can contain multiple
-   *  &lt;innerBoundaryIs&gt;
-   * elements, which create multiple cut-outs inside the Polygon.
+   * &lt;innerboundaryis&gt;
+   * <p>
+   * Contains a &lt;LinearRing&gt; element. A Polygon can contain multiple
+   * &lt;innerBoundaryIs&gt; elements, which create multiple cut-outs inside the
+   * Polygon.
    */
   protected List<Boundary> innerBoundaryIs;
   @XmlElement(name = "PolygonSimpleExtensionGroup")
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> polygonSimpleExtension;
   /**
-   *  &lt;Object&gt;
-   *   
+   * &lt;Object&gt;
+   * <p>
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the  &lt;Update&gt; mechanism is to be used. Syntax:
-   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * assigned if the &lt;Update&gt; mechanism is to be used. Syntax:
+   * <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
    * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
    * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
-   *   
+   * <p>
    */
   @XmlElement(name = "PolygonObjectExtensionGroup")
   protected List<AbstractObject> polygonObjectExtension;
@@ -224,7 +217,7 @@ public class Polygon extends Geometry implements Cloneable {
   /**
    * @see altitudeMode
    *
-   * @return possible object is null null null null null null   {@link Object}
+   * @return possible object is null null null null null null null null   {@link Object}
      *     {@link net.opengis.kml.AltitudeMode}
    *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
@@ -236,7 +229,7 @@ public class Polygon extends Geometry implements Cloneable {
   /**
    * @see altitudeMode
    *
-   * @param value allowed object is null null null null null null   {@link Object}
+   * @param value allowed object is null null null null null null null null   {@link Object}
      *     {@link net.opengis.kml.AltitudeMode}
    *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
@@ -381,10 +374,9 @@ public class Polygon extends Geometry implements Cloneable {
 
   /**
    * Creates a new instance of {@link Boundary} and set it to outerBoundaryIs.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * Boundary boundary = new Boundary();
-   * this.setOuterBoundaryIs(boundary);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; Boundary boundary = new
+   * Boundary(); this.setOuterBoundaryIs(boundary); &lt;/code&gt;
    */
   public Boundary createAndSetOuterBoundaryIs() {
     Boundary newValue = new Boundary();
@@ -394,9 +386,8 @@ public class Polygon extends Geometry implements Cloneable {
 
   /**
    * Creates a new instance of {@link Boundary} and adds it to innerBoundaryIs.
-   * This method is a short version for:     &lt;code&gt;
-   * Boundary boundary = new Boundary();
-   * this.getInnerBoundaryIs().add(boundary);  &lt;/code&gt;
+   * This method is a short version for: &lt;code&gt; Boundary boundary = new
+   * Boundary(); this.getInnerBoundaryIs().add(boundary); &lt;/code&gt;
    */
   public Boundary createAndAddInnerBoundaryIs() {
     Boundary newValue = new Boundary();
@@ -418,7 +409,8 @@ public class Polygon extends Geometry implements Cloneable {
    *
    * @param innerBoundaryIs Objects of the following type are allowed in the
    *                        list: {@link Boundary}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Polygon addToInnerBoundaryIs(final Boundary innerBoundaryIs) {
     this.getInnerBoundaryIs().add(innerBoundaryIs);
@@ -439,7 +431,8 @@ public class Polygon extends Geometry implements Cloneable {
    *
    * @param polygonSimpleExtension Objects of the following type are allowed in
    *                               the list: {@link Object}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Polygon addToPolygonSimpleExtension(final Object polygonSimpleExtension) {
     this.getPolygonSimpleExtension().add(polygonSimpleExtension);
@@ -460,7 +453,8 @@ public class Polygon extends Geometry implements Cloneable {
    *
    * @param polygonObjectExtension Objects of the following type are allowed in
    *                               the list: {@link AbstractObject}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Polygon addToPolygonObjectExtension(final AbstractObject polygonObjectExtension) {
     this.getPolygonObjectExtension().add(polygonObjectExtension);

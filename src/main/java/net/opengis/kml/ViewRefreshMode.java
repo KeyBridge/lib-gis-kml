@@ -22,9 +22,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * ViewRefreshMode
- *   
- * never, onRequest, onStop, onRegion See Also: See  &lt;Link&gt;
- *   
+ * <p>
+ * never, onRequest, onStop, onRegion See Also: See &lt;Link&gt;
+ * <p>
  */
 @XmlType(name = "viewRefreshModeEnumType")
 @XmlEnum

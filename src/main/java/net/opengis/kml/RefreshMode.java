@@ -22,9 +22,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * RefreshMode
- *   
- * onChange, onInterval, onExpire See Also: See  &lt;Link&gt;
- *   
+ * <p>
+ * onChange, onInterval, onExpire See Also: See &lt;Link&gt;
+ * <p>
  */
 @XmlType(name = "refreshModeEnumType")
 @XmlEnum

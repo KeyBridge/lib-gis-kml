@@ -25,43 +25,50 @@ import net.opengis.kml.atom.Author;
 import net.opengis.kml.xal.AddressDetails;
 
 /**
- *  &lt;NetworkLink&gt;
- *   
+ * &lt;NetworkLink&gt;
+ * <p>
  * References a KML file or KMZ archive on a local or remote network. Use the
- *  &lt;Link&gt;
- * element to specify the location of the KML file. Within that element, you can
- * define the refresh options for updating the file, based on time and camera
- * change. NetworkLinks can be used in combination with Regions to handle very
- * large datasets efficiently. Syntax:
- *  &lt;pre&gt; &lt;strong&gt;&lt;NetworkLink id="ID"&gt; &lt;/strong&gt;
- *   &lt;!-- inherited from  &lt;em&gt;Feature &lt;/em&gt; element --&gt;&lt;name&gt; &lt;em&gt;... &lt;/em&gt;&lt;/name&gt;                      &lt;!-- string --&gt;
- *   &lt;visibility&gt;1&lt;/visibility&gt;            &lt;!-- boolean --&gt;
- *   &lt;open&gt;0&lt;/open&gt;                        &lt;!-- boolean --&gt;
- *    &lt;span&gt;&lt;atom:author&gt;...&lt;atom:author&gt;         &lt;!-- xmlns:atom --&gt;
- *   &lt;atom:link&gt;...&lt;/atom:link&gt; &lt;/span&gt; &lt;span&gt;            &lt;!-- xmlns:atom --&gt; &lt;/span&gt;
- *   &lt;address&gt; &lt;em&gt;... &lt;/em&gt;&lt;/address&gt;                &lt;!-- string --&gt;
- *   &lt;xal:AddressDetails&gt;...&lt;/xal:AddressDetails&gt;  &lt;!-- xmlns:xal --&gt; &lt;br&gt;  &lt;phoneNumber&gt;...&lt;/phoneNumber&gt;        &lt;!-- string --&gt; &lt;br&gt;  &lt;Snippet maxLines="2"&gt; &lt;em&gt;... &lt;/em&gt;&lt;/Snippet&gt;   &lt;!-- string --&gt;
- *   &lt;description&gt; &lt;em&gt;... &lt;/em&gt;&lt;/description&gt;        &lt;!-- string --&gt;
- *    &lt;span&gt; &lt;em&gt;&lt;AbstractView&gt;...&lt;/AbstractView&gt; &lt;/em&gt;      &lt;!-- Camera  &lt;em&gt;or &lt;/em&gt; LookAt --&gt; &lt;/span&gt;
- *   &lt; &lt;em&gt;TimePrimitive &lt;/em&gt;&gt;...&lt;/ &lt;em&gt;TimePrimitive &lt;/em&gt;&gt;
- *   &lt;styleUrl&gt; &lt;em&gt;... &lt;/em&gt;&lt;/styleUrl&gt;              &lt;!-- anyURI --&gt;
- *   &lt; &lt;em&gt;StyleSelector&gt;...&lt;/StyleSelector&gt; &lt;/em&gt;
- *   &lt;Region&gt;...&lt;/Region&gt;
- *    &lt;span&gt;&lt;Metadata&gt;...&lt;/Metadata&gt;              &lt;!-- deprecated in KML 2.2 --&gt;
- *   &lt;ExtendedData&gt;...&lt;/ExtendedData&gt;      &lt;!-- new in KML 2.2 --&gt; &lt;/span&gt;
- *
- *   &lt;!-- specific to NetworkLink --&gt;
- *   &lt;refreshVisibility&gt;0&lt;/refreshVisibility&gt; &lt;!-- boolean --&gt;
- *   &lt;flyToView&gt;0&lt;/flyToView&gt;                 &lt;!-- boolean --&gt;
- *   &lt;Link&gt;...&lt;/Link&gt;
- *  &lt;strong&gt;&lt;/NetworkLink&gt; &lt;/strong&gt; </pre>
- *   
+ * &lt;Link&gt; element to specify the location of the KML file. Within that
+ * element, you can define the refresh options for updating the file, based on
+ * time and camera change. NetworkLinks can be used in combination with Regions
+ * to handle very large datasets efficiently. Syntax: &lt;pre&gt;
+ * &lt;strong&gt;&lt;NetworkLink id="ID"&gt; &lt;/strong&gt; &lt;!-- inherited
+ * from &lt;em&gt;Feature &lt;/em&gt; element --&gt;&lt;name&gt; &lt;em&gt;...
+ * &lt;/em&gt;&lt;/name&gt; &lt;!-- string --&gt;
+ * &lt;visibility&gt;1&lt;/visibility&gt; &lt;!-- boolean --&gt;
+ * &lt;open&gt;0&lt;/open&gt; &lt;!-- boolean --&gt;
+ * &lt;span&gt;&lt;atom:author&gt;...&lt;atom:author&gt; &lt;!-- xmlns:atom
+ * --&gt; &lt;atom:link&gt;...&lt;/atom:link&gt; &lt;/span&gt; &lt;span&gt;
+ * &lt;!-- xmlns:atom --&gt; &lt;/span&gt; &lt;address&gt; &lt;em&gt;...
+ * &lt;/em&gt;&lt;/address&gt; &lt;!-- string --&gt;
+ * &lt;xal:AddressDetails&gt;...&lt;/xal:AddressDetails&gt; &lt;!-- xmlns:xal
+ * --&gt; &lt;br&gt; &lt;phoneNumber&gt;...&lt;/phoneNumber&gt; &lt;!-- string
+ * --&gt; &lt;br&gt; &lt;Snippet maxLines="2"&gt; &lt;em&gt;...
+ * &lt;/em&gt;&lt;/Snippet&gt; &lt;!-- string --&gt; &lt;description&gt;
+ * &lt;em&gt;... &lt;/em&gt;&lt;/description&gt; &lt;!-- string --&gt;
+ * &lt;span&gt; &lt;em&gt;&lt;AbstractView&gt;...&lt;/AbstractView&gt;
+ * &lt;/em&gt; &lt;!-- Camera &lt;em&gt;or &lt;/em&gt; LookAt --&gt;
+ * &lt;/span&gt; &lt; &lt;em&gt;TimePrimitive &lt;/em&gt;&gt;...&lt;/
+ * &lt;em&gt;TimePrimitive &lt;/em&gt;&gt; &lt;styleUrl&gt; &lt;em&gt;...
+ * &lt;/em&gt;&lt;/styleUrl&gt; &lt;!-- anyURI --&gt; &lt;
+ * &lt;em&gt;StyleSelector&gt;...&lt;/StyleSelector&gt; &lt;/em&gt;
+ * &lt;Region&gt;...&lt;/Region&gt;
+ * &lt;span&gt;&lt;Metadata&gt;...&lt;/Metadata&gt; &lt;!-- deprecated in KML
+ * 2.2 --&gt; &lt;ExtendedData&gt;...&lt;/ExtendedData&gt; &lt;!-- new in KML
+ * 2.2 --&gt; &lt;/span&gt;
+ * <p>
+ * &lt;!-- specific to NetworkLink --&gt;
+ * &lt;refreshVisibility&gt;0&lt;/refreshVisibility&gt; &lt;!-- boolean --&gt;
+ * &lt;flyToView&gt;0&lt;/flyToView&gt; &lt;!-- boolean --&gt;
+ * &lt;Link&gt;...&lt;/Link&gt; &lt;strong&gt;&lt;/NetworkLink&gt;
+ * &lt;/strong&gt; </pre>
+ * <p>
  * Extends:
  *
- * @see:  &lt;Feature&gt;
+ * @see: &lt;Feature&gt;
  *
  * Contained By:
- * @see:  &lt;Container&gt;
+ * @see: &lt;Container&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -79,106 +86,102 @@ public class NetworkLink
   implements Cloneable {
 
   /**
-   *  &lt;refreshvisibility&gt;
-   *   
+   * &lt;refreshvisibility&gt;
+   * <p>
    * Boolean value. A value of 0 leaves the visibility of features within the
    * control of the Google Earth user. Set the value to 1 to reset the
    * visibility of features each time the NetworkLink is refreshed. For example,
-   * suppose a Placemark within the linked KML file has  &lt;visibility&gt; set to 1
-   * and the NetworkLink has  &lt;refreshVisibility&gt;
-   * set to 1. When the file is first loaded into Google Earth, the user can
-   * clear the check box next to the item to turn off display in the 3D viewer.
-   * However, when the NetworkLink is refreshed, the Placemark will be made
-   * visible again, since its original visibility state was TRUE.
+   * suppose a Placemark within the linked KML file has &lt;visibility&gt; set
+   * to 1 and the NetworkLink has &lt;refreshVisibility&gt; set to 1. When the
+   * file is first loaded into Google Earth, the user can clear the check box
+   * next to the item to turn off display in the 3D viewer. However, when the
+   * NetworkLink is refreshed, the Placemark will be made visible again, since
+   * its original visibility state was TRUE.
    */
   @XmlElement(defaultValue = "0")
   @XmlJavaTypeAdapter(BooleanConverter.class)
   protected Boolean refreshVisibility;
   /**
-   *  &lt;flytoview&gt;
-   *   
+   * &lt;flytoview&gt;
+   * <p>
    * Boolean value. A value of 1 causes Google Earth to fly to the view of the
    * LookAt or Camera in the NetworkLinkControl (if it exists). If the
    * NetworkLinkControl does not contain an AbstractView element, Google Earth
-   * flies to the LookAt or Camera element in the Feature child within the  &lt;kml&gt;
-   * element in the refreshed file. If the  &lt;kml&gt; element does not have a LookAt
-   * or Camera specified, the view is unchanged. For example, Google Earth would
-   * fly to the  &lt;LookAt&gt; view of the parent Document, not the  &lt;LookAt&gt; of the
-   * Placemarks contained within the Document.
+   * flies to the LookAt or Camera element in the Feature child within the
+   * &lt;kml&gt; element in the refreshed file. If the &lt;kml&gt; element does
+   * not have a LookAt or Camera specified, the view is unchanged. For example,
+   * Google Earth would fly to the &lt;LookAt&gt; view of the parent Document,
+   * not the &lt;LookAt&gt; of the Placemarks contained within the Document.
    */
   @XmlElement(defaultValue = "0")
   @XmlJavaTypeAdapter(BooleanConverter.class)
   protected Boolean flyToView;
   /**
-   *  &lt;Url&gt;
+   * &lt;Url&gt;
    */
   @XmlElement(name = "Url")
   @Deprecated
   protected net.opengis.kml.Link url;
   /**
-   *  &lt;link&gt; (required). see  &lt;link&gt;.
-   *   
-   *  &lt;Link&gt; specifies the location of any of the following: If the file
-   * specified in  &lt;href&gt; is a local file, the  &lt;viewFormat&gt; and
-   *  &lt;httpQuery&gt;
-   * elements are not used. KML files fetched by network links Image files used
-   * in any Overlay (the
-   *  &lt;Icon&gt; element specifies the image in an Overlay;  &lt;Icon&gt; has the same
-   * fields as  &lt;Link&gt;) Model files used in the  &lt;Model&gt; element Specifies the URL
-   * of the website containing this KML or KMZ file. Be sure to include the
-   * namespace for this element in any KML file that uses it:
+   * &lt;link&gt; (required). see &lt;link&gt;.
+   * <p>
+   * &lt;Link&gt; specifies the location of any of the following: If the file
+   * specified in &lt;href&gt; is a local file, the &lt;viewFormat&gt; and
+   * &lt;httpQuery&gt; elements are not used. KML files fetched by network links
+   * Image files used in any Overlay (the &lt;Icon&gt; element specifies the
+   * image in an Overlay; &lt;Icon&gt; has the same fields as &lt;Link&gt;)
+   * Model files used in the &lt;Model&gt; element Specifies the URL of the
+   * website containing this KML or KMZ file. Be sure to include the namespace
+   * for this element in any KML file that uses it:
    * xmlns:atom="http://www.w3.org/2005/Atom" (see the sample that follows).
-   * Specifies the file to load and optional refresh parameters. See  &lt;Link&gt;. The
-   *  &lt;Link&gt; element replaces the  &lt;Url&gt; element of  &lt;NetworkLink&gt; contained in
-   * earlier KML releases and adds functionality for the  &lt;Region&gt; element
-   * (introduced in KML 2.1). In Google Earth releases 3.0 and earlier, the
-   *  &lt;Link&gt; element is ignored. The file is conditionally loaded and refreshed,
-   * depending on the refresh parameters supplied here. Two different sets of
-   * refresh parameters can be specified: one set is based on time
-   * ( &lt;refreshMode&gt; and  &lt;refreshInterval&gt;) and one is based on the current
-   * "camera" view ( &lt;viewRefreshMode&gt; and
-   *  &lt;viewRefreshTime&gt;). In addition, Link specifies whether to scale the
-   * bounding box parameters that are sent to the server ( &lt;viewBoundScale&gt;
-   * and provides a set of optional viewing parameters that can be sent to the
-   * server ( &lt;viewFormat&gt;) as well as a set of optional parameters containing
-   * version and language information. Tip: To display the top-level Folder or
-   * Document within a Network Link in the List View, assign an ID to the Folder
-   * or Document. Without this ID, only the child object names are displayed in
-   * the List View. When a file is fetched, the URL that is sent to the server
-   * is composed of three pieces of information: the href (Hypertext Reference)
-   * that specifies the file to load. an arbitrary format string that is created
-   * from (a) parameters that you specify in the  &lt;viewFormat&gt;
-   * element or (b) bounding box parameters (this is the default and is used if
-   * no  &lt;viewFormat&gt;
+   * Specifies the file to load and optional refresh parameters. See
+   * &lt;Link&gt;. The &lt;Link&gt; element replaces the &lt;Url&gt; element of
+   * &lt;NetworkLink&gt; contained in earlier KML releases and adds
+   * functionality for the &lt;Region&gt; element (introduced in KML 2.1). In
+   * Google Earth releases 3.0 and earlier, the &lt;Link&gt; element is ignored.
+   * The file is conditionally loaded and refreshed, depending on the refresh
+   * parameters supplied here. Two different sets of refresh parameters can be
+   * specified: one set is based on time ( &lt;refreshMode&gt; and
+   * &lt;refreshInterval&gt;) and one is based on the current "camera" view (
+   * &lt;viewRefreshMode&gt; and &lt;viewRefreshTime&gt;). In addition, Link
+   * specifies whether to scale the bounding box parameters that are sent to the
+   * server ( &lt;viewBoundScale&gt; and provides a set of optional viewing
+   * parameters that can be sent to the server ( &lt;viewFormat&gt;) as well as
+   * a set of optional parameters containing version and language information.
+   * Tip: To display the top-level Folder or Document within a Network Link in
+   * the List View, assign an ID to the Folder or Document. Without this ID,
+   * only the child object names are displayed in the List View. When a file is
+   * fetched, the URL that is sent to the server is composed of three pieces of
+   * information: the href (Hypertext Reference) that specifies the file to
+   * load. an arbitrary format string that is created from (a) parameters that
+   * you specify in the &lt;viewFormat&gt; element or (b) bounding box
+   * parameters (this is the default and is used if no &lt;viewFormat&gt;
    * element is included in the file). a second format string that is specified
-   * in the
-   *  &lt;httpQuery&gt; element. Syntax:
-   *  &lt;pre&gt; &lt;strong&gt;&lt;Link id="ID"&gt; &lt;/strong&gt;
-   *   &lt;!-- specific to Link --&gt;
-   *   &lt;href&gt; &lt;em&gt;... &lt;/em&gt;&lt;/href&gt;                      &lt;!--  &lt;span&gt;string &lt;/span&gt; --&gt;
-   *   &lt;refreshMode&gt;onChange&lt;/refreshMode&gt;
-   *     &lt;!-- refreshModeEnum: onChange, onInterval,  &lt;em&gt;or &lt;/em&gt; onExpire --&gt;
-   *   &lt;refreshInterval&gt;4&lt;/refreshInterval&gt;  &lt;!-- float --&gt;
-   *   &lt;viewRefreshMode&gt;never&lt;/viewRefreshMode&gt;
-   *     &lt;!-- viewRefreshModeEnum: never, onStop, onRequest, onRegion --&gt;
-   *   &lt;viewRefreshTime&gt;4&lt;/viewRefreshTime&gt;  &lt;!-- float --&gt;
-   *   &lt;viewBoundScale&gt;1&lt;/viewBoundScale&gt;    &lt;!-- float --&gt;
-   *   &lt;viewFormat&gt;BBOX=[bboxWest],[bboxSouth],[bboxEast],[bboxNorth]&lt; &lt;strong&gt;/ &lt;/strong&gt;viewFormat&gt;
-   *                                         &lt;!-- string --&gt;
-   *   &lt;httpQuery&gt;...&lt;/httpQuery&gt;            &lt;!-- string --&gt;
-   *  &lt;strong&gt;&lt;/Link&gt; &lt;/strong&gt; </pre>
-   *   
+   * in the &lt;httpQuery&gt; element. Syntax: &lt;pre&gt;
+   * &lt;strong&gt;&lt;Link id="ID"&gt; &lt;/strong&gt; &lt;!-- specific to Link
+   * --&gt; &lt;href&gt; &lt;em&gt;... &lt;/em&gt;&lt;/href&gt; &lt;!--
+   * &lt;span&gt;string &lt;/span&gt; --&gt;
+   * &lt;refreshMode&gt;onChange&lt;/refreshMode&gt; &lt;!-- refreshModeEnum:
+   * onChange, onInterval, &lt;em&gt;or &lt;/em&gt; onExpire --&gt;
+   * &lt;refreshInterval&gt;4&lt;/refreshInterval&gt; &lt;!-- float --&gt;
+   * &lt;viewRefreshMode&gt;never&lt;/viewRefreshMode&gt; &lt;!--
+   * viewRefreshModeEnum: never, onStop, onRequest, onRegion --&gt;
+   * &lt;viewRefreshTime&gt;4&lt;/viewRefreshTime&gt; &lt;!-- float --&gt;
+   * &lt;viewBoundScale&gt;1&lt;/viewBoundScale&gt; &lt;!-- float --&gt;
+   * &lt;viewFormat&gt;BBOX=[bboxWest],[bboxSouth],[bboxEast],[bboxNorth]&lt;
+   * &lt;strong&gt;/ &lt;/strong&gt;viewFormat&gt; &lt;!-- string --&gt;
+   * &lt;httpQuery&gt;...&lt;/httpQuery&gt; &lt;!-- string --&gt;
+   * &lt;strong&gt;&lt;/Link&gt; &lt;/strong&gt; </pre>
+   * <p>
    * Extends:
    *
-   * @see:  &lt;Object&gt;
+   * @see: &lt;Object&gt;
    *
    * Contained By:
-   * @see:  &lt;Model&gt;
-   * @see:  &lt;NetworkLink&gt;
+   * @see: &lt;Model&gt;
+   * @see: &lt;NetworkLink&gt;
    *
-   * See Also:
-   *  &lt;NetworkLinkControl&gt;
-   *  &lt;Region&gt;
+   * See Also: &lt;NetworkLinkControl&gt; &lt;Region&gt;
    *
    */
   @XmlElement(name = "Link")
@@ -187,17 +190,17 @@ public class NetworkLink
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> networkLinkSimpleExtension;
   /**
-   *  &lt;Object&gt;
-   *   
+   * &lt;Object&gt;
+   * <p>
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the  &lt;Update&gt; mechanism is to be used. Syntax:
-   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * assigned if the &lt;Update&gt; mechanism is to be used. Syntax:
+   * <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
    * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
    * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
-   *   
+   * <p>
    */
   @XmlElement(name = "NetworkLinkObjectExtensionGroup")
   protected List<AbstractObject> networkLinkObjectExtension;
@@ -379,10 +382,9 @@ public class NetworkLink
 
   /**
    * Creates a new instance of {@link net.opengis.kml.Link} and set it to url.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * Link link = new Link();
-   * this.setUrl(link);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; Link link = new Link();
+   * this.setUrl(link); &lt;/code&gt;
    */
   public net.opengis.kml.Link createAndSetUrl() {
     net.opengis.kml.Link newValue = new net.opengis.kml.Link();
@@ -392,10 +394,9 @@ public class NetworkLink
 
   /**
    * Creates a new instance of {@link net.opengis.kml.Link} and set it to link.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * Link link = new Link();
-   * this.setLink(link);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; Link link = new Link();
+   * this.setLink(link); &lt;/code&gt;
    */
   public net.opengis.kml.Link createAndSetLink() {
     net.opengis.kml.Link newValue = new net.opengis.kml.Link();
@@ -417,7 +418,8 @@ public class NetworkLink
    *
    * @param networkLinkSimpleExtension Objects of the following type are allowed
    *                                   in the list: {@link Object}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public NetworkLink addToNetworkLinkSimpleExtension(final Object networkLinkSimpleExtension) {
     this.getNetworkLinkSimpleExtension().add(networkLinkSimpleExtension);
@@ -438,7 +440,8 @@ public class NetworkLink
    *
    * @param networkLinkObjectExtension Objects of the following type are allowed
    *                                   in the list: {@link AbstractObject}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public NetworkLink addToNetworkLinkObjectExtension(final AbstractObject networkLinkObjectExtension) {
     this.getNetworkLinkObjectExtension().add(networkLinkObjectExtension);

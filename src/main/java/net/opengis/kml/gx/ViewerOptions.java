@@ -51,7 +51,7 @@ public class ViewerOptions
    * Default no-arg constructor is private. Use overloaded constructor instead!
    * (Temporary solution, till a better and more suitable ObjectFactory is
    * created.)
-   *   
+   * <p>
    */
   @Deprecated
   private ViewerOptions() {
@@ -103,9 +103,8 @@ public class ViewerOptions
 
   /**
    * Creates a new instance of {@link Option} and adds it to option. This method
-   * is a short version for:     &lt;code&gt;
-   * Option option = new Option();
-   * this.getOption().add(option);  &lt;/code&gt;
+   * is a short version for: &lt;code&gt; Option option = new Option();
+   * this.getOption().add(option); &lt;/code&gt;
    */
   public Option createAndAddOption() {
     Option newValue = new Option();
@@ -116,9 +115,9 @@ public class ViewerOptions
   /**
    * Sets the value of the option property Objects of the following type(s) are
    * allowed in the list List &lt;Option&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withOption} instead.
    *
@@ -133,7 +132,8 @@ public class ViewerOptions
    *
    * @param option Objects of the following type are allowed in the list:
    *               {@link Option}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public ViewerOptions addToOption(final Option option) {
     this.getOption().add(option);

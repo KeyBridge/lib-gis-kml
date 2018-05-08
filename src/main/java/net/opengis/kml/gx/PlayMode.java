@@ -23,14 +23,12 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * Java class for playModeEnumType. The following schema fragment specifies the
  * expected content contained within this class.
- *   
- *  &lt;
- * pre&gt;
- * &lt;simpleType name="playModeEnumType"&gt; &lt;restriction
+ * <p>
+ * &lt; pre&gt; &lt;simpleType name="playModeEnumType"&gt; &lt;restriction
  * base="{http://www.w3.org/2001/XMLSchema}string"&gt; &lt;enumeration
  * value="pause"/&gt; &lt;/restriction&gt; &lt;/simpleType&gt;
- *  </pre>
- *   
+ * </pre>
+ * <p>
  */
 @XmlType(name = "playModeEnumType")
 @XmlEnum

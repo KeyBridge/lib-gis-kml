@@ -23,32 +23,32 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- *  &lt;Point&gt;
- *   
+ * &lt;Point&gt;
+ * <p>
  * A geographic location defined by longitude, latitude, and (optional)
  * altitude. When a Point is contained by a Placemark, the point itself
  * determines the position of the Placemark's name and icon. When a Point is
  * extruded, it is connected to the ground with a line. This "tether" uses the
- * current LineStyle. The  &lt;Point&gt; element acts as a  &lt;Point&gt; inside a  &lt;Placemark&gt;
- * element. It draws an icon to mark the position of the PhotoOverlay. The icon
- * drawn is specified by the
- *  &lt;styleUrl&gt; and  &lt;StyleSelector&gt; fields, just as it is for  &lt;Placemark&gt;. Syntax:
- *  &lt;pre&gt; &lt;strong&gt;&lt;Point id="ID"&gt; &lt;/strong&gt;
- *   &lt;!-- specific to Point --&gt;
- *   &lt;extrude&gt;0&lt;/extrude&gt;                        &lt;!-- boolean --&gt;
- *   &lt;altitudeMode&gt;clampToGround&lt;/altitudeMode&gt;
- * 	      &lt;!-- kml:altitudeModeEnum: clampToGround, relativeToGround, or absolute --&gt;
- *         &lt;!-- or, substitute gx:altitudeMode: clampToSeaFloor, relativeToSeaFloor --&gt;
- *   &lt;coordinates&gt; &lt;em&gt;... &lt;/em&gt;&lt;/coordinates&gt; &lt;span class="style1"&gt; &lt;em&gt;               &lt;/em&gt; &lt;/span&gt;&lt;!-- lon,lat[,alt] --&gt;
- *  &lt;strong&gt;&lt;/Point&gt; &lt;/strong&gt; </pre>
- *   
+ * current LineStyle. The &lt;Point&gt; element acts as a &lt;Point&gt; inside a
+ * &lt;Placemark&gt; element. It draws an icon to mark the position of the
+ * PhotoOverlay. The icon drawn is specified by the &lt;styleUrl&gt; and
+ * &lt;StyleSelector&gt; fields, just as it is for &lt;Placemark&gt;. Syntax:
+ * &lt;pre&gt; &lt;strong&gt;&lt;Point id="ID"&gt; &lt;/strong&gt; &lt;!--
+ * specific to Point --&gt; &lt;extrude&gt;0&lt;/extrude&gt; &lt;!-- boolean
+ * --&gt; &lt;altitudeMode&gt;clampToGround&lt;/altitudeMode&gt; &lt;!--
+ * kml:altitudeModeEnum: clampToGround, relativeToGround, or absolute --&gt;
+ * &lt;!-- or, substitute gx:altitudeMode: clampToSeaFloor, relativeToSeaFloor
+ * --&gt; &lt;coordinates&gt; &lt;em&gt;... &lt;/em&gt;&lt;/coordinates&gt;
+ * &lt;span class="style1"&gt; &lt;em&gt; &lt;/em&gt; &lt;/span&gt;&lt;!--
+ * lon,lat[,alt] --&gt; &lt;strong&gt;&lt;/Point&gt; &lt;/strong&gt; </pre>
+ * <p>
  * Extends:
  *
- * @see:  &lt;Geometry&gt;
+ * @see: &lt;Geometry&gt;
  *
  * Contained By:
- * @see:  &lt;MultiGeometry&gt;
- * @see:  &lt;Placemark&gt;
+ * @see: &lt;MultiGeometry&gt;
+ * @see: &lt;Placemark&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -67,20 +67,20 @@ public class Point extends Geometry implements Cloneable {
    * To extrude a LineString, the altitude mode must be either relativeToGround,
    * relativeToSeaFloor, or absolute. The vertices in the LineString are
    * extruded toward the center of the Earth's sphere.
-   *   
+   * <p>
    * Boolean value. Specifies whether to connect the LinearRing to the ground.
    * To extrude this geometry, the altitude mode must be either
    * relativeToGround, relativeToSeaFloor, or absolute. Only the vertices of the
    * LinearRing are extruded, not the center of the geometry. The vertices are
    * extruded toward the center of the Earth's sphere.
-   *   
+   * <p>
    * Boolean value. Specifies whether to connect the Polygon to the ground. To
    * extrude a Polygon, the altitude mode must be either relativeToGround,
    * relativeToSeaFloor, or absolute. Only the vertices are extruded, not the
    * geometry itself (for example, a rectangle turns into a box with five faces.
    * The vertices of the Polygon are extruded toward the center of the Earth's
    * sphere.
-   *   
+   * <p>
    * Boolean value. Specifies whether to connect the point to the ground with a
    * line. To extrude a Point, the value for {@code altitudeMode} must be either
    * relativeToGround, relativeToSeaFloor, or absolute. The point is extruded
@@ -91,10 +91,10 @@ public class Point extends Geometry implements Cloneable {
   protected Boolean extrude;
   /**
    * AltitudeMode
-   *   
-   * clampToGround, relativeToGround, absolute See Also: See  &lt;LookAt&gt; and
-   *  &lt;Region&gt;
-   *   
+   * <p>
+   * clampToGround, relativeToGround, absolute See Also: See &lt;LookAt&gt; and
+   * &lt;Region&gt;
+   * <p>
    */
   @XmlElement(defaultValue = "clampToGround")
   protected AltitudeMode altitudeMode;
@@ -103,9 +103,9 @@ public class Point extends Geometry implements Cloneable {
    * and altitude (in that order). Longitude and latitude values are in degrees,
    * where longitude&gt;= −180 and &lt;= 180 latitude&gt;= −90 and &lt;-≤ 90
    * altitude values (optional) are in meters above sea level
-   *   
+   * <p>
    * Do not include spaces between the three values that describe a coordinate.
-   *   
+   * <p>
    * Two or more coordinate tuples, each consisting of floating point values for
    * longitude, latitude, and altitude. The altitude component is optional.
    * Insert a space between tuples. Do not include spaces within a tuple.
@@ -122,9 +122,9 @@ public class Point extends Geometry implements Cloneable {
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
    * assigned if the Update mechanism is to be used.
-   *   
+   * <p>
    * Syntax:
-   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
    * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
    * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
    */
@@ -162,7 +162,7 @@ public class Point extends Geometry implements Cloneable {
   /**
    * @see altitudeMode
    *
-   * @return possible object is null null null null null null   {@link Object}
+   * @return possible object is null null null null null null null null   {@link Object}
      *     {@link net.opengis.kml.AltitudeMode}
    *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
@@ -174,7 +174,7 @@ public class Point extends Geometry implements Cloneable {
   /**
    * @see altitudeMode
    *
-   * @param value allowed object is null null null null null null   {@link Object}
+   * @param value allowed object is null null null null null null null null   {@link Object}
      *     {@link net.opengis.kml.AltitudeMode}
    *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
@@ -295,7 +295,8 @@ public class Point extends Geometry implements Cloneable {
    *
    * @param longitude required parameter
    * @param latitude  required parameter
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Point addToCoordinates(final double longitude, final double latitude) {
     this.getCoordinates().add(new Coordinate(longitude, latitude));
@@ -308,7 +309,8 @@ public class Point extends Geometry implements Cloneable {
    * @param longitude required parameter
    * @param latitude  required parameter
    * @param altitude  required parameter
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Point addToCoordinates(final double longitude, final double latitude, final double altitude) {
     this.getCoordinates().add(new Coordinate(longitude, latitude, altitude));
@@ -319,7 +321,8 @@ public class Point extends Geometry implements Cloneable {
    * add a value to the coordinates property collection
    *
    * @param coordinates required parameter
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Point addToCoordinates(final String coordinates) {
     this.getCoordinates().add(new Coordinate(coordinates));
@@ -340,7 +343,8 @@ public class Point extends Geometry implements Cloneable {
    *
    * @param pointSimpleExtension Objects of the following type are allowed in
    *                             the list: {@link Object}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Point addToPointSimpleExtension(final Object pointSimpleExtension) {
     this.getPointSimpleExtension().add(pointSimpleExtension);
@@ -361,7 +365,8 @@ public class Point extends Geometry implements Cloneable {
    *
    * @param pointObjectExtension Objects of the following type are allowed in
    *                             the list: {@link AbstractObject}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Point addToPointObjectExtension(final AbstractObject pointObjectExtension) {
     this.getPointObjectExtension().add(pointObjectExtension);
@@ -517,13 +522,13 @@ public class Point extends Geometry implements Cloneable {
   /**
    * Creates a new instance of {@link List}{@link Coordinate} and set it to
    * this.coordinates.
-   *   
+   * <p>
    * This method is a short version for:
-   *  <pre>
+   * <pre>
    *  &lt;code&gt;
    * List &lt;Coordinate&gt; newValue = new List &lt;Coordinate&gt;();
    * this.setCoordinates(newValue);  &lt;/code&gt;
-   *  </pre>
+   * </pre>
    */
   public List<Coordinate> createAndSetCoordinates() {
     List<Coordinate> newValue = new ArrayList<>();

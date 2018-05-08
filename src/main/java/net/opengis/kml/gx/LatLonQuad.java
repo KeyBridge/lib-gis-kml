@@ -26,21 +26,21 @@ import net.opengis.kml.CoordinatesConverter;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- *  &lt;gx:LatLonQuad&gt;
- *   
+ * &lt;gx:LatLonQuad&gt;
+ * <p>
  * Allows non-rectangular quadrilateral ground overlays. If a third value is
  * inserted into any tuple (representing altitude) it will be ignored. Altitude
- * is set using  &lt;altitude&gt; and  &lt;altitudeMode&gt; (or
- *  &lt;gx:altitudeMode&gt;) extending
- *  &lt;GroundOverlay&gt;. Allowed altitude modes are absolute, clampToGround, and
- * clampToSeaFloor. Specifies the coordinates of the four corner points of a
- * quadrilateral defining the overlay area. Exactly four coordinate tuples have
- * to be provided, each consisting of floating point values for longitude and
- * latitude. Insert a space between tuples. Do not include spaces within a
- * tuple. The coordinates must be specified in counter-clockwise order with the
- * first coordinate corresponding to the lower-left corner of the overlayed
- * image. The shape described by these corners must be convex. Syntax:
- *  <pre>&lt;GroundOverlay id="ID"&gt;
+ * is set using &lt;altitude&gt; and &lt;altitudeMode&gt; (or
+ * &lt;gx:altitudeMode&gt;) extending &lt;GroundOverlay&gt;. Allowed altitude
+ * modes are absolute, clampToGround, and clampToSeaFloor. Specifies the
+ * coordinates of the four corner points of a quadrilateral defining the overlay
+ * area. Exactly four coordinate tuples have to be provided, each consisting of
+ * floating point values for longitude and latitude. Insert a space between
+ * tuples. Do not include spaces within a tuple. The coordinates must be
+ * specified in counter-clockwise order with the first coordinate corresponding
+ * to the lower-left corner of the overlayed image. The shape described by these
+ * corners must be convex. Syntax:
+ * <pre>&lt;GroundOverlay id="ID"&gt;
  *   ...
  *   &lt;Icon&gt;...&lt;/Icon&gt;
  *   &lt;altitude&gt;0&lt;/altitude&gt;
@@ -51,13 +51,13 @@ import net.opengis.kml.annotations.Obvious;
  *     &lt;coordinates&gt;...&lt;/coordinates&gt;              &lt;!-- four lon,lat tuples --&gt;
  *   &lt;/gx:LatLonQuad&gt; &lt;/strong&gt;
  * &lt;/GroundOverlay&gt; </pre>
- *   
+ * <p>
  * Extends:
  *
- * @see:  &lt;Object&gt;
+ * @see: &lt;Object&gt;
  *
  * Contained By:
- * @see:  &lt;GroundOverlay&gt;
+ * @see: &lt;GroundOverlay&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -70,19 +70,15 @@ public class LatLonQuad
   implements Cloneable {
 
   /**
-   *  &lt;coordinates&gt; (required)
-   *   
+   * &lt;coordinates&gt; (required)
+   * <p>
    * A single tuple consisting of floating point values for longitude, latitude,
    * and altitude (in that order). Longitude and latitude values are in degrees,
-   * where longitude ≥ −180 and  &lt;= 180 latitude ≥ −90 and ≤ 90 altitude values
-   * (optional) are in meters above sea level Do not include spaces between the
-   * three values that describe a coordinate.     &lt;/
-   * p
-   * &gt;
-   *    T wo or more coordinate tuples, each consisting of floating point
-   * values for longitude, latitude, and altitude. The altitude component is
-   * optional. I
-   * n
+   * where longitude ≥ −180 and &lt;= 180 latitude ≥ −90 and ≤ 90 altitude
+   * values (optional) are in meters above sea level Do not include spaces
+   * between the three values that describe a coordinate. &lt;/ p &gt; T wo or
+   * more coordinate tuples, each consisting of floating point values for
+   * longitude, latitude, and altitude. The altitude component is optional. I n
    * sert a space between tuples. Do not include spaces within a tuple.
    */
   @XmlElement(namespace = "http://www.opengis.net/kml/2.2", type = String.class)
@@ -151,7 +147,8 @@ public class LatLonQuad
    *
    * @param longitude required parameter
    * @param latitude  required parameter
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public LatLonQuad addToCoordinates(final double longitude, final double latitude) {
     this.getCoordinates().add(new Coordinate(longitude, latitude));
@@ -164,7 +161,8 @@ public class LatLonQuad
    * @param longitude required parameter
    * @param latitude  required parameter
    * @param altitude  required parameter
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public LatLonQuad addToCoordinates(final double longitude, final double latitude, final double altitude) {
     this.getCoordinates().add(new Coordinate(longitude, latitude, altitude));
@@ -175,7 +173,8 @@ public class LatLonQuad
    * add a value to the coordinates property collection
    *
    * @param coordinates required parameter
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public LatLonQuad addToCoordinates(final String coordinates) {
     this.getCoordinates().add(new Coordinate(coordinates));
@@ -235,13 +234,13 @@ public class LatLonQuad
   /**
    * Creates a new instance of {@link List}{@link Coordinate} and set it to
    * this.coordinates.
-   *   
+   * <p>
    * This method is a short version for:
-   *  <pre>
+   * <pre>
    *  &lt;code&gt;
    * List &lt;Coordinate&gt; newValue = new List &lt;Coordinate&gt;();
    * this.setCoordinates(newValue);  &lt;/code&gt;
-   *  </pre>
+   * </pre>
    */
   public List<Coordinate> createAndSetCoordinates() {
     List<Coordinate> newValue = new ArrayList<>();

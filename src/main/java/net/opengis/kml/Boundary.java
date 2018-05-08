@@ -132,10 +132,9 @@ public class Boundary implements Cloneable {
 
   /**
    * Creates a new instance of {@link LinearRing} and set it to linearRing.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * LinearRing linearRing = new LinearRing();
-   * this.setLinearRing(linearRing);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; LinearRing linearRing =
+   * new LinearRing(); this.setLinearRing(linearRing); &lt;/code&gt;
    */
   public LinearRing createAndSetLinearRing() {
     LinearRing newValue = new LinearRing();
@@ -146,9 +145,9 @@ public class Boundary implements Cloneable {
   /**
    * Sets the value of the boundarySimpleExtension property Objects of the
    * following type(s) are allowed in the list List &lt;Object&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withBoundarySimpleExtension} instead.
    *
@@ -163,7 +162,8 @@ public class Boundary implements Cloneable {
    *
    * @param boundarySimpleExtension Objects of the following type are allowed in
    *                                the list: {@link Object}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Boundary addToBoundarySimpleExtension(final Object boundarySimpleExtension) {
     this.getBoundarySimpleExtension().add(boundarySimpleExtension);
@@ -173,9 +173,9 @@ public class Boundary implements Cloneable {
   /**
    * Sets the value of the boundaryObjectExtension property Objects of the
    * following type(s) are allowed in the list List &lt;AbstractObject&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withBoundaryObjectExtension} instead.
    *
@@ -190,7 +190,8 @@ public class Boundary implements Cloneable {
    *
    * @param boundaryObjectExtension Objects of the following type are allowed in
    *                                the list: {@link AbstractObject}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Boundary addToBoundaryObjectExtension(final AbstractObject boundaryObjectExtension) {
     this.getBoundaryObjectExtension().add(boundaryObjectExtension);

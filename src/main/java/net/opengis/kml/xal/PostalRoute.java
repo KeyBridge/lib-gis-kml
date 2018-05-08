@@ -69,7 +69,7 @@ public class PostalRoute implements Cloneable {
    * Default no-arg constructor is private. Use overloaded constructor instead!
    * (Temporary solution, till a better and more suitable ObjectFactory is
    * created.)
-   *   
+   * <p>
    */
   @Deprecated
   private PostalRoute() {
@@ -233,9 +233,8 @@ public class PostalRoute implements Cloneable {
 
   /**
    * Creates a new instance of {@link AddressLine} and adds it to addressLine.
-   * This method is a short version for:     &lt;code&gt;
-   * AddressLine addressLine = new AddressLine();
-   * this.getAddressLine().add(addressLine);  &lt;/code&gt;
+   * This method is a short version for: &lt;code&gt; AddressLine addressLine =
+   * new AddressLine(); this.getAddressLine().add(addressLine); &lt;/code&gt;
    */
   public AddressLine createAndAddAddressLine() {
     AddressLine newValue = new AddressLine();
@@ -245,9 +244,9 @@ public class PostalRoute implements Cloneable {
 
   /**
    * Creates a new instance of {@link PostalRoute.PostalRouteName} and adds it
-   * to postalRouteName. This method is a short version for:     &lt;code&gt;
+   * to postalRouteName. This method is a short version for: &lt;code&gt;
    * PostalRouteName postalRouteName = new PostalRouteName();
-   * this.getPostalRouteName().add(postalRouteName);  &lt;/code&gt;
+   * this.getPostalRouteName().add(postalRouteName); &lt;/code&gt;
    */
   public PostalRoute.PostalRouteName createAndAddPostalRouteName() {
     PostalRoute.PostalRouteName newValue = new PostalRoute.PostalRouteName();
@@ -258,10 +257,10 @@ public class PostalRoute implements Cloneable {
   /**
    * Creates a new instance of {@link PostalRoute.PostalRouteNumber} and set it
    * to postalRouteNumber.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * PostalRouteNumber postalRouteNumber = new PostalRouteNumber();
-   * this.setPostalRouteNumber(postalRouteNumber);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; PostalRouteNumber
+   * postalRouteNumber = new PostalRouteNumber();
+   * this.setPostalRouteNumber(postalRouteNumber); &lt;/code&gt;
    */
   public PostalRoute.PostalRouteNumber createAndSetPostalRouteNumber() {
     PostalRoute.PostalRouteNumber newValue = new PostalRoute.PostalRouteNumber();
@@ -271,10 +270,9 @@ public class PostalRoute implements Cloneable {
 
   /**
    * Creates a new instance of {@link PostBox} and set it to postBox.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * PostBox postBox = new PostBox();
-   * this.setPostBox(postBox);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; PostBox postBox = new
+   * PostBox(); this.setPostBox(postBox); &lt;/code&gt;
    *
    * @param postBoxNumber required parameter
    */
@@ -287,9 +285,9 @@ public class PostalRoute implements Cloneable {
   /**
    * Sets the value of the addressLine property Objects of the following type(s)
    * are allowed in the list List &lt;AddressLine&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withAddressLine} instead.
    *
@@ -304,7 +302,8 @@ public class PostalRoute implements Cloneable {
    *
    * @param addressLine Objects of the following type are allowed in the list:
    *                    {@link AddressLine}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public PostalRoute addToAddressLine(final AddressLine addressLine) {
     this.getAddressLine().add(addressLine);
@@ -314,9 +313,9 @@ public class PostalRoute implements Cloneable {
   /**
    * Sets the value of the postalRouteName property Objects of the following
    * type(s) are allowed in the list List &lt;PostalRouteName&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withPostalRouteName} instead.
    *
@@ -331,7 +330,8 @@ public class PostalRoute implements Cloneable {
    *
    * @param postalRouteName Objects of the following type are allowed in the
    *                        list: {@link PostalRoute.PostalRouteName}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public PostalRoute addToPostalRouteName(final PostalRoute.PostalRouteName postalRouteName) {
     this.getPostalRouteName().add(postalRouteName);
@@ -341,9 +341,9 @@ public class PostalRoute implements Cloneable {
   /**
    * Sets the value of the any property Objects of the following type(s) are
    * allowed in the list List &lt;Object&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withAny} instead.
    *
@@ -358,7 +358,8 @@ public class PostalRoute implements Cloneable {
    *
    * @param any Objects of the following type are allowed in the list:
    *            {@link Object}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public PostalRoute addToAny(final Object any) {
     this.getAny().add(any);

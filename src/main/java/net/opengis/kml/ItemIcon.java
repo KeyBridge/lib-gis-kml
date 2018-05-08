@@ -22,17 +22,17 @@ import javax.xml.bind.annotation.*;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- *  &lt;itemicon&gt;
- *   
- *  &lt;state&gt; Specifies the current state of the NetworkLink or Folder. Possible
- * values are open, closed, error, fetching0, fetching1, and fetching2. These
- * values can be combined by inserting a space between two values (no comma).
- *  &lt;href&gt; Specifies the URI of the image used in the List View for the Feature.
- * Icon used in the List view that reflects the state of a Folder or Link fetch.
- * Icons associated with the open and closed modes are used for Folders and
- * Network Links. Icons associated with the error and fetching0, fetching1, and
- * fetching2 modes are used for Network Links. The following screen capture
- * illustrates the Google Earth icons for these states:
+ * &lt;itemicon&gt;
+ * <p>
+ * &lt;state&gt; Specifies the current state of the NetworkLink or Folder.
+ * Possible values are open, closed, error, fetching0, fetching1, and fetching2.
+ * These values can be combined by inserting a space between two values (no
+ * comma). &lt;href&gt; Specifies the URI of the image used in the List View for
+ * the Feature. Icon used in the List view that reflects the state of a Folder
+ * or Link fetch. Icons associated with the open and closed modes are used for
+ * Folders and Network Links. Icons associated with the error and fetching0,
+ * fetching1, and fetching2 modes are used for Network Links. The following
+ * screen capture illustrates the Google Earth icons for these states:
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ItemIconType", propOrder = {
@@ -47,8 +47,8 @@ public class ItemIcon
   implements Cloneable {
 
   /**
-   *  &lt;state&gt;
-   *   
+   * &lt;state&gt;
+   * <p>
    * Specifies the current state of the NetworkLink or Folder. Possible values
    * are open, closed, error, fetching0, fetching1, and fetching2. These values
    * can be combined by inserting a space between two values (no comma).
@@ -56,34 +56,33 @@ public class ItemIcon
   @XmlList
   protected List<ItemIconState> state;
   /**
-   *  &lt;href&gt;
-   *   
+   * &lt;href&gt;
+   * <p>
    * A URL (either an HTTP address or a local file specification). When the
-   * parent of
-   *  &lt;Link&gt; is a NetworkLink,  &lt;href&gt; is a KML file. When the parent of  &lt;Link&gt; is
-   * a Model,
-   *  &lt;href&gt; is a COLLADA file. When the parent of  &lt;Icon&gt; (same fields as  &lt;Link&gt;)
-   * is an Overlay,  &lt;href&gt; is an image. Relative URLs can be used in this tag
-   * and are evaluated relative to the enclosing KML file. An HTTP address or a
-   * local file specification used to load an icon. Specifies the URI of the
-   * image used in the List View for the Feature.
+   * parent of &lt;Link&gt; is a NetworkLink, &lt;href&gt; is a KML file. When
+   * the parent of &lt;Link&gt; is a Model, &lt;href&gt; is a COLLADA file. When
+   * the parent of &lt;Icon&gt; (same fields as &lt;Link&gt;) is an Overlay,
+   * &lt;href&gt; is an image. Relative URLs can be used in this tag and are
+   * evaluated relative to the enclosing KML file. An HTTP address or a local
+   * file specification used to load an icon. Specifies the URI of the image
+   * used in the List View for the Feature.
    */
   protected String href;
   @XmlElement(name = "ItemIconSimpleExtensionGroup")
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> itemIconSimpleExtension;
   /**
-   *  &lt;Object&gt;
-   *   
+   * &lt;Object&gt;
+   * <p>
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the  &lt;Update&gt; mechanism is to be used. Syntax:
-   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * assigned if the &lt;Update&gt; mechanism is to be used. Syntax:
+   * <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
    * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
    * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
-   *   
+   * <p>
    */
   @XmlElement(name = "ItemIconObjectExtensionGroup")
   protected List<AbstractObject> itemIconObjectExtension;
@@ -216,7 +215,8 @@ public class ItemIcon
    *
    * @param state Objects of the following type are allowed in the list:
    *              {@link ItemIconState}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public ItemIcon addToState(final ItemIconState state) {
     this.getState().add(state);
@@ -237,7 +237,8 @@ public class ItemIcon
    *
    * @param itemIconSimpleExtension Objects of the following type are allowed in
    *                                the list: {@link Object}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public ItemIcon addToItemIconSimpleExtension(final Object itemIconSimpleExtension) {
     this.getItemIconSimpleExtension().add(itemIconSimpleExtension);
@@ -258,7 +259,8 @@ public class ItemIcon
    *
    * @param itemIconObjectExtension Objects of the following type are allowed in
    *                                the list: {@link AbstractObject}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public ItemIcon addToItemIconObjectExtension(final AbstractObject itemIconObjectExtension) {
     this.getItemIconObjectExtension().add(itemIconObjectExtension);

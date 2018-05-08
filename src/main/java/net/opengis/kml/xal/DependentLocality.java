@@ -105,7 +105,7 @@ public class DependentLocality implements Cloneable {
    * Default no-arg constructor is private. Use overloaded constructor instead!
    * (Temporary solution, till a better and more suitable ObjectFactory is
    * created.)
-   *   
+   * <p>
    */
   @Deprecated
   private DependentLocality() {
@@ -511,9 +511,8 @@ public class DependentLocality implements Cloneable {
 
   /**
    * Creates a new instance of {@link AddressLine} and adds it to addressLine.
-   * This method is a short version for:     &lt;code&gt;
-   * AddressLine addressLine = new AddressLine();
-   * this.getAddressLine().add(addressLine);  &lt;/code&gt;
+   * This method is a short version for: &lt;code&gt; AddressLine addressLine =
+   * new AddressLine(); this.getAddressLine().add(addressLine); &lt;/code&gt;
    */
   public AddressLine createAndAddAddressLine() {
     AddressLine newValue = new AddressLine();
@@ -523,9 +522,10 @@ public class DependentLocality implements Cloneable {
 
   /**
    * Creates a new instance of {@link DependentLocality.DependentLocalityName}
-   * and adds it to dependentLocalityName. This method is a short version for:     &lt;code&gt;
-   * DependentLocalityName dependentLocalityName = new DependentLocalityName();
-   * this.getDependentLocalityName().add(dependentLocalityName);  &lt;/code&gt;
+   * and adds it to dependentLocalityName. This method is a short version for:
+   * &lt;code&gt; DependentLocalityName dependentLocalityName = new
+   * DependentLocalityName();
+   * this.getDependentLocalityName().add(dependentLocalityName); &lt;/code&gt;
    */
   public DependentLocality.DependentLocalityName createAndAddDependentLocalityName() {
     DependentLocality.DependentLocalityName newValue = new DependentLocality.DependentLocalityName();
@@ -536,10 +536,10 @@ public class DependentLocality implements Cloneable {
   /**
    * Creates a new instance of {@link DependentLocality.DependentLocalityNumber}
    * and set it to dependentLocalityNumber.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * DependentLocalityNumber dependentLocalityNumber = new DependentLocalityNumber();
-   * this.setDependentLocalityNumber(dependentLocalityNumber);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; DependentLocalityNumber
+   * dependentLocalityNumber = new DependentLocalityNumber();
+   * this.setDependentLocalityNumber(dependentLocalityNumber); &lt;/code&gt;
    */
   public DependentLocality.DependentLocalityNumber createAndSetDependentLocalityNumber() {
     DependentLocality.DependentLocalityNumber newValue = new DependentLocality.DependentLocalityNumber();
@@ -549,10 +549,9 @@ public class DependentLocality implements Cloneable {
 
   /**
    * Creates a new instance of {@link PostBox} and set it to postBox.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * PostBox postBox = new PostBox();
-   * this.setPostBox(postBox);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; PostBox postBox = new
+   * PostBox(); this.setPostBox(postBox); &lt;/code&gt;
    *
    * @param postBoxNumber required parameter
    */
@@ -565,10 +564,10 @@ public class DependentLocality implements Cloneable {
   /**
    * Creates a new instance of {@link LargeMailUser} and set it to
    * largeMailUser.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * LargeMailUser largeMailUser = new LargeMailUser();
-   * this.setLargeMailUser(largeMailUser);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; LargeMailUser
+   * largeMailUser = new LargeMailUser(); this.setLargeMailUser(largeMailUser);
+   * &lt;/code&gt;
    */
   public LargeMailUser createAndSetLargeMailUser() {
     LargeMailUser newValue = new LargeMailUser();
@@ -578,10 +577,9 @@ public class DependentLocality implements Cloneable {
 
   /**
    * Creates a new instance of {@link PostOffice} and set it to postOffice.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * PostOffice postOffice = new PostOffice();
-   * this.setPostOffice(postOffice);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; PostOffice postOffice =
+   * new PostOffice(); this.setPostOffice(postOffice); &lt;/code&gt;
    */
   public PostOffice createAndSetPostOffice() {
     PostOffice newValue = new PostOffice();
@@ -591,10 +589,9 @@ public class DependentLocality implements Cloneable {
 
   /**
    * Creates a new instance of {@link PostalRoute} and set it to postalRoute.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * PostalRoute postalRoute = new PostalRoute();
-   * this.setPostalRoute(postalRoute);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; PostalRoute postalRoute =
+   * new PostalRoute(); this.setPostalRoute(postalRoute); &lt;/code&gt;
    *
    * @param postalRouteName   required parameter
    * @param postalRouteNumber required parameter
@@ -607,10 +604,9 @@ public class DependentLocality implements Cloneable {
 
   /**
    * Creates a new instance of {@link Thoroughfare} and set it to thoroughfare.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * Thoroughfare thoroughfare = new Thoroughfare();
-   * this.setThoroughfare(thoroughfare);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; Thoroughfare thoroughfare
+   * = new Thoroughfare(); this.setThoroughfare(thoroughfare); &lt;/code&gt;
    *
    * @param postalCode        required parameter
    * @param premise           required parameter
@@ -625,10 +621,9 @@ public class DependentLocality implements Cloneable {
 
   /**
    * Creates a new instance of {@link Premise} and set it to premise.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * Premise premise = new Premise();
-   * this.setPremise(premise);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; Premise premise = new
+   * Premise(); this.setPremise(premise); &lt;/code&gt;
    *
    * @param premiseNumber      required parameter
    * @param premiseNumberRange required parameter
@@ -643,10 +638,10 @@ public class DependentLocality implements Cloneable {
   /**
    * Creates a new instance of {@link DependentLocality} and set it to
    * dependentLocality.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * DependentLocality dependentLocality = new DependentLocality();
-   * this.setDependentLocality(dependentLocality);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; DependentLocality
+   * dependentLocality = new DependentLocality();
+   * this.setDependentLocality(dependentLocality); &lt;/code&gt;
    *
    * @param postBox       required parameter
    * @param postOffice    required parameter
@@ -661,10 +656,9 @@ public class DependentLocality implements Cloneable {
 
   /**
    * Creates a new instance of {@link PostalCode} and set it to postalCode.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * PostalCode postalCode = new PostalCode();
-   * this.setPostalCode(postalCode);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; PostalCode postalCode =
+   * new PostalCode(); this.setPostalCode(postalCode); &lt;/code&gt;
    */
   public PostalCode createAndSetPostalCode() {
     PostalCode newValue = new PostalCode();
@@ -675,9 +669,9 @@ public class DependentLocality implements Cloneable {
   /**
    * Sets the value of the addressLine property Objects of the following type(s)
    * are allowed in the list List &lt;AddressLine&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withAddressLine} instead.
    *
@@ -692,7 +686,8 @@ public class DependentLocality implements Cloneable {
    *
    * @param addressLine Objects of the following type are allowed in the list:
    *                    {@link AddressLine}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public DependentLocality addToAddressLine(final AddressLine addressLine) {
     this.getAddressLine().add(addressLine);
@@ -701,10 +696,11 @@ public class DependentLocality implements Cloneable {
 
   /**
    * Sets the value of the dependentLocalityName property Objects of the
-   * following type(s) are allowed in the list List &lt;DependentLocalityName&gt;.
-   *   
+   * following type(s) are allowed in the list List
+   * &lt;DependentLocalityName&gt;.
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withDependentLocalityName} instead.
    *
@@ -720,7 +716,8 @@ public class DependentLocality implements Cloneable {
    * @param dependentLocalityName Objects of the following type are allowed in
    *                              the list:
    *                              {@link DependentLocality.DependentLocalityName}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public DependentLocality addToDependentLocalityName(final DependentLocality.DependentLocalityName dependentLocalityName) {
     this.getDependentLocalityName().add(dependentLocalityName);
@@ -730,9 +727,9 @@ public class DependentLocality implements Cloneable {
   /**
    * Sets the value of the any property Objects of the following type(s) are
    * allowed in the list List &lt;Object&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withAny} instead.
    *
@@ -747,7 +744,8 @@ public class DependentLocality implements Cloneable {
    *
    * @param any Objects of the following type are allowed in the list:
    *            {@link Object}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public DependentLocality addToAny(final Object any) {
     this.getAny().add(any);

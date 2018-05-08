@@ -24,17 +24,15 @@ import net.opengis.kml.atom.Author;
 import net.opengis.kml.xal.AddressDetails;
 
 /**
- *  &lt;Overlay&gt;
- *   
+ * &lt;Overlay&gt;
+ * <p>
  * This is an abstract element and cannot be used directly in a KML file.
- *  &lt;Overlay&gt;
- * is the base type for image overlays drawn on the planet surface or on the
- * screen.
- *  &lt;Icon&gt; specifies the image to use and can be configured to reload images
- * based on a timer or by camera changes. This element also includes
- * specifications for stacking order of multiple overlays and for adding color
- * and transparency values to the base image. Syntax:
- *  <pre>&lt;!-- abstract element; do not create --&gt;
+ * &lt;Overlay&gt; is the base type for image overlays drawn on the planet
+ * surface or on the screen. &lt;Icon&gt; specifies the image to use and can be
+ * configured to reload images based on a timer or by camera changes. This
+ * element also includes specifications for stacking order of multiple overlays
+ * and for adding color and transparency values to the base image. Syntax:
+ * <pre>&lt;!-- abstract element; do not create --&gt;
  *  &lt;strong&gt;&lt;!--  &lt;em&gt;Overlay &lt;/em&gt; id="ID" --&gt; &lt;/strong&gt;                    &lt;!-- GroundOverlay,ScreenOverlay --&gt;
  *   &lt;!-- inherited from  &lt;em&gt;Feature &lt;/em&gt; element --&gt;
  *   &lt;name&gt; &lt;em&gt;... &lt;/em&gt;&lt;/name&gt;                      &lt;!-- string --&gt;
@@ -59,17 +57,16 @@ import net.opengis.kml.xal.AddressDetails;
  *   &lt;Icon&gt;
  *     &lt;href&gt;...&lt;/href&gt;
  *   &lt;/Icon&gt;
- *  &lt;strong&gt;&lt;!-- / &lt;em&gt;Overlay -- &lt;/em&gt;&gt; &lt;/strong&gt; </pre>
- *   
+ *  &lt;strong&gt;&lt;!-- / &lt;em&gt;Overlay -- &lt;/em&gt;&gt; &lt;/strong&gt;
+ * </pre>
+ * <p>
  * Extends:
  *
- * @see:  &lt;Feature&gt;
+ * @see: &lt;Feature&gt;
  *
  * Extended By:
- * @see:  &lt;GroundOverlay&gt;
- * @see:  &lt;PhotoOverlay @see:  &lt;Sc
- * r
- * eenOverlay&gt; @see: Syntax
+ * @see: &lt;GroundOverlay&gt;
+ * @see: &lt;PhotoOverlay @see: &lt;Sc r eenOverlay&gt; @see: Syntax
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -90,72 +87,71 @@ public abstract class Overlay
   implements Cloneable {
 
   /**
-   *  &lt;color&gt;
-   *   
+   * &lt;color&gt;
+   * <p>
    * Color and opacity (alpha) values are expressed in hexadecimal notation. The
    * range of values for any one color is 0 to 255 (00 to ff). For alpha, 00 is
    * fully transparent and ff is fully opaque. The order of expression is
    * aabbggrr, where aa=alpha (00 to ff); bb=blue (00 to ff); gg=green (00 to
    * ff); rr=red (00 to ff). For example, if you want to apply a blue color with
    * 50 percent opacity to an overlay, you would specify the following:
-   *  &lt;color&gt;7fff0000 &lt;/color&gt;, where alpha=0x7f, blue=0xff, green=0x00, and
-   * red=0x00. Color values are expressed in hexadecimal notation, including
-   * opacity (alpha) values. The order of expression is alpha, blue, green, red
-   * (aabbggrr). The range of values for any one color is 0 to 255 (00 to ff).
-   * For opacity, 00 is fully transparent and ff is fully opaque. For example,
-   * if you want to apply a blue color with 50 percent opacity to an overlay,
-   * you would specify the following:  &lt;color&gt;7fff0000 &lt;/color&gt;
-   * Note: The  &lt;geomColor&gt; element has been deprecated. Use  &lt;color&gt; instead.
+   * &lt;color&gt;7fff0000 &lt;/color&gt;, where alpha=0x7f, blue=0xff,
+   * green=0x00, and red=0x00. Color values are expressed in hexadecimal
+   * notation, including opacity (alpha) values. The order of expression is
+   * alpha, blue, green, red (aabbggrr). The range of values for any one color
+   * is 0 to 255 (00 to ff). For opacity, 00 is fully transparent and ff is
+   * fully opaque. For example, if you want to apply a blue color with 50
+   * percent opacity to an overlay, you would specify the following:
+   * &lt;color&gt;7fff0000 &lt;/color&gt; Note: The &lt;geomColor&gt; element
+   * has been deprecated. Use &lt;color&gt; instead.
    */
   @XmlElement(defaultValue = "ffffffff")
 
   protected String color;
   /**
-   *  &lt;draworder&gt;
-   *   
+   * &lt;draworder&gt;
+   * <p>
    * This element defines the stacking order for the images in overlapping
-   * overlays. Overlays with higher  &lt;drawOrder&gt; values are drawn on top of
-   * overlays with lower
-   *  &lt;drawOrder&gt; values.
+   * overlays. Overlays with higher &lt;drawOrder&gt; values are drawn on top of
+   * overlays with lower &lt;drawOrder&gt; values.
    */
   @XmlElement(defaultValue = "0")
   protected int drawOrder;
   /**
-   *  &lt;icon&gt; see also  &lt;icon&gt;.
-   *   
-   *  &lt;Icon&gt;  &lt;href&gt;Sunset.jpg &lt;/href&gt;  &lt;/Icon&gt;
-   * A custom Icon. In  &lt;IconStyle&gt;, the only child element of  &lt;Icon&gt; is  &lt;href&gt;:
-   *  &lt;href&gt;: An HTTP address or a local file specification used to load an icon.
-   * Defines an image associated with an Icon style or overlay.  &lt;Icon&gt; has the
-   * same child elements as  &lt;Link&gt;. The required  &lt;href&gt; child element defines
-   * the location of the image to be used as the overlay or as the icon for the
-   * placemark. This location can either be on a local file system or a remote
-   * web server. Defines the image associated with the Overlay. The  &lt;href&gt;
-   * element defines the location of the image to be used as the Overlay. This
-   * location can be either on a local file system or on a web server. If this
-   * element is omitted or contains no  &lt;href&gt;, a rectangle is drawn using the
-   * color and size defined by the ground or screen overlay.  &lt;Icon&gt;
-   *  &lt;href&gt;icon.jpg &lt;/href&gt;  &lt;/Icon&gt;
-   * Syntax:
-   *  &lt;pre&gt; &lt;strong&gt;&lt;Icon id="ID"&gt; &lt;/strong&gt;
-   *   &lt;!-- specific to Icon --&gt;
-   *   &lt;href&gt; &lt;em&gt;... &lt;/em&gt;&lt;/href&gt;                      &lt;!-- anyURI --&gt;
-   *   &lt;refreshMode&gt;onChange&lt;/refreshMode&gt;
-   *     &lt;!-- kml:refreshModeEnum: onChange, onInterval,  &lt;em&gt;or &lt;/em&gt; onExpire --&gt;
-   *   &lt;refreshInterval&gt;4&lt;/refreshInterval&gt;  &lt;!-- float --&gt;
-   *   &lt;viewRefreshMode&gt;never&lt;/viewRefreshMode&gt;
-   *     &lt;!-- kml:viewRefreshModeEnum: never, onStop, onRequest, onRegion --&gt;
-   *   &lt;viewRefreshTime&gt;4&lt;/viewRefreshTime&gt;  &lt;!-- float --&gt;
-   *   &lt;viewBoundScale&gt;1&lt;/viewBoundScale&gt;    &lt;!-- float --&gt;
-   *   &lt;viewFormat&gt;...&lt;/viewFormat&gt;          &lt;!-- string --&gt;
-   *   &lt;httpQuery&gt;...&lt;/httpQuery&gt;            &lt;!-- string --&gt;
-   *    &lt;strong&gt;&lt;/Icon&gt; &lt;/strong&gt; </pre>
-   *   
+   * &lt;icon&gt; see also &lt;icon&gt;.
+   * <p>
+   * &lt;Icon&gt; &lt;href&gt;Sunset.jpg &lt;/href&gt; &lt;/Icon&gt; A custom
+   * Icon. In &lt;IconStyle&gt;, the only child element of &lt;Icon&gt; is
+   * &lt;href&gt;: &lt;href&gt;: An HTTP address or a local file specification
+   * used to load an icon. Defines an image associated with an Icon style or
+   * overlay. &lt;Icon&gt; has the same child elements as &lt;Link&gt;. The
+   * required &lt;href&gt; child element defines the location of the image to be
+   * used as the overlay or as the icon for the placemark. This location can
+   * either be on a local file system or a remote web server. Defines the image
+   * associated with the Overlay. The &lt;href&gt; element defines the location
+   * of the image to be used as the Overlay. This location can be either on a
+   * local file system or on a web server. If this element is omitted or
+   * contains no &lt;href&gt;, a rectangle is drawn using the color and size
+   * defined by the ground or screen overlay. &lt;Icon&gt; &lt;href&gt;icon.jpg
+   * &lt;/href&gt; &lt;/Icon&gt; Syntax: &lt;pre&gt; &lt;strong&gt;&lt;Icon
+   * id="ID"&gt; &lt;/strong&gt; &lt;!-- specific to Icon --&gt; &lt;href&gt;
+   * &lt;em&gt;... &lt;/em&gt;&lt;/href&gt; &lt;!-- anyURI --&gt;
+   * &lt;refreshMode&gt;onChange&lt;/refreshMode&gt; &lt;!--
+   * kml:refreshModeEnum: onChange, onInterval, &lt;em&gt;or &lt;/em&gt;
+   * onExpire --&gt; &lt;refreshInterval&gt;4&lt;/refreshInterval&gt; &lt;!--
+   * float --&gt; &lt;viewRefreshMode&gt;never&lt;/viewRefreshMode&gt; &lt;!--
+   * kml:viewRefreshModeEnum: never, onStop, onRequest, onRegion --&gt;
+   * &lt;viewRefreshTime&gt;4&lt;/viewRefreshTime&gt; &lt;!-- float --&gt;
+   * &lt;viewBoundScale&gt;1&lt;/viewBoundScale&gt; &lt;!-- float --&gt;
+   * &lt;viewFormat&gt;...&lt;/viewFormat&gt; &lt;!-- string --&gt;
+   * &lt;httpQuery&gt;...&lt;/httpQuery&gt; &lt;!-- string --&gt;
+   * &lt;strong&gt;&lt;/Icon&gt; &lt;/strong&gt; </pre>
+   * <p>
    * Contained By:
    *
-   * @see:  &lt;GroundOverlay&gt;
-   * @see:  &lt;IconStyle&gt;
-   * @see:  &lt;ScreenOverlay&gt;
+   * @see: &lt;GroundOverlay&gt;
+   * @see: &lt;IconStyle&gt;
+   * @see: &lt;ScreenOverlay&gt;
    *
    */
   @XmlElement(name = "Icon")
@@ -164,17 +160,17 @@ public abstract class Overlay
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> overlaySimpleExtension;
   /**
-   *  &lt;Object&gt;
-   *   
+   * &lt;Object&gt;
+   * <p>
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the  &lt;Update&gt; mechanism is to be used. Syntax:
-   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * assigned if the &lt;Update&gt; mechanism is to be used. Syntax:
+   * <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
    * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
    * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
-   *   
+   * <p>
    */
   @XmlElement(name = "AbstractOverlayObjectExtensionGroup")
   protected List<AbstractObject> overlayObjectExtension;
@@ -328,10 +324,9 @@ public abstract class Overlay
 
   /**
    * Creates a new instance of {@link Icon} and set it to icon.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * Icon icon = new Icon();
-   * this.setIcon(icon);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; Icon icon = new Icon();
+   * this.setIcon(icon); &lt;/code&gt;
    */
   public Icon createAndSetIcon() {
     Icon newValue = new Icon();
@@ -353,7 +348,8 @@ public abstract class Overlay
    *
    * @param overlaySimpleExtension Objects of the following type are allowed in
    *                               the list: {@link Object}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Overlay addToOverlaySimpleExtension(final Object overlaySimpleExtension) {
     this.getOverlaySimpleExtension().add(overlaySimpleExtension);
@@ -374,7 +370,8 @@ public abstract class Overlay
    *
    * @param overlayObjectExtension Objects of the following type are allowed in
    *                               the list: {@link AbstractObject}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Overlay addToOverlayObjectExtension(final AbstractObject overlayObjectExtension) {
     this.getOverlayObjectExtension().add(overlayObjectExtension);

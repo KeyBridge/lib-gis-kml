@@ -23,17 +23,17 @@ import net.opengis.kml.annotations.Obvious;
 import net.opengis.kml.gx.SimpleArrayData;
 
 /**
- *  &lt;schemadata schemaurl="anyuri"&gt;
- *   
- * The  &lt;schemaURL&gt; can be a full URL, a reference to a Schema ID defined in an
- * external KML file, or a reference to a Schema ID defined in the same KML
- * file. All of the following specifications are acceptable: The Schema element
- * is always a child of Document. The ExtendedData element is a child of the
- * Feature that contains the custom data. This element is used in conjunction
- * with  &lt;Schema&gt; to add typed custom data to a KML Feature. The Schema element
- * (identified by the schemaUrl attribute) declares the custom data type. The
- * actual data objects ("instances" of the custom data) are defined using the
- * SchemaData element.
+ * &lt;schemadata schemaurl="anyuri"&gt;
+ * <p>
+ * The &lt;schemaURL&gt; can be a full URL, a reference to a Schema ID defined
+ * in an external KML file, or a reference to a Schema ID defined in the same
+ * KML file. All of the following specifications are acceptable: The Schema
+ * element is always a child of Document. The ExtendedData element is a child of
+ * the Feature that contains the custom data. This element is used in
+ * conjunction with &lt;Schema&gt; to add typed custom data to a KML Feature.
+ * The Schema element (identified by the schemaUrl attribute) declares the
+ * custom data type. The actual data objects ("instances" of the custom data)
+ * are defined using the SchemaData element.
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SchemaDataType", propOrder = {
@@ -46,44 +46,44 @@ public class SchemaData
   implements Cloneable {
 
   /**
-   *  &lt;simpledata name="string"&gt;
-   *   
-   *  &lt;SimpleData name="string"&gt; This element assigns a value to the custom data
-   * field identified by the name attribute. The type and name of this custom
-   * data field are declared in the  &lt;Schema&gt; element. Here is an example of
-   * defining two custom data elements:  &lt;Placemark&gt;  &lt;name&gt;Easy trail &lt;/name&gt;
-   *  &lt;ExtendedData&gt;  &lt;SchemaData schemaUrl="#TrailHeadTypeId"&gt;
-   *  &lt;SimpleData name="TrailHeadName"&gt;Pi in the sky &lt;/SimpleData&gt;
-   *  &lt;SimpleData name="TrailLength"&gt;3.14159 &lt;/SimpleData&gt;
-   *  &lt;SimpleData name="ElevationGain"&gt;10 &lt;/SimpleData&gt;  &lt;/SchemaData&gt;
-   *  &lt;/ExtendedData&gt;  &lt;Point&gt;
-   *  &lt;coordinates&gt;-122.000,37.002 &lt;/coordinates&gt;  &lt;/Point&gt;  &lt;/Placemark&gt;
-   *  &lt;Placemark&gt;  &lt;name&gt;Difficult trail &lt;/name&gt;  &lt;ExtendedData&gt;
-   *  &lt;SchemaData schemaUrl="#TrailHeadTypeId"&gt;  &lt;SimpleData
-   * name="TrailHeadName"&gt;Mount Everest &lt;/SimpleData&gt;
-   *  &lt;SimpleData name="TrailLength"&gt;347.45 &lt;/SimpleData&gt;
-   *  &lt;SimpleData name="ElevationGain"&gt;10000 &lt;/SimpleData&gt;  &lt;/SchemaData&gt;
-   *  &lt;/ExtendedData&gt;
-   *  &lt;Point&gt;  &lt;coordinates&gt;-122.000,37.002 &lt;/coordinates&gt;  &lt;/Point&gt;  &lt;/Placemark&gt;
-   * Here is an example of defining two custom data elements: This element
-   * assigns a value to the custom data field identified by the name attribute.
-   * The type and name of this custom data field are declared in the  &lt;Schema&gt;
-   * element.
+   * &lt;simpledata name="string"&gt;
+   * <p>
+   * &lt;SimpleData name="string"&gt; This element assigns a value to the custom
+   * data field identified by the name attribute. The type and name of this
+   * custom data field are declared in the &lt;Schema&gt; element. Here is an
+   * example of defining two custom data elements: &lt;Placemark&gt;
+   * &lt;name&gt;Easy trail &lt;/name&gt; &lt;ExtendedData&gt; &lt;SchemaData
+   * schemaUrl="#TrailHeadTypeId"&gt; &lt;SimpleData name="TrailHeadName"&gt;Pi
+   * in the sky &lt;/SimpleData&gt; &lt;SimpleData name="TrailLength"&gt;3.14159
+   * &lt;/SimpleData&gt; &lt;SimpleData name="ElevationGain"&gt;10
+   * &lt;/SimpleData&gt; &lt;/SchemaData&gt; &lt;/ExtendedData&gt; &lt;Point&gt;
+   * &lt;coordinates&gt;-122.000,37.002 &lt;/coordinates&gt; &lt;/Point&gt;
+   * &lt;/Placemark&gt; &lt;Placemark&gt; &lt;name&gt;Difficult trail
+   * &lt;/name&gt; &lt;ExtendedData&gt; &lt;SchemaData
+   * schemaUrl="#TrailHeadTypeId"&gt; &lt;SimpleData
+   * name="TrailHeadName"&gt;Mount Everest &lt;/SimpleData&gt; &lt;SimpleData
+   * name="TrailLength"&gt;347.45 &lt;/SimpleData&gt; &lt;SimpleData
+   * name="ElevationGain"&gt;10000 &lt;/SimpleData&gt; &lt;/SchemaData&gt;
+   * &lt;/ExtendedData&gt; &lt;Point&gt; &lt;coordinates&gt;-122.000,37.002
+   * &lt;/coordinates&gt; &lt;/Point&gt; &lt;/Placemark&gt; Here is an example
+   * of defining two custom data elements: This element assigns a value to the
+   * custom data field identified by the name attribute. The type and name of
+   * this custom data field are declared in the &lt;Schema&gt; element.
    */
   @XmlElement(name = "SimpleData")
   protected List<SimpleData> simpleData;
   /**
-   *  &lt;Object&gt;
-   *   
+   * &lt;Object&gt;
+   * <p>
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the  &lt;Update&gt; mechanism is to be used. Syntax:
-   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * assigned if the &lt;Update&gt; mechanism is to be used. Syntax:
+   * <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
    * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
    * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
-   *   
+   * <p>
    */
   @XmlElement(name = "SchemaDataExtension")
   protected List<Object> schemaDataExtension;
@@ -188,9 +188,8 @@ public class SchemaData
 
   /**
    * Creates a new instance of {@link SimpleData} and adds it to simpleData.
-   * This method is a short version for:     &lt;code&gt;
-   * SimpleData simpleData = new SimpleData();
-   * this.getSimpleData().add(simpleData);  &lt;/code&gt;
+   * This method is a short version for: &lt;code&gt; SimpleData simpleData =
+   * new SimpleData(); this.getSimpleData().add(simpleData); &lt;/code&gt;
    *
    * @param name required parameter
    */
@@ -214,7 +213,8 @@ public class SchemaData
    *
    * @param simpleData Objects of the following type are allowed in the list:
    *                   {@link SimpleData}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public SchemaData addToSimpleData(final SimpleData simpleData) {
     this.getSimpleData().add(simpleData);
@@ -236,7 +236,8 @@ public class SchemaData
    * @param schemaDataExtension Objects of the following type are allowed in the
    *                            list:
    *                            {@link SimpleArrayData}{@link JAXBElement}{@link Object}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public SchemaData addToSchemaDataExtension(final Object schemaDataExtension) {
     this.getSchemaDataExtension().add(schemaDataExtension);

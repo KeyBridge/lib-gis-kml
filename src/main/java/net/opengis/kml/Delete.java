@@ -22,15 +22,16 @@ import javax.xml.bind.annotation.*;
 import net.opengis.kml.gx.Tour;
 
 /**
- *  &lt;delete&gt;
- *   
- * Child elements for  &lt;Delete&gt;, which are the only elements that can be deleted,
- * are Document, Folder, GroundOverlay, Placemark, and ScreenOverlay. Deletes
- * features from a complex element that has already been loaded via a
- *  &lt;NetworkLink&gt;. The  &lt;targetHref&gt; element in  &lt;Update&gt; specifies the .kml or
- * .kmz file containing the data to be deleted. Within that file, the element to
- * be deleted must already have an explicit id defined for it. The  &lt;Delete&gt;
- * element references this id in the targetId attribute.
+ * &lt;delete&gt;
+ * <p>
+ * Child elements for &lt;Delete&gt;, which are the only elements that can be
+ * deleted, are Document, Folder, GroundOverlay, Placemark, and ScreenOverlay.
+ * Deletes features from a complex element that has already been loaded via a
+ * &lt;NetworkLink&gt;. The &lt;targetHref&gt; element in &lt;Update&gt;
+ * specifies the .kml or .kmz file containing the data to be deleted. Within
+ * that file, the element to be deleted must already have an explicit id defined
+ * for it. The &lt;Delete&gt; element references this id in the targetId
+ * attribute.
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DeleteType", propOrder = {
@@ -40,12 +41,12 @@ import net.opengis.kml.gx.Tour;
 public class Delete implements Cloneable {
 
   /**
-   *  &lt;Feature&gt;
-   *   
+   * &lt;Feature&gt;
+   * <p>
    * This is an abstract element and cannot be used directly in a KML file. The
    * following diagram shows how some of a Feature's elements appear in Google
    * Earth. Syntax:
-   *  <pre>&lt;!-- abstract element; do not create --&gt;
+   * <pre>&lt;!-- abstract element; do not create --&gt;
    *  &lt;strong&gt;&lt;!-- &lt;em&gt; Feature &lt;/em&gt; id="ID" --&gt; &lt;/strong&gt;                &lt;!-- Document,Folder,
    *                                              NetworkLink,Placemark,
    *                                              GroundOverlay,PhotoOverlay,ScreenOverlay --&gt;
@@ -63,18 +64,19 @@ public class Delete implements Cloneable {
    *   &lt; &lt;em&gt;StyleSelector&gt;...&lt;/StyleSelector&gt; &lt;/em&gt;
    *   &lt;Region&gt;...&lt;/Region&gt;
    *    &lt;span&gt;&lt;Metadata&gt;...&lt;/Metadata&gt;              &lt;!-- deprecated in KML 2.2 --&gt;
-   *   &lt;ExtendedData&gt;...&lt;/ExtendedData&gt;      &lt;!-- new in KML 2.2 --&gt; &lt;br&gt; &lt;/span&gt;&lt;-- / &lt;em&gt;Feature &lt;/em&gt; --&gt; </pre>
-   *   
+   *   &lt;ExtendedData&gt;...&lt;/ExtendedData&gt;      &lt;!-- new in KML 2.2 --&gt; &lt;br&gt; &lt;/span&gt;&lt;-- / &lt;em&gt;Feature &lt;/em&gt; --&gt;
+   * </pre>
+   * <p>
    * Extends:
    *
-   * @see:  &lt;Object&gt;
+   * @see: &lt;Object&gt;
    *
    * Extended By:
-   * @see:  &lt;Container&gt;
-   * @see:  &lt;NetworkLink&gt;
-   * @see:  &lt;Overlay&gt;
-   * @see:  &lt;Placemark&gt;
-   * @see:  &lt;gx:Tour&gt;
+   * @see: &lt;Container&gt;
+   * @see: &lt;NetworkLink&gt;
+   * @see: &lt;Overlay&gt;
+   * @see: &lt;Placemark&gt;
+   * @see: &lt;gx:Tour&gt;
    *
    */
   @XmlElementRef(name = "AbstractFeatureGroup", namespace = "http://www.opengis.net/kml/2.2", required = false)
@@ -127,9 +129,8 @@ public class Delete implements Cloneable {
 
   /**
    * Creates a new instance of {@link Tour} and adds it to feature. This method
-   * is a short version for:     &lt;code&gt;
-   * Tour tour = new Tour();
-   * this.getFeature().add(tour);  &lt;/code&gt;
+   * is a short version for: &lt;code&gt; Tour tour = new Tour();
+   * this.getFeature().add(tour); &lt;/code&gt;
    */
   public Tour createAndAddTour() {
     Tour newValue = new Tour();
@@ -139,9 +140,9 @@ public class Delete implements Cloneable {
 
   /**
    * Creates a new instance of {@link ScreenOverlay} and adds it to feature.
-   * This method is a short version for:     &lt;code&gt;
-   * ScreenOverlay screenOverlay = new ScreenOverlay();
-   * this.getFeature().add(screenOverlay);  &lt;/code&gt;
+   * This method is a short version for: &lt;code&gt; ScreenOverlay
+   * screenOverlay = new ScreenOverlay(); this.getFeature().add(screenOverlay);
+   * &lt;/code&gt;
    */
   public ScreenOverlay createAndAddScreenOverlay() {
     ScreenOverlay newValue = new ScreenOverlay();
@@ -151,9 +152,8 @@ public class Delete implements Cloneable {
 
   /**
    * Creates a new instance of {@link PhotoOverlay} and adds it to feature. This
-   * method is a short version for:     &lt;code&gt;
-   * PhotoOverlay photoOverlay = new PhotoOverlay();
-   * this.getFeature().add(photoOverlay);  &lt;/code&gt;
+   * method is a short version for: &lt;code&gt; PhotoOverlay photoOverlay = new
+   * PhotoOverlay(); this.getFeature().add(photoOverlay); &lt;/code&gt;
    */
   public PhotoOverlay createAndAddPhotoOverlay() {
     PhotoOverlay newValue = new PhotoOverlay();
@@ -163,9 +163,9 @@ public class Delete implements Cloneable {
 
   /**
    * Creates a new instance of {@link GroundOverlay} and adds it to feature.
-   * This method is a short version for:     &lt;code&gt;
-   * GroundOverlay groundOverlay = new GroundOverlay();
-   * this.getFeature().add(groundOverlay);  &lt;/code&gt;
+   * This method is a short version for: &lt;code&gt; GroundOverlay
+   * groundOverlay = new GroundOverlay(); this.getFeature().add(groundOverlay);
+   * &lt;/code&gt;
    */
   public GroundOverlay createAndAddGroundOverlay() {
     GroundOverlay newValue = new GroundOverlay();
@@ -175,9 +175,8 @@ public class Delete implements Cloneable {
 
   /**
    * Creates a new instance of {@link NetworkLink} and adds it to feature. This
-   * method is a short version for:     &lt;code&gt;
-   * NetworkLink networkLink = new NetworkLink();
-   * this.getFeature().add(networkLink);  &lt;/code&gt;
+   * method is a short version for: &lt;code&gt; NetworkLink networkLink = new
+   * NetworkLink(); this.getFeature().add(networkLink); &lt;/code&gt;
    */
   public NetworkLink createAndAddNetworkLink() {
     NetworkLink newValue = new NetworkLink();
@@ -187,9 +186,8 @@ public class Delete implements Cloneable {
 
   /**
    * Creates a new instance of {@link Folder} and adds it to feature. This
-   * method is a short version for:     &lt;code&gt;
-   * Folder folder = new Folder();
-   * this.getFeature().add(folder);  &lt;/code&gt;
+   * method is a short version for: &lt;code&gt; Folder folder = new Folder();
+   * this.getFeature().add(folder); &lt;/code&gt;
    */
   public Folder createAndAddFolder() {
     Folder newValue = new Folder();
@@ -199,9 +197,8 @@ public class Delete implements Cloneable {
 
   /**
    * Creates a new instance of {@link Document} and adds it to feature. This
-   * method is a short version for:     &lt;code&gt;
-   * Document document = new Document();
-   * this.getFeature().add(document);  &lt;/code&gt;
+   * method is a short version for: &lt;code&gt; Document document = new
+   * Document(); this.getFeature().add(document); &lt;/code&gt;
    */
   public Document createAndAddDocument() {
     Document newValue = new Document();
@@ -211,9 +208,8 @@ public class Delete implements Cloneable {
 
   /**
    * Creates a new instance of {@link Placemark} and adds it to feature. This
-   * method is a short version for:     &lt;code&gt;
-   * Placemark placemark = new Placemark();
-   * this.getFeature().add(placemark);  &lt;/code&gt;
+   * method is a short version for: &lt;code&gt; Placemark placemark = new
+   * Placemark(); this.getFeature().add(placemark); &lt;/code&gt;
    */
   public Placemark createAndAddPlacemark() {
     Placemark newValue = new Placemark();
@@ -235,7 +231,8 @@ public class Delete implements Cloneable {
    *
    * @param feature Objects of the following type are allowed in the list:
    *                {@link Container}{@link JAXBElement}{@link GroundOverlay}{@link JAXBElement}{@link NetworkLink}{@link JAXBElement}{@link Folder}{@link JAXBElement}{@link PhotoOverlay}{@link JAXBElement}{@link Document}{@link JAXBElement}{@link Tour}{@link JAXBElement}{@link ScreenOverlay}{@link JAXBElement}{@link Feature}{@link JAXBElement}{@link Placemark}{@link JAXBElement}{@link Overlay}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Delete addToFeature(final Feature feature) {
     this.getFeature().add(feature);

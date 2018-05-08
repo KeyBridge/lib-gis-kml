@@ -22,8 +22,8 @@ import javax.xml.bind.annotation.*;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- *  &lt;imagepyramid&gt;
- *   
+ * &lt;imagepyramid&gt;
+ * <p>
  * For very large images, you'll need to construct an image pyramid, which is a
  * hierarchical set of images, each of which is an increasingly lower resolution
  * version of the original image. Each image in the pyramid is subdivided into
@@ -35,8 +35,8 @@ import net.opengis.kml.annotations.Obvious;
  * preprocessing allows Google Earth to achieve maximum performance because it
  * loads only the portions of the image that are in view, and only the pixel
  * details that can be discerned by the user at the current viewpoint. When you
- * specify an image pyramid, you also modify the  &lt;href&gt; in the  &lt;Icon&gt;
- * element to include specifications for which tiles to load.
+ * specify an image pyramid, you also modify the &lt;href&gt; in the
+ * &lt;Icon&gt; element to include specifications for which tiles to load.
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ImagePyramidType", propOrder = {
@@ -53,33 +53,34 @@ public class ImagePyramid
   implements Cloneable {
 
   /**
-   *  &lt;tilesize&gt;
-   *   
-   * Size of the tiles, in pixels. Tiles must be square, and  &lt;tileSize&gt; must be
-   * a power of 2. A tile size of 256 (the default) or 512 is recommended. The
-   * original image is divided into tiles of this size, at varying resolutions.
+   * &lt;tilesize&gt;
+   * <p>
+   * Size of the tiles, in pixels. Tiles must be square, and &lt;tileSize&gt;
+   * must be a power of 2. A tile size of 256 (the default) or 512 is
+   * recommended. The original image is divided into tiles of this size, at
+   * varying resolutions.
    */
   @XmlElement(defaultValue = "256")
   protected int tileSize;
   /**
-   *  &lt;maxwidth&gt;
-   *   
+   * &lt;maxwidth&gt;
+   * <p>
    * Width in pixels of the original image.
    */
   @XmlElement(defaultValue = "0")
   protected int maxWidth;
   /**
-   *  &lt;maxheight&gt;
-   *   
+   * &lt;maxheight&gt;
+   * <p>
    * Height in pixels of the original image.
    */
   @XmlElement(defaultValue = "0")
   protected int maxHeight;
   /**
    * GridOrigin
-   *   
-   * lowerLeft, upperLeft See Also: See  &lt;PhotoOverlay&gt;
-   *   
+   * <p>
+   * lowerLeft, upperLeft See Also: See &lt;PhotoOverlay&gt;
+   * <p>
    */
   @XmlElement(defaultValue = "lowerLeft")
   protected GridOrigin gridOrigin;
@@ -87,17 +88,17 @@ public class ImagePyramid
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> imagePyramidSimpleExtension;
   /**
-   *  &lt;Object&gt;
-   *   
+   * &lt;Object&gt;
+   * <p>
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the  &lt;Update&gt; mechanism is to be used. Syntax:
-   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * assigned if the &lt;Update&gt; mechanism is to be used. Syntax:
+   * <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
    * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
    * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
-   *   
+   * <p>
    */
   @XmlElement(name = "ImagePyramidObjectExtensionGroup")
   protected List<AbstractObject> imagePyramidObjectExtension;
@@ -283,7 +284,8 @@ public class ImagePyramid
    *
    * @param imagePyramidSimpleExtension Objects of the following type are
    *                                    allowed in the list: {@link Object}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public ImagePyramid addToImagePyramidSimpleExtension(final Object imagePyramidSimpleExtension) {
     this.getImagePyramidSimpleExtension().add(imagePyramidSimpleExtension);
@@ -305,7 +307,8 @@ public class ImagePyramid
    * @param imagePyramidObjectExtension Objects of the following type are
    *                                    allowed in the list:
    *                                    {@link AbstractObject}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public ImagePyramid addToImagePyramidObjectExtension(final AbstractObject imagePyramidObjectExtension) {
     this.getImagePyramidObjectExtension().add(imagePyramidObjectExtension);

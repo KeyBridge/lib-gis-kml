@@ -22,27 +22,27 @@ import javax.xml.bind.annotation.*;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- *  &lt;gx:TimeSpan&gt; and  &lt;gx:TimeStamp&gt;
- *   
- * If  &lt;begin&gt; or  &lt;end&gt; is missing, then that end of the period is unbounded (see
- * Example below). Represents an extent in time bounded by begin and end
- * dateTimes. The dateTime is defined according to XML Schema time (see XML
- * Schema Part 2: Datatypes Second Edition). The value can be expressed as
+ * &lt;gx:TimeSpan&gt; and &lt;gx:TimeStamp&gt;
+ * <p>
+ * If &lt;begin&gt; or &lt;end&gt; is missing, then that end of the period is
+ * unbounded (see Example below). Represents an extent in time bounded by begin
+ * and end dateTimes. The dateTime is defined according to XML Schema time (see
+ * XML Schema Part 2: Datatypes Second Edition). The value can be expressed as
  * yyyy-mm-ddThh:mm:sszzzzzz, where T is the separator between the date and the
  * time, and the time zone is either Z (for UTC) or zzzzzz, which represents
  * ±hh:mm in relation to UTC. Additionally, the value can be expressed as a date
- * only. See  &lt;TimeStamp&gt; for examples. Syntax:
- *  &lt;pre&gt; &lt;strong&gt;&lt;TimeSpan id="ID"&gt; &lt;/strong&gt;
- *   &lt;begin&gt; &lt;em&gt;... &lt;/em&gt;&lt;/begin&gt;     &lt;!-- kml:dateTime --&gt;
- *   &lt;end&gt; &lt;em&gt;... &lt;/em&gt;&lt;/end&gt;         &lt;!-- kml:dateTime --&gt;
- *  &lt;strong&gt;&lt;/TimeSpan&gt; &lt;/strong&gt; </pre>
- *   
+ * only. See &lt;TimeStamp&gt; for examples. Syntax: &lt;pre&gt;
+ * &lt;strong&gt;&lt;TimeSpan id="ID"&gt; &lt;/strong&gt; &lt;begin&gt;
+ * &lt;em&gt;... &lt;/em&gt;&lt;/begin&gt; &lt;!-- kml:dateTime --&gt;
+ * &lt;end&gt; &lt;em&gt;... &lt;/em&gt;&lt;/end&gt; &lt;!-- kml:dateTime --&gt;
+ * &lt;strong&gt;&lt;/TimeSpan&gt; &lt;/strong&gt; </pre>
+ * <p>
  * Extends:
  *
- * @see:  &lt;TimePrimitive&gt;
+ * @see: &lt;TimePrimitive&gt;
  *
  * Contained By:
- * @see:  &lt;Feature&gt;
+ * @see: &lt;Feature&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -58,15 +58,15 @@ public class TimeSpan
   implements Cloneable {
 
   /**
-   *  &lt;begin&gt;
-   *   
+   * &lt;begin&gt;
+   * <p>
    * Describes the beginning instant of a time period. If absent, the beginning
    * of the period is unbounded.
    */
   protected String begin;
   /**
-   *  &lt;end&gt;
-   *   
+   * &lt;end&gt;
+   * <p>
    * Describes the ending instant of a time period. If absent, the end of the
    * period is unbounded.
    */
@@ -75,17 +75,17 @@ public class TimeSpan
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> timeSpanSimpleExtension;
   /**
-   *  &lt;Object&gt;
-   *   
+   * &lt;Object&gt;
+   * <p>
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the  &lt;Update&gt; mechanism is to be used. Syntax:
-   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * assigned if the &lt;Update&gt; mechanism is to be used. Syntax:
+   * <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
    * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
    * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
-   *   
+   * <p>
    */
   @XmlElement(name = "TimeSpanObjectExtensionGroup")
   protected List<AbstractObject> timeSpanObjectExtension;
@@ -227,7 +227,8 @@ public class TimeSpan
    *
    * @param timeSpanSimpleExtension Objects of the following type are allowed in
    *                                the list: {@link Object}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public TimeSpan addToTimeSpanSimpleExtension(final Object timeSpanSimpleExtension) {
     this.getTimeSpanSimpleExtension().add(timeSpanSimpleExtension);
@@ -248,7 +249,8 @@ public class TimeSpan
    *
    * @param timeSpanObjectExtension Objects of the following type are allowed in
    *                                the list: {@link AbstractObject}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public TimeSpan addToTimeSpanObjectExtension(final AbstractObject timeSpanObjectExtension) {
     this.getTimeSpanObjectExtension().add(timeSpanObjectExtension);

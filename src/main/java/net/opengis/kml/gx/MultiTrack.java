@@ -53,7 +53,7 @@ public class MultiTrack
   }
 
   /**
-   * @return possible object is null null null null null null null   {@link Object}
+   * @return possible object is null null null null null null null null null   {@link Object}
      *     {@link net.opengis.kml.AltitudeMode}
    *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
@@ -63,7 +63,7 @@ public class MultiTrack
   }
 
   /**
-   * @param value allowed object is null null null null null null null   {@link Object}
+   * @param value allowed object is null null null null null null null null null   {@link Object}
      *     {@link net.opengis.kml.AltitudeMode}
    *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
@@ -149,9 +149,8 @@ public class MultiTrack
 
   /**
    * Creates a new instance of {@link Track} and adds it to track. This method
-   * is a short version for:     &lt;code&gt;
-   * Track track = new Track();
-   * this.getTrack().add(track);  &lt;/code&gt;
+   * is a short version for: &lt;code&gt; Track track = new Track();
+   * this.getTrack().add(track); &lt;/code&gt;
    */
   public Track createAndAddTrack() {
     Track newValue = new Track();
@@ -162,9 +161,9 @@ public class MultiTrack
   /**
    * Sets the value of the track property Objects of the following type(s) are
    * allowed in the list List &lt;Track&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withTrack} instead.
    *
@@ -179,7 +178,8 @@ public class MultiTrack
    *
    * @param track Objects of the following type are allowed in the list:
    *              {@link Track}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public MultiTrack addToTrack(final Track track) {
     this.getTrack().add(track);

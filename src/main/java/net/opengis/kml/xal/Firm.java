@@ -235,9 +235,8 @@ public class Firm implements Cloneable {
 
   /**
    * Creates a new instance of {@link AddressLine} and adds it to addressLine.
-   * This method is a short version for:     &lt;code&gt;
-   * AddressLine addressLine = new AddressLine();
-   * this.getAddressLine().add(addressLine);  &lt;/code&gt;
+   * This method is a short version for: &lt;code&gt; AddressLine addressLine =
+   * new AddressLine(); this.getAddressLine().add(addressLine); &lt;/code&gt;
    */
   public AddressLine createAndAddAddressLine() {
     AddressLine newValue = new AddressLine();
@@ -247,9 +246,8 @@ public class Firm implements Cloneable {
 
   /**
    * Creates a new instance of {@link Firm.FirmName} and adds it to firmName.
-   * This method is a short version for:     &lt;code&gt;
-   * FirmName firmName = new FirmName();
-   * this.getFirmName().add(firmName);  &lt;/code&gt;
+   * This method is a short version for: &lt;code&gt; FirmName firmName = new
+   * FirmName(); this.getFirmName().add(firmName); &lt;/code&gt;
    */
   public Firm.FirmName createAndAddFirmName() {
     Firm.FirmName newValue = new Firm.FirmName();
@@ -259,9 +257,8 @@ public class Firm implements Cloneable {
 
   /**
    * Creates a new instance of {@link Department} and adds it to department.
-   * This method is a short version for:     &lt;code&gt;
-   * Department department = new Department();
-   * this.getDepartment().add(department);  &lt;/code&gt;
+   * This method is a short version for: &lt;code&gt; Department department =
+   * new Department(); this.getDepartment().add(department); &lt;/code&gt;
    */
   public Department createAndAddDepartment() {
     Department newValue = new Department();
@@ -271,10 +268,9 @@ public class Firm implements Cloneable {
 
   /**
    * Creates a new instance of {@link MailStop} and set it to mailStop.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * MailStop mailStop = new MailStop();
-   * this.setMailStop(mailStop);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; MailStop mailStop = new
+   * MailStop(); this.setMailStop(mailStop); &lt;/code&gt;
    */
   public MailStop createAndSetMailStop() {
     MailStop newValue = new MailStop();
@@ -284,10 +280,9 @@ public class Firm implements Cloneable {
 
   /**
    * Creates a new instance of {@link PostalCode} and set it to postalCode.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * PostalCode postalCode = new PostalCode();
-   * this.setPostalCode(postalCode);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; PostalCode postalCode =
+   * new PostalCode(); this.setPostalCode(postalCode); &lt;/code&gt;
    */
   public PostalCode createAndSetPostalCode() {
     PostalCode newValue = new PostalCode();
@@ -298,9 +293,9 @@ public class Firm implements Cloneable {
   /**
    * Sets the value of the addressLine property Objects of the following type(s)
    * are allowed in the list List &lt;AddressLine&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withAddressLine} instead.
    *
@@ -315,7 +310,8 @@ public class Firm implements Cloneable {
    *
    * @param addressLine Objects of the following type are allowed in the list:
    *                    {@link AddressLine}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Firm addToAddressLine(final AddressLine addressLine) {
     this.getAddressLine().add(addressLine);
@@ -325,9 +321,9 @@ public class Firm implements Cloneable {
   /**
    * Sets the value of the firmName property Objects of the following type(s)
    * are allowed in the list List &lt;FirmName&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withFirmName} instead.
    *
@@ -342,7 +338,8 @@ public class Firm implements Cloneable {
    *
    * @param firmName Objects of the following type are allowed in the list:
    *                 {@link Firm.FirmName}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Firm addToFirmName(final Firm.FirmName firmName) {
     this.getFirmName().add(firmName);
@@ -352,9 +349,9 @@ public class Firm implements Cloneable {
   /**
    * Sets the value of the department property Objects of the following type(s)
    * are allowed in the list List &lt;Department&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withDepartment} instead.
    *
@@ -369,7 +366,8 @@ public class Firm implements Cloneable {
    *
    * @param department Objects of the following type are allowed in the list:
    *                   {@link Department}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Firm addToDepartment(final Department department) {
     this.getDepartment().add(department);
@@ -379,9 +377,9 @@ public class Firm implements Cloneable {
   /**
    * Sets the value of the any property Objects of the following type(s) are
    * allowed in the list List &lt;Object&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withAny} instead.
    *
@@ -396,7 +394,8 @@ public class Firm implements Cloneable {
    *
    * @param any Objects of the following type are allowed in the list:
    *            {@link Object}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Firm addToAny(final Object any) {
     this.getAny().add(any);

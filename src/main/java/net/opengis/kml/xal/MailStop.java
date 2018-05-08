@@ -193,9 +193,8 @@ public class MailStop implements Cloneable {
 
   /**
    * Creates a new instance of {@link AddressLine} and adds it to addressLine.
-   * This method is a short version for:     &lt;code&gt;
-   * AddressLine addressLine = new AddressLine();
-   * this.getAddressLine().add(addressLine);  &lt;/code&gt;
+   * This method is a short version for: &lt;code&gt; AddressLine addressLine =
+   * new AddressLine(); this.getAddressLine().add(addressLine); &lt;/code&gt;
    */
   public AddressLine createAndAddAddressLine() {
     AddressLine newValue = new AddressLine();
@@ -206,10 +205,9 @@ public class MailStop implements Cloneable {
   /**
    * Creates a new instance of {@link MailStop.MailStopName} and set it to
    * mailStopName.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * MailStopName mailStopName = new MailStopName();
-   * this.setMailStopName(mailStopName);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; MailStopName mailStopName
+   * = new MailStopName(); this.setMailStopName(mailStopName); &lt;/code&gt;
    */
   public MailStop.MailStopName createAndSetMailStopName() {
     MailStop.MailStopName newValue = new MailStop.MailStopName();
@@ -220,10 +218,10 @@ public class MailStop implements Cloneable {
   /**
    * Creates a new instance of {@link MailStop.MailStopNumber} and set it to
    * mailStopNumber.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * MailStopNumber mailStopNumber = new MailStopNumber();
-   * this.setMailStopNumber(mailStopNumber);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; MailStopNumber
+   * mailStopNumber = new MailStopNumber();
+   * this.setMailStopNumber(mailStopNumber); &lt;/code&gt;
    */
   public MailStop.MailStopNumber createAndSetMailStopNumber() {
     MailStop.MailStopNumber newValue = new MailStop.MailStopNumber();
@@ -234,9 +232,9 @@ public class MailStop implements Cloneable {
   /**
    * Sets the value of the addressLine property Objects of the following type(s)
    * are allowed in the list List &lt;AddressLine&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withAddressLine} instead.
    *
@@ -251,7 +249,8 @@ public class MailStop implements Cloneable {
    *
    * @param addressLine Objects of the following type are allowed in the list:
    *                    {@link AddressLine}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public MailStop addToAddressLine(final AddressLine addressLine) {
     this.getAddressLine().add(addressLine);
@@ -261,9 +260,9 @@ public class MailStop implements Cloneable {
   /**
    * Sets the value of the any property Objects of the following type(s) are
    * allowed in the list List &lt;Object&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withAny} instead.
    *
@@ -278,7 +277,8 @@ public class MailStop implements Cloneable {
    *
    * @param any Objects of the following type are allowed in the list:
    *            {@link Object}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public MailStop addToAny(final Object any) {
     this.getAny().add(any);

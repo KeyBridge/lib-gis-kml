@@ -19,16 +19,16 @@ package net.opengis.kml;
 import javax.xml.bind.annotation.*;
 
 /**
- *  &lt;snippet maxlines="2" &gt;
- *   
+ * &lt;snippet maxlines="2" &gt;
+ * <p>
  * A short description of the feature. In Google Earth, this description is
  * displayed in the Places panel under the name of the feature. If a Snippet is
- * not supplied, the first two lines of the  &lt;description&gt; are used. In Google
- * Earth, if a Placemark contains both a description and a Snippet, the
- *  &lt;Snippet&gt; appears beneath the Placemark in the Places panel, and the
- *  &lt;description&gt; appears in the Placemark's description balloon. This tag does
- * not support HTML markup.  &lt;Snippet&gt; has a maxLines attribute, an integer that
- * specifies the maximum number of lines to display.
+ * not supplied, the first two lines of the &lt;description&gt; are used. In
+ * Google Earth, if a Placemark contains both a description and a Snippet, the
+ * &lt;Snippet&gt; appears beneath the Placemark in the Places panel, and the
+ * &lt;description&gt; appears in the Placemark's description balloon. This tag
+ * does not support HTML markup. &lt;Snippet&gt; has a maxLines attribute, an
+ * integer that specifies the maximum number of lines to display.
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SnippetType", propOrder = {
@@ -39,22 +39,20 @@ import javax.xml.bind.annotation.*;
 public class Snippet implements Cloneable {
 
   /**
-   *  &lt;value&gt;
-   *   
-   *  &lt;Placemark&gt;  &lt;name&gt;Club house &lt;/name&gt;  &lt;ExtendedData&gt;  &lt;Data name="holeNumber"&gt;
-   *  &lt;value&gt;1 &lt;/value&gt;
-   *  &lt;/Data&gt;  &lt;Data name="holeYardage"&gt;  &lt;value&gt;234 &lt;/value&gt;  &lt;/Data&gt;
-   *  &lt;Data name="holePar"&gt;
-   *  &lt;value&gt;4 &lt;/value&gt;  &lt;/Data&gt;  &lt;/ExtendedData&gt;  &lt;/Placemark&gt;
-   *  &lt;displayName&gt; An optional formatted version of name, to be used for display
-   * purposes.
-   *  &lt;value&gt; Value of the data pair.  &lt;Placemark&gt;  &lt;name&gt;Club house &lt;/name&gt;
-   *  &lt;ExtendedData&gt;
-   *  &lt;Data name="holeNumber"&gt;  &lt;value&gt;1 &lt;/value&gt;  &lt;/Data&gt;  &lt;Data name="holeYardage"&gt;
-   *  &lt;value&gt;234 &lt;/value&gt;
-   *  &lt;/Data&gt;  &lt;Data name="holePar"&gt;  &lt;value&gt;4 &lt;/value&gt;  &lt;/Data&gt;  &lt;/ExtendedData&gt;
-   *  &lt;/Placemark&gt;
-   * Value of the data pair.
+   * &lt;value&gt;
+   * <p>
+   * &lt;Placemark&gt; &lt;name&gt;Club house &lt;/name&gt; &lt;ExtendedData&gt;
+   * &lt;Data name="holeNumber"&gt; &lt;value&gt;1 &lt;/value&gt; &lt;/Data&gt;
+   * &lt;Data name="holeYardage"&gt; &lt;value&gt;234 &lt;/value&gt;
+   * &lt;/Data&gt; &lt;Data name="holePar"&gt; &lt;value&gt;4 &lt;/value&gt;
+   * &lt;/Data&gt; &lt;/ExtendedData&gt; &lt;/Placemark&gt; &lt;displayName&gt;
+   * An optional formatted version of name, to be used for display purposes.
+   * &lt;value&gt; Value of the data pair. &lt;Placemark&gt; &lt;name&gt;Club
+   * house &lt;/name&gt; &lt;ExtendedData&gt; &lt;Data name="holeNumber"&gt;
+   * &lt;value&gt;1 &lt;/value&gt; &lt;/Data&gt; &lt;Data name="holeYardage"&gt;
+   * &lt;value&gt;234 &lt;/value&gt; &lt;/Data&gt; &lt;Data name="holePar"&gt;
+   * &lt;value&gt;4 &lt;/value&gt; &lt;/Data&gt; &lt;/ExtendedData&gt;
+   * &lt;/Placemark&gt; Value of the data pair.
    */
   @XmlValue
   protected String value;

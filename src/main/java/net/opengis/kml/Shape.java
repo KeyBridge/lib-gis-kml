@@ -22,9 +22,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Shape
- *   
- * rectangle, cylinder, sphere See Also: See  &lt;PhotoOverlay&gt;
- *   
+ * <p>
+ * rectangle, cylinder, sphere See Also: See &lt;PhotoOverlay&gt;
+ * <p>
  */
 @XmlType(name = "shapeEnumType")
 @XmlEnum

@@ -27,8 +27,8 @@ import net.opengis.kml.gx.Track;
 import net.opengis.kml.xal.AddressDetails;
 
 /**
- *  &lt;Placemark&gt;
- *   
+ * &lt;Placemark&gt;
+ * <p>
  * A Placemark is a Feature with associated Geometry. In Google Earth, a
  * Placemark appears as a list item in the Places panel. A Placemark with a
  * Point has an icon associated with it that marks a point on the Earth in the
@@ -36,38 +36,43 @@ import net.opengis.kml.xal.AddressDetails;
  * object you can click or roll over. Other Geometry objects do not have an icon
  * in the 3D viewer. To give the user something to click in the 3D viewer, you
  * would need to create a MultiGeometry object that contains both a Point and
- * the other Geometry object.) Syntax:
- *  &lt;pre&gt; &lt;strong&gt;&lt;Placemark id="ID"&gt; &lt;/strong&gt;
- *   &lt;!-- inherited from  &lt;em&gt;Feature &lt;/em&gt; element --&gt;
- *   &lt;name&gt; &lt;em&gt;... &lt;/em&gt;&lt;/name&gt;                      &lt;!-- string --&gt;
- *   &lt;visibility&gt;1&lt;/visibility&gt;            &lt;!-- boolean --&gt;
- *   &lt;open&gt;0&lt;/open&gt;                        &lt;!-- boolean --&gt;
- *    &lt;span&gt;&lt;atom:author&gt;...&lt;atom:author&gt;         &lt;!-- xmlns:atom --&gt;
- *   &lt;atom:link&gt;...&lt;/atom:link&gt; &lt;/span&gt; &lt;span&gt;            &lt;!-- xmlns:atom --&gt; &lt;/span&gt;
- *   &lt;address&gt; &lt;em&gt;... &lt;/em&gt;&lt;/address&gt;                &lt;!-- string --&gt;
- *   &lt;xal:AddressDetails&gt;...&lt;/xal:AddressDetails&gt;  &lt;!-- xmlns:xal --&gt; &lt;br&gt;  &lt;phoneNumber&gt;...&lt;/phoneNumber&gt;        &lt;!-- string --&gt; &lt;br&gt;  &lt;Snippet maxLines="2"&gt; &lt;em&gt;... &lt;/em&gt;&lt;/Snippet&gt;   &lt;!-- string --&gt;
- *   &lt;description&gt; &lt;em&gt;... &lt;/em&gt;&lt;/description&gt;        &lt;!-- string --&gt;
- *    &lt;span&gt; &lt;em&gt;&lt;AbstractView&gt;...&lt;/AbstractView&gt; &lt;/em&gt;      &lt;!-- Camera  &lt;em&gt;or &lt;/em&gt; LookAt --&gt; &lt;/span&gt;
- *   &lt; &lt;em&gt;TimePrimitive &lt;/em&gt;&gt;...&lt;/ &lt;em&gt;TimePrimitive &lt;/em&gt;&gt;
- *   &lt;styleUrl&gt; &lt;em&gt;... &lt;/em&gt;&lt;/styleUrl&gt;              &lt;!-- anyURI --&gt;
- *   &lt; &lt;em&gt;StyleSelector&gt;...&lt;/StyleSelector&gt; &lt;/em&gt;
- *   &lt;Region&gt;...&lt;/Region&gt;
- *    &lt;span&gt;&lt;Metadata&gt;...&lt;/Metadata&gt;              &lt;!-- deprecated in KML 2.2 --&gt;
- *   &lt;ExtendedData&gt;...&lt;/ExtendedData&gt;      &lt;!-- new in KML 2.2 --&gt; &lt;/span&gt; &lt;br&gt;
- *   &lt;!-- specific to Placemark element --&gt;
- *    &lt;em&gt;&lt;Geometry&gt;...&lt;/Geometry&gt; &lt;/em&gt;
- *  &lt;strong&gt;&lt;/Placemark&gt; &lt;/strong&gt; </pre>
- *   
+ * the other Geometry object.) Syntax: &lt;pre&gt; &lt;strong&gt;&lt;Placemark
+ * id="ID"&gt; &lt;/strong&gt; &lt;!-- inherited from &lt;em&gt;Feature
+ * &lt;/em&gt; element --&gt; &lt;name&gt; &lt;em&gt;...
+ * &lt;/em&gt;&lt;/name&gt; &lt;!-- string --&gt;
+ * &lt;visibility&gt;1&lt;/visibility&gt; &lt;!-- boolean --&gt;
+ * &lt;open&gt;0&lt;/open&gt; &lt;!-- boolean --&gt;
+ * &lt;span&gt;&lt;atom:author&gt;...&lt;atom:author&gt; &lt;!-- xmlns:atom
+ * --&gt; &lt;atom:link&gt;...&lt;/atom:link&gt; &lt;/span&gt; &lt;span&gt;
+ * &lt;!-- xmlns:atom --&gt; &lt;/span&gt; &lt;address&gt; &lt;em&gt;...
+ * &lt;/em&gt;&lt;/address&gt; &lt;!-- string --&gt;
+ * &lt;xal:AddressDetails&gt;...&lt;/xal:AddressDetails&gt; &lt;!-- xmlns:xal
+ * --&gt; &lt;br&gt; &lt;phoneNumber&gt;...&lt;/phoneNumber&gt; &lt;!-- string
+ * --&gt; &lt;br&gt; &lt;Snippet maxLines="2"&gt; &lt;em&gt;...
+ * &lt;/em&gt;&lt;/Snippet&gt; &lt;!-- string --&gt; &lt;description&gt;
+ * &lt;em&gt;... &lt;/em&gt;&lt;/description&gt; &lt;!-- string --&gt;
+ * &lt;span&gt; &lt;em&gt;&lt;AbstractView&gt;...&lt;/AbstractView&gt;
+ * &lt;/em&gt; &lt;!-- Camera &lt;em&gt;or &lt;/em&gt; LookAt --&gt;
+ * &lt;/span&gt; &lt; &lt;em&gt;TimePrimitive &lt;/em&gt;&gt;...&lt;/
+ * &lt;em&gt;TimePrimitive &lt;/em&gt;&gt; &lt;styleUrl&gt; &lt;em&gt;...
+ * &lt;/em&gt;&lt;/styleUrl&gt; &lt;!-- anyURI --&gt; &lt;
+ * &lt;em&gt;StyleSelector&gt;...&lt;/StyleSelector&gt; &lt;/em&gt;
+ * &lt;Region&gt;...&lt;/Region&gt;
+ * &lt;span&gt;&lt;Metadata&gt;...&lt;/Metadata&gt; &lt;!-- deprecated in KML
+ * 2.2 --&gt; &lt;ExtendedData&gt;...&lt;/ExtendedData&gt; &lt;!-- new in KML
+ * 2.2 --&gt; &lt;/span&gt; &lt;br&gt; &lt;!-- specific to Placemark element
+ * --&gt; &lt;em&gt;&lt;Geometry&gt;...&lt;/Geometry&gt; &lt;/em&gt;
+ * &lt;strong&gt;&lt;/Placemark&gt; &lt;/strong&gt; </pre>
+ * <p>
  * Extends:
  *
- * @see:  &lt;Feature&gt;
+ * @see: &lt;Feature&gt;
  *
  * Contained By:
- * @see:  &lt;Document&gt;
- * @see:  &lt;Folder&gt;
+ * @see: &lt;Document&gt;
+ * @see: &lt;Folder&gt;
  *
- * See Also:
- *  &lt;Icon&gt;
+ * See Also: &lt;Icon&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -80,24 +85,25 @@ import net.opengis.kml.xal.AddressDetails;
 public class Placemark extends Feature implements Cloneable {
 
   /**
-   *  &lt;Geometry&gt;
-   *   
+   * &lt;Geometry&gt;
+   * <p>
    * This is an abstract element and cannot be used directly in a KML file. It
    * provides a placeholder object for all derived Geometry objects. Syntax:
-   *  <pre>&lt;!-- abstract element; do not create --&gt;
+   * <pre>&lt;!-- abstract element; do not create --&gt;
    *  &lt;strong&gt;&lt;! &lt;em&gt;-- Geometry &lt;/em&gt; id="ID" --&gt;                 &lt;!-- Point,LineString,LinearRing,
    *                                                Polygon,MultiGeometry,Model --&gt; &lt;/strong&gt;
-   *  &lt;strong&gt;&lt;!-- / &lt;em&gt;Geometry -- &lt;/em&gt;&gt; &lt;/strong&gt; </pre>
-   *   
+   *  &lt;strong&gt;&lt;!-- / &lt;em&gt;Geometry -- &lt;/em&gt;&gt; &lt;/strong&gt;
+   * </pre>
+   * <p>
    * Extends:
    *
-   * @see:  &lt;Object&gt;
+   * @see: &lt;Object&gt;
    *
    * Extended By:
-   * @see:  &lt;LineString&gt;
-   * @see:  &lt;LinearRing&gt;
-   * @see:  &lt;Model&gt;
-   * @see:  &lt;Point&gt;
+   * @see: &lt;LineString&gt;
+   * @see: &lt;LinearRing&gt;
+   * @see: &lt;Model&gt;
+   * @see: &lt;Point&gt;
    * @see: MultiGeometry
    * @see: Polygon
    *
@@ -108,17 +114,17 @@ public class Placemark extends Feature implements Cloneable {
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> placemarkSimpleExtension;
   /**
-   *  &lt;Object&gt;
-   *   
+   * &lt;Object&gt;
+   * <p>
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the  &lt;Update&gt; mechanism is to be used. Syntax:
-   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * assigned if the &lt;Update&gt; mechanism is to be used. Syntax:
+   * <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
    * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
    * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
-   *   
+   * <p>
    */
   @XmlElement(name = "PlacemarkObjectExtensionGroup")
   protected List<AbstractObject> placemarkObjectExtension;
@@ -130,7 +136,7 @@ public class Placemark extends Feature implements Cloneable {
   /**
    * @see geometry
    *
-   * @return possible object is null null null null null null null   {@link Geometry}
+   * @return possible object is null null null null null null null null null   {@link Geometry}
      *     {@link Point}
    *     {@link LinearRing}
    *     {@link Polygon}
@@ -148,7 +154,7 @@ public class Placemark extends Feature implements Cloneable {
   /**
    * @see geometry
    *
-   * @param value allowed object is null null null null null null null   {@link Geometry}
+   * @param value allowed object is null null null null null null null null null   {@link Geometry}
      *     {@link Point}
    *     {@link LinearRing}
    *     {@link Polygon}
@@ -236,10 +242,9 @@ public class Placemark extends Feature implements Cloneable {
 
   /**
    * Creates a new instance of {@link MultiTrack} and set it to geometry.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * MultiTrack multiTrack = new MultiTrack();
-   * this.setGeometry(multiTrack);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; MultiTrack multiTrack =
+   * new MultiTrack(); this.setGeometry(multiTrack); &lt;/code&gt;
    */
   public MultiTrack createAndSetMultiTrack() {
     MultiTrack newValue = new MultiTrack();
@@ -249,10 +254,9 @@ public class Placemark extends Feature implements Cloneable {
 
   /**
    * Creates a new instance of {@link Track} and set it to geometry.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * Track track = new Track();
-   * this.setGeometry(track);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; Track track = new Track();
+   * this.setGeometry(track); &lt;/code&gt;
    */
   public Track createAndSetTrack() {
     Track newValue = new Track();
@@ -262,10 +266,9 @@ public class Placemark extends Feature implements Cloneable {
 
   /**
    * Creates a new instance of {@link LinearRing} and set it to geometry.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * LinearRing linearRing = new LinearRing();
-   * this.setGeometry(linearRing);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; LinearRing linearRing =
+   * new LinearRing(); this.setGeometry(linearRing); &lt;/code&gt;
    */
   public LinearRing createAndSetLinearRing() {
     LinearRing newValue = new LinearRing();
@@ -275,10 +278,9 @@ public class Placemark extends Feature implements Cloneable {
 
   /**
    * Creates a new instance of {@link Point} and set it to geometry.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * Point point = new Point();
-   * this.setGeometry(point);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; Point point = new Point();
+   * this.setGeometry(point); &lt;/code&gt;
    */
   public Point createAndSetPoint() {
     Point newValue = new Point();
@@ -288,10 +290,9 @@ public class Placemark extends Feature implements Cloneable {
 
   /**
    * Creates a new instance of {@link Model} and set it to geometry.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * Model model = new Model();
-   * this.setGeometry(model);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; Model model = new Model();
+   * this.setGeometry(model); &lt;/code&gt;
    */
   public Model createAndSetModel() {
     Model newValue = new Model();
@@ -301,10 +302,10 @@ public class Placemark extends Feature implements Cloneable {
 
   /**
    * Creates a new instance of {@link MultiGeometry} and set it to geometry.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * MultiGeometry multiGeometry = new MultiGeometry();
-   * this.setGeometry(multiGeometry);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; MultiGeometry
+   * multiGeometry = new MultiGeometry(); this.setGeometry(multiGeometry);
+   * &lt;/code&gt;
    */
   public MultiGeometry createAndSetMultiGeometry() {
     MultiGeometry newValue = new MultiGeometry();
@@ -314,10 +315,9 @@ public class Placemark extends Feature implements Cloneable {
 
   /**
    * Creates a new instance of {@link LineString} and set it to geometry.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * LineString lineString = new LineString();
-   * this.setGeometry(lineString);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; LineString lineString =
+   * new LineString(); this.setGeometry(lineString); &lt;/code&gt;
    */
   public LineString createAndSetLineString() {
     LineString newValue = new LineString();
@@ -327,10 +327,9 @@ public class Placemark extends Feature implements Cloneable {
 
   /**
    * Creates a new instance of {@link Polygon} and set it to geometry.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * Polygon polygon = new Polygon();
-   * this.setGeometry(polygon);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; Polygon polygon = new
+   * Polygon(); this.setGeometry(polygon); &lt;/code&gt;
    */
   public Polygon createAndSetPolygon() {
     Polygon newValue = new Polygon();
@@ -352,7 +351,8 @@ public class Placemark extends Feature implements Cloneable {
    *
    * @param placemarkSimpleExtension Objects of the following type are allowed
    *                                 in the list: {@link Object}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Placemark addToPlacemarkSimpleExtension(final Object placemarkSimpleExtension) {
     this.getPlacemarkSimpleExtension().add(placemarkSimpleExtension);
@@ -373,7 +373,8 @@ public class Placemark extends Feature implements Cloneable {
    *
    * @param placemarkObjectExtension Objects of the following type are allowed
    *                                 in the list: {@link AbstractObject}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Placemark addToPlacemarkObjectExtension(final AbstractObject placemarkObjectExtension) {
     this.getPlacemarkObjectExtension().add(placemarkObjectExtension);

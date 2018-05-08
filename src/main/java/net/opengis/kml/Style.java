@@ -22,21 +22,20 @@ import javax.xml.bind.annotation.*;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- *  &lt;Style&gt;
- *   
+ * &lt;Style&gt;
+ * <p>
  * A Style defines an addressable style group that can be referenced by
  * StyleMaps and Features. Styles affect how Geometry is presented in the 3D
  * viewer and how Features appear in the Places panel of the List view. Shared
- * styles are collected in a  &lt;Document&gt;
- * and must have an id defined for them so that they can be referenced by the
- * individual Features that use them. A Style defines an addressable style group
- * that can be referenced by StyleMaps and Features. Styles affect how Geometry
- * is presented in the 3D viewer and how Features appear in the Places panel of
- * the List view. Shared styles are collected in a  &lt;Document&gt;
- * and must have an id defined for them so that they can be referenced by the
- * individual Features that use them. Use an id to refer to the style from a
- *  &lt;styleUrl&gt;. Syntax:
- *  <pre> &lt;strong&gt;&lt;Style id="ID"&gt;
+ * styles are collected in a &lt;Document&gt; and must have an id defined for
+ * them so that they can be referenced by the individual Features that use them.
+ * A Style defines an addressable style group that can be referenced by
+ * StyleMaps and Features. Styles affect how Geometry is presented in the 3D
+ * viewer and how Features appear in the Places panel of the List view. Shared
+ * styles are collected in a &lt;Document&gt; and must have an id defined for
+ * them so that they can be referenced by the individual Features that use them.
+ * Use an id to refer to the style from a &lt;styleUrl&gt;. Syntax:
+ * <pre> &lt;strong&gt;&lt;Style id="ID"&gt;
  *  &lt;/strong&gt;&lt;!-- extends StyleSelector --&gt;
  *
  * &lt;!-- specific to Style --&gt;
@@ -47,13 +46,13 @@ import net.opengis.kml.annotations.Obvious;
  *   &lt;BalloonStyle&gt;...&lt;/BalloonStyle&gt;
  *   &lt;ListStyle&gt; &lt;strong&gt;... &lt;/strong&gt;&lt;/ListStyle&gt; &lt;strong&gt;
  * &lt;/Style&gt; &lt;/strong&gt; </pre>
- *   
+ * <p>
  * Extends:
  *
- * @see:  &lt;StyleSelector&gt;
+ * @see: &lt;StyleSelector&gt;
  *
  * Contained By:
- * @see:  &lt;Feature&gt;
+ * @see: &lt;Feature&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -73,167 +72,158 @@ public class Style
   implements Cloneable {
 
   /**
-   *  &lt;IconStyle&gt;
-   *   
+   * &lt;IconStyle&gt;
+   * <p>
    * Specifies how icons for point Placemarks are drawn, both in the Places
-   * panel and in the 3D viewer of Google Earth. The  &lt;Icon&gt; element specifies
-   * the icon image. The
-   *  &lt;scale&gt; element specifies the x, y scaling of the icon. The color specified
-   * in the
-   *  &lt;color&gt; element of  &lt;IconStyle&gt; is blended with the color of the  &lt;Icon&gt;.
-   * Syntax:
-   *  &lt;pre&gt; &lt;strong&gt;&lt;IconStyle id="ID"&gt; &lt;/strong&gt;
-   *   &lt;!-- inherited from  &lt;em&gt;ColorStyle &lt;/em&gt; --&gt;
-   *   &lt;color&gt;ffffffff&lt;/color&gt;            &lt;!-- kml:color --&gt;
-   *   &lt;colorMode&gt;normal&lt;/colorMode&gt;      &lt;!-- kml:colorModeEnum:normal  &lt;em&gt;or &lt;/em&gt; random --&gt;
-   *
-   *   &lt;!-- specific to IconStyle --&gt;
-   *   &lt;scale&gt;1&lt;/scale&gt;                   &lt;!-- float --&gt;
-   *   &lt;heading&gt;0&lt;/heading&gt;               &lt;!-- float --&gt;
-   *   &lt;Icon&gt;
-   *     &lt;href&gt;...&lt;/href&gt;
-   *   &lt;/Icon&gt;
-   *   &lt;hotSpot x="0.5"  y="0.5"
-   *     xunits="fraction" yunits="fraction"/&gt;    &lt;!-- kml:vec2 --&gt;
-   *  &lt;strong&gt;&lt;/IconStyle&gt; &lt;/strong&gt; </pre>
-   *   
+   * panel and in the 3D viewer of Google Earth. The &lt;Icon&gt; element
+   * specifies the icon image. The &lt;scale&gt; element specifies the x, y
+   * scaling of the icon. The color specified in the &lt;color&gt; element of
+   * &lt;IconStyle&gt; is blended with the color of the &lt;Icon&gt;. Syntax:
+   * &lt;pre&gt; &lt;strong&gt;&lt;IconStyle id="ID"&gt; &lt;/strong&gt; &lt;!--
+   * inherited from &lt;em&gt;ColorStyle &lt;/em&gt; --&gt;
+   * &lt;color&gt;ffffffff&lt;/color&gt; &lt;!-- kml:color --&gt;
+   * &lt;colorMode&gt;normal&lt;/colorMode&gt; &lt;!-- kml:colorModeEnum:normal
+   * &lt;em&gt;or &lt;/em&gt; random --&gt;
+   * <p>
+   * &lt;!-- specific to IconStyle --&gt; &lt;scale&gt;1&lt;/scale&gt; &lt;!--
+   * float --&gt; &lt;heading&gt;0&lt;/heading&gt; &lt;!-- float --&gt;
+   * &lt;Icon&gt; &lt;href&gt;...&lt;/href&gt; &lt;/Icon&gt; &lt;hotSpot x="0.5"
+   * y="0.5" xunits="fraction" yunits="fraction"/&gt; &lt;!-- kml:vec2 --&gt;
+   * &lt;strong&gt;&lt;/IconStyle&gt; &lt;/strong&gt; </pre>
+   * <p>
    * Extends:
    *
-   * @see:  &lt;ColorStyle&gt;
+   * @see: &lt;ColorStyle&gt;
    *
    * Contains:
-   * @see:  &lt;Icon&gt;
-   * @see:  &lt;href&gt;
+   * @see: &lt;Icon&gt;
+   * @see: &lt;href&gt;
    *
    * Contained By:
-   * @see:  &lt;Style&gt;
+   * @see: &lt;Style&gt;
    *
    */
   @XmlElement(name = "IconStyle")
   protected IconStyle iconStyle;
   /**
-   *  &lt;LabelStyle&gt;
-   *   
-   * Note: The  &lt;labelColor&gt; tag is deprecated. Use  &lt;LabelStyle&gt; instead.
-   * Specifies how the  &lt;name&gt; of a Feature is drawn in the 3D viewer. A custom
-   * color, color mode, and scale for the label (name) can be specified. Syntax:
-   *  &lt;pre&gt; &lt;strong&gt;&lt;LabelStyle id="ID"&gt; &lt;/strong&gt;
-   *   &lt;!-- inherited from  &lt;em&gt;ColorStyle &lt;/em&gt; --&gt;
-   *   &lt;color&gt;ffffffff&lt;/color&gt;            &lt;!-- kml:color --&gt;
-   *   &lt;colorMode&gt;normal&lt;/colorMode&gt;      &lt;!-- kml:colorModeEnum: normal  &lt;em&gt;or &lt;/em&gt; random --&gt;
-   *
-   *   &lt;!-- specific to LabelStyle --&gt;
-   *   &lt;scale&gt;1&lt;/scale&gt;                   &lt;!-- float --&gt;
-   *  &lt;strong&gt;&lt;/LabelStyle&gt; &lt;/strong&gt; </pre>
-   *   
+   * &lt;LabelStyle&gt;
+   * <p>
+   * Note: The &lt;labelColor&gt; tag is deprecated. Use &lt;LabelStyle&gt;
+   * instead. Specifies how the &lt;name&gt; of a Feature is drawn in the 3D
+   * viewer. A custom color, color mode, and scale for the label (name) can be
+   * specified. Syntax: &lt;pre&gt; &lt;strong&gt;&lt;LabelStyle id="ID"&gt;
+   * &lt;/strong&gt; &lt;!-- inherited from &lt;em&gt;ColorStyle &lt;/em&gt;
+   * --&gt; &lt;color&gt;ffffffff&lt;/color&gt; &lt;!-- kml:color --&gt;
+   * &lt;colorMode&gt;normal&lt;/colorMode&gt; &lt;!-- kml:colorModeEnum: normal
+   * &lt;em&gt;or &lt;/em&gt; random --&gt;
+   * <p>
+   * &lt;!-- specific to LabelStyle --&gt; &lt;scale&gt;1&lt;/scale&gt; &lt;!--
+   * float --&gt; &lt;strong&gt;&lt;/LabelStyle&gt; &lt;/strong&gt; </pre>
+   * <p>
    * Extends:
    *
-   * @see:  &lt;ColorStyle&gt;
+   * @see: &lt;ColorStyle&gt;
    *
    * Contained By:
-   * @see:  &lt;Style&gt;
+   * @see: &lt;Style&gt;
    *
    */
   @XmlElement(name = "LabelStyle")
   protected LabelStyle labelStyle;
   /**
-   *  &lt;LineStyle&gt;
-   *   
+   * &lt;LineStyle&gt;
+   * <p>
    * Specifies the drawing style (color, color mode, and line width) for all
    * line geometry. Line geometry includes the outlines of outlined polygons and
    * the extruded "tether" of Placemark icons (if extrusion is enabled). Syntax:
-   *  &lt;pre&gt; &lt;strong&gt;&lt;LineStyle id="ID"&gt; &lt;/strong&gt;
-   *   &lt;!-- inherited from  &lt;em&gt;ColorStyle &lt;/em&gt; --&gt;
-   *   &lt;color&gt;ffffffff&lt;/color&gt;            &lt;!-- kml:color --&gt;
-   *   &lt;colorMode&gt;normal&lt;/colorMode&gt;      &lt;!-- colorModeEnum: normal  &lt;em&gt;or &lt;/em&gt; random --&gt;
-   *
-   *   &lt;!-- specific to LineStyle --&gt;
-   *   &lt;width&gt;1&lt;/width&gt;                   &lt;!-- float --&gt;
-   *  &lt;strong&gt;&lt;/LineStyle&gt; &lt;/strong&gt; </pre>
-   *   
+   * &lt;pre&gt; &lt;strong&gt;&lt;LineStyle id="ID"&gt; &lt;/strong&gt; &lt;!--
+   * inherited from &lt;em&gt;ColorStyle &lt;/em&gt; --&gt;
+   * &lt;color&gt;ffffffff&lt;/color&gt; &lt;!-- kml:color --&gt;
+   * &lt;colorMode&gt;normal&lt;/colorMode&gt; &lt;!-- colorModeEnum: normal
+   * &lt;em&gt;or &lt;/em&gt; random --&gt;
+   * <p>
+   * &lt;!-- specific to LineStyle --&gt; &lt;width&gt;1&lt;/width&gt; &lt;!--
+   * float --&gt; &lt;strong&gt;&lt;/LineStyle&gt; &lt;/strong&gt; </pre>
+   * <p>
    * Extends:
    *
-   * @see:  &lt;ColorStyle&gt;
+   * @see: &lt;ColorStyle&gt;
    *
    * Contained By:
-   * @see:  &lt;Style&gt;
+   * @see: &lt;Style&gt;
    *
    */
   @XmlElement(name = "LineStyle")
   protected LineStyle lineStyle;
   /**
-   *  &lt;PolyStyle&gt;
-   * Syntax:
-   *  &lt;pre&gt; &lt;strong&gt;&lt;PolyStyle id="ID"&gt; &lt;/strong&gt;
-   *   &lt;!-- inherited from  &lt;em&gt;ColorStyle &lt;/em&gt; --&gt;
-   *   &lt;color&gt;ffffffff&lt;/color&gt;            &lt;!-- kml:color --&gt;
-   *   &lt;colorMode&gt;normal&lt;/colorMode&gt;      &lt;!-- kml:colorModeEnum: normal  &lt;em&gt;or &lt;/em&gt; random --&gt;
-   *
-   *   &lt;!-- specific to PolyStyle --&gt;
-   *   &lt;fill&gt;1&lt;/fill&gt;                     &lt;!-- boolean --&gt;
-   *   &lt;outline&gt;1&lt;/outline&gt;               &lt;!-- boolean --&gt;
-   *  &lt;strong&gt;&lt;/PolyStyle&gt; &lt;/strong&gt; </pre>
-   *   
+   * &lt;PolyStyle&gt; Syntax: &lt;pre&gt; &lt;strong&gt;&lt;PolyStyle
+   * id="ID"&gt; &lt;/strong&gt; &lt;!-- inherited from &lt;em&gt;ColorStyle
+   * &lt;/em&gt; --&gt; &lt;color&gt;ffffffff&lt;/color&gt; &lt;!-- kml:color
+   * --&gt; &lt;colorMode&gt;normal&lt;/colorMode&gt; &lt;!-- kml:colorModeEnum:
+   * normal &lt;em&gt;or &lt;/em&gt; random --&gt;
+   * <p>
+   * &lt;!-- specific to PolyStyle --&gt; &lt;fill&gt;1&lt;/fill&gt; &lt;!--
+   * boolean --&gt; &lt;outline&gt;1&lt;/outline&gt; &lt;!-- boolean --&gt;
+   * &lt;strong&gt;&lt;/PolyStyle&gt; &lt;/strong&gt; </pre>
+   * <p>
    * Extends:
    *
-   * @see:  &lt;ColorStyle&gt;
+   * @see: &lt;ColorStyle&gt;
    *
    * Contained By:
-   * @see:  &lt;Style&gt;
+   * @see: &lt;Style&gt;
    *
    */
   @XmlElement(name = "PolyStyle")
   protected PolyStyle polyStyle;
   /**
-   *  &lt;BalloonStyle&gt;
-   *   
+   * &lt;BalloonStyle&gt;
+   * <p>
    * Specifies how the description balloon for placemarks is drawn. The
-   *  &lt;bgColor&gt;, if specified, is used as the background color of the balloon.
-   * See  &lt;Feature&gt; for a diagram illustrating how the default description
-   * balloon appears in Google Earth. Syntax:
-   *  &lt;pre&gt; &lt;strong&gt;&lt;BalloonStyle id="ID"&gt; &lt;/strong&gt;
-   *   &lt;!-- specific to BalloonStyle --&gt;
-   *   &lt;bgColor&gt;ffffffff&lt;/bgColor&gt;            &lt;!-- kml:color --&gt;
-   *   &lt;textColor&gt;ff000000&lt;/textColor&gt;        &lt;!-- kml:color --&gt;
-   *   &lt;text&gt; &lt;em&gt;... &lt;/em&gt;&lt;/text&gt;                       &lt;!-- string --&gt;
-   *    &lt;span&gt;&lt;displayMode&gt;default&lt;/displayMode&gt; &lt;strong&gt;      &lt;/strong&gt;&lt;!-- kml:displayModeEnum --&gt; &lt;/span&gt; &lt;strong&gt;
-   * &lt;/BalloonStyle&gt; &lt;/strong&gt; </pre>
-   *   
+   * &lt;bgColor&gt;, if specified, is used as the background color of the
+   * balloon. See &lt;Feature&gt; for a diagram illustrating how the default
+   * description balloon appears in Google Earth. Syntax: &lt;pre&gt;
+   * &lt;strong&gt;&lt;BalloonStyle id="ID"&gt; &lt;/strong&gt; &lt;!-- specific
+   * to BalloonStyle --&gt; &lt;bgColor&gt;ffffffff&lt;/bgColor&gt; &lt;!--
+   * kml:color --&gt; &lt;textColor&gt;ff000000&lt;/textColor&gt; &lt;!--
+   * kml:color --&gt; &lt;text&gt; &lt;em&gt;... &lt;/em&gt;&lt;/text&gt;
+   * &lt;!-- string --&gt;
+   * &lt;span&gt;&lt;displayMode&gt;default&lt;/displayMode&gt; &lt;strong&gt;
+   * &lt;/strong&gt;&lt;!-- kml:displayModeEnum --&gt; &lt;/span&gt;
+   * &lt;strong&gt; &lt;/BalloonStyle&gt; &lt;/strong&gt; </pre>
+   * <p>
    * Extends:
    *
-   * @see:  &lt;ColorStyle&gt;
+   * @see: &lt;ColorStyle&gt;
    *
    * Contained By:
-   * @see:  &lt;Style&gt;
+   * @see: &lt;Style&gt;
    *
    */
   @XmlElement(name = "BalloonStyle")
   protected BalloonStyle balloonStyle;
   /**
-   *  &lt;ListStyle&gt;
-   *   
+   * &lt;ListStyle&gt;
+   * <p>
    * Specifies how a Feature is displayed in the list view. The list view is a
    * hierarchy of containers and children; in Google Earth, this is the Places
-   * panel. Syntax:
-   *  &lt;pre&gt; &lt;strong&gt;&lt;ListStyle id="ID"&gt; &lt;/strong&gt;
-   *   &lt;!-- specific to ListStyle --&gt;
-   *   &lt;listItemType&gt;check&lt;/listItemType&gt; &lt;!-- kml:listItemTypeEnum:check,
-   *                                           checkOffOnly,checkHideChildren,
-   *                                          radioFolder --&gt;
-   *   &lt;bgColor&gt;ffffffff&lt;/bgColor&gt;        &lt;!-- kml:color --&gt;
-   *   &lt;ItemIcon&gt;                         &lt;!-- 0 or more ItemIcon elements --&gt;
-   *     &lt;state&gt;open&lt;/state&gt;
-   *       &lt;!-- kml:itemIconModeEnum:open, closed, error, fetching0, fetching1,  &lt;em&gt;or &lt;/em&gt; fetching2 --&gt;
-   *     &lt;href&gt;...&lt;/href&gt;                 &lt;!-- anyURI --&gt;
-   *   &lt;/ItemIcon&gt;
-   *  &lt;strong&gt;&lt;/ListStyle&gt; &lt;/strong&gt; </pre>
-   *   
+   * panel. Syntax: &lt;pre&gt; &lt;strong&gt;&lt;ListStyle id="ID"&gt;
+   * &lt;/strong&gt; &lt;!-- specific to ListStyle --&gt;
+   * &lt;listItemType&gt;check&lt;/listItemType&gt; &lt;!--
+   * kml:listItemTypeEnum:check, checkOffOnly,checkHideChildren, radioFolder
+   * --&gt; &lt;bgColor&gt;ffffffff&lt;/bgColor&gt; &lt;!-- kml:color --&gt;
+   * &lt;ItemIcon&gt; &lt;!-- 0 or more ItemIcon elements --&gt;
+   * &lt;state&gt;open&lt;/state&gt; &lt;!-- kml:itemIconModeEnum:open, closed,
+   * error, fetching0, fetching1, &lt;em&gt;or &lt;/em&gt; fetching2 --&gt;
+   * &lt;href&gt;...&lt;/href&gt; &lt;!-- anyURI --&gt; &lt;/ItemIcon&gt;
+   * &lt;strong&gt;&lt;/ListStyle&gt; &lt;/strong&gt; </pre>
+   * <p>
    * Extends:
    *
-   * @see:  &lt;Object&gt;
+   * @see: &lt;Object&gt;
    *
    * Contained By:
-   * @see:  &lt;Style&gt;
+   * @see: &lt;Style&gt;
    *
    */
   @XmlElement(name = "ListStyle")
@@ -242,17 +232,17 @@ public class Style
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> styleSimpleExtension;
   /**
-   *  &lt;Object&gt;
-   *   
+   * &lt;Object&gt;
+   * <p>
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the  &lt;Update&gt; mechanism is to be used. Syntax:
-   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * assigned if the &lt;Update&gt; mechanism is to be used. Syntax:
+   * <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
    * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
    * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
-   *   
+   * <p>
    */
   @XmlElement(name = "StyleObjectExtensionGroup")
   protected List<AbstractObject> styleObjectExtension;
@@ -494,10 +484,9 @@ public class Style
 
   /**
    * Creates a new instance of {@link IconStyle} and set it to iconStyle.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * IconStyle iconStyle = new IconStyle();
-   * this.setIconStyle(iconStyle);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; IconStyle iconStyle = new
+   * IconStyle(); this.setIconStyle(iconStyle); &lt;/code&gt;
    */
   public IconStyle createAndSetIconStyle() {
     IconStyle newValue = new IconStyle();
@@ -507,10 +496,9 @@ public class Style
 
   /**
    * Creates a new instance of {@link LabelStyle} and set it to labelStyle.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * LabelStyle labelStyle = new LabelStyle();
-   * this.setLabelStyle(labelStyle);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; LabelStyle labelStyle =
+   * new LabelStyle(); this.setLabelStyle(labelStyle); &lt;/code&gt;
    */
   public LabelStyle createAndSetLabelStyle() {
     LabelStyle newValue = new LabelStyle();
@@ -520,10 +508,9 @@ public class Style
 
   /**
    * Creates a new instance of {@link LineStyle} and set it to lineStyle.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * LineStyle lineStyle = new LineStyle();
-   * this.setLineStyle(lineStyle);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; LineStyle lineStyle = new
+   * LineStyle(); this.setLineStyle(lineStyle); &lt;/code&gt;
    */
   public LineStyle createAndSetLineStyle() {
     LineStyle newValue = new LineStyle();
@@ -533,10 +520,9 @@ public class Style
 
   /**
    * Creates a new instance of {@link PolyStyle} and set it to polyStyle.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * PolyStyle polyStyle = new PolyStyle();
-   * this.setPolyStyle(polyStyle);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; PolyStyle polyStyle = new
+   * PolyStyle(); this.setPolyStyle(polyStyle); &lt;/code&gt;
    */
   public PolyStyle createAndSetPolyStyle() {
     PolyStyle newValue = new PolyStyle();
@@ -546,10 +532,9 @@ public class Style
 
   /**
    * Creates a new instance of {@link BalloonStyle} and set it to balloonStyle.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * BalloonStyle balloonStyle = new BalloonStyle();
-   * this.setBalloonStyle(balloonStyle);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; BalloonStyle balloonStyle
+   * = new BalloonStyle(); this.setBalloonStyle(balloonStyle); &lt;/code&gt;
    */
   public BalloonStyle createAndSetBalloonStyle() {
     BalloonStyle newValue = new BalloonStyle();
@@ -559,10 +544,9 @@ public class Style
 
   /**
    * Creates a new instance of {@link ListStyle} and set it to listStyle.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * ListStyle listStyle = new ListStyle();
-   * this.setListStyle(listStyle);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; ListStyle listStyle = new
+   * ListStyle(); this.setListStyle(listStyle); &lt;/code&gt;
    */
   public ListStyle createAndSetListStyle() {
     ListStyle newValue = new ListStyle();
@@ -584,7 +568,8 @@ public class Style
    *
    * @param styleSimpleExtension Objects of the following type are allowed in
    *                             the list: {@link Object}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Style addToStyleSimpleExtension(final Object styleSimpleExtension) {
     this.getStyleSimpleExtension().add(styleSimpleExtension);
@@ -605,7 +590,8 @@ public class Style
    *
    * @param styleObjectExtension Objects of the following type are allowed in
    *                             the list: {@link AbstractObject}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Style addToStyleObjectExtension(final AbstractObject styleObjectExtension) {
     this.getStyleObjectExtension().add(styleObjectExtension);

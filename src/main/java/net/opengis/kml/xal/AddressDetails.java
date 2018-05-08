@@ -24,20 +24,22 @@ import javax.xml.bind.annotation.*;
 import javax.xml.namespace.QName;
 
 /**
- *  &lt;xal:addressdetails&gt;
- *   
+ * &lt;xal:addressdetails&gt;
+ * <p>
  * A structured address, formatted as xAL, or eXtensible Address Language, an
- * international standard for address formatting.  &lt;xal:AddressDetails&gt; is used
- * by KML for geocoding in Google Maps only. For details, see the Google Maps
- * API documentation. Currently, Google Earth does not use this element; use
- *  &lt;address&gt; instead. Be sure to include the namespace for this element in any
- * KML file that uses it: xmlns:xal="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0" A
- * structured address, formatted as xAL, or eXtensible Address Language, an
- * international standard for address formatting.  &lt;xal:AddressDetails&gt; is used
- * by KML for geocoding in Google Maps only. For details, see the Google Maps
- * API documentation. Currently, Google Earth does not use this element; use
- *  &lt;address&gt; instead. Be sure to include the namespace for this element in any
- * KML file that uses it: xmlns:xal="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"
+ * international standard for address formatting. &lt;xal:AddressDetails&gt; is
+ * used by KML for geocoding in Google Maps only. For details, see the Google
+ * Maps API documentation. Currently, Google Earth does not use this element;
+ * use &lt;address&gt; instead. Be sure to include the namespace for this
+ * element in any KML file that uses it:
+ * xmlns:xal="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0" A structured address,
+ * formatted as xAL, or eXtensible Address Language, an international standard
+ * for address formatting. &lt;xal:AddressDetails&gt; is used by KML for
+ * geocoding in Google Maps only. For details, see the Google Maps API
+ * documentation. Currently, Google Earth does not use this element; use
+ * &lt;address&gt; instead. Be sure to include the namespace for this element in
+ * any KML file that uses it:
+ * xmlns:xal="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "AddressDetails", propOrder = {
@@ -56,14 +58,15 @@ public class AddressDetails implements Cloneable {
   @XmlElement(name = "PostalServiceElements")
   protected AddressDetails.PostalServiceElements postalServiceElements;
   /**
-   *  &lt;address&gt;
-   *   
+   * &lt;address&gt;
+   * <p>
    * A string value representing an unstructured address written as a standard
    * street, city, state address, and/or as a postal code. You can use the
-   *  &lt;address&gt; tag to specify the location of a point instead of using latitude
-   * and longitude coordinates. (However, if a  &lt;Point&gt; is provided, it takes
-   * precedence over the  &lt;address&gt;.) To find out which locales are supported for
-   * this tag in Google Earth, go to the Google Maps Help.
+   * &lt;address&gt; tag to specify the location of a point instead of using
+   * latitude and longitude coordinates. (However, if a &lt;Point&gt; is
+   * provided, it takes precedence over the &lt;address&gt;.) To find out which
+   * locales are supported for this tag in Google Earth, go to the Google Maps
+   * Help.
    */
   @XmlElement(name = "Address")
   protected AddressDetails.Address xalAddress;
@@ -80,14 +83,15 @@ public class AddressDetails implements Cloneable {
   @XmlAnyElement(lax = true)
   protected List<Object> any;
   /**
-   *  &lt;address&gt;
-   *   
+   * &lt;address&gt;
+   * <p>
    * A string value representing an unstructured address written as a standard
    * street, city, state address, and/or as a postal code. You can use the
-   *  &lt;address&gt; tag to specify the location of a point instead of using latitude
-   * and longitude coordinates. (However, if a  &lt;Point&gt; is provided, it takes
-   * precedence over the  &lt;address&gt;.) To find out which locales are supported for
-   * this tag in Google Earth, go to the Google Maps Help.
+   * &lt;address&gt; tag to specify the location of a point instead of using
+   * latitude and longitude coordinates. (However, if a &lt;Point&gt; is
+   * provided, it takes precedence over the &lt;address&gt;.) To find out which
+   * locales are supported for this tag in Google Earth, go to the Google Maps
+   * Help.
    */
   @XmlAttribute(name = "AddressType")
   @XmlSchemaType(name = "anySimpleType")
@@ -137,7 +141,7 @@ public class AddressDetails implements Cloneable {
    * Default no-arg constructor is private. Use overloaded constructor instead!
    * (Temporary solution, till a better and more suitable ObjectFactory is
    * created.)
-   *   
+   * <p>
    */
   @Deprecated
   private AddressDetails() {
@@ -589,10 +593,10 @@ public class AddressDetails implements Cloneable {
   /**
    * Creates a new instance of {@link AddressDetails.PostalServiceElements} and
    * set it to postalServiceElements.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * PostalServiceElements postalServiceElements = new PostalServiceElements();
-   * this.setPostalServiceElements(postalServiceElements);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; PostalServiceElements
+   * postalServiceElements = new PostalServiceElements();
+   * this.setPostalServiceElements(postalServiceElements); &lt;/code&gt;
    */
   public AddressDetails.PostalServiceElements createAndSetPostalServiceElements() {
     AddressDetails.PostalServiceElements newValue = new AddressDetails.PostalServiceElements();
@@ -603,10 +607,9 @@ public class AddressDetails implements Cloneable {
   /**
    * Creates a new instance of {@link AddressDetails.Address} and set it to
    * xalAddress.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * Address address = new Address();
-   * this.setXalAddress(address);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; Address address = new
+   * Address(); this.setXalAddress(address); &lt;/code&gt;
    */
   public AddressDetails.Address createAndSetXalAddress() {
     AddressDetails.Address newValue = new AddressDetails.Address();
@@ -616,10 +619,9 @@ public class AddressDetails implements Cloneable {
 
   /**
    * Creates a new instance of {@link AddressLines} and set it to addressLines.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * AddressLines addressLines = new AddressLines();
-   * this.setAddressLines(addressLines);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; AddressLines addressLines
+   * = new AddressLines(); this.setAddressLines(addressLines); &lt;/code&gt;
    *
    * @param addressLine required parameter
    */
@@ -632,10 +634,9 @@ public class AddressDetails implements Cloneable {
   /**
    * Creates a new instance of {@link AddressDetails.Country} and set it to
    * country.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * Country country = new Country();
-   * this.setCountry(country);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; Country country = new
+   * Country(); this.setCountry(country); &lt;/code&gt;
    *
    * @param locality           required parameter
    * @param administrativeArea required parameter
@@ -650,10 +651,10 @@ public class AddressDetails implements Cloneable {
   /**
    * Creates a new instance of {@link AdministrativeArea} and set it to
    * administrativeArea.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * AdministrativeArea administrativeArea = new AdministrativeArea();
-   * this.setAdministrativeArea(administrativeArea);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; AdministrativeArea
+   * administrativeArea = new AdministrativeArea();
+   * this.setAdministrativeArea(administrativeArea); &lt;/code&gt;
    *
    * @param postalCode required parameter
    * @param locality   required parameter
@@ -667,10 +668,9 @@ public class AddressDetails implements Cloneable {
 
   /**
    * Creates a new instance of {@link Locality} and set it to locality.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * Locality locality = new Locality();
-   * this.setLocality(locality);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; Locality locality = new
+   * Locality(); this.setLocality(locality); &lt;/code&gt;
    *
    * @param postBox       required parameter
    * @param postOffice    required parameter
@@ -685,10 +685,9 @@ public class AddressDetails implements Cloneable {
 
   /**
    * Creates a new instance of {@link Thoroughfare} and set it to thoroughfare.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * Thoroughfare thoroughfare = new Thoroughfare();
-   * this.setThoroughfare(thoroughfare);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; Thoroughfare thoroughfare
+   * = new Thoroughfare(); this.setThoroughfare(thoroughfare); &lt;/code&gt;
    *
    * @param postalCode        required parameter
    * @param premise           required parameter
@@ -715,7 +714,8 @@ public class AddressDetails implements Cloneable {
    *
    * @param any Objects of the following type are allowed in the list:
    *            {@link Object}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public AddressDetails addToAny(final Object any) {
     this.getAny().add(any);
@@ -853,14 +853,15 @@ public class AddressDetails implements Cloneable {
   }
 
   /**
-   *  &lt;address&gt;
-   *   
+   * &lt;address&gt;
+   * <p>
    * A string value representing an unstructured address written as a standard
    * street, city, state address, and/or as a postal code. You can use the
-   *  &lt;address&gt; tag to specify the location of a point instead of using latitude
-   * and longitude coordinates. (However, if a  &lt;Point&gt; is provided, it takes
-   * precedence over the  &lt;address&gt;.) To find out which locales are supported for
-   * this tag in Google Earth, go to the Google Maps Help.
+   * &lt;address&gt; tag to specify the location of a point instead of using
+   * latitude and longitude coordinates. (However, if a &lt;Point&gt; is
+   * provided, it takes precedence over the &lt;address&gt;.) To find out which
+   * locales are supported for this tag in Google Earth, go to the Google Maps
+   * Help.
    */
   @XmlAccessorType(XmlAccessType.FIELD)
   @XmlType(name = "", propOrder = {
@@ -1099,7 +1100,7 @@ public class AddressDetails implements Cloneable {
      * Default no-arg constructor is private. Use overloaded constructor
      * instead! (Temporary solution, till a better and more suitable
      * ObjectFactory is created.)
-     *   
+     * <p>
      */
     @Deprecated
     private Country() {
@@ -1281,9 +1282,9 @@ public class AddressDetails implements Cloneable {
 
     /**
      * Creates a new instance of {@link AddressLine} and adds it to addressLine.
-     * This method is a short version for:       &lt;code&gt;
-     * AddressLine addressLine = new AddressLine();
-     * this.getAddressLine().add(addressLine);  &lt;/code&gt;
+     * This method is a short version for: &lt;code&gt; AddressLine addressLine
+     * = new AddressLine(); this.getAddressLine().add(addressLine);
+     * &lt;/code&gt;
      */
     public AddressLine createAndAddAddressLine() {
       AddressLine newValue = new AddressLine();
@@ -1293,9 +1294,9 @@ public class AddressDetails implements Cloneable {
 
     /**
      * Creates a new instance of {@link AddressDetails.Country.CountryNameCode}
-     * and adds it to countryNameCode. This method is a short version for:       &lt;code&gt;
-     * CountryNameCode countryNameCode = new CountryNameCode();
-     * this.getCountryNameCode().add(countryNameCode);  &lt;/code&gt;
+     * and adds it to countryNameCode. This method is a short version for:
+     * &lt;code&gt; CountryNameCode countryNameCode = new CountryNameCode();
+     * this.getCountryNameCode().add(countryNameCode); &lt;/code&gt;
      */
     public AddressDetails.Country.CountryNameCode createAndAddCountryNameCode() {
       AddressDetails.Country.CountryNameCode newValue = new AddressDetails.Country.CountryNameCode();
@@ -1305,9 +1306,9 @@ public class AddressDetails implements Cloneable {
 
     /**
      * Creates a new instance of {@link CountryName} and adds it to countryName.
-     * This method is a short version for:       &lt;code&gt;
-     * CountryName countryName = new CountryName();
-     * this.getCountryName().add(countryName);  &lt;/code&gt;
+     * This method is a short version for: &lt;code&gt; CountryName countryName
+     * = new CountryName(); this.getCountryName().add(countryName);
+     * &lt;/code&gt;
      */
     public CountryName createAndAddCountryName() {
       CountryName newValue = new CountryName();
@@ -1318,10 +1319,10 @@ public class AddressDetails implements Cloneable {
     /**
      * Creates a new instance of {@link AdministrativeArea} and set it to
      * administrativeArea.
-     *   
-     * This method is a short version for:       &lt;code&gt;
-     * AdministrativeArea administrativeArea = new AdministrativeArea();
-     * this.setAdministrativeArea(administrativeArea);  &lt;/code&gt;
+     * <p>
+     * This method is a short version for: &lt;code&gt; AdministrativeArea
+     * administrativeArea = new AdministrativeArea();
+     * this.setAdministrativeArea(administrativeArea); &lt;/code&gt;
      *
      * @param postalCode required parameter
      * @param locality   required parameter
@@ -1335,10 +1336,9 @@ public class AddressDetails implements Cloneable {
 
     /**
      * Creates a new instance of {@link Locality} and set it to locality.
-     *   
-     * This method is a short version for:       &lt;code&gt;
-     * Locality locality = new Locality();
-     * this.setLocality(locality);  &lt;/code&gt;
+     * <p>
+     * This method is a short version for: &lt;code&gt; Locality locality = new
+     * Locality(); this.setLocality(locality); &lt;/code&gt;
      *
      * @param postBox       required parameter
      * @param postOffice    required parameter
@@ -1354,10 +1354,10 @@ public class AddressDetails implements Cloneable {
     /**
      * Creates a new instance of {@link Thoroughfare} and set it to
      * thoroughfare.
-     *   
-     * This method is a short version for:       &lt;code&gt;
-     * Thoroughfare thoroughfare = new Thoroughfare();
-     * this.setThoroughfare(thoroughfare);  &lt;/code&gt;
+     * <p>
+     * This method is a short version for: &lt;code&gt; Thoroughfare
+     * thoroughfare = new Thoroughfare(); this.setThoroughfare(thoroughfare);
+     * &lt;/code&gt;
      *
      * @param postalCode        required parameter
      * @param premise           required parameter
@@ -1373,9 +1373,9 @@ public class AddressDetails implements Cloneable {
     /**
      * Sets the value of the addressLine property Objects of the following
      * type(s) are allowed in the list List &lt;AddressLine&gt;.
-     *   
+     * <p>
      * Note:
-     *   
+     * <p>
      * This method does not make use of the fluent pattern.If you would like to
      * make it fluent, use {@link #withAddressLine} instead.
      *
@@ -1390,7 +1390,8 @@ public class AddressDetails implements Cloneable {
      *
      * @param addressLine Objects of the following type are allowed in the list:
      *                    {@link AddressLine}
-     * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+     * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+     *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
      */
     public AddressDetails.Country addToAddressLine(final AddressLine addressLine) {
       this.getAddressLine().add(addressLine);
@@ -1400,9 +1401,9 @@ public class AddressDetails implements Cloneable {
     /**
      * Sets the value of the countryNameCode property Objects of the following
      * type(s) are allowed in the list List &lt;CountryNameCode&gt;.
-     *   
+     * <p>
      * Note:
-     *   
+     * <p>
      * This method does not make use of the fluent pattern.If you would like to
      * make it fluent, use {@link #withCountryNameCode} instead.
      *
@@ -1418,7 +1419,8 @@ public class AddressDetails implements Cloneable {
      * @param countryNameCode Objects of the following type are allowed in the
      *                        list:
      *                        {@link AddressDetails.Country.CountryNameCode}
-     * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+     * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+     *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
      */
     public AddressDetails.Country addToCountryNameCode(final AddressDetails.Country.CountryNameCode countryNameCode) {
       this.getCountryNameCode().add(countryNameCode);
@@ -1428,9 +1430,9 @@ public class AddressDetails implements Cloneable {
     /**
      * Sets the value of the countryName property Objects of the following
      * type(s) are allowed in the list List &lt;CountryName&gt;.
-     *   
+     * <p>
      * Note:
-     *   
+     * <p>
      * This method does not make use of the fluent pattern.If you would like to
      * make it fluent, use {@link #withCountryName} instead.
      *
@@ -1445,7 +1447,8 @@ public class AddressDetails implements Cloneable {
      *
      * @param countryName Objects of the following type are allowed in the list:
      *                    {@link CountryName}
-     * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+     * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+     *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
      */
     public AddressDetails.Country addToCountryName(final CountryName countryName) {
       this.getCountryName().add(countryName);
@@ -1455,9 +1458,9 @@ public class AddressDetails implements Cloneable {
     /**
      * Sets the value of the any property Objects of the following type(s) are
      * allowed in the list List &lt;Object&gt;.
-     *   
+     * <p>
      * Note:
-     *   
+     * <p>
      * This method does not make use of the fluent pattern.If you would like to
      * make it fluent, use {@link #withAny} instead.
      *
@@ -1472,7 +1475,8 @@ public class AddressDetails implements Cloneable {
      *
      * @param any Objects of the following type are allowed in the list:
      *            {@link Object}
-     * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+     * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+     *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
      */
     public AddressDetails.Country addToAny(final Object any) {
       this.getAny().add(any);
@@ -2104,9 +2108,9 @@ public class AddressDetails implements Cloneable {
     /**
      * Creates a new instance of
      * {@link AddressDetails.PostalServiceElements.AddressIdentifier} and adds
-     * it to addressIdentifier. This method is a short version for:       &lt;code&gt;
+     * it to addressIdentifier. This method is a short version for: &lt;code&gt;
      * AddressIdentifier addressIdentifier = new AddressIdentifier();
-     * this.getAddressIdentifier().add(addressIdentifier);  &lt;/code&gt;
+     * this.getAddressIdentifier().add(addressIdentifier); &lt;/code&gt;
      */
     public AddressDetails.PostalServiceElements.AddressIdentifier createAndAddAddressIdentifier() {
       AddressDetails.PostalServiceElements.AddressIdentifier newValue = new AddressDetails.PostalServiceElements.AddressIdentifier();
@@ -2118,10 +2122,10 @@ public class AddressDetails implements Cloneable {
      * Creates a new instance of
      * {@link AddressDetails.PostalServiceElements.EndorsementLineCode} and set
      * it to endorsementLineCode.
-     *   
-     * This method is a short version for:       &lt;code&gt;
-     * EndorsementLineCode endorsementLineCode = new EndorsementLineCode();
-     * this.setEndorsementLineCode(endorsementLineCode);  &lt;/code&gt;
+     * <p>
+     * This method is a short version for: &lt;code&gt; EndorsementLineCode
+     * endorsementLineCode = new EndorsementLineCode();
+     * this.setEndorsementLineCode(endorsementLineCode); &lt;/code&gt;
      */
     public AddressDetails.PostalServiceElements.EndorsementLineCode createAndSetEndorsementLineCode() {
       AddressDetails.PostalServiceElements.EndorsementLineCode newValue = new AddressDetails.PostalServiceElements.EndorsementLineCode();
@@ -2133,10 +2137,9 @@ public class AddressDetails implements Cloneable {
      * Creates a new instance of
      * {@link AddressDetails.PostalServiceElements.KeyLineCode} and set it to
      * keyLineCode.
-     *   
-     * This method is a short version for:       &lt;code&gt;
-     * KeyLineCode keyLineCode = new KeyLineCode();
-     * this.setKeyLineCode(keyLineCode);  &lt;/code&gt;
+     * <p>
+     * This method is a short version for: &lt;code&gt; KeyLineCode keyLineCode
+     * = new KeyLineCode(); this.setKeyLineCode(keyLineCode); &lt;/code&gt;
      */
     public AddressDetails.PostalServiceElements.KeyLineCode createAndSetKeyLineCode() {
       AddressDetails.PostalServiceElements.KeyLineCode newValue = new AddressDetails.PostalServiceElements.KeyLineCode();
@@ -2148,10 +2151,9 @@ public class AddressDetails implements Cloneable {
      * Creates a new instance of
      * {@link AddressDetails.PostalServiceElements.Barcode} and set it to
      * barcode.
-     *   
-     * This method is a short version for:       &lt;code&gt;
-     * Barcode barcode = new Barcode();
-     * this.setBarcode(barcode);  &lt;/code&gt;
+     * <p>
+     * This method is a short version for: &lt;code&gt; Barcode barcode = new
+     * Barcode(); this.setBarcode(barcode); &lt;/code&gt;
      */
     public AddressDetails.PostalServiceElements.Barcode createAndSetBarcode() {
       AddressDetails.PostalServiceElements.Barcode newValue = new AddressDetails.PostalServiceElements.Barcode();
@@ -2163,10 +2165,9 @@ public class AddressDetails implements Cloneable {
      * Creates a new instance of
      * {@link AddressDetails.PostalServiceElements.SortingCode} and set it to
      * sortingCode.
-     *   
-     * This method is a short version for:       &lt;code&gt;
-     * SortingCode sortingCode = new SortingCode();
-     * this.setSortingCode(sortingCode);  &lt;/code&gt;
+     * <p>
+     * This method is a short version for: &lt;code&gt; SortingCode sortingCode
+     * = new SortingCode(); this.setSortingCode(sortingCode); &lt;/code&gt;
      */
     public AddressDetails.PostalServiceElements.SortingCode createAndSetSortingCode() {
       AddressDetails.PostalServiceElements.SortingCode newValue = new AddressDetails.PostalServiceElements.SortingCode();
@@ -2178,10 +2179,10 @@ public class AddressDetails implements Cloneable {
      * Creates a new instance of
      * {@link AddressDetails.PostalServiceElements.AddressLatitude} and set it
      * to addressLatitude.
-     *   
-     * This method is a short version for:       &lt;code&gt;
-     * AddressLatitude addressLatitude = new AddressLatitude();
-     * this.setAddressLatitude(addressLatitude);  &lt;/code&gt;
+     * <p>
+     * This method is a short version for: &lt;code&gt; AddressLatitude
+     * addressLatitude = new AddressLatitude();
+     * this.setAddressLatitude(addressLatitude); &lt;/code&gt;
      */
     public AddressDetails.PostalServiceElements.AddressLatitude createAndSetAddressLatitude() {
       AddressDetails.PostalServiceElements.AddressLatitude newValue = new AddressDetails.PostalServiceElements.AddressLatitude();
@@ -2193,10 +2194,10 @@ public class AddressDetails implements Cloneable {
      * Creates a new instance of
      * {@link AddressDetails.PostalServiceElements.AddressLatitudeDirection} and
      * set it to addressLatitudeDirection.
-     *   
-     * This method is a short version for:       &lt;code&gt;
-     * AddressLatitudeDirection addressLatitudeDirection = new AddressLatitudeDirection();
-     * this.setAddressLatitudeDirection(addressLatitudeDirection);  &lt;/code&gt;
+     * <p>
+     * This method is a short version for: &lt;code&gt; AddressLatitudeDirection
+     * addressLatitudeDirection = new AddressLatitudeDirection();
+     * this.setAddressLatitudeDirection(addressLatitudeDirection); &lt;/code&gt;
      */
     public AddressDetails.PostalServiceElements.AddressLatitudeDirection createAndSetAddressLatitudeDirection() {
       AddressDetails.PostalServiceElements.AddressLatitudeDirection newValue = new AddressDetails.PostalServiceElements.AddressLatitudeDirection();
@@ -2208,10 +2209,10 @@ public class AddressDetails implements Cloneable {
      * Creates a new instance of
      * {@link AddressDetails.PostalServiceElements.AddressLongitude} and set it
      * to addressLongitude.
-     *   
-     * This method is a short version for:       &lt;code&gt;
-     * AddressLongitude addressLongitude = new AddressLongitude();
-     * this.setAddressLongitude(addressLongitude);  &lt;/code&gt;
+     * <p>
+     * This method is a short version for: &lt;code&gt; AddressLongitude
+     * addressLongitude = new AddressLongitude();
+     * this.setAddressLongitude(addressLongitude); &lt;/code&gt;
      */
     public AddressDetails.PostalServiceElements.AddressLongitude createAndSetAddressLongitude() {
       AddressDetails.PostalServiceElements.AddressLongitude newValue = new AddressDetails.PostalServiceElements.AddressLongitude();
@@ -2223,10 +2224,12 @@ public class AddressDetails implements Cloneable {
      * Creates a new instance of
      * {@link AddressDetails.PostalServiceElements.AddressLongitudeDirection}
      * and set it to addressLongitudeDirection.
-     *   
-     * This method is a short version for:       &lt;code&gt;
-     * AddressLongitudeDirection addressLongitudeDirection = new AddressLongitudeDirection();
-     * this.setAddressLongitudeDirection(addressLongitudeDirection);  &lt;/code&gt;
+     * <p>
+     * This method is a short version for: &lt;code&gt;
+     * AddressLongitudeDirection addressLongitudeDirection = new
+     * AddressLongitudeDirection();
+     * this.setAddressLongitudeDirection(addressLongitudeDirection);
+     * &lt;/code&gt;
      */
     public AddressDetails.PostalServiceElements.AddressLongitudeDirection createAndSetAddressLongitudeDirection() {
       AddressDetails.PostalServiceElements.AddressLongitudeDirection newValue = new AddressDetails.PostalServiceElements.AddressLongitudeDirection();
@@ -2238,10 +2241,10 @@ public class AddressDetails implements Cloneable {
      * Creates a new instance of
      * {@link AddressDetails.PostalServiceElements.SupplementaryPostalServiceData}
      * and adds it to supplementaryPostalServiceData. This method is a short
-     * version for:       &lt;code&gt;
-     * SupplementaryPostalServiceData supplementaryPostalServiceData = new SupplementaryPostalServiceData();
+     * version for: &lt;code&gt; SupplementaryPostalServiceData
+     * supplementaryPostalServiceData = new SupplementaryPostalServiceData();
      * this.getSupplementaryPostalServiceData().add(supplementaryPostalServiceData);
-     *  &lt;/code&gt;
+     * &lt;/code&gt;
      */
     public AddressDetails.PostalServiceElements.SupplementaryPostalServiceData createAndAddSupplementaryPostalServiceData() {
       AddressDetails.PostalServiceElements.SupplementaryPostalServiceData newValue = new AddressDetails.PostalServiceElements.SupplementaryPostalServiceData();
@@ -2252,9 +2255,9 @@ public class AddressDetails implements Cloneable {
     /**
      * Sets the value of the addressIdentifier property Objects of the following
      * type(s) are allowed in the list List &lt;AddressIdentifier&gt;.
-     *   
+     * <p>
      * Note:
-     *   
+     * <p>
      * This method does not make use of the fluent pattern.If you would like to
      * make it fluent, use {@link #withAddressIdentifier} instead.
      *
@@ -2270,7 +2273,8 @@ public class AddressDetails implements Cloneable {
      * @param addressIdentifier Objects of the following type are allowed in the
      *                          list:
      *                          {@link AddressDetails.PostalServiceElements.AddressIdentifier}
-     * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+     * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+     *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
      */
     public AddressDetails.PostalServiceElements addToAddressIdentifier(final AddressDetails.PostalServiceElements.AddressIdentifier addressIdentifier) {
       this.getAddressIdentifier().add(addressIdentifier);
@@ -2279,11 +2283,11 @@ public class AddressDetails implements Cloneable {
 
     /**
      * Sets the value of the supplementaryPostalServiceData property Objects of
-     * the following type(s) are allowed in the list
-     * List &lt;SupplementaryPostalServiceData&gt;.
-     *   
+     * the following type(s) are allowed in the list List
+     * &lt;SupplementaryPostalServiceData&gt;.
+     * <p>
      * Note:
-     *   
+     * <p>
      * This method does not make use of the fluent pattern.If you would like to
      * make it fluent, use {@link #withSupplementaryPostalServiceData} instead.
      *
@@ -2299,7 +2303,8 @@ public class AddressDetails implements Cloneable {
      * @param supplementaryPostalServiceData Objects of the following type are
      *                                       allowed in the list:
      *                                       {@link AddressDetails.PostalServiceElements.SupplementaryPostalServiceData}
-     * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+     * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+     *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
      */
     public AddressDetails.PostalServiceElements addToSupplementaryPostalServiceData(final AddressDetails.PostalServiceElements.SupplementaryPostalServiceData supplementaryPostalServiceData) {
       this.getSupplementaryPostalServiceData().add(supplementaryPostalServiceData);
@@ -2309,9 +2314,9 @@ public class AddressDetails implements Cloneable {
     /**
      * Sets the value of the any property Objects of the following type(s) are
      * allowed in the list List &lt;Object&gt;.
-     *   
+     * <p>
      * Note:
-     *   
+     * <p>
      * This method does not make use of the fluent pattern.If you would like to
      * make it fluent, use {@link #withAny} instead.
      *
@@ -2326,7 +2331,8 @@ public class AddressDetails implements Cloneable {
      *
      * @param any Objects of the following type are allowed in the list:
      *            {@link Object}
-     * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+     * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+     *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
      */
     public AddressDetails.PostalServiceElements addToAny(final Object any) {
       this.getAny().add(any);
@@ -2444,8 +2450,8 @@ public class AddressDetails implements Cloneable {
     /**
      * fluent setter
      *
-     * @see
-     * #setSupplementaryPostalServiceData(List &lt;SupplementaryPostalServiceData&gt;)
+     * @see #setSupplementaryPostalServiceData(List
+     * &lt;SupplementaryPostalServiceData&gt;)
      *
      * @param supplementaryPostalServiceData required parameter
      */

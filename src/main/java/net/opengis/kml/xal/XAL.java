@@ -58,7 +58,7 @@ public class XAL implements Cloneable {
    * Default no-arg constructor is private. Use overloaded constructor instead!
    * (Temporary solution, till a better and more suitable ObjectFactory is
    * created.)
-   *   
+   * <p>
    */
   @Deprecated
   private XAL() {
@@ -156,9 +156,9 @@ public class XAL implements Cloneable {
 
   /**
    * Creates a new instance of {@link AddressDetails} and adds it to
-   * xalAddressDetails. This method is a short version for:     &lt;code&gt;
+   * xalAddressDetails. This method is a short version for: &lt;code&gt;
    * AddressDetails addressDetails = new AddressDetails();
-   * this.getXalAddressDetails().add(addressDetails);  &lt;/code&gt;
+   * this.getXalAddressDetails().add(addressDetails); &lt;/code&gt;
    *
    * @param xalAddress         required parameter
    * @param addressLines       required parameter
@@ -176,9 +176,9 @@ public class XAL implements Cloneable {
   /**
    * Sets the value of the xalAddressDetails property Objects of the following
    * type(s) are allowed in the list List &lt;AddressDetails&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withXalAddressDetails} instead.
    *
@@ -193,7 +193,8 @@ public class XAL implements Cloneable {
    *
    * @param xalAddressDetails Objects of the following type are allowed in the
    *                          list: {@link AddressDetails}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public XAL addToXalAddressDetails(final AddressDetails xalAddressDetails) {
     this.getXalAddressDetails().add(xalAddressDetails);
@@ -203,9 +204,9 @@ public class XAL implements Cloneable {
   /**
    * Sets the value of the any property Objects of the following type(s) are
    * allowed in the list List &lt;Object&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withAny} instead.
    *
@@ -220,7 +221,8 @@ public class XAL implements Cloneable {
    *
    * @param any Objects of the following type are allowed in the list:
    *            {@link Object}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public XAL addToAny(final Object any) {
     this.getAny().add(any);

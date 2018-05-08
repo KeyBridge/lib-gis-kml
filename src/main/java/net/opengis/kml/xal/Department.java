@@ -214,9 +214,8 @@ public class Department implements Cloneable {
 
   /**
    * Creates a new instance of {@link AddressLine} and adds it to addressLine.
-   * This method is a short version for:     &lt;code&gt;
-   * AddressLine addressLine = new AddressLine();
-   * this.getAddressLine().add(addressLine);  &lt;/code&gt;
+   * This method is a short version for: &lt;code&gt; AddressLine addressLine =
+   * new AddressLine(); this.getAddressLine().add(addressLine); &lt;/code&gt;
    */
   public AddressLine createAndAddAddressLine() {
     AddressLine newValue = new AddressLine();
@@ -226,9 +225,9 @@ public class Department implements Cloneable {
 
   /**
    * Creates a new instance of {@link Department.DepartmentName} and adds it to
-   * departmentName. This method is a short version for:     &lt;code&gt;
+   * departmentName. This method is a short version for: &lt;code&gt;
    * DepartmentName departmentName = new DepartmentName();
-   * this.getDepartmentName().add(departmentName);  &lt;/code&gt;
+   * this.getDepartmentName().add(departmentName); &lt;/code&gt;
    */
   public Department.DepartmentName createAndAddDepartmentName() {
     Department.DepartmentName newValue = new Department.DepartmentName();
@@ -238,10 +237,9 @@ public class Department implements Cloneable {
 
   /**
    * Creates a new instance of {@link MailStop} and set it to mailStop.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * MailStop mailStop = new MailStop();
-   * this.setMailStop(mailStop);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; MailStop mailStop = new
+   * MailStop(); this.setMailStop(mailStop); &lt;/code&gt;
    */
   public MailStop createAndSetMailStop() {
     MailStop newValue = new MailStop();
@@ -251,10 +249,9 @@ public class Department implements Cloneable {
 
   /**
    * Creates a new instance of {@link PostalCode} and set it to postalCode.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * PostalCode postalCode = new PostalCode();
-   * this.setPostalCode(postalCode);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; PostalCode postalCode =
+   * new PostalCode(); this.setPostalCode(postalCode); &lt;/code&gt;
    */
   public PostalCode createAndSetPostalCode() {
     PostalCode newValue = new PostalCode();
@@ -265,9 +262,9 @@ public class Department implements Cloneable {
   /**
    * Sets the value of the addressLine property Objects of the following type(s)
    * are allowed in the list List &lt;AddressLine&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withAddressLine} instead.
    *
@@ -282,7 +279,8 @@ public class Department implements Cloneable {
    *
    * @param addressLine Objects of the following type are allowed in the list:
    *                    {@link AddressLine}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Department addToAddressLine(final AddressLine addressLine) {
     this.getAddressLine().add(addressLine);
@@ -292,9 +290,9 @@ public class Department implements Cloneable {
   /**
    * Sets the value of the departmentName property Objects of the following
    * type(s) are allowed in the list List &lt;DepartmentName&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withDepartmentName} instead.
    *
@@ -309,7 +307,8 @@ public class Department implements Cloneable {
    *
    * @param departmentName Objects of the following type are allowed in the
    *                       list: {@link Department.DepartmentName}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Department addToDepartmentName(final Department.DepartmentName departmentName) {
     this.getDepartmentName().add(departmentName);
@@ -319,9 +318,9 @@ public class Department implements Cloneable {
   /**
    * Sets the value of the any property Objects of the following type(s) are
    * allowed in the list List &lt;Object&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withAny} instead.
    *
@@ -336,7 +335,8 @@ public class Department implements Cloneable {
    *
    * @param any Objects of the following type are allowed in the list:
    *            {@link Object}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Department addToAny(final Object any) {
     this.getAny().add(any);

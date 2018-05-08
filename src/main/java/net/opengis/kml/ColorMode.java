@@ -22,9 +22,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * ColorMode
- *   
- * normal, random See Also: See any element that extends  &lt;ColorStyle&gt;
- *   
+ * <p>
+ * normal, random See Also: See any element that extends &lt;ColorStyle&gt;
+ * <p>
  */
 @XmlType(name = "colorModeEnumType")
 @XmlEnum

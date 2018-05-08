@@ -21,8 +21,8 @@ import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- *  &lt;listitemtype&gt;
- *   
+ * &lt;listitemtype&gt;
+ * <p>
  * Specifies how a Feature is displayed in the list view. Possible values are:
  * check (default) - The Feature's visibility is tied to its item's checkbox.
  * radioFolder - When specified for a Container, only one of the Container's

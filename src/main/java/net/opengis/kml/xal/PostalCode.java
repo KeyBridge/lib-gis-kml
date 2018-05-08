@@ -208,9 +208,8 @@ public class PostalCode implements Cloneable {
 
   /**
    * Creates a new instance of {@link AddressLine} and adds it to addressLine.
-   * This method is a short version for:     &lt;code&gt;
-   * AddressLine addressLine = new AddressLine();
-   * this.getAddressLine().add(addressLine);  &lt;/code&gt;
+   * This method is a short version for: &lt;code&gt; AddressLine addressLine =
+   * new AddressLine(); this.getAddressLine().add(addressLine); &lt;/code&gt;
    */
   public AddressLine createAndAddAddressLine() {
     AddressLine newValue = new AddressLine();
@@ -220,9 +219,9 @@ public class PostalCode implements Cloneable {
 
   /**
    * Creates a new instance of {@link PostalCode.PostalCodeNumber} and adds it
-   * to postalCodeNumber. This method is a short version for:     &lt;code&gt;
+   * to postalCodeNumber. This method is a short version for: &lt;code&gt;
    * PostalCodeNumber postalCodeNumber = new PostalCodeNumber();
-   * this.getPostalCodeNumber().add(postalCodeNumber);  &lt;/code&gt;
+   * this.getPostalCodeNumber().add(postalCodeNumber); &lt;/code&gt;
    */
   public PostalCode.PostalCodeNumber createAndAddPostalCodeNumber() {
     PostalCode.PostalCodeNumber newValue = new PostalCode.PostalCodeNumber();
@@ -232,9 +231,11 @@ public class PostalCode implements Cloneable {
 
   /**
    * Creates a new instance of {@link PostalCode.PostalCodeNumberExtension} and
-   * adds it to postalCodeNumberExtension. This method is a short version for:     &lt;code&gt;
-   * PostalCodeNumberExtension postalCodeNumberExtension = new PostalCodeNumberExtension();
-   * this.getPostalCodeNumberExtension().add(postalCodeNumberExtension);  &lt;/code&gt;
+   * adds it to postalCodeNumberExtension. This method is a short version for:
+   * &lt;code&gt; PostalCodeNumberExtension postalCodeNumberExtension = new
+   * PostalCodeNumberExtension();
+   * this.getPostalCodeNumberExtension().add(postalCodeNumberExtension);
+   * &lt;/code&gt;
    */
   public PostalCode.PostalCodeNumberExtension createAndAddPostalCodeNumberExtension() {
     PostalCode.PostalCodeNumberExtension newValue = new PostalCode.PostalCodeNumberExtension();
@@ -245,10 +246,9 @@ public class PostalCode implements Cloneable {
   /**
    * Creates a new instance of {@link PostalCode.PostTown} and set it to
    * postTown.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * PostTown postTown = new PostTown();
-   * this.setPostTown(postTown);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; PostTown postTown = new
+   * PostTown(); this.setPostTown(postTown); &lt;/code&gt;
    */
   public PostalCode.PostTown createAndSetPostTown() {
     PostalCode.PostTown newValue = new PostalCode.PostTown();
@@ -259,9 +259,9 @@ public class PostalCode implements Cloneable {
   /**
    * Sets the value of the addressLine property Objects of the following type(s)
    * are allowed in the list List &lt;AddressLine&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withAddressLine} instead.
    *
@@ -276,7 +276,8 @@ public class PostalCode implements Cloneable {
    *
    * @param addressLine Objects of the following type are allowed in the list:
    *                    {@link AddressLine}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public PostalCode addToAddressLine(final AddressLine addressLine) {
     this.getAddressLine().add(addressLine);
@@ -286,9 +287,9 @@ public class PostalCode implements Cloneable {
   /**
    * Sets the value of the postalCodeNumber property Objects of the following
    * type(s) are allowed in the list List &lt;PostalCodeNumber&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withPostalCodeNumber} instead.
    *
@@ -303,7 +304,8 @@ public class PostalCode implements Cloneable {
    *
    * @param postalCodeNumber Objects of the following type are allowed in the
    *                         list: {@link PostalCode.PostalCodeNumber}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public PostalCode addToPostalCodeNumber(final PostalCode.PostalCodeNumber postalCodeNumber) {
     this.getPostalCodeNumber().add(postalCodeNumber);
@@ -312,10 +314,11 @@ public class PostalCode implements Cloneable {
 
   /**
    * Sets the value of the postalCodeNumberExtension property Objects of the
-   * following type(s) are allowed in the list List &lt;PostalCodeNumberExtension&gt;.
-   *   
+   * following type(s) are allowed in the list List
+   * &lt;PostalCodeNumberExtension&gt;.
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withPostalCodeNumberExtension} instead.
    *
@@ -331,7 +334,8 @@ public class PostalCode implements Cloneable {
    * @param postalCodeNumberExtension Objects of the following type are allowed
    *                                  in the list:
    *                                  {@link PostalCode.PostalCodeNumberExtension}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public PostalCode addToPostalCodeNumberExtension(final PostalCode.PostalCodeNumberExtension postalCodeNumberExtension) {
     this.getPostalCodeNumberExtension().add(postalCodeNumberExtension);
@@ -341,9 +345,9 @@ public class PostalCode implements Cloneable {
   /**
    * Sets the value of the any property Objects of the following type(s) are
    * allowed in the list List &lt;Object&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withAny} instead.
    *
@@ -358,7 +362,8 @@ public class PostalCode implements Cloneable {
    *
    * @param any Objects of the following type are allowed in the list:
    *            {@link Object}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public PostalCode addToAny(final Object any) {
     this.getAny().add(any);
@@ -997,9 +1002,9 @@ public class PostalCode implements Cloneable {
 
     /**
      * Creates a new instance of {@link AddressLine} and adds it to addressLine.
-     * This method is a short version for:       &lt;code&gt;
-     * AddressLine addressLine = new AddressLine();
-     * this.getAddressLine().add(addressLine);  &lt;/code&gt;
+     * This method is a short version for: &lt;code&gt; AddressLine addressLine
+     * = new AddressLine(); this.getAddressLine().add(addressLine);
+     * &lt;/code&gt;
      */
     public AddressLine createAndAddAddressLine() {
       AddressLine newValue = new AddressLine();
@@ -1009,9 +1014,9 @@ public class PostalCode implements Cloneable {
 
     /**
      * Creates a new instance of {@link PostalCode.PostTown.PostTownName} and
-     * adds it to postTownName. This method is a short version for:       &lt;code&gt;
+     * adds it to postTownName. This method is a short version for: &lt;code&gt;
      * PostTownName postTownName = new PostTownName();
-     * this.getPostTownName().add(postTownName);  &lt;/code&gt;
+     * this.getPostTownName().add(postTownName); &lt;/code&gt;
      */
     public PostalCode.PostTown.PostTownName createAndAddPostTownName() {
       PostalCode.PostTown.PostTownName newValue = new PostalCode.PostTown.PostTownName();
@@ -1022,10 +1027,10 @@ public class PostalCode implements Cloneable {
     /**
      * Creates a new instance of {@link PostalCode.PostTown.PostTownSuffix} and
      * set it to postTownSuffix.
-     *   
-     * This method is a short version for:       &lt;code&gt;
-     * PostTownSuffix postTownSuffix = new PostTownSuffix();
-     * this.setPostTownSuffix(postTownSuffix);  &lt;/code&gt;
+     * <p>
+     * This method is a short version for: &lt;code&gt; PostTownSuffix
+     * postTownSuffix = new PostTownSuffix();
+     * this.setPostTownSuffix(postTownSuffix); &lt;/code&gt;
      */
     public PostalCode.PostTown.PostTownSuffix createAndSetPostTownSuffix() {
       PostalCode.PostTown.PostTownSuffix newValue = new PostalCode.PostTown.PostTownSuffix();
@@ -1036,9 +1041,9 @@ public class PostalCode implements Cloneable {
     /**
      * Sets the value of the addressLine property Objects of the following
      * type(s) are allowed in the list List &lt;AddressLine&gt;.
-     *   
+     * <p>
      * Note:
-     *   
+     * <p>
      * This method does not make use of the fluent pattern.If you would like to
      * make it fluent, use {@link #withAddressLine} instead.
      *
@@ -1053,7 +1058,8 @@ public class PostalCode implements Cloneable {
      *
      * @param addressLine Objects of the following type are allowed in the list:
      *                    {@link AddressLine}
-     * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+     * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+     *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
      */
     public PostalCode.PostTown addToAddressLine(final AddressLine addressLine) {
       this.getAddressLine().add(addressLine);
@@ -1063,9 +1069,9 @@ public class PostalCode implements Cloneable {
     /**
      * Sets the value of the postTownName property Objects of the following
      * type(s) are allowed in the list List &lt;PostTownName&gt;.
-     *   
+     * <p>
      * Note:
-     *   
+     * <p>
      * This method does not make use of the fluent pattern.If you would like to
      * make it fluent, use {@link #withPostTownName} instead.
      *
@@ -1080,7 +1086,8 @@ public class PostalCode implements Cloneable {
      *
      * @param postTownName Objects of the following type are allowed in the
      *                     list: {@link PostalCode.PostTown.PostTownName}
-     * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+     * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+     *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
      */
     public PostalCode.PostTown addToPostTownName(final PostalCode.PostTown.PostTownName postTownName) {
       this.getPostTownName().add(postTownName);

@@ -159,7 +159,7 @@ public class FlyTo
   /**
    * @see abstractView
    *
-   * @return possible object is null null null null null null null null   {@link AbstractView}
+   * @return possible object is null null null null null null null null null null   {@link AbstractView}
      *     {@link LookAt}
    *     {@link Camera}
    *
@@ -171,7 +171,7 @@ public class FlyTo
   /**
    * @see abstractView
    *
-   * @param value allowed object is null null null null null null null null   {@link AbstractView}
+   * @param value allowed object is null null null null null null null null null null   {@link AbstractView}
      *     {@link LookAt}
    *     {@link Camera}
    *

@@ -22,9 +22,9 @@ import javax.xml.bind.annotation.*;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- *  &lt;Model&gt;
- *   
- * A 3D object described in a COLLADA file (referenced in the  &lt;Link&gt; tag).
+ * &lt;Model&gt;
+ * <p>
+ * A 3D object described in a COLLADA file (referenced in the &lt;Link&gt; tag).
  * COLLADA files have a .dae file extension. Models are created in their own
  * coordinate space and then located, positioned, and scaled in Google Earth.
  * See the "Topics in KML" page on Regions for more detail. Google Earth
@@ -32,43 +32,33 @@ import net.opengis.kml.annotations.Obvious;
  * triangles allowed is 21845. Google Earth does not support animation or
  * skinning. Google Earth does not support external geometry references. Google
  * Earth supports the COLLADA common profile, with the following exceptions:
- * Syntax:
- *  &lt;pre&gt; &lt;strong&gt;&lt;Model id="ID"&gt; &lt;/strong&gt;
- *   &lt;!-- specific to Model --&gt;
- *   &lt;altitudeMode&gt;clampToGround&lt;/altitudeMode&gt;
- *       &lt;!-- kml:altitudeModeEnum: clampToGround,relativeToGround, &lt;em&gt;or &lt;/em&gt; absolute --&gt;
- *       &lt;!-- or, substitute gx:altitudeMode: clampToSeaFloor, relativeToSeaFloor --&gt;
- *   &lt;Location&gt;
- *     &lt;longitude&gt;&lt;/longitude&gt; &lt;!-- kml:angle180 --&gt;
- *     &lt;latitude&gt;&lt;/latitude&gt;   &lt;!-- kml:angle90 --&gt;
- *     &lt;altitude&gt;0&lt;/altitude&gt;  &lt;!-- double --&gt;
- *   &lt;/Location&gt;
- *   &lt;Orientation&gt;
- *     &lt;heading&gt;0&lt;/heading&gt;    &lt;!-- kml:angle360 --&gt;
- *     &lt;tilt&gt;0&lt;/tilt&gt;          &lt;!-- kml:angle360 --&gt;
- *     &lt;roll&gt;0&lt;/roll&gt;          &lt;!-- kml:angle360 --&gt;
- *   &lt;/Orientation&gt;
- *   &lt;Scale&gt;
- *     &lt;x&gt;1&lt;/x&gt;                &lt;!-- double --&gt;
- *     &lt;y&gt;1&lt;/y&gt;                &lt;!-- double --&gt;
- *     &lt;z&gt;1&lt;/z&gt;                &lt;!-- double --&gt;
- *   &lt;/Scale&gt;
- *   &lt;Link&gt;...&lt;/Link&gt;
- *    &lt;span&gt;&lt;ResourceMap&gt;
- *     &lt;Alias&gt;
- *       &lt;targetHref&gt;...&lt;/targetHref&gt;   &lt;!-- anyURI --&gt;
- *       &lt;sourceHref&gt;...&lt;/sourceHref&gt;   &lt;!-- anyURI --&gt;
- *     &lt;/Alias&gt;
- *   &lt;/ResourceMap&gt; &lt;/span&gt;
- *  &lt;strong&gt;&lt;/Model&gt; &lt;/strong&gt; </pre>
- *   
+ * Syntax: &lt;pre&gt; &lt;strong&gt;&lt;Model id="ID"&gt; &lt;/strong&gt;
+ * &lt;!-- specific to Model --&gt;
+ * &lt;altitudeMode&gt;clampToGround&lt;/altitudeMode&gt; &lt;!--
+ * kml:altitudeModeEnum: clampToGround,relativeToGround, &lt;em&gt;or
+ * &lt;/em&gt; absolute --&gt; &lt;!-- or, substitute gx:altitudeMode:
+ * clampToSeaFloor, relativeToSeaFloor --&gt; &lt;Location&gt;
+ * &lt;longitude&gt;&lt;/longitude&gt; &lt;!-- kml:angle180 --&gt;
+ * &lt;latitude&gt;&lt;/latitude&gt; &lt;!-- kml:angle90 --&gt;
+ * &lt;altitude&gt;0&lt;/altitude&gt; &lt;!-- double --&gt; &lt;/Location&gt;
+ * &lt;Orientation&gt; &lt;heading&gt;0&lt;/heading&gt; &lt;!-- kml:angle360
+ * --&gt; &lt;tilt&gt;0&lt;/tilt&gt; &lt;!-- kml:angle360 --&gt;
+ * &lt;roll&gt;0&lt;/roll&gt; &lt;!-- kml:angle360 --&gt; &lt;/Orientation&gt;
+ * &lt;Scale&gt; &lt;x&gt;1&lt;/x&gt; &lt;!-- double --&gt; &lt;y&gt;1&lt;/y&gt;
+ * &lt;!-- double --&gt; &lt;z&gt;1&lt;/z&gt; &lt;!-- double --&gt;
+ * &lt;/Scale&gt; &lt;Link&gt;...&lt;/Link&gt; &lt;span&gt;&lt;ResourceMap&gt;
+ * &lt;Alias&gt; &lt;targetHref&gt;...&lt;/targetHref&gt; &lt;!-- anyURI --&gt;
+ * &lt;sourceHref&gt;...&lt;/sourceHref&gt; &lt;!-- anyURI --&gt; &lt;/Alias&gt;
+ * &lt;/ResourceMap&gt; &lt;/span&gt; &lt;strong&gt;&lt;/Model&gt;
+ * &lt;/strong&gt; </pre>
+ * <p>
  * Extends:
  *
- * @see:  &lt;Geometry&gt;
+ * @see: &lt;Geometry&gt;
  *
  * Contained By:
- * @see:  &lt;MultiGeometry&gt;
- * @see:  &lt;Placemark&gt;
+ * @see: &lt;MultiGeometry&gt;
+ * @see: &lt;Placemark&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -87,117 +77,113 @@ public class Model extends Geometry implements Cloneable {
 
   /**
    * AltitudeMode
-   *   
-   * clampToGround, relativeToGround, absolute See Also: See  &lt;LookAt&gt; and
-   *  &lt;Region&gt;
-   *   
+   * <p>
+   * clampToGround, relativeToGround, absolute See Also: See &lt;LookAt&gt; and
+   * &lt;Region&gt;
+   * <p>
    */
   @XmlElement(defaultValue = "clampToGround")
   protected AltitudeMode altitudeMode;
   /**
-   *  &lt;location&gt;
-   *   
+   * &lt;location&gt;
+   * <p>
    * Specifies the exact coordinates of the Model's origin in latitude,
    * longitude, and altitude. Latitude and longitude measurements are standard
    * lat-lon projection with WGS84 datum. Altitude is distance above the earth's
-   * surface, in meters, and is interpreted according to  &lt;altitudeMode&gt; or
-   *  &lt;gx:altitudeMode&gt;.  &lt;Location&gt;  &lt;longitude&gt;39.55375305703105 &lt;/longitude&gt;
-   *  &lt;latitude&gt;-118.9813220168456 &lt;/latitude&gt;  &lt;altitude&gt;1223 &lt;/altitude&gt;
-   *  &lt;/Location&gt;
+   * surface, in meters, and is interpreted according to &lt;altitudeMode&gt; or
+   * &lt;gx:altitudeMode&gt;. &lt;Location&gt;
+   * &lt;longitude&gt;39.55375305703105 &lt;/longitude&gt;
+   * &lt;latitude&gt;-118.9813220168456 &lt;/latitude&gt; &lt;altitude&gt;1223
+   * &lt;/altitude&gt; &lt;/Location&gt;
    */
   @XmlElement(name = "Location")
   protected Location location;
   /**
-   *  &lt;orientation&gt;
-   *   
+   * &lt;orientation&gt;
+   * <p>
    * Describes rotation of a 3D model's coordinate system to position the object
-   * in Google Earth. See diagram below.  &lt;Orientation&gt;  &lt;heading&gt;45.0 &lt;/heading&gt;
-   *  &lt;tilt&gt;10.0 &lt;/tilt&gt;
-   *  &lt;roll&gt;0.0 &lt;/roll&gt;  &lt;/Orientation&gt;
+   * in Google Earth. See diagram below. &lt;Orientation&gt; &lt;heading&gt;45.0
+   * &lt;/heading&gt; &lt;tilt&gt;10.0 &lt;/tilt&gt; &lt;roll&gt;0.0
+   * &lt;/roll&gt; &lt;/Orientation&gt;
    */
   @XmlElement(name = "Orientation")
   protected Orientation orientation;
   /**
-   *  &lt;scale&gt;
-   *   
-   * Note: The  &lt;geomScale&gt; tag has been deprecated. Use  &lt;scale&gt; instead. Resizes
-   * the icon. Scales a model along the x, y, and z axes in the model's
-   * coordinate space.
-   *  &lt;Scale&gt;
-   *  &lt;x&gt;2.5 &lt;/x&gt;  &lt;y&gt;2.5 &lt;/y&gt;  &lt;z&gt;3.5 &lt;/z&gt;  &lt;/Scale&gt;
+   * &lt;scale&gt;
+   * <p>
+   * Note: The &lt;geomScale&gt; tag has been deprecated. Use &lt;scale&gt;
+   * instead. Resizes the icon. Scales a model along the x, y, and z axes in the
+   * model's coordinate space. &lt;Scale&gt; &lt;x&gt;2.5 &lt;/x&gt;
+   * &lt;y&gt;2.5 &lt;/y&gt; &lt;z&gt;3.5 &lt;/z&gt; &lt;/Scale&gt;
    */
   @XmlElement(name = "Scale")
   protected Scale scale;
   /**
-   *  &lt;link&gt; (required). see  &lt;link&gt;.
-   *   
-   *  &lt;Link&gt; specifies the location of any of the following: If the file
-   * specified in  &lt;href&gt; is a local file, the  &lt;viewFormat&gt; and
-   *  &lt;httpQuery&gt;
-   * elements are not used. KML files fetched by network links Image files used
-   * in any Overlay (the
-   *  &lt;Icon&gt; element specifies the image in an Overlay;  &lt;Icon&gt; has the same
-   * fields as  &lt;Link&gt;) Model files used in the  &lt;Model&gt; element Specifies the URL
-   * of the website containing this KML or KMZ file. Be sure to include the
-   * namespace for this element in any KML file that uses it:
+   * &lt;link&gt; (required). see &lt;link&gt;.
+   * <p>
+   * &lt;Link&gt; specifies the location of any of the following: If the file
+   * specified in &lt;href&gt; is a local file, the &lt;viewFormat&gt; and
+   * &lt;httpQuery&gt; elements are not used. KML files fetched by network links
+   * Image files used in any Overlay (the &lt;Icon&gt; element specifies the
+   * image in an Overlay; &lt;Icon&gt; has the same fields as &lt;Link&gt;)
+   * Model files used in the &lt;Model&gt; element Specifies the URL of the
+   * website containing this KML or KMZ file. Be sure to include the namespace
+   * for this element in any KML file that uses it:
    * xmlns:atom="http://www.w3.org/2005/Atom" (see the sample that follows).
-   * Specifies the file to load and optional refresh parameters. See  &lt;Link&gt;. The
-   *  &lt;Link&gt; element replaces the  &lt;Url&gt; element of  &lt;NetworkLink&gt; contained in
-   * earlier KML releases and adds functionality for the  &lt;Region&gt; element
-   * (introduced in KML 2.1). In Google Earth releases 3.0 and earlier, the
-   *  &lt;Link&gt; element is ignored. The file is conditionally loaded and refreshed,
-   * depending on the refresh parameters supplied here. Two different sets of
-   * refresh parameters can be specified: one set is based on time
-   * ( &lt;refreshMode&gt; and  &lt;refreshInterval&gt;) and one is based on the current
-   * "camera" view ( &lt;viewRefreshMode&gt; and
-   *  &lt;viewRefreshTime&gt;). In addition, Link specifies whether to scale the
-   * bounding box parameters that are sent to the server ( &lt;viewBoundScale&gt;
-   * and provides a set of optional viewing parameters that can be sent to the
-   * server ( &lt;viewFormat&gt;) as well as a set of optional parameters containing
-   * version and language information. Tip: To display the top-level Folder or
-   * Document within a Network Link in the List View, assign an ID to the Folder
-   * or Document. Without this ID, only the child object names are displayed in
-   * the List View. When a file is fetched, the URL that is sent to the server
-   * is composed of three pieces of information: the href (Hypertext Reference)
-   * that specifies the file to load. an arbitrary format string that is created
-   * from (a) parameters that you specify in the  &lt;viewFormat&gt;
-   * element or (b) bounding box parameters (this is the default and is used if
-   * no  &lt;viewFormat&gt;
+   * Specifies the file to load and optional refresh parameters. See
+   * &lt;Link&gt;. The &lt;Link&gt; element replaces the &lt;Url&gt; element of
+   * &lt;NetworkLink&gt; contained in earlier KML releases and adds
+   * functionality for the &lt;Region&gt; element (introduced in KML 2.1). In
+   * Google Earth releases 3.0 and earlier, the &lt;Link&gt; element is ignored.
+   * The file is conditionally loaded and refreshed, depending on the refresh
+   * parameters supplied here. Two different sets of refresh parameters can be
+   * specified: one set is based on time ( &lt;refreshMode&gt; and
+   * &lt;refreshInterval&gt;) and one is based on the current "camera" view (
+   * &lt;viewRefreshMode&gt; and &lt;viewRefreshTime&gt;). In addition, Link
+   * specifies whether to scale the bounding box parameters that are sent to the
+   * server ( &lt;viewBoundScale&gt; and provides a set of optional viewing
+   * parameters that can be sent to the server ( &lt;viewFormat&gt;) as well as
+   * a set of optional parameters containing version and language information.
+   * Tip: To display the top-level Folder or Document within a Network Link in
+   * the List View, assign an ID to the Folder or Document. Without this ID,
+   * only the child object names are displayed in the List View. When a file is
+   * fetched, the URL that is sent to the server is composed of three pieces of
+   * information: the href (Hypertext Reference) that specifies the file to
+   * load. an arbitrary format string that is created from (a) parameters that
+   * you specify in the &lt;viewFormat&gt; element or (b) bounding box
+   * parameters (this is the default and is used if no &lt;viewFormat&gt;
    * element is included in the file). a second format string that is specified
-   * in the
-   *  &lt;httpQuery&gt; element. Syntax:
-   *  &lt;pre&gt; &lt;strong&gt;&lt;Link id="ID"&gt; &lt;/strong&gt;
-   *   &lt;!-- specific to Link --&gt;
-   *   &lt;href&gt; &lt;em&gt;... &lt;/em&gt;&lt;/href&gt;                      &lt;!--  &lt;span&gt;string &lt;/span&gt; --&gt;
-   *   &lt;refreshMode&gt;onChange&lt;/refreshMode&gt;
-   *     &lt;!-- refreshModeEnum: onChange, onInterval,  &lt;em&gt;or &lt;/em&gt; onExpire --&gt;
-   *   &lt;refreshInterval&gt;4&lt;/refreshInterval&gt;  &lt;!-- float --&gt;
-   *   &lt;viewRefreshMode&gt;never&lt;/viewRefreshMode&gt;
-   *     &lt;!-- viewRefreshModeEnum: never, onStop, onRequest, onRegion --&gt;
-   *   &lt;viewRefreshTime&gt;4&lt;/viewRefreshTime&gt;  &lt;!-- float --&gt;
-   *   &lt;viewBoundScale&gt;1&lt;/viewBoundScale&gt;    &lt;!-- float --&gt;
-   *   &lt;viewFormat&gt;BBOX=[bboxWest],[bboxSouth],[bboxEast],[bboxNorth]&lt; &lt;strong&gt;/ &lt;/strong&gt;viewFormat&gt;
-   *                                         &lt;!-- string --&gt;
-   *   &lt;httpQuery&gt;...&lt;/httpQuery&gt;            &lt;!-- string --&gt;
-   *  &lt;strong&gt;&lt;/Link&gt; &lt;/strong&gt; </pre>
-   *   
+   * in the &lt;httpQuery&gt; element. Syntax: &lt;pre&gt;
+   * &lt;strong&gt;&lt;Link id="ID"&gt; &lt;/strong&gt; &lt;!-- specific to Link
+   * --&gt; &lt;href&gt; &lt;em&gt;... &lt;/em&gt;&lt;/href&gt; &lt;!--
+   * &lt;span&gt;string &lt;/span&gt; --&gt;
+   * &lt;refreshMode&gt;onChange&lt;/refreshMode&gt; &lt;!-- refreshModeEnum:
+   * onChange, onInterval, &lt;em&gt;or &lt;/em&gt; onExpire --&gt;
+   * &lt;refreshInterval&gt;4&lt;/refreshInterval&gt; &lt;!-- float --&gt;
+   * &lt;viewRefreshMode&gt;never&lt;/viewRefreshMode&gt; &lt;!--
+   * viewRefreshModeEnum: never, onStop, onRequest, onRegion --&gt;
+   * &lt;viewRefreshTime&gt;4&lt;/viewRefreshTime&gt; &lt;!-- float --&gt;
+   * &lt;viewBoundScale&gt;1&lt;/viewBoundScale&gt; &lt;!-- float --&gt;
+   * &lt;viewFormat&gt;BBOX=[bboxWest],[bboxSouth],[bboxEast],[bboxNorth]&lt;
+   * &lt;strong&gt;/ &lt;/strong&gt;viewFormat&gt; &lt;!-- string --&gt;
+   * &lt;httpQuery&gt;...&lt;/httpQuery&gt; &lt;!-- string --&gt;
+   * &lt;strong&gt;&lt;/Link&gt; &lt;/strong&gt; </pre>
+   * <p>
    * Extends:
    *
-   * @see:  &lt;Object&gt;
+   * @see: &lt;Object&gt;
    *
    * Contained By:
-   * @see:  &lt;Model&gt;
-   * @see:  &lt;NetworkLink&gt;
+   * @see: &lt;Model&gt;
+   * @see: &lt;NetworkLink&gt;
    *
-   * See Also:
-   *  &lt;NetworkLinkControl&gt;
-   *  &lt;Region&gt;
+   * See Also: &lt;NetworkLinkControl&gt; &lt;Region&gt;
    *
    */
   @XmlElement(name = "Link")
   protected Link link;
   /**
-   *  &lt;resourcemap&gt;
+   * &lt;resourcemap&gt;
    */
   @XmlElement(name = "ResourceMap")
   protected ResourceMap resourceMap;
@@ -205,17 +191,17 @@ public class Model extends Geometry implements Cloneable {
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> modelSimpleExtension;
   /**
-   *  &lt;Object&gt;
-   *   
+   * &lt;Object&gt;
+   * <p>
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the  &lt;Update&gt; mechanism is to be used. Syntax:
-   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * assigned if the &lt;Update&gt; mechanism is to be used. Syntax:
+   * <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
    * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
    * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
-   *   
+   * <p>
    */
   @XmlElement(name = "ModelObjectExtensionGroup")
   protected List<AbstractObject> modelObjectExtension;
@@ -227,7 +213,7 @@ public class Model extends Geometry implements Cloneable {
   /**
    * @see altitudeMode
    *
-   * @return possible object is null null null null null null null   {@link Object}
+   * @return possible object is null null null null null null null null null   {@link Object}
      *     {@link net.opengis.kml.AltitudeMode}
    *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
@@ -239,7 +225,7 @@ public class Model extends Geometry implements Cloneable {
   /**
    * @see altitudeMode
    *
-   * @param value allowed object is null null null null null null null   {@link Object}
+   * @param value allowed object is null null null null null null null null null   {@link Object}
      *     {@link net.opengis.kml.AltitudeMode}
    *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
@@ -461,10 +447,9 @@ public class Model extends Geometry implements Cloneable {
 
   /**
    * Creates a new instance of {@link Location} and set it to location.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * Location location = new Location();
-   * this.setLocation(location);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; Location location = new
+   * Location(); this.setLocation(location); &lt;/code&gt;
    */
   public Location createAndSetLocation() {
     Location newValue = new Location();
@@ -474,10 +459,9 @@ public class Model extends Geometry implements Cloneable {
 
   /**
    * Creates a new instance of {@link Orientation} and set it to orientation.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * Orientation orientation = new Orientation();
-   * this.setOrientation(orientation);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; Orientation orientation =
+   * new Orientation(); this.setOrientation(orientation); &lt;/code&gt;
    */
   public Orientation createAndSetOrientation() {
     Orientation newValue = new Orientation();
@@ -487,10 +471,9 @@ public class Model extends Geometry implements Cloneable {
 
   /**
    * Creates a new instance of {@link Scale} and set it to scale.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * Scale scale = new Scale();
-   * this.setScale(scale);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; Scale scale = new Scale();
+   * this.setScale(scale); &lt;/code&gt;
    */
   public Scale createAndSetScale() {
     Scale newValue = new Scale();
@@ -500,10 +483,9 @@ public class Model extends Geometry implements Cloneable {
 
   /**
    * Creates a new instance of {@link Link} and set it to link.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * Link link = new Link();
-   * this.setLink(link);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; Link link = new Link();
+   * this.setLink(link); &lt;/code&gt;
    */
   public Link createAndSetLink() {
     Link newValue = new Link();
@@ -513,10 +495,9 @@ public class Model extends Geometry implements Cloneable {
 
   /**
    * Creates a new instance of {@link ResourceMap} and set it to resourceMap.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * ResourceMap resourceMap = new ResourceMap();
-   * this.setResourceMap(resourceMap);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; ResourceMap resourceMap =
+   * new ResourceMap(); this.setResourceMap(resourceMap); &lt;/code&gt;
    */
   public ResourceMap createAndSetResourceMap() {
     ResourceMap newValue = new ResourceMap();
@@ -538,7 +519,8 @@ public class Model extends Geometry implements Cloneable {
    *
    * @param modelSimpleExtension Objects of the following type are allowed in
    *                             the list: {@link Object}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Model addToModelSimpleExtension(final Object modelSimpleExtension) {
     this.getModelSimpleExtension().add(modelSimpleExtension);
@@ -559,7 +541,8 @@ public class Model extends Geometry implements Cloneable {
    *
    * @param modelObjectExtension Objects of the following type are allowed in
    *                             the list: {@link AbstractObject}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Model addToModelObjectExtension(final AbstractObject modelObjectExtension) {
     this.getModelObjectExtension().add(modelObjectExtension);

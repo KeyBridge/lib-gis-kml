@@ -297,9 +297,8 @@ public class PostOffice implements Cloneable {
 
   /**
    * Creates a new instance of {@link AddressLine} and adds it to addressLine.
-   * This method is a short version for:     &lt;code&gt;
-   * AddressLine addressLine = new AddressLine();
-   * this.getAddressLine().add(addressLine);  &lt;/code&gt;
+   * This method is a short version for: &lt;code&gt; AddressLine addressLine =
+   * new AddressLine(); this.getAddressLine().add(addressLine); &lt;/code&gt;
    */
   public AddressLine createAndAddAddressLine() {
     AddressLine newValue = new AddressLine();
@@ -309,9 +308,9 @@ public class PostOffice implements Cloneable {
 
   /**
    * Creates a new instance of {@link PostOffice.PostOfficeName} and adds it to
-   * postOfficeName. This method is a short version for:     &lt;code&gt;
+   * postOfficeName. This method is a short version for: &lt;code&gt;
    * PostOfficeName postOfficeName = new PostOfficeName();
-   * this.getPostOfficeName().add(postOfficeName);  &lt;/code&gt;
+   * this.getPostOfficeName().add(postOfficeName); &lt;/code&gt;
    */
   public PostOffice.PostOfficeName createAndAddPostOfficeName() {
     PostOffice.PostOfficeName newValue = new PostOffice.PostOfficeName();
@@ -322,10 +321,10 @@ public class PostOffice implements Cloneable {
   /**
    * Creates a new instance of {@link PostOffice.PostOfficeNumber} and set it to
    * postOfficeNumber.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * PostOfficeNumber postOfficeNumber = new PostOfficeNumber();
-   * this.setPostOfficeNumber(postOfficeNumber);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; PostOfficeNumber
+   * postOfficeNumber = new PostOfficeNumber();
+   * this.setPostOfficeNumber(postOfficeNumber); &lt;/code&gt;
    */
   public PostOffice.PostOfficeNumber createAndSetPostOfficeNumber() {
     PostOffice.PostOfficeNumber newValue = new PostOffice.PostOfficeNumber();
@@ -335,10 +334,9 @@ public class PostOffice implements Cloneable {
 
   /**
    * Creates a new instance of {@link PostalRoute} and set it to postalRoute.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * PostalRoute postalRoute = new PostalRoute();
-   * this.setPostalRoute(postalRoute);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; PostalRoute postalRoute =
+   * new PostalRoute(); this.setPostalRoute(postalRoute); &lt;/code&gt;
    *
    * @param postalRouteName   required parameter
    * @param postalRouteNumber required parameter
@@ -351,10 +349,9 @@ public class PostOffice implements Cloneable {
 
   /**
    * Creates a new instance of {@link PostBox} and set it to postBox.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * PostBox postBox = new PostBox();
-   * this.setPostBox(postBox);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; PostBox postBox = new
+   * PostBox(); this.setPostBox(postBox); &lt;/code&gt;
    *
    * @param postBoxNumber required parameter
    */
@@ -366,10 +363,9 @@ public class PostOffice implements Cloneable {
 
   /**
    * Creates a new instance of {@link PostalCode} and set it to postalCode.
-   *   
-   * This method is a short version for:     &lt;code&gt;
-   * PostalCode postalCode = new PostalCode();
-   * this.setPostalCode(postalCode);  &lt;/code&gt;
+   * <p>
+   * This method is a short version for: &lt;code&gt; PostalCode postalCode =
+   * new PostalCode(); this.setPostalCode(postalCode); &lt;/code&gt;
    */
   public PostalCode createAndSetPostalCode() {
     PostalCode newValue = new PostalCode();
@@ -380,9 +376,9 @@ public class PostOffice implements Cloneable {
   /**
    * Sets the value of the addressLine property Objects of the following type(s)
    * are allowed in the list List &lt;AddressLine&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withAddressLine} instead.
    *
@@ -397,7 +393,8 @@ public class PostOffice implements Cloneable {
    *
    * @param addressLine Objects of the following type are allowed in the list:
    *                    {@link AddressLine}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public PostOffice addToAddressLine(final AddressLine addressLine) {
     this.getAddressLine().add(addressLine);
@@ -407,9 +404,9 @@ public class PostOffice implements Cloneable {
   /**
    * Sets the value of the postOfficeName property Objects of the following
    * type(s) are allowed in the list List &lt;PostOfficeName&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withPostOfficeName} instead.
    *
@@ -424,7 +421,8 @@ public class PostOffice implements Cloneable {
    *
    * @param postOfficeName Objects of the following type are allowed in the
    *                       list: {@link PostOffice.PostOfficeName}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public PostOffice addToPostOfficeName(final PostOffice.PostOfficeName postOfficeName) {
     this.getPostOfficeName().add(postOfficeName);
@@ -434,9 +432,9 @@ public class PostOffice implements Cloneable {
   /**
    * Sets the value of the any property Objects of the following type(s) are
    * allowed in the list List &lt;Object&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withAny} instead.
    *
@@ -451,7 +449,8 @@ public class PostOffice implements Cloneable {
    *
    * @param any Objects of the following type are allowed in the list:
    *            {@link Object}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public PostOffice addToAny(final Object any) {
     this.getAny().add(any);

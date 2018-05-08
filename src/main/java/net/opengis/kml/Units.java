@@ -22,10 +22,10 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Units
- *   
- * fraction, pixels, insetPixels See Also: See  &lt;hotSpot&gt; in  &lt;IconStyle&gt;,
- *  &lt;ScreenOverlay&gt;
- *   
+ * <p>
+ * fraction, pixels, insetPixels See Also: See &lt;hotSpot&gt; in
+ * &lt;IconStyle&gt;, &lt;ScreenOverlay&gt;
+ * <p>
  */
 @XmlType(name = "unitsEnumType")
 @XmlEnum

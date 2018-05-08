@@ -22,27 +22,26 @@ import javax.xml.bind.annotation.*;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- *  &lt;StyleMap&gt;
- *   
- * A  &lt;StyleMap&gt; maps between two different Styles. Typically a  &lt;StyleMap&gt;
- * element is used to provide separate normal and highlighted styles for a
- * placemark, so that the highlighted version appears when the user mouses over
- * the icon in Google Earth. Syntax:
- *  &lt;pre&gt; &lt;strong&gt;&lt;StyleMap id="ID"&gt; &lt;/strong&gt;
- *   &lt;!-- extends  &lt;em&gt;StyleSelector &lt;/em&gt; --&gt;
- *   &lt;!-- elements specific to StyleMap --&gt;
- *   &lt;Pair id="ID"&gt;
- *     &lt;key&gt;normal&lt;/key&gt;              &lt;!-- kml:styleStateEnum:  normal &lt;em&gt; or &lt;/em&gt; highlight --&gt;
- *     &lt;styleUrl&gt; &lt;em&gt;... &lt;/em&gt;&lt;/styleUrl&gt; or &lt;Style&gt;...&lt;/Style&gt;
- *   &lt;/Pair&gt;
- *  &lt;strong&gt;&lt;/StyleMap&gt; &lt;/strong&gt; </pre>
- *   
+ * &lt;StyleMap&gt;
+ * <p>
+ * A &lt;StyleMap&gt; maps between two different Styles. Typically a
+ * &lt;StyleMap&gt; element is used to provide separate normal and highlighted
+ * styles for a placemark, so that the highlighted version appears when the user
+ * mouses over the icon in Google Earth. Syntax: &lt;pre&gt;
+ * &lt;strong&gt;&lt;StyleMap id="ID"&gt; &lt;/strong&gt; &lt;!-- extends
+ * &lt;em&gt;StyleSelector &lt;/em&gt; --&gt; &lt;!-- elements specific to
+ * StyleMap --&gt; &lt;Pair id="ID"&gt; &lt;key&gt;normal&lt;/key&gt; &lt;!--
+ * kml:styleStateEnum: normal &lt;em&gt; or &lt;/em&gt; highlight --&gt;
+ * &lt;styleUrl&gt; &lt;em&gt;... &lt;/em&gt;&lt;/styleUrl&gt; or
+ * &lt;Style&gt;...&lt;/Style&gt; &lt;/Pair&gt; &lt;strong&gt;&lt;/StyleMap&gt;
+ * &lt;/strong&gt; </pre>
+ * <p>
  * Extends:
  *
- * @see:  &lt;StyleSelector&gt;
+ * @see: &lt;StyleSelector&gt;
  *
  * Contained By:
- * @see:  &lt;Feature&gt;
+ * @see: &lt;Feature&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -57,18 +56,18 @@ public class StyleMap
   implements Cloneable {
 
   /**
-   *  &lt;pair&gt; (required)
-   *   
+   * &lt;pair&gt; (required)
+   * <p>
    * Defines a key/value pair that maps a mode (normal or highlight) to the
-   * predefined
-   *  &lt;styleUrl&gt;.  &lt;Pair&gt; contains two elements (both are required):  &lt;key&gt;, which
-   * identifies the key  &lt;styleUrl&gt; or  &lt;Style&gt;, which references the style. In
-   *  &lt;styleUrl&gt;, for referenced style elements that are local to the KML
-   * document, a simple # referencing is used. For styles that are contained in
-   * external files, use a full URL along with # referencing. For example:
-   *  &lt;Pair&gt;  &lt;key&gt;normal &lt;/key&gt;
-   *  &lt;styleUrl&gt;http://myserver.com/populationProject.xml#example_style_off &lt;/styleUrl&gt;
-   *  &lt;/Pair&gt;
+   * predefined &lt;styleUrl&gt;. &lt;Pair&gt; contains two elements (both are
+   * required): &lt;key&gt;, which identifies the key &lt;styleUrl&gt; or
+   * &lt;Style&gt;, which references the style. In &lt;styleUrl&gt;, for
+   * referenced style elements that are local to the KML document, a simple #
+   * referencing is used. For styles that are contained in external files, use a
+   * full URL along with # referencing. For example: &lt;Pair&gt;
+   * &lt;key&gt;normal &lt;/key&gt;
+   * &lt;styleUrl&gt;http://myserver.com/populationProject.xml#example_style_off
+   * &lt;/styleUrl&gt; &lt;/Pair&gt;
    */
   @XmlElement(name = "Pair")
   protected List<Pair> pair;
@@ -76,17 +75,17 @@ public class StyleMap
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> styleMapSimpleExtension;
   /**
-   *  &lt;Object&gt;
-   *   
+   * &lt;Object&gt;
+   * <p>
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the  &lt;Update&gt; mechanism is to be used. Syntax:
-   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * assigned if the &lt;Update&gt; mechanism is to be used. Syntax:
+   * <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
    * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
    * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
-   *   
+   * <p>
    */
   @XmlElement(name = "StyleMapObjectExtensionGroup")
   protected List<AbstractObject> styleMapObjectExtension;
@@ -179,9 +178,8 @@ public class StyleMap
 
   /**
    * Creates a new instance of {@link Pair} and adds it to pair. This method is
-   * a short version for:     &lt;code&gt;
-   * Pair pair = new Pair();
-   * this.getPair().add(pair);  &lt;/code&gt;
+   * a short version for: &lt;code&gt; Pair pair = new Pair();
+   * this.getPair().add(pair); &lt;/code&gt;
    */
   public Pair createAndAddPair() {
     Pair newValue = new Pair();
@@ -203,7 +201,8 @@ public class StyleMap
    *
    * @param pair Objects of the following type are allowed in the list:
    *             {@link Pair}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public StyleMap addToPair(final Pair pair) {
     this.getPair().add(pair);
@@ -224,7 +223,8 @@ public class StyleMap
    *
    * @param styleMapSimpleExtension Objects of the following type are allowed in
    *                                the list: {@link Object}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public StyleMap addToStyleMapSimpleExtension(final Object styleMapSimpleExtension) {
     this.getStyleMapSimpleExtension().add(styleMapSimpleExtension);
@@ -245,7 +245,8 @@ public class StyleMap
    *
    * @param styleMapObjectExtension Objects of the following type are allowed in
    *                                the list: {@link AbstractObject}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public StyleMap addToStyleMapObjectExtension(final AbstractObject styleMapObjectExtension) {
     this.getStyleMapObjectExtension().add(styleMapObjectExtension);

@@ -133,9 +133,9 @@ public class SimpleArrayData
   /**
    * Sets the value of the value property Objects of the following type(s) are
    * allowed in the list List &lt;String&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withValue} instead.
    *
@@ -150,7 +150,8 @@ public class SimpleArrayData
    *
    * @param value Objects of the following type are allowed in the list:
    *              {@link String}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public SimpleArrayData addToValue(final String value) {
     this.getValue().add(value);
@@ -160,9 +161,9 @@ public class SimpleArrayData
   /**
    * Sets the value of the simpleArrayDataExtension property Objects of the
    * following type(s) are allowed in the list List &lt;Object&gt;.
-   *   
+   * <p>
    * Note:
-   *   
+   * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withSimpleArrayDataExtension} instead.
    *
@@ -177,7 +178,8 @@ public class SimpleArrayData
    *
    * @param simpleArrayDataExtension Objects of the following type are allowed
    *                                 in the list: {@link Object}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public SimpleArrayData addToSimpleArrayDataExtension(final Object simpleArrayDataExtension) {
     this.getSimpleArrayDataExtension().add(simpleArrayDataExtension);

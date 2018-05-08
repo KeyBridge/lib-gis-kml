@@ -22,18 +22,17 @@ import javax.xml.bind.annotation.*;
 import net.opengis.kml.gx.*;
 
 /**
- *  &lt;change&gt;
- *   
+ * &lt;change&gt;
+ * <p>
  * Children of this element are the element(s) to be modified, which are
  * identified by the targetId attribute. Modifies the values in an element that
- * has already been loaded with a
- *  &lt;NetworkLink&gt;. Within the Change element, the child to be modified must
- * include a targetId attribute that references the original element's id. This
- * update can be considered a "sparse update": in the modified element, only the
- * values listed in  &lt;Change&gt; are replaced; all other values remained untouched.
- * When
- *  &lt;Change&gt; is applied to a set of coordinates, the new coordinates replace the
- * current coordinates.
+ * has already been loaded with a &lt;NetworkLink&gt;. Within the Change
+ * element, the child to be modified must include a targetId attribute that
+ * references the original element's id. This update can be considered a "sparse
+ * update": in the modified element, only the values listed in &lt;Change&gt;
+ * are replaced; all other values remained untouched. When &lt;Change&gt; is
+ * applied to a set of coordinates, the new coordinates replace the current
+ * coordinates.
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ChangeType", propOrder = {
@@ -43,17 +42,17 @@ import net.opengis.kml.gx.*;
 public class Change implements Cloneable {
 
   /**
-   *  &lt;Object&gt;
-   *   
+   * &lt;Object&gt;
+   * <p>
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the  &lt;Update&gt; mechanism is to be used. Syntax:
-   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * assigned if the &lt;Update&gt; mechanism is to be used. Syntax:
+   * <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
    * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
    * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
-   *   
+   * <p>
    */
   @XmlElementRef(name = "AbstractObjectGroup", namespace = "http://www.opengis.net/kml/2.2", required = false)
   protected List<AbstractObject> abstractObject;
@@ -118,7 +117,8 @@ public class Change implements Cloneable {
    * @param abstractObject Objects of the following type are allowed in the
    *                       list:
    *                       {@link LatLonAltBox}{@link JAXBElement}{@link Alias}{@link JAXBElement}{@link Camera}{@link JAXBElement}{@link Placemark}{@link JAXBElement}{@link Orientation}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link Folder}{@link JAXBElement}{@link PhotoOverlay}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link TimeSpan}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link TimeStamp}{@link JAXBElement}{@link ResourceMap}{@link JAXBElement}{@link ScreenOverlay}{@link JAXBElement}{@link Scale}{@link JAXBElement}{@link FlyTo}{@link JAXBElement}{@link LabelStyle}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link ViewVolume}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link TourPrimitive}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link Data}{@link JAXBElement}{@link PolyStyle}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link ItemIcon}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link Wait}{@link JAXBElement}{@link MultiTrack}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link TourControl}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link Link}{@link JAXBElement}{@link Geometry}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link NetworkLink}{@link JAXBElement}{@link Model}{@link JAXBElement}{@link ColorStyle}{@link JAXBElement}{@link ViewerOptions}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link SubStyle}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link MultiGeometry}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link LinearRing}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link Document}{@link JAXBElement}{@link TimeStamp}{@link JAXBElement}{@link ListStyle}{@link JAXBElement}{@link Location}{@link JAXBElement}{@link Feature}{@link JAXBElement}{@link StyleSelector}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link Link}{@link JAXBElement}{@link Style}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link TimeSpan}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link IconStyle}{@link JAXBElement}{@link StyleMap}{@link JAXBElement}{@link Overlay}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link GroundOverlay}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link SoundCue}{@link JAXBElement}{@link Polygon}{@link JAXBElement}{@link Track}{@link JAXBElement}{@link AnimatedUpdate}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link Playlist}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link Link}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link ImagePyramid}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link Point}{@link JAXBElement}{@link LatLonBox}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link LineString}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link TimePrimitive}{@link JAXBElement}{@link LineStyle}{@link JAXBElement}{@link Container}{@link JAXBElement}{@link Lod}{@link JAXBElement}{@link Tour}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link LatLonQuad}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link Pair}{@link JAXBElement}{@link AbstractView}{@link JAXBElement}{@link LookAt}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link BalloonStyle}{@link JAXBElement}{@link Region}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link SchemaData}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Change addToAbstractObject(final AbstractObject abstractObject) {
     this.getAbstractObject().add(abstractObject);

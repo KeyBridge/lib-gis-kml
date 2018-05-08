@@ -22,7 +22,7 @@ import javax.xml.bind.annotation.*;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- *  &lt;resourcemap&gt;
+ * &lt;resourcemap&gt;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ResourceMapType", propOrder = {
@@ -36,13 +36,14 @@ public class ResourceMap
   implements Cloneable {
 
   /**
-   *  &lt;alias&gt; contains a mapping from a  &lt;sourcehref&gt; to a  &lt;targethref&gt;:
-   *   
-   *  &lt;targetHref&gt; Specifies the texture file to be fetched by Google Earth. This
-   * reference can be a relative reference to an image file within the .kmz
-   * archive, or it can be an absolute reference to the file (for example, a
-   * URL).  &lt;sourceHref&gt; Is the path specified for the texture file in the
-   * Collada .dae file.
+   * &lt;alias&gt; contains a mapping from a &lt;sourcehref&gt; to a
+   * &lt;targethref&gt;:
+   * <p>
+   * &lt;targetHref&gt; Specifies the texture file to be fetched by Google
+   * Earth. This reference can be a relative reference to an image file within
+   * the .kmz archive, or it can be an absolute reference to the file (for
+   * example, a URL). &lt;sourceHref&gt; Is the path specified for the texture
+   * file in the Collada .dae file.
    */
   @XmlElement(name = "Alias")
   protected List<Alias> alias;
@@ -50,17 +51,17 @@ public class ResourceMap
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> resourceMapSimpleExtension;
   /**
-   *  &lt;Object&gt;
-   *   
+   * &lt;Object&gt;
+   * <p>
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the  &lt;Update&gt; mechanism is to be used. Syntax:
-   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * assigned if the &lt;Update&gt; mechanism is to be used. Syntax:
+   * <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
    * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
    * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
-   *   
+   * <p>
    */
   @XmlElement(name = "ResourceMapObjectExtensionGroup")
   protected List<AbstractObject> resourceMapObjectExtension;
@@ -153,9 +154,8 @@ public class ResourceMap
 
   /**
    * Creates a new instance of {@link Alias} and adds it to alias. This method
-   * is a short version for:     &lt;code&gt;
-   * Alias alias = new Alias();
-   * this.getAlias().add(alias);  &lt;/code&gt;
+   * is a short version for: &lt;code&gt; Alias alias = new Alias();
+   * this.getAlias().add(alias); &lt;/code&gt;
    */
   public Alias createAndAddAlias() {
     Alias newValue = new Alias();
@@ -177,7 +177,8 @@ public class ResourceMap
    *
    * @param alias Objects of the following type are allowed in the list:
    *              {@link Alias}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public ResourceMap addToAlias(final Alias alias) {
     this.getAlias().add(alias);
@@ -198,7 +199,8 @@ public class ResourceMap
    *
    * @param resourceMapSimpleExtension Objects of the following type are allowed
    *                                   in the list: {@link Object}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public ResourceMap addToResourceMapSimpleExtension(final Object resourceMapSimpleExtension) {
     this.getResourceMapSimpleExtension().add(resourceMapSimpleExtension);
@@ -219,7 +221,8 @@ public class ResourceMap
    *
    * @param resourceMapObjectExtension Objects of the following type are allowed
    *                                   in the list: {@link AbstractObject}
-   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public ResourceMap addToResourceMapObjectExtension(final AbstractObject resourceMapObjectExtension) {
     this.getResourceMapObjectExtension().add(resourceMapObjectExtension);

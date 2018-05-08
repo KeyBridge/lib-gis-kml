@@ -22,9 +22,10 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * AltitudeMode
- *   
- * clampToGround, relativeToGround, absolute See Also: See  &lt;LookAt&gt; and  &lt;Region&gt;
- *   
+ * <p>
+ * clampToGround, relativeToGround, absolute See Also: See &lt;LookAt&gt; and
+ * &lt;Region&gt;
+ * <p>
  */
 @XmlType(name = "altitudeModeEnumType")
 @XmlEnum
