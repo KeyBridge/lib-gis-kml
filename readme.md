@@ -37,7 +37,9 @@ functionality in support of our GIS DTO library.
  * v1.0.1 - update lib dependencies
  * v1.1.0 - remove DTO KML writer - this lib is KML only
 
+# License
 
+Copyright (C) 2017 Key Bridge. GNU General Public License Version 3.
 
 # References
 
