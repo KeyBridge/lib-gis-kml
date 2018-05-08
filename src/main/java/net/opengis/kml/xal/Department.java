@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml.xal;
 
@@ -23,7 +23,7 @@ import java.util.Map;
 import javax.xml.bind.annotation.*;
 import javax.xml.namespace.QName;
 
-/**
+/*
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -57,7 +57,7 @@ public class Department implements Cloneable {
     super();
   }
 
-  /**
+  /*
    *
    */
   public List<AddressLine> getAddressLine() {
@@ -67,7 +67,7 @@ public class Department implements Cloneable {
     return this.addressLine;
   }
 
-  /**
+  /*
    *
    */
   public List<Department.DepartmentName> getDepartmentName() {
@@ -78,7 +78,6 @@ public class Department implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link MailStop}
    *
    */
@@ -87,7 +86,6 @@ public class Department implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link MailStop}
    *
    */
@@ -96,7 +94,6 @@ public class Department implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link PostalCode}
    *
    */
@@ -105,7 +102,6 @@ public class Department implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link PostalCode}
    *
    */
@@ -113,7 +109,7 @@ public class Department implements Cloneable {
     this.postalCode = value;
   }
 
-  /**
+  /*
    *
    */
   public List<Object> getAny() {
@@ -124,7 +120,6 @@ public class Department implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link String}
    *
    */
@@ -133,7 +128,6 @@ public class Department implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link String}
    *
    */
@@ -142,7 +136,6 @@ public class Department implements Cloneable {
   }
 
   /**
-   *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
@@ -221,11 +214,9 @@ public class Department implements Cloneable {
 
   /**
    * Creates a new instance of {@link AddressLine} and adds it to addressLine.
-   * This method is a short version for:    <code>
+   * This method is a short version for:     &lt;code&gt;
    * AddressLine addressLine = new AddressLine();
-   * this.getAddressLine().add(addressLine); </code>
-   * <p>
-   * <p>
+   * this.getAddressLine().add(addressLine);  &lt;/code&gt;
    */
   public AddressLine createAndAddAddressLine() {
     AddressLine newValue = new AddressLine();
@@ -235,11 +226,9 @@ public class Department implements Cloneable {
 
   /**
    * Creates a new instance of {@link Department.DepartmentName} and adds it to
-   * departmentName. This method is a short version for:    <code>
+   * departmentName. This method is a short version for:     &lt;code&gt;
    * DepartmentName departmentName = new DepartmentName();
-   * this.getDepartmentName().add(departmentName); </code>
-   * <p>
-   * <p>
+   * this.getDepartmentName().add(departmentName);  &lt;/code&gt;
    */
   public Department.DepartmentName createAndAddDepartmentName() {
     Department.DepartmentName newValue = new Department.DepartmentName();
@@ -249,12 +238,10 @@ public class Department implements Cloneable {
 
   /**
    * Creates a new instance of {@link MailStop} and set it to mailStop.
-   * <p>
-   * This method is a short version for:    <code>
+   *   
+   * This method is a short version for:     &lt;code&gt;
    * MailStop mailStop = new MailStop();
-   * this.setMailStop(mailStop); </code>
-   * <p>
-   * <p>
+   * this.setMailStop(mailStop);  &lt;/code&gt;
    */
   public MailStop createAndSetMailStop() {
     MailStop newValue = new MailStop();
@@ -264,12 +251,10 @@ public class Department implements Cloneable {
 
   /**
    * Creates a new instance of {@link PostalCode} and set it to postalCode.
-   * <p>
-   * This method is a short version for:    <code>
+   *   
+   * This method is a short version for:     &lt;code&gt;
    * PostalCode postalCode = new PostalCode();
-   * this.setPostalCode(postalCode); </code>
-   * <p>
-   * <p>
+   * this.setPostalCode(postalCode);  &lt;/code&gt;
    */
   public PostalCode createAndSetPostalCode() {
     PostalCode newValue = new PostalCode();
@@ -279,13 +264,12 @@ public class Department implements Cloneable {
 
   /**
    * Sets the value of the addressLine property Objects of the following type(s)
-   * are allowed in the list List<AddressLine>.
-   * <p>
+   * are allowed in the list List &lt;AddressLine&gt;.
+   *   
    * Note:
-   * <p>
+   *   
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withAddressLine} instead.
-   *
    *
    * @param addressLine
    */
@@ -298,7 +282,7 @@ public class Department implements Cloneable {
    *
    * @param addressLine Objects of the following type are allowed in the list:
    *                    {@link AddressLine}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Department addToAddressLine(final AddressLine addressLine) {
     this.getAddressLine().add(addressLine);
@@ -307,13 +291,12 @@ public class Department implements Cloneable {
 
   /**
    * Sets the value of the departmentName property Objects of the following
-   * type(s) are allowed in the list List<DepartmentName>.
-   * <p>
+   * type(s) are allowed in the list List &lt;DepartmentName&gt;.
+   *   
    * Note:
-   * <p>
+   *   
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withDepartmentName} instead.
-   *
    *
    * @param departmentName
    */
@@ -326,7 +309,7 @@ public class Department implements Cloneable {
    *
    * @param departmentName Objects of the following type are allowed in the
    *                       list: {@link Department.DepartmentName}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Department addToDepartmentName(final Department.DepartmentName departmentName) {
     this.getDepartmentName().add(departmentName);
@@ -335,13 +318,12 @@ public class Department implements Cloneable {
 
   /**
    * Sets the value of the any property Objects of the following type(s) are
-   * allowed in the list List<Object>.
-   * <p>
+   * allowed in the list List &lt;Object&gt;.
+   *   
    * Note:
-   * <p>
+   *   
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withAny} instead.
-   *
    *
    * @param any
    */
@@ -354,7 +336,7 @@ public class Department implements Cloneable {
    *
    * @param any Objects of the following type are allowed in the list:
    *            {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Department addToAny(final Object any) {
     this.getAny().add(any);
@@ -364,7 +346,7 @@ public class Department implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setAddressLine(List<AddressLine>)
+   * @see #setAddressLine(List &lt;AddressLine&gt;)
    *
    * @param addressLine required parameter
    */
@@ -376,7 +358,7 @@ public class Department implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setDepartmentName(List<DepartmentName>)
+   * @see #setDepartmentName(List &lt;DepartmentName&gt;)
    *
    * @param departmentName required parameter
    */
@@ -412,7 +394,7 @@ public class Department implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setAny(List<Object>)
+   * @see #setAny(List &lt;Object&gt;)
    *
    * @param any required parameter
    */
@@ -458,7 +440,7 @@ public class Department implements Cloneable {
     return copy;
   }
 
-  /**
+  /*
    *
    */
   @XmlAccessorType(XmlAccessType.FIELD)
@@ -484,7 +466,6 @@ public class Department implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -493,7 +474,6 @@ public class Department implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -502,7 +482,6 @@ public class Department implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -511,7 +490,6 @@ public class Department implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -520,7 +498,6 @@ public class Department implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -529,7 +506,6 @@ public class Department implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -538,7 +514,6 @@ public class Department implements Cloneable {
     }
 
     /**
-     *
      * @return always non-null
      */
     public Map<QName, String> getOtherAttributes() {

@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml.gx;
 
@@ -26,48 +26,38 @@ import net.opengis.kml.CoordinatesConverter;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- * <gx:LatLonQuad>
- * <p>
- * Allows non-rectangular quadrilateral ground overlays.
- * </p>
- * <p>
- * If a third value is inserted into any tuple (representing altitude) it will
- * be ignored. Altitude is set using <altitude> and <altitudeMode> (or
- * <gx:altitudeMode>) extending
- * <GroundOverlay>. Allowed altitude modes are absolute, clampToGround, and
- * clampToSeaFloor.
- * </p>
- * <p>
- * Specifies the coordinates of the four corner points of a quadrilateral
- * defining the overlay area. Exactly four coordinate tuples have to be
- * provided, each consisting of floating point values for longitude and
+ *  &lt;gx:LatLonQuad&gt;
+ *   
+ * Allows non-rectangular quadrilateral ground overlays. If a third value is
+ * inserted into any tuple (representing altitude) it will be ignored. Altitude
+ * is set using  &lt;altitude&gt; and  &lt;altitudeMode&gt; (or
+ *  &lt;gx:altitudeMode&gt;) extending
+ *  &lt;GroundOverlay&gt;. Allowed altitude modes are absolute, clampToGround, and
+ * clampToSeaFloor. Specifies the coordinates of the four corner points of a
+ * quadrilateral defining the overlay area. Exactly four coordinate tuples have
+ * to be provided, each consisting of floating point values for longitude and
  * latitude. Insert a space between tuples. Do not include spaces within a
  * tuple. The coordinates must be specified in counter-clockwise order with the
  * first coordinate corresponding to the lower-left corner of the overlayed
- * image. The shape described by these corners must be convex.
- * </p>
- * <p>
- * Syntax:
- * <pre>&lt;GroundOverlay id="ID"&gt;
+ * image. The shape described by these corners must be convex. Syntax:
+ *  <pre>&lt;GroundOverlay id="ID"&gt;
  *   ...
  *   &lt;Icon&gt;...&lt;/Icon&gt;
  *   &lt;altitude&gt;0&lt;/altitude&gt;
- *   &lt;altitudeMode&gt;clampToGround&lt;/altitudeMode&gt;                   &lt;!-- or <em>absolute</em> --&gt;
- *          &lt;!-- can substitute <em>&lt;gx:altitudeMode&gt;clampToSeaFloor&lt;/gx:altitudeMode&gt;</em> --&gt;
- * <p>
- *   <strong>&lt;gx:LatLonQuad&gt;
+ *   &lt;altitudeMode&gt;clampToGround&lt;/altitudeMode&gt;                   &lt;!-- or  &lt;em&gt;absolute &lt;/em&gt; --&gt;
+ *          &lt;!-- can substitute  &lt;em&gt;&lt;gx:altitudeMode&gt;clampToSeaFloor&lt;/gx:altitudeMode&gt; &lt;/em&gt; --&gt;
+ *
+ *    &lt;strong&gt;&lt;gx:LatLonQuad&gt;
  *     &lt;coordinates&gt;...&lt;/coordinates&gt;              &lt;!-- four lon,lat tuples --&gt;
- *   &lt;/gx:LatLonQuad&gt;</strong>
- * &lt;/GroundOverlay&gt;</pre>
- * <p>
+ *   &lt;/gx:LatLonQuad&gt; &lt;/strong&gt;
+ * &lt;/GroundOverlay&gt; </pre>
+ *   
  * Extends:
  *
- * @see: <Object>
+ * @see:  &lt;Object&gt;
  *
  * Contained By:
- * @see: <GroundOverlay>
- *
- *
+ * @see:  &lt;GroundOverlay&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -76,29 +66,24 @@ import net.opengis.kml.annotations.Obvious;
 })
 @XmlRootElement(name = "LatLonQuad", namespace = "http://www.google.com/kml/ext/2.2")
 public class LatLonQuad
-        extends AbstractObject
-        implements Cloneable {
+  extends AbstractObject
+  implements Cloneable {
 
   /**
-   * <coordinates> (required)
-   * <p>
+   *  &lt;coordinates&gt; (required)
+   *   
    * A single tuple consisting of floating point values for longitude, latitude,
    * and altitude (in that order). Longitude and latitude values are in degrees,
-   * where longitude ≥ −180 and <= 180 latitude ≥ −90 and ≤ 90 altitude values
-   * (optional) are in meters above sea level </p> <p> Do not include spaces
-   * between the three values that describe a coordinate.
-   * </
+   * where longitude ≥ −180 and  &lt;= 180 latitude ≥ −90 and ≤ 90 altitude values
+   * (optional) are in meters above sea level Do not include spaces between the
+   * three values that describe a coordinate.     &lt;/
    * p
-   * >
-   * <p>
-   * T
-   * wo or more coordinate tuples, each consisting of floating point values for
-   * longitude, latitude, and altitude. The altitude component is optional.
-   * Insert a space between tuples. Do not include spaces within a tuple.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * &gt;
+   *    T wo or more coordinate tuples, each consisting of floating point
+   * values for longitude, latitude, and altitude. The altitude component is
+   * optional. I
+   * n
+   * sert a space between tuples. Do not include spaces within a tuple.
    */
   @XmlElement(namespace = "http://www.opengis.net/kml/2.2", type = String.class)
   @XmlJavaTypeAdapter(CoordinatesConverter.class)
@@ -166,7 +151,7 @@ public class LatLonQuad
    *
    * @param longitude required parameter
    * @param latitude  required parameter
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public LatLonQuad addToCoordinates(final double longitude, final double latitude) {
     this.getCoordinates().add(new Coordinate(longitude, latitude));
@@ -179,7 +164,7 @@ public class LatLonQuad
    * @param longitude required parameter
    * @param latitude  required parameter
    * @param altitude  required parameter
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public LatLonQuad addToCoordinates(final double longitude, final double latitude, final double altitude) {
     this.getCoordinates().add(new Coordinate(longitude, latitude, altitude));
@@ -190,7 +175,7 @@ public class LatLonQuad
    * add a value to the coordinates property collection
    *
    * @param coordinates required parameter
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public LatLonQuad addToCoordinates(final String coordinates) {
     this.getCoordinates().add(new Coordinate(coordinates));
@@ -217,7 +202,7 @@ public class LatLonQuad
   /**
    * fluent setter
    *
-   * @see #setCoordinates(List<Coordinate>)
+   * @see #setCoordinates(List &lt;Coordinate&gt;)
    *
    * @param coordinates required parameter
    */
@@ -248,17 +233,15 @@ public class LatLonQuad
   }
 
   /**
-   * Creates a new instance of {@link List}{@code <}{@link Coordinate}{@code>}
-   * and set it to this.coordinates.
-   * <p>
+   * Creates a new instance of {@link List}{@link Coordinate} and set it to
+   * this.coordinates.
+   *   
    * This method is a short version for:
-   * <pre>
-   * <code>
-   * List<Coordinate> newValue = new List<Coordinate>();
-   * this.setCoordinates(newValue); </code>
-   * </pre>
-   * <p>
-   * <p>
+   *  <pre>
+   *  &lt;code&gt;
+   * List &lt;Coordinate&gt; newValue = new List &lt;Coordinate&gt;();
+   * this.setCoordinates(newValue);  &lt;/code&gt;
+   *  </pre>
    */
   public List<Coordinate> createAndSetCoordinates() {
     List<Coordinate> newValue = new ArrayList<>();

@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -25,46 +25,34 @@ import net.opengis.kml.atom.Link;
 import net.opengis.kml.xal.AddressDetails;
 
 /**
- * <PhotoOverlay>
+ * &lt;PhotoOverlay&gt;
  * <p>
- * Because <PhotoOverlay> is derived from <Feature>, it can contain one of the
- * two elements derived from <AbstractView>—either <Camera> or <LookAt>. The
- * Camera (or LookAt) specifies a viewpoint and a viewing direction (also
- * referred to as a view vector). The PhotoOverlay is positioned in relation to
- * the viewpoint. Specifically, the plane of a 2D rectangular image is
- * orthogonal (at right angles to) the view vector. The normal of this
- * plane—that is, its front, which is the part with the photo—is oriented toward
- * the viewpoint.
- * </p>
- * <p>
- * For more information, see the "Topics in KML" page on PhotoOverlay.
- * </p>
- * <p>
- * The <PhotoOverlay> element allows you to geographically locate a photograph
- * on the Earth and to specify viewing parameters for this PhotoOverlay. The
- * PhotoOverlay can be a simple 2D rectangle, a partial or full cylinder, or a
- * sphere (for spherical panoramas). The overlay is placed at the specified
- * location and oriented toward the viewpoint.
- * </p>
- * <p>
- * The URL for the PhotoOverlay image is specified in the <Icon> tag, which is
- * inherited from <Overlay>. The <Icon> tag must contain an <href> element that
- * specifies the image file to use for the PhotoOverlay. In the case of a very
- * large image, the <href>
- * is a special URL that indexes into a pyramid of images of varying resolutions
- * (see ImagePyramid).
- * </p>
- * <p>
- * Extends:
+ * Because &lt;PhotoOverlay&gt; is derived from &lt;Feature&gt;, it can contain
+ * one of the two elements derived from &lt;AbstractView&gt;—either
+ * &lt;Camera&gt; or &lt;LookAt&gt;. The Camera (or LookAt) specifies a
+ * viewpoint and a viewing direction (also referred to as a view vector). The
+ * PhotoOverlay is positioned in relation to the viewpoint. Specifically, the
+ * plane of a 2D rectangular image is orthogonal (at right angles to) the view
+ * vector. The normal of this plane—that is, its front, which is the part with
+ * the photo—is oriented toward the viewpoint. For more information, see the
+ * "Topics in KML" page on PhotoOverlay. The &lt;PhotoOverlay&gt; element allows
+ * you to geographically locate a photograph on the Earth and to specify viewing
+ * parameters for this PhotoOverlay. The PhotoOverlay can be a simple 2D
+ * rectangle, a partial or full cylinder, or a sphere (for spherical panoramas).
+ * The overlay is placed at the specified location and oriented toward the
+ * viewpoint. The URL for the PhotoOverlay image is specified in the
+ * &lt;Icon&gt; tag, which is inherited from &lt;Overlay&gt;. The &lt;Icon&gt;
+ * tag must contain an &lt;href&gt; element that specifies the image file to use
+ * for the PhotoOverlay. In the case of a very large image, the &lt;href&gt; is
+ * a special URL that indexes into a pyramid of images of varying resolutions
+ * (see ImagePyramid). Extends:
  *
- * @see: <Overlay>
+ * @see: &lt;Overlay&gt;
  *
  * Contained By:
- * @see: <Document>
- * @see: <Folder>
- * @see: <kml>
- *
- *
+ * @see: &lt;Document&gt;
+ * @see: &lt;Folder&gt;
+ * @see: &lt;kml&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -79,45 +67,35 @@ import net.opengis.kml.xal.AddressDetails;
 })
 @XmlRootElement(name = "PhotoOverlay", namespace = "http://www.opengis.net/kml/2.2")
 public class PhotoOverlay
-        extends Overlay
-        implements Cloneable {
+  extends Overlay
+  implements Cloneable {
 
   /**
-   * <rotation>
+   * &lt;rotation&gt;
    * <p>
    * Adjusts how the photo is placed inside the field of view. This element is
    * useful if your photo has been rotated and deviates slightly from a desired
-   * horizontal view.
-   * </p>
-   * <p>
-   * Indicates the angle of rotation of the parent object. A value of 0 means no
-   * rotation. The value is an angle in degrees counterclockwise starting from
-   * north. Use ±180 to indicate the rotation of the parent object from 0. The
-   * center of the <rotation>, if not (.5,.5), is specified in <rotationXY>.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * horizontal view. Indicates the angle of rotation of the parent object. A
+   * value of 0 means no rotation. The value is an angle in degrees
+   * counterclockwise starting from north. Use ±180 to indicate the rotation of
+   * the parent object from 0. The center of the &lt;rotation&gt;, if not
+   * (.5,.5), is specified in &lt;rotationXY&gt;.
    */
   @XmlElement(defaultValue = "0.0")
   protected double rotation;
   /**
-   * <viewvolume>
+   * &lt;viewvolume&gt;
    * <p>
    * Defines how much of the current scene is visible. Specifying the field of
    * view is analogous to specifying the lens opening in a physical camera. A
    * small field of view, like a telephoto lens, focuses on a small part of the
    * scene. A large field of view, like a wide-angle lens, focuses on a large
    * part of the scene.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlElement(name = "ViewVolume")
   protected ViewVolume viewVolume;
   /**
-   * <imagepyramid>
+   * &lt;imagepyramid&gt;
    * <p>
    * For very large images, you'll need to construct an image pyramid, which is
    * a hierarchical set of images, each of which is an increasingly lower
@@ -130,53 +108,39 @@ public class PhotoOverlay
    * once, this preprocessing allows Google Earth to achieve maximum performance
    * because it loads only the portions of the image that are in view, and only
    * the pixel details that can be discerned by the user at the current
-   * viewpoint.
-   * </p>
-   * <p>
-   * When you specify an image pyramid, you also modify the <href> in the <Icon>
-   * element to include specifications for which tiles to load.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * viewpoint. When you specify an image pyramid, you also modify the
+   * &lt;href&gt; in the &lt;Icon&gt; element to include specifications for
+   * which tiles to load.
    */
   @XmlElement(name = "ImagePyramid")
   protected ImagePyramid imagePyramid;
   /**
-   * <Point>
+   * &lt;Point&gt;
    * <p>
    * A geographic location defined by longitude, latitude, and (optional)
    * altitude. When a Point is contained by a Placemark, the point itself
    * determines the position of the Placemark's name and icon. When a Point is
    * extruded, it is connected to the ground with a line. This "tether" uses the
-   * current LineStyle.
-   * </p>
-   * <p>
-   * The <Point> element acts as a <Point> inside a <Placemark> element. It
-   * draws an icon to mark the position of the PhotoOverlay. The icon drawn is
-   * specified by the
-   * <styleUrl> and <StyleSelector> fields, just as it is for <Placemark>.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre><strong>&lt;Point id="ID"&gt;</strong>
-   *   &lt;!-- specific to Point --&gt;
-   *   &lt;extrude&gt;0&lt;/extrude&gt;                        &lt;!-- boolean --&gt;
-   *   &lt;altitudeMode&gt;clampToGround&lt;/altitudeMode&gt;
-   * 	      &lt;!-- kml:altitudeModeEnum: clampToGround, relativeToGround, or absolute --&gt;
-   *         &lt;!-- or, substitute gx:altitudeMode: clampToSeaFloor, relativeToSeaFloor --&gt;
-   *   &lt;coordinates&gt;<em>...</em>&lt;/coordinates&gt;<span class="style1"><em>              </em></span>&lt;!-- lon,lat[,alt] --&gt;
-   * <strong>&lt;/Point&gt;</strong></pre>
+   * current LineStyle. The &lt;Point&gt; element acts as a &lt;Point&gt; inside
+   * a &lt;Placemark&gt; element. It draws an icon to mark the position of the
+   * PhotoOverlay. The icon drawn is specified by the &lt;styleUrl&gt; and
+   * &lt;StyleSelector&gt; fields, just as it is for &lt;Placemark&gt;. Syntax:
+   * &lt;pre&gt; &lt;strong&gt;&lt;Point id="ID"&gt; &lt;/strong&gt; &lt;!--
+   * specific to Point --&gt; &lt;extrude&gt;0&lt;/extrude&gt; &lt;!-- boolean
+   * --&gt; &lt;altitudeMode&gt;clampToGround&lt;/altitudeMode&gt; &lt;!--
+   * kml:altitudeModeEnum: clampToGround, relativeToGround, or absolute --&gt;
+   * &lt;!-- or, substitute gx:altitudeMode: clampToSeaFloor, relativeToSeaFloor
+   * --&gt; &lt;coordinates&gt; &lt;em&gt;... &lt;/em&gt;&lt;/coordinates&gt;
+   * &lt;span class="style1"&gt; &lt;em&gt; &lt;/em&gt; &lt;/span&gt;&lt;!--
+   * lon,lat[,alt] --&gt; &lt;strong&gt;&lt;/Point&gt; &lt;/strong&gt; </pre>
    * <p>
    * Extends:
    *
-   * @see: <Geometry>
+   * @see: &lt;Geometry&gt;
    *
    * Contained By:
-   * @see: <MultiGeometry>
-   * @see: <Placemark>
-   *
-   *
+   * @see: &lt;MultiGeometry&gt;
+   * @see: &lt;Placemark&gt;
    *
    */
   @XmlElement(name = "Point")
@@ -184,12 +148,7 @@ public class PhotoOverlay
   /**
    * Shape
    * <p>
-   * rectangle, cylinder, sphere
-   * </p>
-   * <p>
-   * See Also: See <PhotoOverlay>
-   * <p>
-   * <p>
+   * rectangle, cylinder, sphere See Also: See &lt;PhotoOverlay&gt;
    * <p>
    */
   @XmlElement(defaultValue = "rectangle")
@@ -198,21 +157,16 @@ public class PhotoOverlay
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> photoOverlaySimpleExtension;
   /**
-   * <Object>
+   * &lt;Object&gt;
    * <p>
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the <Update> mechanism is to be used.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;<strong>
-   * &lt;!-- <em>Object</em> id="ID" targetId="NCName" --&gt;
-   * &lt;!-- /<em>Object</em>&gt; --&gt;</strong></pre>
-   * <p>
-   * <p>
+   * assigned if the &lt;Update&gt; mechanism is to be used. Syntax:
+   * <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
+   * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
    * <p>
    */
   @XmlElement(name = "PhotoOverlayObjectExtensionGroup")
@@ -426,11 +380,8 @@ public class PhotoOverlay
   /**
    * Creates a new instance of {@link ViewVolume} and set it to viewVolume.
    * <p>
-   * This method is a short version for:    <code>
-   * ViewVolume viewVolume = new ViewVolume();
-   * this.setViewVolume(viewVolume); </code>
-   * <p>
-   * <p>
+   * This method is a short version for: &lt;code&gt; ViewVolume viewVolume =
+   * new ViewVolume(); this.setViewVolume(viewVolume); &lt;/code&gt;
    */
   public ViewVolume createAndSetViewVolume() {
     ViewVolume newValue = new ViewVolume();
@@ -441,11 +392,8 @@ public class PhotoOverlay
   /**
    * Creates a new instance of {@link ImagePyramid} and set it to imagePyramid.
    * <p>
-   * This method is a short version for:    <code>
-   * ImagePyramid imagePyramid = new ImagePyramid();
-   * this.setImagePyramid(imagePyramid); </code>
-   * <p>
-   * <p>
+   * This method is a short version for: &lt;code&gt; ImagePyramid imagePyramid
+   * = new ImagePyramid(); this.setImagePyramid(imagePyramid); &lt;/code&gt;
    */
   public ImagePyramid createAndSetImagePyramid() {
     ImagePyramid newValue = new ImagePyramid();
@@ -456,11 +404,8 @@ public class PhotoOverlay
   /**
    * Creates a new instance of {@link Point} and set it to point.
    * <p>
-   * This method is a short version for:    <code>
-   * Point point = new Point();
-   * this.setPoint(point); </code>
-   * <p>
-   * <p>
+   * This method is a short version for: &lt;code&gt; Point point = new Point();
+   * this.setPoint(point); &lt;/code&gt;
    */
   public Point createAndSetPoint() {
     Point newValue = new Point();
@@ -482,7 +427,8 @@ public class PhotoOverlay
    *
    * @param photoOverlaySimpleExtension Objects of the following type are
    *                                    allowed in the list: {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public PhotoOverlay addToPhotoOverlaySimpleExtension(final Object photoOverlaySimpleExtension) {
     this.getPhotoOverlaySimpleExtension().add(photoOverlaySimpleExtension);
@@ -504,7 +450,8 @@ public class PhotoOverlay
    * @param photoOverlayObjectExtension Objects of the following type are
    *                                    allowed in the list:
    *                                    {@link AbstractObject}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public PhotoOverlay addToPhotoOverlayObjectExtension(final AbstractObject photoOverlayObjectExtension) {
     this.getPhotoOverlayObjectExtension().add(photoOverlayObjectExtension);
@@ -676,7 +623,7 @@ public class PhotoOverlay
   /**
    * fluent setter
    *
-   * @see #setPhotoOverlaySimpleExtension(List<Object>)
+   * @see #setPhotoOverlaySimpleExtension(List &lt;Object&gt;)
    *
    * @param photoOverlaySimpleExtension required parameter
    */
@@ -688,7 +635,7 @@ public class PhotoOverlay
   /**
    * fluent setter
    *
-   * @see #setPhotoOverlayObjectExtension(List<AbstractObject>)
+   * @see #setPhotoOverlayObjectExtension(List &lt;AbstractObject&gt;)
    *
    * @param photoOverlayObjectExtension required parameter
    */

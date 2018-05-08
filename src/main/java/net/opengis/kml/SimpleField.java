@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -21,7 +21,7 @@ import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
- *
+ * SimpleField
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SimpleFieldType", propOrder = {
@@ -44,7 +44,6 @@ public class SimpleField implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link String}
    *
    */
@@ -53,7 +52,6 @@ public class SimpleField implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link String}
    *
    */
@@ -61,7 +59,7 @@ public class SimpleField implements Cloneable {
     this.displayName = value;
   }
 
-  /**
+  /*
    *
    */
   public List<Object> getSimpleFieldExtension() {
@@ -72,7 +70,6 @@ public class SimpleField implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link String}
    *
    */
@@ -81,7 +78,6 @@ public class SimpleField implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link String}
    *
    */
@@ -90,7 +86,6 @@ public class SimpleField implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link String}
    *
    */
@@ -99,7 +94,6 @@ public class SimpleField implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link String}
    *
    */
@@ -163,13 +157,12 @@ public class SimpleField implements Cloneable {
 
   /**
    * Sets the value of the simpleFieldExtension property Objects of the
-   * following type(s) are allowed in the list List<Object>.
+   * following type(s) are allowed in the list List &lt;Object&gt;.
    * <p>
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withSimpleFieldExtension} instead.
-   *
    *
    * @param simpleFieldExtension
    */
@@ -182,7 +175,8 @@ public class SimpleField implements Cloneable {
    *
    * @param simpleFieldExtension Objects of the following type are allowed in
    *                             the list: {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public SimpleField addToSimpleFieldExtension(final Object simpleFieldExtension) {
     this.getSimpleFieldExtension().add(simpleFieldExtension);
@@ -204,7 +198,7 @@ public class SimpleField implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setSimpleFieldExtension(List<Object>)
+   * @see #setSimpleFieldExtension(List &lt;Object&gt;)
    *
    * @param simpleFieldExtension required parameter
    */

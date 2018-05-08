@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -22,7 +22,7 @@ import java.util.List;
 import javax.xml.bind.annotation.*;
 import net.opengis.kml.annotations.Obvious;
 
-/**
+/*
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -37,8 +37,8 @@ import net.opengis.kml.annotations.Obvious;
 })
 @XmlRootElement(name = "BasicLink", namespace = "http://www.opengis.net/kml/2.2")
 public class BasicLink
-        extends AbstractObject
-        implements Cloneable {
+  extends AbstractObject
+  implements Cloneable {
 
   protected String href;
   @XmlElement(name = "BasicLinkSimpleExtensionGroup")
@@ -51,7 +51,6 @@ public class BasicLink
   }
 
   /**
-   *
    * @return possible object is {@link String}
    *
    */
@@ -60,7 +59,6 @@ public class BasicLink
   }
 
   /**
-   *
    * @param value allowed object is {@link String}
    *
    */
@@ -68,7 +66,7 @@ public class BasicLink
     this.href = value;
   }
 
-  /**
+  /*
    *
    */
   public List<Object> getBasicLinkSimpleExtension() {
@@ -78,7 +76,7 @@ public class BasicLink
     return this.basicLinkSimpleExtension;
   }
 
-  /**
+  /*
    *
    */
   public List<AbstractObject> getBasicLinkObjectExtension() {
@@ -139,13 +137,12 @@ public class BasicLink
 
   /**
    * Sets the value of the basicLinkSimpleExtension property Objects of the
-   * following type(s) are allowed in the list List<Object>.
-   * <p>
+   * following type(s) are allowed in the list List &lt;Object&gt;.
+   *   
    * Note:
-   * <p>
+   *   
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withBasicLinkSimpleExtension} instead.
-   *
    *
    * @param basicLinkSimpleExtension
    */
@@ -158,8 +155,8 @@ public class BasicLink
    *
    * @param basicLinkSimpleExtension Objects of the following type are allowed
    *                                 in the list:
-   *                                 {@code <}{@link BigInteger}{@code>}{@link JAXBElement}{@code <}{@link BigInteger}{@code>}{@link JAXBElement}{@code <}{@link Object}{@code>}{@link JAXBElement}{@code <}{@link BigInteger}{@code>}{@link JAXBElement}{@code <}{@link BigInteger}{@code>}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   *                                 {@link BigInteger}{@link JAXBElement}{@link BigInteger}{@link JAXBElement}{@link Object}{@link JAXBElement}{@link BigInteger}{@link JAXBElement}{@link BigInteger}
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public BasicLink addToBasicLinkSimpleExtension(final Object basicLinkSimpleExtension) {
     this.getBasicLinkSimpleExtension().add(basicLinkSimpleExtension);
@@ -168,13 +165,12 @@ public class BasicLink
 
   /**
    * Sets the value of the basicLinkObjectExtension property Objects of the
-   * following type(s) are allowed in the list List<AbstractObject>.
-   * <p>
+   * following type(s) are allowed in the list List &lt;AbstractObject&gt;.
+   *   
    * Note:
-   * <p>
+   *   
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withBasicLinkObjectExtension} instead.
-   *
    *
    * @param basicLinkObjectExtension
    */
@@ -187,7 +183,7 @@ public class BasicLink
    *
    * @param basicLinkObjectExtension Objects of the following type are allowed
    *                                 in the list: {@link AbstractObject}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public BasicLink addToBasicLinkObjectExtension(final AbstractObject basicLinkObjectExtension) {
     this.getBasicLinkObjectExtension().add(basicLinkObjectExtension);
@@ -222,7 +218,7 @@ public class BasicLink
   /**
    * fluent setter
    *
-   * @see #setBasicLinkSimpleExtension(List<Object>)
+   * @see #setBasicLinkSimpleExtension(List &lt;Object&gt;)
    *
    * @param basicLinkSimpleExtension required parameter
    */
@@ -234,7 +230,7 @@ public class BasicLink
   /**
    * fluent setter
    *
-   * @see #setBasicLinkObjectExtension(List<AbstractObject>)
+   * @see #setBasicLinkObjectExtension(List &lt;AbstractObject&gt;)
    *
    * @param basicLinkObjectExtension required parameter
    */

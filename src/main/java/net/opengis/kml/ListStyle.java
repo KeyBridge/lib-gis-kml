@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -22,15 +22,12 @@ import javax.xml.bind.annotation.*;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- * <ListStyle>
- * <p>
+ *  &lt;ListStyle&gt;
+ *   
  * Specifies how a Feature is displayed in the list view. The list view is a
  * hierarchy of containers and children; in Google Earth, this is the Places
- * panel.
- * </p>
- * <p>
- * Syntax:
- * <pre><strong>&lt;ListStyle id="ID"&gt;</strong>
+ * panel. Syntax:
+ *  &lt;pre&gt; &lt;strong&gt;&lt;ListStyle id="ID"&gt; &lt;/strong&gt;
  *   &lt;!-- specific to ListStyle --&gt;
  *   &lt;listItemType&gt;check&lt;/listItemType&gt; &lt;!-- kml:listItemTypeEnum:check,
  *                                           checkOffOnly,checkHideChildren,
@@ -38,19 +35,17 @@ import net.opengis.kml.annotations.Obvious;
  *   &lt;bgColor&gt;ffffffff&lt;/bgColor&gt;        &lt;!-- kml:color --&gt;
  *   &lt;ItemIcon&gt;                         &lt;!-- 0 or more ItemIcon elements --&gt;
  *     &lt;state&gt;open&lt;/state&gt;
- *       &lt;!-- kml:itemIconModeEnum:open, closed, error, fetching0, fetching1, <em>or</em> fetching2 --&gt;
+ *       &lt;!-- kml:itemIconModeEnum:open, closed, error, fetching0, fetching1,  &lt;em&gt;or &lt;/em&gt; fetching2 --&gt;
  *     &lt;href&gt;...&lt;/href&gt;                 &lt;!-- anyURI --&gt;
  *   &lt;/ItemIcon&gt;
- * <strong>&lt;/ListStyle&gt;</strong></pre>
- * <p>
+ *  &lt;strong&gt;&lt;/ListStyle&gt; &lt;/strong&gt; </pre>
+ *   
  * Extends:
  *
- * @see: <Object>
+ * @see:  &lt;Object&gt;
  *
  * Contained By:
- * @see: <Style>
- *
- *
+ * @see:  &lt;Style&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -64,12 +59,12 @@ import net.opengis.kml.annotations.Obvious;
 })
 @XmlRootElement(name = "ListStyle", namespace = "http://www.opengis.net/kml/2.2")
 public class ListStyle
-        extends SubStyle
-        implements Cloneable {
+  extends SubStyle
+  implements Cloneable {
 
   /**
-   * <listitemtype>
-   * <p>
+   *  &lt;listitemtype&gt;
+   *   
    * Specifies how a Feature is displayed in the list view. Possible values are:
    * check (default) - The Feature's visibility is tied to its item's checkbox.
    * radioFolder - When specified for a Container, only one of the Container's
@@ -81,66 +76,46 @@ public class ListStyle
    * checkHideChildren - Use a normal checkbox for visibility but do not display
    * the Container or Network Link's children in the list view. A checkbox
    * allows the user to toggle visibility of the child objects in the viewer.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlElement(defaultValue = "check")
   protected ListItemType listItemType;
   /**
-   * <bgcolor>
-   * <p>
+   *  &lt;bgcolor&gt;
+   *   
    * Background color for the Snippet. Color and opacity values are expressed in
    * hexadecimal notation. The range of values for any one color is 0 to 255 (00
    * to ff). For alpha, 00 is fully transparent and ff is fully opaque. The
    * order of expression is aabbggrr, where aa=alpha (00 to ff); bb=blue (00 to
    * ff); gg=green (00 to ff); rr=red (00 to ff). For example, if you want to
    * apply a blue color with 50 percent opacity to an overlay, you would specify
-   * the following: <color>7fff0000</color>, where alpha=0x7f, blue=0xff,
-   * green=0x00, and red=0x00.
-   * </p>
-   * <p>
-   * Background color of the balloon (optional). Color and opacity (alpha)
-   * values are expressed in hexadecimal notation. The range of values for any
-   * one color is 0 to 255 (00 to ff). The order of expression is aabbggrr,
-   * where aa=alpha (00 to ff); bb=blue (00 to ff); gg=green (00 to ff); rr=red
-   * (00 to ff). For alpha, 00 is fully transparent and ff is fully opaque. For
-   * example, if you want to apply a blue color with 50 percent opacity to an
-   * overlay, you would specify the following: <bgColor>7fff0000</bgColor>,
-   * where alpha=0x7f, blue=0xff, green=0x00, and red=0x00. The default is
-   * opaque white (ffffffff).
-   * </p>
-   * <p>
-   * Note: The use of the <color> element within <BalloonStyle> has been
-   * deprecated. Use <bgColor> instead.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * the following:  &lt;color&gt;7fff0000 &lt;/color&gt;, where alpha=0x7f, blue=0xff,
+   * green=0x00, and red=0x00. Background color of the balloon (optional). Color
+   * and opacity (alpha) values are expressed in hexadecimal notation. The range
+   * of values for any one color is 0 to 255 (00 to ff). The order of expression
+   * is aabbggrr, where aa=alpha (00 to ff); bb=blue (00 to ff); gg=green (00 to
+   * ff); rr=red (00 to ff). For alpha, 00 is fully transparent and ff is fully
+   * opaque. For example, if you want to apply a blue color with 50 percent
+   * opacity to an overlay, you would specify the following:
+   *  &lt;bgColor&gt;7fff0000 &lt;/bgColor&gt;, where alpha=0x7f, blue=0xff, green=0x00, and
+   * red=0x00. The default is opaque white (ffffffff). Note: The use of the
+   *  &lt;color&gt; element within  &lt;BalloonStyle&gt; has been deprecated. Use  &lt;bgColor&gt;
+   * instead.
    */
   @XmlElement(defaultValue = "ffffffff")
 
   protected String bgColor;
   /**
-   * <itemicon>
-   * <p>
-   * <state> Specifies the current state of the NetworkLink or Folder. Possible
+   *  &lt;itemicon&gt;
+   *   
+   *  &lt;state&gt; Specifies the current state of the NetworkLink or Folder. Possible
    * values are open, closed, error, fetching0, fetching1, and fetching2. These
    * values can be combined by inserting a space between two values (no comma).
-   * <href> Specifies the URI of the image used in the List View for the
-   * Feature.
-   * </p>
-   * <p>
-   * Icon used in the List view that reflects the state of a Folder or Link
-   * fetch. Icons associated with the open and closed modes are used for Folders
-   * and Network Links. Icons associated with the error and fetching0,
+   *  &lt;href&gt; Specifies the URI of the image used in the List View for the
+   * Feature. Icon used in the List view that reflects the state of a Folder or
+   * Link fetch. Icons associated with the open and closed modes are used for
+   * Folders and Network Links. Icons associated with the error and fetching0,
    * fetching1, and fetching2 modes are used for Network Links. The following
    * screen capture illustrates the Google Earth icons for these states:
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlElement(name = "ItemIcon")
   protected List<ItemIcon> itemIcon;
@@ -150,22 +125,17 @@ public class ListStyle
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> listStyleSimpleExtension;
   /**
-   * <Object>
-   * <p>
+   *  &lt;Object&gt;
+   *   
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the <Update> mechanism is to be used.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;<strong>
-   * &lt;!-- <em>Object</em> id="ID" targetId="NCName" --&gt;
-   * &lt;!-- /<em>Object</em>&gt; --&gt;</strong></pre>
-   * <p>
-   * <p>
-   * <p>
+   * assigned if the  &lt;Update&gt; mechanism is to be used. Syntax:
+   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
+   * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
+   *   
    */
   @XmlElement(name = "ListStyleObjectExtensionGroup")
   protected List<AbstractObject> listStyleObjectExtension;
@@ -338,11 +308,9 @@ public class ListStyle
 
   /**
    * Creates a new instance of {@link ItemIcon} and adds it to itemIcon. This
-   * method is a short version for:    <code>
+   * method is a short version for:     &lt;code&gt;
    * ItemIcon itemIcon = new ItemIcon();
-   * this.getItemIcon().add(itemIcon); </code>
-   * <p>
-   * <p>
+   * this.getItemIcon().add(itemIcon);  &lt;/code&gt;
    */
   public ItemIcon createAndAddItemIcon() {
     ItemIcon newValue = new ItemIcon();
@@ -364,7 +332,7 @@ public class ListStyle
    *
    * @param itemIcon Objects of the following type are allowed in the list:
    *                 {@link ItemIcon}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public ListStyle addToItemIcon(final ItemIcon itemIcon) {
     this.getItemIcon().add(itemIcon);
@@ -385,7 +353,7 @@ public class ListStyle
    *
    * @param listStyleSimpleExtension Objects of the following type are allowed
    *                                 in the list: {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public ListStyle addToListStyleSimpleExtension(final Object listStyleSimpleExtension) {
     this.getListStyleSimpleExtension().add(listStyleSimpleExtension);
@@ -406,7 +374,7 @@ public class ListStyle
    *
    * @param listStyleObjectExtension Objects of the following type are allowed
    *                                 in the list: {@link AbstractObject}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public ListStyle addToListStyleObjectExtension(final AbstractObject listStyleObjectExtension) {
     this.getListStyleObjectExtension().add(listStyleObjectExtension);
@@ -491,7 +459,7 @@ public class ListStyle
   /**
    * fluent setter
    *
-   * @see #setItemIcon(List<ItemIcon>)
+   * @see #setItemIcon(List &lt;ItemIcon&gt;)
    *
    * @param itemIcon required parameter
    */
@@ -515,7 +483,7 @@ public class ListStyle
   /**
    * fluent setter
    *
-   * @see #setListStyleSimpleExtension(List<Object>)
+   * @see #setListStyleSimpleExtension(List &lt;Object&gt;)
    *
    * @param listStyleSimpleExtension required parameter
    */
@@ -527,7 +495,7 @@ public class ListStyle
   /**
    * fluent setter
    *
-   * @see #setListStyleObjectExtension(List<AbstractObject>)
+   * @see #setListStyleObjectExtension(List &lt;AbstractObject&gt;)
    *
    * @param listStyleObjectExtension required parameter
    */

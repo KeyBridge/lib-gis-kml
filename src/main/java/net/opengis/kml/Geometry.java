@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -24,22 +24,19 @@ import javax.xml.bind.annotation.*;
 import net.opengis.kml.annotations.Obvious;
 import net.opengis.kml.gx.MultiTrack;
 import net.opengis.kml.gx.Track;
-import org.geotools.geometry.jts.Geometries;
-
-import static org.geotools.geometry.jts.Geometries.*;
 
 /**
  * Geometry
- * <p>
+ *   
  * This is an abstract element and cannot be used directly in a KML file. It
  * provides a placeholder object for all derived Geometry objects.
- * <p>
+ *   
  * Syntax:
- * <pre>&lt;!-- abstract element; do not create --&gt;
- * <strong>&lt;!<em>-- Geometry</em> id="ID" --&gt;                 &lt;!-- Point,LineString,LinearRing,
- *                                                Polygon,MultiGeometry,Model --&gt;</strong>
- * <strong>&lt;!-- /<em>Geometry --</em>&gt;</strong></pre>
- * <p>
+ *  <pre>&lt;!-- abstract element; do not create --&gt;
+ *  &lt;strong&gt;&lt;! &lt;em&gt;-- Geometry &lt;/em&gt; id="ID" --&gt;                 &lt;!-- Point,LineString,LinearRing,
+ *                                                Polygon,MultiGeometry,Model --&gt; &lt;/strong&gt;
+ *  &lt;strong&gt;&lt;!-- / &lt;em&gt;Geometry -- &lt;/em&gt;&gt; &lt;/strong&gt; </pre>
+ *   
  * Extends:
  *
  * @see: Object
@@ -58,14 +55,14 @@ import static org.geotools.geometry.jts.Geometries.*;
   "geometryObjectExtension"
 })
 @XmlSeeAlso({
-  MultiTrack.class,
-  Track.class,
   LinearRing.class,
-  Point.class,
+  LineString.class,
   Model.class,
   MultiGeometry.class,
-  LineString.class,
-  Polygon.class
+  MultiTrack.class,
+  Point.class,
+  Polygon.class,
+  Track.class
 })
 public abstract class Geometry extends AbstractObject implements Cloneable {
 
@@ -74,32 +71,27 @@ public abstract class Geometry extends AbstractObject implements Cloneable {
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the <Update> mechanism is to be used.
-   * <p>
+   * assigned if the  &lt;Update&gt; mechanism is to be used.
+   *   
    * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;<strong>
-   * &lt;!-- <em>Object</em> id="ID" targetId="NCName" --&gt;
-   * &lt;!-- /<em>Object</em>&gt; --&gt;</strong></pre>
+   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
+   * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
    */
   @XmlElement(name = "AbstractGeometrySimpleExtensionGroup")
   protected List<Object> geometrySimpleExtension;
   /**
-   * <Object>
-   * <p>
+   *  &lt;Object&gt;
+   *   
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the <Update> mechanism is to be used.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;<strong>
-   * &lt;!-- <em>Object</em> id="ID" targetId="NCName" --&gt;
-   * &lt;!-- /<em>Object</em>&gt; --&gt;</strong></pre>
-   * <p>
-   * <p>
-   * <p>
+   * assigned if the  &lt;Update&gt; mechanism is to be used. Syntax:
+   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
+   * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
+   *   
    */
   @XmlElement(name = "AbstractGeometryObjectExtensionGroup")
   protected List<AbstractObject> geometryObjectExtension;
@@ -108,40 +100,60 @@ public abstract class Geometry extends AbstractObject implements Cloneable {
     super();
   }
 
-  public static Geometry getInstance(com.vividsolutions.jts.geom.Geometry geometry) {
-    switch (Geometries.get(geometry)) {
-      case POINT:
-        return Point.getInstance((com.vividsolutions.jts.geom.Point) geometry);
-      case LINESTRING:
-        return LineString.getInstance((com.vividsolutions.jts.geom.LineString) geometry);
-      case POLYGON:
-        return Polygon.getInstance((com.vividsolutions.jts.geom.Polygon) geometry);
+  public static Geometry getInstance(com.vividsolutions.jts.geom.Geometry jtsGeometry) {
+    Geometry geometry = null;
 
-      case MULTIPOINT: {
-        MultiGeometry mg = new MultiGeometry();
-        for (int i = 0; i < geometry.getNumGeometries(); i++) {
-          mg.addToGeometry(Point.getInstance((com.vividsolutions.jts.geom.Point) geometry.getGeometryN(i)));
+    switch (jtsGeometry.getClass().getSimpleName()) {
+      /**
+       * A closed line string, typically the outer boundary of a Polygon.
+       */
+      case "LinearRing": {
+        geometry = LinearRing.getInstance((com.vividsolutions.jts.geom.LinearRing) jtsGeometry);
+        break;
+      }
+      /**
+       * A connected set of line segments.
+       */
+      case "LineString": {
+        geometry = LineString.getInstance((com.vividsolutions.jts.geom.LineString) jtsGeometry);
+        break;
+      }
+      /**
+       * A container for zero or more geometry primitives associated with the
+       * same feature.
+       */
+      case "GeometryCollection": {
+        geometry = new MultiGeometry();
+        for (int i = 0; i < jtsGeometry.getNumGeometries(); i++) {
+          ((MultiGeometry) geometry).getGeometry().add(getInstance(jtsGeometry.getGeometryN(i)));
         }
-        return mg;
+        break;
+      }
+      /**
+       * A geographic location defined by longitude, latitude, and (optional)
+       * altitude.
+       */
+      case "Point": {
+        geometry = Point.getInstance((com.vividsolutions.jts.geom.Point) jtsGeometry);
+        break;
+      }
+      /**
+       * A Polygon is defined by an outer boundary and 0 or more inner
+       * boundaries. The boundaries, in turn, are defined by LinearRings.
+       */
+      case "Polygon": {
+        geometry = Polygon.getInstance((com.vividsolutions.jts.geom.Polygon) jtsGeometry);
+        break;
       }
 
-      case MULTIPOLYGON: {
-        MultiGeometry mg = new MultiGeometry();
-        for (int i = 0; i < geometry.getNumGeometries(); i++) {
-          mg.addToGeometry(Polygon.getInstance((com.vividsolutions.jts.geom.Polygon) geometry.getGeometryN(i)));
-        }
-        return mg;
+      default: {
+        throw new IllegalArgumentException("Geometry type " + jtsGeometry.getClass().getSimpleName() + " not supported yet.");
       }
-
-      case MULTILINESTRING:
-      case GEOMETRY:
-      case GEOMETRYCOLLECTION:
-        throw new IllegalArgumentException(Geometries.get(geometry) + " not yet supported.");
-//        break;
-      default:
-        throw new AssertionError(Geometries.get(geometry).name());
 
     }
+
+    return geometry;
+
   }
 
   /**
@@ -221,8 +233,8 @@ public abstract class Geometry extends AbstractObject implements Cloneable {
    *
    * @param geometrySimpleExtension Objects of the following type are allowed in
    *                                the list:
-   *                                {@code <}{@link Object}{@code>}{@link JAXBElement}{@code <}{@link BigInteger}{@code>}{@link JAXBElement}{@code <}{@link Double}{@code>}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   *                                {@link Object}{@link JAXBElement}{@link BigInteger}{@link JAXBElement}{@link Double}
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Geometry addToGeometrySimpleExtension(final Object geometrySimpleExtension) {
     this.getGeometrySimpleExtension().add(geometrySimpleExtension);
@@ -243,7 +255,7 @@ public abstract class Geometry extends AbstractObject implements Cloneable {
    *
    * @param geometryObjectExtension Objects of the following type are allowed in
    *                                the list: {@link AbstractObject}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Geometry addToGeometryObjectExtension(final AbstractObject geometryObjectExtension) {
     this.getGeometryObjectExtension().add(geometryObjectExtension);
@@ -270,7 +282,7 @@ public abstract class Geometry extends AbstractObject implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setGeometrySimpleExtension(List<Object>)
+   * @see #setGeometrySimpleExtension(List &lt;Object&gt;)
    *
    * @param geometrySimpleExtension required parameter
    */
@@ -282,7 +294,7 @@ public abstract class Geometry extends AbstractObject implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setGeometryObjectExtension(List<AbstractObject>)
+   * @see #setGeometryObjectExtension(List &lt;AbstractObject&gt;)
    *
    * @param geometryObjectExtension required parameter
    */

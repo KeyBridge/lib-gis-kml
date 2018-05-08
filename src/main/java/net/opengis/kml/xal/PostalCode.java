@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml.xal;
 
@@ -23,7 +23,7 @@ import java.util.Map;
 import javax.xml.bind.annotation.*;
 import javax.xml.namespace.QName;
 
-/**
+/*
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -57,7 +57,7 @@ public class PostalCode implements Cloneable {
     super();
   }
 
-  /**
+  /*
    *
    */
   public List<AddressLine> getAddressLine() {
@@ -67,7 +67,7 @@ public class PostalCode implements Cloneable {
     return this.addressLine;
   }
 
-  /**
+  /*
    *
    */
   public List<PostalCode.PostalCodeNumber> getPostalCodeNumber() {
@@ -77,7 +77,7 @@ public class PostalCode implements Cloneable {
     return this.postalCodeNumber;
   }
 
-  /**
+  /*
    *
    */
   public List<PostalCode.PostalCodeNumberExtension> getPostalCodeNumberExtension() {
@@ -88,7 +88,6 @@ public class PostalCode implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link PostalCode.PostTown}
    *
    */
@@ -97,7 +96,6 @@ public class PostalCode implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link PostalCode.PostTown}
    *
    */
@@ -105,7 +103,7 @@ public class PostalCode implements Cloneable {
     this.postTown = value;
   }
 
-  /**
+  /*
    *
    */
   public List<Object> getAny() {
@@ -116,7 +114,6 @@ public class PostalCode implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link String}
    *
    */
@@ -125,7 +122,6 @@ public class PostalCode implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link String}
    *
    */
@@ -134,7 +130,6 @@ public class PostalCode implements Cloneable {
   }
 
   /**
-   *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
@@ -213,11 +208,9 @@ public class PostalCode implements Cloneable {
 
   /**
    * Creates a new instance of {@link AddressLine} and adds it to addressLine.
-   * This method is a short version for:    <code>
+   * This method is a short version for:     &lt;code&gt;
    * AddressLine addressLine = new AddressLine();
-   * this.getAddressLine().add(addressLine); </code>
-   * <p>
-   * <p>
+   * this.getAddressLine().add(addressLine);  &lt;/code&gt;
    */
   public AddressLine createAndAddAddressLine() {
     AddressLine newValue = new AddressLine();
@@ -227,11 +220,9 @@ public class PostalCode implements Cloneable {
 
   /**
    * Creates a new instance of {@link PostalCode.PostalCodeNumber} and adds it
-   * to postalCodeNumber. This method is a short version for:    <code>
+   * to postalCodeNumber. This method is a short version for:     &lt;code&gt;
    * PostalCodeNumber postalCodeNumber = new PostalCodeNumber();
-   * this.getPostalCodeNumber().add(postalCodeNumber); </code>
-   * <p>
-   * <p>
+   * this.getPostalCodeNumber().add(postalCodeNumber);  &lt;/code&gt;
    */
   public PostalCode.PostalCodeNumber createAndAddPostalCodeNumber() {
     PostalCode.PostalCodeNumber newValue = new PostalCode.PostalCodeNumber();
@@ -241,11 +232,9 @@ public class PostalCode implements Cloneable {
 
   /**
    * Creates a new instance of {@link PostalCode.PostalCodeNumberExtension} and
-   * adds it to postalCodeNumberExtension. This method is a short version for:    <code>
+   * adds it to postalCodeNumberExtension. This method is a short version for:     &lt;code&gt;
    * PostalCodeNumberExtension postalCodeNumberExtension = new PostalCodeNumberExtension();
-   * this.getPostalCodeNumberExtension().add(postalCodeNumberExtension); </code>
-   * <p>
-   * <p>
+   * this.getPostalCodeNumberExtension().add(postalCodeNumberExtension);  &lt;/code&gt;
    */
   public PostalCode.PostalCodeNumberExtension createAndAddPostalCodeNumberExtension() {
     PostalCode.PostalCodeNumberExtension newValue = new PostalCode.PostalCodeNumberExtension();
@@ -256,12 +245,10 @@ public class PostalCode implements Cloneable {
   /**
    * Creates a new instance of {@link PostalCode.PostTown} and set it to
    * postTown.
-   * <p>
-   * This method is a short version for:    <code>
+   *   
+   * This method is a short version for:     &lt;code&gt;
    * PostTown postTown = new PostTown();
-   * this.setPostTown(postTown); </code>
-   * <p>
-   * <p>
+   * this.setPostTown(postTown);  &lt;/code&gt;
    */
   public PostalCode.PostTown createAndSetPostTown() {
     PostalCode.PostTown newValue = new PostalCode.PostTown();
@@ -271,13 +258,12 @@ public class PostalCode implements Cloneable {
 
   /**
    * Sets the value of the addressLine property Objects of the following type(s)
-   * are allowed in the list List<AddressLine>.
-   * <p>
+   * are allowed in the list List &lt;AddressLine&gt;.
+   *   
    * Note:
-   * <p>
+   *   
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withAddressLine} instead.
-   *
    *
    * @param addressLine
    */
@@ -290,7 +276,7 @@ public class PostalCode implements Cloneable {
    *
    * @param addressLine Objects of the following type are allowed in the list:
    *                    {@link AddressLine}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public PostalCode addToAddressLine(final AddressLine addressLine) {
     this.getAddressLine().add(addressLine);
@@ -299,13 +285,12 @@ public class PostalCode implements Cloneable {
 
   /**
    * Sets the value of the postalCodeNumber property Objects of the following
-   * type(s) are allowed in the list List<PostalCodeNumber>.
-   * <p>
+   * type(s) are allowed in the list List &lt;PostalCodeNumber&gt;.
+   *   
    * Note:
-   * <p>
+   *   
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withPostalCodeNumber} instead.
-   *
    *
    * @param postalCodeNumber
    */
@@ -318,7 +303,7 @@ public class PostalCode implements Cloneable {
    *
    * @param postalCodeNumber Objects of the following type are allowed in the
    *                         list: {@link PostalCode.PostalCodeNumber}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public PostalCode addToPostalCodeNumber(final PostalCode.PostalCodeNumber postalCodeNumber) {
     this.getPostalCodeNumber().add(postalCodeNumber);
@@ -327,13 +312,12 @@ public class PostalCode implements Cloneable {
 
   /**
    * Sets the value of the postalCodeNumberExtension property Objects of the
-   * following type(s) are allowed in the list List<PostalCodeNumberExtension>.
-   * <p>
+   * following type(s) are allowed in the list List &lt;PostalCodeNumberExtension&gt;.
+   *   
    * Note:
-   * <p>
+   *   
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withPostalCodeNumberExtension} instead.
-   *
    *
    * @param postalCodeNumberExtension
    */
@@ -347,7 +331,7 @@ public class PostalCode implements Cloneable {
    * @param postalCodeNumberExtension Objects of the following type are allowed
    *                                  in the list:
    *                                  {@link PostalCode.PostalCodeNumberExtension}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public PostalCode addToPostalCodeNumberExtension(final PostalCode.PostalCodeNumberExtension postalCodeNumberExtension) {
     this.getPostalCodeNumberExtension().add(postalCodeNumberExtension);
@@ -356,13 +340,12 @@ public class PostalCode implements Cloneable {
 
   /**
    * Sets the value of the any property Objects of the following type(s) are
-   * allowed in the list List<Object>.
-   * <p>
+   * allowed in the list List &lt;Object&gt;.
+   *   
    * Note:
-   * <p>
+   *   
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withAny} instead.
-   *
    *
    * @param any
    */
@@ -375,7 +358,7 @@ public class PostalCode implements Cloneable {
    *
    * @param any Objects of the following type are allowed in the list:
    *            {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public PostalCode addToAny(final Object any) {
     this.getAny().add(any);
@@ -385,7 +368,7 @@ public class PostalCode implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setAddressLine(List<AddressLine>)
+   * @see #setAddressLine(List &lt;AddressLine&gt;)
    *
    * @param addressLine required parameter
    */
@@ -397,7 +380,7 @@ public class PostalCode implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setPostalCodeNumber(List<PostalCodeNumber>)
+   * @see #setPostalCodeNumber(List &lt;PostalCodeNumber&gt;)
    *
    * @param postalCodeNumber required parameter
    */
@@ -409,7 +392,7 @@ public class PostalCode implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setPostalCodeNumberExtension(List<PostalCodeNumberExtension>)
+   * @see #setPostalCodeNumberExtension(List &lt;PostalCodeNumberExtension&gt;)
    *
    * @param postalCodeNumberExtension required parameter
    */
@@ -433,7 +416,7 @@ public class PostalCode implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setAny(List<Object>)
+   * @see #setAny(List &lt;Object&gt;)
    *
    * @param any required parameter
    */
@@ -482,7 +465,7 @@ public class PostalCode implements Cloneable {
     return copy;
   }
 
-  /**
+  /*
    *
    */
   @XmlAccessorType(XmlAccessType.FIELD)
@@ -508,7 +491,6 @@ public class PostalCode implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -517,7 +499,6 @@ public class PostalCode implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -526,7 +507,6 @@ public class PostalCode implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -535,7 +515,6 @@ public class PostalCode implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -544,7 +523,6 @@ public class PostalCode implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -553,7 +531,6 @@ public class PostalCode implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -562,7 +539,6 @@ public class PostalCode implements Cloneable {
     }
 
     /**
-     *
      * @return always non-null
      */
     public Map<QName, String> getOtherAttributes() {
@@ -664,7 +640,7 @@ public class PostalCode implements Cloneable {
 
   }
 
-  /**
+  /*
    *
    */
   @XmlAccessorType(XmlAccessType.FIELD)
@@ -693,7 +669,6 @@ public class PostalCode implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -702,7 +677,6 @@ public class PostalCode implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -711,7 +685,6 @@ public class PostalCode implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -720,7 +693,6 @@ public class PostalCode implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -729,7 +701,6 @@ public class PostalCode implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -738,7 +709,6 @@ public class PostalCode implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -747,7 +717,6 @@ public class PostalCode implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -756,7 +725,6 @@ public class PostalCode implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -765,7 +733,6 @@ public class PostalCode implements Cloneable {
     }
 
     /**
-     *
      * @return always non-null
      */
     public Map<QName, String> getOtherAttributes() {
@@ -887,7 +854,7 @@ public class PostalCode implements Cloneable {
 
   }
 
-  /**
+  /*
    *
    */
   @XmlAccessorType(XmlAccessType.FIELD)
@@ -915,7 +882,7 @@ public class PostalCode implements Cloneable {
       super();
     }
 
-    /**
+    /*
      *
      */
     public List<AddressLine> getAddressLine() {
@@ -925,7 +892,7 @@ public class PostalCode implements Cloneable {
       return this.addressLine;
     }
 
-    /**
+    /*
      *
      */
     public List<PostalCode.PostTown.PostTownName> getPostTownName() {
@@ -936,7 +903,6 @@ public class PostalCode implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link PostalCode.PostTown.PostTownSuffix}
      *
      */
@@ -945,7 +911,6 @@ public class PostalCode implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link PostalCode.PostTown.PostTownSuffix}
      *
      */
@@ -954,7 +919,6 @@ public class PostalCode implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -963,7 +927,6 @@ public class PostalCode implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -972,7 +935,6 @@ public class PostalCode implements Cloneable {
     }
 
     /**
-     *
      * @return always non-null
      */
     public Map<QName, String> getOtherAttributes() {
@@ -1035,11 +997,9 @@ public class PostalCode implements Cloneable {
 
     /**
      * Creates a new instance of {@link AddressLine} and adds it to addressLine.
-     * This method is a short version for:      <code>
+     * This method is a short version for:       &lt;code&gt;
      * AddressLine addressLine = new AddressLine();
-     * this.getAddressLine().add(addressLine); </code>
-     * <p>
-     * <p>
+     * this.getAddressLine().add(addressLine);  &lt;/code&gt;
      */
     public AddressLine createAndAddAddressLine() {
       AddressLine newValue = new AddressLine();
@@ -1049,11 +1009,9 @@ public class PostalCode implements Cloneable {
 
     /**
      * Creates a new instance of {@link PostalCode.PostTown.PostTownName} and
-     * adds it to postTownName. This method is a short version for:      <code>
+     * adds it to postTownName. This method is a short version for:       &lt;code&gt;
      * PostTownName postTownName = new PostTownName();
-     * this.getPostTownName().add(postTownName); </code>
-     * <p>
-     * <p>
+     * this.getPostTownName().add(postTownName);  &lt;/code&gt;
      */
     public PostalCode.PostTown.PostTownName createAndAddPostTownName() {
       PostalCode.PostTown.PostTownName newValue = new PostalCode.PostTown.PostTownName();
@@ -1064,12 +1022,10 @@ public class PostalCode implements Cloneable {
     /**
      * Creates a new instance of {@link PostalCode.PostTown.PostTownSuffix} and
      * set it to postTownSuffix.
-     * <p>
-     * This method is a short version for:      <code>
+     *   
+     * This method is a short version for:       &lt;code&gt;
      * PostTownSuffix postTownSuffix = new PostTownSuffix();
-     * this.setPostTownSuffix(postTownSuffix); </code>
-     * <p>
-     * <p>
+     * this.setPostTownSuffix(postTownSuffix);  &lt;/code&gt;
      */
     public PostalCode.PostTown.PostTownSuffix createAndSetPostTownSuffix() {
       PostalCode.PostTown.PostTownSuffix newValue = new PostalCode.PostTown.PostTownSuffix();
@@ -1079,13 +1035,12 @@ public class PostalCode implements Cloneable {
 
     /**
      * Sets the value of the addressLine property Objects of the following
-     * type(s) are allowed in the list List<AddressLine>.
-     * <p>
+     * type(s) are allowed in the list List &lt;AddressLine&gt;.
+     *   
      * Note:
-     * <p>
+     *   
      * This method does not make use of the fluent pattern.If you would like to
      * make it fluent, use {@link #withAddressLine} instead.
-     *
      *
      * @param addressLine
      */
@@ -1098,7 +1053,7 @@ public class PostalCode implements Cloneable {
      *
      * @param addressLine Objects of the following type are allowed in the list:
      *                    {@link AddressLine}
-     * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+     * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
      */
     public PostalCode.PostTown addToAddressLine(final AddressLine addressLine) {
       this.getAddressLine().add(addressLine);
@@ -1107,13 +1062,12 @@ public class PostalCode implements Cloneable {
 
     /**
      * Sets the value of the postTownName property Objects of the following
-     * type(s) are allowed in the list List<PostTownName>.
-     * <p>
+     * type(s) are allowed in the list List &lt;PostTownName&gt;.
+     *   
      * Note:
-     * <p>
+     *   
      * This method does not make use of the fluent pattern.If you would like to
      * make it fluent, use {@link #withPostTownName} instead.
-     *
      *
      * @param postTownName
      */
@@ -1126,7 +1080,7 @@ public class PostalCode implements Cloneable {
      *
      * @param postTownName Objects of the following type are allowed in the
      *                     list: {@link PostalCode.PostTown.PostTownName}
-     * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+     * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
      */
     public PostalCode.PostTown addToPostTownName(final PostalCode.PostTown.PostTownName postTownName) {
       this.getPostTownName().add(postTownName);
@@ -1136,7 +1090,7 @@ public class PostalCode implements Cloneable {
     /**
      * fluent setter
      *
-     * @see #setAddressLine(List<AddressLine>)
+     * @see #setAddressLine(List &lt;AddressLine&gt;)
      *
      * @param addressLine required parameter
      */
@@ -1148,7 +1102,7 @@ public class PostalCode implements Cloneable {
     /**
      * fluent setter
      *
-     * @see #setPostTownName(List<PostTownName>)
+     * @see #setPostTownName(List &lt;PostTownName&gt;)
      *
      * @param postTownName required parameter
      */
@@ -1201,7 +1155,7 @@ public class PostalCode implements Cloneable {
       return copy;
     }
 
-    /**
+    /*
      *
      */
     @XmlAccessorType(XmlAccessType.FIELD)
@@ -1227,7 +1181,6 @@ public class PostalCode implements Cloneable {
       }
 
       /**
-       *
        * @return possible object is {@link String}
        *
        */
@@ -1236,7 +1189,6 @@ public class PostalCode implements Cloneable {
       }
 
       /**
-       *
        * @param value allowed object is {@link String}
        *
        */
@@ -1245,7 +1197,6 @@ public class PostalCode implements Cloneable {
       }
 
       /**
-       *
        * @return possible object is {@link String}
        *
        */
@@ -1254,7 +1205,6 @@ public class PostalCode implements Cloneable {
       }
 
       /**
-       *
        * @param value allowed object is {@link String}
        *
        */
@@ -1263,7 +1213,6 @@ public class PostalCode implements Cloneable {
       }
 
       /**
-       *
        * @return possible object is {@link String}
        *
        */
@@ -1272,7 +1221,6 @@ public class PostalCode implements Cloneable {
       }
 
       /**
-       *
        * @param value allowed object is {@link String}
        *
        */
@@ -1281,7 +1229,6 @@ public class PostalCode implements Cloneable {
       }
 
       /**
-       *
        * @return always non-null
        */
       public Map<QName, String> getOtherAttributes() {
@@ -1383,7 +1330,7 @@ public class PostalCode implements Cloneable {
 
     }
 
-    /**
+    /*
      *
      */
     @XmlAccessorType(XmlAccessType.FIELD)
@@ -1406,7 +1353,6 @@ public class PostalCode implements Cloneable {
       }
 
       /**
-       *
        * @return possible object is {@link String}
        *
        */
@@ -1415,7 +1361,6 @@ public class PostalCode implements Cloneable {
       }
 
       /**
-       *
        * @param value allowed object is {@link String}
        *
        */
@@ -1424,7 +1369,6 @@ public class PostalCode implements Cloneable {
       }
 
       /**
-       *
        * @return possible object is {@link String}
        *
        */
@@ -1433,7 +1377,6 @@ public class PostalCode implements Cloneable {
       }
 
       /**
-       *
        * @param value allowed object is {@link String}
        *
        */
@@ -1442,7 +1385,6 @@ public class PostalCode implements Cloneable {
       }
 
       /**
-       *
        * @return always non-null
        */
       public Map<QName, String> getOtherAttributes() {

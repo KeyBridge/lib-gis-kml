@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -22,31 +22,26 @@ import javax.xml.bind.annotation.*;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- * <TimeStamp>
- * <p>
+ *  &lt;TimeStamp&gt;
+ *   
  * Represents a single moment in time. This is a simple element and contains no
  * children. Its value is a dateTime, specified in XML time (see XML Schema Part
  * 2: Datatypes Second Edition). The precision of the TimeStamp is dictated by
- * the dateTime value in the <when> element.
- * </p>
- * <p>
- * Syntax:
- * <pre><strong>&lt;TimeStamp id=ID&gt;</strong>
+ * the dateTime value in the  &lt;when&gt; element. Syntax:
+ *  &lt;pre&gt; &lt;strong&gt;&lt;TimeStamp id=ID&gt; &lt;/strong&gt;
  *   &lt;when&gt;...&lt;/when&gt;      &lt;!-- kml:dateTime --&gt;
- * <strong>&lt;/TimeStamp&gt;</strong> </pre>
- * <p>
+ *  &lt;strong&gt;&lt;/TimeStamp&gt; &lt;/strong&gt;  </pre>
+ *   
  * Extends:
  *
- * @see: <TimePrimitive>
+ * @see:  &lt;TimePrimitive&gt;
  *
  * Contained By:
- * @see: <Feature>
- * @see: A copy of the <TimeSpan> and <TimeStamp> elements, in the extension
+ * @see:  &lt;Feature&gt;
+ * @see: A copy of the  &lt;TimeSpan&gt; and  &lt;TimeStamp&gt; elements, in the extension
  * namespace. This allows for the inclusion of time values in AbstractViews
- * (<Camera> and <LookAt>). Time values are used to control historical imagery,
+ * ( &lt;Camera&gt; and  &lt;LookAt&gt;). Time values are used to control historical imagery,
  * sunlight, and visibility of time-stamped Features.
- *
- *
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -57,41 +52,32 @@ import net.opengis.kml.annotations.Obvious;
 })
 @XmlRootElement(name = "TimeStamp", namespace = "http://www.opengis.net/kml/2.2")
 public class TimeStamp
-        extends TimePrimitive
-        implements Cloneable {
+  extends TimePrimitive
+  implements Cloneable {
 
   /**
-   * <when>
-   * <p>
+   *  &lt;when&gt;
+   *   
    * Specifies a single moment in time. The value is a dateTime, which can be
    * one of the following: dateTime gives second resolution date gives day
    * resolution gYearMonth gives month resolution gYear gives year resolution
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   protected String when;
   @XmlElement(name = "TimeStampSimpleExtensionGroup")
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> timeStampSimpleExtension;
   /**
-   * <Object>
-   * <p>
+   *  &lt;Object&gt;
+   *   
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the <Update> mechanism is to be used.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;<strong>
-   * &lt;!-- <em>Object</em> id="ID" targetId="NCName" --&gt;
-   * &lt;!-- /<em>Object</em>&gt; --&gt;</strong></pre>
-   * <p>
-   * <p>
-   * <p>
+   * assigned if the  &lt;Update&gt; mechanism is to be used. Syntax:
+   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
+   * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
+   *   
    */
   @XmlElement(name = "TimeStampObjectExtensionGroup")
   protected List<AbstractObject> timeStampObjectExtension;
@@ -205,7 +191,7 @@ public class TimeStamp
    *
    * @param timeStampSimpleExtension Objects of the following type are allowed
    *                                 in the list: {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public TimeStamp addToTimeStampSimpleExtension(final Object timeStampSimpleExtension) {
     this.getTimeStampSimpleExtension().add(timeStampSimpleExtension);
@@ -226,7 +212,7 @@ public class TimeStamp
    *
    * @param timeStampObjectExtension Objects of the following type are allowed
    *                                 in the list: {@link AbstractObject}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public TimeStamp addToTimeStampObjectExtension(final AbstractObject timeStampObjectExtension) {
     this.getTimeStampObjectExtension().add(timeStampObjectExtension);
@@ -299,7 +285,7 @@ public class TimeStamp
   /**
    * fluent setter
    *
-   * @see #setTimeStampSimpleExtension(List<Object>)
+   * @see #setTimeStampSimpleExtension(List &lt;Object&gt;)
    *
    * @param timeStampSimpleExtension required parameter
    */
@@ -311,7 +297,7 @@ public class TimeStamp
   /**
    * fluent setter
    *
-   * @see #setTimeStampObjectExtension(List<AbstractObject>)
+   * @see #setTimeStampObjectExtension(List &lt;AbstractObject&gt;)
    *
    * @param timeStampObjectExtension required parameter
    */

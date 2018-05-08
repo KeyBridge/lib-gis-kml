@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -23,25 +23,17 @@ import net.opengis.kml.annotations.Obvious;
 import net.opengis.kml.gx.SimpleArrayData;
 
 /**
- * <schemadata schemaurl="anyuri">
- * <p>
- * The <schemaURL> can be a full URL, a reference to a Schema ID defined in an
+ *  &lt;schemadata schemaurl="anyuri"&gt;
+ *   
+ * The  &lt;schemaURL&gt; can be a full URL, a reference to a Schema ID defined in an
  * external KML file, or a reference to a Schema ID defined in the same KML
- * file. All of the following specifications are acceptable:
- * </p>
- * <p>
- * The Schema element is always a child of Document. The ExtendedData element is
- * a child of the Feature that contains the custom data.
- * </p>
- * <p>
- * This element is used in conjunction with <Schema> to add typed custom data to
- * a KML Feature. The Schema element (identified by the schemaUrl attribute)
- * declares the custom data type. The actual data objects ("instances" of the
- * custom data) are defined using the SchemaData element.
- * </p>
- * <p>
- * <p>
- * <p>
+ * file. All of the following specifications are acceptable: The Schema element
+ * is always a child of Document. The ExtendedData element is a child of the
+ * Feature that contains the custom data. This element is used in conjunction
+ * with  &lt;Schema&gt; to add typed custom data to a KML Feature. The Schema element
+ * (identified by the schemaUrl attribute) declares the custom data type. The
+ * actual data objects ("instances" of the custom data) are defined using the
+ * SchemaData element.
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SchemaDataType", propOrder = {
@@ -50,61 +42,48 @@ import net.opengis.kml.gx.SimpleArrayData;
 })
 @XmlRootElement(name = "SchemaData", namespace = "http://www.opengis.net/kml/2.2")
 public class SchemaData
-        extends AbstractObject
-        implements Cloneable {
+  extends AbstractObject
+  implements Cloneable {
 
   /**
-   * <simpledata name="string">
-   * <p>
-   * <SimpleData name="string"> This element assigns a value to the custom data
+   *  &lt;simpledata name="string"&gt;
+   *   
+   *  &lt;SimpleData name="string"&gt; This element assigns a value to the custom data
    * field identified by the name attribute. The type and name of this custom
-   * data field are declared in the <Schema> element. Here is an example of
-   * defining two custom data elements: <Placemark> <name>Easy trail</name>
-   * <ExtendedData> <SchemaData schemaUrl="#TrailHeadTypeId">
-   * <SimpleData name="TrailHeadName">Pi in the sky</SimpleData>
-   * <SimpleData name="TrailLength">3.14159</SimpleData>
-   * <SimpleData name="ElevationGain">10</SimpleData> </SchemaData>
-   * </ExtendedData> <Point>
-   * <coordinates>-122.000,37.002</coordinates> </Point> </Placemark>
-   * <Placemark> <name>Difficult trail</name> <ExtendedData>
-   * <SchemaData schemaUrl="#TrailHeadTypeId"> <SimpleData
-   * name="TrailHeadName">Mount Everest</SimpleData>
-   * <SimpleData name="TrailLength">347.45</SimpleData>
-   * <SimpleData name="ElevationGain">10000</SimpleData> </SchemaData>
-   * </ExtendedData>
-   * <Point> <coordinates>-122.000,37.002</coordinates> </Point> </Placemark>
-   * </p>
-   * <p>
-   * Here is an example of defining two custom data elements:
-   * </p>
-   * <p>
-   * This element assigns a value to the custom data field identified by the
-   * name attribute. The type and name of this custom data field are declared in
-   * the <Schema> element.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * data field are declared in the  &lt;Schema&gt; element. Here is an example of
+   * defining two custom data elements:  &lt;Placemark&gt;  &lt;name&gt;Easy trail &lt;/name&gt;
+   *  &lt;ExtendedData&gt;  &lt;SchemaData schemaUrl="#TrailHeadTypeId"&gt;
+   *  &lt;SimpleData name="TrailHeadName"&gt;Pi in the sky &lt;/SimpleData&gt;
+   *  &lt;SimpleData name="TrailLength"&gt;3.14159 &lt;/SimpleData&gt;
+   *  &lt;SimpleData name="ElevationGain"&gt;10 &lt;/SimpleData&gt;  &lt;/SchemaData&gt;
+   *  &lt;/ExtendedData&gt;  &lt;Point&gt;
+   *  &lt;coordinates&gt;-122.000,37.002 &lt;/coordinates&gt;  &lt;/Point&gt;  &lt;/Placemark&gt;
+   *  &lt;Placemark&gt;  &lt;name&gt;Difficult trail &lt;/name&gt;  &lt;ExtendedData&gt;
+   *  &lt;SchemaData schemaUrl="#TrailHeadTypeId"&gt;  &lt;SimpleData
+   * name="TrailHeadName"&gt;Mount Everest &lt;/SimpleData&gt;
+   *  &lt;SimpleData name="TrailLength"&gt;347.45 &lt;/SimpleData&gt;
+   *  &lt;SimpleData name="ElevationGain"&gt;10000 &lt;/SimpleData&gt;  &lt;/SchemaData&gt;
+   *  &lt;/ExtendedData&gt;
+   *  &lt;Point&gt;  &lt;coordinates&gt;-122.000,37.002 &lt;/coordinates&gt;  &lt;/Point&gt;  &lt;/Placemark&gt;
+   * Here is an example of defining two custom data elements: This element
+   * assigns a value to the custom data field identified by the name attribute.
+   * The type and name of this custom data field are declared in the  &lt;Schema&gt;
+   * element.
    */
   @XmlElement(name = "SimpleData")
   protected List<SimpleData> simpleData;
   /**
-   * <Object>
-   * <p>
+   *  &lt;Object&gt;
+   *   
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the <Update> mechanism is to be used.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;<strong>
-   * &lt;!-- <em>Object</em> id="ID" targetId="NCName" --&gt;
-   * &lt;!-- /<em>Object</em>&gt; --&gt;</strong></pre>
-   * <p>
-   * <p>
-   * <p>
+   * assigned if the  &lt;Update&gt; mechanism is to be used. Syntax:
+   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
+   * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
+   *   
    */
   @XmlElement(name = "SchemaDataExtension")
   protected List<Object> schemaDataExtension;
@@ -209,10 +188,9 @@ public class SchemaData
 
   /**
    * Creates a new instance of {@link SimpleData} and adds it to simpleData.
-   * This method is a short version for:    <code>
+   * This method is a short version for:     &lt;code&gt;
    * SimpleData simpleData = new SimpleData();
-   * this.getSimpleData().add(simpleData); </code>
-   *
+   * this.getSimpleData().add(simpleData);  &lt;/code&gt;
    *
    * @param name required parameter
    */
@@ -236,7 +214,7 @@ public class SchemaData
    *
    * @param simpleData Objects of the following type are allowed in the list:
    *                   {@link SimpleData}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public SchemaData addToSimpleData(final SimpleData simpleData) {
     this.getSimpleData().add(simpleData);
@@ -257,8 +235,8 @@ public class SchemaData
    *
    * @param schemaDataExtension Objects of the following type are allowed in the
    *                            list:
-   *                            {@code <}{@link SimpleArrayData}{@code>}{@link JAXBElement}{@code <}{@link Object}{@code>}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   *                            {@link SimpleArrayData}{@link JAXBElement}{@link Object}
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public SchemaData addToSchemaDataExtension(final Object schemaDataExtension) {
     this.getSchemaDataExtension().add(schemaDataExtension);
@@ -285,7 +263,7 @@ public class SchemaData
   /**
    * fluent setter
    *
-   * @see #setSimpleData(List<SimpleData>)
+   * @see #setSimpleData(List &lt;SimpleData&gt;)
    *
    * @param simpleData required parameter
    */
@@ -297,7 +275,7 @@ public class SchemaData
   /**
    * fluent setter
    *
-   * @see #setSchemaDataExtension(List<Object>)
+   * @see #setSchemaDataExtension(List &lt;Object&gt;)
    *
    * @param schemaDataExtension required parameter
    */

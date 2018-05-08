@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -22,14 +22,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * ViewRefreshMode
- * <p>
- * never, onRequest, onStop, onRegion
- * </p>
- * <p>
- * See Also: See <Link>
- * <p>
- * <p>
- * <p>
+ *   
+ * never, onRequest, onStop, onRegion See Also: See  &lt;Link&gt;
+ *   
  */
 @XmlType(name = "viewRefreshModeEnumType")
 @XmlEnum

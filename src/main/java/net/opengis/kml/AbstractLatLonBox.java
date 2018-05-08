@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -22,30 +22,25 @@ import javax.xml.bind.annotation.*;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- * <latlonbox>
+ * &lt;latlonbox&gt;
  * <p>
  * Specifies where the top, bottom, right, and left sides of a bounding box for
- * the ground overlay are aligned. <north> Specifies the latitude of the north
- * edge of the bounding box, in decimal degrees from 0 to ±90. <south> Specifies
- * the latitude of the south edge of the bounding box, in decimal degrees from 0
- * to ±90. <east>
- * Specifies the longitude of the east edge of the bounding box, in decimal
- * degrees from 0 to ±180. (For overlays that overlap the meridian of 180°
- * longitude, values can extend beyond that range.) <west> Specifies the
- * longitude of the west edge of the bounding box, in decimal degrees from 0 to
- * ±180. (For overlays that overlap the meridian of 180° longitude, values can
- * extend beyond that range.) <rotation>
- * Specifies a rotation of the overlay about its center, in degrees. Values can
- * be ±180. The default is 0 (north). Rotations are specified in a
- * counterclockwise direction.
- * <LatLonBox> <north>48.25475939255556</north> <south>48.25207367852141</south>
- * <east>-90.86591508839973</east>
- * <west>-90.8714285289695</west> <rotation>39.37878630116985</rotation>
- * </LatLonBox>
- * </p>
- * <p>
- * <p>
- * <p>
+ * the ground overlay are aligned. &lt;north&gt; Specifies the latitude of the
+ * north edge of the bounding box, in decimal degrees from 0 to ±90.
+ * &lt;south&gt; Specifies the latitude of the south edge of the bounding box,
+ * in decimal degrees from 0 to ±90. &lt;east&gt; Specifies the longitude of the
+ * east edge of the bounding box, in decimal degrees from 0 to ±180. (For
+ * overlays that overlap the meridian of 180° longitude, values can extend
+ * beyond that range.) &lt;west&gt; Specifies the longitude of the west edge of
+ * the bounding box, in decimal degrees from 0 to ±180. (For overlays that
+ * overlap the meridian of 180° longitude, values can extend beyond that range.)
+ * &lt;rotation&gt; Specifies a rotation of the overlay about its center, in
+ * degrees. Values can be ±180. The default is 0 (north). Rotations are
+ * specified in a counterclockwise direction. &lt;LatLonBox&gt;
+ * &lt;north&gt;48.25475939255556 &lt;/north&gt; &lt;south&gt;48.25207367852141
+ * &lt;/south&gt; &lt;east&gt;-90.86591508839973 &lt;/east&gt;
+ * &lt;west&gt;-90.8714285289695 &lt;/west&gt; &lt;rotation&gt;39.37878630116985
+ * &lt;/rotation&gt; &lt;/LatLonBox&gt;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "AbstractLatLonBoxType", propOrder = {
@@ -61,49 +56,35 @@ import net.opengis.kml.annotations.Obvious;
   LatLonBox.class
 })
 public abstract class AbstractLatLonBox
-        extends AbstractObject
-        implements Cloneable {
+  extends AbstractObject
+  implements Cloneable {
 
   /**
-   * <north> (required)
+   * &lt;north&gt; (required)
    * <p>
    * Specifies the latitude of the north edge of the bounding box, in decimal
    * degrees from 0 to ±90.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlElement(defaultValue = "180.0")
   protected double north;
   /**
-   * <south> (required)
+   * &lt;south&gt; (required)
    * <p>
    * Specifies the latitude of the south edge of the bounding box, in decimal
    * degrees from 0 to ±90.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlElement(defaultValue = "-180.0")
   protected double south;
   /**
-   * <east> (required)
-   * <p>
-   * <p>
+   * &lt;east&gt; (required)
    */
   @XmlElement(defaultValue = "180.0")
   protected double east;
   /**
-   * <west> (required)
+   * &lt;west&gt; (required)
    * <p>
    * Specifies the longitude of the west edge of the bounding box, in decimal
    * degrees from 0 to ±180.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlElement(defaultValue = "-180.0")
   protected double west;
@@ -111,21 +92,16 @@ public abstract class AbstractLatLonBox
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> abstractLatLonBoxSimpleExtension;
   /**
-   * <Object>
+   * &lt;Object&gt;
    * <p>
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the <Update> mechanism is to be used.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;<strong>
-   * &lt;!-- <em>Object</em> id="ID" targetId="NCName" --&gt;
-   * &lt;!-- /<em>Object</em>&gt; --&gt;</strong></pre>
-   * <p>
-   * <p>
+   * assigned if the &lt;Update&gt; mechanism is to be used. Syntax:
+   * <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
+   * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
    * <p>
    */
   @XmlElement(name = "AbstractLatLonBoxObjectExtensionGroup")
@@ -313,7 +289,8 @@ public abstract class AbstractLatLonBox
    *
    * @param abstractLatLonBoxSimpleExtension Objects of the following type are
    *                                         allowed in the list: {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public AbstractLatLonBox addToAbstractLatLonBoxSimpleExtension(final Object abstractLatLonBoxSimpleExtension) {
     this.getAbstractLatLonBoxSimpleExtension().add(abstractLatLonBoxSimpleExtension);
@@ -335,7 +312,8 @@ public abstract class AbstractLatLonBox
    * @param abstractLatLonBoxObjectExtension Objects of the following type are
    *                                         allowed in the list:
    *                                         {@link AbstractObject}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public AbstractLatLonBox addToAbstractLatLonBoxObjectExtension(final AbstractObject abstractLatLonBoxObjectExtension) {
     this.getAbstractLatLonBoxObjectExtension().add(abstractLatLonBoxObjectExtension);
@@ -410,7 +388,7 @@ public abstract class AbstractLatLonBox
   /**
    * fluent setter
    *
-   * @see #setAbstractLatLonBoxSimpleExtension(List<Object>)
+   * @see #setAbstractLatLonBoxSimpleExtension(List &lt;Object&gt;)
    *
    * @param abstractLatLonBoxSimpleExtension required parameter
    */
@@ -422,7 +400,7 @@ public abstract class AbstractLatLonBox
   /**
    * fluent setter
    *
-   * @see #setAbstractLatLonBoxObjectExtension(List<AbstractObject>)
+   * @see #setAbstractLatLonBoxObjectExtension(List &lt;AbstractObject&gt;)
    *
    * @param abstractLatLonBoxObjectExtension required parameter
    */

@@ -27,7 +27,7 @@ public final class Utils {
   private static final Logger LOG = Logger.getLogger(Utils.class.getName());
 
   /**
-   * java.util.List<de.micromata.opengis.kml.v_2_2_0.Coordinate> -->
+   * java.util.List &lt;de.micromata.opengis.kml.v_2_2_0.Coordinate&gt; --&gt;
    * de.micromata.opengis.kml.v_2_2_0.Coordinate
    *
    * @param value

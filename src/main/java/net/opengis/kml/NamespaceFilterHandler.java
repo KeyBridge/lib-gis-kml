@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -22,7 +22,7 @@ import org.xml.sax.Locator;
 import org.xml.sax.SAXException;
 
 final class NamespaceFilterHandler
-        implements ContentHandler {
+  implements ContentHandler {
 
   private final static String KML_20 = "http://earth.google.com/kml/2.0";
   private final static String KML_21 = "http://earth.google.com/kml/2.1";
@@ -34,7 +34,7 @@ final class NamespaceFilterHandler
   }
 
   public void startElement(String uri, String localName, String qName, Attributes atts)
-          throws SAXException {
+    throws SAXException {
     if (uri.equals(KML_20) || uri.equals(KML_21)) {
       contentHandler.startElement(KML_22, localName, qName, atts);
     } else {
@@ -43,32 +43,32 @@ final class NamespaceFilterHandler
   }
 
   public void characters(char[] ch, int start, int length)
-          throws SAXException {
+    throws SAXException {
     contentHandler.characters(ch, start, length);
   }
 
   public void endDocument()
-          throws SAXException {
+    throws SAXException {
     contentHandler.endDocument();
   }
 
   public void endElement(String uri, String localName, String qName)
-          throws SAXException {
+    throws SAXException {
     contentHandler.endElement(uri, localName, qName);
   }
 
   public void endPrefixMapping(String prefix)
-          throws SAXException {
+    throws SAXException {
     contentHandler.endPrefixMapping(prefix);
   }
 
   public void ignorableWhitespace(char[] ch, int start, int length)
-          throws SAXException {
+    throws SAXException {
     contentHandler.ignorableWhitespace(ch, start, length);
   }
 
   public void processingInstruction(String target, String data)
-          throws SAXException {
+    throws SAXException {
     contentHandler.processingInstruction(target, data);
   }
 
@@ -77,17 +77,17 @@ final class NamespaceFilterHandler
   }
 
   public void skippedEntity(String name)
-          throws SAXException {
+    throws SAXException {
     contentHandler.skippedEntity(name);
   }
 
   public void startDocument()
-          throws SAXException {
+    throws SAXException {
     contentHandler.startDocument();
   }
 
   public void startPrefixMapping(String prefix, String uri)
-          throws SAXException {
+    throws SAXException {
     contentHandler.startPrefixMapping(prefix, uri);
   }
 

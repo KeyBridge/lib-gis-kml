@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -22,21 +22,17 @@ import javax.xml.bind.annotation.*;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- * <data name ="string">
- * <p>
+ *  &lt;data name ="string"&gt;
+ *   
  * Creates an untyped name/value pair. The name can have two versions: name and
  * displayName. The name attribute is used to identify the data pair within the
  * KML file. The displayName element is used when a properly formatted name,
- * with spaces and HTML formatting, is displayed in Google Earth. In the <text>
- * element of <BalloonStyle>, the notation $[name:displayName] is replaced with
- * <displayName>. If you substitute the value of the name attribute of the
- * <Data> element in this format (for example, $[holeYardage], the attribute
- * value is replaced with <value>. By default, the Placemark's balloon displays
+ * with spaces and HTML formatting, is displayed in Google Earth. In the  &lt;text&gt;
+ * element of  &lt;BalloonStyle&gt;, the notation $[name:displayName] is replaced with
+ *  &lt;displayName&gt;. If you substitute the value of the name attribute of the
+ *  &lt;Data&gt; element in this format (for example, $[holeYardage], the attribute
+ * value is replaced with  &lt;value&gt;. By default, the Placemark's balloon displays
  * the name/value pairs associated with it.
- * </p>
- * <p>
- * <p>
- * <p>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DataType", propOrder = {
@@ -46,58 +42,42 @@ import net.opengis.kml.annotations.Obvious;
 })
 @XmlRootElement(name = "Data", namespace = "http://www.opengis.net/kml/2.2")
 public class Data
-        extends AbstractObject
-        implements Cloneable {
+  extends AbstractObject
+  implements Cloneable {
 
   /**
-   * <displayname>
-   * <p>
+   *  &lt;displayname&gt;
+   *   
    * An optional formatted version of name, to be used for display purposes.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   protected String displayName;
   /**
-   * <value>
-   * <p>
-   * <Placemark> <name>Club house</name> <ExtendedData> <Data name="holeNumber">
-   * <value>1</value>
-   * </Data> <Data name="holeYardage"> <value>234</value> </Data>
-   * <Data name="holePar">
-   * <value>4</value> </Data> </ExtendedData> </Placemark>
-   * </p>
-   * <p>
-   * <displayName> An optional formatted version of name, to be used for display
+   *  &lt;value&gt;
+   *   
+   *  &lt;Placemark&gt;  &lt;name&gt;Club house &lt;/name&gt;  &lt;ExtendedData&gt;  &lt;Data name="holeNumber"&gt;
+   *  &lt;value&gt;1 &lt;/value&gt;
+   *  &lt;/Data&gt;  &lt;Data name="holeYardage"&gt;  &lt;value&gt;234 &lt;/value&gt;  &lt;/Data&gt;
+   *  &lt;Data name="holePar"&gt;
+   *  &lt;value&gt;4 &lt;/value&gt;  &lt;/Data&gt;  &lt;/ExtendedData&gt;  &lt;/Placemark&gt;
+   *  &lt;displayName&gt; An optional formatted version of name, to be used for display
    * purposes.
-   * <value> Value of the data pair. <Placemark> <name>Club house</name>
-   * <ExtendedData>
-   * <Data name="holeNumber"> <value>1</value> </Data> <Data name="holeYardage">
-   * <value>234</value>
-   * </Data> <Data name="holePar"> <value>4</value> </Data> </ExtendedData>
-   * </Placemark>
-   * </p>
-   * <p>
+   *  &lt;value&gt; Value of the data pair.  &lt;Placemark&gt;  &lt;name&gt;Club house &lt;/name&gt;
+   *  &lt;ExtendedData&gt;
+   *  &lt;Data name="holeNumber"&gt;  &lt;value&gt;1 &lt;/value&gt;  &lt;/Data&gt;  &lt;Data name="holeYardage"&gt;
+   *  &lt;value&gt;234 &lt;/value&gt;
+   *  &lt;/Data&gt;  &lt;Data name="holePar"&gt;  &lt;value&gt;4 &lt;/value&gt;  &lt;/Data&gt;  &lt;/ExtendedData&gt;
+   *  &lt;/Placemark&gt;
    * Value of the data pair.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlElement(required = true)
   protected String value;
   @XmlElement(name = "DataExtension")
   protected List<Object> dataExtension;
   /**
-   * <name>
-   * <p>
+   *  &lt;name&gt;
+   *   
    * User-defined text displayed in the 3D viewer as the label for the object
    * (for example, for a Placemark, Folder, or NetworkLink).
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlAttribute(name = "name")
   protected String name;
@@ -127,7 +107,7 @@ public class Data
    * Default no-arg constructor is private. Use overloaded constructor instead!
    * (Temporary solution, till a better and more suitable ObjectFactory is
    * created.)
-   * <p>
+   *   
    */
   @Deprecated
   private Data() {
@@ -276,7 +256,7 @@ public class Data
    *
    * @param dataExtension Objects of the following type are allowed in the list:
    *                      {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Data addToDataExtension(final Object dataExtension) {
     this.getDataExtension().add(dataExtension);
@@ -315,7 +295,7 @@ public class Data
   /**
    * fluent setter
    *
-   * @see #setDataExtension(List<Object>)
+   * @see #setDataExtension(List &lt;Object&gt;)
    *
    * @param dataExtension required parameter
    */

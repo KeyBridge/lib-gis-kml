@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -22,36 +22,31 @@ import javax.xml.bind.annotation.*;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- * <StyleSelector>
+ * &lt;StyleSelector&gt;
  * <p>
  * One or more Styles and StyleMaps can be defined to customize the appearance
  * of any element derived from Feature or of the Geometry in a Placemark. (See
- * <BalloonStyle>,
- * <ListStyle>, <StyleSelector>, and the styles derived from <ColorStyle>.) A
- * style defined within a Feature is called an "inline style" and applies only
- * to the Feature that contains it. A style defined as the child of a <Document>
- * is called a "shared style." A shared style must have an id defined for it.
- * This id is referenced by one or more Features within the <Document>. In cases
- * where a style element is defined both in a shared style and in an inline
- * style for a Feature—that is, a Folder, GroundOverlay, NetworkLink, Placemark,
- * or ScreenOverlay—the value for the Feature's inline style takes precedence
- * over the value for the shared style.
- * </p>
- * <p>
- * Syntax:
+ * &lt;BalloonStyle&gt;, &lt;ListStyle&gt;, &lt;StyleSelector&gt;, and the
+ * styles derived from &lt;ColorStyle&gt;.) A style defined within a Feature is
+ * called an "inline style" and applies only to the Feature that contains it. A
+ * style defined as the child of a &lt;Document&gt; is called a "shared style."
+ * A shared style must have an id defined for it. This id is referenced by one
+ * or more Features within the &lt;Document&gt;. In cases where a style element
+ * is defined both in a shared style and in an inline style for a Feature—that
+ * is, a Folder, GroundOverlay, NetworkLink, Placemark, or ScreenOverlay—the
+ * value for the Feature's inline style takes precedence over the value for the
+ * shared style. Syntax:
  * <pre>&lt;!-- abstract element; do not create --&gt;
- * <strong>&lt;!-- <em>StyleSelector</em> id="ID" --&gt;               </strong>  &lt;!-- Style,StyleMap --&gt;<strong>
- * &lt;!-- /<em>StyleSelector</em> --&gt;</strong></pre>
+ *  &lt;strong&gt;&lt;!--  &lt;em&gt;StyleSelector &lt;/em&gt; id="ID" --&gt;                &lt;/strong&gt;  &lt;!-- Style,StyleMap --&gt; &lt;strong&gt;
+ * &lt;!-- / &lt;em&gt;StyleSelector &lt;/em&gt; --&gt; &lt;/strong&gt; </pre>
  * <p>
  * Extends:
  *
- * @see: <Object>
+ * @see: &lt;Object&gt;
  *
  * Extended By:
- * @see: <Style>
- * @see: <StyleMap>
- *
- *
+ * @see: &lt;Style&gt;
+ * @see: &lt;StyleMap&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -63,29 +58,22 @@ import net.opengis.kml.annotations.Obvious;
   Style.class,
   StyleMap.class
 })
-public abstract class StyleSelector
-        extends AbstractObject
-        implements Cloneable {
+public abstract class StyleSelector extends AbstractObject implements Cloneable {
 
   @XmlElement(name = "AbstractStyleSelectorSimpleExtensionGroup")
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> styleSelectorSimpleExtension;
   /**
-   * <Object>
+   * &lt;Object&gt;
    * <p>
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the <Update> mechanism is to be used.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;<strong>
-   * &lt;!-- <em>Object</em> id="ID" targetId="NCName" --&gt;
-   * &lt;!-- /<em>Object</em>&gt; --&gt;</strong></pre>
-   * <p>
-   * <p>
+   * assigned if the &lt;Update&gt; mechanism is to be used. Syntax:
+   * <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
+   * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
    * <p>
    */
   @XmlElement(name = "AbstractStyleSelectorObjectExtensionGroup")
@@ -172,7 +160,8 @@ public abstract class StyleSelector
    *
    * @param styleSelectorSimpleExtension Objects of the following type are
    *                                     allowed in the list: {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public StyleSelector addToStyleSelectorSimpleExtension(final Object styleSelectorSimpleExtension) {
     this.getStyleSelectorSimpleExtension().add(styleSelectorSimpleExtension);
@@ -194,7 +183,8 @@ public abstract class StyleSelector
    * @param styleSelectorObjectExtension Objects of the following type are
    *                                     allowed in the list:
    *                                     {@link AbstractObject}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public StyleSelector addToStyleSelectorObjectExtension(final AbstractObject styleSelectorObjectExtension) {
     this.getStyleSelectorObjectExtension().add(styleSelectorObjectExtension);
@@ -221,7 +211,7 @@ public abstract class StyleSelector
   /**
    * fluent setter
    *
-   * @see #setStyleSelectorSimpleExtension(List<Object>)
+   * @see #setStyleSelectorSimpleExtension(List &lt;Object&gt;)
    *
    * @param styleSelectorSimpleExtension required parameter
    */
@@ -233,7 +223,7 @@ public abstract class StyleSelector
   /**
    * fluent setter
    *
-   * @see #setStyleSelectorObjectExtension(List<AbstractObject>)
+   * @see #setStyleSelectorObjectExtension(List &lt;AbstractObject&gt;)
    *
    * @param styleSelectorObjectExtension required parameter
    */

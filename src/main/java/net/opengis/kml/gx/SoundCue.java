@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml.gx;
 
@@ -20,7 +20,7 @@ import java.util.List;
 import javax.xml.bind.annotation.*;
 import net.opengis.kml.annotations.Obvious;
 
-/**
+/*
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -30,8 +30,8 @@ import net.opengis.kml.annotations.Obvious;
 })
 @XmlRootElement(name = "SoundCue", namespace = "http://www.google.com/kml/ext/2.2")
 public class SoundCue
-        extends TourPrimitive
-        implements Cloneable {
+  extends TourPrimitive
+  implements Cloneable {
 
   @XmlElement(namespace = "http://www.opengis.net/kml/2.2")
   protected String href;
@@ -43,7 +43,6 @@ public class SoundCue
   }
 
   /**
-   *
    * @return possible object is {@link String}
    *
    */
@@ -52,7 +51,6 @@ public class SoundCue
   }
 
   /**
-   *
    * @param value allowed object is {@link String}
    *
    */
@@ -61,7 +59,6 @@ public class SoundCue
   }
 
   /**
-   *
    * @return possible object is {@link Double}
    *
    */
@@ -70,7 +67,6 @@ public class SoundCue
   }
 
   /**
-   *
    * @param value allowed object is {@link Double}
    *
    */

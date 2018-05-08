@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml.xal;
 
@@ -23,7 +23,7 @@ import java.util.Map;
 import javax.xml.bind.annotation.*;
 import javax.xml.namespace.QName;
 
-/**
+/*
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -68,7 +68,7 @@ public class LargeMailUser implements Cloneable {
     super();
   }
 
-  /**
+  /*
    *
    */
   public List<AddressLine> getAddressLine() {
@@ -78,7 +78,7 @@ public class LargeMailUser implements Cloneable {
     return this.addressLine;
   }
 
-  /**
+  /*
    *
    */
   public List<LargeMailUser.LargeMailUserName> getLargeMailUserName() {
@@ -89,7 +89,6 @@ public class LargeMailUser implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link LargeMailUser.LargeMailUserIdentifier}
    *
    */
@@ -98,7 +97,6 @@ public class LargeMailUser implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is
    *              {@link LargeMailUser.LargeMailUserIdentifier}
    *
@@ -107,7 +105,7 @@ public class LargeMailUser implements Cloneable {
     this.largeMailUserIdentifier = value;
   }
 
-  /**
+  /*
    *
    */
   public List<BuildingName> getBuildingName() {
@@ -118,7 +116,6 @@ public class LargeMailUser implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link Department}
    *
    */
@@ -127,7 +124,6 @@ public class LargeMailUser implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link Department}
    *
    */
@@ -136,7 +132,6 @@ public class LargeMailUser implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link PostBox}
    *
    */
@@ -145,7 +140,6 @@ public class LargeMailUser implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link PostBox}
    *
    */
@@ -154,7 +148,6 @@ public class LargeMailUser implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link Thoroughfare}
    *
    */
@@ -163,7 +156,6 @@ public class LargeMailUser implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link Thoroughfare}
    *
    */
@@ -172,7 +164,6 @@ public class LargeMailUser implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link PostalCode}
    *
    */
@@ -181,7 +172,6 @@ public class LargeMailUser implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link PostalCode}
    *
    */
@@ -189,7 +179,7 @@ public class LargeMailUser implements Cloneable {
     this.postalCode = value;
   }
 
-  /**
+  /*
    *
    */
   public List<Object> getAny() {
@@ -200,7 +190,6 @@ public class LargeMailUser implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link String}
    *
    */
@@ -209,7 +198,6 @@ public class LargeMailUser implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link String}
    *
    */
@@ -218,7 +206,6 @@ public class LargeMailUser implements Cloneable {
   }
 
   /**
-   *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
@@ -329,11 +316,9 @@ public class LargeMailUser implements Cloneable {
 
   /**
    * Creates a new instance of {@link AddressLine} and adds it to addressLine.
-   * This method is a short version for:    <code>
+   * This method is a short version for:     &lt;code&gt;
    * AddressLine addressLine = new AddressLine();
-   * this.getAddressLine().add(addressLine); </code>
-   * <p>
-   * <p>
+   * this.getAddressLine().add(addressLine);  &lt;/code&gt;
    */
   public AddressLine createAndAddAddressLine() {
     AddressLine newValue = new AddressLine();
@@ -343,11 +328,9 @@ public class LargeMailUser implements Cloneable {
 
   /**
    * Creates a new instance of {@link LargeMailUser.LargeMailUserName} and adds
-   * it to largeMailUserName. This method is a short version for:    <code>
+   * it to largeMailUserName. This method is a short version for:     &lt;code&gt;
    * LargeMailUserName largeMailUserName = new LargeMailUserName();
-   * this.getLargeMailUserName().add(largeMailUserName); </code>
-   * <p>
-   * <p>
+   * this.getLargeMailUserName().add(largeMailUserName);  &lt;/code&gt;
    */
   public LargeMailUser.LargeMailUserName createAndAddLargeMailUserName() {
     LargeMailUser.LargeMailUserName newValue = new LargeMailUser.LargeMailUserName();
@@ -358,12 +341,10 @@ public class LargeMailUser implements Cloneable {
   /**
    * Creates a new instance of {@link LargeMailUser.LargeMailUserIdentifier} and
    * set it to largeMailUserIdentifier.
-   * <p>
-   * This method is a short version for:    <code>
+   *   
+   * This method is a short version for:     &lt;code&gt;
    * LargeMailUserIdentifier largeMailUserIdentifier = new LargeMailUserIdentifier();
-   * this.setLargeMailUserIdentifier(largeMailUserIdentifier); </code>
-   * <p>
-   * <p>
+   * this.setLargeMailUserIdentifier(largeMailUserIdentifier);  &lt;/code&gt;
    */
   public LargeMailUser.LargeMailUserIdentifier createAndSetLargeMailUserIdentifier() {
     LargeMailUser.LargeMailUserIdentifier newValue = new LargeMailUser.LargeMailUserIdentifier();
@@ -373,11 +354,9 @@ public class LargeMailUser implements Cloneable {
 
   /**
    * Creates a new instance of {@link BuildingName} and adds it to buildingName.
-   * This method is a short version for:    <code>
+   * This method is a short version for:     &lt;code&gt;
    * BuildingName buildingName = new BuildingName();
-   * this.getBuildingName().add(buildingName); </code>
-   * <p>
-   * <p>
+   * this.getBuildingName().add(buildingName);  &lt;/code&gt;
    */
   public BuildingName createAndAddBuildingName() {
     BuildingName newValue = new BuildingName();
@@ -387,12 +366,10 @@ public class LargeMailUser implements Cloneable {
 
   /**
    * Creates a new instance of {@link Department} and set it to department.
-   * <p>
-   * This method is a short version for:    <code>
+   *   
+   * This method is a short version for:     &lt;code&gt;
    * Department department = new Department();
-   * this.setDepartment(department); </code>
-   * <p>
-   * <p>
+   * this.setDepartment(department);  &lt;/code&gt;
    */
   public Department createAndSetDepartment() {
     Department newValue = new Department();
@@ -402,11 +379,10 @@ public class LargeMailUser implements Cloneable {
 
   /**
    * Creates a new instance of {@link PostBox} and set it to postBox.
-   * <p>
-   * This method is a short version for:    <code>
+   *   
+   * This method is a short version for:     &lt;code&gt;
    * PostBox postBox = new PostBox();
-   * this.setPostBox(postBox); </code>
-   *
+   * this.setPostBox(postBox);  &lt;/code&gt;
    *
    * @param postBoxNumber required parameter
    */
@@ -418,11 +394,10 @@ public class LargeMailUser implements Cloneable {
 
   /**
    * Creates a new instance of {@link Thoroughfare} and set it to thoroughfare.
-   * <p>
-   * This method is a short version for:    <code>
+   *   
+   * This method is a short version for:     &lt;code&gt;
    * Thoroughfare thoroughfare = new Thoroughfare();
-   * this.setThoroughfare(thoroughfare); </code>
-   *
+   * this.setThoroughfare(thoroughfare);  &lt;/code&gt;
    *
    * @param postalCode        required parameter
    * @param premise           required parameter
@@ -437,12 +412,10 @@ public class LargeMailUser implements Cloneable {
 
   /**
    * Creates a new instance of {@link PostalCode} and set it to postalCode.
-   * <p>
-   * This method is a short version for:    <code>
+   *   
+   * This method is a short version for:     &lt;code&gt;
    * PostalCode postalCode = new PostalCode();
-   * this.setPostalCode(postalCode); </code>
-   * <p>
-   * <p>
+   * this.setPostalCode(postalCode);  &lt;/code&gt;
    */
   public PostalCode createAndSetPostalCode() {
     PostalCode newValue = new PostalCode();
@@ -452,13 +425,12 @@ public class LargeMailUser implements Cloneable {
 
   /**
    * Sets the value of the addressLine property Objects of the following type(s)
-   * are allowed in the list List<AddressLine>.
-   * <p>
+   * are allowed in the list List &lt;AddressLine&gt;.
+   *   
    * Note:
-   * <p>
+   *   
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withAddressLine} instead.
-   *
    *
    * @param addressLine
    */
@@ -471,7 +443,7 @@ public class LargeMailUser implements Cloneable {
    *
    * @param addressLine Objects of the following type are allowed in the list:
    *                    {@link AddressLine}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public LargeMailUser addToAddressLine(final AddressLine addressLine) {
     this.getAddressLine().add(addressLine);
@@ -480,13 +452,12 @@ public class LargeMailUser implements Cloneable {
 
   /**
    * Sets the value of the largeMailUserName property Objects of the following
-   * type(s) are allowed in the list List<LargeMailUserName>.
-   * <p>
+   * type(s) are allowed in the list List &lt;LargeMailUserName&gt;.
+   *   
    * Note:
-   * <p>
+   *   
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withLargeMailUserName} instead.
-   *
    *
    * @param largeMailUserName
    */
@@ -499,7 +470,7 @@ public class LargeMailUser implements Cloneable {
    *
    * @param largeMailUserName Objects of the following type are allowed in the
    *                          list: {@link LargeMailUser.LargeMailUserName}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public LargeMailUser addToLargeMailUserName(final LargeMailUser.LargeMailUserName largeMailUserName) {
     this.getLargeMailUserName().add(largeMailUserName);
@@ -508,13 +479,12 @@ public class LargeMailUser implements Cloneable {
 
   /**
    * Sets the value of the buildingName property Objects of the following
-   * type(s) are allowed in the list List<BuildingName>.
-   * <p>
+   * type(s) are allowed in the list List &lt;BuildingName&gt;.
+   *   
    * Note:
-   * <p>
+   *   
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withBuildingName} instead.
-   *
    *
    * @param buildingName
    */
@@ -527,7 +497,7 @@ public class LargeMailUser implements Cloneable {
    *
    * @param buildingName Objects of the following type are allowed in the list:
    *                     {@link BuildingName}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public LargeMailUser addToBuildingName(final BuildingName buildingName) {
     this.getBuildingName().add(buildingName);
@@ -536,13 +506,12 @@ public class LargeMailUser implements Cloneable {
 
   /**
    * Sets the value of the any property Objects of the following type(s) are
-   * allowed in the list List<Object>.
-   * <p>
+   * allowed in the list List &lt;Object&gt;.
+   *   
    * Note:
-   * <p>
+   *   
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withAny} instead.
-   *
    *
    * @param any
    */
@@ -555,7 +524,7 @@ public class LargeMailUser implements Cloneable {
    *
    * @param any Objects of the following type are allowed in the list:
    *            {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public LargeMailUser addToAny(final Object any) {
     this.getAny().add(any);
@@ -565,7 +534,7 @@ public class LargeMailUser implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setAddressLine(List<AddressLine>)
+   * @see #setAddressLine(List &lt;AddressLine&gt;)
    *
    * @param addressLine required parameter
    */
@@ -577,7 +546,7 @@ public class LargeMailUser implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setLargeMailUserName(List<LargeMailUserName>)
+   * @see #setLargeMailUserName(List &lt;LargeMailUserName&gt;)
    *
    * @param largeMailUserName required parameter
    */
@@ -601,7 +570,7 @@ public class LargeMailUser implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setBuildingName(List<BuildingName>)
+   * @see #setBuildingName(List &lt;BuildingName&gt;)
    *
    * @param buildingName required parameter
    */
@@ -661,7 +630,7 @@ public class LargeMailUser implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setAny(List<Object>)
+   * @see #setAny(List &lt;Object&gt;)
    *
    * @param any required parameter
    */
@@ -714,7 +683,7 @@ public class LargeMailUser implements Cloneable {
     return copy;
   }
 
-  /**
+  /*
    *
    */
   @XmlAccessorType(XmlAccessType.FIELD)
@@ -742,7 +711,6 @@ public class LargeMailUser implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -751,7 +719,6 @@ public class LargeMailUser implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -760,7 +727,6 @@ public class LargeMailUser implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -769,7 +735,6 @@ public class LargeMailUser implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -778,7 +743,6 @@ public class LargeMailUser implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -787,7 +751,6 @@ public class LargeMailUser implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -796,7 +759,6 @@ public class LargeMailUser implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -805,7 +767,6 @@ public class LargeMailUser implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -814,7 +775,6 @@ public class LargeMailUser implements Cloneable {
     }
 
     /**
-     *
      * @return always non-null
      */
     public Map<QName, String> getOtherAttributes() {
@@ -936,7 +896,7 @@ public class LargeMailUser implements Cloneable {
 
   }
 
-  /**
+  /*
    *
    */
   @XmlAccessorType(XmlAccessType.FIELD)
@@ -960,7 +920,6 @@ public class LargeMailUser implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -969,7 +928,6 @@ public class LargeMailUser implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -978,7 +936,6 @@ public class LargeMailUser implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -987,7 +944,6 @@ public class LargeMailUser implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -996,7 +952,6 @@ public class LargeMailUser implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -1005,7 +960,6 @@ public class LargeMailUser implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -1014,7 +968,6 @@ public class LargeMailUser implements Cloneable {
     }
 
     /**
-     *
      * @return always non-null
      */
     public Map<QName, String> getOtherAttributes() {

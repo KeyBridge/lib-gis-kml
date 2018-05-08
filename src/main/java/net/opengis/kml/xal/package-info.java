@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 @javax.xml.bind.annotation.XmlSchema(namespace = "urn:oasis:names:tc:ciq:xsdschema:xAL:2.0", xmlns = {
   @javax.xml.bind.annotation.XmlNs(prefix = "xal", namespaceURI = "urn:oasis:names:tc:ciq:xsdschema:xAL:2.0")

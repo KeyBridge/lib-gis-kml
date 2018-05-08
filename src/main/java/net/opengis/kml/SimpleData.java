@@ -12,44 +12,36 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
 import javax.xml.bind.annotation.*;
 
 /**
- * <simpledata name="string">
- * <p>
- * <SimpleData name="string"> This element assigns a value to the custom data
+ *  &lt;simpledata name="string"&gt;
+ *   
+ *  &lt;SimpleData name="string"&gt; This element assigns a value to the custom data
  * field identified by the name attribute. The type and name of this custom data
- * field are declared in the <Schema> element. Here is an example of defining
- * two custom data elements: <Placemark> <name>Easy trail</name> <ExtendedData>
- * <SchemaData schemaUrl="#TrailHeadTypeId">
- * <SimpleData name="TrailHeadName">Pi in the sky</SimpleData>
- * <SimpleData name="TrailLength">3.14159</SimpleData>
- * <SimpleData name="ElevationGain">10</SimpleData> </SchemaData>
- * </ExtendedData> <Point>
- * <coordinates>-122.000,37.002</coordinates> </Point> </Placemark> <Placemark>
- * <name>Difficult trail</name> <ExtendedData>
- * <SchemaData schemaUrl="#TrailHeadTypeId"> <SimpleData
- * name="TrailHeadName">Mount Everest</SimpleData>
- * <SimpleData name="TrailLength">347.45</SimpleData>
- * <SimpleData name="ElevationGain">10000</SimpleData> </SchemaData>
- * </ExtendedData>
- * <Point> <coordinates>-122.000,37.002</coordinates> </Point> </Placemark>
- * </p>
- * <p>
- * Here is an example of defining two custom data elements:
- * </p>
- * <p>
- * This element assigns a value to the custom data field identified by the name
- * attribute. The type and name of this custom data field are declared in the
- * <Schema> element.
- * </p>
- * <p>
- * <p>
- * <p>
+ * field are declared in the  &lt;Schema&gt; element. Here is an example of defining
+ * two custom data elements:  &lt;Placemark&gt;  &lt;name&gt;Easy trail &lt;/name&gt;  &lt;ExtendedData&gt;
+ *  &lt;SchemaData schemaUrl="#TrailHeadTypeId"&gt;
+ *  &lt;SimpleData name="TrailHeadName"&gt;Pi in the sky &lt;/SimpleData&gt;
+ *  &lt;SimpleData name="TrailLength"&gt;3.14159 &lt;/SimpleData&gt;
+ *  &lt;SimpleData name="ElevationGain"&gt;10 &lt;/SimpleData&gt;  &lt;/SchemaData&gt;
+ *  &lt;/ExtendedData&gt;  &lt;Point&gt;
+ *  &lt;coordinates&gt;-122.000,37.002 &lt;/coordinates&gt;  &lt;/Point&gt;  &lt;/Placemark&gt;  &lt;Placemark&gt;
+ *  &lt;name&gt;Difficult trail &lt;/name&gt;  &lt;ExtendedData&gt;
+ *  &lt;SchemaData schemaUrl="#TrailHeadTypeId"&gt;  &lt;SimpleData
+ * name="TrailHeadName"&gt;Mount Everest &lt;/SimpleData&gt;
+ *  &lt;SimpleData name="TrailLength"&gt;347.45 &lt;/SimpleData&gt;
+ *  &lt;SimpleData name="ElevationGain"&gt;10000 &lt;/SimpleData&gt;  &lt;/SchemaData&gt;
+ *  &lt;/ExtendedData&gt;
+ *  &lt;Point&gt;  &lt;coordinates&gt;-122.000,37.002 &lt;/coordinates&gt;  &lt;/Point&gt;  &lt;/Placemark&gt;
+ * Here is an example of defining two custom data elements: This element assigns
+ * a value to the custom data field identified by the name attribute. The type
+ * and name of this custom data field are declared in the
+ *  &lt;Schema&gt; element.
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SimpleDataType", propOrder = {
@@ -59,42 +51,30 @@ import javax.xml.bind.annotation.*;
 public class SimpleData implements Cloneable {
 
   /**
-   * <value>
-   * <p>
-   * <Placemark> <name>Club house</name> <ExtendedData> <Data name="holeNumber">
-   * <value>1</value>
-   * </Data> <Data name="holeYardage"> <value>234</value> </Data>
-   * <Data name="holePar">
-   * <value>4</value> </Data> </ExtendedData> </Placemark>
-   * </p>
-   * <p>
-   * <displayName> An optional formatted version of name, to be used for display
+   *  &lt;value&gt;
+   *   
+   *  &lt;Placemark&gt;  &lt;name&gt;Club house &lt;/name&gt;  &lt;ExtendedData&gt;  &lt;Data name="holeNumber"&gt;
+   *  &lt;value&gt;1 &lt;/value&gt;
+   *  &lt;/Data&gt;  &lt;Data name="holeYardage"&gt;  &lt;value&gt;234 &lt;/value&gt;  &lt;/Data&gt;
+   *  &lt;Data name="holePar"&gt;
+   *  &lt;value&gt;4 &lt;/value&gt;  &lt;/Data&gt;  &lt;/ExtendedData&gt;  &lt;/Placemark&gt;
+   *  &lt;displayName&gt; An optional formatted version of name, to be used for display
    * purposes.
-   * <value> Value of the data pair. <Placemark> <name>Club house</name>
-   * <ExtendedData>
-   * <Data name="holeNumber"> <value>1</value> </Data> <Data name="holeYardage">
-   * <value>234</value>
-   * </Data> <Data name="holePar"> <value>4</value> </Data> </ExtendedData>
-   * </Placemark>
-   * </p>
-   * <p>
+   *  &lt;value&gt; Value of the data pair.  &lt;Placemark&gt;  &lt;name&gt;Club house &lt;/name&gt;
+   *  &lt;ExtendedData&gt;
+   *  &lt;Data name="holeNumber"&gt;  &lt;value&gt;1 &lt;/value&gt;  &lt;/Data&gt;  &lt;Data name="holeYardage"&gt;
+   *  &lt;value&gt;234 &lt;/value&gt;
+   *  &lt;/Data&gt;  &lt;Data name="holePar"&gt;  &lt;value&gt;4 &lt;/value&gt;  &lt;/Data&gt;  &lt;/ExtendedData&gt;
+   *  &lt;/Placemark&gt;
    * Value of the data pair.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlValue
   protected String value;
   /**
-   * <name>
-   * <p>
+   *  &lt;name&gt;
+   *   
    * User-defined text displayed in the 3D viewer as the label for the object
    * (for example, for a Placemark, Folder, or NetworkLink).
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlAttribute(name = "name", required = true)
   protected String name;
@@ -113,7 +93,7 @@ public class SimpleData implements Cloneable {
    * Default no-arg constructor is private. Use overloaded constructor instead!
    * (Temporary solution, till a better and more suitable ObjectFactory is
    * created.)
-   * <p>
+   *   
    */
   @Deprecated
   private SimpleData() {

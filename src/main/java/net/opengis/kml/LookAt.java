@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -22,42 +22,38 @@ import javax.xml.bind.annotation.*;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- * <LookAt>
+ * &lt;LookAt&gt;
  * <p>
  * Defines a virtual camera that is associated with any element derived from
  * Feature. The LookAt element positions the "camera" in relation to the object
  * that is being viewed. In Google Earth, the view "flies to" this LookAt
  * viewpoint when the user double-clicks an item in the Places panel or
- * double-clicks an icon in the 3D viewer.
- * </p>
+ * double-clicks an icon in the 3D viewer. Syntax: &lt;pre&gt;
+ * &lt;strong&gt;&lt;LookAt id="ID"&gt; &lt;/strong&gt; &lt;!-- inherited from
+ * AbstractView element --&gt;
+ * &lt;em&gt;&lt;TimePrimitive&gt;...&lt;/TimePrimitive&gt; &lt;/em&gt; &lt;!--
+ * gx:TimeSpan or gx:TimeStamp --&gt;
  * <p>
- * Syntax:
- * <pre><strong>&lt;LookAt id="ID"&gt;</strong>
- *   &lt;!-- inherited from AbstractView element --&gt;
- *   <em>&lt;TimePrimitive&gt;...&lt;/TimePrimitive&gt;</em>  &lt;!-- gx:TimeSpan or gx:TimeStamp --&gt;
+ * &lt;!-- specific to LookAt --&gt; &lt;longitude&gt;0&lt;/longitude&gt;
+ * &lt;!-- kml:angle180 --&gt; &lt;latitude&gt;0&lt;/latitude&gt; &lt;!--
+ * kml:angle90 --&gt; &lt;altitude&gt;0&lt;/altitude&gt; &lt;!-- double --&gt;
+ * &lt;heading&gt;0&lt;/heading&gt; &lt;!-- kml:angle360 --&gt;
+ * &lt;tilt&gt;0&lt;/tilt&gt; &lt;!-- kml:anglepos90 --&gt;
+ * &lt;range&gt;&lt;/range&gt; &lt;!-- double --&gt;
+ * &lt;altitudeMode&gt;clampToGround&lt;/altitudeMode&gt;
+ * &lt;!--kml:altitudeModeEnum:clampToGround, relativeToGround, absolute --&gt;
+ * &lt;!-- or, gx:altitudeMode can be substituted: clampToSeaFloor,
+ * relativeToSeaFloor --&gt;
  * <p>
- *   &lt;!-- specific to LookAt --&gt;
- *   &lt;longitude&gt;0&lt;/longitude&gt;            &lt;!-- kml:angle180 --&gt;
- *   &lt;latitude&gt;0&lt;/latitude&gt;              &lt;!-- kml:angle90 --&gt;
- *   &lt;altitude&gt;0&lt;/altitude&gt;              &lt;!-- double --&gt;
- *   &lt;heading&gt;0&lt;/heading&gt;                &lt;!-- kml:angle360 --&gt;
- *   &lt;tilt&gt;0&lt;/tilt&gt;                      &lt;!-- kml:anglepos90 --&gt;
- *   &lt;range&gt;&lt;/range&gt;                     &lt;!-- double --&gt;
- *   &lt;altitudeMode&gt;clampToGround&lt;/altitudeMode&gt;
- *           &lt;!--kml:altitudeModeEnum:clampToGround, relativeToGround, absolute --&gt;
- *           &lt;!-- or, gx:altitudeMode can be substituted: clampToSeaFloor, relativeToSeaFloor --&gt;
- * <p>
- * <strong>&lt;/LookAt&gt;</strong></pre>
+ * &lt;strong&gt;&lt;/LookAt&gt; &lt;/strong&gt; </pre>
  * <p>
  * Extends:
  *
- * @see: <AbstractView>
+ * @see: &lt;AbstractView&gt;
  *
  * Contained By:
- * @see: <Feature>
- * @see: <NetworkLinkControl>
- *
- *
+ * @see: &lt;Feature&gt;
+ * @see: &lt;NetworkLinkControl&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -74,138 +70,89 @@ import net.opengis.kml.annotations.Obvious;
 })
 @XmlRootElement(name = "LookAt", namespace = "http://www.opengis.net/kml/2.2")
 public class LookAt
-        extends AbstractView
-        implements Cloneable {
+  extends AbstractView
+  implements Cloneable {
 
   /**
-   * <longitude>
+   * &lt;longitude&gt;
    * <p>
    * Longitude of the point the camera is looking at. Angular distance in
    * degrees, relative to the Prime Meridian. Values west of the Meridian range
    * from −180 to 0 degrees. Values east of the Meridian range from 0 to 180
+   * degrees. Longitude of the virtual camera (eye point). Angular distance in
+   * degrees, relative to the Prime Meridian. Values west of the Meridian range
+   * from −180 to 0 degrees. Values east of the Meridian range from 0 to 180
    * degrees.
-   * </p>
-   * <p>
-   * Longitude of the virtual camera (eye point). Angular distance in degrees,
-   * relative to the Prime Meridian. Values west of the Meridian range from −180
-   * to 0 degrees. Values east of the Meridian range from 0 to 180 degrees.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlElement(defaultValue = "0.0")
   protected double longitude;
   /**
-   * <latitude>
+   * &lt;latitude&gt;
    * <p>
    * Latitude of the point the camera is looking at. Degrees north or south of
    * the Equator (0 degrees). Values range from −90 degrees to 90 degrees.
-   * </p>
-   * <p>
    * Latitude of the virtual camera. Degrees north or south of the Equator (0
    * degrees). Values range from −90 degrees to 90 degrees.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlElement(defaultValue = "0.0")
   protected double latitude;
   /**
-   * <altitude>
+   * &lt;altitude&gt;
    * <p>
    * Distance from the earth's surface, in meters. Interpreted according to the
-   * LookAt's altitude mode.
-   * </p>
-   * <p>
-   * Distance of the camera from the earth's surface, in meters. Interpreted
-   * according to the Camera's <altitudeMode> or <gx:altitudeMode>.
-   * </p>
-   * <p>
-   * Specifies the distance above the earth's surface, in meters, and is
-   * interpreted according to the altitude mode.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * LookAt's altitude mode. Distance of the camera from the earth's surface, in
+   * meters. Interpreted according to the Camera's &lt;altitudeMode&gt; or
+   * &lt;gx:altitudeMode&gt;. Specifies the distance above the earth's surface,
+   * in meters, and is interpreted according to the altitude mode.
    */
   @XmlElement(defaultValue = "0.0")
   protected double altitude;
   /**
-   * <heading>
+   * &lt;heading&gt;
    * <p>
    * Direction (azimuth) of the camera, in degrees. Default=0 (true North). (See
-   * diagram.) Values range from 0 to 360 degrees.
-   * </p>
-   * <p>
-   * Direction (that is, North, South, East, West), in degrees. Default=0
-   * (North). (See diagram below.) Values range from 0 to 360 degrees.
-   * </p>
-   * <p>
-   * Direction (that is, North, South, East, West), in degrees. Default=0
-   * (North). (See diagram.) Values range from 0 to 360 degrees.
-   * </p>
-   * <p>
-   * Rotation about the z axis (normal to the Earth's surface). A value of 0
-   * (the default) equals North. A positive rotation is clockwise around the z
-   * axis and specified in degrees from 0 to 360.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * diagram.) Values range from 0 to 360 degrees. Direction (that is, North,
+   * South, East, West), in degrees. Default=0 (North). (See diagram below.)
+   * Values range from 0 to 360 degrees. Direction (that is, North, South, East,
+   * West), in degrees. Default=0 (North). (See diagram.) Values range from 0 to
+   * 360 degrees. Rotation about the z axis (normal to the Earth's surface). A
+   * value of 0 (the default) equals North. A positive rotation is clockwise
+   * around the z axis and specified in degrees from 0 to 360.
    */
   @XmlElement(defaultValue = "0.0")
   protected double heading;
   /**
-   * <tilt>
+   * &lt;tilt&gt;
    * <p>
    * Angle between the direction of the LookAt position and the normal to the
    * surface of the earth. (See diagram below.) Values range from 0 to 90
-   * degrees. Values for
-   * <tilt> cannot be negative. A <tilt> value of 0 degrees indicates viewing
-   * from directly above. A <tilt> value of 90 degrees indicates viewing along
-   * the horizon.
-   * </p>
-   * <p>
-   * Rotation about the x axis. A positive rotation is clockwise around the x
-   * axis and specified in degrees from 0 to 360.
-   * </p>
-   * <p>
-   * Rotation, in degrees, of the camera around the X axis. A value of 0
-   * indicates that the view is aimed straight down toward the earth (the most
-   * common case). A value for 90 for <tilt> indicates that the view is aimed
-   * toward the horizon. Values greater than 90 indicate that the view is
-   * pointed up into the sky. Values for <tilt> are clamped at +180 degrees.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * degrees. Values for &lt;tilt&gt; cannot be negative. A &lt;tilt&gt; value
+   * of 0 degrees indicates viewing from directly above. A &lt;tilt&gt; value of
+   * 90 degrees indicates viewing along the horizon. Rotation about the x axis.
+   * A positive rotation is clockwise around the x axis and specified in degrees
+   * from 0 to 360. Rotation, in degrees, of the camera around the X axis. A
+   * value of 0 indicates that the view is aimed straight down toward the earth
+   * (the most common case). A value for 90 for &lt;tilt&gt; indicates that the
+   * view is aimed toward the horizon. Values greater than 90 indicate that the
+   * view is pointed up into the sky. Values for &lt;tilt&gt; are clamped at
+   * +180 degrees.
    */
   @XmlElement(defaultValue = "0.0")
   protected double tilt;
   /**
-   * <range> (required)
+   * &lt;range&gt; (required)
    * <p>
-   * Distance in meters from the point specified by <longitude>, <latitude>, and
-   * <altitude>
-   * to the LookAt position. (See diagram below.)
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * Distance in meters from the point specified by &lt;longitude&gt;,
+   * &lt;latitude&gt;, and &lt;altitude&gt; to the LookAt position. (See diagram
+   * below.)
    */
   @XmlElement(defaultValue = "0.0")
   protected double range;
   /**
    * AltitudeMode
    * <p>
-   * clampToGround, relativeToGround, absolute
-   * </p>
-   * <p>
-   * See Also: See <LookAt> and <Region>
-   * <p>
-   * <p>
+   * clampToGround, relativeToGround, absolute See Also: See &lt;LookAt&gt; and
+   * &lt;Region&gt;
    * <p>
    */
   @XmlElement(defaultValue = "clampToGround")
@@ -214,21 +161,16 @@ public class LookAt
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> lookAtSimpleExtension;
   /**
-   * <Object>
+   * &lt;Object&gt;
    * <p>
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the <Update> mechanism is to be used.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;<strong>
-   * &lt;!-- <em>Object</em> id="ID" targetId="NCName" --&gt;
-   * &lt;!-- /<em>Object</em>&gt; --&gt;</strong></pre>
-   * <p>
-   * <p>
+   * assigned if the &lt;Update&gt; mechanism is to be used. Syntax:
+   * <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
+   * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
    * <p>
    */
   @XmlElement(name = "LookAtObjectExtensionGroup")
@@ -361,9 +303,9 @@ public class LookAt
   /**
    * @see altitudeMode
    *
-   * @return possible object is null   {@code <}{@link Object}{@code>}
-     *     {@code <}{@link net.opengis.kml.AltitudeMode}{@code>}
-   *     {@code <}{@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}{@code>}
+   * @return possible object is null null null null null null null null   {@link Object}
+     *     {@link net.opengis.kml.AltitudeMode}
+   *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
    */
   public AltitudeMode getAltitudeMode() {
@@ -373,9 +315,9 @@ public class LookAt
   /**
    * @see altitudeMode
    *
-   * @param value allowed object is null   {@code <}{@link Object}{@code>}
-     *     {@code <}{@link net.opengis.kml.AltitudeMode}{@code>}
-   *     {@code <}{@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}{@code>}
+   * @param value allowed object is null null null null null null null null   {@link Object}
+     *     {@link net.opengis.kml.AltitudeMode}
+   *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
    */
   public void setAltitudeMode(AltitudeMode value) {
@@ -498,7 +440,8 @@ public class LookAt
    *
    * @param lookAtSimpleExtension Objects of the following type are allowed in
    *                              the list: {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public LookAt addToLookAtSimpleExtension(final Object lookAtSimpleExtension) {
     this.getLookAtSimpleExtension().add(lookAtSimpleExtension);
@@ -519,7 +462,8 @@ public class LookAt
    *
    * @param lookAtObjectExtension Objects of the following type are allowed in
    *                              the list: {@link AbstractObject}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public LookAt addToLookAtObjectExtension(final AbstractObject lookAtObjectExtension) {
     this.getLookAtObjectExtension().add(lookAtObjectExtension);
@@ -664,7 +608,7 @@ public class LookAt
   /**
    * fluent setter
    *
-   * @see #setLookAtSimpleExtension(List<Object>)
+   * @see #setLookAtSimpleExtension(List &lt;Object&gt;)
    *
    * @param lookAtSimpleExtension required parameter
    */
@@ -676,7 +620,7 @@ public class LookAt
   /**
    * fluent setter
    *
-   * @see #setLookAtObjectExtension(List<AbstractObject>)
+   * @see #setLookAtObjectExtension(List &lt;AbstractObject&gt;)
    *
    * @param lookAtObjectExtension required parameter
    */

@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -24,31 +24,24 @@ import net.opengis.kml.gx.MultiTrack;
 import net.opengis.kml.gx.Track;
 
 /**
- * <MultiGeometry>
- * <p>
+ *  &lt;MultiGeometry&gt;
+ *   
  * A container for zero or more geometry primitives associated with the same
- * feature.
- * </p>
- * <p>
- * Note: The <GeometryCollection> tag has been deprecated. Use <MultiGeometry>
- * instead.
- * </p>
- * <p>
- * Syntax:
- * <pre><strong>&lt;MultiGeometry id="ID"&gt;</strong>
+ * feature. Note: The  &lt;GeometryCollection&gt; tag has been deprecated. Use
+ *  &lt;MultiGeometry&gt;
+ * instead. Syntax:
+ *  &lt;pre&gt; &lt;strong&gt;&lt;MultiGeometry id="ID"&gt; &lt;/strong&gt;
  *   &lt;!-- specific to MultiGeometry --&gt;
- *   &lt;!-- 0 or more <em>Geometry</em> elements --&gt;
- * <strong>&lt;/MultiGeometry&gt;</strong></pre>
- * <p>
+ *   &lt;!-- 0 or more  &lt;em&gt;Geometry &lt;/em&gt; elements --&gt;
+ *  &lt;strong&gt;&lt;/MultiGeometry&gt; &lt;/strong&gt; </pre>
+ *   
  * Extends:
  *
- * @see: <Geometry>
+ * @see:  &lt;Geometry&gt;
  *
  * Contained By:
- * @see: <MultiGeometry>
- * @see: <Placemark>
- *
- *
+ * @see:  &lt;MultiGeometry&gt;
+ * @see:  &lt;Placemark&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -58,36 +51,29 @@ import net.opengis.kml.gx.Track;
   "multiGeometryObjectExtension"
 })
 @XmlRootElement(name = "MultiGeometry", namespace = "http://www.opengis.net/kml/2.2")
-public class MultiGeometry
-        extends Geometry
-        implements Cloneable {
+public class MultiGeometry extends Geometry implements Cloneable {
 
   /**
-   * <Geometry>
-   * <p>
+   *  &lt;Geometry&gt;
+   *   
    * This is an abstract element and cannot be used directly in a KML file. It
-   * provides a placeholder object for all derived Geometry objects.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;
-   * <strong>&lt;!<em>-- Geometry</em> id="ID" --&gt;                 &lt;!-- Point,LineString,LinearRing,
-   *                                                Polygon,MultiGeometry,Model --&gt;</strong>
-   * <strong>&lt;!-- /<em>Geometry --</em>&gt;</strong></pre>
-   * <p>
+   * provides a placeholder object for all derived Geometry objects. Syntax:
+   *  <pre>&lt;!-- abstract element; do not create --&gt;
+   *  &lt;strong&gt;&lt;! &lt;em&gt;-- Geometry &lt;/em&gt; id="ID" --&gt;                 &lt;!-- Point,LineString,LinearRing,
+   *                                                Polygon,MultiGeometry,Model --&gt; &lt;/strong&gt;
+   *  &lt;strong&gt;&lt;!-- / &lt;em&gt;Geometry -- &lt;/em&gt;&gt; &lt;/strong&gt; </pre>
+   *   
    * Extends:
    *
-   * @see: <Object>
+   * @see:  &lt;Object&gt;
    *
    * Extended By:
-   * @see: <LineString>
-   * @see: <LinearRing>
-   * @see: <Model>
-   * @see: <Point>
+   * @see:  &lt;LineString&gt;
+   * @see:  &lt;LinearRing&gt;
+   * @see:  &lt;Model&gt;
+   * @see:  &lt;Point&gt;
    * @see: MultiGeometry
    * @see: Polygon
-   *
-   *
    *
    */
   @XmlElementRef(name = "AbstractGeometryGroup", namespace = "http://www.opengis.net/kml/2.2", required = false)
@@ -96,22 +82,17 @@ public class MultiGeometry
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> multiGeometrySimpleExtension;
   /**
-   * <Object>
-   * <p>
+   *  &lt;Object&gt;
+   *   
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the <Update> mechanism is to be used.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;<strong>
-   * &lt;!-- <em>Object</em> id="ID" targetId="NCName" --&gt;
-   * &lt;!-- /<em>Object</em>&gt; --&gt;</strong></pre>
-   * <p>
-   * <p>
-   * <p>
+   * assigned if the  &lt;Update&gt; mechanism is to be used. Syntax:
+   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
+   * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
+   *   
    */
   @XmlElement(name = "MultiGeometryObjectExtensionGroup")
   protected List<AbstractObject> multiGeometryObjectExtension;
@@ -204,11 +185,9 @@ public class MultiGeometry
 
   /**
    * Creates a new instance of {@link MultiTrack} and adds it to geometry. This
-   * method is a short version for:    <code>
+   * method is a short version for:     &lt;code&gt;
    * MultiTrack multiTrack = new MultiTrack();
-   * this.getGeometry().add(multiTrack); </code>
-   * <p>
-   * <p>
+   * this.getGeometry().add(multiTrack);  &lt;/code&gt;
    */
   public MultiTrack createAndAddMultiTrack() {
     MultiTrack newValue = new MultiTrack();
@@ -218,11 +197,9 @@ public class MultiGeometry
 
   /**
    * Creates a new instance of {@link Track} and adds it to geometry. This
-   * method is a short version for:    <code>
+   * method is a short version for:     &lt;code&gt;
    * Track track = new Track();
-   * this.getGeometry().add(track); </code>
-   * <p>
-   * <p>
+   * this.getGeometry().add(track);  &lt;/code&gt;
    */
   public Track createAndAddTrack() {
     Track newValue = new Track();
@@ -232,11 +209,9 @@ public class MultiGeometry
 
   /**
    * Creates a new instance of {@link LinearRing} and adds it to geometry. This
-   * method is a short version for:    <code>
+   * method is a short version for:     &lt;code&gt;
    * LinearRing linearRing = new LinearRing();
-   * this.getGeometry().add(linearRing); </code>
-   * <p>
-   * <p>
+   * this.getGeometry().add(linearRing);  &lt;/code&gt;
    */
   public LinearRing createAndAddLinearRing() {
     LinearRing newValue = new LinearRing();
@@ -246,11 +221,9 @@ public class MultiGeometry
 
   /**
    * Creates a new instance of {@link Point} and adds it to geometry. This
-   * method is a short version for:    <code>
+   * method is a short version for:     &lt;code&gt;
    * Point point = new Point();
-   * this.getGeometry().add(point); </code>
-   * <p>
-   * <p>
+   * this.getGeometry().add(point);  &lt;/code&gt;
    */
   public Point createAndAddPoint() {
     Point newValue = new Point();
@@ -260,11 +233,9 @@ public class MultiGeometry
 
   /**
    * Creates a new instance of {@link Model} and adds it to geometry. This
-   * method is a short version for:    <code>
+   * method is a short version for:     &lt;code&gt;
    * Model model = new Model();
-   * this.getGeometry().add(model); </code>
-   * <p>
-   * <p>
+   * this.getGeometry().add(model);  &lt;/code&gt;
    */
   public Model createAndAddModel() {
     Model newValue = new Model();
@@ -274,11 +245,9 @@ public class MultiGeometry
 
   /**
    * Creates a new instance of {@link MultiGeometry} and adds it to geometry.
-   * This method is a short version for:    <code>
+   * This method is a short version for:     &lt;code&gt;
    * MultiGeometry multiGeometry = new MultiGeometry();
-   * this.getGeometry().add(multiGeometry); </code>
-   * <p>
-   * <p>
+   * this.getGeometry().add(multiGeometry);  &lt;/code&gt;
    */
   public MultiGeometry createAndAddMultiGeometry() {
     MultiGeometry newValue = new MultiGeometry();
@@ -288,11 +257,9 @@ public class MultiGeometry
 
   /**
    * Creates a new instance of {@link LineString} and adds it to geometry. This
-   * method is a short version for:    <code>
+   * method is a short version for:     &lt;code&gt;
    * LineString lineString = new LineString();
-   * this.getGeometry().add(lineString); </code>
-   * <p>
-   * <p>
+   * this.getGeometry().add(lineString);  &lt;/code&gt;
    */
   public LineString createAndAddLineString() {
     LineString newValue = new LineString();
@@ -302,11 +269,9 @@ public class MultiGeometry
 
   /**
    * Creates a new instance of {@link Polygon} and adds it to geometry. This
-   * method is a short version for:    <code>
+   * method is a short version for:     &lt;code&gt;
    * Polygon polygon = new Polygon();
-   * this.getGeometry().add(polygon); </code>
-   * <p>
-   * <p>
+   * this.getGeometry().add(polygon);  &lt;/code&gt;
    */
   public Polygon createAndAddPolygon() {
     Polygon newValue = new Polygon();
@@ -327,8 +292,8 @@ public class MultiGeometry
    * add a value to the geometry property collection
    *
    * @param geometry Objects of the following type are allowed in the list:
-   *                 {@code <}{@link Geometry}{@code>}{@link JAXBElement}{@code <}{@link Point}{@code>}{@link JAXBElement}{@code <}{@link LinearRing}{@code>}{@link JAXBElement}{@code <}{@link Polygon}{@code>}{@link JAXBElement}{@code <}{@link Track}{@code>}{@link JAXBElement}{@code <}{@link MultiTrack}{@code>}{@link JAXBElement}{@code <}{@link Model}{@code>}{@link JAXBElement}{@code <}{@link LineString}{@code>}{@link JAXBElement}{@code <}{@link MultiGeometry}{@code>}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   *                 {@link Geometry}{@link JAXBElement}{@link Point}{@link JAXBElement}{@link LinearRing}{@link JAXBElement}{@link Polygon}{@link JAXBElement}{@link Track}{@link JAXBElement}{@link MultiTrack}{@link JAXBElement}{@link Model}{@link JAXBElement}{@link LineString}{@link JAXBElement}{@link MultiGeometry}
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public MultiGeometry addToGeometry(final Geometry geometry) {
     this.getGeometry().add(geometry);
@@ -349,7 +314,7 @@ public class MultiGeometry
    *
    * @param multiGeometrySimpleExtension Objects of the following type are
    *                                     allowed in the list: {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public MultiGeometry addToMultiGeometrySimpleExtension(final Object multiGeometrySimpleExtension) {
     this.getMultiGeometrySimpleExtension().add(multiGeometrySimpleExtension);
@@ -371,7 +336,7 @@ public class MultiGeometry
    * @param multiGeometryObjectExtension Objects of the following type are
    *                                     allowed in the list:
    *                                     {@link AbstractObject}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public MultiGeometry addToMultiGeometryObjectExtension(final AbstractObject multiGeometryObjectExtension) {
     this.getMultiGeometryObjectExtension().add(multiGeometryObjectExtension);
@@ -432,7 +397,7 @@ public class MultiGeometry
   /**
    * fluent setter
    *
-   * @see #setGeometry(List<Geometry>)
+   * @see #setGeometry(List &lt;Geometry&gt;)
    *
    * @param geometry required parameter
    */
@@ -444,7 +409,7 @@ public class MultiGeometry
   /**
    * fluent setter
    *
-   * @see #setMultiGeometrySimpleExtension(List<Object>)
+   * @see #setMultiGeometrySimpleExtension(List &lt;Object&gt;)
    *
    * @param multiGeometrySimpleExtension required parameter
    */
@@ -456,7 +421,7 @@ public class MultiGeometry
   /**
    * fluent setter
    *
-   * @see #setMultiGeometryObjectExtension(List<AbstractObject>)
+   * @see #setMultiGeometryObjectExtension(List &lt;AbstractObject&gt;)
    *
    * @param multiGeometryObjectExtension required parameter
    */

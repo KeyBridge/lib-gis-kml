@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml.gx;
 
@@ -25,36 +25,31 @@ import net.opengis.kml.atom.Link;
 import net.opengis.kml.xal.AddressDetails;
 
 /**
- * <gx:Tour>
- * <p>
- * <gx:Tour> can contain a single <gx:Playlist> element, which in turn contains
+ *  &lt;gx:Tour&gt;
+ *   
+ *  &lt;gx:Tour&gt; can contain a single  &lt;gx:Playlist&gt; element, which in turn contains
  * an ordered list of gx:TourPrimitive elements that define a tour in any KML
- * browser. Learn more about tours.
- * </p>
- * <p>
- * Syntax:
- * <pre>&lt;gx:Tour&gt;
+ * browser. Learn more about tours. Syntax:
+ *  <pre>&lt;gx:Tour&gt;
  *   &lt;name&gt;...&lt;/name&gt;
  *   &lt;description&gt;...&lt;/description&gt;
  *   &lt;gx:Playlist&gt;
- * <p>
- *     &lt;!-- any number of <em>gx:TourPrimitive</em> elements --&gt;
- * <p>
+ *
+ *     &lt;!-- any number of  &lt;em&gt;gx:TourPrimitive &lt;/em&gt; elements --&gt;
+ *
  *   &lt;/gx:Playlist&gt;
- * &lt;/gx:Tour&gt;</pre>
- * <p>
+ * &lt;/gx:Tour&gt; </pre>
+ *   
  * Contains:
  *
- * @see: <gx:Playlist>
- * @see: <gx:Tour>
- * @see: <gx:Tour> <gx:Playlist> <!-- gx:TourPrimitive --> ...
- * <!-- /gx:TourPrimitive -->
- * <!--- Any number of gx:TourPrimitive elements can be included --->
- * </gx:Playlist> </gx:Tour>
+ * @see:  &lt;gx:Playlist&gt;
+ * @see:  &lt;gx:Tour&gt;
+ * @see:  &lt;gx:Tour&gt;  &lt;gx:Playlist&gt;  &lt;!-- gx:TourPrimitive --&gt; ...
+ *  &lt;!-- /gx:TourPrimitive --&gt;
+ *  &lt;!--- Any number of gx:TourPrimitive elements can be included ---&gt;
+ *  &lt;/gx:Playlist&gt;  &lt;/gx:Tour&gt;
  * @see: gx:Playlist
  * @see: gx:TourPrimitive
- *
- *
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -63,8 +58,8 @@ import net.opengis.kml.xal.AddressDetails;
 })
 @XmlRootElement(name = "Tour", namespace = "http://www.google.com/kml/ext/2.2")
 public class Tour
-        extends Feature
-        implements Cloneable {
+  extends Feature
+  implements Cloneable {
 
   @XmlElement(name = "Playlist")
   protected Playlist playlist;
@@ -128,12 +123,10 @@ public class Tour
 
   /**
    * Creates a new instance of {@link Playlist} and set it to playlist.
-   * <p>
-   * This method is a short version for:    <code>
+   *   
+   * This method is a short version for:     &lt;code&gt;
    * Playlist playlist = new Playlist();
-   * this.setPlaylist(playlist); </code>
-   * <p>
-   * <p>
+   * this.setPlaylist(playlist);  &lt;/code&gt;
    */
   public Playlist createAndSetPlaylist() {
     Playlist newValue = new Playlist();

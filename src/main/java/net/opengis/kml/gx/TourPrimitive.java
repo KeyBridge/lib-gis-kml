@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml.gx;
 
@@ -23,50 +23,41 @@ import javax.xml.bind.annotation.XmlType;
 import net.opengis.kml.AbstractObject;
 
 /**
- * <gx:TourPrimitive>
- * <p>
+ *  &lt;gx:TourPrimitive&gt;
+ *   
  * Elements extended from gx:TourPrimitive provide instructions to KML browsers
  * during tours, including points to fly to and the duration of those flights,
- * pauses, updates to KML features, and sound files to play.
- * </p>
- * <p>
- * These elements must be contained within a <gx:Playlist> element, which in
- * turn is contained with a <gx:Tour> element.
- * </p>
- * <p>
- * This is an abstract element and cannot be used directly in a KML file. This
- * element is extended by the <gx:FlyTo>, <gx:AnimatedUpdate>, <gx:TourControl>,
- * <gx:Wait>, and <gx:SoundCue> elements.
- * </p>
- * <p>
- * Syntax:
- * <pre>&lt;gx:Tour&gt;
+ * pauses, updates to KML features, and sound files to play. These elements must
+ * be contained within a  &lt;gx:Playlist&gt; element, which in turn is contained with
+ * a  &lt;gx:Tour&gt; element. This is an abstract element and cannot be used directly
+ * in a KML file. This element is extended by the  &lt;gx:FlyTo&gt;,
+ *  &lt;gx:AnimatedUpdate&gt;,  &lt;gx:TourControl&gt;,
+ *  &lt;gx:Wait&gt;, and  &lt;gx:SoundCue&gt; elements. Syntax:
+ *  <pre>&lt;gx:Tour&gt;
  *   &lt;gx:Playlist&gt;
- * <p>
+ *
  *     &lt;!-- abstract element; do not create --&gt;
- *     <strong>&lt;!-- gx:TourPrimitive --&gt;</strong>    &lt;!-- gx:AnimatedUpdate, gx:FlyTo, gx:TourControl, gx:SoundCue, gx:Wait --&gt;
- *         &lt;!-- extends <strong>Object</strong> --&gt;
- *     <strong>&lt;!-- /gx:TourPrimitive --&gt;</strong>
- * <p>
+ *      &lt;strong&gt;&lt;!-- gx:TourPrimitive --&gt; &lt;/strong&gt;    &lt;!-- gx:AnimatedUpdate, gx:FlyTo, gx:TourControl, gx:SoundCue, gx:Wait --&gt;
+ *         &lt;!-- extends  &lt;strong&gt;Object &lt;/strong&gt; --&gt;
+ *      &lt;strong&gt;&lt;!-- /gx:TourPrimitive --&gt; &lt;/strong&gt;
+ *
  *   &lt;/gx:Playlist&gt;
  * &lt;/gx:Tour&gt;
- * </pre>
- * <p>
+ *  </pre>
+ *   
  * Extends:
  *
- * @see: <Object>
+ * @see:  &lt;Object&gt;
  *
  * Extended By:
- * @see: <gx:AnimatedUpdate>
- * @see: <gx:FlyTo>
- * @see: <gx:SoundCue>
- * @see: <gx:TourControl>
- * @see: <gx:Wait>
+ * @see:  &lt;gx:AnimatedUpdate&gt;
+ * @see:  &lt;gx:FlyTo&gt;
+ * @see:  &lt;gx:SoundCue&gt;
+ * @see:  &lt;gx:TourControl&gt;
+ * @see:  &lt;gx:Wait&gt;
  *
  * Contained By:
- * @see: <gx:Playlist>
- *
- *
+ * @see:  &lt;gx:Playlist&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -79,8 +70,8 @@ import net.opengis.kml.AbstractObject;
   SoundCue.class
 })
 public abstract class TourPrimitive
-        extends AbstractObject
-        implements Cloneable {
+  extends AbstractObject
+  implements Cloneable {
 
   public TourPrimitive() {
     super();

@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -24,22 +24,17 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import net.opengis.kml.gx.*;
 
 /**
- * <Object>
- * <p>
+ *  &lt;Object&gt;
+ *   
  * This is an abstract base class and cannot be used directly in a KML file. It
  * provides the id attribute, which allows unique identification of a KML
  * element, and the targetId attribute, which is used to reference objects that
  * have already been loaded into Google Earth. The id attribute must be assigned
- * if the <Update> mechanism is to be used.
- * </p>
- * <p>
- * Syntax:
- * <pre>&lt;!-- abstract element; do not create --&gt;<strong>
- * &lt;!-- <em>Object</em> id="ID" targetId="NCName" --&gt;
- * &lt;!-- /<em>Object</em>&gt; --&gt;</strong></pre>
- * <p>
- * <p>
- * <p>
+ * if the  &lt;Update&gt; mechanism is to be used. Syntax:
+ *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+ * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
+ * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
+ *   
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "AbstractObjectType", propOrder = {
@@ -203,7 +198,7 @@ public abstract class AbstractObject implements Cloneable {
    *
    * @param objectSimpleExtension Objects of the following type are allowed in
    *                              the list: {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public AbstractObject addToObjectSimpleExtension(final Object objectSimpleExtension) {
     this.getObjectSimpleExtension().add(objectSimpleExtension);
@@ -213,7 +208,7 @@ public abstract class AbstractObject implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setObjectSimpleExtension(List<Object>)
+   * @see #setObjectSimpleExtension(List &lt;Object&gt;)
    *
    * @param objectSimpleExtension required parameter
    */

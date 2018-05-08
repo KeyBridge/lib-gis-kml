@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -22,37 +22,27 @@ import javax.xml.bind.annotation.*;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- * <gx:TimeSpan> and <gx:TimeStamp>
- * <p>
- * If <begin> or <end> is missing, then that end of the period is unbounded (see
- * Example below).
- * </p>
- * <p>
- * Represents an extent in time bounded by begin and end dateTimes.
- * </p>
- * <p>
- * The dateTime is defined according to XML Schema time (see XML Schema Part 2:
- * Datatypes Second Edition). The value can be expressed as
+ *  &lt;gx:TimeSpan&gt; and  &lt;gx:TimeStamp&gt;
+ *   
+ * If  &lt;begin&gt; or  &lt;end&gt; is missing, then that end of the period is unbounded (see
+ * Example below). Represents an extent in time bounded by begin and end
+ * dateTimes. The dateTime is defined according to XML Schema time (see XML
+ * Schema Part 2: Datatypes Second Edition). The value can be expressed as
  * yyyy-mm-ddThh:mm:sszzzzzz, where T is the separator between the date and the
  * time, and the time zone is either Z (for UTC) or zzzzzz, which represents
  * ±hh:mm in relation to UTC. Additionally, the value can be expressed as a date
- * only. See <TimeStamp> for examples.
- * </p>
- * <p>
- * Syntax:
- * <pre><strong>&lt;TimeSpan id="ID"&gt;</strong>
- *   &lt;begin&gt;<em>...</em>&lt;/begin&gt;     &lt;!-- kml:dateTime --&gt;
- *   &lt;end&gt;<em>...</em>&lt;/end&gt;         &lt;!-- kml:dateTime --&gt;
- * <strong>&lt;/TimeSpan&gt;</strong></pre>
- * <p>
+ * only. See  &lt;TimeStamp&gt; for examples. Syntax:
+ *  &lt;pre&gt; &lt;strong&gt;&lt;TimeSpan id="ID"&gt; &lt;/strong&gt;
+ *   &lt;begin&gt; &lt;em&gt;... &lt;/em&gt;&lt;/begin&gt;     &lt;!-- kml:dateTime --&gt;
+ *   &lt;end&gt; &lt;em&gt;... &lt;/em&gt;&lt;/end&gt;         &lt;!-- kml:dateTime --&gt;
+ *  &lt;strong&gt;&lt;/TimeSpan&gt; &lt;/strong&gt; </pre>
+ *   
  * Extends:
  *
- * @see: <TimePrimitive>
+ * @see:  &lt;TimePrimitive&gt;
  *
  * Contained By:
- * @see: <Feature>
- *
- *
+ * @see:  &lt;Feature&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -64,51 +54,38 @@ import net.opengis.kml.annotations.Obvious;
 })
 @XmlRootElement(name = "TimeSpan", namespace = "http://www.opengis.net/kml/2.2")
 public class TimeSpan
-        extends TimePrimitive
-        implements Cloneable {
+  extends TimePrimitive
+  implements Cloneable {
 
   /**
-   * <begin>
-   * <p>
+   *  &lt;begin&gt;
+   *   
    * Describes the beginning instant of a time period. If absent, the beginning
    * of the period is unbounded.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   protected String begin;
   /**
-   * <end>
-   * <p>
+   *  &lt;end&gt;
+   *   
    * Describes the ending instant of a time period. If absent, the end of the
    * period is unbounded.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   protected String end;
   @XmlElement(name = "TimeSpanSimpleExtensionGroup")
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> timeSpanSimpleExtension;
   /**
-   * <Object>
-   * <p>
+   *  &lt;Object&gt;
+   *   
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the <Update> mechanism is to be used.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;<strong>
-   * &lt;!-- <em>Object</em> id="ID" targetId="NCName" --&gt;
-   * &lt;!-- /<em>Object</em>&gt; --&gt;</strong></pre>
-   * <p>
-   * <p>
-   * <p>
+   * assigned if the  &lt;Update&gt; mechanism is to be used. Syntax:
+   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
+   * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
+   *   
    */
   @XmlElement(name = "TimeSpanObjectExtensionGroup")
   protected List<AbstractObject> timeSpanObjectExtension;
@@ -250,7 +227,7 @@ public class TimeSpan
    *
    * @param timeSpanSimpleExtension Objects of the following type are allowed in
    *                                the list: {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public TimeSpan addToTimeSpanSimpleExtension(final Object timeSpanSimpleExtension) {
     this.getTimeSpanSimpleExtension().add(timeSpanSimpleExtension);
@@ -271,7 +248,7 @@ public class TimeSpan
    *
    * @param timeSpanObjectExtension Objects of the following type are allowed in
    *                                the list: {@link AbstractObject}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public TimeSpan addToTimeSpanObjectExtension(final AbstractObject timeSpanObjectExtension) {
     this.getTimeSpanObjectExtension().add(timeSpanObjectExtension);
@@ -356,7 +333,7 @@ public class TimeSpan
   /**
    * fluent setter
    *
-   * @see #setTimeSpanSimpleExtension(List<Object>)
+   * @see #setTimeSpanSimpleExtension(List &lt;Object&gt;)
    *
    * @param timeSpanSimpleExtension required parameter
    */
@@ -368,7 +345,7 @@ public class TimeSpan
   /**
    * fluent setter
    *
-   * @see #setTimeSpanObjectExtension(List<AbstractObject>)
+   * @see #setTimeSpanObjectExtension(List &lt;AbstractObject&gt;)
    *
    * @param timeSpanObjectExtension required parameter
    */

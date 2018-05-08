@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml.gx;
 
@@ -26,7 +26,7 @@ import net.opengis.kml.BooleanConverter;
 import net.opengis.kml.Geometry;
 import net.opengis.kml.annotations.Obvious;
 
-/**
+/*
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -37,8 +37,8 @@ import net.opengis.kml.annotations.Obvious;
 })
 @XmlRootElement(name = "MultiTrack", namespace = "http://www.google.com/kml/ext/2.2")
 public class MultiTrack
-        extends Geometry
-        implements Cloneable {
+  extends Geometry
+  implements Cloneable {
 
   @XmlElement(defaultValue = "clampToGround")
   protected AltitudeMode altitudeMode;
@@ -53,10 +53,9 @@ public class MultiTrack
   }
 
   /**
-   *
-   * @return possible object is null   {@code <}{@link Object}{@code>}
-     *     {@code <}{@link net.opengis.kml.AltitudeMode}{@code>}
-   *     {@code <}{@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}{@code>}
+   * @return possible object is null null null null null null null   {@link Object}
+     *     {@link net.opengis.kml.AltitudeMode}
+   *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
    */
   public AltitudeMode getAltitudeMode() {
@@ -64,10 +63,9 @@ public class MultiTrack
   }
 
   /**
-   *
-   * @param value allowed object is null   {@code <}{@link Object}{@code>}
-     *     {@code <}{@link net.opengis.kml.AltitudeMode}{@code>}
-   *     {@code <}{@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}{@code>}
+   * @param value allowed object is null null null null null null null   {@link Object}
+     *     {@link net.opengis.kml.AltitudeMode}
+   *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
    */
   public void setAltitudeMode(AltitudeMode value) {
@@ -75,7 +73,6 @@ public class MultiTrack
   }
 
   /**
-   *
    * @return possible object is {@link Boolean}
    *
    */
@@ -84,7 +81,6 @@ public class MultiTrack
   }
 
   /**
-   *
    * @param value allowed object is {@link Boolean}
    *
    */
@@ -92,7 +88,7 @@ public class MultiTrack
     this.interpolate = value;
   }
 
-  /**
+  /*
    *
    */
   public List<Track> getTrack() {
@@ -153,11 +149,9 @@ public class MultiTrack
 
   /**
    * Creates a new instance of {@link Track} and adds it to track. This method
-   * is a short version for:    <code>
+   * is a short version for:     &lt;code&gt;
    * Track track = new Track();
-   * this.getTrack().add(track); </code>
-   * <p>
-   * <p>
+   * this.getTrack().add(track);  &lt;/code&gt;
    */
   public Track createAndAddTrack() {
     Track newValue = new Track();
@@ -167,13 +161,12 @@ public class MultiTrack
 
   /**
    * Sets the value of the track property Objects of the following type(s) are
-   * allowed in the list List<Track>.
-   * <p>
+   * allowed in the list List &lt;Track&gt;.
+   *   
    * Note:
-   * <p>
+   *   
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withTrack} instead.
-   *
    *
    * @param track
    */
@@ -186,7 +179,7 @@ public class MultiTrack
    *
    * @param track Objects of the following type are allowed in the list:
    *              {@link Track}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public MultiTrack addToTrack(final Track track) {
     this.getTrack().add(track);
@@ -259,7 +252,7 @@ public class MultiTrack
   /**
    * fluent setter
    *
-   * @see #setTrack(List<Track>)
+   * @see #setTrack(List &lt;Track&gt;)
    *
    * @param track required parameter
    */

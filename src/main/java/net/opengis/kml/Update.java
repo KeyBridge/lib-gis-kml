@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -21,41 +21,34 @@ import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
- * <Update>
- * <p>
+ *  &lt;Update&gt;
+ *   
  * Specifies an addition, change, or deletion to KML data that has already been
- * loaded using the specified URL. The <targetHref> specifies the .kml or .kmz
- * file whose data (within Google Earth) is to be modified. <Update> is always
+ * loaded using the specified URL. The  &lt;targetHref&gt; specifies the .kml or .kmz
+ * file whose data (within Google Earth) is to be modified.  &lt;Update&gt; is always
  * contained in a NetworkLinkControl. Furthermore, the file containing the
  * NetworkLinkControl must have been loaded by a NetworkLink. See the "Topics in
- * KML" page on Updates for a detailed example of how Update works.
- * </p>
- * <p>
- * With <Update>, you can specify any number of Change, Create, and Delete tags
- * for a .kml file or .kmz archive that has previously been loaded with a
- * network link. See <Update>.
- * </p>
- * <p>
- * Syntax:
- * <pre><strong>&lt;Update&gt;
- *   </strong>&lt;targetHref&gt;...&lt;targetHref&gt;    &lt;!-- URL --&gt;
+ * KML" page on Updates for a detailed example of how Update works. With
+ *  &lt;Update&gt;, you can specify any number of Change, Create, and Delete tags for a
+ * .kml file or .kmz archive that has previously been loaded with a network
+ * link. See  &lt;Update&gt;. Syntax:
+ *  <pre> &lt;strong&gt;&lt;Update&gt;
+ *    &lt;/strong&gt;&lt;targetHref&gt;...&lt;targetHref&gt;    &lt;!-- URL --&gt;
  *   &lt;Change&gt;...&lt;/Change&gt;
  *   &lt;Create&gt;...&lt;/Create&gt;
  *   &lt;Delete&gt;...&lt;/Delete&gt;
- * <strong>&lt;/Update&gt;</strong></pre>
- * <p>
+ *  &lt;strong&gt;&lt;/Update&gt; &lt;/strong&gt; </pre>
+ *   
  * Contained By:
  *
- * @see: <NetworkLinkControl>
+ * @see:  &lt;NetworkLinkControl&gt;
  * @see: Note: This element was deprecated in KML Release 2.1 and is replaced by
- * <Link>, which provides the additional functionality of Regions. The <Url> tag
- * will still work in Google Earth, but use of the newer <Link> tag is
+ *  &lt;Link&gt;, which provides the additional functionality of Regions. The  &lt;Url&gt; tag
+ * will still work in Google Earth, but use of the newer  &lt;Link&gt; tag is
  * encouraged.
  * @see: Use this element to set the location of the link to the KML file, to
  * define the refresh options for the server and viewer changes, and to populate
  * a variable to return useful client information to the server.
- *
- *
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -68,29 +61,26 @@ import javax.xml.bind.annotation.*;
 public class Update implements Cloneable {
 
   /**
-   * <targethref> (required)
-   * <p>
+   *  &lt;targethref&gt; (required)
+   *   
    * A URL that specifies the .kml or .kmz file whose data (within Google Earth)
-   * is to be modified by an <Update> element. This KML file must already have
-   * been loaded via a <NetworkLink>. In that file, the element to be modified
-   * must already have an explicit id attribute defined for it.
-   * </p>
-   * <p>
-   * Specifies the texture file to be fetched by Google Earth. This reference
-   * can be a relative reference to an image file within the .kmz archive, or it
-   * can be an absolute reference to the file (for example, a URL).
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * is to be modified by an  &lt;Update&gt; element. This KML file must already have
+   * been loaded via a  &lt;NetworkLink&gt;. In that file, the element to be modified
+   * must already have an explicit id attribute defined for it. Specifies the
+   * texture file to be fetched by Google Earth. This reference can be a
+   * relative reference to an image file within the .kmz archive, or it can be
+   * an absolute reference to the file (for example, a URL).
    */
   @XmlElement(required = true)
   @XmlSchemaType(name = "anyURI")
   protected String targetHref;
   @XmlElements({
-    @XmlElement(name = "UpdateOpExtensionGroup"),
-    @XmlElement(name = "Change", type = Change.class),
-    @XmlElement(name = "Delete", type = Delete.class),
+    @XmlElement(name = "UpdateOpExtensionGroup")
+    ,
+    @XmlElement(name = "Change", type = Change.class)
+    ,
+    @XmlElement(name = "Delete", type = Delete.class)
+    ,
     @XmlElement(name = "Create", type = Create.class)
   })
   protected List<Object> createOrDeleteOrChange;
@@ -113,7 +103,7 @@ public class Update implements Cloneable {
    * Default no-arg constructor is private. Use overloaded constructor instead!
    * (Temporary solution, till a better and more suitable ObjectFactory is
    * created.)
-   * <p>
+   *   
    */
   @Deprecated
   private Update() {
@@ -223,7 +213,7 @@ public class Update implements Cloneable {
    * @param createOrDeleteOrChange Objects of the following type are allowed in
    *                               the list:
    *                               {@link Object}{@link Change}{@link Delete}{@link Create}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Update addToCreateOrDeleteOrChange(final Object createOrDeleteOrChange) {
     this.getCreateOrDeleteOrChange().add(createOrDeleteOrChange);
@@ -244,7 +234,7 @@ public class Update implements Cloneable {
    *
    * @param updateExtension Objects of the following type are allowed in the
    *                        list: {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Update addToUpdateExtension(final Object updateExtension) {
     this.getUpdateExtension().add(updateExtension);
@@ -254,7 +244,7 @@ public class Update implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setUpdateExtension(List<Object>)
+   * @see #setUpdateExtension(List &lt;Object&gt;)
    *
    * @param updateExtension required parameter
    */

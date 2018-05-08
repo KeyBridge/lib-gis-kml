@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml.gx;
 
@@ -24,34 +24,29 @@ import net.opengis.kml.LookAt;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- * <gx:FlyTo>
+ * &lt;gx:FlyTo&gt;
  * <p>
- * <gx:FlyTo> specifies a point in space to which the browser will fly during a
- * tour. It must contain one AbstractView, and should contain <gx:duration> and
- * <gx:flyToMode>
- * elements, which specify the time it takes to fly to the defined point from
- * the current point, and the method of flight, respectively.
- * </p>
- * <p>
- * Syntax:
+ * &lt;gx:FlyTo&gt; specifies a point in space to which the browser will fly
+ * during a tour. It must contain one AbstractView, and should contain
+ * &lt;gx:duration&gt; and &lt;gx:flyToMode&gt; elements, which specify the time
+ * it takes to fly to the defined point from the current point, and the method
+ * of flight, respectively. Syntax:
  * <pre>&lt;gx:FlyTo&gt;
  *   &lt;gx:duration&gt;0.0&lt;/gx:duration&gt;         &lt;!-- double --&gt;
- *   &lt;gx:flyToMode&gt;bounce&lt;/gx:duration&gt;      &lt;!-- <em>smooth</em> or <em>bounce</em> --&gt;
- *   &lt;!-- AbstractView --&gt;                   &lt;!-- <em>Camera</em> or <em>LookAt</em> --&gt;
+ *   &lt;gx:flyToMode&gt;bounce&lt;/gx:duration&gt;      &lt;!--  &lt;em&gt;smooth &lt;/em&gt; or  &lt;em&gt;bounce &lt;/em&gt; --&gt;
+ *   &lt;!-- AbstractView --&gt;                   &lt;!--  &lt;em&gt;Camera &lt;/em&gt; or  &lt;em&gt;LookAt &lt;/em&gt; --&gt;
  *     ...
  *   &lt;!-- /AbstractView --&gt;
- * &lt;/gx:FlyTo&gt;</pre>
+ * &lt;/gx:FlyTo&gt; </pre>
  * <p>
  * Extends:
  *
- * @see: <gx:TourPrimitive>
+ * @see: &lt;gx:TourPrimitive&gt;
  *
  * Contains:
- * @see: <AbstractView>
- * @see: <gx:duration>
- * @see: <gx:flyToMode>
- *
- *
+ * @see: &lt;AbstractView&gt;
+ * @see: &lt;gx:duration&gt;
+ * @see: &lt;gx:flyToMode&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -62,47 +57,29 @@ import net.opengis.kml.annotations.Obvious;
 })
 @XmlRootElement(name = "FlyTo", namespace = "http://www.google.com/kml/ext/2.2")
 public class FlyTo
-        extends TourPrimitive
-        implements Cloneable {
+  extends TourPrimitive
+  implements Cloneable {
 
   /**
-   * <gx:duration>
+   * &lt;gx:duration&gt;
    * <p>
-   * <gx:AnimatedUpdate> <gx:duration>5.0</gx:duration> <Update> .... </Update>
-   * </gx:AnimatedUpdate>
-   * </p>
-   * <p>
-   * <gx:FlyTo> <gx:flyToMode>bounce</gx:flyToMode>
-   * <gx:duration>10.2</gx:duration> <!--
-   * AbstractView --> ... <!-- /AbstractView --> </gx:FlyTo>
-   * </p>
-   * <p>
-   * <gx:duration> extends gx:TourPrimitive by specifying a time-span for
-   * events. The time is written as seconds using XML's double datatype.
-   * </p>
-   * <p>
-   * Duration and <gx:AnimatedUpdate>
-   * </p>
-   * <p>
-   * Duration and <gx:FlyTo>
-   * </p>
-   * <p>
-   * Specifies the length of time over which the update takes place. Integer,
-   * float, and color fields are smoothly animated from original to new value
-   * across the duration; boolean, string, and other values that don't lend to
-   * interpolation are updated at the end of the duration.
-   * </p>
-   * <p>
-   * When a duration is included within a <gx:FlyTo> element, it specifies the
-   * length of time that the browser takes to fly from the previous point to the
-   * specified point.
-   * </p>
-   * <p>
-   * Syntax:
+   * &lt;gx:AnimatedUpdate&gt; &lt;gx:duration&gt;5.0 &lt;/gx:duration&gt;
+   * &lt;Update&gt; .... &lt;/Update&gt; &lt;/gx:AnimatedUpdate&gt;
+   * &lt;gx:FlyTo&gt; &lt;gx:flyToMode&gt;bounce &lt;/gx:flyToMode&gt;
+   * &lt;gx:duration&gt;10.2 &lt;/gx:duration&gt; &lt;!-- AbstractView --&gt;
+   * ... &lt;!-- /AbstractView --&gt; &lt;/gx:FlyTo&gt; &lt;gx:duration&gt;
+   * extends gx:TourPrimitive by specifying a time-span for events. The time is
+   * written as seconds using XML's double datatype. Duration and
+   * &lt;gx:AnimatedUpdate&gt; Duration and &lt;gx:FlyTo&gt; Specifies the
+   * length of time over which the update takes place. Integer, float, and color
+   * fields are smoothly animated from original to new value across the
+   * duration; boolean, string, and other values that don't lend to
+   * interpolation are updated at the end of the duration. When a duration is
+   * included within a &lt;gx:FlyTo&gt; element, it specifies the length of time
+   * that the browser takes to fly from the previous point to the specified
+   * point. Syntax:
    * <pre>&lt;gx:duration&gt;0.0&lt;/gx:duration&gt;            &lt;!-- double --&gt;
    * </pre>
-   * <p>
-   * <p>
    * <p>
    */
   @XmlElement(defaultValue = "0.0")
@@ -110,33 +87,26 @@ public class FlyTo
   @XmlElement(defaultValue = "bounce")
   protected FlyToMode flyToMode;
   /**
-   * <abstractview>
+   * &lt;abstractview&gt;
    * <p>
    * Defines a viewpoint associated with any element derived from Feature. See
-   * <Camera>
-   * and <LookAt>.
-   * </p>
-   * <p>
-   * This is an abstract element and cannot be used directly in a KML file. This
-   * element is extended by the <Camera> and <LookAt> elements.
-   * </p>
-   * <p>
-   * Syntax:
+   * &lt;Camera&gt; and &lt;LookAt&gt;. This is an abstract element and cannot
+   * be used directly in a KML file. This element is extended by the
+   * &lt;Camera&gt; and &lt;LookAt&gt; elements. Syntax:
    * <pre>&lt;!-- abstract element; do not create --&gt;
-   * <strong>&lt;!--<em> AbstractView</em> --&gt;</strong>                   &lt;!-- Camera, LookAt --&gt;
-   *   &lt;!-- extends <span class="style1">Object</span> --&gt;
-   *   <em>&lt;TimePrimitive&gt;...&lt;/TimePrimitive&gt;</em>                        &lt;!-- gx:TimeSpan or gx:TimeStamp --&gt;
-   * <strong>&lt;-- /<em>AbstractView</em> --&gt;</strong></pre>
+   *  &lt;strong&gt;&lt;!-- &lt;em&gt; AbstractView &lt;/em&gt; --&gt; &lt;/strong&gt;                   &lt;!-- Camera, LookAt --&gt;
+   *   &lt;!-- extends  &lt;span class="style1"&gt;Object &lt;/span&gt; --&gt;
+   *    &lt;em&gt;&lt;TimePrimitive&gt;...&lt;/TimePrimitive&gt; &lt;/em&gt;                        &lt;!-- gx:TimeSpan or gx:TimeStamp --&gt;
+   *  &lt;strong&gt;&lt;-- / &lt;em&gt;AbstractView &lt;/em&gt; --&gt; &lt;/strong&gt;
+   * </pre>
    * <p>
    * Extends:
    *
-   * @see: <Object>
+   * @see: &lt;Object&gt;
    *
    * Extended By:
-   * @see: <Camera>
-   * @see: <LookAt>
-   *
-   *
+   * @see: &lt;Camera&gt;
+   * @see: &lt;LookAt&gt;
    *
    */
   @XmlElementRef(name = "AbstractViewGroup", namespace = "http://www.opengis.net/kml/2.2", required = false)
@@ -189,9 +159,9 @@ public class FlyTo
   /**
    * @see abstractView
    *
-   * @return possible object is null   {@code <}{@link AbstractView}{@code>}
-     *     {@code <}{@link LookAt}{@code>}
-   *     {@code <}{@link Camera}{@code>}
+   * @return possible object is null null null null null null null null   {@link AbstractView}
+     *     {@link LookAt}
+   *     {@link Camera}
    *
    */
   public AbstractView getAbstractView() {
@@ -201,9 +171,9 @@ public class FlyTo
   /**
    * @see abstractView
    *
-   * @param value allowed object is null   {@code <}{@link AbstractView}{@code>}
-     *     {@code <}{@link LookAt}{@code>}
-   *     {@code <}{@link Camera}{@code>}
+   * @param value allowed object is null null null null null null null null   {@link AbstractView}
+     *     {@link LookAt}
+   *     {@link Camera}
    *
    */
   public void setAbstractView(AbstractView value) {
@@ -257,11 +227,8 @@ public class FlyTo
   /**
    * Creates a new instance of {@link LookAt} and set it to abstractView.
    * <p>
-   * This method is a short version for:    <code>
-   * LookAt lookAt = new LookAt();
-   * this.setAbstractView(lookAt); </code>
-   * <p>
-   * <p>
+   * This method is a short version for: &lt;code&gt; LookAt lookAt = new
+   * LookAt(); this.setAbstractView(lookAt); &lt;/code&gt;
    */
   public LookAt createAndSetLookAt() {
     LookAt newValue = new LookAt();
@@ -272,11 +239,8 @@ public class FlyTo
   /**
    * Creates a new instance of {@link Camera} and set it to abstractView.
    * <p>
-   * This method is a short version for:    <code>
-   * Camera camera = new Camera();
-   * this.setAbstractView(camera); </code>
-   * <p>
-   * <p>
+   * This method is a short version for: &lt;code&gt; Camera camera = new
+   * Camera(); this.setAbstractView(camera); &lt;/code&gt;
    */
   public Camera createAndSetCamera() {
     Camera newValue = new Camera();

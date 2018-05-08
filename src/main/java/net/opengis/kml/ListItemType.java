@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -21,8 +21,8 @@ import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <listitemtype>
- * <p>
+ *  &lt;listitemtype&gt;
+ *   
  * Specifies how a Feature is displayed in the list view. Possible values are:
  * check (default) - The Feature's visibility is tied to its item's checkbox.
  * radioFolder - When specified for a Container, only one of the Container's
@@ -34,10 +34,6 @@ import javax.xml.bind.annotation.XmlType;
  * normal checkbox for visibility but do not display the Container or Network
  * Link's children in the list view. A checkbox allows the user to toggle
  * visibility of the child objects in the viewer.
- * </p>
- * <p>
- * <p>
- * <p>
  */
 @XmlType(name = "listItemTypeEnumType")
 @XmlEnum

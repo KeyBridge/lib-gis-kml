@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -22,14 +22,10 @@ import javax.xml.bind.annotation.*;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- * <latlonaltbox>(required)
+ * &lt;latlonaltbox&gt;(required)
  * <p>
  * A bounding box that describes an area of interest defined by geographic
  * coordinates and altitudes. Default values and required fields are as follows:
- * </p>
- * <p>
- * <p>
- * <p>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "LatLonAltBoxType", propOrder = {
@@ -41,40 +37,28 @@ import net.opengis.kml.annotations.Obvious;
 })
 @XmlRootElement(name = "LatLonAltBox", namespace = "http://www.opengis.net/kml/2.2")
 public class LatLonAltBox
-        extends AbstractLatLonBox
-        implements Cloneable {
+  extends AbstractLatLonBox
+  implements Cloneable {
 
   /**
-   * <minaltitude>
+   * &lt;minaltitude&gt;
    * <p>
    * Specified in meters (and is affected by the altitude mode specification).
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlElement(defaultValue = "0.0")
   protected double minAltitude;
   /**
-   * <maxaltitude>
+   * &lt;maxaltitude&gt;
    * <p>
    * Specified in meters (and is affected by the altitude mode specification).
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlElement(defaultValue = "0.0")
   protected double maxAltitude;
   /**
    * AltitudeMode
    * <p>
-   * clampToGround, relativeToGround, absolute
-   * </p>
-   * <p>
-   * See Also: See <LookAt> and <Region>
-   * <p>
-   * <p>
+   * clampToGround, relativeToGround, absolute See Also: See &lt;LookAt&gt; and
+   * &lt;Region&gt;
    * <p>
    */
   @XmlElement(defaultValue = "clampToGround")
@@ -83,21 +67,16 @@ public class LatLonAltBox
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> latLonAltBoxSimpleExtension;
   /**
-   * <Object>
+   * &lt;Object&gt;
    * <p>
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the <Update> mechanism is to be used.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;<strong>
-   * &lt;!-- <em>Object</em> id="ID" targetId="NCName" --&gt;
-   * &lt;!-- /<em>Object</em>&gt; --&gt;</strong></pre>
-   * <p>
-   * <p>
+   * assigned if the &lt;Update&gt; mechanism is to be used. Syntax:
+   * <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
+   * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
    * <p>
    */
   @XmlElement(name = "LatLonAltBoxObjectExtensionGroup")
@@ -150,9 +129,9 @@ public class LatLonAltBox
   /**
    * @see altitudeMode
    *
-   * @return possible object is null   {@code <}{@link Object}{@code>}
-     *     {@code <}{@link net.opengis.kml.AltitudeMode}{@code>}
-   *     {@code <}{@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}{@code>}
+   * @return possible object is null null null null null null null null   {@link Object}
+     *     {@link net.opengis.kml.AltitudeMode}
+   *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
    */
   public AltitudeMode getAltitudeMode() {
@@ -162,9 +141,9 @@ public class LatLonAltBox
   /**
    * @see altitudeMode
    *
-   * @param value allowed object is null   {@code <}{@link Object}{@code>}
-     *     {@code <}{@link net.opengis.kml.AltitudeMode}{@code>}
-   *     {@code <}{@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}{@code>}
+   * @param value allowed object is null null null null null null null null   {@link Object}
+     *     {@link net.opengis.kml.AltitudeMode}
+   *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
    */
   public void setAltitudeMode(AltitudeMode value) {
@@ -267,7 +246,8 @@ public class LatLonAltBox
    *
    * @param latLonAltBoxSimpleExtension Objects of the following type are
    *                                    allowed in the list: {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public LatLonAltBox addToLatLonAltBoxSimpleExtension(final Object latLonAltBoxSimpleExtension) {
     this.getLatLonAltBoxSimpleExtension().add(latLonAltBoxSimpleExtension);
@@ -289,7 +269,8 @@ public class LatLonAltBox
    * @param latLonAltBoxObjectExtension Objects of the following type are
    *                                    allowed in the list:
    *                                    {@link AbstractObject}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public LatLonAltBox addToLatLonAltBoxObjectExtension(final AbstractObject latLonAltBoxObjectExtension) {
     this.getLatLonAltBoxObjectExtension().add(latLonAltBoxObjectExtension);
@@ -386,7 +367,7 @@ public class LatLonAltBox
   /**
    * fluent setter
    *
-   * @see #setLatLonAltBoxSimpleExtension(List<Object>)
+   * @see #setLatLonAltBoxSimpleExtension(List &lt;Object&gt;)
    *
    * @param latLonAltBoxSimpleExtension required parameter
    */
@@ -398,7 +379,7 @@ public class LatLonAltBox
   /**
    * fluent setter
    *
-   * @see #setLatLonAltBoxObjectExtension(List<AbstractObject>)
+   * @see #setLatLonAltBoxObjectExtension(List &lt;AbstractObject&gt;)
    *
    * @param latLonAltBoxObjectExtension required parameter
    */

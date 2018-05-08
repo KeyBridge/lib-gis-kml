@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -24,31 +24,26 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import net.opengis.kml.gx.SimpleArrayField;
 
 /**
- * <Schema>
- * <p>
+ *  &lt;Schema&gt;
+ *   
  * Specifies a custom KML schema that is used to add custom data to KML
  * Features. The "id" attribute is required and must be unique within the KML
- * file. <Schema> is always a child of <Document>.
- * </p>
- * <p>
- * Syntax:
- * <pre>&lt;Schema name="string" id="ID"&gt;
+ * file.  &lt;Schema&gt; is always a child of  &lt;Document&gt;. Syntax:
+ *  <pre>&lt;Schema name="string" id="ID"&gt;
  *   &lt;SimpleField type="string" name="string"&gt;
  *     &lt;displayName&gt;...&lt;/displayName&gt;            &lt;!-- string --&gt;
  *   &lt;/SimpleField&gt;
- * &lt;/Schema&gt;</pre>
- * <p>
+ * &lt;/Schema&gt; </pre>
+ *   
  * Extends:
  *
  * @see: This is a root element.
  *
  * Contained By:
- * @see: <Document>
+ * @see:  &lt;Document&gt;
  *
  * See Also:
- * <SchemaData>
- *
- *
+ *  &lt;SchemaData&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -62,34 +57,25 @@ public class Schema implements Cloneable {
   @XmlElement(name = "SimpleField")
   protected List<SimpleField> simpleField;
   /**
-   * <Object>
-   * <p>
+   *  &lt;Object&gt;
+   *   
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the <Update> mechanism is to be used.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;<strong>
-   * &lt;!-- <em>Object</em> id="ID" targetId="NCName" --&gt;
-   * &lt;!-- /<em>Object</em>&gt; --&gt;</strong></pre>
-   * <p>
-   * <p>
-   * <p>
+   * assigned if the  &lt;Update&gt; mechanism is to be used. Syntax:
+   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
+   * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
+   *   
    */
   @XmlElement(name = "SchemaExtension")
   protected List<Object> schemaExtension;
   /**
-   * <name>
-   * <p>
+   *  &lt;name&gt;
+   *   
    * User-defined text displayed in the 3D viewer as the label for the object
    * (for example, for a Placemark, Folder, or NetworkLink).
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlAttribute(name = "name")
   protected String name;
@@ -221,11 +207,9 @@ public class Schema implements Cloneable {
 
   /**
    * Creates a new instance of {@link SimpleField} and adds it to simpleField.
-   * This method is a short version for:    <code>
+   * This method is a short version for:     &lt;code&gt;
    * SimpleField simpleField = new SimpleField();
-   * this.getSimpleField().add(simpleField); </code>
-   * <p>
-   * <p>
+   * this.getSimpleField().add(simpleField);  &lt;/code&gt;
    */
   public SimpleField createAndAddSimpleField() {
     SimpleField newValue = new SimpleField();
@@ -247,7 +231,7 @@ public class Schema implements Cloneable {
    *
    * @param simpleField Objects of the following type are allowed in the list:
    *                    {@link SimpleField}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Schema addToSimpleField(final SimpleField simpleField) {
     this.getSimpleField().add(simpleField);
@@ -268,8 +252,8 @@ public class Schema implements Cloneable {
    *
    * @param schemaExtension Objects of the following type are allowed in the
    *                        list:
-   *                        {@code <}{@link SimpleArrayField}{@code>}{@link JAXBElement}{@code <}{@link Object}{@code>}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   *                        {@link SimpleArrayField}{@link JAXBElement}{@link Object}
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Schema addToSchemaExtension(final Object schemaExtension) {
     this.getSchemaExtension().add(schemaExtension);
@@ -279,7 +263,7 @@ public class Schema implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setSimpleField(List<SimpleField>)
+   * @see #setSimpleField(List &lt;SimpleField&gt;)
    *
    * @param simpleField required parameter
    */
@@ -291,7 +275,7 @@ public class Schema implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setSchemaExtension(List<Object>)
+   * @see #setSchemaExtension(List &lt;Object&gt;)
    *
    * @param schemaExtension required parameter
    */

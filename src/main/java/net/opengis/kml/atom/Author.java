@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml.atom;
 
@@ -24,29 +24,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <atom:author>
- * <p>
+ *  &lt;atom:author&gt;
+ *   
  * KML 2.2 supports new elements for including data about the author and related
  * website in your KML file. This information is displayed in geo search
  * results, both in Earth browsers such as Google Earth, and in other
  * applications such as Google Maps. The ascription elements used in KML are as
- * follows:
- * </p>
- * <p>
- * The <atom:author> element is the parent element for <atom:name>, which
- * specifies the author of the KML feature.
- * </p>
- * <p>
- * These elements are defined in the Atom Syndication Format. The complete
- * specification is found at http://atompub.org. (see the sample that follows).
- * </p>
- * <p>
- * These elements are defined in the Atom Syndication Format. The complete
- * specification is found at http://atompub.org. (see the sample that follows).
- * </p>
- * <p>
- * <p>
- * <p>
+ * follows: The  &lt;atom:author&gt; element is the parent element for  &lt;atom:name&gt;,
+ * which specifies the author of the KML feature. These elements are defined in
+ * the Atom Syndication Format. The complete specification is found at
+ * http://atompub.org. (see the sample that follows). These elements are defined
+ * in the Atom Syndication Format. The complete specification is found at
+ * http://atompub.org. (see the sample that follows).
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
@@ -116,8 +105,8 @@ public class Author implements Cloneable {
    *
    * @param nameOrUriOrEmail Objects of the following type are allowed in the
    *                         list:
-   *                         {@code <}{@link String}{@code>}{@link JAXBElement}{@code <}{@link String}{@code>}{@link JAXBElement}{@code <}{@link String}{@code>}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   *                         {@link String}{@link JAXBElement}{@link String}{@link JAXBElement}{@link String}
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Author addToNameOrUriOrEmail(final String nameOrUriOrEmail) {
     this.getNameOrUriOrEmail().add(nameOrUriOrEmail);
@@ -127,7 +116,7 @@ public class Author implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setNameOrUriOrEmail(List<String>)
+   * @see #setNameOrUriOrEmail(List &lt;String&gt;)
    *
    * @param nameOrUriOrEmail required parameter
    */

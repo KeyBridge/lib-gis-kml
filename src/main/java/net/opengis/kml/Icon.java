@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -22,52 +22,40 @@ import javax.xml.bind.annotation.*;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- * <icon> see also <icon>.
+ * &lt;icon&gt; see also &lt;icon&gt;.
  * <p>
- * <Icon> <href>Sunset.jpg</href> </Icon>
- * </p>
- * <p>
- * A custom Icon. In <IconStyle>, the only child element of <Icon> is <href>:
- * <href>: An HTTP address or a local file specification used to load an icon.
- * </p>
- * <p>
- * Defines an image associated with an Icon style or overlay. <Icon> has the
- * same child elements as <Link>. The required <href> child element defines the
- * location of the image to be used as the overlay or as the icon for the
- * placemark. This location can either be on a local file system or a remote web
- * server.
- * </p>
- * <p>
- * Defines the image associated with the Overlay. The <href> element defines the
- * location of the image to be used as the Overlay. This location can be either
- * on a local file system or on a web server. If this element is omitted or
- * contains no <href>, a rectangle is drawn using the color and size defined by
- * the ground or screen overlay. <Icon>
- * <href>icon.jpg</href> </Icon>
- * </p>
- * <p>
- * Syntax:
- * <pre><strong>&lt;Icon id="ID"&gt;</strong>
- *   &lt;!-- specific to Icon --&gt;
- *   &lt;href&gt;<em>...</em>&lt;/href&gt;                      &lt;!-- anyURI --&gt;
- *   &lt;refreshMode&gt;onChange&lt;/refreshMode&gt;
- *     &lt;!-- kml:refreshModeEnum: onChange, onInterval, <em>or</em> onExpire --&gt;
- *   &lt;refreshInterval&gt;4&lt;/refreshInterval&gt;  &lt;!-- float --&gt;
- *   &lt;viewRefreshMode&gt;never&lt;/viewRefreshMode&gt;
- *     &lt;!-- kml:viewRefreshModeEnum: never, onStop, onRequest, onRegion --&gt;
- *   &lt;viewRefreshTime&gt;4&lt;/viewRefreshTime&gt;  &lt;!-- float --&gt;
- *   &lt;viewBoundScale&gt;1&lt;/viewBoundScale&gt;    &lt;!-- float --&gt;
- *   &lt;viewFormat&gt;...&lt;/viewFormat&gt;          &lt;!-- string --&gt;
- *   &lt;httpQuery&gt;...&lt;/httpQuery&gt;            &lt;!-- string --&gt;
- *   <strong>&lt;/Icon&gt;</strong></pre>
+ * &lt;Icon&gt; &lt;href&gt;Sunset.jpg &lt;/href&gt; &lt;/Icon&gt; A custom
+ * Icon. In &lt;IconStyle&gt;, the only child element of &lt;Icon&gt; is
+ * &lt;href&gt;: &lt;href&gt;: An HTTP address or a local file specification
+ * used to load an icon. Defines an image associated with an Icon style or
+ * overlay. &lt;Icon&gt; has the same child elements as &lt;Link&gt;. The
+ * required &lt;href&gt; child element defines the location of the image to be
+ * used as the overlay or as the icon for the placemark. This location can
+ * either be on a local file system or a remote web server. Defines the image
+ * associated with the Overlay. The &lt;href&gt; element defines the location of
+ * the image to be used as the Overlay. This location can be either on a local
+ * file system or on a web server. If this element is omitted or contains no
+ * &lt;href&gt;, a rectangle is drawn using the color and size defined by the
+ * ground or screen overlay. &lt;Icon&gt; &lt;href&gt;icon.jpg &lt;/href&gt;
+ * &lt;/Icon&gt; Syntax: &lt;pre&gt; &lt;strong&gt;&lt;Icon id="ID"&gt;
+ * &lt;/strong&gt; &lt;!-- specific to Icon --&gt; &lt;href&gt; &lt;em&gt;...
+ * &lt;/em&gt;&lt;/href&gt; &lt;!-- anyURI --&gt;
+ * &lt;refreshMode&gt;onChange&lt;/refreshMode&gt; &lt;!-- kml:refreshModeEnum:
+ * onChange, onInterval, &lt;em&gt;or &lt;/em&gt; onExpire --&gt;
+ * &lt;refreshInterval&gt;4&lt;/refreshInterval&gt; &lt;!-- float --&gt;
+ * &lt;viewRefreshMode&gt;never&lt;/viewRefreshMode&gt; &lt;!--
+ * kml:viewRefreshModeEnum: never, onStop, onRequest, onRegion --&gt;
+ * &lt;viewRefreshTime&gt;4&lt;/viewRefreshTime&gt; &lt;!-- float --&gt;
+ * &lt;viewBoundScale&gt;1&lt;/viewBoundScale&gt; &lt;!-- float --&gt;
+ * &lt;viewFormat&gt;...&lt;/viewFormat&gt; &lt;!-- string --&gt;
+ * &lt;httpQuery&gt;...&lt;/httpQuery&gt; &lt;!-- string --&gt;
+ * &lt;strong&gt;&lt;/Icon&gt; &lt;/strong&gt; </pre>
  * <p>
  * Contained By:
  *
- * @see: <GroundOverlay>
- * @see: <IconStyle>
- * @see: <ScreenOverlay>
- *
- *
+ * @see: &lt;GroundOverlay&gt;
+ * @see: &lt;IconStyle&gt;
+ * @see: &lt;ScreenOverlay&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -84,133 +72,87 @@ import net.opengis.kml.annotations.Obvious;
 })
 @XmlRootElement(name = "Icon", namespace = "http://www.opengis.net/kml/2.2")
 public class Icon
-        extends BasicLink
-        implements Cloneable {
+  extends BasicLink
+  implements Cloneable {
 
   /**
    * RefreshMode
    * <p>
-   * onChange, onInterval, onExpire
-   * </p>
-   * <p>
-   * See Also: See <Link>
-   * <p>
-   * <p>
+   * onChange, onInterval, onExpire See Also: See &lt;Link&gt;
    * <p>
    */
   @XmlElement(namespace = "http://www.opengis.net/kml/2.2", defaultValue = "onChange")
   protected RefreshMode refreshMode;
   /**
-   * <refreshinterval>
+   * &lt;refreshinterval&gt;
    * <p>
    * Indicates to refresh the file every n seconds.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlElement(namespace = "http://www.opengis.net/kml/2.2", defaultValue = "4.0")
   protected double refreshInterval;
   /**
    * ViewRefreshMode
    * <p>
-   * never, onRequest, onStop, onRegion
-   * </p>
-   * <p>
-   * See Also: See <Link>
-   * <p>
-   * <p>
+   * never, onRequest, onStop, onRegion See Also: See &lt;Link&gt;
    * <p>
    */
   @XmlElement(namespace = "http://www.opengis.net/kml/2.2", defaultValue = "never")
   protected ViewRefreshMode viewRefreshMode;
   /**
-   * <viewrefreshtime>
+   * &lt;viewrefreshtime&gt;
    * <p>
    * After camera movement stops, specifies the number of seconds to wait before
-   * refreshing the view. (See <viewRefreshMode> and onStop above.)
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * refreshing the view. (See &lt;viewRefreshMode&gt; and onStop above.)
    */
   @XmlElement(namespace = "http://www.opengis.net/kml/2.2", defaultValue = "4.0")
   protected double viewRefreshTime;
   /**
-   * <viewboundscale>
+   * &lt;viewboundscale&gt;
    * <p>
    * Scales the BBOX parameters before sending them to the server. A value less
    * than 1 specifies to use less than the full view (screen). A value greater
    * than 1 specifies to fetch an area that extends beyond the edges of the
    * current view.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlElement(namespace = "http://www.opengis.net/kml/2.2", defaultValue = "1.0")
   protected double viewBoundScale;
   /**
-   * <viewformat>
+   * &lt;viewformat&gt;
    * <p>
-   * BBOX=[bboxWest],[bboxSouth],[bboxEast],[bboxNorth]
-   * </p>
-   * <p>
-   * If you specify a <viewRefreshMode> of onStop and do not include the
-   * <viewFormat>
+   * BBOX=[bboxWest],[bboxSouth],[bboxEast],[bboxNorth] If you specify a
+   * &lt;viewRefreshMode&gt; of onStop and do not include the &lt;viewFormat&gt;
    * tag in the file, the following information is automatically appended to the
-   * query string:
-   * </p>
-   * <p>
-   * If you specify an empty <viewFormat> tag, no information is appended to the
-   * query string.
-   * </p>
-   * <p>
-   * Specifies the format of the query string that is appended to the Link's
-   * <href> before the file is fetched.(If the <href> specifies a local file,
-   * this element is ignored.)
-   * </p>
-   * <p>
-   * This information matches the Web Map Service (WMS) bounding box
-   * specification.
-   * </p>
-   * <p>
-   * You can also specify a custom set of viewing parameters to add to the query
-   * string. If you supply a format string, it is used instead of the BBOX
-   * information. If you also want the BBOX information, you need to add those
-   * parameters along with the custom parameters.
-   * </p>
-   * <p>
-   * You can use any of the following parameters in your format string (and
-   * Google Earth will substitute the appropriate current value at the time it
-   * creates the query string): [lookatLon], [lookatLat] - longitude and
-   * latitude of the point that <LookAt> is viewing [lookatRange], [lookatTilt],
-   * [lookatHeading] - values used by the <LookAt>
-   * element (see descriptions of <range>, <tilt>, and <heading> in <LookAt>)
+   * query string: If you specify an empty &lt;viewFormat&gt; tag, no
+   * information is appended to the query string. Specifies the format of the
+   * query string that is appended to the Link's &lt;href&gt; before the file is
+   * fetched.(If the &lt;href&gt; specifies a local file, this element is
+   * ignored.) This information matches the Web Map Service (WMS) bounding box
+   * specification. You can also specify a custom set of viewing parameters to
+   * add to the query string. If you supply a format string, it is used instead
+   * of the BBOX information. If you also want the BBOX information, you need to
+   * add those parameters along with the custom parameters. You can use any of
+   * the following parameters in your format string (and Google Earth will
+   * substitute the appropriate current value at the time it creates the query
+   * string): [lookatLon], [lookatLat] - longitude and latitude of the point
+   * that &lt;LookAt&gt; is viewing [lookatRange], [lookatTilt], [lookatHeading]
+   * - values used by the &lt;LookAt&gt; element (see descriptions of
+   * &lt;range&gt;, &lt;tilt&gt;, and &lt;heading&gt; in &lt;LookAt&gt;)
    * [lookatTerrainLon], [lookatTerrainLat], [lookatTerrainAlt] - point on the
-   * terrain in degrees/meters that <LookAt> is viewing [cameraLon],
+   * terrain in degrees/meters that &lt;LookAt&gt; is viewing [cameraLon],
    * [cameraLat], [cameraAlt] - degrees/meters of the eyepoint for the camera
    * [horizFov], [vertFov] - horizontal, vertical field of view for the camera
    * [horizPixels], [vertPixels] - size in pixels of the 3D viewer
    * [terrainEnabled] - indicates whether the 3D viewer is showing terrain
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlElement(namespace = "http://www.opengis.net/kml/2.2")
   protected String viewFormat;
   /**
-   * <httpquery>
+   * &lt;httpquery&gt;
    * <p>
    * Appends information to the query string, based on the parameters specified.
    * (Google Earth substitutes the appropriate current value at the time it
    * creates the query string.) The following parameters are supported:
    * [clientVersion] [kmlVersion] [clientName] [language]
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlElement(namespace = "http://www.opengis.net/kml/2.2")
   protected String httpQuery;
@@ -218,21 +160,16 @@ public class Icon
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> linkSimpleExtension;
   /**
-   * <Object>
+   * &lt;Object&gt;
    * <p>
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the <Update> mechanism is to be used.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;<strong>
-   * &lt;!-- <em>Object</em> id="ID" targetId="NCName" --&gt;
-   * &lt;!-- /<em>Object</em>&gt; --&gt;</strong></pre>
-   * <p>
-   * <p>
+   * assigned if the &lt;Update&gt; mechanism is to be used. Syntax:
+   * <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
+   * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
    * <p>
    */
   @XmlElement(name = "LinkObjectExtensionGroup", namespace = "http://www.opengis.net/kml/2.2")
@@ -507,7 +444,8 @@ public class Icon
    *
    * @param linkSimpleExtension Objects of the following type are allowed in the
    *                            list: {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Icon addToLinkSimpleExtension(final Object linkSimpleExtension) {
     this.getLinkSimpleExtension().add(linkSimpleExtension);
@@ -528,7 +466,8 @@ public class Icon
    *
    * @param linkObjectExtension Objects of the following type are allowed in the
    *                            list: {@link AbstractObject}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Icon addToLinkObjectExtension(final AbstractObject linkObjectExtension) {
     this.getLinkObjectExtension().add(linkObjectExtension);
@@ -673,7 +612,7 @@ public class Icon
   /**
    * fluent setter
    *
-   * @see #setLinkSimpleExtension(List<Object>)
+   * @see #setLinkSimpleExtension(List &lt;Object&gt;)
    *
    * @param linkSimpleExtension required parameter
    */
@@ -685,7 +624,7 @@ public class Icon
   /**
    * fluent setter
    *
-   * @see #setLinkObjectExtension(List<AbstractObject>)
+   * @see #setLinkObjectExtension(List &lt;AbstractObject&gt;)
    *
    * @param linkObjectExtension required parameter
    */

@@ -12,13 +12,13 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml.gx;
 
 import javax.xml.bind.annotation.*;
 
-/**
+/*
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -36,7 +36,6 @@ public class Option implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link String}
    *
    */
@@ -45,7 +44,6 @@ public class Option implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link String}
    *
    */
@@ -53,14 +51,14 @@ public class Option implements Cloneable {
     this.name = value;
   }
 
-  /**
+  /*
    *
    */
   public boolean isEnabled() {
     return enabled;
   }
 
-  /**
+  /*
    *
    */
   public void setEnabled(boolean value) {

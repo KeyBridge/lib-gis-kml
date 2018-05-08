@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -22,14 +22,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Shape
- * <p>
- * rectangle, cylinder, sphere
- * </p>
- * <p>
- * See Also: See <PhotoOverlay>
- * <p>
- * <p>
- * <p>
+ *   
+ * rectangle, cylinder, sphere See Also: See  &lt;PhotoOverlay&gt;
+ *   
  */
 @XmlType(name = "shapeEnumType")
 @XmlEnum

@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -22,31 +22,26 @@ import javax.xml.bind.annotation.*;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- * <LineStyle>
+ * &lt;LineStyle&gt;
  * <p>
  * Specifies the drawing style (color, color mode, and line width) for all line
  * geometry. Line geometry includes the outlines of outlined polygons and the
- * extruded "tether" of Placemark icons (if extrusion is enabled).
- * </p>
+ * extruded "tether" of Placemark icons (if extrusion is enabled). Syntax:
+ * &lt;pre&gt; &lt;strong&gt;&lt;LineStyle id="ID"&gt; &lt;/strong&gt; &lt;!--
+ * inherited from &lt;em&gt;ColorStyle &lt;/em&gt; --&gt;
+ * &lt;color&gt;ffffffff&lt;/color&gt; &lt;!-- kml:color --&gt;
+ * &lt;colorMode&gt;normal&lt;/colorMode&gt; &lt;!-- colorModeEnum: normal
+ * &lt;em&gt;or &lt;/em&gt; random --&gt;
  * <p>
- * Syntax:
- * <pre><strong>&lt;LineStyle id="ID"&gt;</strong>
- *   &lt;!-- inherited from <em>ColorStyle</em> --&gt;
- *   &lt;color&gt;ffffffff&lt;/color&gt;            &lt;!-- kml:color --&gt;
- *   &lt;colorMode&gt;normal&lt;/colorMode&gt;      &lt;!-- colorModeEnum: normal <em>or</em> random --&gt;
- * <p>
- *   &lt;!-- specific to LineStyle --&gt;
- *   &lt;width&gt;1&lt;/width&gt;                   &lt;!-- float --&gt;
- * <strong>&lt;/LineStyle&gt;</strong></pre>
+ * &lt;!-- specific to LineStyle --&gt; &lt;width&gt;1&lt;/width&gt; &lt;!--
+ * float --&gt; &lt;strong&gt;&lt;/LineStyle&gt; &lt;/strong&gt; </pre>
  * <p>
  * Extends:
  *
- * @see: <ColorStyle>
+ * @see: &lt;ColorStyle&gt;
  *
  * Contained By:
- * @see: <Style>
- *
- *
+ * @see: &lt;Style&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -57,56 +52,42 @@ import net.opengis.kml.annotations.Obvious;
 })
 @XmlRootElement(name = "LineStyle", namespace = "http://www.opengis.net/kml/2.2")
 public class LineStyle
-        extends ColorStyle
-        implements Cloneable {
+  extends ColorStyle
+  implements Cloneable {
 
   /**
-   * <width>
+   * &lt;width&gt;
    * <p>
    * Width of the line, in pixels.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlElement(defaultValue = "1.0")
   protected double width;
   /**
-   * <Object>
+   * &lt;Object&gt;
    * <p>
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the <Update> mechanism is to be used.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;<strong>
-   * &lt;!-- <em>Object</em> id="ID" targetId="NCName" --&gt;
-   * &lt;!-- /<em>Object</em>&gt; --&gt;</strong></pre>
-   * <p>
-   * <p>
+   * assigned if the &lt;Update&gt; mechanism is to be used. Syntax:
+   * <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
+   * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
    * <p>
    */
   @XmlElement(name = "LineStyleSimpleExtensionGroup")
   protected List<Object> lineStyleSimpleExtension;
   /**
-   * <Object>
+   * &lt;Object&gt;
    * <p>
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the <Update> mechanism is to be used.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;<strong>
-   * &lt;!-- <em>Object</em> id="ID" targetId="NCName" --&gt;
-   * &lt;!-- /<em>Object</em>&gt; --&gt;</strong></pre>
-   * <p>
-   * <p>
+   * assigned if the &lt;Update&gt; mechanism is to be used. Syntax:
+   * <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
+   * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
    * <p>
    */
   @XmlElement(name = "LineStyleObjectExtensionGroup")
@@ -219,8 +200,9 @@ public class LineStyle
    *
    * @param lineStyleSimpleExtension Objects of the following type are allowed
    *                                 in the list:
-   *                                 {@code <}{@link Object}{@code>}{@link JAXBElement}{@code <}{@link byte[]}{@code >}{@link JAXBElement}{@code <}{@link Float}{@code>}{@link JAXBElement}{@code <}{@link Float}{@code>}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   *                                 {@link Object}{@link JAXBElement}{@link byte[]}{@code &gt;}{@link JAXBElement}{@link Float}{@link JAXBElement}{@link Float}
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public LineStyle addToLineStyleSimpleExtension(final Object lineStyleSimpleExtension) {
     this.getLineStyleSimpleExtension().add(lineStyleSimpleExtension);
@@ -241,7 +223,8 @@ public class LineStyle
    *
    * @param lineStyleObjectExtension Objects of the following type are allowed
    *                                 in the list: {@link AbstractObject}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public LineStyle addToLineStyleObjectExtension(final AbstractObject lineStyleObjectExtension) {
     this.getLineStyleObjectExtension().add(lineStyleObjectExtension);
@@ -348,7 +331,7 @@ public class LineStyle
   /**
    * fluent setter
    *
-   * @see #setLineStyleSimpleExtension(List<Object>)
+   * @see #setLineStyleSimpleExtension(List &lt;Object&gt;)
    *
    * @param lineStyleSimpleExtension required parameter
    */
@@ -360,7 +343,7 @@ public class LineStyle
   /**
    * fluent setter
    *
-   * @see #setLineStyleObjectExtension(List<AbstractObject>)
+   * @see #setLineStyleObjectExtension(List &lt;AbstractObject&gt;)
    *
    * @param lineStyleObjectExtension required parameter
    */

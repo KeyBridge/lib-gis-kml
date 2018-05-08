@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml.xal;
 
@@ -23,7 +23,7 @@ import java.util.Map;
 import javax.xml.bind.annotation.*;
 import javax.xml.namespace.QName;
 
-/**
+/*
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -97,14 +97,14 @@ public class Locality implements Cloneable {
    * Default no-arg constructor is private. Use overloaded constructor instead!
    * (Temporary solution, till a better and more suitable ObjectFactory is
    * created.)
-   * <p>
+   *   
    */
   @Deprecated
   private Locality() {
     super();
   }
 
-  /**
+  /*
    *
    */
   public List<AddressLine> getAddressLine() {
@@ -114,7 +114,7 @@ public class Locality implements Cloneable {
     return this.addressLine;
   }
 
-  /**
+  /*
    *
    */
   public List<Locality.LocalityName> getLocalityName() {
@@ -125,7 +125,6 @@ public class Locality implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link PostBox}
    *
    */
@@ -134,7 +133,6 @@ public class Locality implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link PostBox}
    *
    */
@@ -143,7 +141,6 @@ public class Locality implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link LargeMailUser}
    *
    */
@@ -152,7 +149,6 @@ public class Locality implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link LargeMailUser}
    *
    */
@@ -161,7 +157,6 @@ public class Locality implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link PostOffice}
    *
    */
@@ -170,7 +165,6 @@ public class Locality implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link PostOffice}
    *
    */
@@ -179,7 +173,6 @@ public class Locality implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link PostalRoute}
    *
    */
@@ -188,7 +181,6 @@ public class Locality implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link PostalRoute}
    *
    */
@@ -197,7 +189,6 @@ public class Locality implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link Thoroughfare}
    *
    */
@@ -206,7 +197,6 @@ public class Locality implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link Thoroughfare}
    *
    */
@@ -215,7 +205,6 @@ public class Locality implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link Premise}
    *
    */
@@ -224,7 +213,6 @@ public class Locality implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link Premise}
    *
    */
@@ -233,7 +221,6 @@ public class Locality implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link DependentLocality}
    *
    */
@@ -242,7 +229,6 @@ public class Locality implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link DependentLocality}
    *
    */
@@ -251,7 +237,6 @@ public class Locality implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link PostalCode}
    *
    */
@@ -260,7 +245,6 @@ public class Locality implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link PostalCode}
    *
    */
@@ -268,7 +252,7 @@ public class Locality implements Cloneable {
     this.postalCode = value;
   }
 
-  /**
+  /*
    *
    */
   public List<Object> getAny() {
@@ -279,7 +263,6 @@ public class Locality implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link String}
    *
    */
@@ -288,7 +271,6 @@ public class Locality implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link String}
    *
    */
@@ -297,7 +279,6 @@ public class Locality implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link String}
    *
    */
@@ -306,7 +287,6 @@ public class Locality implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link String}
    *
    */
@@ -315,7 +295,6 @@ public class Locality implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link String}
    *
    */
@@ -324,7 +303,6 @@ public class Locality implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link String}
    *
    */
@@ -333,7 +311,6 @@ public class Locality implements Cloneable {
   }
 
   /**
-   *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
@@ -476,11 +453,9 @@ public class Locality implements Cloneable {
 
   /**
    * Creates a new instance of {@link AddressLine} and adds it to addressLine.
-   * This method is a short version for:    <code>
+   * This method is a short version for:     &lt;code&gt;
    * AddressLine addressLine = new AddressLine();
-   * this.getAddressLine().add(addressLine); </code>
-   * <p>
-   * <p>
+   * this.getAddressLine().add(addressLine);  &lt;/code&gt;
    */
   public AddressLine createAndAddAddressLine() {
     AddressLine newValue = new AddressLine();
@@ -490,11 +465,9 @@ public class Locality implements Cloneable {
 
   /**
    * Creates a new instance of {@link Locality.LocalityName} and adds it to
-   * localityName. This method is a short version for:    <code>
+   * localityName. This method is a short version for:     &lt;code&gt;
    * LocalityName localityName = new LocalityName();
-   * this.getLocalityName().add(localityName); </code>
-   * <p>
-   * <p>
+   * this.getLocalityName().add(localityName);  &lt;/code&gt;
    */
   public Locality.LocalityName createAndAddLocalityName() {
     Locality.LocalityName newValue = new Locality.LocalityName();
@@ -504,11 +477,10 @@ public class Locality implements Cloneable {
 
   /**
    * Creates a new instance of {@link PostBox} and set it to postBox.
-   * <p>
-   * This method is a short version for:    <code>
+   *   
+   * This method is a short version for:     &lt;code&gt;
    * PostBox postBox = new PostBox();
-   * this.setPostBox(postBox); </code>
-   *
+   * this.setPostBox(postBox);  &lt;/code&gt;
    *
    * @param postBoxNumber required parameter
    */
@@ -521,12 +493,10 @@ public class Locality implements Cloneable {
   /**
    * Creates a new instance of {@link LargeMailUser} and set it to
    * largeMailUser.
-   * <p>
-   * This method is a short version for:    <code>
+   *   
+   * This method is a short version for:     &lt;code&gt;
    * LargeMailUser largeMailUser = new LargeMailUser();
-   * this.setLargeMailUser(largeMailUser); </code>
-   * <p>
-   * <p>
+   * this.setLargeMailUser(largeMailUser);  &lt;/code&gt;
    */
   public LargeMailUser createAndSetLargeMailUser() {
     LargeMailUser newValue = new LargeMailUser();
@@ -536,12 +506,10 @@ public class Locality implements Cloneable {
 
   /**
    * Creates a new instance of {@link PostOffice} and set it to postOffice.
-   * <p>
-   * This method is a short version for:    <code>
+   *   
+   * This method is a short version for:     &lt;code&gt;
    * PostOffice postOffice = new PostOffice();
-   * this.setPostOffice(postOffice); </code>
-   * <p>
-   * <p>
+   * this.setPostOffice(postOffice);  &lt;/code&gt;
    */
   public PostOffice createAndSetPostOffice() {
     PostOffice newValue = new PostOffice();
@@ -551,11 +519,10 @@ public class Locality implements Cloneable {
 
   /**
    * Creates a new instance of {@link PostalRoute} and set it to postalRoute.
-   * <p>
-   * This method is a short version for:    <code>
+   *   
+   * This method is a short version for:     &lt;code&gt;
    * PostalRoute postalRoute = new PostalRoute();
-   * this.setPostalRoute(postalRoute); </code>
-   *
+   * this.setPostalRoute(postalRoute);  &lt;/code&gt;
    *
    * @param postalRouteName   required parameter
    * @param postalRouteNumber required parameter
@@ -568,11 +535,10 @@ public class Locality implements Cloneable {
 
   /**
    * Creates a new instance of {@link Thoroughfare} and set it to thoroughfare.
-   * <p>
-   * This method is a short version for:    <code>
+   *   
+   * This method is a short version for:     &lt;code&gt;
    * Thoroughfare thoroughfare = new Thoroughfare();
-   * this.setThoroughfare(thoroughfare); </code>
-   *
+   * this.setThoroughfare(thoroughfare);  &lt;/code&gt;
    *
    * @param postalCode        required parameter
    * @param premise           required parameter
@@ -587,11 +553,10 @@ public class Locality implements Cloneable {
 
   /**
    * Creates a new instance of {@link Premise} and set it to premise.
-   * <p>
-   * This method is a short version for:    <code>
+   *   
+   * This method is a short version for:     &lt;code&gt;
    * Premise premise = new Premise();
-   * this.setPremise(premise); </code>
-   *
+   * this.setPremise(premise);  &lt;/code&gt;
    *
    * @param premiseNumber      required parameter
    * @param premiseNumberRange required parameter
@@ -606,11 +571,10 @@ public class Locality implements Cloneable {
   /**
    * Creates a new instance of {@link DependentLocality} and set it to
    * dependentLocality.
-   * <p>
-   * This method is a short version for:    <code>
+   *   
+   * This method is a short version for:     &lt;code&gt;
    * DependentLocality dependentLocality = new DependentLocality();
-   * this.setDependentLocality(dependentLocality); </code>
-   *
+   * this.setDependentLocality(dependentLocality);  &lt;/code&gt;
    *
    * @param postBox       required parameter
    * @param postOffice    required parameter
@@ -625,12 +589,10 @@ public class Locality implements Cloneable {
 
   /**
    * Creates a new instance of {@link PostalCode} and set it to postalCode.
-   * <p>
-   * This method is a short version for:    <code>
+   *   
+   * This method is a short version for:     &lt;code&gt;
    * PostalCode postalCode = new PostalCode();
-   * this.setPostalCode(postalCode); </code>
-   * <p>
-   * <p>
+   * this.setPostalCode(postalCode);  &lt;/code&gt;
    */
   public PostalCode createAndSetPostalCode() {
     PostalCode newValue = new PostalCode();
@@ -640,13 +602,12 @@ public class Locality implements Cloneable {
 
   /**
    * Sets the value of the addressLine property Objects of the following type(s)
-   * are allowed in the list List<AddressLine>.
-   * <p>
+   * are allowed in the list List &lt;AddressLine&gt;.
+   *   
    * Note:
-   * <p>
+   *   
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withAddressLine} instead.
-   *
    *
    * @param addressLine
    */
@@ -659,7 +620,7 @@ public class Locality implements Cloneable {
    *
    * @param addressLine Objects of the following type are allowed in the list:
    *                    {@link AddressLine}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Locality addToAddressLine(final AddressLine addressLine) {
     this.getAddressLine().add(addressLine);
@@ -668,13 +629,12 @@ public class Locality implements Cloneable {
 
   /**
    * Sets the value of the localityName property Objects of the following
-   * type(s) are allowed in the list List<LocalityName>.
-   * <p>
+   * type(s) are allowed in the list List &lt;LocalityName&gt;.
+   *   
    * Note:
-   * <p>
+   *   
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withLocalityName} instead.
-   *
    *
    * @param localityName
    */
@@ -687,7 +647,7 @@ public class Locality implements Cloneable {
    *
    * @param localityName Objects of the following type are allowed in the list:
    *                     {@link Locality.LocalityName}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Locality addToLocalityName(final Locality.LocalityName localityName) {
     this.getLocalityName().add(localityName);
@@ -696,13 +656,12 @@ public class Locality implements Cloneable {
 
   /**
    * Sets the value of the any property Objects of the following type(s) are
-   * allowed in the list List<Object>.
-   * <p>
+   * allowed in the list List &lt;Object&gt;.
+   *   
    * Note:
-   * <p>
+   *   
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withAny} instead.
-   *
    *
    * @param any
    */
@@ -715,7 +674,7 @@ public class Locality implements Cloneable {
    *
    * @param any Objects of the following type are allowed in the list:
    *            {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Locality addToAny(final Object any) {
     this.getAny().add(any);
@@ -725,7 +684,7 @@ public class Locality implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setAddressLine(List<AddressLine>)
+   * @see #setAddressLine(List &lt;AddressLine&gt;)
    *
    * @param addressLine required parameter
    */
@@ -737,7 +696,7 @@ public class Locality implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setLocalityName(List<LocalityName>)
+   * @see #setLocalityName(List &lt;LocalityName&gt;)
    *
    * @param localityName required parameter
    */
@@ -797,7 +756,7 @@ public class Locality implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setAny(List<Object>)
+   * @see #setAny(List &lt;Object&gt;)
    *
    * @param any required parameter
    */
@@ -873,7 +832,7 @@ public class Locality implements Cloneable {
     return copy;
   }
 
-  /**
+  /*
    *
    */
   @XmlAccessorType(XmlAccessType.FIELD)
@@ -899,7 +858,6 @@ public class Locality implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -908,7 +866,6 @@ public class Locality implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -917,7 +874,6 @@ public class Locality implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -926,7 +882,6 @@ public class Locality implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -935,7 +890,6 @@ public class Locality implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -944,7 +898,6 @@ public class Locality implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -953,7 +906,6 @@ public class Locality implements Cloneable {
     }
 
     /**
-     *
      * @return always non-null
      */
     public Map<QName, String> getOtherAttributes() {

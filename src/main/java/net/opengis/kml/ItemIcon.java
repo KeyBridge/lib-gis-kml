@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -22,23 +22,17 @@ import javax.xml.bind.annotation.*;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- * <itemicon>
- * <p>
- * <state> Specifies the current state of the NetworkLink or Folder. Possible
+ *  &lt;itemicon&gt;
+ *   
+ *  &lt;state&gt; Specifies the current state of the NetworkLink or Folder. Possible
  * values are open, closed, error, fetching0, fetching1, and fetching2. These
  * values can be combined by inserting a space between two values (no comma).
- * <href> Specifies the URI of the image used in the List View for the Feature.
- * </p>
- * <p>
+ *  &lt;href&gt; Specifies the URI of the image used in the List View for the Feature.
  * Icon used in the List view that reflects the state of a Folder or Link fetch.
  * Icons associated with the open and closed modes are used for Folders and
  * Network Links. Icons associated with the error and fetching0, fetching1, and
  * fetching2 modes are used for Network Links. The following screen capture
  * illustrates the Google Earth icons for these states:
- * </p>
- * <p>
- * <p>
- * <p>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ItemIconType", propOrder = {
@@ -49,64 +43,47 @@ import net.opengis.kml.annotations.Obvious;
 })
 @XmlRootElement(name = "ItemIcon", namespace = "http://www.opengis.net/kml/2.2")
 public class ItemIcon
-        extends AbstractObject
-        implements Cloneable {
+  extends AbstractObject
+  implements Cloneable {
 
   /**
-   * <state>
-   * <p>
+   *  &lt;state&gt;
+   *   
    * Specifies the current state of the NetworkLink or Folder. Possible values
    * are open, closed, error, fetching0, fetching1, and fetching2. These values
    * can be combined by inserting a space between two values (no comma).
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlList
   protected List<ItemIconState> state;
   /**
-   * <href>
-   * <p>
+   *  &lt;href&gt;
+   *   
    * A URL (either an HTTP address or a local file specification). When the
    * parent of
-   * <Link> is a NetworkLink, <href> is a KML file. When the parent of <Link> is
+   *  &lt;Link&gt; is a NetworkLink,  &lt;href&gt; is a KML file. When the parent of  &lt;Link&gt; is
    * a Model,
-   * <href> is a COLLADA file. When the parent of <Icon> (same fields as <Link>)
-   * is an Overlay, <href> is an image. Relative URLs can be used in this tag
-   * and are evaluated relative to the enclosing KML file.
-   * </p>
-   * <p>
-   * An HTTP address or a local file specification used to load an icon.
-   * </p>
-   * <p>
-   * Specifies the URI of the image used in the List View for the Feature.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   *  &lt;href&gt; is a COLLADA file. When the parent of  &lt;Icon&gt; (same fields as  &lt;Link&gt;)
+   * is an Overlay,  &lt;href&gt; is an image. Relative URLs can be used in this tag
+   * and are evaluated relative to the enclosing KML file. An HTTP address or a
+   * local file specification used to load an icon. Specifies the URI of the
+   * image used in the List View for the Feature.
    */
   protected String href;
   @XmlElement(name = "ItemIconSimpleExtensionGroup")
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> itemIconSimpleExtension;
   /**
-   * <Object>
-   * <p>
+   *  &lt;Object&gt;
+   *   
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the <Update> mechanism is to be used.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;<strong>
-   * &lt;!-- <em>Object</em> id="ID" targetId="NCName" --&gt;
-   * &lt;!-- /<em>Object</em>&gt; --&gt;</strong></pre>
-   * <p>
-   * <p>
-   * <p>
+   * assigned if the  &lt;Update&gt; mechanism is to be used. Syntax:
+   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
+   * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
+   *   
    */
   @XmlElement(name = "ItemIconObjectExtensionGroup")
   protected List<AbstractObject> itemIconObjectExtension;
@@ -239,7 +216,7 @@ public class ItemIcon
    *
    * @param state Objects of the following type are allowed in the list:
    *              {@link ItemIconState}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public ItemIcon addToState(final ItemIconState state) {
     this.getState().add(state);
@@ -260,7 +237,7 @@ public class ItemIcon
    *
    * @param itemIconSimpleExtension Objects of the following type are allowed in
    *                                the list: {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public ItemIcon addToItemIconSimpleExtension(final Object itemIconSimpleExtension) {
     this.getItemIconSimpleExtension().add(itemIconSimpleExtension);
@@ -281,7 +258,7 @@ public class ItemIcon
    *
    * @param itemIconObjectExtension Objects of the following type are allowed in
    *                                the list: {@link AbstractObject}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public ItemIcon addToItemIconObjectExtension(final AbstractObject itemIconObjectExtension) {
     this.getItemIconObjectExtension().add(itemIconObjectExtension);
@@ -308,7 +285,7 @@ public class ItemIcon
   /**
    * fluent setter
    *
-   * @see #setState(List<ItemIconState>)
+   * @see #setState(List &lt;ItemIconState&gt;)
    *
    * @param state required parameter
    */
@@ -332,7 +309,7 @@ public class ItemIcon
   /**
    * fluent setter
    *
-   * @see #setItemIconSimpleExtension(List<Object>)
+   * @see #setItemIconSimpleExtension(List &lt;Object&gt;)
    *
    * @param itemIconSimpleExtension required parameter
    */
@@ -344,7 +321,7 @@ public class ItemIcon
   /**
    * fluent setter
    *
-   * @see #setItemIconObjectExtension(List<AbstractObject>)
+   * @see #setItemIconObjectExtension(List &lt;AbstractObject&gt;)
    *
    * @param itemIconObjectExtension required parameter
    */

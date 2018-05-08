@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml.gx;
 
@@ -22,7 +22,7 @@ import javax.xml.bind.annotation.*;
 import net.opengis.kml.AbstractObject;
 import net.opengis.kml.annotations.Obvious;
 
-/**
+/*
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -31,8 +31,8 @@ import net.opengis.kml.annotations.Obvious;
 })
 @XmlRootElement(name = "Playlist", namespace = "http://www.google.com/kml/ext/2.2")
 public class Playlist
-        extends AbstractObject
-        implements Cloneable {
+  extends AbstractObject
+  implements Cloneable {
 
   @XmlElementRef(name = "AbstractTourPrimitiveGroup", namespace = "http://www.google.com/kml/ext/2.2", required = false)
   protected List<TourPrimitive> tourPrimitive;
@@ -41,7 +41,7 @@ public class Playlist
     super();
   }
 
-  /**
+  /*
    *
    */
   public List<TourPrimitive> getTourPrimitive() {
@@ -86,11 +86,9 @@ public class Playlist
 
   /**
    * Creates a new instance of {@link Wait} and adds it to tourPrimitive. This
-   * method is a short version for:    <code>
+   * method is a short version for:     &lt;code&gt;
    * Wait wait = new Wait();
-   * this.getTourPrimitive().add(wait); </code>
-   * <p>
-   * <p>
+   * this.getTourPrimitive().add(wait);  &lt;/code&gt;
    */
   public Wait createAndAddWait() {
     Wait newValue = new Wait();
@@ -100,11 +98,9 @@ public class Playlist
 
   /**
    * Creates a new instance of {@link AnimatedUpdate} and adds it to
-   * tourPrimitive. This method is a short version for:    <code>
+   * tourPrimitive. This method is a short version for:     &lt;code&gt;
    * AnimatedUpdate animatedUpdate = new AnimatedUpdate();
-   * this.getTourPrimitive().add(animatedUpdate); </code>
-   * <p>
-   * <p>
+   * this.getTourPrimitive().add(animatedUpdate);  &lt;/code&gt;
    */
   public AnimatedUpdate createAndAddAnimatedUpdate() {
     AnimatedUpdate newValue = new AnimatedUpdate();
@@ -114,11 +110,9 @@ public class Playlist
 
   /**
    * Creates a new instance of {@link TourControl} and adds it to tourPrimitive.
-   * This method is a short version for:    <code>
+   * This method is a short version for:     &lt;code&gt;
    * TourControl tourControl = new TourControl();
-   * this.getTourPrimitive().add(tourControl); </code>
-   * <p>
-   * <p>
+   * this.getTourPrimitive().add(tourControl);  &lt;/code&gt;
    */
   public TourControl createAndAddTourControl() {
     TourControl newValue = new TourControl();
@@ -128,11 +122,9 @@ public class Playlist
 
   /**
    * Creates a new instance of {@link FlyTo} and adds it to tourPrimitive. This
-   * method is a short version for:    <code>
+   * method is a short version for:     &lt;code&gt;
    * FlyTo flyTo = new FlyTo();
-   * this.getTourPrimitive().add(flyTo); </code>
-   * <p>
-   * <p>
+   * this.getTourPrimitive().add(flyTo);  &lt;/code&gt;
    */
   public FlyTo createAndAddFlyTo() {
     FlyTo newValue = new FlyTo();
@@ -142,11 +134,9 @@ public class Playlist
 
   /**
    * Creates a new instance of {@link SoundCue} and adds it to tourPrimitive.
-   * This method is a short version for:    <code>
+   * This method is a short version for:     &lt;code&gt;
    * SoundCue soundCue = new SoundCue();
-   * this.getTourPrimitive().add(soundCue); </code>
-   * <p>
-   * <p>
+   * this.getTourPrimitive().add(soundCue);  &lt;/code&gt;
    */
   public SoundCue createAndAddSoundCue() {
     SoundCue newValue = new SoundCue();
@@ -156,13 +146,12 @@ public class Playlist
 
   /**
    * Sets the value of the tourPrimitive property Objects of the following
-   * type(s) are allowed in the list List<TourPrimitive>.
-   * <p>
+   * type(s) are allowed in the list List &lt;TourPrimitive&gt;.
+   *   
    * Note:
-   * <p>
+   *   
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withTourPrimitive} instead.
-   *
    *
    * @param tourPrimitive
    */
@@ -174,8 +163,8 @@ public class Playlist
    * add a value to the tourPrimitive property collection
    *
    * @param tourPrimitive Objects of the following type are allowed in the list:
-   *                      {@code <}{@link AnimatedUpdate}{@code>}{@link JAXBElement}{@code <}{@link Wait}{@code>}{@link JAXBElement}{@code <}{@link SoundCue}{@code>}{@link JAXBElement}{@code <}{@link TourPrimitive}{@code>}{@link JAXBElement}{@code <}{@link FlyTo}{@code>}{@link JAXBElement}{@code <}{@link TourControl}{@code>}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   *                      {@link AnimatedUpdate}{@link JAXBElement}{@link Wait}{@link JAXBElement}{@link SoundCue}{@link JAXBElement}{@link TourPrimitive}{@link JAXBElement}{@link FlyTo}{@link JAXBElement}{@link TourControl}
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Playlist addToTourPrimitive(final TourPrimitive tourPrimitive) {
     this.getTourPrimitive().add(tourPrimitive);
@@ -198,7 +187,7 @@ public class Playlist
   /**
    * fluent setter
    *
-   * @see #setTourPrimitive(List<TourPrimitive>)
+   * @see #setTourPrimitive(List &lt;TourPrimitive&gt;)
    *
    * @param tourPrimitive required parameter
    */

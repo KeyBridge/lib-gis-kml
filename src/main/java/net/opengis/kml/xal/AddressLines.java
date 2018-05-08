@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml.xal;
 
@@ -23,7 +23,7 @@ import java.util.Map;
 import javax.xml.bind.annotation.*;
 import javax.xml.namespace.QName;
 
-/**
+/*
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -55,14 +55,14 @@ public class AddressLines implements Cloneable {
    * Default no-arg constructor is private. Use overloaded constructor instead!
    * (Temporary solution, till a better and more suitable ObjectFactory is
    * created.)
-   * <p>
+   *   
    */
   @Deprecated
   private AddressLines() {
     super();
   }
 
-  /**
+  /*
    *
    */
   public List<AddressLine> getAddressLine() {
@@ -72,7 +72,7 @@ public class AddressLines implements Cloneable {
     return this.addressLine;
   }
 
-  /**
+  /*
    *
    */
   public List<Object> getAny() {
@@ -83,7 +83,6 @@ public class AddressLines implements Cloneable {
   }
 
   /**
-   *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
@@ -130,11 +129,9 @@ public class AddressLines implements Cloneable {
 
   /**
    * Creates a new instance of {@link AddressLine} and adds it to addressLine.
-   * This method is a short version for:    <code>
+   * This method is a short version for:     &lt;code&gt;
    * AddressLine addressLine = new AddressLine();
-   * this.getAddressLine().add(addressLine); </code>
-   * <p>
-   * <p>
+   * this.getAddressLine().add(addressLine);  &lt;/code&gt;
    */
   public AddressLine createAndAddAddressLine() {
     AddressLine newValue = new AddressLine();
@@ -144,13 +141,12 @@ public class AddressLines implements Cloneable {
 
   /**
    * Sets the value of the addressLine property Objects of the following type(s)
-   * are allowed in the list List<AddressLine>.
-   * <p>
+   * are allowed in the list List &lt;AddressLine&gt;.
+   *   
    * Note:
-   * <p>
+   *   
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withAddressLine} instead.
-   *
    *
    * @param addressLine
    */
@@ -163,7 +159,7 @@ public class AddressLines implements Cloneable {
    *
    * @param addressLine Objects of the following type are allowed in the list:
    *                    {@link AddressLine}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public AddressLines addToAddressLine(final AddressLine addressLine) {
     this.getAddressLine().add(addressLine);
@@ -172,13 +168,12 @@ public class AddressLines implements Cloneable {
 
   /**
    * Sets the value of the any property Objects of the following type(s) are
-   * allowed in the list List<Object>.
-   * <p>
+   * allowed in the list List &lt;Object&gt;.
+   *   
    * Note:
-   * <p>
+   *   
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withAny} instead.
-   *
    *
    * @param any
    */
@@ -191,7 +186,7 @@ public class AddressLines implements Cloneable {
    *
    * @param any Objects of the following type are allowed in the list:
    *            {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public AddressLines addToAny(final Object any) {
     this.getAny().add(any);
@@ -201,7 +196,7 @@ public class AddressLines implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setAny(List<Object>)
+   * @see #setAny(List &lt;Object&gt;)
    *
    * @param any required parameter
    */

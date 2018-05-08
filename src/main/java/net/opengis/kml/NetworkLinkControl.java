@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -21,30 +21,28 @@ import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
- * <NetworkLinkControl>
+ * &lt;NetworkLinkControl&gt;
  * <p>
- * Controls the behavior of files fetched by a <NetworkLink>.
- * </p>
+ * Controls the behavior of files fetched by a &lt;NetworkLink&gt;. Syntax:
+ * &lt;pre&gt; &lt;strong&gt;&lt;NetworkLinkControl&gt; &lt;/strong&gt;
+ * &lt;minRefreshPeriod&gt;0&lt;/minRefreshPeriod&gt; &lt;!-- float --&gt;
+ * &lt;span
+ * class="style2"&gt;&lt;maxSessionLength&gt;-1&lt;/maxSessionLength&gt; &lt;!--
+ * float --&gt; &lt;/span&gt; &lt;cookie&gt; &lt;em&gt;...
+ * &lt;/em&gt;&lt;/cookie&gt; &lt;!-- string --&gt; &lt;message&gt;
+ * &lt;em&gt;... &lt;/em&gt;&lt;/message&gt; &lt;!-- string --&gt;
+ * &lt;linkName&gt; &lt;em&gt;... &lt;/em&gt;&lt;/linkName&gt; &lt;!-- string
+ * --&gt; &lt;linkDescription&gt; &lt;em&gt;...
+ * &lt;/em&gt;&lt;/linkDescription&gt; &lt;!-- string --&gt; &lt;linkSnippet
+ * maxLines="2"&gt; &lt;em&gt;... &lt;/em&gt;&lt;/linkSnippet&gt; &lt;!-- string
+ * --&gt; &lt;expires&gt;...&lt;/expires&gt; &lt;!-- kml:dateTime --&gt;
+ * &lt;Update&gt;...&lt;/Update&gt; &lt;!-- Change,Create,Delete --&gt;
+ * &lt;span&gt; &lt;em&gt;&lt;AbstractView&gt;...&lt;/AbstractView&gt;
+ * &lt;/em&gt; &lt;!-- LookAt &lt;em&gt;or &lt;/em&gt; Camera --&gt;
+ * &lt;/span&gt; &lt;strong&gt;&lt;/NetworkLinkControl&gt; &lt;/strong&gt;
+ * </pre>
  * <p>
- * Syntax:
- * <pre><strong>&lt;NetworkLinkControl&gt;</strong>
- *   &lt;minRefreshPeriod&gt;0&lt;/minRefreshPeriod&gt;           &lt;!-- float --&gt;
- *   <span class="style2">&lt;maxSessionLength&gt;-1&lt;/maxSessionLength&gt;          &lt;!-- float --&gt; </span>
- *   &lt;cookie&gt;<em>...</em>&lt;/cookie&gt;                             &lt;!-- string --&gt;
- *   &lt;message&gt;<em>...</em>&lt;/message&gt;                           &lt;!-- string --&gt;
- *   &lt;linkName&gt;<em>...</em>&lt;/linkName&gt;                         &lt;!-- string --&gt;
- *   &lt;linkDescription&gt;<em>...</em>&lt;/linkDescription&gt;           &lt;!-- string --&gt;
- *   &lt;linkSnippet maxLines="2"&gt;<em>...</em>&lt;/linkSnippet&gt;      &lt;!-- string --&gt;
- *   &lt;expires&gt;...&lt;/expires&gt;                           &lt;!-- kml:dateTime --&gt;
- *   &lt;Update&gt;...&lt;/Update&gt;                             &lt;!-- Change,Create,Delete --&gt;
- *   <span><em>&lt;AbstractView&gt;...&lt;/AbstractView&gt;</em>                 &lt;!-- LookAt <em>or</em> Camera --&gt;</span>
- * <strong>&lt;/NetworkLinkControl&gt;</strong></pre>
- * <p>
- * See Also:
- * <NetworkLink>
- * <Update>
- * <p>
- * <p>
+ * See Also: &lt;NetworkLink&gt; &lt;Update&gt;
  * <p>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -66,176 +64,129 @@ import javax.xml.bind.annotation.*;
 public class NetworkLinkControl implements Cloneable {
 
   /**
-   * <minrefreshperiod>
+   * &lt;minrefreshperiod&gt;
    * <p>
-   * Specified in seconds, <minRefreshPeriod> is the minimum allowed time
+   * Specified in seconds, &lt;minRefreshPeriod&gt; is the minimum allowed time
    * between fetches of the file. This parameter allows servers to throttle
    * fetches of a particular file and to tailor refresh rates to the expected
    * rate of change to the data. For example, a user might set a link refresh to
    * 5 seconds, but you could set your minimum refresh period to 3600 to limit
    * refresh updates to once every hour.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlElement(defaultValue = "0.0")
   protected double minRefreshPeriod;
   /**
-   * <maxsessionlength>
+   * &lt;maxsessionlength&gt;
    * <p>
-   * Specified in seconds, <maxSessionLength> is the maximum amount of time for
-   * which the client NetworkLink can remain connected. The default value of -1
-   * indicates not to terminate the session explicitly.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * Specified in seconds, &lt;maxSessionLength&gt; is the maximum amount of
+   * time for which the client NetworkLink can remain connected. The default
+   * value of -1 indicates not to terminate the session explicitly.
    */
   @XmlElement(defaultValue = "-1.0")
   protected double maxSessionLength;
   /**
-   * <cookie>
+   * &lt;cookie&gt;
    * <p>
    * Use this element to append a string to the URL query on the next refresh of
    * the network link. You can use this data in your script to provide more
    * intelligent handling on the server side, including version querying and
    * conditional file delivery.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   protected String cookie;
   /**
-   * <message>
+   * &lt;message&gt;
    * <p>
    * You can deliver a pop-up message, such as usage guidelines for your network
    * link. The message appears when the network link is first loaded into Google
    * Earth, or when it is changed in the network link control.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   protected String message;
   /**
-   * <linkname>
+   * &lt;linkname&gt;
    * <p>
    * You can control the name of the network link from the server, so that
    * changes made to the name on the client side are overridden by the server.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   protected String linkName;
   /**
-   * <linkdescription>
+   * &lt;linkdescription&gt;
    * <p>
    * You can control the description of the network link from the server, so
    * that changes made to the description on the client side are overridden by
    * the server.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   protected String linkDescription;
   /**
-   * <linksnippet maxlines="2" >
+   * &lt;linksnippet maxlines="2" &gt;
    * <p>
    * You can control the snippet for the network link from the server, so that
    * changes made to the snippet on the client side are overridden by the
-   * server. <linkSnippet>
-   * has a maxLines attribute, an integer that specifies the maximum number of
-   * lines to display.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * server. &lt;linkSnippet&gt; has a maxLines attribute, an integer that
+   * specifies the maximum number of lines to display.
    */
   protected Snippet linkSnippet;
   /**
-   * <expires>
+   * &lt;expires&gt;
    * <p>
    * You can specify a date/time at which the link should be refreshed. This
-   * specification takes effect only if the <refreshMode> in <Link> has a value
-   * of onExpire. See <refreshMode>
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * specification takes effect only if the &lt;refreshMode&gt; in &lt;Link&gt;
+   * has a value of onExpire. See &lt;refreshMode&gt;
    */
   protected String expires;
   /**
-   * <Update>
+   * &lt;Update&gt;
    * <p>
    * Specifies an addition, change, or deletion to KML data that has already
-   * been loaded using the specified URL. The <targetHref> specifies the .kml or
-   * .kmz file whose data (within Google Earth) is to be modified. <Update> is
-   * always contained in a NetworkLinkControl. Furthermore, the file containing
-   * the NetworkLinkControl must have been loaded by a NetworkLink. See the
-   * "Topics in KML" page on Updates for a detailed example of how Update works.
-   * </p>
-   * <p>
-   * With <Update>, you can specify any number of Change, Create, and Delete
-   * tags for a .kml file or .kmz archive that has previously been loaded with a
-   * network link. See <Update>.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre><strong>&lt;Update&gt;
-   *   </strong>&lt;targetHref&gt;...&lt;targetHref&gt;    &lt;!-- URL --&gt;
+   * been loaded using the specified URL. The &lt;targetHref&gt; specifies the
+   * .kml or .kmz file whose data (within Google Earth) is to be modified.
+   * &lt;Update&gt; is always contained in a NetworkLinkControl. Furthermore,
+   * the file containing the NetworkLinkControl must have been loaded by a
+   * NetworkLink. See the "Topics in KML" page on Updates for a detailed example
+   * of how Update works. With &lt;Update&gt;, you can specify any number of
+   * Change, Create, and Delete tags for a .kml file or .kmz archive that has
+   * previously been loaded with a network link. See &lt;Update&gt;. Syntax:
+   * <pre> &lt;strong&gt;&lt;Update&gt;
+   *    &lt;/strong&gt;&lt;targetHref&gt;...&lt;targetHref&gt;    &lt;!-- URL --&gt;
    *   &lt;Change&gt;...&lt;/Change&gt;
    *   &lt;Create&gt;...&lt;/Create&gt;
    *   &lt;Delete&gt;...&lt;/Delete&gt;
-   * <strong>&lt;/Update&gt;</strong></pre>
+   *  &lt;strong&gt;&lt;/Update&gt; &lt;/strong&gt; </pre>
    * <p>
    * Contained By:
    *
-   * @see: <NetworkLinkControl>
+   * @see: &lt;NetworkLinkControl&gt;
    * @see: Note: This element was deprecated in KML Release 2.1 and is replaced
-   * by <Link>, which provides the additional functionality of Regions. The
-   * <Url> tag will still work in Google Earth, but use of the newer <Link> tag
-   * is encouraged.
+   * by &lt;Link&gt;, which provides the additional functionality of Regions.
+   * The &lt;Url&gt; tag will still work in Google Earth, but use of the newer
+   * &lt;Link&gt; tag is encouraged.
    * @see: Use this element to set the location of the link to the KML file, to
    * define the refresh options for the server and viewer changes, and to
    * populate a variable to return useful client information to the server.
-   *
-   *
    *
    */
   @XmlElement(name = "Update")
   protected Update update;
   /**
-   * <abstractview>
+   * &lt;abstractview&gt;
    * <p>
    * Defines a viewpoint associated with any element derived from Feature. See
-   * <Camera>
-   * and <LookAt>.
-   * </p>
-   * <p>
-   * This is an abstract element and cannot be used directly in a KML file. This
-   * element is extended by the <Camera> and <LookAt> elements.
-   * </p>
-   * <p>
-   * Syntax:
+   * &lt;Camera&gt; and &lt;LookAt&gt;. This is an abstract element and cannot
+   * be used directly in a KML file. This element is extended by the
+   * &lt;Camera&gt; and &lt;LookAt&gt; elements. Syntax:
    * <pre>&lt;!-- abstract element; do not create --&gt;
-   * <strong>&lt;!--<em> AbstractView</em> --&gt;</strong>                   &lt;!-- Camera, LookAt --&gt;
-   *   &lt;!-- extends <span class="style1">Object</span> --&gt;
-   *   <em>&lt;TimePrimitive&gt;...&lt;/TimePrimitive&gt;</em>                        &lt;!-- gx:TimeSpan or gx:TimeStamp --&gt;
-   * <strong>&lt;-- /<em>AbstractView</em> --&gt;</strong></pre>
+   *  &lt;strong&gt;&lt;!-- &lt;em&gt; AbstractView &lt;/em&gt; --&gt; &lt;/strong&gt;                   &lt;!-- Camera, LookAt --&gt;
+   *   &lt;!-- extends  &lt;span class="style1"&gt;Object &lt;/span&gt; --&gt;
+   *    &lt;em&gt;&lt;TimePrimitive&gt;...&lt;/TimePrimitive&gt; &lt;/em&gt;                        &lt;!-- gx:TimeSpan or gx:TimeStamp --&gt;
+   *  &lt;strong&gt;&lt;-- / &lt;em&gt;AbstractView &lt;/em&gt; --&gt; &lt;/strong&gt;
+   * </pre>
    * <p>
    * Extends:
    *
-   * @see: <Object>
+   * @see: &lt;Object&gt;
    *
    * Extended By:
-   * @see: <Camera>
-   * @see: <LookAt>
-   *
-   *
+   * @see: &lt;Camera&gt;
+   * @see: &lt;LookAt&gt;
    *
    */
   @XmlElementRef(name = "AbstractViewGroup", namespace = "http://www.opengis.net/kml/2.2", required = false)
@@ -244,21 +195,16 @@ public class NetworkLinkControl implements Cloneable {
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> networkLinkControlSimpleExtension;
   /**
-   * <Object>
+   * &lt;Object&gt;
    * <p>
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the <Update> mechanism is to be used.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;<strong>
-   * &lt;!-- <em>Object</em> id="ID" targetId="NCName" --&gt;
-   * &lt;!-- /<em>Object</em>&gt; --&gt;</strong></pre>
-   * <p>
-   * <p>
+   * assigned if the &lt;Update&gt; mechanism is to be used. Syntax:
+   * <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
+   * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
    * <p>
    */
   @XmlElement(name = "NetworkLinkControlObjectExtensionGroup")
@@ -451,9 +397,9 @@ public class NetworkLinkControl implements Cloneable {
   /**
    * @see abstractView
    *
-   * @return possible object is null   {@code <}{@link AbstractView}{@code>}
-     *     {@code <}{@link LookAt}{@code>}
-   *     {@code <}{@link Camera}{@code>}
+   * @return possible object is null null null null null null null null   {@link AbstractView}
+     *     {@link LookAt}
+   *     {@link Camera}
    *
    */
   public AbstractView getAbstractView() {
@@ -463,9 +409,9 @@ public class NetworkLinkControl implements Cloneable {
   /**
    * @see abstractView
    *
-   * @param value allowed object is null   {@code <}{@link AbstractView}{@code>}
-     *     {@code <}{@link LookAt}{@code>}
-   *     {@code <}{@link Camera}{@code>}
+   * @param value allowed object is null null null null null null null null   {@link AbstractView}
+     *     {@link LookAt}
+   *     {@link Camera}
    *
    */
   public void setAbstractView(AbstractView value) {
@@ -610,11 +556,8 @@ public class NetworkLinkControl implements Cloneable {
   /**
    * Creates a new instance of {@link Snippet} and set it to linkSnippet.
    * <p>
-   * This method is a short version for:    <code>
-   * Snippet snippet = new Snippet();
-   * this.setLinkSnippet(snippet); </code>
-   * <p>
-   * <p>
+   * This method is a short version for: &lt;code&gt; Snippet snippet = new
+   * Snippet(); this.setLinkSnippet(snippet); &lt;/code&gt;
    */
   public Snippet createAndSetLinkSnippet() {
     Snippet newValue = new Snippet();
@@ -625,10 +568,8 @@ public class NetworkLinkControl implements Cloneable {
   /**
    * Creates a new instance of {@link Update} and set it to update.
    * <p>
-   * This method is a short version for:    <code>
-   * Update update = new Update();
-   * this.setUpdate(update); </code>
-   *
+   * This method is a short version for: &lt;code&gt; Update update = new
+   * Update(); this.setUpdate(update); &lt;/code&gt;
    *
    * @param createOrDeleteOrChange required parameter
    * @param targetHref             required parameter
@@ -642,11 +583,8 @@ public class NetworkLinkControl implements Cloneable {
   /**
    * Creates a new instance of {@link LookAt} and set it to abstractView.
    * <p>
-   * This method is a short version for:    <code>
-   * LookAt lookAt = new LookAt();
-   * this.setAbstractView(lookAt); </code>
-   * <p>
-   * <p>
+   * This method is a short version for: &lt;code&gt; LookAt lookAt = new
+   * LookAt(); this.setAbstractView(lookAt); &lt;/code&gt;
    */
   public LookAt createAndSetLookAt() {
     LookAt newValue = new LookAt();
@@ -657,11 +595,8 @@ public class NetworkLinkControl implements Cloneable {
   /**
    * Creates a new instance of {@link Camera} and set it to abstractView.
    * <p>
-   * This method is a short version for:    <code>
-   * Camera camera = new Camera();
-   * this.setAbstractView(camera); </code>
-   * <p>
-   * <p>
+   * This method is a short version for: &lt;code&gt; Camera camera = new
+   * Camera(); this.setAbstractView(camera); &lt;/code&gt;
    */
   public Camera createAndSetCamera() {
     Camera newValue = new Camera();
@@ -684,7 +619,8 @@ public class NetworkLinkControl implements Cloneable {
    * @param networkLinkControlSimpleExtension Objects of the following type are
    *                                          allowed in the list:
    *                                          {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public NetworkLinkControl addToNetworkLinkControlSimpleExtension(final Object networkLinkControlSimpleExtension) {
     this.getNetworkLinkControlSimpleExtension().add(networkLinkControlSimpleExtension);
@@ -706,7 +642,8 @@ public class NetworkLinkControl implements Cloneable {
    * @param networkLinkControlObjectExtension Objects of the following type are
    *                                          allowed in the list:
    *                                          {@link AbstractObject}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public NetworkLinkControl addToNetworkLinkControlObjectExtension(final AbstractObject networkLinkControlObjectExtension) {
     this.getNetworkLinkControlObjectExtension().add(networkLinkControlObjectExtension);
@@ -836,7 +773,7 @@ public class NetworkLinkControl implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setNetworkLinkControlSimpleExtension(List<Object>)
+   * @see #setNetworkLinkControlSimpleExtension(List &lt;Object&gt;)
    *
    * @param networkLinkControlSimpleExtension required parameter
    */
@@ -848,7 +785,7 @@ public class NetworkLinkControl implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setNetworkLinkControlObjectExtension(List<AbstractObject>)
+   * @see #setNetworkLinkControlObjectExtension(List &lt;AbstractObject&gt;)
    *
    * @param networkLinkControlObjectExtension required parameter
    */

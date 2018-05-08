@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -26,50 +26,42 @@ import net.opengis.kml.gx.Tour;
 import net.opengis.kml.xal.AddressDetails;
 
 /**
- * <Folder>
- * <p>
+ *  &lt;Folder&gt;
+ *   
  * A Folder is used to arrange other Features hierarchically (Folders,
  * Placemarks, NetworkLinks, or Overlays). A Feature is visible only if it and
- * all its ancestors are visible.
- * </p>
- * <p>
- * A Folder is used to arrange other Features hierarchically (Folders,
- * Placemarks, NetworkLinks, or Overlays). A Feature is visible only if it and
- * all its ancestors are visible.
- * </p>
- * <p>
- * Syntax:
- * <pre><strong>&lt;Folder id="ID"&gt;</strong>
- *   &lt;!-- inherited from <em>Feature</em> element --&gt;
- *   &lt;name&gt;<em>...</em>&lt;/name&gt;                      &lt;!-- string --&gt;
+ * all its ancestors are visible. A Folder is used to arrange other Features
+ * hierarchically (Folders, Placemarks, NetworkLinks, or Overlays). A Feature is
+ * visible only if it and all its ancestors are visible. Syntax:
+ *  &lt;pre&gt; &lt;strong&gt;&lt;Folder id="ID"&gt; &lt;/strong&gt;
+ *   &lt;!-- inherited from  &lt;em&gt;Feature &lt;/em&gt; element --&gt;
+ *   &lt;name&gt; &lt;em&gt;... &lt;/em&gt;&lt;/name&gt;                      &lt;!-- string --&gt;
  *   &lt;visibility&gt;1&lt;/visibility&gt;            &lt;!-- boolean --&gt;
  *   &lt;open&gt;0&lt;/open&gt;                        &lt;!-- boolean --&gt;
- *   <span>&lt;atom:author&gt;...&lt;atom:author&gt;         &lt;!-- xmlns:atom --&gt;
- *   &lt;atom:link&gt;...&lt;/atom:link&gt;</span><span>            &lt;!-- xmlns:atom --&gt;</span>
- *   &lt;address&gt;<em>...</em>&lt;/address&gt;                &lt;!-- string --&gt;
- *   &lt;xal:AddressDetails&gt;...&lt;/xal:AddressDetails&gt;  &lt;!-- xmlns:xal --&gt;<br>  &lt;phoneNumber&gt;...&lt;/phoneNumber&gt;        &lt;!-- string --&gt;<br>  &lt;Snippet maxLines="2"&gt;<em>...</em>&lt;/Snippet&gt;   &lt;!-- string --&gt;
- *   &lt;description&gt;<em>...</em>&lt;/description&gt;        &lt;!-- string --&gt;
- *   <span><em>&lt;AbstractView&gt;...&lt;/AbstractView&gt;</em>      &lt;!-- Camera <em>or</em> LookAt --&gt;</span>
- *   &lt;<em>TimePrimitive</em>&gt;...&lt;/<em>TimePrimitive</em>&gt;
- *   &lt;styleUrl&gt;<em>...</em>&lt;/styleUrl&gt;              &lt;!-- anyURI --&gt;
- *   &lt;<em>StyleSelector&gt;...&lt;/StyleSelector&gt;</em>
+ *    &lt;span&gt;&lt;atom:author&gt;...&lt;atom:author&gt;         &lt;!-- xmlns:atom --&gt;
+ *   &lt;atom:link&gt;...&lt;/atom:link&gt; &lt;/span&gt; &lt;span&gt;            &lt;!-- xmlns:atom --&gt; &lt;/span&gt;
+ *   &lt;address&gt; &lt;em&gt;... &lt;/em&gt;&lt;/address&gt;                &lt;!-- string --&gt;
+ *   &lt;xal:AddressDetails&gt;...&lt;/xal:AddressDetails&gt;  &lt;!-- xmlns:xal --&gt; &lt;br&gt;  &lt;phoneNumber&gt;...&lt;/phoneNumber&gt;        &lt;!-- string --&gt; &lt;br&gt;  &lt;Snippet maxLines="2"&gt; &lt;em&gt;... &lt;/em&gt;&lt;/Snippet&gt;   &lt;!-- string --&gt;
+ *   &lt;description&gt; &lt;em&gt;... &lt;/em&gt;&lt;/description&gt;        &lt;!-- string --&gt;
+ *    &lt;span&gt; &lt;em&gt;&lt;AbstractView&gt;...&lt;/AbstractView&gt; &lt;/em&gt;      &lt;!-- Camera  &lt;em&gt;or &lt;/em&gt; LookAt --&gt; &lt;/span&gt;
+ *   &lt; &lt;em&gt;TimePrimitive &lt;/em&gt;&gt;...&lt;/ &lt;em&gt;TimePrimitive &lt;/em&gt;&gt;
+ *   &lt;styleUrl&gt; &lt;em&gt;... &lt;/em&gt;&lt;/styleUrl&gt;              &lt;!-- anyURI --&gt;
+ *   &lt; &lt;em&gt;StyleSelector&gt;...&lt;/StyleSelector&gt; &lt;/em&gt;
  *   &lt;Region&gt;...&lt;/Region&gt;
- *   <span>&lt;Metadata&gt;...&lt;/Metadata&gt;              &lt;!-- deprecated in KML 2.2 --&gt;
+ *    &lt;span&gt;&lt;Metadata&gt;...&lt;/Metadata&gt;              &lt;!-- deprecated in KML 2.2 --&gt;
  *   &lt;ExtendedData&gt;...&lt;/ExtendedData&gt;      &lt;!-- new in KML 2.2 --&gt;
- * <p>
- *   </span>&lt;!-- specific to Folder --&gt;
- *   &lt;!-- 0 or more <em>Feature</em> elements --&gt;
- * <strong>&lt;/Folder</strong>&gt;
- * </pre>
- * <p>
+ *
+ *    &lt;/span&gt;&lt;!-- specific to Folder --&gt;
+ *   &lt;!-- 0 or more  &lt;em&gt;Feature &lt;/em&gt; elements --&gt;
+ *  &lt;strong&gt;&lt;/Folder &lt;/strong&gt;&gt;
+ *  </pre>
+ *   
  * Extends:
  *
- * @see: <Container>
+ * @see:  &lt;Container&gt;
  *
  * Contains:
- * @see: <Feature>
- *
- *
+ * @see:  &lt;Feature&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -79,51 +71,44 @@ import net.opengis.kml.xal.AddressDetails;
   "folderObjectExtension"
 })
 @XmlRootElement(name = "Folder", namespace = "http://www.opengis.net/kml/2.2")
-public class Folder
-        extends Container
-        implements Cloneable {
+public class Folder extends Container implements Cloneable {
 
   /**
-   * <Feature>
-   * <p>
+   *  &lt;Feature&gt;
+   *   
    * This is an abstract element and cannot be used directly in a KML file. The
    * following diagram shows how some of a Feature's elements appear in Google
-   * Earth.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;
-   * <strong>&lt;!--<em> Feature</em> id="ID" --&gt;</strong>                &lt;!-- Document,Folder,
+   * Earth. Syntax:
+   *  <pre>&lt;!-- abstract element; do not create --&gt;
+   *  &lt;strong&gt;&lt;!-- &lt;em&gt; Feature &lt;/em&gt; id="ID" --&gt; &lt;/strong&gt;                &lt;!-- Document,Folder,
    *                                              NetworkLink,Placemark,
    *                                              GroundOverlay,PhotoOverlay,ScreenOverlay --&gt;
-   *   &lt;name&gt;<em>...</em>&lt;/name&gt;                      &lt;!-- string --&gt;
+   *   &lt;name&gt; &lt;em&gt;... &lt;/em&gt;&lt;/name&gt;                      &lt;!-- string --&gt;
    *   &lt;visibility&gt;1&lt;/visibility&gt;            &lt;!-- boolean --&gt;
    *   &lt;open&gt;0&lt;/open&gt;                        &lt;!-- boolean --&gt;
-   *   <span>&lt;atom:author&gt;...&lt;atom:author&gt;         &lt;!-- xmlns:atom --&gt;
-   *   &lt;atom:link&gt;...&lt;/atom:link&gt;</span><span>            &lt;!-- xmlns:atom --&gt;</span>
-   *   &lt;address&gt;<em>...</em>&lt;/address&gt;                &lt;!-- string --&gt;
-   *   &lt;xal:AddressDetails&gt;...&lt;/xal:AddressDetails&gt;  &lt;!-- xmlns:xal --&gt;<br>  &lt;phoneNumber&gt;...&lt;/phoneNumber&gt;        &lt;!-- string --&gt;<br>  &lt;Snippet maxLines="2"&gt;<em>...</em>&lt;/Snippet&gt;   &lt;!-- string --&gt;
-   *   &lt;description&gt;<em>...</em>&lt;/description&gt;        &lt;!-- string --&gt;
-   *   <span><em>&lt;AbstractView&gt;...&lt;/AbstractView&gt;</em>      &lt;!-- Camera <em>or</em> LookAt --&gt;</span>
-   *   &lt;<em>TimePrimitive</em>&gt;...&lt;/<em>TimePrimitive</em>&gt;    &lt;!-- TimeStamp or TimeSpan --&gt;
-   *   &lt;styleUrl&gt;<em>...</em>&lt;/styleUrl&gt;              &lt;!-- anyURI --&gt;
-   *   &lt;<em>StyleSelector&gt;...&lt;/StyleSelector&gt;</em>
+   *    &lt;span&gt;&lt;atom:author&gt;...&lt;atom:author&gt;         &lt;!-- xmlns:atom --&gt;
+   *   &lt;atom:link&gt;...&lt;/atom:link&gt; &lt;/span&gt; &lt;span&gt;            &lt;!-- xmlns:atom --&gt; &lt;/span&gt;
+   *   &lt;address&gt; &lt;em&gt;... &lt;/em&gt;&lt;/address&gt;                &lt;!-- string --&gt;
+   *   &lt;xal:AddressDetails&gt;...&lt;/xal:AddressDetails&gt;  &lt;!-- xmlns:xal --&gt; &lt;br&gt;  &lt;phoneNumber&gt;...&lt;/phoneNumber&gt;        &lt;!-- string --&gt; &lt;br&gt;  &lt;Snippet maxLines="2"&gt; &lt;em&gt;... &lt;/em&gt;&lt;/Snippet&gt;   &lt;!-- string --&gt;
+   *   &lt;description&gt; &lt;em&gt;... &lt;/em&gt;&lt;/description&gt;        &lt;!-- string --&gt;
+   *    &lt;span&gt; &lt;em&gt;&lt;AbstractView&gt;...&lt;/AbstractView&gt; &lt;/em&gt;      &lt;!-- Camera  &lt;em&gt;or &lt;/em&gt; LookAt --&gt; &lt;/span&gt;
+   *   &lt; &lt;em&gt;TimePrimitive &lt;/em&gt;&gt;...&lt;/ &lt;em&gt;TimePrimitive &lt;/em&gt;&gt;    &lt;!-- TimeStamp or TimeSpan --&gt;
+   *   &lt;styleUrl&gt; &lt;em&gt;... &lt;/em&gt;&lt;/styleUrl&gt;              &lt;!-- anyURI --&gt;
+   *   &lt; &lt;em&gt;StyleSelector&gt;...&lt;/StyleSelector&gt; &lt;/em&gt;
    *   &lt;Region&gt;...&lt;/Region&gt;
-   *   <span>&lt;Metadata&gt;...&lt;/Metadata&gt;              &lt;!-- deprecated in KML 2.2 --&gt;
-   *   &lt;ExtendedData&gt;...&lt;/ExtendedData&gt;      &lt;!-- new in KML 2.2 --&gt;<br></span>&lt;-- /<em>Feature</em> --&gt;</pre>
-   * <p>
+   *    &lt;span&gt;&lt;Metadata&gt;...&lt;/Metadata&gt;              &lt;!-- deprecated in KML 2.2 --&gt;
+   *   &lt;ExtendedData&gt;...&lt;/ExtendedData&gt;      &lt;!-- new in KML 2.2 --&gt; &lt;br&gt; &lt;/span&gt;&lt;-- / &lt;em&gt;Feature &lt;/em&gt; --&gt; </pre>
+   *   
    * Extends:
    *
-   * @see: <Object>
+   * @see:  &lt;Object&gt;
    *
    * Extended By:
-   * @see: <Container>
-   * @see: <NetworkLink>
-   * @see: <Overlay>
-   * @see: <Placemark>
-   * @see: <gx:Tour>
-   *
-   *
+   * @see:  &lt;Container&gt;
+   * @see:  &lt;NetworkLink&gt;
+   * @see:  &lt;Overlay&gt;
+   * @see:  &lt;Placemark&gt;
+   * @see:  &lt;gx:Tour&gt;
    *
    */
   @XmlElementRef(name = "AbstractFeatureGroup", namespace = "http://www.opengis.net/kml/2.2", required = false)
@@ -132,22 +117,17 @@ public class Folder
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> folderSimpleExtension;
   /**
-   * <Object>
-   * <p>
+   *  &lt;Object&gt;
+   *   
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the <Update> mechanism is to be used.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;<strong>
-   * &lt;!-- <em>Object</em> id="ID" targetId="NCName" --&gt;
-   * &lt;!-- /<em>Object</em>&gt; --&gt;</strong></pre>
-   * <p>
-   * <p>
-   * <p>
+   * assigned if the  &lt;Update&gt; mechanism is to be used. Syntax:
+   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
+   * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
+   *   
    */
   @XmlElement(name = "FolderObjectExtensionGroup")
   protected List<AbstractObject> folderObjectExtension;
@@ -240,11 +220,9 @@ public class Folder
 
   /**
    * Creates a new instance of {@link Tour} and adds it to feature. This method
-   * is a short version for:    <code>
+   * is a short version for:     &lt;code&gt;
    * Tour tour = new Tour();
-   * this.getFeature().add(tour); </code>
-   * <p>
-   * <p>
+   * this.getFeature().add(tour);  &lt;/code&gt;
    */
   public Tour createAndAddTour() {
     Tour newValue = new Tour();
@@ -254,11 +232,9 @@ public class Folder
 
   /**
    * Creates a new instance of {@link ScreenOverlay} and adds it to feature.
-   * This method is a short version for:    <code>
+   * This method is a short version for:     &lt;code&gt;
    * ScreenOverlay screenOverlay = new ScreenOverlay();
-   * this.getFeature().add(screenOverlay); </code>
-   * <p>
-   * <p>
+   * this.getFeature().add(screenOverlay);  &lt;/code&gt;
    */
   public ScreenOverlay createAndAddScreenOverlay() {
     ScreenOverlay newValue = new ScreenOverlay();
@@ -268,11 +244,9 @@ public class Folder
 
   /**
    * Creates a new instance of {@link PhotoOverlay} and adds it to feature. This
-   * method is a short version for:    <code>
+   * method is a short version for:     &lt;code&gt;
    * PhotoOverlay photoOverlay = new PhotoOverlay();
-   * this.getFeature().add(photoOverlay); </code>
-   * <p>
-   * <p>
+   * this.getFeature().add(photoOverlay);  &lt;/code&gt;
    */
   public PhotoOverlay createAndAddPhotoOverlay() {
     PhotoOverlay newValue = new PhotoOverlay();
@@ -282,11 +256,9 @@ public class Folder
 
   /**
    * Creates a new instance of {@link GroundOverlay} and adds it to feature.
-   * This method is a short version for:    <code>
+   * This method is a short version for:     &lt;code&gt;
    * GroundOverlay groundOverlay = new GroundOverlay();
-   * this.getFeature().add(groundOverlay); </code>
-   * <p>
-   * <p>
+   * this.getFeature().add(groundOverlay);  &lt;/code&gt;
    */
   public GroundOverlay createAndAddGroundOverlay() {
     GroundOverlay newValue = new GroundOverlay();
@@ -296,11 +268,9 @@ public class Folder
 
   /**
    * Creates a new instance of {@link NetworkLink} and adds it to feature. This
-   * method is a short version for:    <code>
+   * method is a short version for:     &lt;code&gt;
    * NetworkLink networkLink = new NetworkLink();
-   * this.getFeature().add(networkLink); </code>
-   * <p>
-   * <p>
+   * this.getFeature().add(networkLink);  &lt;/code&gt;
    */
   public NetworkLink createAndAddNetworkLink() {
     NetworkLink newValue = new NetworkLink();
@@ -310,11 +280,9 @@ public class Folder
 
   /**
    * Creates a new instance of {@link Folder} and adds it to feature. This
-   * method is a short version for:    <code>
+   * method is a short version for:     &lt;code&gt;
    * Folder folder = new Folder();
-   * this.getFeature().add(folder); </code>
-   * <p>
-   * <p>
+   * this.getFeature().add(folder);  &lt;/code&gt;
    */
   public Folder createAndAddFolder() {
     Folder newValue = new Folder();
@@ -324,11 +292,9 @@ public class Folder
 
   /**
    * Creates a new instance of {@link Document} and adds it to feature. This
-   * method is a short version for:    <code>
+   * method is a short version for:     &lt;code&gt;
    * Document document = new Document();
-   * this.getFeature().add(document); </code>
-   * <p>
-   * <p>
+   * this.getFeature().add(document);  &lt;/code&gt;
    */
   public Document createAndAddDocument() {
     Document newValue = new Document();
@@ -338,11 +304,9 @@ public class Folder
 
   /**
    * Creates a new instance of {@link Placemark} and adds it to feature. This
-   * method is a short version for:    <code>
+   * method is a short version for:     &lt;code&gt;
    * Placemark placemark = new Placemark();
-   * this.getFeature().add(placemark); </code>
-   * <p>
-   * <p>
+   * this.getFeature().add(placemark);  &lt;/code&gt;
    */
   public Placemark createAndAddPlacemark() {
     Placemark newValue = new Placemark();
@@ -363,8 +327,8 @@ public class Folder
    * add a value to the feature property collection
    *
    * @param feature Objects of the following type are allowed in the list:
-   *                {@code <}{@link Container}{@code>}{@link JAXBElement}{@code <}{@link GroundOverlay}{@code>}{@link JAXBElement}{@code <}{@link NetworkLink}{@code>}{@link JAXBElement}{@code <}{@link Folder}{@code>}{@link JAXBElement}{@code <}{@link PhotoOverlay}{@code>}{@link JAXBElement}{@code <}{@link Document}{@code>}{@link JAXBElement}{@code <}{@link Tour}{@code>}{@link JAXBElement}{@code <}{@link ScreenOverlay}{@code>}{@link JAXBElement}{@code <}{@link Feature}{@code>}{@link JAXBElement}{@code <}{@link Placemark}{@code>}{@link JAXBElement}{@code <}{@link Overlay}{@code>}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   *                {@link Container}{@link JAXBElement}{@link GroundOverlay}{@link JAXBElement}{@link NetworkLink}{@link JAXBElement}{@link Folder}{@link JAXBElement}{@link PhotoOverlay}{@link JAXBElement}{@link Document}{@link JAXBElement}{@link Tour}{@link JAXBElement}{@link ScreenOverlay}{@link JAXBElement}{@link Feature}{@link JAXBElement}{@link Placemark}{@link JAXBElement}{@link Overlay}
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Folder addToFeature(final Feature feature) {
     this.getFeature().add(feature);
@@ -385,7 +349,7 @@ public class Folder
    *
    * @param folderSimpleExtension Objects of the following type are allowed in
    *                              the list: {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Folder addToFolderSimpleExtension(final Object folderSimpleExtension) {
     this.getFolderSimpleExtension().add(folderSimpleExtension);
@@ -406,7 +370,7 @@ public class Folder
    *
    * @param folderObjectExtension Objects of the following type are allowed in
    *                              the list: {@link AbstractObject}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Folder addToFolderObjectExtension(final AbstractObject folderObjectExtension) {
     this.getFolderObjectExtension().add(folderObjectExtension);
@@ -518,7 +482,7 @@ public class Folder
   /**
    * fluent setter
    *
-   * @see #setFeature(List<Feature>)
+   * @see #setFeature(List &lt;Feature&gt;)
    *
    * @param feature required parameter
    */
@@ -530,7 +494,7 @@ public class Folder
   /**
    * fluent setter
    *
-   * @see #setFolderSimpleExtension(List<Object>)
+   * @see #setFolderSimpleExtension(List &lt;Object&gt;)
    *
    * @param folderSimpleExtension required parameter
    */
@@ -542,7 +506,7 @@ public class Folder
   /**
    * fluent setter
    *
-   * @see #setFolderObjectExtension(List<AbstractObject>)
+   * @see #setFolderObjectExtension(List &lt;AbstractObject&gt;)
    *
    * @param folderObjectExtension required parameter
    */

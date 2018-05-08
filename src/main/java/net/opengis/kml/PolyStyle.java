@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -23,26 +23,24 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- * <PolyStyle>
+ *  &lt;PolyStyle&gt;
  * Syntax:
- * <pre><strong>&lt;PolyStyle id="ID"&gt;</strong>
- *   &lt;!-- inherited from <em>ColorStyle</em> --&gt;
+ *  &lt;pre&gt; &lt;strong&gt;&lt;PolyStyle id="ID"&gt; &lt;/strong&gt;
+ *   &lt;!-- inherited from  &lt;em&gt;ColorStyle &lt;/em&gt; --&gt;
  *   &lt;color&gt;ffffffff&lt;/color&gt;            &lt;!-- kml:color --&gt;
- *   &lt;colorMode&gt;normal&lt;/colorMode&gt;      &lt;!-- kml:colorModeEnum: normal <em>or</em> random --&gt;
- * <p>
+ *   &lt;colorMode&gt;normal&lt;/colorMode&gt;      &lt;!-- kml:colorModeEnum: normal  &lt;em&gt;or &lt;/em&gt; random --&gt;
+ *
  *   &lt;!-- specific to PolyStyle --&gt;
  *   &lt;fill&gt;1&lt;/fill&gt;                     &lt;!-- boolean --&gt;
  *   &lt;outline&gt;1&lt;/outline&gt;               &lt;!-- boolean --&gt;
- * <strong>&lt;/PolyStyle&gt;</strong></pre>
- * <p>
+ *  &lt;strong&gt;&lt;/PolyStyle&gt; &lt;/strong&gt; </pre>
+ *   
  * Extends:
  *
- * @see: <ColorStyle>
+ * @see:  &lt;ColorStyle&gt;
  *
  * Contained By:
- * @see: <Style>
- *
- *
+ * @see:  &lt;Style&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -54,30 +52,22 @@ import net.opengis.kml.annotations.Obvious;
 })
 @XmlRootElement(name = "PolyStyle", namespace = "http://www.opengis.net/kml/2.2")
 public class PolyStyle
-        extends ColorStyle
-        implements Cloneable {
+  extends ColorStyle
+  implements Cloneable {
 
   /**
-   * <fill>
-   * <p>
+   *  &lt;fill&gt;
+   *   
    * Boolean value. Specifies whether to fill the polygon.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlElement(defaultValue = "1")
   @XmlJavaTypeAdapter(BooleanConverter.class)
   protected Boolean fill;
   /**
-   * <outline>
-   * <p>
+   *  &lt;outline&gt;
+   *   
    * Boolean value. Specifies whether to outline the polygon. Polygon outlines
    * use the current LineStyle.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlElement(defaultValue = "1")
   @XmlJavaTypeAdapter(BooleanConverter.class)
@@ -86,22 +76,17 @@ public class PolyStyle
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> polyStyleSimpleExtension;
   /**
-   * <Object>
-   * <p>
+   *  &lt;Object&gt;
+   *   
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the <Update> mechanism is to be used.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;<strong>
-   * &lt;!-- <em>Object</em> id="ID" targetId="NCName" --&gt;
-   * &lt;!-- /<em>Object</em>&gt; --&gt;</strong></pre>
-   * <p>
-   * <p>
-   * <p>
+   * assigned if the  &lt;Update&gt; mechanism is to be used. Syntax:
+   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
+   * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
+   *   
    */
   @XmlElement(name = "PolyStyleObjectExtensionGroup")
   protected List<AbstractObject> polyStyleObjectExtension;
@@ -111,7 +96,6 @@ public class PolyStyle
   }
 
   /**
-   *
    * @return possible object is {@link Boolean}
    *
    */
@@ -130,7 +114,6 @@ public class PolyStyle
   }
 
   /**
-   *
    * @return possible object is {@link Boolean}
    *
    */
@@ -241,7 +224,7 @@ public class PolyStyle
    *
    * @param polyStyleSimpleExtension Objects of the following type are allowed
    *                                 in the list: {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public PolyStyle addToPolyStyleSimpleExtension(final Object polyStyleSimpleExtension) {
     this.getPolyStyleSimpleExtension().add(polyStyleSimpleExtension);
@@ -262,7 +245,7 @@ public class PolyStyle
    *
    * @param polyStyleObjectExtension Objects of the following type are allowed
    *                                 in the list: {@link AbstractObject}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public PolyStyle addToPolyStyleObjectExtension(final AbstractObject polyStyleObjectExtension) {
     this.getPolyStyleObjectExtension().add(polyStyleObjectExtension);
@@ -381,7 +364,7 @@ public class PolyStyle
   /**
    * fluent setter
    *
-   * @see #setPolyStyleSimpleExtension(List<Object>)
+   * @see #setPolyStyleSimpleExtension(List &lt;Object&gt;)
    *
    * @param polyStyleSimpleExtension required parameter
    */
@@ -393,7 +376,7 @@ public class PolyStyle
   /**
    * fluent setter
    *
-   * @see #setPolyStyleObjectExtension(List<AbstractObject>)
+   * @see #setPolyStyleObjectExtension(List &lt;AbstractObject&gt;)
    *
    * @param polyStyleObjectExtension required parameter
    */

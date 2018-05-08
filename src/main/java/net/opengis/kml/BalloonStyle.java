@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -22,31 +22,26 @@ import javax.xml.bind.annotation.*;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- * <BalloonStyle>
- * <p>
- * Specifies how the description balloon for placemarks is drawn. The <bgColor>,
- * if specified, is used as the background color of the balloon. See <Feature>
+ *  &lt;BalloonStyle&gt;
+ *   
+ * Specifies how the description balloon for placemarks is drawn. The  &lt;bgColor&gt;,
+ * if specified, is used as the background color of the balloon. See  &lt;Feature&gt;
  * for a diagram illustrating how the default description balloon appears in
- * Google Earth.
- * </p>
- * <p>
- * Syntax:
- * <pre><strong>&lt;BalloonStyle id="ID"&gt;</strong>
+ * Google Earth. Syntax:
+ *  &lt;pre&gt; &lt;strong&gt;&lt;BalloonStyle id="ID"&gt; &lt;/strong&gt;
  *   &lt;!-- specific to BalloonStyle --&gt;
  *   &lt;bgColor&gt;ffffffff&lt;/bgColor&gt;            &lt;!-- kml:color --&gt;
  *   &lt;textColor&gt;ff000000&lt;/textColor&gt;        &lt;!-- kml:color --&gt;
- *   &lt;text&gt;<em>...</em>&lt;/text&gt;                       &lt;!-- string --&gt;
- *   <span>&lt;displayMode&gt;default&lt;/displayMode&gt;<strong>     </strong>&lt;!-- kml:displayModeEnum --&gt;</span><strong>
- * &lt;/BalloonStyle&gt;</strong></pre>
- * <p>
+ *   &lt;text&gt; &lt;em&gt;... &lt;/em&gt;&lt;/text&gt;                       &lt;!-- string --&gt;
+ *    &lt;span&gt;&lt;displayMode&gt;default&lt;/displayMode&gt; &lt;strong&gt;      &lt;/strong&gt;&lt;!-- kml:displayModeEnum --&gt; &lt;/span&gt; &lt;strong&gt;
+ * &lt;/BalloonStyle&gt; &lt;/strong&gt; </pre>
+ *   
  * Extends:
  *
- * @see: <ColorStyle>
+ * @see:  &lt;ColorStyle&gt;
  *
  * Contained By:
- * @see: <Style>
- *
- *
+ * @see:  &lt;Style&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -61,125 +56,90 @@ import net.opengis.kml.annotations.Obvious;
 })
 @XmlRootElement(name = "BalloonStyle", namespace = "http://www.opengis.net/kml/2.2")
 public class BalloonStyle
-        extends SubStyle
-        implements Cloneable {
+  extends SubStyle
+  implements Cloneable {
 
   /**
-   * <color>
-   * <p>
+   *  &lt;color&gt;
+   *   
    * Color and opacity (alpha) values are expressed in hexadecimal notation. The
    * range of values for any one color is 0 to 255 (00 to ff). For alpha, 00 is
    * fully transparent and ff is fully opaque. The order of expression is
    * aabbggrr, where aa=alpha (00 to ff); bb=blue (00 to ff); gg=green (00 to
    * ff); rr=red (00 to ff). For example, if you want to apply a blue color with
    * 50 percent opacity to an overlay, you would specify the following:
-   * <color>7fff0000</color>, where alpha=0x7f, blue=0xff, green=0x00, and
-   * red=0x00.
-   * </p>
-   * <p>
-   * Color values are expressed in hexadecimal notation, including opacity
-   * (alpha) values. The order of expression is alpha, blue, green, red
+   *  &lt;color&gt;7fff0000 &lt;/color&gt;, where alpha=0x7f, blue=0xff, green=0x00, and
+   * red=0x00. Color values are expressed in hexadecimal notation, including
+   * opacity (alpha) values. The order of expression is alpha, blue, green, red
    * (aabbggrr). The range of values for any one color is 0 to 255 (00 to ff).
    * For opacity, 00 is fully transparent and ff is fully opaque. For example,
    * if you want to apply a blue color with 50 percent opacity to an overlay,
-   * you would specify the following: <color>7fff0000</color>
-   * </p>
-   * <p>
-   * Note: The <geomColor> element has been deprecated. Use <color> instead.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * you would specify the following:  &lt;color&gt;7fff0000 &lt;/color&gt;
+   * Note: The  &lt;geomColor&gt; element has been deprecated. Use  &lt;color&gt; instead.
    */
   @XmlElement(defaultValue = "ffffffff")
 
   @Deprecated
   protected String color;
   /**
-   * <bgcolor>
-   * <p>
+   *  &lt;bgcolor&gt;
+   *   
    * Background color for the Snippet. Color and opacity values are expressed in
    * hexadecimal notation. The range of values for any one color is 0 to 255 (00
    * to ff). For alpha, 00 is fully transparent and ff is fully opaque. The
    * order of expression is aabbggrr, where aa=alpha (00 to ff); bb=blue (00 to
    * ff); gg=green (00 to ff); rr=red (00 to ff). For example, if you want to
    * apply a blue color with 50 percent opacity to an overlay, you would specify
-   * the following: <color>7fff0000</color>, where alpha=0x7f, blue=0xff,
-   * green=0x00, and red=0x00.
-   * </p>
-   * <p>
-   * Background color of the balloon (optional). Color and opacity (alpha)
-   * values are expressed in hexadecimal notation. The range of values for any
-   * one color is 0 to 255 (00 to ff). The order of expression is aabbggrr,
-   * where aa=alpha (00 to ff); bb=blue (00 to ff); gg=green (00 to ff); rr=red
-   * (00 to ff). For alpha, 00 is fully transparent and ff is fully opaque. For
-   * example, if you want to apply a blue color with 50 percent opacity to an
-   * overlay, you would specify the following: <bgColor>7fff0000</bgColor>,
-   * where alpha=0x7f, blue=0xff, green=0x00, and red=0x00. The default is
-   * opaque white (ffffffff).
-   * </p>
-   * <p>
-   * Note: The use of the <color> element within <BalloonStyle> has been
-   * deprecated. Use <bgColor> instead.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * the following:  &lt;color&gt;7fff0000 &lt;/color&gt;, where alpha=0x7f, blue=0xff,
+   * green=0x00, and red=0x00. Background color of the balloon (optional). Color
+   * and opacity (alpha) values are expressed in hexadecimal notation. The range
+   * of values for any one color is 0 to 255 (00 to ff). The order of expression
+   * is aabbggrr, where aa=alpha (00 to ff); bb=blue (00 to ff); gg=green (00 to
+   * ff); rr=red (00 to ff). For alpha, 00 is fully transparent and ff is fully
+   * opaque. For example, if you want to apply a blue color with 50 percent
+   * opacity to an overlay, you would specify the following:
+   *  &lt;bgColor&gt;7fff0000 &lt;/bgColor&gt;, where alpha=0x7f, blue=0xff, green=0x00, and
+   * red=0x00. The default is opaque white (ffffffff). Note: The use of the
+   *  &lt;color&gt; element within  &lt;BalloonStyle&gt; has been deprecated. Use  &lt;bgColor&gt;
+   * instead.
    */
   @XmlElement(defaultValue = "ffffffff")
 
   protected String bgColor;
   /**
-   * <textcolor>
-   * <p>
+   *  &lt;textcolor&gt;
+   *   
    * Foreground color for text. The default is black (ff000000).
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlElement(defaultValue = "ff000000")
 
   protected String textColor;
   /**
-   * <text>
-   * <p>
+   *  &lt;text&gt;
+   *   
    * For example, in the following KML excerpt, $[name] and $[description]
-   * fields will be replaced by the <name> and <description> fields found in the
-   * Feature elements that use this BalloonStyle: <text>This is $[name], whose
-   * description is:<br/>$[description]</text>
-   * </p>
-   * <p>
+   * fields will be replaced by the  &lt;name&gt; and  &lt;description&gt; fields found in the
+   * Feature elements that use this BalloonStyle:  &lt;text&gt;This is $[name], whose
+   * description is: &lt;br/&gt;$[description] &lt;/text&gt;
    * Text displayed in the balloon. If no text is specified, Google Earth draws
-   * the default balloon (with the Feature <name> in boldface, the Feature
-   * <description>, links for driving directions, a white background, and a tail
+   * the default balloon (with the Feature  &lt;name&gt; in boldface, the Feature
+   *  &lt;description&gt;, links for driving directions, a white background, and a tail
    * that is attached to the point coordinates of the Feature, if specified).
-   * </p>
-   * <p>
-   * You can add entities to the <text> tag using the following format to refer
+   * You can add entities to the  &lt;text&gt; tag using the following format to refer
    * to a child element of Feature: $[name], $[description], $[address], $[id],
    * $[Snippet]. Google Earth looks in the current Feature for the corresponding
    * string entity and substitutes that information in the balloon. To include
    * To here - From here driving directions in the balloon, use the
    * $[geDirections] tag. To prevent the driving directions links from appearing
-   * in a balloon, include the <text> element with some content, or with
-   * $[description] to substitute the basic Feature <description>.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * in a balloon, include the  &lt;text&gt; element with some content, or with
+   * $[description] to substitute the basic Feature  &lt;description&gt;.
    */
   protected String text;
   /**
    * DisplayMode
-   * <p>
-   * default, hide
-   * </p>
-   * <p>
-   * See Also: See <BalloonStyle>
-   * <p>
-   * <p>
-   * <p>
+   *   
+   * default, hide See Also: See  &lt;BalloonStyle&gt;
+   *   
    */
   @XmlElement(defaultValue = "default")
   protected DisplayMode displayMode;
@@ -187,22 +147,17 @@ public class BalloonStyle
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> balloonStyleSimpleExtension;
   /**
-   * <Object>
-   * <p>
+   *  &lt;Object&gt;
+   *   
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the <Update> mechanism is to be used.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;<strong>
-   * &lt;!-- <em>Object</em> id="ID" targetId="NCName" --&gt;
-   * &lt;!-- /<em>Object</em>&gt; --&gt;</strong></pre>
-   * <p>
-   * <p>
-   * <p>
+   * assigned if the  &lt;Update&gt; mechanism is to be used. Syntax:
+   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
+   * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
+   *   
    */
   @XmlElement(name = "BalloonStyleObjectExtensionGroup")
   protected List<AbstractObject> balloonStyleObjectExtension;
@@ -428,7 +383,7 @@ public class BalloonStyle
    *
    * @param balloonStyleSimpleExtension Objects of the following type are
    *                                    allowed in the list: {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public BalloonStyle addToBalloonStyleSimpleExtension(final Object balloonStyleSimpleExtension) {
     this.getBalloonStyleSimpleExtension().add(balloonStyleSimpleExtension);
@@ -450,7 +405,7 @@ public class BalloonStyle
    * @param balloonStyleObjectExtension Objects of the following type are
    *                                    allowed in the list:
    *                                    {@link AbstractObject}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public BalloonStyle addToBalloonStyleObjectExtension(final AbstractObject balloonStyleObjectExtension) {
     this.getBalloonStyleObjectExtension().add(balloonStyleObjectExtension);
@@ -571,7 +526,7 @@ public class BalloonStyle
   /**
    * fluent setter
    *
-   * @see #setBalloonStyleSimpleExtension(List<Object>)
+   * @see #setBalloonStyleSimpleExtension(List &lt;Object&gt;)
    *
    * @param balloonStyleSimpleExtension required parameter
    */
@@ -583,7 +538,7 @@ public class BalloonStyle
   /**
    * fluent setter
    *
-   * @see #setBalloonStyleObjectExtension(List<AbstractObject>)
+   * @see #setBalloonStyleObjectExtension(List &lt;AbstractObject&gt;)
    *
    * @param balloonStyleObjectExtension required parameter
    */

@@ -12,10 +12,11 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
+import com.vividsolutions.jts.geom.LineString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.*;
@@ -23,21 +24,17 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- * <Polygon>
- * <p>
+ *  &lt;Polygon&gt;
+ *   
  * A Polygon is defined by an outer boundary and 0 or more inner boundaries. The
  * boundaries, in turn, are defined by LinearRings. When a Polygon is extruded,
  * its boundaries are connected to the ground to form additional polygons, which
  * gives the appearance of a building or a box. Extruded Polygons use
- * <PolyStyle> for their color, color mode, and fill.
- * </p>
- * <p>
- * Note: In Google Earth, a Polygon with an <altitudeMode> of clampToGround
- * follows the great circle; however, a LinearRing (by itself) with an
- * <altitudeMode> of clampToGround follows lines of constant latitude.
- * </p>
- * <p>
- * The <coordinates> for polygons must be specified in counterclockwise order.
+ *  &lt;PolyStyle&gt; for their color, color mode, and fill. Note: In Google Earth, a
+ * Polygon with an  &lt;altitudeMode&gt; of clampToGround follows the great circle;
+ * however, a LinearRing (by itself) with an
+ *  &lt;altitudeMode&gt; of clampToGround follows lines of constant latitude. The
+ *  &lt;coordinates&gt; for polygons must be specified in counterclockwise order.
  * Polygons follow the "right-hand rule," which states that if you place the
  * fingers of your right hand in the direction in which the coordinates are
  * specified, your thumb points in the general direction of the geometric normal
@@ -45,11 +42,8 @@ import net.opengis.kml.annotations.Obvious;
  * and points away from the front face of the polygon.) Since Google Earth fills
  * only the front face of polygons, you will achieve the desired effect only
  * when the coordinates are specified in the proper order. Otherwise, the
- * polygon will be gray.
- * </p>
- * <p>
- * Syntax:
- * <pre><strong>&lt;Polygon id="ID"&gt;</strong>
+ * polygon will be gray. Syntax:
+ *  &lt;pre&gt; &lt;strong&gt;&lt;Polygon id="ID"&gt; &lt;/strong&gt;
  *   &lt;!-- specific to Polygon --&gt;
  *   &lt;extrude&gt;0&lt;/extrude&gt;                       &lt;!-- boolean --&gt;
  *   &lt;tessellate&gt;0&lt;/tessellate&gt;                 &lt;!-- boolean --&gt;
@@ -66,17 +60,15 @@ import net.opengis.kml.annotations.Obvious;
  *       &lt;coordinates&gt;...&lt;/coordinates&gt;         &lt;!-- lon,lat[,alt] --&gt;
  *     &lt;/LinearRing&gt;
  *   &lt;/innerBoundaryIs&gt;
- * <strong>&lt;/Polygon&gt;</strong></pre>
- * <p>
+ *  &lt;strong&gt;&lt;/Polygon&gt; &lt;/strong&gt; </pre>
+ *   
  * Extends:
  *
- * @see: <Geometry>
+ * @see:  &lt;Geometry&gt;
  *
  * Contained By:
- * @see: <MultiGeometry>
- * @see: <Placemark>
- *
- *
+ * @see:  &lt;MultiGeometry&gt;
+ * @see:  &lt;Placemark&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -93,126 +85,88 @@ import net.opengis.kml.annotations.Obvious;
 public class Polygon extends Geometry implements Cloneable {
 
   /**
-   * <extrude>
-   * <p>
+   *  &lt;extrude&gt;
+   *   
    * Boolean value. Specifies whether to connect the LineString to the ground.
    * To extrude a LineString, the altitude mode must be either relativeToGround,
    * relativeToSeaFloor, or absolute. The vertices in the LineString are
-   * extruded toward the center of the Earth's sphere.
-   * </p>
-   * <p>
-   * Boolean value. Specifies whether to connect the LinearRing to the ground.
-   * To extrude this geometry, the altitude mode must be either
-   * relativeToGround, relativeToSeaFloor, or absolute. Only the vertices of the
-   * LinearRing are extruded, not the center of the geometry. The vertices are
-   * extruded toward the center of the Earth's sphere.
-   * </p>
-   * <p>
-   * Boolean value. Specifies whether to connect the Polygon to the ground. To
-   * extrude a Polygon, the altitude mode must be either relativeToGround,
-   * relativeToSeaFloor, or absolute. Only the vertices are extruded, not the
-   * geometry itself (for example, a rectangle turns into a box with five faces.
-   * The vertices of the Polygon are extruded toward the center of the Earth's
-   * sphere.
-   * </p>
-   * <p>
-   * Boolean value. Specifies whether to connect the point to the ground with a
-   * line. To extrude a Point, the value for <altitudeMode> must be either
-   * relativeToGround, relativeToSeaFloor, or absolute. The point is extruded
-   * toward the center of the Earth's sphere.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * extruded toward the center of the Earth's sphere. Boolean value. Specifies
+   * whether to connect the LinearRing to the ground. To extrude this geometry,
+   * the altitude mode must be either relativeToGround, relativeToSeaFloor, or
+   * absolute. Only the vertices of the LinearRing are extruded, not the center
+   * of the geometry. The vertices are extruded toward the center of the Earth's
+   * sphere. Boolean value. Specifies whether to connect the Polygon to the
+   * ground. To extrude a Polygon, the altitude mode must be either
+   * relativeToGround, relativeToSeaFloor, or absolute. Only the vertices are
+   * extruded, not the geometry itself (for example, a rectangle turns into a
+   * box with five faces. The vertices of the Polygon are extruded toward the
+   * center of the Earth's sphere. Boolean value. Specifies whether to connect
+   * the point to the ground with a line. To extrude a Point, the value for
+   *  &lt;altitudeMode&gt; must be either relativeToGround, relativeToSeaFloor, or
+   * absolute. The point is extruded toward the center of the Earth's sphere.
    */
   @XmlElement(defaultValue = "0")
   @XmlJavaTypeAdapter(BooleanConverter.class)
   protected Boolean extrude;
   /**
-   * <tessellate>
-   * <p>
+   *  &lt;tessellate&gt;
+   *   
    * Boolean value. Specifies whether to allow the LineString to follow the
    * terrain. To enable tessellation, the altitude mode must be clampToGround or
    * clampToSeaFloor. Very large LineStrings should enable tessellation so that
    * they follow the curvature of the earth (otherwise, they may go underground
+   * and be hidden). Boolean value. Specifies whether to allow the LinearRing to
+   * follow the terrain. To enable tessellation, the value for  &lt;altitudeMode&gt;
+   * must be clampToGround or clampToSeaFloor. Very large LinearRings should
+   * enable tessellation so that they follow the curvature of the earth
+   * (otherwise, they may go underground and be hidden). Boolean value.
+   * Specifies whether to allow the Polygon to follow the terrain. To enable
+   * tessellation, the Polygon must have an altitude mode of clampToGround or
+   * clampToSeaFloor. Very large Polygons should enable tessellation so that
+   * they follow the curvature of the earth (otherwise, they may go underground
    * and be hidden).
-   * </p>
-   * <p>
-   * Boolean value. Specifies whether to allow the LinearRing to follow the
-   * terrain. To enable tessellation, the value for <altitudeMode> must be
-   * clampToGround or clampToSeaFloor. Very large LinearRings should enable
-   * tessellation so that they follow the curvature of the earth (otherwise,
-   * they may go underground and be hidden).
-   * </p>
-   * <p>
-   * Boolean value. Specifies whether to allow the Polygon to follow the
-   * terrain. To enable tessellation, the Polygon must have an altitude mode of
-   * clampToGround or clampToSeaFloor. Very large Polygons should enable
-   * tessellation so that they follow the curvature of the earth (otherwise,
-   * they may go underground and be hidden).
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlElement(defaultValue = "0")
   @XmlJavaTypeAdapter(BooleanConverter.class)
   protected Boolean tessellate;
   /**
    * AltitudeMode
-   * <p>
-   * clampToGround, relativeToGround, absolute
-   * </p>
-   * <p>
-   * See Also: See <LookAt> and <Region>
-   * <p>
-   * <p>
-   * <p>
+   *   
+   * clampToGround, relativeToGround, absolute See Also: See  &lt;LookAt&gt; and
+   *  &lt;Region&gt;
+   *   
    */
   @XmlElement(defaultValue = "clampToGround")
   protected AltitudeMode altitudeMode;
   /**
-   * <outerboundaryis> (required)
-   * <p>
-   * Contains a <LinearRing> element.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   *  &lt;outerboundaryis&gt; (required)
+   *   
+   * Contains a  &lt;LinearRing&gt; element.
    */
   protected Boundary outerBoundaryIs;
   /**
-   * <innerboundaryis>
-   * <p>
-   * Contains a <LinearRing> element. A Polygon can contain multiple
-   * <innerBoundaryIs>
+   *  &lt;innerboundaryis&gt;
+   *   
+   * Contains a  &lt;LinearRing&gt; element. A Polygon can contain multiple
+   *  &lt;innerBoundaryIs&gt;
    * elements, which create multiple cut-outs inside the Polygon.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   protected List<Boundary> innerBoundaryIs;
   @XmlElement(name = "PolygonSimpleExtensionGroup")
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> polygonSimpleExtension;
   /**
-   * <Object>
-   * <p>
+   *  &lt;Object&gt;
+   *   
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the <Update> mechanism is to be used.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;<strong>
-   * &lt;!-- <em>Object</em> id="ID" targetId="NCName" --&gt;
-   * &lt;!-- /<em>Object</em>&gt; --&gt;</strong></pre>
-   * <p>
-   * <p>
-   * <p>
+   * assigned if the  &lt;Update&gt; mechanism is to be used. Syntax:
+   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
+   * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
+   *   
    */
   @XmlElement(name = "PolygonObjectExtensionGroup")
   protected List<AbstractObject> polygonObjectExtension;
@@ -223,12 +177,15 @@ public class Polygon extends Geometry implements Cloneable {
 
   public static Polygon getInstance(com.vividsolutions.jts.geom.Polygon polygon) {
     Polygon p = new Polygon();
-    p.setOuterBoundaryIs(new Boundary(LinearRing.getInstance(polygon)));
+    p.setOuterBoundaryIs(new Boundary(LinearRing.getInstance(polygon.getExteriorRing())));
+    for (int i = 0; i < polygon.getNumInteriorRing(); i++) {
+      LineString interiorRing = polygon.getInteriorRingN(i);
+      p.getInnerBoundaryIs().add(new Boundary(LinearRing.getInstance(interiorRing)));
+    }
     return p;
   }
 
   /**
-   *
    * @return possible object is {@link Boolean}
    *
    */
@@ -247,7 +204,6 @@ public class Polygon extends Geometry implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link Boolean}
    *
    */
@@ -268,9 +224,9 @@ public class Polygon extends Geometry implements Cloneable {
   /**
    * @see altitudeMode
    *
-   * @return possible object is null null null null null null null null null null   {@code <}{@link Object}{@code>}
-     *     {@code <}{@link net.opengis.kml.AltitudeMode}{@code>}
-   *     {@code <}{@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}{@code>}
+   * @return possible object is null null null null null null   {@link Object}
+     *     {@link net.opengis.kml.AltitudeMode}
+   *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
    */
   public AltitudeMode getAltitudeMode() {
@@ -280,9 +236,9 @@ public class Polygon extends Geometry implements Cloneable {
   /**
    * @see altitudeMode
    *
-   * @param value allowed object is null null null null null null null null null null   {@code <}{@link Object}{@code>}
-     *     {@code <}{@link net.opengis.kml.AltitudeMode}{@code>}
-   *     {@code <}{@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}{@code>}
+   * @param value allowed object is null null null null null null   {@link Object}
+     *     {@link net.opengis.kml.AltitudeMode}
+   *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
    */
   public void setAltitudeMode(AltitudeMode value) {
@@ -425,12 +381,10 @@ public class Polygon extends Geometry implements Cloneable {
 
   /**
    * Creates a new instance of {@link Boundary} and set it to outerBoundaryIs.
-   * <p>
-   * This method is a short version for:    <code>
+   *   
+   * This method is a short version for:     &lt;code&gt;
    * Boundary boundary = new Boundary();
-   * this.setOuterBoundaryIs(boundary); </code>
-   * <p>
-   * <p>
+   * this.setOuterBoundaryIs(boundary);  &lt;/code&gt;
    */
   public Boundary createAndSetOuterBoundaryIs() {
     Boundary newValue = new Boundary();
@@ -440,11 +394,9 @@ public class Polygon extends Geometry implements Cloneable {
 
   /**
    * Creates a new instance of {@link Boundary} and adds it to innerBoundaryIs.
-   * This method is a short version for:    <code>
+   * This method is a short version for:     &lt;code&gt;
    * Boundary boundary = new Boundary();
-   * this.getInnerBoundaryIs().add(boundary); </code>
-   * <p>
-   * <p>
+   * this.getInnerBoundaryIs().add(boundary);  &lt;/code&gt;
    */
   public Boundary createAndAddInnerBoundaryIs() {
     Boundary newValue = new Boundary();
@@ -466,7 +418,7 @@ public class Polygon extends Geometry implements Cloneable {
    *
    * @param innerBoundaryIs Objects of the following type are allowed in the
    *                        list: {@link Boundary}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Polygon addToInnerBoundaryIs(final Boundary innerBoundaryIs) {
     this.getInnerBoundaryIs().add(innerBoundaryIs);
@@ -487,7 +439,7 @@ public class Polygon extends Geometry implements Cloneable {
    *
    * @param polygonSimpleExtension Objects of the following type are allowed in
    *                               the list: {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Polygon addToPolygonSimpleExtension(final Object polygonSimpleExtension) {
     this.getPolygonSimpleExtension().add(polygonSimpleExtension);
@@ -508,7 +460,7 @@ public class Polygon extends Geometry implements Cloneable {
    *
    * @param polygonObjectExtension Objects of the following type are allowed in
    *                               the list: {@link AbstractObject}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Polygon addToPolygonObjectExtension(final AbstractObject polygonObjectExtension) {
     this.getPolygonObjectExtension().add(polygonObjectExtension);
@@ -617,7 +569,7 @@ public class Polygon extends Geometry implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setInnerBoundaryIs(List<Boundary>)
+   * @see #setInnerBoundaryIs(List &lt;Boundary&gt;)
    *
    * @param innerBoundaryIs required parameter
    */
@@ -629,7 +581,7 @@ public class Polygon extends Geometry implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setPolygonSimpleExtension(List<Object>)
+   * @see #setPolygonSimpleExtension(List &lt;Object&gt;)
    *
    * @param polygonSimpleExtension required parameter
    */
@@ -641,7 +593,7 @@ public class Polygon extends Geometry implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setPolygonObjectExtension(List<AbstractObject>)
+   * @see #setPolygonObjectExtension(List &lt;AbstractObject&gt;)
    *
    * @param polygonObjectExtension required parameter
    */

@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -22,79 +22,61 @@ import javax.xml.bind.annotation.*;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- * <Camera>
+ * &lt;Camera&gt;
  * <p>
- * <Camera> can also contain a TimePrimitive (<gx:TimeSpan> or <gx:TimeStamp>).
- * Time values in Camera affect historical imagery, sunlight, and the display of
- * time-stamped features. For more information, read Time with AbstractViews in
- * the Time and Animation chapter of the Developer's Guide.
- * </p>
+ * &lt;Camera&gt; can also contain a TimePrimitive ( &lt;gx:TimeSpan&gt; or
+ * &lt;gx:TimeStamp&gt;). Time values in Camera affect historical imagery,
+ * sunlight, and the display of time-stamped features. For more information,
+ * read Time with AbstractViews in the Time and Animation chapter of the
+ * Developer's Guide. &lt;Camera&gt; provides full six-degrees-of-freedom
+ * control over the view, so you can position the Camera in space and then
+ * rotate it around the X, Y, and Z axes. Most importantly, you can tilt the
+ * camera view so that you're looking above the horizon into the sky. Defines
+ * the virtual camera that views the scene. This element defines the position of
+ * the camera relative to the Earth's surface as well as the viewing direction
+ * of the camera. The camera position is defined by &lt;longitude&gt;,
+ * &lt;latitude&gt;, &lt;altitude&gt;, and either &lt;altitudeMode&gt; or
+ * &lt;gx:altitudeMode&gt;. The viewing direction of the camera is defined by
+ * &lt;heading&gt;, &lt;tilt&gt;, and &lt;roll&gt;. &lt;Camera&gt; can be a
+ * child element of any Feature or of &lt;NetworkLinkControl&gt;. A parent
+ * element cannot contain both a &lt;Camera&gt; and a &lt;LookAt&gt; at the same
+ * time. Defining a View The X axis points toward the right of the camera and is
+ * called the right vector. The Y axis defines the "up" direction relative to
+ * the screen and is called the up vector. The Z axis points from the center of
+ * the screen toward the eye point. The camera looks down the −Z axis, which is
+ * called the view vector. The following diagram shows the X, Y, and Z axes,
+ * which are attached to the virtual camera. Within a Feature or
+ * &lt;NetworkLinkControl&gt;, use either a &lt;Camera&gt; or a &lt;LookAt&gt;
+ * object (but not both in the same object). The &lt;Camera&gt; object defines
+ * the viewpoint in terms of the viewer's position and orientation. The
+ * &lt;Camera&gt; object allows you to specify a view that is not on the Earth's
+ * surface. The &lt;LookAt&gt; object defines the viewpoint in terms of what is
+ * being viewed. The &lt;LookAt&gt; object is more limited in scope than
+ * &lt;Camera&gt; and generally requires that the view direction intersect the
+ * Earth's surface. Syntax: &lt;pre&gt; &lt;strong&gt;&lt;Camera id="ID"&gt;
+ * &lt;/strong&gt; &lt;!-- inherited from AbstractView element --&gt;
+ * &lt;em&gt;&lt;TimePrimitive&gt;...&lt;/TimePrimitive&gt; &lt;/em&gt; &lt;!--
+ * gx:TimeSpan or gx:TimeStamp --&gt;
  * <p>
- * <Camera> provides full six-degrees-of-freedom control over the view, so you
- * can position the Camera in space and then rotate it around the X, Y, and Z
- * axes. Most importantly, you can tilt the camera view so that you're looking
- * above the horizon into the sky.
- * </p>
- * <p>
- * Defines the virtual camera that views the scene. This element defines the
- * position of the camera relative to the Earth's surface as well as the viewing
- * direction of the camera. The camera position is defined by <longitude>,
- * <latitude>, <altitude>, and either <altitudeMode> or <gx:altitudeMode>. The
- * viewing direction of the camera is defined by <heading>, <tilt>, and <roll>.
- * <Camera> can be a child element of any Feature or of <NetworkLinkControl>. A
- * parent element cannot contain both a <Camera>
- * and a <LookAt> at the same time.
- * </p>
- * <p>
- * Defining a View
- * </p>
- * <p>
- * The X axis points toward the right of the camera and is called the right
- * vector. The Y axis defines the "up" direction relative to the screen and is
- * called the up vector. The Z axis points from the center of the screen toward
- * the eye point. The camera looks down the −Z axis, which is called the view
- * vector.
- * </p>
- * <p>
- * The following diagram shows the X, Y, and Z axes, which are attached to the
- * virtual camera.
- * </p>
- * <p>
- * Within a Feature or <NetworkLinkControl>, use either a <Camera> or a <LookAt>
- * object (but not both in the same object). The <Camera> object defines the
- * viewpoint in terms of the viewer's position and orientation. The <Camera>
- * object allows you to specify a view that is not on the Earth's surface. The
- * <LookAt> object defines the viewpoint in terms of what is being viewed. The
- * <LookAt> object is more limited in scope than <Camera> and generally requires
- * that the view direction intersect the Earth's surface.
- * </p>
- * <p>
- * Syntax:
- * <pre><strong>&lt;Camera id="ID"&gt;</strong>
- *   &lt;!-- inherited from AbstractView element --&gt;
- *   <em>&lt;TimePrimitive&gt;...&lt;/TimePrimitive&gt;</em>  &lt;!-- gx:TimeSpan or gx:TimeStamp --&gt;
- * <p>
- *   &lt;!-- specific to Camera --&gt;
- *   &lt;longitude&gt;0&lt;/longitude&gt;            &lt;!-- kml:angle180 --&gt;
- *   &lt;latitude&gt;0&lt;/latitude&gt;              &lt;!-- kml:angle90 --&gt;
- *   &lt;altitude&gt;0&lt;/altitude&gt;              &lt;!-- double --&gt;
- *   &lt;heading&gt;0&lt;/heading&gt;                &lt;!-- kml:angle360 --&gt;
- *   &lt;tilt&gt;0&lt;/tilt&gt;                      &lt;!-- kml:anglepos180 --&gt;
- *   &lt;roll&gt;0&lt;/roll&gt;                      &lt;!-- kml:angle180 --&gt;
- *   &lt;altitudeMode&gt;clampToGround&lt;/altitudeMode&gt;
- *         &lt;!-- kml:altitudeModeEnum: relativeToGround, clampToGround, or absolute --&gt;
- *         &lt;!-- or, gx:altitudeMode can be substituted: clampToSeaFloor, relativeToSeaFloor --&gt;
- * <strong>&lt;/Camera&gt;</strong> </pre>
+ * &lt;!-- specific to Camera --&gt; &lt;longitude&gt;0&lt;/longitude&gt;
+ * &lt;!-- kml:angle180 --&gt; &lt;latitude&gt;0&lt;/latitude&gt; &lt;!--
+ * kml:angle90 --&gt; &lt;altitude&gt;0&lt;/altitude&gt; &lt;!-- double --&gt;
+ * &lt;heading&gt;0&lt;/heading&gt; &lt;!-- kml:angle360 --&gt;
+ * &lt;tilt&gt;0&lt;/tilt&gt; &lt;!-- kml:anglepos180 --&gt;
+ * &lt;roll&gt;0&lt;/roll&gt; &lt;!-- kml:angle180 --&gt;
+ * &lt;altitudeMode&gt;clampToGround&lt;/altitudeMode&gt; &lt;!--
+ * kml:altitudeModeEnum: relativeToGround, clampToGround, or absolute --&gt;
+ * &lt;!-- or, gx:altitudeMode can be substituted: clampToSeaFloor,
+ * relativeToSeaFloor --&gt; &lt;strong&gt;&lt;/Camera&gt; &lt;/strong&gt;
+ * </pre>
  * <p>
  * Extends:
  *
- * @see: <AbstractView>
+ * @see: &lt;AbstractView&gt;
  *
  * Contained By:
- * @see: <Feature>
- * @see: <NetworkLinkControl>
- *
- *
+ * @see: &lt;Feature&gt;
+ * @see: &lt;NetworkLinkControl&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -111,154 +93,98 @@ import net.opengis.kml.annotations.Obvious;
 })
 @XmlRootElement(name = "Camera", namespace = "http://www.opengis.net/kml/2.2")
 public class Camera
-        extends AbstractView
-        implements Cloneable {
+  extends AbstractView
+  implements Cloneable {
 
   /**
-   * <longitude>
+   * &lt;longitude&gt;
    * <p>
    * Longitude of the point the camera is looking at. Angular distance in
    * degrees, relative to the Prime Meridian. Values west of the Meridian range
    * from −180 to 0 degrees. Values east of the Meridian range from 0 to 180
+   * degrees. Longitude of the virtual camera (eye point). Angular distance in
+   * degrees, relative to the Prime Meridian. Values west of the Meridian range
+   * from −180 to 0 degrees. Values east of the Meridian range from 0 to 180
    * degrees.
-   * </p>
-   * <p>
-   * Longitude of the virtual camera (eye point). Angular distance in degrees,
-   * relative to the Prime Meridian. Values west of the Meridian range from −180
-   * to 0 degrees. Values east of the Meridian range from 0 to 180 degrees.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlElement(defaultValue = "0.0")
   protected double longitude;
   /**
-   * <latitude>
+   * &lt;latitude&gt;
    * <p>
    * Latitude of the point the camera is looking at. Degrees north or south of
    * the Equator (0 degrees). Values range from −90 degrees to 90 degrees.
-   * </p>
-   * <p>
    * Latitude of the virtual camera. Degrees north or south of the Equator (0
    * degrees). Values range from −90 degrees to 90 degrees.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlElement(defaultValue = "0.0")
   protected double latitude;
   /**
-   * <altitude>
+   * &lt;altitude&gt;
    * <p>
    * Distance from the earth's surface, in meters. Interpreted according to the
-   * LookAt's altitude mode.
-   * </p>
-   * <p>
-   * Distance of the camera from the earth's surface, in meters. Interpreted
-   * according to the Camera's <altitudeMode> or <gx:altitudeMode>.
-   * </p>
-   * <p>
-   * Specifies the distance above the earth's surface, in meters, and is
-   * interpreted according to the altitude mode.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * LookAt's altitude mode. Distance of the camera from the earth's surface, in
+   * meters. Interpreted according to the Camera's &lt;altitudeMode&gt; or
+   * &lt;gx:altitudeMode&gt;. Specifies the distance above the earth's surface,
+   * in meters, and is interpreted according to the altitude mode.
    */
   @XmlElement(defaultValue = "0.0")
   protected double altitude;
   /**
-   * <heading>
+   * &lt;heading&gt;
    * <p>
    * Direction (azimuth) of the camera, in degrees. Default=0 (true North). (See
-   * diagram.) Values range from 0 to 360 degrees.
-   * </p>
-   * <p>
-   * Direction (that is, North, South, East, West), in degrees. Default=0
-   * (North). (See diagram below.) Values range from 0 to 360 degrees.
-   * </p>
-   * <p>
-   * Direction (that is, North, South, East, West), in degrees. Default=0
-   * (North). (See diagram.) Values range from 0 to 360 degrees.
-   * </p>
-   * <p>
-   * Rotation about the z axis (normal to the Earth's surface). A value of 0
-   * (the default) equals North. A positive rotation is clockwise around the z
-   * axis and specified in degrees from 0 to 360.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * diagram.) Values range from 0 to 360 degrees. Direction (that is, North,
+   * South, East, West), in degrees. Default=0 (North). (See diagram below.)
+   * Values range from 0 to 360 degrees. Direction (that is, North, South, East,
+   * West), in degrees. Default=0 (North). (See diagram.) Values range from 0 to
+   * 360 degrees. Rotation about the z axis (normal to the Earth's surface). A
+   * value of 0 (the default) equals North. A positive rotation is clockwise
+   * around the z axis and specified in degrees from 0 to 360.
    */
   @XmlElement(defaultValue = "0.0")
   protected double heading;
   /**
-   * <tilt>
+   * &lt;tilt&gt;
    * <p>
    * Angle between the direction of the LookAt position and the normal to the
    * surface of the earth. (See diagram below.) Values range from 0 to 90
-   * degrees. Values for
-   * <tilt> cannot be negative. A <tilt> value of 0 degrees indicates viewing
-   * from directly above. A <tilt> value of 90 degrees indicates viewing along
-   * the horizon.
-   * </p>
-   * <p>
-   * Rotation about the x axis. A positive rotation is clockwise around the x
-   * axis and specified in degrees from 0 to 360.
-   * </p>
-   * <p>
-   * Rotation, in degrees, of the camera around the X axis. A value of 0
-   * indicates that the view is aimed straight down toward the earth (the most
-   * common case). A value for 90 for <tilt> indicates that the view is aimed
-   * toward the horizon. Values greater than 90 indicate that the view is
-   * pointed up into the sky. Values for <tilt> are clamped at +180 degrees.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * degrees. Values for &lt;tilt&gt; cannot be negative. A &lt;tilt&gt; value
+   * of 0 degrees indicates viewing from directly above. A &lt;tilt&gt; value of
+   * 90 degrees indicates viewing along the horizon. Rotation about the x axis.
+   * A positive rotation is clockwise around the x axis and specified in degrees
+   * from 0 to 360. Rotation, in degrees, of the camera around the X axis. A
+   * value of 0 indicates that the view is aimed straight down toward the earth
+   * (the most common case). A value for 90 for &lt;tilt&gt; indicates that the
+   * view is aimed toward the horizon. Values greater than 90 indicate that the
+   * view is pointed up into the sky. Values for &lt;tilt&gt; are clamped at
+   * +180 degrees.
    */
   @XmlElement(defaultValue = "0.0")
   protected double tilt;
   /**
-   * <roll>
+   * &lt;roll&gt;
    * <p>
-   * <heading> Rotation about the z axis (normal to the Earth's surface). A
-   * value of 0 (the default) equals North. A positive rotation is clockwise
-   * around the z axis and specified in degrees from 0 to 360. <tilt> Rotation
-   * about the x axis. A positive rotation is clockwise around the x axis and
-   * specified in degrees from 0 to 360.
-   * <roll> Rotation about the y axis. A positive rotation is clockwise around
-   * the y axis and specified in degrees from 0 to 360. This diagram illustrates
-   * the typical orientation of a model's axes:
-   * </p>
-   * <p>
-   * Rotation about the y axis. A positive rotation is clockwise around the y
-   * axis and specified in degrees from 0 to 360.
-   * </p>
-   * <p>
-   * Rotation, in degrees, of the camera around the Z axis. Values range from
-   * −180 to +180 degrees.
-   * </p>
-   * <p>
-   * This diagram illustrates the typical orientation of a model's axes:
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * &lt;heading&gt; Rotation about the z axis (normal to the Earth's surface).
+   * A value of 0 (the default) equals North. A positive rotation is clockwise
+   * around the z axis and specified in degrees from 0 to 360. &lt;tilt&gt;
+   * Rotation about the x axis. A positive rotation is clockwise around the x
+   * axis and specified in degrees from 0 to 360. &lt;roll&gt; Rotation about
+   * the y axis. A positive rotation is clockwise around the y axis and
+   * specified in degrees from 0 to 360. This diagram illustrates the typical
+   * orientation of a model's axes: Rotation about the y axis. A positive
+   * rotation is clockwise around the y axis and specified in degrees from 0 to
+   * 360. Rotation, in degrees, of the camera around the Z axis. Values range
+   * from −180 to +180 degrees. This diagram illustrates the typical orientation
+   * of a model's axes:
    */
   @XmlElement(defaultValue = "0.0")
   protected double roll;
   /**
    * AltitudeMode
    * <p>
-   * clampToGround, relativeToGround, absolute
-   * </p>
-   * <p>
-   * See Also: See <LookAt> and <Region>
-   * <p>
-   * <p>
+   * clampToGround, relativeToGround, absolute See Also: See &lt;LookAt&gt; and
+   * &lt;Region&gt;
    * <p>
    */
   @XmlElement(defaultValue = "clampToGround")
@@ -267,21 +193,16 @@ public class Camera
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> cameraSimpleExtension;
   /**
-   * <Object>
+   * &lt;Object&gt;
    * <p>
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the <Update> mechanism is to be used.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;<strong>
-   * &lt;!-- <em>Object</em> id="ID" targetId="NCName" --&gt;
-   * &lt;!-- /<em>Object</em>&gt; --&gt;</strong></pre>
-   * <p>
-   * <p>
+   * assigned if the &lt;Update&gt; mechanism is to be used. Syntax:
+   * <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
+   * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
    * <p>
    */
   @XmlElement(name = "CameraObjectExtensionGroup")
@@ -414,9 +335,9 @@ public class Camera
   /**
    * @see altitudeMode
    *
-   * @return possible object is null   {@code <}{@link Object}{@code>}
-     *     {@code <}{@link net.opengis.kml.AltitudeMode}{@code>}
-   *     {@code <}{@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}{@code>}
+   * @return possible object is null null null null null null null null   {@link Object}
+     *     {@link net.opengis.kml.AltitudeMode}
+   *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
    */
   public AltitudeMode getAltitudeMode() {
@@ -426,9 +347,9 @@ public class Camera
   /**
    * @see altitudeMode
    *
-   * @param value allowed object is null   {@code <}{@link Object}{@code>}
-     *     {@code <}{@link net.opengis.kml.AltitudeMode}{@code>}
-   *     {@code <}{@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}{@code>}
+   * @param value allowed object is null null null null null null null null   {@link Object}
+     *     {@link net.opengis.kml.AltitudeMode}
+   *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
    */
   public void setAltitudeMode(AltitudeMode value) {
@@ -551,7 +472,8 @@ public class Camera
    *
    * @param cameraSimpleExtension Objects of the following type are allowed in
    *                              the list: {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Camera addToCameraSimpleExtension(final Object cameraSimpleExtension) {
     this.getCameraSimpleExtension().add(cameraSimpleExtension);
@@ -572,7 +494,8 @@ public class Camera
    *
    * @param cameraObjectExtension Objects of the following type are allowed in
    *                              the list: {@link AbstractObject}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Camera addToCameraObjectExtension(final AbstractObject cameraObjectExtension) {
     this.getCameraObjectExtension().add(cameraObjectExtension);
@@ -717,7 +640,7 @@ public class Camera
   /**
    * fluent setter
    *
-   * @see #setCameraSimpleExtension(List<Object>)
+   * @see #setCameraSimpleExtension(List &lt;Object&gt;)
    *
    * @param cameraSimpleExtension required parameter
    */
@@ -729,7 +652,7 @@ public class Camera
   /**
    * fluent setter
    *
-   * @see #setCameraObjectExtension(List<AbstractObject>)
+   * @see #setCameraObjectExtension(List &lt;AbstractObject&gt;)
    *
    * @param cameraObjectExtension required parameter
    */

@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -22,12 +22,12 @@ import javax.xml.parsers.SAXParserFactory;
 import org.xml.sax.*;
 
 final class NamespaceFilterXMLReader
-        implements XMLReader {
+  implements XMLReader {
 
   private XMLReader xmlReader;
 
   public NamespaceFilterXMLReader(boolean validate)
-          throws ParserConfigurationException, SAXException {
+    throws ParserConfigurationException, SAXException {
     SAXParserFactory parserFactory = SAXParserFactory.newInstance();
     parserFactory.setNamespaceAware(true);
     parserFactory.setValidating(validate);
@@ -51,22 +51,22 @@ final class NamespaceFilterXMLReader
   }
 
   public boolean getFeature(String name)
-          throws SAXNotRecognizedException, SAXNotSupportedException {
+    throws SAXNotRecognizedException, SAXNotSupportedException {
     return xmlReader.getFeature(name);
   }
 
   public Object getProperty(String name)
-          throws SAXNotRecognizedException, SAXNotSupportedException {
+    throws SAXNotRecognizedException, SAXNotSupportedException {
     return xmlReader.getProperty(name);
   }
 
   public void parse(InputSource input)
-          throws IOException, SAXException {
+    throws IOException, SAXException {
     xmlReader.parse(input);
   }
 
   public void parse(String systemId)
-          throws IOException, SAXException {
+    throws IOException, SAXException {
     xmlReader.parse(systemId);
   }
 
@@ -87,12 +87,12 @@ final class NamespaceFilterXMLReader
   }
 
   public void setFeature(String name, boolean value)
-          throws SAXNotRecognizedException, SAXNotSupportedException {
+    throws SAXNotRecognizedException, SAXNotSupportedException {
     xmlReader.setFeature(name, value);
   }
 
   public void setProperty(String name, Object value)
-          throws SAXNotRecognizedException, SAXNotSupportedException {
+    throws SAXNotRecognizedException, SAXNotSupportedException {
     xmlReader.setProperty(name, value);
   }
 

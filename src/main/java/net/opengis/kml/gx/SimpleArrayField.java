@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml.gx;
 
@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.*;
 
-/**
+/*
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -45,7 +45,6 @@ public class SimpleArrayField implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link String}
    *
    */
@@ -54,7 +53,6 @@ public class SimpleArrayField implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link String}
    *
    */
@@ -62,7 +60,7 @@ public class SimpleArrayField implements Cloneable {
     this.displayName = value;
   }
 
-  /**
+  /*
    *
    */
   public List<Object> getSimpleArrayFieldExtension() {
@@ -73,7 +71,6 @@ public class SimpleArrayField implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link String}
    *
    */
@@ -82,7 +79,6 @@ public class SimpleArrayField implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link String}
    *
    */
@@ -91,7 +87,6 @@ public class SimpleArrayField implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link String}
    *
    */
@@ -100,7 +95,6 @@ public class SimpleArrayField implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link String}
    *
    */
@@ -164,13 +158,12 @@ public class SimpleArrayField implements Cloneable {
 
   /**
    * Sets the value of the simpleArrayFieldExtension property Objects of the
-   * following type(s) are allowed in the list List<Object>.
-   * <p>
+   * following type(s) are allowed in the list List &lt;Object&gt;.
+   *   
    * Note:
-   * <p>
+   *   
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withSimpleArrayFieldExtension} instead.
-   *
    *
    * @param simpleArrayFieldExtension
    */
@@ -183,7 +176,7 @@ public class SimpleArrayField implements Cloneable {
    *
    * @param simpleArrayFieldExtension Objects of the following type are allowed
    *                                  in the list: {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public SimpleArrayField addToSimpleArrayFieldExtension(final Object simpleArrayFieldExtension) {
     this.getSimpleArrayFieldExtension().add(simpleArrayFieldExtension);
@@ -205,7 +198,7 @@ public class SimpleArrayField implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setSimpleArrayFieldExtension(List<Object>)
+   * @see #setSimpleArrayFieldExtension(List &lt;Object&gt;)
    *
    * @param simpleArrayFieldExtension required parameter
    */

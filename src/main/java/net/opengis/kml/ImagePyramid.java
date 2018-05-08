@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -22,8 +22,8 @@ import javax.xml.bind.annotation.*;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- * <imagepyramid>
- * <p>
+ *  &lt;imagepyramid&gt;
+ *   
  * For very large images, you'll need to construct an image pyramid, which is a
  * hierarchical set of images, each of which is an increasingly lower resolution
  * version of the original image. Each image in the pyramid is subdivided into
@@ -34,15 +34,9 @@ import net.opengis.kml.annotations.Obvious;
  * pixels in the original image can't be viewed on the screen at once, this
  * preprocessing allows Google Earth to achieve maximum performance because it
  * loads only the portions of the image that are in view, and only the pixel
- * details that can be discerned by the user at the current viewpoint.
- * </p>
- * <p>
- * When you specify an image pyramid, you also modify the <href> in the <Icon>
+ * details that can be discerned by the user at the current viewpoint. When you
+ * specify an image pyramid, you also modify the  &lt;href&gt; in the  &lt;Icon&gt;
  * element to include specifications for which tiles to load.
- * </p>
- * <p>
- * <p>
- * <p>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ImagePyramidType", propOrder = {
@@ -55,54 +49,37 @@ import net.opengis.kml.annotations.Obvious;
 })
 @XmlRootElement(name = "ImagePyramid", namespace = "http://www.opengis.net/kml/2.2")
 public class ImagePyramid
-        extends AbstractObject
-        implements Cloneable {
+  extends AbstractObject
+  implements Cloneable {
 
   /**
-   * <tilesize>
-   * <p>
-   * Size of the tiles, in pixels. Tiles must be square, and <tileSize> must be
+   *  &lt;tilesize&gt;
+   *   
+   * Size of the tiles, in pixels. Tiles must be square, and  &lt;tileSize&gt; must be
    * a power of 2. A tile size of 256 (the default) or 512 is recommended. The
    * original image is divided into tiles of this size, at varying resolutions.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlElement(defaultValue = "256")
   protected int tileSize;
   /**
-   * <maxwidth>
-   * <p>
+   *  &lt;maxwidth&gt;
+   *   
    * Width in pixels of the original image.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlElement(defaultValue = "0")
   protected int maxWidth;
   /**
-   * <maxheight>
-   * <p>
+   *  &lt;maxheight&gt;
+   *   
    * Height in pixels of the original image.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlElement(defaultValue = "0")
   protected int maxHeight;
   /**
    * GridOrigin
-   * <p>
-   * lowerLeft, upperLeft
-   * </p>
-   * <p>
-   * See Also: See <PhotoOverlay>
-   * <p>
-   * <p>
-   * <p>
+   *   
+   * lowerLeft, upperLeft See Also: See  &lt;PhotoOverlay&gt;
+   *   
    */
   @XmlElement(defaultValue = "lowerLeft")
   protected GridOrigin gridOrigin;
@@ -110,22 +87,17 @@ public class ImagePyramid
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> imagePyramidSimpleExtension;
   /**
-   * <Object>
-   * <p>
+   *  &lt;Object&gt;
+   *   
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the <Update> mechanism is to be used.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;<strong>
-   * &lt;!-- <em>Object</em> id="ID" targetId="NCName" --&gt;
-   * &lt;!-- /<em>Object</em>&gt; --&gt;</strong></pre>
-   * <p>
-   * <p>
-   * <p>
+   * assigned if the  &lt;Update&gt; mechanism is to be used. Syntax:
+   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
+   * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
+   *   
    */
   @XmlElement(name = "ImagePyramidObjectExtensionGroup")
   protected List<AbstractObject> imagePyramidObjectExtension;
@@ -311,7 +283,7 @@ public class ImagePyramid
    *
    * @param imagePyramidSimpleExtension Objects of the following type are
    *                                    allowed in the list: {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public ImagePyramid addToImagePyramidSimpleExtension(final Object imagePyramidSimpleExtension) {
     this.getImagePyramidSimpleExtension().add(imagePyramidSimpleExtension);
@@ -333,7 +305,7 @@ public class ImagePyramid
    * @param imagePyramidObjectExtension Objects of the following type are
    *                                    allowed in the list:
    *                                    {@link AbstractObject}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public ImagePyramid addToImagePyramidObjectExtension(final AbstractObject imagePyramidObjectExtension) {
     this.getImagePyramidObjectExtension().add(imagePyramidObjectExtension);
@@ -408,7 +380,7 @@ public class ImagePyramid
   /**
    * fluent setter
    *
-   * @see #setImagePyramidSimpleExtension(List<Object>)
+   * @see #setImagePyramidSimpleExtension(List &lt;Object&gt;)
    *
    * @param imagePyramidSimpleExtension required parameter
    */
@@ -420,7 +392,7 @@ public class ImagePyramid
   /**
    * fluent setter
    *
-   * @see #setImagePyramidObjectExtension(List<AbstractObject>)
+   * @see #setImagePyramidObjectExtension(List &lt;AbstractObject&gt;)
    *
    * @param imagePyramidObjectExtension required parameter
    */

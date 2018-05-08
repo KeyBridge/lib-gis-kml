@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -25,45 +25,40 @@ import net.opengis.kml.atom.Link;
 import net.opengis.kml.xal.AddressDetails;
 
 /**
- * <Container>
- * <p>
+ *  &lt;Container&gt;
+ *   
  * This is an abstract element and cannot be used directly in a KML file. A
  * Container element holds one or more Features and allows the creation of
- * nested hierarchies.
- * </p>
- * <p>
- * Syntax:
- * <pre>&lt;!-- abstract element; do not create --&gt;
- * <strong>&lt;!-- <em>Container</em> id="ID" --&gt;</strong>              &lt;!-- Document,Folder --&gt;
- *   &lt;!-- inherited from <em>Feature</em> element --&gt;
- *   &lt;name&gt;<em>...</em>&lt;/name&gt;                      &lt;!-- string --&gt;
+ * nested hierarchies. Syntax:
+ *  <pre>&lt;!-- abstract element; do not create --&gt;
+ *  &lt;strong&gt;&lt;!--  &lt;em&gt;Container &lt;/em&gt; id="ID" --&gt; &lt;/strong&gt;              &lt;!-- Document,Folder --&gt;
+ *   &lt;!-- inherited from  &lt;em&gt;Feature &lt;/em&gt; element --&gt;
+ *   &lt;name&gt; &lt;em&gt;... &lt;/em&gt;&lt;/name&gt;                      &lt;!-- string --&gt;
  *   &lt;visibility&gt;1&lt;/visibility&gt;            &lt;!-- boolean --&gt;
  *   &lt;open&gt;0&lt;/open&gt;                        &lt;!-- boolean --&gt;
- *   &lt;address&gt;<em>...</em>&lt;/address&gt;                &lt;!-- string --&gt;
- *   &lt;AddressDetails xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"&gt;...<br>      &lt;/AddressDetails&gt;                 &lt;!-- string --&gt;
- *   &lt;phoneNumber&gt;...&lt;/phoneNumber&gt;        &lt;!-- string --&gt;<br>  &lt;Snippet maxLines="2"&gt;<em>...</em>&lt;/Snippet&gt;   &lt;!-- string --&gt;
- *   &lt;description&gt;<em>...</em>&lt;/description&gt;        &lt;!-- string --&gt;
- *   <span><em>&lt;AbstractView&gt;...&lt;/AbstractView&gt;</em>      &lt;!-- LookAt <em>or</em> Camera --&gt;</span>
- *   &lt;<em>TimePrimitive</em>&gt;...&lt;/<em>TimePrimitive</em>&gt;
- *   &lt;styleUrl&gt;<em>...</em>&lt;/styleUrl&gt;              &lt;!-- anyURI --&gt;
- *   &lt;<em>StyleSelector&gt;...&lt;/StyleSelector&gt;</em>
+ *   &lt;address&gt; &lt;em&gt;... &lt;/em&gt;&lt;/address&gt;                &lt;!-- string --&gt;
+ *   &lt;AddressDetails xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"&gt;... &lt;br&gt;      &lt;/AddressDetails&gt;                 &lt;!-- string --&gt;
+ *   &lt;phoneNumber&gt;...&lt;/phoneNumber&gt;        &lt;!-- string --&gt; &lt;br&gt;  &lt;Snippet maxLines="2"&gt; &lt;em&gt;... &lt;/em&gt;&lt;/Snippet&gt;   &lt;!-- string --&gt;
+ *   &lt;description&gt; &lt;em&gt;... &lt;/em&gt;&lt;/description&gt;        &lt;!-- string --&gt;
+ *    &lt;span&gt; &lt;em&gt;&lt;AbstractView&gt;...&lt;/AbstractView&gt; &lt;/em&gt;      &lt;!-- LookAt  &lt;em&gt;or &lt;/em&gt; Camera --&gt; &lt;/span&gt;
+ *   &lt; &lt;em&gt;TimePrimitive &lt;/em&gt;&gt;...&lt;/ &lt;em&gt;TimePrimitive &lt;/em&gt;&gt;
+ *   &lt;styleUrl&gt; &lt;em&gt;... &lt;/em&gt;&lt;/styleUrl&gt;              &lt;!-- anyURI --&gt;
+ *   &lt; &lt;em&gt;StyleSelector&gt;...&lt;/StyleSelector&gt; &lt;/em&gt;
  *   &lt;Region&gt;...&lt;/Region&gt;
  *   &lt;Metadata&gt;...&lt;/Metadata&gt;
- *   <span>&lt;atom:author&gt;...&lt;atom:author&gt;   &lt;!-- xmlns:atom="http://www.w3.org/2005/Atom" --&gt;
- *   &lt;atom:link&gt;...&lt;/atom:link&gt;</span>
- * <p>
- *   &lt;!-- specific to <em>Container</em> --&gt; <br>  &lt;!-- 0 or more Features --&gt;
- * <strong>&lt;!-- /<em>Container --</em>&gt;</strong></pre>
- * <p>
+ *    &lt;span&gt;&lt;atom:author&gt;...&lt;atom:author&gt;   &lt;!-- xmlns:atom="http://www.w3.org/2005/Atom" --&gt;
+ *   &lt;atom:link&gt;...&lt;/atom:link&gt; &lt;/span&gt;
+ *
+ *   &lt;!-- specific to  &lt;em&gt;Container &lt;/em&gt; --&gt;  &lt;br&gt;  &lt;!-- 0 or more Features --&gt;
+ *  &lt;strong&gt;&lt;!-- / &lt;em&gt;Container -- &lt;/em&gt;&gt; &lt;/strong&gt; </pre>
+ *   
  * Extends:
  *
- * @see: <Feature>
+ * @see:  &lt;Feature&gt;
  *
  * Extended By:
- * @see: <Document>
- * @see: <Folder>
- *
- *
+ * @see:  &lt;Document&gt;
+ * @see:  &lt;Folder&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -81,22 +76,17 @@ public abstract class Container extends Feature implements Cloneable {
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> containerSimpleExtension;
   /**
-   * <Object>
-   * <p>
+   *  &lt;Object&gt;
+   *   
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the <Update> mechanism is to be used.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;<strong>
-   * &lt;!-- <em>Object</em> id="ID" targetId="NCName" --&gt;
-   * &lt;!-- /<em>Object</em>&gt; --&gt;</strong></pre>
-   * <p>
-   * <p>
-   * <p>
+   * assigned if the  &lt;Update&gt; mechanism is to be used. Syntax:
+   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
+   * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
+   *   
    */
   @XmlElement(name = "AbstractContainerObjectExtensionGroup")
   protected List<AbstractObject> containerObjectExtension;
@@ -182,7 +172,7 @@ public abstract class Container extends Feature implements Cloneable {
    *
    * @param containerSimpleExtension Objects of the following type are allowed
    *                                 in the list: {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Container addToContainerSimpleExtension(final Object containerSimpleExtension) {
     this.getContainerSimpleExtension().add(containerSimpleExtension);
@@ -203,7 +193,7 @@ public abstract class Container extends Feature implements Cloneable {
    *
    * @param containerObjectExtension Objects of the following type are allowed
    *                                 in the list: {@link AbstractObject}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Container addToContainerObjectExtension(final AbstractObject containerObjectExtension) {
     this.getContainerObjectExtension().add(containerObjectExtension);
@@ -281,7 +271,7 @@ public abstract class Container extends Feature implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setContainerSimpleExtension(List<Object>)
+   * @see #setContainerSimpleExtension(List &lt;Object&gt;)
    *
    * @param containerSimpleExtension required parameter
    */
@@ -293,7 +283,7 @@ public abstract class Container extends Feature implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setContainerObjectExtension(List<AbstractObject>)
+   * @see #setContainerObjectExtension(List &lt;AbstractObject&gt;)
    *
    * @param containerObjectExtension required parameter
    */

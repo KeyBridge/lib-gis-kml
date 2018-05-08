@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -22,44 +22,35 @@ import javax.xml.bind.annotation.*;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- * <IconStyle>
+ * &lt;IconStyle&gt;
  * <p>
  * Specifies how icons for point Placemarks are drawn, both in the Places panel
- * and in the 3D viewer of Google Earth. The <Icon> element specifies the icon
- * image. The
- * <scale> element specifies the x, y scaling of the icon. The color specified
- * in the
- * <color> element of <IconStyle> is blended with the color of the <Icon>.
- * </p>
+ * and in the 3D viewer of Google Earth. The &lt;Icon&gt; element specifies the
+ * icon image. The &lt;scale&gt; element specifies the x, y scaling of the icon.
+ * The color specified in the &lt;color&gt; element of &lt;IconStyle&gt; is
+ * blended with the color of the &lt;Icon&gt;. Syntax: &lt;pre&gt;
+ * &lt;strong&gt;&lt;IconStyle id="ID"&gt; &lt;/strong&gt; &lt;!-- inherited
+ * from &lt;em&gt;ColorStyle &lt;/em&gt; --&gt;
+ * &lt;color&gt;ffffffff&lt;/color&gt; &lt;!-- kml:color --&gt;
+ * &lt;colorMode&gt;normal&lt;/colorMode&gt; &lt;!-- kml:colorModeEnum:normal
+ * &lt;em&gt;or &lt;/em&gt; random --&gt;
  * <p>
- * Syntax:
- * <pre><strong>&lt;IconStyle id="ID"&gt;</strong>
- *   &lt;!-- inherited from <em>ColorStyle</em> --&gt;
- *   &lt;color&gt;ffffffff&lt;/color&gt;            &lt;!-- kml:color --&gt;
- *   &lt;colorMode&gt;normal&lt;/colorMode&gt;      &lt;!-- kml:colorModeEnum:normal <em>or</em> random --&gt;
- * <p>
- *   &lt;!-- specific to IconStyle --&gt;
- *   &lt;scale&gt;1&lt;/scale&gt;                   &lt;!-- float --&gt;
- *   &lt;heading&gt;0&lt;/heading&gt;               &lt;!-- float --&gt;
- *   &lt;Icon&gt;
- *     &lt;href&gt;...&lt;/href&gt;
- *   &lt;/Icon&gt;
- *   &lt;hotSpot x="0.5"  y="0.5"
- *     xunits="fraction" yunits="fraction"/&gt;    &lt;!-- kml:vec2 --&gt;
- * <strong>&lt;/IconStyle&gt;</strong></pre>
+ * &lt;!-- specific to IconStyle --&gt; &lt;scale&gt;1&lt;/scale&gt; &lt;!--
+ * float --&gt; &lt;heading&gt;0&lt;/heading&gt; &lt;!-- float --&gt;
+ * &lt;Icon&gt; &lt;href&gt;...&lt;/href&gt; &lt;/Icon&gt; &lt;hotSpot x="0.5"
+ * y="0.5" xunits="fraction" yunits="fraction"/&gt; &lt;!-- kml:vec2 --&gt;
+ * &lt;strong&gt;&lt;/IconStyle&gt; &lt;/strong&gt; </pre>
  * <p>
  * Extends:
  *
- * @see: <ColorStyle>
+ * @see: &lt;ColorStyle&gt;
  *
  * Contains:
- * @see: <Icon>
- * @see: <href>
+ * @see: &lt;Icon&gt;
+ * @see: &lt;href&gt;
  *
  * Contained By:
- * @see: <Style>
- *
- *
+ * @see: &lt;Style&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -73,150 +64,110 @@ import net.opengis.kml.annotations.Obvious;
 })
 @XmlRootElement(name = "IconStyle", namespace = "http://www.opengis.net/kml/2.2")
 public class IconStyle
-        extends ColorStyle
-        implements Cloneable {
+  extends ColorStyle
+  implements Cloneable {
 
   /**
-   * <scale>
+   * &lt;scale&gt;
    * <p>
-   * Note: The <geomScale> tag has been deprecated. Use <scale> instead.
-   * </p>
-   * <p>
-   * Resizes the icon.
-   * </p>
-   * <p>
-   * Scales a model along the x, y, and z axes in the model's coordinate space.
-   * <Scale>
-   * <x>2.5</x> <y>2.5</y> <z>3.5</z> </Scale>
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * Note: The &lt;geomScale&gt; tag has been deprecated. Use &lt;scale&gt;
+   * instead. Resizes the icon. Scales a model along the x, y, and z axes in the
+   * model's coordinate space. &lt;Scale&gt; &lt;x&gt;2.5 &lt;/x&gt;
+   * &lt;y&gt;2.5 &lt;/y&gt; &lt;z&gt;3.5 &lt;/z&gt; &lt;/Scale&gt;
    */
   @XmlElement(defaultValue = "1.0")
   protected double scale;
   /**
-   * <heading>
+   * &lt;heading&gt;
    * <p>
    * Direction (azimuth) of the camera, in degrees. Default=0 (true North). (See
-   * diagram.) Values range from 0 to 360 degrees.
-   * </p>
-   * <p>
-   * Direction (that is, North, South, East, West), in degrees. Default=0
-   * (North). (See diagram below.) Values range from 0 to 360 degrees.
-   * </p>
-   * <p>
-   * Direction (that is, North, South, East, West), in degrees. Default=0
-   * (North). (See diagram.) Values range from 0 to 360 degrees.
-   * </p>
-   * <p>
-   * Rotation about the z axis (normal to the Earth's surface). A value of 0
-   * (the default) equals North. A positive rotation is clockwise around the z
-   * axis and specified in degrees from 0 to 360.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * diagram.) Values range from 0 to 360 degrees. Direction (that is, North,
+   * South, East, West), in degrees. Default=0 (North). (See diagram below.)
+   * Values range from 0 to 360 degrees. Direction (that is, North, South, East,
+   * West), in degrees. Default=0 (North). (See diagram.) Values range from 0 to
+   * 360 degrees. Rotation about the z axis (normal to the Earth's surface). A
+   * value of 0 (the default) equals North. A positive rotation is clockwise
+   * around the z axis and specified in degrees from 0 to 360.
    */
   @XmlElement(defaultValue = "0.0")
   protected double heading;
   /**
-   * <icon> see also <icon>.
+   * &lt;icon&gt; see also &lt;icon&gt;.
    * <p>
-   * <Icon> <href>Sunset.jpg</href> </Icon>
-   * </p>
-   * <p>
-   * A custom Icon. In <IconStyle>, the only child element of <Icon> is <href>:
-   * <href>: An HTTP address or a local file specification used to load an icon.
-   * </p>
-   * <p>
-   * Defines an image associated with an Icon style or overlay. <Icon> has the
-   * same child elements as <Link>. The required <href> child element defines
-   * the location of the image to be used as the overlay or as the icon for the
-   * placemark. This location can either be on a local file system or a remote
-   * web server.
-   * </p>
-   * <p>
-   * Defines the image associated with the Overlay. The <href> element defines
-   * the location of the image to be used as the Overlay. This location can be
-   * either on a local file system or on a web server. If this element is
-   * omitted or contains no <href>, a rectangle is drawn using the color and
-   * size defined by the ground or screen overlay. <Icon>
-   * <href>icon.jpg</href> </Icon>
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre><strong>&lt;Icon id="ID"&gt;</strong>
-   *   &lt;!-- specific to Icon --&gt;
-   *   &lt;href&gt;<em>...</em>&lt;/href&gt;                      &lt;!-- anyURI --&gt;
-   *   &lt;refreshMode&gt;onChange&lt;/refreshMode&gt;
-   *     &lt;!-- kml:refreshModeEnum: onChange, onInterval, <em>or</em> onExpire --&gt;
-   *   &lt;refreshInterval&gt;4&lt;/refreshInterval&gt;  &lt;!-- float --&gt;
-   *   &lt;viewRefreshMode&gt;never&lt;/viewRefreshMode&gt;
-   *     &lt;!-- kml:viewRefreshModeEnum: never, onStop, onRequest, onRegion --&gt;
-   *   &lt;viewRefreshTime&gt;4&lt;/viewRefreshTime&gt;  &lt;!-- float --&gt;
-   *   &lt;viewBoundScale&gt;1&lt;/viewBoundScale&gt;    &lt;!-- float --&gt;
-   *   &lt;viewFormat&gt;...&lt;/viewFormat&gt;          &lt;!-- string --&gt;
-   *   &lt;httpQuery&gt;...&lt;/httpQuery&gt;            &lt;!-- string --&gt;
-   *   <strong>&lt;/Icon&gt;</strong></pre>
+   * &lt;Icon&gt; &lt;href&gt;Sunset.jpg &lt;/href&gt; &lt;/Icon&gt; A custom
+   * Icon. In &lt;IconStyle&gt;, the only child element of &lt;Icon&gt; is
+   * &lt;href&gt;: &lt;href&gt;: An HTTP address or a local file specification
+   * used to load an icon. Defines an image associated with an Icon style or
+   * overlay. &lt;Icon&gt; has the same child elements as &lt;Link&gt;. The
+   * required &lt;href&gt; child element defines the location of the image to be
+   * used as the overlay or as the icon for the placemark. This location can
+   * either be on a local file system or a remote web server. Defines the image
+   * associated with the Overlay. The &lt;href&gt; element defines the location
+   * of the image to be used as the Overlay. This location can be either on a
+   * local file system or on a web server. If this element is omitted or
+   * contains no &lt;href&gt;, a rectangle is drawn using the color and size
+   * defined by the ground or screen overlay. &lt;Icon&gt; &lt;href&gt;icon.jpg
+   * &lt;/href&gt; &lt;/Icon&gt; Syntax: &lt;pre&gt; &lt;strong&gt;&lt;Icon
+   * id="ID"&gt; &lt;/strong&gt; &lt;!-- specific to Icon --&gt; &lt;href&gt;
+   * &lt;em&gt;... &lt;/em&gt;&lt;/href&gt; &lt;!-- anyURI --&gt;
+   * &lt;refreshMode&gt;onChange&lt;/refreshMode&gt; &lt;!--
+   * kml:refreshModeEnum: onChange, onInterval, &lt;em&gt;or &lt;/em&gt;
+   * onExpire --&gt; &lt;refreshInterval&gt;4&lt;/refreshInterval&gt; &lt;!--
+   * float --&gt; &lt;viewRefreshMode&gt;never&lt;/viewRefreshMode&gt; &lt;!--
+   * kml:viewRefreshModeEnum: never, onStop, onRequest, onRegion --&gt;
+   * &lt;viewRefreshTime&gt;4&lt;/viewRefreshTime&gt; &lt;!-- float --&gt;
+   * &lt;viewBoundScale&gt;1&lt;/viewBoundScale&gt; &lt;!-- float --&gt;
+   * &lt;viewFormat&gt;...&lt;/viewFormat&gt; &lt;!-- string --&gt;
+   * &lt;httpQuery&gt;...&lt;/httpQuery&gt; &lt;!-- string --&gt;
+   * &lt;strong&gt;&lt;/Icon&gt; &lt;/strong&gt; </pre>
    * <p>
    * Contained By:
    *
-   * @see: <GroundOverlay>
-   * @see: <IconStyle>
-   * @see: <ScreenOverlay>
-   *
-   *
+   * @see: &lt;GroundOverlay&gt;
+   * @see: &lt;IconStyle&gt;
+   * @see: &lt;ScreenOverlay&gt;
    *
    */
   @XmlElement(name = "Icon")
   protected Icon icon;
   /**
-   * <hotspot x="0.5" y="0.5" xunits="fraction" yunits="fraction">
+   * &lt;hotspot x="0.5" y="0.5" xunits="fraction" yunits="fraction"&gt;
    * <p>
-   * Specifies the position within the Icon that is "anchored" to the <Point>
-   * specified in the Placemark. The x and y values can be specified in three
-   * different ways: as pixels ("pixels"), as fractions of the icon
-   * ("fraction"), or as inset pixels ("insetPixels"), which is an offset in
-   * pixels from the upper right corner of the icon. The x and y positions can
-   * be specified in different ways—for example, x can be in pixels and y can be
-   * a fraction. The origin of the coordinate system is in the lower left corner
-   * of the icon. x - Either the number of pixels, a fractional component of the
-   * icon, or a pixel inset indicating the x component of a point on the icon. y
-   * - Either the number of pixels, a fractional component of the icon, or a
-   * pixel inset indicating the y component of a point on the icon. xunits -
-   * Units in which the x value is specified. A value of fraction indicates the
-   * x value is a fraction of the icon. A value of pixels indicates the x value
-   * in pixels. A value of insetPixels indicates the indent from the right edge
-   * of the icon. yunits - Units in which the y value is specified. A value of
-   * fraction indicates the y value is a fraction of the icon. A value of pixels
-   * indicates the y value in pixels. A value of insetPixels indicates the
-   * indent from the top edge of the icon.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * Specifies the position within the Icon that is "anchored" to the
+   * &lt;Point&gt; specified in the Placemark. The x and y values can be
+   * specified in three different ways: as pixels ("pixels"), as fractions of
+   * the icon ("fraction"), or as inset pixels ("insetPixels"), which is an
+   * offset in pixels from the upper right corner of the icon. The x and y
+   * positions can be specified in different ways—for example, x can be in
+   * pixels and y can be a fraction. The origin of the coordinate system is in
+   * the lower left corner of the icon. x - Either the number of pixels, a
+   * fractional component of the icon, or a pixel inset indicating the x
+   * component of a point on the icon. y - Either the number of pixels, a
+   * fractional component of the icon, or a pixel inset indicating the y
+   * component of a point on the icon. xunits - Units in which the x value is
+   * specified. A value of fraction indicates the x value is a fraction of the
+   * icon. A value of pixels indicates the x value in pixels. A value of
+   * insetPixels indicates the indent from the right edge of the icon. yunits -
+   * Units in which the y value is specified. A value of fraction indicates the
+   * y value is a fraction of the icon. A value of pixels indicates the y value
+   * in pixels. A value of insetPixels indicates the indent from the top edge of
+   * the icon.
    */
   protected Vec2 hotSpot;
   @XmlElement(name = "IconStyleSimpleExtensionGroup")
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> iconStyleSimpleExtension;
   /**
-   * <Object>
+   * &lt;Object&gt;
    * <p>
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the <Update> mechanism is to be used.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;<strong>
-   * &lt;!-- <em>Object</em> id="ID" targetId="NCName" --&gt;
-   * &lt;!-- /<em>Object</em>&gt; --&gt;</strong></pre>
-   * <p>
-   * <p>
+   * assigned if the &lt;Update&gt; mechanism is to be used. Syntax:
+   * <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
+   * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
    * <p>
    */
   @XmlElement(name = "IconStyleObjectExtensionGroup")
@@ -399,11 +350,8 @@ public class IconStyle
   /**
    * Creates a new instance of {@link Icon} and set it to icon.
    * <p>
-   * This method is a short version for:    <code>
-   * Icon icon = new Icon();
-   * this.setIcon(icon); </code>
-   * <p>
-   * <p>
+   * This method is a short version for: &lt;code&gt; Icon icon = new Icon();
+   * this.setIcon(icon); &lt;/code&gt;
    */
   public Icon createAndSetIcon() {
     Icon newValue = new Icon();
@@ -414,11 +362,8 @@ public class IconStyle
   /**
    * Creates a new instance of {@link Vec2} and set it to hotSpot.
    * <p>
-   * This method is a short version for:    <code>
-   * Vec2 vec2 = new Vec2();
-   * this.setHotSpot(vec2); </code>
-   * <p>
-   * <p>
+   * This method is a short version for: &lt;code&gt; Vec2 vec2 = new Vec2();
+   * this.setHotSpot(vec2); &lt;/code&gt;
    */
   public Vec2 createAndSetHotSpot() {
     Vec2 newValue = new Vec2();
@@ -440,7 +385,8 @@ public class IconStyle
    *
    * @param iconStyleSimpleExtension Objects of the following type are allowed
    *                                 in the list: {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public IconStyle addToIconStyleSimpleExtension(final Object iconStyleSimpleExtension) {
     this.getIconStyleSimpleExtension().add(iconStyleSimpleExtension);
@@ -461,7 +407,8 @@ public class IconStyle
    *
    * @param iconStyleObjectExtension Objects of the following type are allowed
    *                                 in the list: {@link AbstractObject}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public IconStyle addToIconStyleObjectExtension(final AbstractObject iconStyleObjectExtension) {
     this.getIconStyleObjectExtension().add(iconStyleObjectExtension);
@@ -604,7 +551,7 @@ public class IconStyle
   /**
    * fluent setter
    *
-   * @see #setIconStyleSimpleExtension(List<Object>)
+   * @see #setIconStyleSimpleExtension(List &lt;Object&gt;)
    *
    * @param iconStyleSimpleExtension required parameter
    */
@@ -616,7 +563,7 @@ public class IconStyle
   /**
    * fluent setter
    *
-   * @see #setIconStyleObjectExtension(List<AbstractObject>)
+   * @see #setIconStyleObjectExtension(List &lt;AbstractObject&gt;)
    *
    * @param iconStyleObjectExtension required parameter
    */

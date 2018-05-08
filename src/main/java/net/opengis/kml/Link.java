@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -22,94 +22,63 @@ import javax.xml.bind.annotation.*;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- * <link> (required). see <link>.
+ * &lt;link&gt; (required). see &lt;link&gt;.
  * <p>
- * <Link> specifies the location of any of the following:
- * </p>
- * <p>
- * If the file specified in <href> is a local file, the <viewFormat> and
- * <httpQuery>
- * elements are not used.
- * </p>
- * <p>
- * KML files fetched by network links Image files used in any Overlay (the
- * <Icon> element specifies the image in an Overlay; <Icon> has the same fields
- * as <Link>) Model files used in the <Model> element
- * </p>
- * <p>
- * Specifies the URL of the website containing this KML or KMZ file. Be sure to
- * include the namespace for this element in any KML file that uses it:
- * xmlns:atom="http://www.w3.org/2005/Atom" (see the sample that follows).
- * </p>
- * <p>
- * Specifies the file to load and optional refresh parameters. See <Link>.
- * </p>
- * <p>
- * The <Link> element replaces the <Url> element of <NetworkLink> contained in
- * earlier KML releases and adds functionality for the <Region> element
- * (introduced in KML 2.1). In Google Earth releases 3.0 and earlier, the <Link>
- * element is ignored.
- * </p>
- * <p>
- * The file is conditionally loaded and refreshed, depending on the refresh
- * parameters supplied here. Two different sets of refresh parameters can be
- * specified: one set is based on time (<refreshMode> and <refreshInterval>) and
- * one is based on the current "camera" view (<viewRefreshMode> and
- * <viewRefreshTime>). In addition, Link specifies whether to scale the bounding
- * box parameters that are sent to the server (<viewBoundScale>
- * and provides a set of optional viewing parameters that can be sent to the
- * server (<viewFormat>) as well as a set of optional parameters containing
- * version and language information.
- * </p>
- * <p>
- * Tip: To display the top-level Folder or Document within a Network Link in the
- * List View, assign an ID to the Folder or Document. Without this ID, only the
- * child object names are displayed in the List View.
- * </p>
- * <p>
- * When a file is fetched, the URL that is sent to the server is composed of
- * three pieces of information:
- * </p>
- * <p>
- * the href (Hypertext Reference) that specifies the file to load. an arbitrary
+ * &lt;Link&gt; specifies the location of any of the following: If the file
+ * specified in &lt;href&gt; is a local file, the &lt;viewFormat&gt; and
+ * &lt;httpQuery&gt; elements are not used. KML files fetched by network links
+ * Image files used in any Overlay (the &lt;Icon&gt; element specifies the image
+ * in an Overlay; &lt;Icon&gt; has the same fields as &lt;Link&gt;) Model files
+ * used in the &lt;Model&gt; element Specifies the URL of the website containing
+ * this KML or KMZ file. Be sure to include the namespace for this element in
+ * any KML file that uses it: xmlns:atom="http://www.w3.org/2005/Atom" (see the
+ * sample that follows). Specifies the file to load and optional refresh
+ * parameters. See &lt;Link&gt;. The &lt;Link&gt; element replaces the
+ * &lt;Url&gt; element of &lt;NetworkLink&gt; contained in earlier KML releases
+ * and adds functionality for the &lt;Region&gt; element (introduced in KML
+ * 2.1). In Google Earth releases 3.0 and earlier, the &lt;Link&gt; element is
+ * ignored. The file is conditionally loaded and refreshed, depending on the
+ * refresh parameters supplied here. Two different sets of refresh parameters
+ * can be specified: one set is based on time ( &lt;refreshMode&gt; and
+ * &lt;refreshInterval&gt;) and one is based on the current "camera" view (
+ * &lt;viewRefreshMode&gt; and &lt;viewRefreshTime&gt;). In addition, Link
+ * specifies whether to scale the bounding box parameters that are sent to the
+ * server ( &lt;viewBoundScale&gt; and provides a set of optional viewing
+ * parameters that can be sent to the server ( &lt;viewFormat&gt;) as well as a
+ * set of optional parameters containing version and language information. Tip:
+ * To display the top-level Folder or Document within a Network Link in the List
+ * View, assign an ID to the Folder or Document. Without this ID, only the child
+ * object names are displayed in the List View. When a file is fetched, the URL
+ * that is sent to the server is composed of three pieces of information: the
+ * href (Hypertext Reference) that specifies the file to load. an arbitrary
  * format string that is created from (a) parameters that you specify in the
- * <viewFormat>
- * element or (b) bounding box parameters (this is the default and is used if no
- * <viewFormat>
- * element is included in the file). a second format string that is specified in
- * the
- * <httpQuery> element.
- * </p>
- * <p>
- * Syntax:
- * <pre><strong>&lt;Link id="ID"&gt;</strong>
- *   &lt;!-- specific to Link --&gt;
- *   &lt;href&gt;<em>...</em>&lt;/href&gt;                      &lt;!-- <span>string</span> --&gt;
- *   &lt;refreshMode&gt;onChange&lt;/refreshMode&gt;
- *     &lt;!-- refreshModeEnum: onChange, onInterval, <em>or</em> onExpire --&gt;
- *   &lt;refreshInterval&gt;4&lt;/refreshInterval&gt;  &lt;!-- float --&gt;
- *   &lt;viewRefreshMode&gt;never&lt;/viewRefreshMode&gt;
- *     &lt;!-- viewRefreshModeEnum: never, onStop, onRequest, onRegion --&gt;
- *   &lt;viewRefreshTime&gt;4&lt;/viewRefreshTime&gt;  &lt;!-- float --&gt;
- *   &lt;viewBoundScale&gt;1&lt;/viewBoundScale&gt;    &lt;!-- float --&gt;
- *   &lt;viewFormat&gt;BBOX=[bboxWest],[bboxSouth],[bboxEast],[bboxNorth]&lt;<strong>/</strong>viewFormat&gt;
- *                                         &lt;!-- string --&gt;
- *   &lt;httpQuery&gt;...&lt;/httpQuery&gt;            &lt;!-- string --&gt;
- * <strong>&lt;/Link&gt;</strong></pre>
+ * &lt;viewFormat&gt; element or (b) bounding box parameters (this is the
+ * default and is used if no &lt;viewFormat&gt; element is included in the
+ * file). a second format string that is specified in the &lt;httpQuery&gt;
+ * element. Syntax: &lt;pre&gt; &lt;strong&gt;&lt;Link id="ID"&gt;
+ * &lt;/strong&gt; &lt;!-- specific to Link --&gt; &lt;href&gt; &lt;em&gt;...
+ * &lt;/em&gt;&lt;/href&gt; &lt;!-- &lt;span&gt;string &lt;/span&gt; --&gt;
+ * &lt;refreshMode&gt;onChange&lt;/refreshMode&gt; &lt;!-- refreshModeEnum:
+ * onChange, onInterval, &lt;em&gt;or &lt;/em&gt; onExpire --&gt;
+ * &lt;refreshInterval&gt;4&lt;/refreshInterval&gt; &lt;!-- float --&gt;
+ * &lt;viewRefreshMode&gt;never&lt;/viewRefreshMode&gt; &lt;!--
+ * viewRefreshModeEnum: never, onStop, onRequest, onRegion --&gt;
+ * &lt;viewRefreshTime&gt;4&lt;/viewRefreshTime&gt; &lt;!-- float --&gt;
+ * &lt;viewBoundScale&gt;1&lt;/viewBoundScale&gt; &lt;!-- float --&gt;
+ * &lt;viewFormat&gt;BBOX=[bboxWest],[bboxSouth],[bboxEast],[bboxNorth]&lt;
+ * &lt;strong&gt;/ &lt;/strong&gt;viewFormat&gt; &lt;!-- string --&gt;
+ * &lt;httpQuery&gt;...&lt;/httpQuery&gt; &lt;!-- string --&gt;
+ * &lt;strong&gt;&lt;/Link&gt; &lt;/strong&gt; </pre>
  * <p>
  * Extends:
  *
- * @see: <Object>
+ * @see: &lt;Object&gt;
  *
  * Contained By:
- * @see: <Model>
- * @see: <NetworkLink>
+ * @see: &lt;Model&gt;
+ * @see: &lt;NetworkLink&gt;
  *
- * See Also:
- * <NetworkLinkControl>
- * <Region>
- *
- *
+ * See Also: &lt;NetworkLinkControl&gt; &lt;Region&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -126,153 +95,102 @@ import net.opengis.kml.annotations.Obvious;
 })
 @XmlRootElement(name = "Link", namespace = "http://www.opengis.net/kml/2.2")
 public class Link
-        extends BasicLink
-        implements Cloneable {
+  extends BasicLink
+  implements Cloneable {
 
   /**
    * RefreshMode
    * <p>
-   * onChange, onInterval, onExpire
-   * </p>
-   * <p>
-   * See Also: See <Link>
-   * <p>
-   * <p>
+   * onChange, onInterval, onExpire See Also: See &lt;Link&gt;
    * <p>
    */
   @XmlElement(defaultValue = "onChange")
   protected RefreshMode refreshMode;
   /**
-   * <refreshinterval>
+   * &lt;refreshinterval&gt;
    * <p>
    * Indicates to refresh the file every n seconds.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlElement(defaultValue = "4.0")
   protected double refreshInterval;
   /**
    * ViewRefreshMode
    * <p>
-   * never, onRequest, onStop, onRegion
-   * </p>
-   * <p>
-   * See Also: See <Link>
-   * <p>
-   * <p>
+   * never, onRequest, onStop, onRegion See Also: See &lt;Link&gt;
    * <p>
    */
   @XmlElement(defaultValue = "never")
   protected ViewRefreshMode viewRefreshMode;
   /**
-   * <viewrefreshtime>
+   * &lt;viewrefreshtime&gt;
    * <p>
    * After camera movement stops, specifies the number of seconds to wait before
-   * refreshing the view. (See <viewRefreshMode> and onStop above.)
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * refreshing the view. (See &lt;viewRefreshMode&gt; and onStop above.)
    */
   @XmlElement(defaultValue = "4.0")
   protected double viewRefreshTime;
   /**
-   * <viewboundscale>
+   * &lt;viewboundscale&gt;
    * <p>
    * Scales the BBOX parameters before sending them to the server. A value less
    * than 1 specifies to use less than the full view (screen). A value greater
    * than 1 specifies to fetch an area that extends beyond the edges of the
    * current view.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlElement(defaultValue = "1.0")
   protected double viewBoundScale;
   /**
-   * <viewformat>
+   * &lt;viewformat&gt;
    * <p>
-   * BBOX=[bboxWest],[bboxSouth],[bboxEast],[bboxNorth]
-   * </p>
-   * <p>
-   * If you specify a <viewRefreshMode> of onStop and do not include the
-   * <viewFormat>
+   * BBOX=[bboxWest],[bboxSouth],[bboxEast],[bboxNorth] If you specify a
+   * &lt;viewRefreshMode&gt; of onStop and do not include the &lt;viewFormat&gt;
    * tag in the file, the following information is automatically appended to the
-   * query string:
-   * </p>
-   * <p>
-   * If you specify an empty <viewFormat> tag, no information is appended to the
-   * query string.
-   * </p>
-   * <p>
-   * Specifies the format of the query string that is appended to the Link's
-   * <href> before the file is fetched.(If the <href> specifies a local file,
-   * this element is ignored.)
-   * </p>
-   * <p>
-   * This information matches the Web Map Service (WMS) bounding box
-   * specification.
-   * </p>
-   * <p>
-   * You can also specify a custom set of viewing parameters to add to the query
-   * string. If you supply a format string, it is used instead of the BBOX
-   * information. If you also want the BBOX information, you need to add those
-   * parameters along with the custom parameters.
-   * </p>
-   * <p>
-   * You can use any of the following parameters in your format string (and
-   * Google Earth will substitute the appropriate current value at the time it
-   * creates the query string): [lookatLon], [lookatLat] - longitude and
-   * latitude of the point that <LookAt> is viewing [lookatRange], [lookatTilt],
-   * [lookatHeading] - values used by the <LookAt>
-   * element (see descriptions of <range>, <tilt>, and <heading> in <LookAt>)
+   * query string: If you specify an empty &lt;viewFormat&gt; tag, no
+   * information is appended to the query string. Specifies the format of the
+   * query string that is appended to the Link's &lt;href&gt; before the file is
+   * fetched.(If the &lt;href&gt; specifies a local file, this element is
+   * ignored.) This information matches the Web Map Service (WMS) bounding box
+   * specification. You can also specify a custom set of viewing parameters to
+   * add to the query string. If you supply a format string, it is used instead
+   * of the BBOX information. If you also want the BBOX information, you need to
+   * add those parameters along with the custom parameters. You can use any of
+   * the following parameters in your format string (and Google Earth will
+   * substitute the appropriate current value at the time it creates the query
+   * string): [lookatLon], [lookatLat] - longitude and latitude of the point
+   * that &lt;LookAt&gt; is viewing [lookatRange], [lookatTilt], [lookatHeading]
+   * - values used by the &lt;LookAt&gt; element (see descriptions of
+   * &lt;range&gt;, &lt;tilt&gt;, and &lt;heading&gt; in &lt;LookAt&gt;)
    * [lookatTerrainLon], [lookatTerrainLat], [lookatTerrainAlt] - point on the
-   * terrain in degrees/meters that <LookAt> is viewing [cameraLon],
+   * terrain in degrees/meters that &lt;LookAt&gt; is viewing [cameraLon],
    * [cameraLat], [cameraAlt] - degrees/meters of the eyepoint for the camera
    * [horizFov], [vertFov] - horizontal, vertical field of view for the camera
    * [horizPixels], [vertPixels] - size in pixels of the 3D viewer
    * [terrainEnabled] - indicates whether the 3D viewer is showing terrain
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   protected String viewFormat;
   /**
-   * <httpquery>
+   * &lt;httpquery&gt;
    * <p>
    * Appends information to the query string, based on the parameters specified.
    * (Google Earth substitutes the appropriate current value at the time it
    * creates the query string.) The following parameters are supported:
    * [clientVersion] [kmlVersion] [clientName] [language]
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   protected String httpQuery;
   @XmlElement(name = "LinkSimpleExtensionGroup")
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> linkSimpleExtension;
   /**
-   * <Object>
+   * &lt;Object&gt;
    * <p>
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the <Update> mechanism is to be used.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;<strong>
-   * &lt;!-- <em>Object</em> id="ID" targetId="NCName" --&gt;
-   * &lt;!-- /<em>Object</em>&gt; --&gt;</strong></pre>
-   * <p>
-   * <p>
+   * assigned if the &lt;Update&gt; mechanism is to be used. Syntax:
+   * <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
+   * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
    * <p>
    */
   @XmlElement(name = "LinkObjectExtensionGroup")
@@ -547,7 +465,8 @@ public class Link
    *
    * @param linkSimpleExtension Objects of the following type are allowed in the
    *                            list: {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Link addToLinkSimpleExtension(final Object linkSimpleExtension) {
     this.getLinkSimpleExtension().add(linkSimpleExtension);
@@ -568,7 +487,8 @@ public class Link
    *
    * @param linkObjectExtension Objects of the following type are allowed in the
    *                            list: {@link AbstractObject}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Link addToLinkObjectExtension(final AbstractObject linkObjectExtension) {
     this.getLinkObjectExtension().add(linkObjectExtension);
@@ -713,7 +633,7 @@ public class Link
   /**
    * fluent setter
    *
-   * @see #setLinkSimpleExtension(List<Object>)
+   * @see #setLinkSimpleExtension(List &lt;Object&gt;)
    *
    * @param linkSimpleExtension required parameter
    */
@@ -725,7 +645,7 @@ public class Link
   /**
    * fluent setter
    *
-   * @see #setLinkObjectExtension(List<AbstractObject>)
+   * @see #setLinkObjectExtension(List &lt;AbstractObject&gt;)
    *
    * @param linkObjectExtension required parameter
    */

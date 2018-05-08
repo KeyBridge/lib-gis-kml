@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -26,71 +26,53 @@ import net.opengis.kml.gx.Tour;
 import net.opengis.kml.xal.AddressDetails;
 
 /**
- * <Document>
- * <p>
- * <Document> <Style id="myPrettyDocument"> <ListStyle> ... </ListStyle>
- * </Style> <styleUrl#myPrettyDocument">
- * ... </Document>
- * </p>
- * <p>
+ *  &lt;Document&gt;
+ *   
+ *  &lt;Document&gt;  &lt;Style id="myPrettyDocument"&gt;  &lt;ListStyle&gt; ...  &lt;/ListStyle&gt;
+ *  &lt;/Style&gt;  &lt;styleUrl#myPrettyDocument"&gt;
+ * ...  &lt;/Document&gt;
  * A Document is a container for features and styles. This element is required
  * if your KML file uses shared styles. It is recommended that you use shared
- * styles, which require the following steps:
- * </p>
- * <p>
- * Define all Styles in a Document. Assign a unique ID to each Style. Within a
- * given Feature or StyleMap, reference the Style's ID using a <styleUrl>
- * element.
- * </p>
- * <p>
- * Do not put shared styles within a Folder.
- * </p>
- * <p>
- * Each Feature must explicitly reference the styles it uses in a <styleUrl>
+ * styles, which require the following steps: Define all Styles in a Document.
+ * Assign a unique ID to each Style. Within a given Feature or StyleMap,
+ * reference the Style's ID using a  &lt;styleUrl&gt;
+ * element. Do not put shared styles within a Folder. Each Feature must
+ * explicitly reference the styles it uses in a  &lt;styleUrl&gt;
  * element. For a Style that applies to a Document (such as ListStyle), the
- * Document itself must explicitly reference the <styleUrl>. For example:
- * </p>
- * <p>
- * Note that shared styles are not inherited by the Features in the Document.
- * </p>
- * <p>
- * The following example illustrates use of a shared style.
- * </p>
- * <p>
- * Syntax:
- * <pre><strong>&lt;Document id="ID"&gt;</strong>
- *   &lt;!-- inherited from <em>Feature</em> element --&gt;
- *   &lt;name&gt;<em>...</em>&lt;/name&gt;                      &lt;!-- string --&gt;
+ * Document itself must explicitly reference the  &lt;styleUrl&gt;. For example: Note
+ * that shared styles are not inherited by the Features in the Document. The
+ * following example illustrates use of a shared style. Syntax:
+ *  &lt;pre&gt; &lt;strong&gt;&lt;Document id="ID"&gt; &lt;/strong&gt;
+ *   &lt;!-- inherited from  &lt;em&gt;Feature &lt;/em&gt; element --&gt;
+ *   &lt;name&gt; &lt;em&gt;... &lt;/em&gt;&lt;/name&gt;                      &lt;!-- string --&gt;
  *   &lt;visibility&gt;1&lt;/visibility&gt;            &lt;!-- boolean --&gt;
  *   &lt;open&gt;0&lt;/open&gt;                        &lt;!-- boolean --&gt;
- *   <span>&lt;atom:author&gt;...&lt;atom:author&gt;         &lt;!-- xmlns:atom --&gt;
- *   &lt;atom:link&gt;...&lt;/atom:link&gt;</span><span>            &lt;!-- xmlns:atom --&gt;</span>
- *   &lt;address&gt;<em>...</em>&lt;/address&gt;                &lt;!-- string --&gt;
- *   &lt;xal:AddressDetails&gt;...&lt;/xal:AddressDetails&gt;  &lt;!-- xmlns:xal --&gt;<br>  &lt;phoneNumber&gt;...&lt;/phoneNumber&gt;        &lt;!-- string --&gt;<br>  &lt;Snippet maxLines="2"&gt;<em>...</em>&lt;/Snippet&gt;   &lt;!-- string --&gt;
- *   &lt;description&gt;<em>...</em>&lt;/description&gt;        &lt;!-- string --&gt;
- *   <span><em>&lt;AbstractView&gt;...&lt;/AbstractView&gt;</em>      &lt;!-- Camera <em>or</em> LookAt --&gt;</span>
- *   &lt;<em>TimePrimitive</em>&gt;...&lt;/<em>TimePrimitive</em>&gt;
- *   &lt;styleUrl&gt;<em>...</em>&lt;/styleUrl&gt;              &lt;!-- anyURI --&gt;
- *   &lt;<em>StyleSelector&gt;...&lt;/StyleSelector&gt;</em>
+ *    &lt;span&gt;&lt;atom:author&gt;...&lt;atom:author&gt;         &lt;!-- xmlns:atom --&gt;
+ *   &lt;atom:link&gt;...&lt;/atom:link&gt; &lt;/span&gt; &lt;span&gt;            &lt;!-- xmlns:atom --&gt; &lt;/span&gt;
+ *   &lt;address&gt; &lt;em&gt;... &lt;/em&gt;&lt;/address&gt;                &lt;!-- string --&gt;
+ *   &lt;xal:AddressDetails&gt;...&lt;/xal:AddressDetails&gt;  &lt;!-- xmlns:xal --&gt; &lt;br&gt;  &lt;phoneNumber&gt;...&lt;/phoneNumber&gt;        &lt;!-- string --&gt; &lt;br&gt;  &lt;Snippet maxLines="2"&gt; &lt;em&gt;... &lt;/em&gt;&lt;/Snippet&gt;   &lt;!-- string --&gt;
+ *   &lt;description&gt; &lt;em&gt;... &lt;/em&gt;&lt;/description&gt;        &lt;!-- string --&gt;
+ *    &lt;span&gt; &lt;em&gt;&lt;AbstractView&gt;...&lt;/AbstractView&gt; &lt;/em&gt;      &lt;!-- Camera  &lt;em&gt;or &lt;/em&gt; LookAt --&gt; &lt;/span&gt;
+ *   &lt; &lt;em&gt;TimePrimitive &lt;/em&gt;&gt;...&lt;/ &lt;em&gt;TimePrimitive &lt;/em&gt;&gt;
+ *   &lt;styleUrl&gt; &lt;em&gt;... &lt;/em&gt;&lt;/styleUrl&gt;              &lt;!-- anyURI --&gt;
+ *   &lt; &lt;em&gt;StyleSelector&gt;...&lt;/StyleSelector&gt; &lt;/em&gt;
  *   &lt;Region&gt;...&lt;/Region&gt;
- *   <span>&lt;Metadata&gt;...&lt;/Metadata&gt;              &lt;!-- deprecated in KML 2.2 --&gt;
- *   &lt;ExtendedData&gt;...&lt;/ExtendedData&gt;      &lt;!-- new in KML 2.2 --&gt;</span>
- * <p>
+ *    &lt;span&gt;&lt;Metadata&gt;...&lt;/Metadata&gt;              &lt;!-- deprecated in KML 2.2 --&gt;
+ *   &lt;ExtendedData&gt;...&lt;/ExtendedData&gt;      &lt;!-- new in KML 2.2 --&gt; &lt;/span&gt;
+ *
  *   &lt;!-- specific to Document --&gt;
  *   &lt;!-- 0 or more Schema elements --&gt;
- *   &lt;!-- 0 or more <em>Feature</em> elements --&gt;
- * <strong>&lt;/Document&gt;</strong></pre>
- * <p>
+ *   &lt;!-- 0 or more  &lt;em&gt;Feature &lt;/em&gt; elements --&gt;
+ *  &lt;strong&gt;&lt;/Document&gt; &lt;/strong&gt; </pre>
+ *   
  * Extends:
  *
- * @see: <Container>
+ * @see:  &lt;Container&gt;
  *
  * Contains:
- * @see: <Feature>
- * @see: <Schema>
- * @see: <StyleSelector>
- *
- *
+ * @see:  &lt;Feature&gt;
+ * @see:  &lt;Schema&gt;
+ * @see:  &lt;StyleSelector&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -104,76 +86,66 @@ import net.opengis.kml.xal.AddressDetails;
 public class Document extends Container implements Cloneable {
 
   /**
-   * <Schema>
-   * <p>
+   *  &lt;Schema&gt;
+   *   
    * Specifies a custom KML schema that is used to add custom data to KML
    * Features. The "id" attribute is required and must be unique within the KML
-   * file. <Schema> is always a child of <Document>.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;Schema name="string" id="ID"&gt;
+   * file.  &lt;Schema&gt; is always a child of  &lt;Document&gt;. Syntax:
+   *  <pre>&lt;Schema name="string" id="ID"&gt;
    *   &lt;SimpleField type="string" name="string"&gt;
    *     &lt;displayName&gt;...&lt;/displayName&gt;            &lt;!-- string --&gt;
    *   &lt;/SimpleField&gt;
-   * &lt;/Schema&gt;</pre>
-   * <p>
+   * &lt;/Schema&gt; </pre>
+   *   
    * Extends:
    *
    * @see: This is a root element.
    *
    * Contained By:
-   * @see: <Document>
+   * @see:  &lt;Document&gt;
    *
    * See Also:
-   * <SchemaData>
-   *
-   *
+   *  &lt;SchemaData&gt;
    *
    */
   @XmlElement(name = "Schema")
   protected List<Schema> schema;
   /**
-   * <Feature>
-   * <p>
+   *  &lt;Feature&gt;
+   *   
    * This is an abstract element and cannot be used directly in a KML file. The
    * following diagram shows how some of a Feature's elements appear in Google
-   * Earth.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;
-   * <strong>&lt;!--<em> Feature</em> id="ID" --&gt;</strong>                &lt;!-- Document,Folder,
+   * Earth. Syntax:
+   *  <pre>&lt;!-- abstract element; do not create --&gt;
+   *  &lt;strong&gt;&lt;!-- &lt;em&gt; Feature &lt;/em&gt; id="ID" --&gt; &lt;/strong&gt;                &lt;!-- Document,Folder,
    *                                              NetworkLink,Placemark,
    *                                              GroundOverlay,PhotoOverlay,ScreenOverlay --&gt;
-   *   &lt;name&gt;<em>...</em>&lt;/name&gt;                      &lt;!-- string --&gt;
+   *   &lt;name&gt; &lt;em&gt;... &lt;/em&gt;&lt;/name&gt;                      &lt;!-- string --&gt;
    *   &lt;visibility&gt;1&lt;/visibility&gt;            &lt;!-- boolean --&gt;
    *   &lt;open&gt;0&lt;/open&gt;                        &lt;!-- boolean --&gt;
-   *   <span>&lt;atom:author&gt;...&lt;atom:author&gt;         &lt;!-- xmlns:atom --&gt;
-   *   &lt;atom:link&gt;...&lt;/atom:link&gt;</span><span>            &lt;!-- xmlns:atom --&gt;</span>
-   *   &lt;address&gt;<em>...</em>&lt;/address&gt;                &lt;!-- string --&gt;
-   *   &lt;xal:AddressDetails&gt;...&lt;/xal:AddressDetails&gt;  &lt;!-- xmlns:xal --&gt;<br>  &lt;phoneNumber&gt;...&lt;/phoneNumber&gt;        &lt;!-- string --&gt;<br>  &lt;Snippet maxLines="2"&gt;<em>...</em>&lt;/Snippet&gt;   &lt;!-- string --&gt;
-   *   &lt;description&gt;<em>...</em>&lt;/description&gt;        &lt;!-- string --&gt;
-   *   <span><em>&lt;AbstractView&gt;...&lt;/AbstractView&gt;</em>      &lt;!-- Camera <em>or</em> LookAt --&gt;</span>
-   *   &lt;<em>TimePrimitive</em>&gt;...&lt;/<em>TimePrimitive</em>&gt;    &lt;!-- TimeStamp or TimeSpan --&gt;
-   *   &lt;styleUrl&gt;<em>...</em>&lt;/styleUrl&gt;              &lt;!-- anyURI --&gt;
-   *   &lt;<em>StyleSelector&gt;...&lt;/StyleSelector&gt;</em>
+   *    &lt;span&gt;&lt;atom:author&gt;...&lt;atom:author&gt;         &lt;!-- xmlns:atom --&gt;
+   *   &lt;atom:link&gt;...&lt;/atom:link&gt; &lt;/span&gt; &lt;span&gt;            &lt;!-- xmlns:atom --&gt; &lt;/span&gt;
+   *   &lt;address&gt; &lt;em&gt;... &lt;/em&gt;&lt;/address&gt;                &lt;!-- string --&gt;
+   *   &lt;xal:AddressDetails&gt;...&lt;/xal:AddressDetails&gt;  &lt;!-- xmlns:xal --&gt; &lt;br&gt;  &lt;phoneNumber&gt;...&lt;/phoneNumber&gt;        &lt;!-- string --&gt; &lt;br&gt;  &lt;Snippet maxLines="2"&gt; &lt;em&gt;... &lt;/em&gt;&lt;/Snippet&gt;   &lt;!-- string --&gt;
+   *   &lt;description&gt; &lt;em&gt;... &lt;/em&gt;&lt;/description&gt;        &lt;!-- string --&gt;
+   *    &lt;span&gt; &lt;em&gt;&lt;AbstractView&gt;...&lt;/AbstractView&gt; &lt;/em&gt;      &lt;!-- Camera  &lt;em&gt;or &lt;/em&gt; LookAt --&gt; &lt;/span&gt;
+   *   &lt; &lt;em&gt;TimePrimitive &lt;/em&gt;&gt;...&lt;/ &lt;em&gt;TimePrimitive &lt;/em&gt;&gt;    &lt;!-- TimeStamp or TimeSpan --&gt;
+   *   &lt;styleUrl&gt; &lt;em&gt;... &lt;/em&gt;&lt;/styleUrl&gt;              &lt;!-- anyURI --&gt;
+   *   &lt; &lt;em&gt;StyleSelector&gt;...&lt;/StyleSelector&gt; &lt;/em&gt;
    *   &lt;Region&gt;...&lt;/Region&gt;
-   *   <span>&lt;Metadata&gt;...&lt;/Metadata&gt;              &lt;!-- deprecated in KML 2.2 --&gt;
-   *   &lt;ExtendedData&gt;...&lt;/ExtendedData&gt;      &lt;!-- new in KML 2.2 --&gt;<br></span>&lt;-- /<em>Feature</em> --&gt;</pre>
-   * <p>
+   *    &lt;span&gt;&lt;Metadata&gt;...&lt;/Metadata&gt;              &lt;!-- deprecated in KML 2.2 --&gt;
+   *   &lt;ExtendedData&gt;...&lt;/ExtendedData&gt;      &lt;!-- new in KML 2.2 --&gt; &lt;br&gt; &lt;/span&gt;&lt;-- / &lt;em&gt;Feature &lt;/em&gt; --&gt; </pre>
+   *   
    * Extends:
    *
-   * @see: <Object>
+   * @see:  &lt;Object&gt;
    *
    * Extended By:
-   * @see: <Container>
-   * @see: <NetworkLink>
-   * @see: <Overlay>
-   * @see: <Placemark>
-   * @see: <gx:Tour>
-   *
-   *
+   * @see:  &lt;Container&gt;
+   * @see:  &lt;NetworkLink&gt;
+   * @see:  &lt;Overlay&gt;
+   * @see:  &lt;Placemark&gt;
+   * @see:  &lt;gx:Tour&gt;
    *
    */
   @XmlElementRef(name = "AbstractFeatureGroup", namespace = "http://www.opengis.net/kml/2.2", required = false)
@@ -182,22 +154,17 @@ public class Document extends Container implements Cloneable {
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> documentSimpleExtension;
   /**
-   * <Object>
-   * <p>
+   *  &lt;Object&gt;
+   *   
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the <Update> mechanism is to be used.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;<strong>
-   * &lt;!-- <em>Object</em> id="ID" targetId="NCName" --&gt;
-   * &lt;!-- /<em>Object</em>&gt; --&gt;</strong></pre>
-   * <p>
-   * <p>
-   * <p>
+   * assigned if the  &lt;Update&gt; mechanism is to be used. Syntax:
+   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
+   * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
+   *   
    */
   @XmlElement(name = "DocumentObjectExtensionGroup")
   protected List<AbstractObject> documentObjectExtension;
@@ -309,11 +276,9 @@ public class Document extends Container implements Cloneable {
 
   /**
    * Creates a new instance of {@link Schema} and adds it to schema. This method
-   * is a short version for:    <code>
+   * is a short version for:     &lt;code&gt;
    * Schema schema = new Schema();
-   * this.getSchema().add(schema); </code>
-   * <p>
-   * <p>
+   * this.getSchema().add(schema);  &lt;/code&gt;
    */
   public Schema createAndAddSchema() {
     Schema newValue = new Schema();
@@ -323,11 +288,9 @@ public class Document extends Container implements Cloneable {
 
   /**
    * Creates a new instance of {@link Tour} and adds it to feature. This method
-   * is a short version for:    <code>
+   * is a short version for:     &lt;code&gt;
    * Tour tour = new Tour();
-   * this.getFeature().add(tour); </code>
-   * <p>
-   * <p>
+   * this.getFeature().add(tour);  &lt;/code&gt;
    */
   public Tour createAndAddTour() {
     Tour newValue = new Tour();
@@ -337,11 +300,9 @@ public class Document extends Container implements Cloneable {
 
   /**
    * Creates a new instance of {@link ScreenOverlay} and adds it to feature.
-   * This method is a short version for:    <code>
+   * This method is a short version for:     &lt;code&gt;
    * ScreenOverlay screenOverlay = new ScreenOverlay();
-   * this.getFeature().add(screenOverlay); </code>
-   * <p>
-   * <p>
+   * this.getFeature().add(screenOverlay);  &lt;/code&gt;
    */
   public ScreenOverlay createAndAddScreenOverlay() {
     ScreenOverlay newValue = new ScreenOverlay();
@@ -351,11 +312,9 @@ public class Document extends Container implements Cloneable {
 
   /**
    * Creates a new instance of {@link PhotoOverlay} and adds it to feature. This
-   * method is a short version for:    <code>
+   * method is a short version for:     &lt;code&gt;
    * PhotoOverlay photoOverlay = new PhotoOverlay();
-   * this.getFeature().add(photoOverlay); </code>
-   * <p>
-   * <p>
+   * this.getFeature().add(photoOverlay);  &lt;/code&gt;
    */
   public PhotoOverlay createAndAddPhotoOverlay() {
     PhotoOverlay newValue = new PhotoOverlay();
@@ -365,11 +324,9 @@ public class Document extends Container implements Cloneable {
 
   /**
    * Creates a new instance of {@link GroundOverlay} and adds it to feature.
-   * This method is a short version for:    <code>
+   * This method is a short version for:     &lt;code&gt;
    * GroundOverlay groundOverlay = new GroundOverlay();
-   * this.getFeature().add(groundOverlay); </code>
-   * <p>
-   * <p>
+   * this.getFeature().add(groundOverlay);  &lt;/code&gt;
    */
   public GroundOverlay createAndAddGroundOverlay() {
     GroundOverlay newValue = new GroundOverlay();
@@ -379,11 +336,9 @@ public class Document extends Container implements Cloneable {
 
   /**
    * Creates a new instance of {@link NetworkLink} and adds it to feature. This
-   * method is a short version for:    <code>
+   * method is a short version for:     &lt;code&gt;
    * NetworkLink networkLink = new NetworkLink();
-   * this.getFeature().add(networkLink); </code>
-   * <p>
-   * <p>
+   * this.getFeature().add(networkLink);  &lt;/code&gt;
    */
   public NetworkLink createAndAddNetworkLink() {
     NetworkLink newValue = new NetworkLink();
@@ -393,11 +348,9 @@ public class Document extends Container implements Cloneable {
 
   /**
    * Creates a new instance of {@link Folder} and adds it to feature. This
-   * method is a short version for:    <code>
+   * method is a short version for:     &lt;code&gt;
    * Folder folder = new Folder();
-   * this.getFeature().add(folder); </code>
-   * <p>
-   * <p>
+   * this.getFeature().add(folder);  &lt;/code&gt;
    */
   public Folder createAndAddFolder() {
     Folder newValue = new Folder();
@@ -407,11 +360,9 @@ public class Document extends Container implements Cloneable {
 
   /**
    * Creates a new instance of {@link Document} and adds it to feature. This
-   * method is a short version for:    <code>
+   * method is a short version for:     &lt;code&gt;
    * Document document = new Document();
-   * this.getFeature().add(document); </code>
-   * <p>
-   * <p>
+   * this.getFeature().add(document);  &lt;/code&gt;
    */
   public Document createAndAddDocument() {
     Document newValue = new Document();
@@ -421,11 +372,9 @@ public class Document extends Container implements Cloneable {
 
   /**
    * Creates a new instance of {@link Placemark} and adds it to feature. This
-   * method is a short version for:    <code>
+   * method is a short version for:     &lt;code&gt;
    * Placemark placemark = new Placemark();
-   * this.getFeature().add(placemark); </code>
-   * <p>
-   * <p>
+   * this.getFeature().add(placemark);  &lt;/code&gt;
    */
   public Placemark createAndAddPlacemark() {
     Placemark newValue = new Placemark();
@@ -447,7 +396,7 @@ public class Document extends Container implements Cloneable {
    *
    * @param schema Objects of the following type are allowed in the list:
    *               {@link Schema}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Document addToSchema(final Schema schema) {
     this.getSchema().add(schema);
@@ -467,8 +416,8 @@ public class Document extends Container implements Cloneable {
    * add a value to the feature property collection
    *
    * @param feature Objects of the following type are allowed in the list:
-   *                {@code <}{@link Container}{@code>}{@link JAXBElement}{@code <}{@link GroundOverlay}{@code>}{@link JAXBElement}{@code <}{@link NetworkLink}{@code>}{@link JAXBElement}{@code <}{@link Folder}{@code>}{@link JAXBElement}{@code <}{@link PhotoOverlay}{@code>}{@link JAXBElement}{@code <}{@link Document}{@code>}{@link JAXBElement}{@code <}{@link Tour}{@code>}{@link JAXBElement}{@code <}{@link ScreenOverlay}{@code>}{@link JAXBElement}{@code <}{@link Feature}{@code>}{@link JAXBElement}{@code <}{@link Placemark}{@code>}{@link JAXBElement}{@code <}{@link Overlay}{@code>}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   *                {@link Container}{@link JAXBElement}{@link GroundOverlay}{@link JAXBElement}{@link NetworkLink}{@link JAXBElement}{@link Folder}{@link JAXBElement}{@link PhotoOverlay}{@link JAXBElement}{@link Document}{@link JAXBElement}{@link Tour}{@link JAXBElement}{@link ScreenOverlay}{@link JAXBElement}{@link Feature}{@link JAXBElement}{@link Placemark}{@link JAXBElement}{@link Overlay}
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Document addToFeature(final Feature feature) {
     this.getFeature().add(feature);
@@ -489,7 +438,7 @@ public class Document extends Container implements Cloneable {
    *
    * @param documentSimpleExtension Objects of the following type are allowed in
    *                                the list: {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Document addToDocumentSimpleExtension(final Object documentSimpleExtension) {
     this.getDocumentSimpleExtension().add(documentSimpleExtension);
@@ -510,7 +459,7 @@ public class Document extends Container implements Cloneable {
    *
    * @param documentObjectExtension Objects of the following type are allowed in
    *                                the list: {@link AbstractObject}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Document addToDocumentObjectExtension(final AbstractObject documentObjectExtension) {
     this.getDocumentObjectExtension().add(documentObjectExtension);
@@ -622,7 +571,7 @@ public class Document extends Container implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setSchema(List<Schema>)
+   * @see #setSchema(List &lt;Schema&gt;)
    *
    * @param schema required parameter
    */
@@ -634,7 +583,7 @@ public class Document extends Container implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setFeature(List<Feature>)
+   * @see #setFeature(List &lt;Feature&gt;)
    *
    * @param feature required parameter
    */
@@ -646,7 +595,7 @@ public class Document extends Container implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setDocumentSimpleExtension(List<Object>)
+   * @see #setDocumentSimpleExtension(List &lt;Object&gt;)
    *
    * @param documentSimpleExtension required parameter
    */
@@ -658,7 +607,7 @@ public class Document extends Container implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setDocumentObjectExtension(List<AbstractObject>)
+   * @see #setDocumentObjectExtension(List &lt;AbstractObject&gt;)
    *
    * @param documentObjectExtension required parameter
    */

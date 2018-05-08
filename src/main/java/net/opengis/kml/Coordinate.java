@@ -12,13 +12,13 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
-/**
+/*
  *
  */
 @XmlRootElement(name = "Coordinate", namespace = "http://www.opengis.net/kml/2.2")
@@ -63,7 +63,7 @@ public class Coordinate implements Cloneable {
     }
   }
 
-  /**
+  /*
    *
    */
   @Override
@@ -79,14 +79,14 @@ public class Coordinate implements Cloneable {
     return sb.toString();
   }
 
-  /**
+  /*
    *
    */
   public double getLongitude() {
     return longitude;
   }
 
-  /**
+  /*
    *
    */
   public Coordinate setLongitude(final double longitude) {
@@ -94,14 +94,14 @@ public class Coordinate implements Cloneable {
     return this;
   }
 
-  /**
+  /*
    *
    */
   public double getLatitude() {
     return latitude;
   }
 
-  /**
+  /*
    *
    */
   public Coordinate setLatitude(final double latitude) {
@@ -109,14 +109,14 @@ public class Coordinate implements Cloneable {
     return this;
   }
 
-  /**
+  /*
    *
    */
   public double getAltitude() {
     return altitude;
   }
 
-  /**
+  /*
    *
    */
   public Coordinate setAltitude(final double altitude) {

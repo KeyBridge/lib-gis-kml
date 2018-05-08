@@ -1,15 +1,14 @@
 package net.opengis.kml;
 
-import net.opengis.kml.internal.IKmlGxReference;
 import java.util.ArrayList;
-import net.opengis.kml.*;
 import net.opengis.kml.gx.*;
+import net.opengis.kml.internal.IKmlGxReference;
 import org.junit.Test;
 
 public class KmlGxReferenceApiTest implements IKmlGxReference {
 
   /**
-   * @throws @see de.micromata.jak.internal.IKmlGxReference#altitudeMode()
+   * @throws @seede.micromata.jak.internal.IKmlGxReference#altitudeMode()
    */
   @Test
   @Override
@@ -20,7 +19,7 @@ public class KmlGxReferenceApiTest implements IKmlGxReference {
     LineString lineString = placemark.createAndSetLineString().withExtrude(true);
     lineString.withAltitudeMode(AltitudeMode.RELATIVE_TO_SEA_FLOOR);
     lineString.addToCoordinates(146.825, 12.233, 400).addToCoordinates(146.820, 12.222, 400).addToCoordinates(146.812, 12.212, 400)
-            .addToCoordinates(146.796, 12.209, 400).addToCoordinates(146.788, 12.205, 400);
+      .addToCoordinates(146.796, 12.209, 400).addToCoordinates(146.788, 12.205, 400);
 
     kml.marshal();
   }
@@ -34,7 +33,7 @@ public class KmlGxReferenceApiTest implements IKmlGxReference {
     AnimatedUpdate gxAnimatedUpdate = KmlFactory.createGxAnimatedUpdate();
     gxAnimatedUpdate.withDuration(0.0);
     gxAnimatedUpdate.createAndSetUpdate("...", new ArrayList<>()).addToCreateOrDeleteOrChange(new Change())
-            .addToCreateOrDeleteOrChange(new Create()).addToCreateOrDeleteOrChange(new Delete());
+      .addToCreateOrDeleteOrChange(new Create()).addToCreateOrDeleteOrChange(new Delete());
 
     Utils.marshal(gxAnimatedUpdate);
   }
@@ -51,9 +50,9 @@ public class KmlGxReferenceApiTest implements IKmlGxReference {
 
     AnimatedUpdate animatedUpdate = KmlFactory.createGxAnimatedUpdate().withDuration(0.0);
     animatedUpdate.createAndSetUpdate("...", new ArrayList<>())
-            .addToCreateOrDeleteOrChange(change)
-            .addToCreateOrDeleteOrChange(delete)
-            .addToCreateOrDeleteOrChange(create);
+      .addToCreateOrDeleteOrChange(change)
+      .addToCreateOrDeleteOrChange(delete)
+      .addToCreateOrDeleteOrChange(create);
 
     Utils.marshal(animatedUpdate);
   }
@@ -69,20 +68,20 @@ public class KmlGxReferenceApiTest implements IKmlGxReference {
     // <!-- Begin Style Definitions -->
     final Style style = document.createAndAddStyle().withId("pushpin");
     style.createAndSetIconStyle().withId("mystyle").withIcon(
-            new Icon().withHref("http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png")).withScale(1.0);
+      new Icon().withHref("http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png")).withScale(1.0);
 
     document.createAndAddPlacemark().withId("mountainpin1").withName("Pin on a mountaintop").withStyleUrl("#pushpin").createAndSetPoint()
-            .addToCoordinates(170.1435558771009, -43.60505741890396, 0);
+      .addToCoordinates(170.1435558771009, -43.60505741890396, 0);
 
     Playlist playlist = document.createAndAddTour().withName("Play me!").createAndSetPlaylist();
     FlyTo flyTo = playlist.createAndAddFlyTo().withFlyToMode(FlyToMode.BOUNCE).withDuration(3);
     flyTo.createAndSetCamera().withLongitude(170.157).withLatitude(-43.671).withAltitude(9700).withHeading(-6.333).withTilt(33.5);
 
     Change change = new Change()
-            .addToAbstractObject(KmlFactory.createIconStyle().withId("mystyle").withTargetId("mystyle").withScale(10.0));
+      .addToAbstractObject(KmlFactory.createIconStyle().withId("mystyle").withTargetId("mystyle").withScale(10.0));
 
     playlist.createAndAddAnimatedUpdate().withDuration(5).createAndSetUpdate("", new ArrayList<>()).addToCreateOrDeleteOrChange(
-            change);
+      change);
 
     playlist.createAndAddWait().withDuration(5);
 

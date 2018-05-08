@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -21,7 +21,7 @@ import java.util.List;
 import javax.xml.bind.annotation.*;
 import net.opengis.kml.annotations.Obvious;
 
-/**
+/*
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -35,8 +35,8 @@ import net.opengis.kml.annotations.Obvious;
   ColorStyle.class
 })
 public abstract class SubStyle
-        extends AbstractObject
-        implements Cloneable {
+  extends AbstractObject
+  implements Cloneable {
 
   @XmlElement(name = "AbstractSubStyleSimpleExtensionGroup")
   @XmlSchemaType(name = "anySimpleType")
@@ -48,7 +48,7 @@ public abstract class SubStyle
     super();
   }
 
-  /**
+  /*
    *
    */
   public List<Object> getSubStyleSimpleExtension() {
@@ -58,7 +58,7 @@ public abstract class SubStyle
     return this.subStyleSimpleExtension;
   }
 
-  /**
+  /*
    *
    */
   public List<AbstractObject> getSubStyleObjectExtension() {
@@ -111,13 +111,12 @@ public abstract class SubStyle
 
   /**
    * Sets the value of the subStyleSimpleExtension property Objects of the
-   * following type(s) are allowed in the list List<Object>.
-   * <p>
+   * following type(s) are allowed in the list List &lt;Object&gt;.
+   *   
    * Note:
-   * <p>
+   *   
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withSubStyleSimpleExtension} instead.
-   *
    *
    * @param subStyleSimpleExtension
    */
@@ -130,7 +129,7 @@ public abstract class SubStyle
    *
    * @param subStyleSimpleExtension Objects of the following type are allowed in
    *                                the list: {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public SubStyle addToSubStyleSimpleExtension(final Object subStyleSimpleExtension) {
     this.getSubStyleSimpleExtension().add(subStyleSimpleExtension);
@@ -139,13 +138,12 @@ public abstract class SubStyle
 
   /**
    * Sets the value of the subStyleObjectExtension property Objects of the
-   * following type(s) are allowed in the list List<AbstractObject>.
-   * <p>
+   * following type(s) are allowed in the list List &lt;AbstractObject&gt;.
+   *   
    * Note:
-   * <p>
+   *   
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withSubStyleObjectExtension} instead.
-   *
    *
    * @param subStyleObjectExtension
    */
@@ -158,7 +156,7 @@ public abstract class SubStyle
    *
    * @param subStyleObjectExtension Objects of the following type are allowed in
    *                                the list: {@link AbstractObject}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public SubStyle addToSubStyleObjectExtension(final AbstractObject subStyleObjectExtension) {
     this.getSubStyleObjectExtension().add(subStyleObjectExtension);
@@ -181,7 +179,7 @@ public abstract class SubStyle
   /**
    * fluent setter
    *
-   * @see #setSubStyleSimpleExtension(List<Object>)
+   * @see #setSubStyleSimpleExtension(List &lt;Object&gt;)
    *
    * @param subStyleSimpleExtension required parameter
    */
@@ -193,7 +191,7 @@ public abstract class SubStyle
   /**
    * fluent setter
    *
-   * @see #setSubStyleObjectExtension(List<AbstractObject>)
+   * @see #setSubStyleObjectExtension(List &lt;AbstractObject&gt;)
    *
    * @param subStyleObjectExtension required parameter
    */

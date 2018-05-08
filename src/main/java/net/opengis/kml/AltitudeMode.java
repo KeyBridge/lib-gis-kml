@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -22,14 +22,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * AltitudeMode
- * <p>
- * clampToGround, relativeToGround, absolute
- * </p>
- * <p>
- * See Also: See <LookAt> and <Region>
- * <p>
- * <p>
- * <p>
+ *   
+ * clampToGround, relativeToGround, absolute See Also: See  &lt;LookAt&gt; and  &lt;Region&gt;
+ *   
  */
 @XmlType(name = "altitudeModeEnumType")
 @XmlEnum

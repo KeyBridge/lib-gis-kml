@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml.gx;
 
@@ -23,7 +23,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import net.opengis.kml.*;
 import net.opengis.kml.annotations.Obvious;
 
-/**
+/*
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -40,8 +40,8 @@ import net.opengis.kml.annotations.Obvious;
 })
 @XmlRootElement(name = "Track", namespace = "http://www.google.com/kml/ext/2.2")
 public class Track
-        extends Geometry
-        implements Cloneable {
+  extends Geometry
+  implements Cloneable {
 
   @XmlElement(namespace = "http://www.opengis.net/kml/2.2", defaultValue = "0")
   @XmlJavaTypeAdapter(BooleanConverter.class)
@@ -68,7 +68,6 @@ public class Track
   }
 
   /**
-   *
    * @return possible object is {@link Boolean}
    *
    */
@@ -77,7 +76,6 @@ public class Track
   }
 
   /**
-   *
    * @param value allowed object is {@link Boolean}
    *
    */
@@ -86,7 +84,6 @@ public class Track
   }
 
   /**
-   *
    * @return possible object is {@link Boolean}
    *
    */
@@ -95,7 +92,6 @@ public class Track
   }
 
   /**
-   *
    * @param value allowed object is {@link Boolean}
    *
    */
@@ -104,10 +100,9 @@ public class Track
   }
 
   /**
-   *
-   * @return possible object is null   {@code <}{@link Object}{@code>}
-     *     {@code <}{@link net.opengis.kml.AltitudeMode}{@code>}
-   *     {@code <}{@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}{@code>}
+   * @return possible object is null null null null null null null   {@link Object}
+     *     {@link net.opengis.kml.AltitudeMode}
+   *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
    */
   public AltitudeMode getAltitudeMode() {
@@ -115,17 +110,16 @@ public class Track
   }
 
   /**
-   *
-   * @param value allowed object is null   {@code <}{@link Object}{@code>}
-     *     {@code <}{@link net.opengis.kml.AltitudeMode}{@code>}
-   *     {@code <}{@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}{@code>}
+   * @param value allowed object is null null null null null null null   {@link Object}
+     *     {@link net.opengis.kml.AltitudeMode}
+   *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
    */
   public void setAltitudeMode(AltitudeMode value) {
     this.altitudeMode = value;
   }
 
-  /**
+  /*
    *
    */
   public List<String> getWhen() {
@@ -135,7 +129,7 @@ public class Track
     return this.when;
   }
 
-  /**
+  /*
    *
    */
   public List<String> getCoord() {
@@ -145,7 +139,7 @@ public class Track
     return this.coord;
   }
 
-  /**
+  /*
    *
    */
   public List<String> getAngles() {
@@ -156,7 +150,6 @@ public class Track
   }
 
   /**
-   *
    * @return possible object is {@link Model}
    *
    */
@@ -165,7 +158,6 @@ public class Track
   }
 
   /**
-   *
    * @param value allowed object is {@link Model}
    *
    */
@@ -174,7 +166,6 @@ public class Track
   }
 
   /**
-   *
    * @return possible object is {@link ExtendedData}
    *
    */
@@ -183,7 +174,6 @@ public class Track
   }
 
   /**
-   *
    * @param value allowed object is {@link ExtendedData}
    *
    */
@@ -191,7 +181,7 @@ public class Track
     this.extendedData = value;
   }
 
-  /**
+  /*
    *
    */
   public List<Object> getTrackSimpleExtension() {
@@ -300,12 +290,10 @@ public class Track
 
   /**
    * Creates a new instance of {@link Model} and set it to model.
-   * <p>
-   * This method is a short version for:    <code>
+   *   
+   * This method is a short version for:     &lt;code&gt;
    * Model model = new Model();
-   * this.setModel(model); </code>
-   * <p>
-   * <p>
+   * this.setModel(model);  &lt;/code&gt;
    */
   public Model createAndSetModel() {
     Model newValue = new Model();
@@ -315,12 +303,10 @@ public class Track
 
   /**
    * Creates a new instance of {@link ExtendedData} and set it to extendedData.
-   * <p>
-   * This method is a short version for:    <code>
+   *   
+   * This method is a short version for:     &lt;code&gt;
    * ExtendedData extendedData = new ExtendedData();
-   * this.setExtendedData(extendedData); </code>
-   * <p>
-   * <p>
+   * this.setExtendedData(extendedData);  &lt;/code&gt;
    */
   public ExtendedData createAndSetExtendedData() {
     ExtendedData newValue = new ExtendedData();
@@ -330,13 +316,12 @@ public class Track
 
   /**
    * Sets the value of the when property Objects of the following type(s) are
-   * allowed in the list List<String>.
-   * <p>
+   * allowed in the list List &lt;String&gt;.
+   *   
    * Note:
-   * <p>
+   *   
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withWhen} instead.
-   *
    *
    * @param when
    */
@@ -349,7 +334,7 @@ public class Track
    *
    * @param when Objects of the following type are allowed in the list:
    *             {@link String}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Track addToWhen(final String when) {
     this.getWhen().add(when);
@@ -358,13 +343,12 @@ public class Track
 
   /**
    * Sets the value of the coord property Objects of the following type(s) are
-   * allowed in the list List<String>.
-   * <p>
+   * allowed in the list List &lt;String&gt;.
+   *   
    * Note:
-   * <p>
+   *   
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withCoord} instead.
-   *
    *
    * @param coord
    */
@@ -377,7 +361,7 @@ public class Track
    *
    * @param coord Objects of the following type are allowed in the list:
    *              {@link String}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Track addToCoord(final String coord) {
     this.getCoord().add(coord);
@@ -386,13 +370,12 @@ public class Track
 
   /**
    * Sets the value of the angles property Objects of the following type(s) are
-   * allowed in the list List<String>.
-   * <p>
+   * allowed in the list List &lt;String&gt;.
+   *   
    * Note:
-   * <p>
+   *   
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withAngles} instead.
-   *
    *
    * @param angles
    */
@@ -405,7 +388,7 @@ public class Track
    *
    * @param angles Objects of the following type are allowed in the list:
    *               {@link String}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Track addToAngles(final String angles) {
     this.getAngles().add(angles);
@@ -414,13 +397,12 @@ public class Track
 
   /**
    * Sets the value of the trackSimpleExtension property Objects of the
-   * following type(s) are allowed in the list List<Object>.
-   * <p>
+   * following type(s) are allowed in the list List &lt;Object&gt;.
+   *   
    * Note:
-   * <p>
+   *   
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withTrackSimpleExtension} instead.
-   *
    *
    * @param trackSimpleExtension
    */
@@ -433,7 +415,7 @@ public class Track
    *
    * @param trackSimpleExtension Objects of the following type are allowed in
    *                             the list: {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Track addToTrackSimpleExtension(final Object trackSimpleExtension) {
     this.getTrackSimpleExtension().add(trackSimpleExtension);
@@ -518,7 +500,7 @@ public class Track
   /**
    * fluent setter
    *
-   * @see #setWhen(List<String>)
+   * @see #setWhen(List &lt;String&gt;)
    *
    * @param when required parameter
    */
@@ -530,7 +512,7 @@ public class Track
   /**
    * fluent setter
    *
-   * @see #setCoord(List<String>)
+   * @see #setCoord(List &lt;String&gt;)
    *
    * @param coord required parameter
    */
@@ -542,7 +524,7 @@ public class Track
   /**
    * fluent setter
    *
-   * @see #setAngles(List<String>)
+   * @see #setAngles(List &lt;String&gt;)
    *
    * @param angles required parameter
    */
@@ -578,7 +560,7 @@ public class Track
   /**
    * fluent setter
    *
-   * @see #setTrackSimpleExtension(List<Object>)
+   * @see #setTrackSimpleExtension(List &lt;Object&gt;)
    *
    * @param trackSimpleExtension required parameter
    */

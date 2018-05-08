@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml.xal;
 
@@ -23,7 +23,7 @@ import java.util.Map;
 import javax.xml.bind.annotation.*;
 import javax.xml.namespace.QName;
 
-/**
+/*
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -79,14 +79,14 @@ public class PostBox implements Cloneable {
    * Default no-arg constructor is private. Use overloaded constructor instead!
    * (Temporary solution, till a better and more suitable ObjectFactory is
    * created.)
-   * <p>
+   *   
    */
   @Deprecated
   private PostBox() {
     super();
   }
 
-  /**
+  /*
    *
    */
   public List<AddressLine> getAddressLine() {
@@ -97,7 +97,6 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link PostBox.PostBoxNumber}
    *
    */
@@ -106,7 +105,6 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link PostBox.PostBoxNumber}
    *
    */
@@ -115,7 +113,6 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link PostBox.PostBoxNumberPrefix}
    *
    */
@@ -124,7 +121,6 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link PostBox.PostBoxNumberPrefix}
    *
    */
@@ -133,7 +129,6 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link PostBox.PostBoxNumberSuffix}
    *
    */
@@ -142,7 +137,6 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link PostBox.PostBoxNumberSuffix}
    *
    */
@@ -151,7 +145,6 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link PostBox.PostBoxNumberExtension}
    *
    */
@@ -160,7 +153,6 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link PostBox.PostBoxNumberExtension}
    *
    */
@@ -169,7 +161,6 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link Firm}
    *
    */
@@ -178,7 +169,6 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link Firm}
    *
    */
@@ -187,7 +177,6 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link PostalCode}
    *
    */
@@ -196,7 +185,6 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link PostalCode}
    *
    */
@@ -204,7 +192,7 @@ public class PostBox implements Cloneable {
     this.postalCode = value;
   }
 
-  /**
+  /*
    *
    */
   public List<Object> getAny() {
@@ -215,7 +203,6 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link String}
    *
    */
@@ -224,7 +211,6 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link String}
    *
    */
@@ -233,7 +219,6 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link String}
    *
    */
@@ -242,7 +227,6 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link String}
    *
    */
@@ -251,7 +235,6 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
@@ -362,11 +345,9 @@ public class PostBox implements Cloneable {
 
   /**
    * Creates a new instance of {@link AddressLine} and adds it to addressLine.
-   * This method is a short version for:    <code>
+   * This method is a short version for:     &lt;code&gt;
    * AddressLine addressLine = new AddressLine();
-   * this.getAddressLine().add(addressLine); </code>
-   * <p>
-   * <p>
+   * this.getAddressLine().add(addressLine);  &lt;/code&gt;
    */
   public AddressLine createAndAddAddressLine() {
     AddressLine newValue = new AddressLine();
@@ -377,12 +358,10 @@ public class PostBox implements Cloneable {
   /**
    * Creates a new instance of {@link PostBox.PostBoxNumber} and set it to
    * postBoxNumber.
-   * <p>
-   * This method is a short version for:    <code>
+   *   
+   * This method is a short version for:     &lt;code&gt;
    * PostBoxNumber postBoxNumber = new PostBoxNumber();
-   * this.setPostBoxNumber(postBoxNumber); </code>
-   * <p>
-   * <p>
+   * this.setPostBoxNumber(postBoxNumber);  &lt;/code&gt;
    */
   public PostBox.PostBoxNumber createAndSetPostBoxNumber() {
     PostBox.PostBoxNumber newValue = new PostBox.PostBoxNumber();
@@ -393,12 +372,10 @@ public class PostBox implements Cloneable {
   /**
    * Creates a new instance of {@link PostBox.PostBoxNumberPrefix} and set it to
    * postBoxNumberPrefix.
-   * <p>
-   * This method is a short version for:    <code>
+   *   
+   * This method is a short version for:     &lt;code&gt;
    * PostBoxNumberPrefix postBoxNumberPrefix = new PostBoxNumberPrefix();
-   * this.setPostBoxNumberPrefix(postBoxNumberPrefix); </code>
-   * <p>
-   * <p>
+   * this.setPostBoxNumberPrefix(postBoxNumberPrefix);  &lt;/code&gt;
    */
   public PostBox.PostBoxNumberPrefix createAndSetPostBoxNumberPrefix() {
     PostBox.PostBoxNumberPrefix newValue = new PostBox.PostBoxNumberPrefix();
@@ -409,12 +386,10 @@ public class PostBox implements Cloneable {
   /**
    * Creates a new instance of {@link PostBox.PostBoxNumberSuffix} and set it to
    * postBoxNumberSuffix.
-   * <p>
-   * This method is a short version for:    <code>
+   *   
+   * This method is a short version for:     &lt;code&gt;
    * PostBoxNumberSuffix postBoxNumberSuffix = new PostBoxNumberSuffix();
-   * this.setPostBoxNumberSuffix(postBoxNumberSuffix); </code>
-   * <p>
-   * <p>
+   * this.setPostBoxNumberSuffix(postBoxNumberSuffix);  &lt;/code&gt;
    */
   public PostBox.PostBoxNumberSuffix createAndSetPostBoxNumberSuffix() {
     PostBox.PostBoxNumberSuffix newValue = new PostBox.PostBoxNumberSuffix();
@@ -425,12 +400,10 @@ public class PostBox implements Cloneable {
   /**
    * Creates a new instance of {@link PostBox.PostBoxNumberExtension} and set it
    * to postBoxNumberExtension.
-   * <p>
-   * This method is a short version for:    <code>
+   *   
+   * This method is a short version for:     &lt;code&gt;
    * PostBoxNumberExtension postBoxNumberExtension = new PostBoxNumberExtension();
-   * this.setPostBoxNumberExtension(postBoxNumberExtension); </code>
-   * <p>
-   * <p>
+   * this.setPostBoxNumberExtension(postBoxNumberExtension);  &lt;/code&gt;
    */
   public PostBox.PostBoxNumberExtension createAndSetPostBoxNumberExtension() {
     PostBox.PostBoxNumberExtension newValue = new PostBox.PostBoxNumberExtension();
@@ -440,12 +413,10 @@ public class PostBox implements Cloneable {
 
   /**
    * Creates a new instance of {@link Firm} and set it to firm.
-   * <p>
-   * This method is a short version for:    <code>
+   *   
+   * This method is a short version for:     &lt;code&gt;
    * Firm firm = new Firm();
-   * this.setFirm(firm); </code>
-   * <p>
-   * <p>
+   * this.setFirm(firm);  &lt;/code&gt;
    */
   public Firm createAndSetFirm() {
     Firm newValue = new Firm();
@@ -455,12 +426,10 @@ public class PostBox implements Cloneable {
 
   /**
    * Creates a new instance of {@link PostalCode} and set it to postalCode.
-   * <p>
-   * This method is a short version for:    <code>
+   *   
+   * This method is a short version for:     &lt;code&gt;
    * PostalCode postalCode = new PostalCode();
-   * this.setPostalCode(postalCode); </code>
-   * <p>
-   * <p>
+   * this.setPostalCode(postalCode);  &lt;/code&gt;
    */
   public PostalCode createAndSetPostalCode() {
     PostalCode newValue = new PostalCode();
@@ -470,13 +439,12 @@ public class PostBox implements Cloneable {
 
   /**
    * Sets the value of the addressLine property Objects of the following type(s)
-   * are allowed in the list List<AddressLine>.
-   * <p>
+   * are allowed in the list List &lt;AddressLine&gt;.
+   *   
    * Note:
-   * <p>
+   *   
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withAddressLine} instead.
-   *
    *
    * @param addressLine
    */
@@ -489,7 +457,7 @@ public class PostBox implements Cloneable {
    *
    * @param addressLine Objects of the following type are allowed in the list:
    *                    {@link AddressLine}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public PostBox addToAddressLine(final AddressLine addressLine) {
     this.getAddressLine().add(addressLine);
@@ -498,13 +466,12 @@ public class PostBox implements Cloneable {
 
   /**
    * Sets the value of the any property Objects of the following type(s) are
-   * allowed in the list List<Object>.
-   * <p>
+   * allowed in the list List &lt;Object&gt;.
+   *   
    * Note:
-   * <p>
+   *   
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withAny} instead.
-   *
    *
    * @param any
    */
@@ -517,7 +484,7 @@ public class PostBox implements Cloneable {
    *
    * @param any Objects of the following type are allowed in the list:
    *            {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public PostBox addToAny(final Object any) {
     this.getAny().add(any);
@@ -527,7 +494,7 @@ public class PostBox implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setAddressLine(List<AddressLine>)
+   * @see #setAddressLine(List &lt;AddressLine&gt;)
    *
    * @param addressLine required parameter
    */
@@ -599,7 +566,7 @@ public class PostBox implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setAny(List<Object>)
+   * @see #setAny(List &lt;Object&gt;)
    *
    * @param any required parameter
    */
@@ -657,7 +624,7 @@ public class PostBox implements Cloneable {
     return copy;
   }
 
-  /**
+  /*
    *
    */
   @XmlAccessorType(XmlAccessType.FIELD)
@@ -680,7 +647,6 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -689,7 +655,6 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -698,7 +663,6 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -707,7 +671,6 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -716,7 +679,6 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     *
      * @return always non-null
      */
     public Map<QName, String> getOtherAttributes() {
@@ -798,7 +760,7 @@ public class PostBox implements Cloneable {
 
   }
 
-  /**
+  /*
    *
    */
   @XmlAccessorType(XmlAccessType.FIELD)
@@ -821,7 +783,6 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -830,7 +791,6 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -839,7 +799,6 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -848,7 +807,6 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -857,7 +815,6 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     *
      * @return always non-null
      */
     public Map<QName, String> getOtherAttributes() {
@@ -939,7 +896,7 @@ public class PostBox implements Cloneable {
 
   }
 
-  /**
+  /*
    *
    */
   @XmlAccessorType(XmlAccessType.FIELD)
@@ -965,7 +922,6 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -974,7 +930,6 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -983,7 +938,6 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -992,7 +946,6 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -1001,7 +954,6 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -1010,7 +962,6 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -1019,7 +970,6 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     *
      * @return always non-null
      */
     public Map<QName, String> getOtherAttributes() {
@@ -1121,7 +1071,7 @@ public class PostBox implements Cloneable {
 
   }
 
-  /**
+  /*
    *
    */
   @XmlAccessorType(XmlAccessType.FIELD)
@@ -1147,7 +1097,6 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -1156,7 +1105,6 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -1165,7 +1113,6 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -1174,7 +1121,6 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -1183,7 +1129,6 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -1192,7 +1137,6 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -1201,7 +1145,6 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     *
      * @return always non-null
      */
     public Map<QName, String> getOtherAttributes() {

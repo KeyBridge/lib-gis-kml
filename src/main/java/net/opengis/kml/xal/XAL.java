@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml.xal;
 
@@ -23,7 +23,7 @@ import java.util.Map;
 import javax.xml.bind.annotation.*;
 import javax.xml.namespace.QName;
 
-/**
+/*
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -58,14 +58,14 @@ public class XAL implements Cloneable {
    * Default no-arg constructor is private. Use overloaded constructor instead!
    * (Temporary solution, till a better and more suitable ObjectFactory is
    * created.)
-   * <p>
+   *   
    */
   @Deprecated
   private XAL() {
     super();
   }
 
-  /**
+  /*
    *
    */
   public List<AddressDetails> getXalAddressDetails() {
@@ -75,7 +75,7 @@ public class XAL implements Cloneable {
     return this.xalAddressDetails;
   }
 
-  /**
+  /*
    *
    */
   public List<Object> getAny() {
@@ -86,7 +86,6 @@ public class XAL implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link String}
    *
    */
@@ -95,7 +94,6 @@ public class XAL implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link String}
    *
    */
@@ -104,7 +102,6 @@ public class XAL implements Cloneable {
   }
 
   /**
-   *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
@@ -159,10 +156,9 @@ public class XAL implements Cloneable {
 
   /**
    * Creates a new instance of {@link AddressDetails} and adds it to
-   * xalAddressDetails. This method is a short version for:    <code>
+   * xalAddressDetails. This method is a short version for:     &lt;code&gt;
    * AddressDetails addressDetails = new AddressDetails();
-   * this.getXalAddressDetails().add(addressDetails); </code>
-   *
+   * this.getXalAddressDetails().add(addressDetails);  &lt;/code&gt;
    *
    * @param xalAddress         required parameter
    * @param addressLines       required parameter
@@ -179,13 +175,12 @@ public class XAL implements Cloneable {
 
   /**
    * Sets the value of the xalAddressDetails property Objects of the following
-   * type(s) are allowed in the list List<AddressDetails>.
-   * <p>
+   * type(s) are allowed in the list List &lt;AddressDetails&gt;.
+   *   
    * Note:
-   * <p>
+   *   
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withXalAddressDetails} instead.
-   *
    *
    * @param xalAddressDetails
    */
@@ -198,7 +193,7 @@ public class XAL implements Cloneable {
    *
    * @param xalAddressDetails Objects of the following type are allowed in the
    *                          list: {@link AddressDetails}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public XAL addToXalAddressDetails(final AddressDetails xalAddressDetails) {
     this.getXalAddressDetails().add(xalAddressDetails);
@@ -207,13 +202,12 @@ public class XAL implements Cloneable {
 
   /**
    * Sets the value of the any property Objects of the following type(s) are
-   * allowed in the list List<Object>.
-   * <p>
+   * allowed in the list List &lt;Object&gt;.
+   *   
    * Note:
-   * <p>
+   *   
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withAny} instead.
-   *
    *
    * @param any
    */
@@ -226,7 +220,7 @@ public class XAL implements Cloneable {
    *
    * @param any Objects of the following type are allowed in the list:
    *            {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public XAL addToAny(final Object any) {
     this.getAny().add(any);
@@ -236,7 +230,7 @@ public class XAL implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setAny(List<Object>)
+   * @see #setAny(List &lt;Object&gt;)
    *
    * @param any required parameter
    */

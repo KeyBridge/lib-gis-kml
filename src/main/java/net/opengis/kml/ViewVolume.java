@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -22,17 +22,13 @@ import javax.xml.bind.annotation.*;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- * <viewvolume>
+ * &lt;viewvolume&gt;
  * <p>
  * Defines how much of the current scene is visible. Specifying the field of
  * view is analogous to specifying the lens opening in a physical camera. A
  * small field of view, like a telephoto lens, focuses on a small part of the
  * scene. A large field of view, like a wide-angle lens, focuses on a large part
  * of the scene.
- * </p>
- * <p>
- * <p>
- * <p>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ViewVolumeType", propOrder = {
@@ -46,90 +42,59 @@ import net.opengis.kml.annotations.Obvious;
 })
 @XmlRootElement(name = "ViewVolume", namespace = "http://www.opengis.net/kml/2.2")
 public class ViewVolume
-        extends AbstractObject
-        implements Cloneable {
+  extends AbstractObject
+  implements Cloneable {
 
   /**
-   * <leftfov>
+   * &lt;leftfov&gt;
    * <p>
    * Angle, in degrees, between the camera's viewing direction and the left side
    * of the view volume.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlElement(defaultValue = "0.0")
   protected double leftFov;
   /**
-   * <rightfov>
+   * &lt;rightfov&gt;
    * <p>
    * Angle, in degrees, between the camera's viewing direction and the right
    * side of the view volume.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlElement(defaultValue = "0.0")
   protected double rightFov;
   /**
-   * <bottomfov>
+   * &lt;bottomfov&gt;
    * <p>
    * Angle, in degrees, between the camera's viewing direction and the bottom
    * side of the view volume.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlElement(defaultValue = "0.0")
   protected double bottomFov;
   /**
-   * <topfov>
+   * &lt;topfov&gt;
    * <p>
    * Angle, in degrees, between the camera's viewing direction and the top side
    * of the view volume.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlElement(defaultValue = "0.0")
   protected double topFov;
   /**
-   * <near>
+   * &lt;near&gt;
    * <p>
-   * <leftFov> Angle, in degrees, between the camera's viewing direction and the
-   * left side of the view volume. <rightFov> Angle, in degrees, between the
-   * camera's viewing direction and the right side of the view volume.
-   * <bottomFov> Angle, in degrees, between the camera's viewing direction and
-   * the bottom side of the view volume. <topFov>
-   * Angle, in degrees, between the camera's viewing direction and the top side
-   * of the view volume. <near> Measurement in meters along the viewing
-   * direction from the camera viewpoint to the PhotoOverlay shape.
-   * </p>
-   * <p>
-   * Measurement in meters along the viewing direction from the camera viewpoint
-   * to the PhotoOverlay shape.
-   * </p>
-   * <p>
-   * The field of view for a PhotoOverlay is defined by four planes, each of
-   * which is specified by an angle relative to the view vector. These four
+   * &lt;leftFov&gt; Angle, in degrees, between the camera's viewing direction
+   * and the left side of the view volume. &lt;rightFov&gt; Angle, in degrees,
+   * between the camera's viewing direction and the right side of the view
+   * volume. &lt;bottomFov&gt; Angle, in degrees, between the camera's viewing
+   * direction and the bottom side of the view volume. &lt;topFov&gt; Angle, in
+   * degrees, between the camera's viewing direction and the top side of the
+   * view volume. &lt;near&gt; Measurement in meters along the viewing direction
+   * from the camera viewpoint to the PhotoOverlay shape. Measurement in meters
+   * along the viewing direction from the camera viewpoint to the PhotoOverlay
+   * shape. The field of view for a PhotoOverlay is defined by four planes, each
+   * of which is specified by an angle relative to the view vector. These four
    * planes define the top, bottom, left, and right sides of the field of view,
-   * which has the shape of a truncated pyramid, as shown here:
-   * </p>
-   * <p>
-   * The following diagrams show the four field-of-view angles within this
-   * pyramid:
-   * </p>
-   * <p>
-   * The following diagrams show the four field-of-view angles within this
-   * pyramid:
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * which has the shape of a truncated pyramid, as shown here: The following
+   * diagrams show the four field-of-view angles within this pyramid: The
+   * following diagrams show the four field-of-view angles within this pyramid:
    */
   @XmlElement(defaultValue = "0.0")
   protected double near;
@@ -137,21 +102,16 @@ public class ViewVolume
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> viewVolumeSimpleExtension;
   /**
-   * <Object>
+   * &lt;Object&gt;
    * <p>
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the <Update> mechanism is to be used.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;<strong>
-   * &lt;!-- <em>Object</em> id="ID" targetId="NCName" --&gt;
-   * &lt;!-- /<em>Object</em>&gt; --&gt;</strong></pre>
-   * <p>
-   * <p>
+   * assigned if the &lt;Update&gt; mechanism is to be used. Syntax:
+   * <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
+   * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
    * <p>
    */
   @XmlElement(name = "ViewVolumeObjectExtensionGroup")
@@ -364,7 +324,8 @@ public class ViewVolume
    *
    * @param viewVolumeSimpleExtension Objects of the following type are allowed
    *                                  in the list: {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public ViewVolume addToViewVolumeSimpleExtension(final Object viewVolumeSimpleExtension) {
     this.getViewVolumeSimpleExtension().add(viewVolumeSimpleExtension);
@@ -385,7 +346,8 @@ public class ViewVolume
    *
    * @param viewVolumeObjectExtension Objects of the following type are allowed
    *                                  in the list: {@link AbstractObject}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public ViewVolume addToViewVolumeObjectExtension(final AbstractObject viewVolumeObjectExtension) {
     this.getViewVolumeObjectExtension().add(viewVolumeObjectExtension);
@@ -472,7 +434,7 @@ public class ViewVolume
   /**
    * fluent setter
    *
-   * @see #setViewVolumeSimpleExtension(List<Object>)
+   * @see #setViewVolumeSimpleExtension(List &lt;Object&gt;)
    *
    * @param viewVolumeSimpleExtension required parameter
    */
@@ -484,7 +446,7 @@ public class ViewVolume
   /**
    * fluent setter
    *
-   * @see #setViewVolumeObjectExtension(List<AbstractObject>)
+   * @see #setViewVolumeObjectExtension(List &lt;AbstractObject&gt;)
    *
    * @param viewVolumeObjectExtension required parameter
    */

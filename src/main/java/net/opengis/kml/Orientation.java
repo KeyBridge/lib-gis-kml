@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -22,16 +22,12 @@ import javax.xml.bind.annotation.*;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- * <orientation>
+ * &lt;orientation&gt;
  * <p>
  * Describes rotation of a 3D model's coordinate system to position the object
- * in Google Earth. See diagram below. <Orientation> <heading>45.0</heading>
- * <tilt>10.0</tilt>
- * <roll>0.0</roll> </Orientation>
- * </p>
- * <p>
- * <p>
- * <p>
+ * in Google Earth. See diagram below. &lt;Orientation&gt; &lt;heading&gt;45.0
+ * &lt;/heading&gt; &lt;tilt&gt;10.0 &lt;/tilt&gt; &lt;roll&gt;0.0 &lt;/roll&gt;
+ * &lt;/Orientation&gt;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "OrientationType", propOrder = {
@@ -43,87 +39,56 @@ import net.opengis.kml.annotations.Obvious;
 })
 @XmlRootElement(name = "Orientation", namespace = "http://www.opengis.net/kml/2.2")
 public class Orientation
-        extends AbstractObject
-        implements Cloneable {
+  extends AbstractObject
+  implements Cloneable {
 
   /**
-   * <heading>
+   * &lt;heading&gt;
    * <p>
    * Direction (azimuth) of the camera, in degrees. Default=0 (true North). (See
-   * diagram.) Values range from 0 to 360 degrees.
-   * </p>
-   * <p>
-   * Direction (that is, North, South, East, West), in degrees. Default=0
-   * (North). (See diagram below.) Values range from 0 to 360 degrees.
-   * </p>
-   * <p>
-   * Direction (that is, North, South, East, West), in degrees. Default=0
-   * (North). (See diagram.) Values range from 0 to 360 degrees.
-   * </p>
-   * <p>
-   * Rotation about the z axis (normal to the Earth's surface). A value of 0
-   * (the default) equals North. A positive rotation is clockwise around the z
-   * axis and specified in degrees from 0 to 360.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * diagram.) Values range from 0 to 360 degrees. Direction (that is, North,
+   * South, East, West), in degrees. Default=0 (North). (See diagram below.)
+   * Values range from 0 to 360 degrees. Direction (that is, North, South, East,
+   * West), in degrees. Default=0 (North). (See diagram.) Values range from 0 to
+   * 360 degrees. Rotation about the z axis (normal to the Earth's surface). A
+   * value of 0 (the default) equals North. A positive rotation is clockwise
+   * around the z axis and specified in degrees from 0 to 360.
    */
   @XmlElement(defaultValue = "0.0")
   protected double heading;
   /**
-   * <tilt>
+   * &lt;tilt&gt;
    * <p>
    * Angle between the direction of the LookAt position and the normal to the
    * surface of the earth. (See diagram below.) Values range from 0 to 90
-   * degrees. Values for
-   * <tilt> cannot be negative. A <tilt> value of 0 degrees indicates viewing
-   * from directly above. A <tilt> value of 90 degrees indicates viewing along
-   * the horizon.
-   * </p>
-   * <p>
-   * Rotation about the x axis. A positive rotation is clockwise around the x
-   * axis and specified in degrees from 0 to 360.
-   * </p>
-   * <p>
-   * Rotation, in degrees, of the camera around the X axis. A value of 0
-   * indicates that the view is aimed straight down toward the earth (the most
-   * common case). A value for 90 for <tilt> indicates that the view is aimed
-   * toward the horizon. Values greater than 90 indicate that the view is
-   * pointed up into the sky. Values for <tilt> are clamped at +180 degrees.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * degrees. Values for &lt;tilt&gt; cannot be negative. A &lt;tilt&gt; value
+   * of 0 degrees indicates viewing from directly above. A &lt;tilt&gt; value of
+   * 90 degrees indicates viewing along the horizon. Rotation about the x axis.
+   * A positive rotation is clockwise around the x axis and specified in degrees
+   * from 0 to 360. Rotation, in degrees, of the camera around the X axis. A
+   * value of 0 indicates that the view is aimed straight down toward the earth
+   * (the most common case). A value for 90 for &lt;tilt&gt; indicates that the
+   * view is aimed toward the horizon. Values greater than 90 indicate that the
+   * view is pointed up into the sky. Values for &lt;tilt&gt; are clamped at
+   * +180 degrees.
    */
   @XmlElement(defaultValue = "0.0")
   protected double tilt;
   /**
-   * <roll>
+   * &lt;roll&gt;
    * <p>
-   * <heading> Rotation about the z axis (normal to the Earth's surface). A
-   * value of 0 (the default) equals North. A positive rotation is clockwise
-   * around the z axis and specified in degrees from 0 to 360. <tilt> Rotation
-   * about the x axis. A positive rotation is clockwise around the x axis and
-   * specified in degrees from 0 to 360.
-   * <roll> Rotation about the y axis. A positive rotation is clockwise around
-   * the y axis and specified in degrees from 0 to 360. This diagram illustrates
-   * the typical orientation of a model's axes:
-   * </p>
-   * <p>
-   * Rotation about the y axis. A positive rotation is clockwise around the y
-   * axis and specified in degrees from 0 to 360.
-   * </p>
-   * <p>
-   * Rotation, in degrees, of the camera around the Z axis. Values range from
-   * −180 to +180 degrees.
-   * </p>
-   * <p>
-   * This diagram illustrates the typical orientation of a model's axes:
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * &lt;heading&gt; Rotation about the z axis (normal to the Earth's surface).
+   * A value of 0 (the default) equals North. A positive rotation is clockwise
+   * around the z axis and specified in degrees from 0 to 360. &lt;tilt&gt;
+   * Rotation about the x axis. A positive rotation is clockwise around the x
+   * axis and specified in degrees from 0 to 360. &lt;roll&gt; Rotation about
+   * the y axis. A positive rotation is clockwise around the y axis and
+   * specified in degrees from 0 to 360. This diagram illustrates the typical
+   * orientation of a model's axes: Rotation about the y axis. A positive
+   * rotation is clockwise around the y axis and specified in degrees from 0 to
+   * 360. Rotation, in degrees, of the camera around the Z axis. Values range
+   * from −180 to +180 degrees. This diagram illustrates the typical orientation
+   * of a model's axes:
    */
   @XmlElement(defaultValue = "0.0")
   protected double roll;
@@ -131,21 +96,16 @@ public class Orientation
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> orientationSimpleExtension;
   /**
-   * <Object>
+   * &lt;Object&gt;
    * <p>
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the <Update> mechanism is to be used.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;<strong>
-   * &lt;!-- <em>Object</em> id="ID" targetId="NCName" --&gt;
-   * &lt;!-- /<em>Object</em>&gt; --&gt;</strong></pre>
-   * <p>
-   * <p>
+   * assigned if the &lt;Update&gt; mechanism is to be used. Syntax:
+   * <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
+   * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
    * <p>
    */
   @XmlElement(name = "OrientationObjectExtensionGroup")
@@ -308,7 +268,8 @@ public class Orientation
    *
    * @param orientationSimpleExtension Objects of the following type are allowed
    *                                   in the list: {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Orientation addToOrientationSimpleExtension(final Object orientationSimpleExtension) {
     this.getOrientationSimpleExtension().add(orientationSimpleExtension);
@@ -329,7 +290,8 @@ public class Orientation
    *
    * @param orientationObjectExtension Objects of the following type are allowed
    *                                   in the list: {@link AbstractObject}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Orientation addToOrientationObjectExtension(final AbstractObject orientationObjectExtension) {
     this.getOrientationObjectExtension().add(orientationObjectExtension);
@@ -392,7 +354,7 @@ public class Orientation
   /**
    * fluent setter
    *
-   * @see #setOrientationSimpleExtension(List<Object>)
+   * @see #setOrientationSimpleExtension(List &lt;Object&gt;)
    *
    * @param orientationSimpleExtension required parameter
    */
@@ -404,7 +366,7 @@ public class Orientation
   /**
    * fluent setter
    *
-   * @see #setOrientationObjectExtension(List<AbstractObject>)
+   * @see #setOrientationObjectExtension(List &lt;AbstractObject&gt;)
    *
    * @param orientationObjectExtension required parameter
    */

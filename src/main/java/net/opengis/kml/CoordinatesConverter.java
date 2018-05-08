@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -21,11 +21,11 @@ import java.util.List;
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 
 public final class CoordinatesConverter
-        extends XmlAdapter<String, List<Coordinate>> {
+  extends XmlAdapter<String, List<Coordinate>> {
 
   @Override
   public String marshal(final List<Coordinate> dt)
-          throws Exception {
+    throws Exception {
     StringBuilder sb = new StringBuilder();
     for (Coordinate coord : dt) {
       sb.append((coord + " "));
@@ -35,7 +35,7 @@ public final class CoordinatesConverter
 
   @Override
   public List<Coordinate> unmarshal(final String s)
-          throws Exception {
+    throws Exception {
     String[] coords = s.replaceAll(",[\\s]+", ",").trim().split("\\s+");
     List<Coordinate> coordinates = new ArrayList<>();
     if (coords.length <= 0) {

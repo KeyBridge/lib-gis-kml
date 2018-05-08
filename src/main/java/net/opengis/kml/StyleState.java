@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -21,48 +21,38 @@ import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <Style>
- * <p>
+ *  &lt;Style&gt;
+ *   
  * A Style defines an addressable style group that can be referenced by
  * StyleMaps and Features. Styles affect how Geometry is presented in the 3D
  * viewer and how Features appear in the Places panel of the List view. Shared
- * styles are collected in a <Document>
+ * styles are collected in a  &lt;Document&gt;
  * and must have an id defined for them so that they can be referenced by the
- * individual Features that use them.
- * </p>
- * <p>
- * A Style defines an addressable style group that can be referenced by
- * StyleMaps and Features. Styles affect how Geometry is presented in the 3D
- * viewer and how Features appear in the Places panel of the List view. Shared
- * styles are collected in a <Document>
+ * individual Features that use them. A Style defines an addressable style group
+ * that can be referenced by StyleMaps and Features. Styles affect how Geometry
+ * is presented in the 3D viewer and how Features appear in the Places panel of
+ * the List view. Shared styles are collected in a  &lt;Document&gt;
  * and must have an id defined for them so that they can be referenced by the
- * individual Features that use them.
- * </p>
- * <p>
- * Use an id to refer to the style from a <styleUrl>.
- * </p>
- * <p>
- * Syntax:
- * <pre><strong>&lt;Style id="ID"&gt;
- * </strong>&lt;!-- extends StyleSelector --&gt;
- * <p>
+ * individual Features that use them. Use an id to refer to the style from a
+ *  &lt;styleUrl&gt;. Syntax:
+ *  <pre> &lt;strong&gt;&lt;Style id="ID"&gt;
+ *  &lt;/strong&gt;&lt;!-- extends StyleSelector --&gt;
+ *
  * &lt;!-- specific to Style --&gt;
  *   &lt;IconStyle&gt;...&lt;/IconStyle&gt;
  *   &lt;LabelStyle&gt;...&lt;/LabelStyle&gt;
  *   &lt;LineStyle&gt;...&lt;/LineStyle&gt;
  *   &lt;PolyStyle&gt;...&lt;/PolyStyle&gt;
  *   &lt;BalloonStyle&gt;...&lt;/BalloonStyle&gt;
- *   &lt;ListStyle&gt;<strong>...</strong>&lt;/ListStyle&gt;<strong>
- * &lt;/Style&gt;</strong></pre>
- * <p>
+ *   &lt;ListStyle&gt; &lt;strong&gt;... &lt;/strong&gt;&lt;/ListStyle&gt; &lt;strong&gt;
+ * &lt;/Style&gt; &lt;/strong&gt; </pre>
+ *   
  * Extends:
  *
- * @see: <StyleSelector>
+ * @see:  &lt;StyleSelector&gt;
  *
  * Contained By:
- * @see: <Feature>
- *
- *
+ * @see:  &lt;Feature&gt;
  *
  */
 @XmlType(name = "styleStateEnumType")

@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml.gx;
 
@@ -20,7 +20,7 @@ import java.util.List;
 import javax.xml.bind.annotation.*;
 import net.opengis.kml.annotations.Obvious;
 
-/**
+/*
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -29,8 +29,8 @@ import net.opengis.kml.annotations.Obvious;
 })
 @XmlRootElement(name = "Wait", namespace = "http://www.google.com/kml/ext/2.2")
 public class Wait
-        extends TourPrimitive
-        implements Cloneable {
+  extends TourPrimitive
+  implements Cloneable {
 
   @XmlElement(defaultValue = "0.0")
   protected double duration;
@@ -40,7 +40,6 @@ public class Wait
   }
 
   /**
-   *
    * @return possible object is {@link Double}
    *
    */
@@ -49,7 +48,6 @@ public class Wait
   }
 
   /**
-   *
    * @param value allowed object is {@link Double}
    *
    */

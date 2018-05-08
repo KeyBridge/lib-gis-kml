@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -22,33 +22,26 @@ import javax.xml.bind.annotation.*;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- * <LabelStyle>
+ * &lt;LabelStyle&gt;
  * <p>
- * Note: The <labelColor> tag is deprecated. Use <LabelStyle> instead.
- * </p>
+ * Note: The &lt;labelColor&gt; tag is deprecated. Use &lt;LabelStyle&gt;
+ * instead. Specifies how the &lt;name&gt; of a Feature is drawn in the 3D
+ * viewer. A custom color, color mode, and scale for the label (name) can be
+ * specified. Syntax: &lt;pre&gt; &lt;strong&gt;&lt;LabelStyle id="ID"&gt;
+ * &lt;/strong&gt; &lt;!-- inherited from &lt;em&gt;ColorStyle &lt;/em&gt;
+ * --&gt; &lt;color&gt;ffffffff&lt;/color&gt; &lt;!-- kml:color --&gt;
+ * &lt;colorMode&gt;normal&lt;/colorMode&gt; &lt;!-- kml:colorModeEnum: normal
+ * &lt;em&gt;or &lt;/em&gt; random --&gt;
  * <p>
- * Specifies how the <name> of a Feature is drawn in the 3D viewer. A custom
- * color, color mode, and scale for the label (name) can be specified.
- * </p>
- * <p>
- * Syntax:
- * <pre><strong>&lt;LabelStyle id="ID"&gt;</strong>
- *   &lt;!-- inherited from <em>ColorStyle</em> --&gt;
- *   &lt;color&gt;ffffffff&lt;/color&gt;            &lt;!-- kml:color --&gt;
- *   &lt;colorMode&gt;normal&lt;/colorMode&gt;      &lt;!-- kml:colorModeEnum: normal <em>or</em> random --&gt;
- * <p>
- *   &lt;!-- specific to LabelStyle --&gt;
- *   &lt;scale&gt;1&lt;/scale&gt;                   &lt;!-- float --&gt;
- * <strong>&lt;/LabelStyle&gt;</strong></pre>
+ * &lt;!-- specific to LabelStyle --&gt; &lt;scale&gt;1&lt;/scale&gt; &lt;!--
+ * float --&gt; &lt;strong&gt;&lt;/LabelStyle&gt; &lt;/strong&gt; </pre>
  * <p>
  * Extends:
  *
- * @see: <ColorStyle>
+ * @see: &lt;ColorStyle&gt;
  *
  * Contained By:
- * @see: <Style>
- *
- *
+ * @see: &lt;Style&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -59,25 +52,16 @@ import net.opengis.kml.annotations.Obvious;
 })
 @XmlRootElement(name = "LabelStyle", namespace = "http://www.opengis.net/kml/2.2")
 public class LabelStyle
-        extends ColorStyle
-        implements Cloneable {
+  extends ColorStyle
+  implements Cloneable {
 
   /**
-   * <scale>
+   * &lt;scale&gt;
    * <p>
-   * Note: The <geomScale> tag has been deprecated. Use <scale> instead.
-   * </p>
-   * <p>
-   * Resizes the icon.
-   * </p>
-   * <p>
-   * Scales a model along the x, y, and z axes in the model's coordinate space.
-   * <Scale>
-   * <x>2.5</x> <y>2.5</y> <z>3.5</z> </Scale>
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * Note: The &lt;geomScale&gt; tag has been deprecated. Use &lt;scale&gt;
+   * instead. Resizes the icon. Scales a model along the x, y, and z axes in the
+   * model's coordinate space. &lt;Scale&gt; &lt;x&gt;2.5 &lt;/x&gt;
+   * &lt;y&gt;2.5 &lt;/y&gt; &lt;z&gt;3.5 &lt;/z&gt; &lt;/Scale&gt;
    */
   @XmlElement(defaultValue = "1.0")
   protected double scale;
@@ -85,21 +69,16 @@ public class LabelStyle
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> labelStyleSimpleExtension;
   /**
-   * <Object>
+   * &lt;Object&gt;
    * <p>
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the <Update> mechanism is to be used.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;<strong>
-   * &lt;!-- <em>Object</em> id="ID" targetId="NCName" --&gt;
-   * &lt;!-- /<em>Object</em>&gt; --&gt;</strong></pre>
-   * <p>
-   * <p>
+   * assigned if the &lt;Update&gt; mechanism is to be used. Syntax:
+   * <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
+   * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
    * <p>
    */
   @XmlElement(name = "LabelStyleObjectExtensionGroup")
@@ -212,7 +191,8 @@ public class LabelStyle
    *
    * @param labelStyleSimpleExtension Objects of the following type are allowed
    *                                  in the list: {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public LabelStyle addToLabelStyleSimpleExtension(final Object labelStyleSimpleExtension) {
     this.getLabelStyleSimpleExtension().add(labelStyleSimpleExtension);
@@ -233,7 +213,8 @@ public class LabelStyle
    *
    * @param labelStyleObjectExtension Objects of the following type are allowed
    *                                  in the list: {@link AbstractObject}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public LabelStyle addToLabelStyleObjectExtension(final AbstractObject labelStyleObjectExtension) {
     this.getLabelStyleObjectExtension().add(labelStyleObjectExtension);
@@ -340,7 +321,7 @@ public class LabelStyle
   /**
    * fluent setter
    *
-   * @see #setLabelStyleSimpleExtension(List<Object>)
+   * @see #setLabelStyleSimpleExtension(List &lt;Object&gt;)
    *
    * @param labelStyleSimpleExtension required parameter
    */
@@ -352,7 +333,7 @@ public class LabelStyle
   /**
    * fluent setter
    *
-   * @see #setLabelStyleObjectExtension(List<AbstractObject>)
+   * @see #setLabelStyleObjectExtension(List &lt;AbstractObject&gt;)
    *
    * @param labelStyleObjectExtension required parameter
    */

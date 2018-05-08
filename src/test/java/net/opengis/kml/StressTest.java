@@ -121,11 +121,11 @@ public final class StressTest {
 
   /**
    * Longitude and latitude values are in degrees, where
-   * <ul>
-   * <li>longitude => −180 and <= 180</li> <
-   * li>latitude => −90 and <= 90</li> <
-   * li>altitude values (optional) are in meters above sea level</li>
-   * </ul>
+   *  &lt;ul&gt;
+   *  &lt;li&gt;longitude =&gt; −180 and  &lt;= 180 &lt;/li&gt;  &lt;
+   * li&gt;latitude =&gt; −90 and  &lt;= 90 &lt;/li&gt;  &lt;
+   * li&gt;altitude values (optional) are in meters above sea level &lt;/li&gt;
+   *  &lt;/ul&gt;
    */
   private String getRandomCoordinate() {
     final StringBuilder random = new StringBuilder();
@@ -137,7 +137,7 @@ public final class StressTest {
   }
 
   /**
-   * longitude => −180 and <= 180
+   * longitude =&gt; −180 and  &lt;= 180
    */
   private double randLongitude() {
     final int minRandom = -180;
@@ -146,7 +146,7 @@ public final class StressTest {
   }
 
   /**
-   * latitude => −90 and <= 90
+   * latitude =&gt; −90 and  &lt;= 90
    */
   private double randLatitude() {
     final int minRandom = -90;

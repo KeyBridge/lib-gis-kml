@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -22,14 +22,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * ColorMode
- * <p>
- * normal, random
- * </p>
- * <p>
- * See Also: See any element that extends <ColorStyle>
- * <p>
- * <p>
- * <p>
+ *   
+ * normal, random See Also: See any element that extends  &lt;ColorStyle&gt;
+ *   
  */
 @XmlType(name = "colorModeEnumType")
 @XmlEnum

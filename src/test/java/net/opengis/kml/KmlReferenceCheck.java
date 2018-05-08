@@ -25,9 +25,9 @@ public final class KmlReferenceCheck {
     final BalloonStyle balloonstyle = ((Style) kml.getFeature().getStyleSelector().get(0)).getBalloonStyle();
     Assert.assertEquals("ffffffbb", balloonstyle.getBgColor());
     Assert
-            .assertEquals(
-                    "<![CDATA[" + "<b><font color='#CC0000' size='+3'>$[name]</font></b>" + "<br/><br/>" + "<font face='Courier'>$[description]</font>" + "<br/><br/>" + "Extra text that will appear in the description balloon" + "<br/><br/>" + "<!-- insert the to/from hyperlinks -->" + "$[geDirections]]]>",
-                    balloonstyle.getText());
+      .assertEquals(
+        "<![CDATA[" + "<b><font color='#CC0000' size='+3'>$[name]</font></b>" + "<br/><br/>" + "<font face='Courier'>$[description]</font>" + "<br/><br/>" + "Extra text that will appear in the description balloon" + "<br/><br/>" + "<!-- insert the to/from hyperlinks -->" + "$[geDirections]]]>",
+        balloonstyle.getText());
 
     final Placemark placemark = (Placemark) ((Document) kml.getFeature()).getFeature().get(0);
     Assert.assertEquals("BalloonStyle", placemark.getName());

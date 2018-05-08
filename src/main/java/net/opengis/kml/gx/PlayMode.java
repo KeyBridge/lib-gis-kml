@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml.gx;
 
@@ -21,20 +21,16 @@ import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
- * Java class for playModeEnumType.
- * <p>
- * <p>
- * The following schema fragment specifies the expected content contained within
- * this class.
- * <p>
- * <
- * pre>
- * &lt;simpleType name="playModeEnumType"> &lt;restriction
- * base="{http://www.w3.org/2001/XMLSchema}string"> &lt;enumeration
- * value="pause"/> &lt;/restriction> &lt;/simpleType>
- * </pre>
- * <p>
+ * Java class for playModeEnumType. The following schema fragment specifies the
+ * expected content contained within this class.
+ *   
+ *  &lt;
+ * pre&gt;
+ * &lt;simpleType name="playModeEnumType"&gt; &lt;restriction
+ * base="{http://www.w3.org/2001/XMLSchema}string"&gt; &lt;enumeration
+ * value="pause"/&gt; &lt;/restriction&gt; &lt;/simpleType&gt;
+ *  </pre>
+ *   
  */
 @XmlType(name = "playModeEnumType")
 @XmlEnum

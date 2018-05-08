@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -22,22 +22,18 @@ import javax.xml.bind.annotation.*;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- * <pair> (required)
- * <p>
+ *  &lt;pair&gt; (required)
+ *   
  * Defines a key/value pair that maps a mode (normal or highlight) to the
  * predefined
- * <styleUrl>. <Pair> contains two elements (both are required): <key>, which
- * identifies the key <styleUrl> or <Style>, which references the style. In
- * <styleUrl>, for referenced style elements that are local to the KML document,
+ *  &lt;styleUrl&gt;.  &lt;Pair&gt; contains two elements (both are required):  &lt;key&gt;, which
+ * identifies the key  &lt;styleUrl&gt; or  &lt;Style&gt;, which references the style. In
+ *  &lt;styleUrl&gt;, for referenced style elements that are local to the KML document,
  * a simple # referencing is used. For styles that are contained in external
- * files, use a full URL along with # referencing. For example: <Pair>
- * <key>normal</key>
- * <styleUrl>http://myserver.com/populationProject.xml#example_style_off</styleUrl>
- * </Pair>
- * </p>
- * <p>
- * <p>
- * <p>
+ * files, use a full URL along with # referencing. For example:  &lt;Pair&gt;
+ *  &lt;key&gt;normal &lt;/key&gt;
+ *  &lt;styleUrl&gt;http://myserver.com/populationProject.xml#example_style_off &lt;/styleUrl&gt;
+ *  &lt;/Pair&gt;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PairType", propOrder = {
@@ -49,70 +45,56 @@ import net.opengis.kml.annotations.Obvious;
 })
 @XmlRootElement(name = "Pair", namespace = "http://www.opengis.net/kml/2.2")
 public class Pair
-        extends AbstractObject
-        implements Cloneable {
+  extends AbstractObject
+  implements Cloneable {
 
   /**
    * StyleState
-   * <p>
-   * normal, highlight
-   * </p>
-   * <p>
-   * See Also: See <StyleMap>
-   * <p>
-   * <p>
-   * <p>
+   *   
+   * normal, highlight See Also: See  &lt;StyleMap&gt;
+   *   
    */
   @XmlElement(defaultValue = "normal")
   protected StyleState key;
   /**
-   * <styleurl>
-   * <p>
-   * URL of a <Style> or <StyleMap> defined in a Document. If the style is in
+   *  &lt;styleurl&gt;
+   *   
+   * URL of a  &lt;Style&gt; or  &lt;StyleMap&gt; defined in a Document. If the style is in
    * the same file, use a # reference. If the style is defined in an external
    * file, use a full URL along with # referencing. Examples are
-   * <styleUrl>#myIconStyleID</styleUrl>
-   * <styleUrl>http://someserver.com/somestylefile.xml#restaurant</styleUrl>
-   * <styleUrl>eateries.kml#my-lunch-spot</styleUrl>
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   *  &lt;styleUrl&gt;#myIconStyleID &lt;/styleUrl&gt;
+   *  &lt;styleUrl&gt;http://someserver.com/somestylefile.xml#restaurant &lt;/styleUrl&gt;
+   *  &lt;styleUrl&gt;eateries.kml#my-lunch-spot &lt;/styleUrl&gt;
    */
   @XmlSchemaType(name = "anyURI")
   protected String styleUrl;
   /**
-   * <StyleSelector>
-   * <p>
+   *  &lt;StyleSelector&gt;
+   *   
    * One or more Styles and StyleMaps can be defined to customize the appearance
    * of any element derived from Feature or of the Geometry in a Placemark. (See
-   * <BalloonStyle>,
-   * <ListStyle>, <StyleSelector>, and the styles derived from <ColorStyle>.) A
+   *  &lt;BalloonStyle&gt;,
+   *  &lt;ListStyle&gt;,  &lt;StyleSelector&gt;, and the styles derived from  &lt;ColorStyle&gt;.) A
    * style defined within a Feature is called an "inline style" and applies only
    * to the Feature that contains it. A style defined as the child of a
-   * <Document> is called a "shared style." A shared style must have an id
+   *  &lt;Document&gt; is called a "shared style." A shared style must have an id
    * defined for it. This id is referenced by one or more Features within the
-   * <Document>. In cases where a style element is defined both in a shared
+   *  &lt;Document&gt;. In cases where a style element is defined both in a shared
    * style and in an inline style for a Feature—that is, a Folder,
    * GroundOverlay, NetworkLink, Placemark, or ScreenOverlay—the value for the
    * Feature's inline style takes precedence over the value for the shared
-   * style.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;
-   * <strong>&lt;!-- <em>StyleSelector</em> id="ID" --&gt;               </strong>  &lt;!-- Style,StyleMap --&gt;<strong>
-   * &lt;!-- /<em>StyleSelector</em> --&gt;</strong></pre>
-   * <p>
+   * style. Syntax:
+   *  <pre>&lt;!-- abstract element; do not create --&gt;
+   *  &lt;strong&gt;&lt;!--  &lt;em&gt;StyleSelector &lt;/em&gt; id="ID" --&gt;                &lt;/strong&gt;  &lt;!-- Style,StyleMap --&gt; &lt;strong&gt;
+   * &lt;!-- / &lt;em&gt;StyleSelector &lt;/em&gt; --&gt; &lt;/strong&gt; </pre>
+   *   
    * Extends:
    *
-   * @see: <Object>
+   * @see:  &lt;Object&gt;
    *
    * Extended By:
-   * @see: <Style>
-   * @see: <StyleMap>
-   *
-   *
+   * @see:  &lt;Style&gt;
+   * @see:  &lt;StyleMap&gt;
    *
    */
   @XmlElementRef(name = "AbstractStyleSelectorGroup", namespace = "http://www.opengis.net/kml/2.2", required = false)
@@ -121,22 +103,17 @@ public class Pair
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> pairSimpleExtension;
   /**
-   * <Object>
-   * <p>
+   *  &lt;Object&gt;
+   *   
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the <Update> mechanism is to be used.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;<strong>
-   * &lt;!-- <em>Object</em> id="ID" targetId="NCName" --&gt;
-   * &lt;!-- /<em>Object</em>&gt; --&gt;</strong></pre>
-   * <p>
-   * <p>
-   * <p>
+   * assigned if the  &lt;Update&gt; mechanism is to be used. Syntax:
+   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
+   * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
+   *   
    */
   @XmlElement(name = "PairObjectExtensionGroup")
   protected List<AbstractObject> pairObjectExtension;
@@ -188,9 +165,9 @@ public class Pair
   /**
    * @see styleSelector
    *
-   * @return possible object is null   {@code <}{@link Style}{@code>}
-     *     {@code <}{@link StyleSelector}{@code>}
-   *     {@code <}{@link StyleMap}{@code>}
+   * @return possible object is null null null null null null null   {@link Style}
+     *     {@link StyleSelector}
+   *     {@link StyleMap}
    *
    */
   public StyleSelector getStyleSelector() {
@@ -200,9 +177,9 @@ public class Pair
   /**
    * @see styleSelector
    *
-   * @param value allowed object is null   {@code <}{@link Style}{@code>}
-     *     {@code <}{@link StyleSelector}{@code>}
-   *     {@code <}{@link StyleMap}{@code>}
+   * @param value allowed object is null null null null null null null   {@link Style}
+     *     {@link StyleSelector}
+   *     {@link StyleMap}
    *
    */
   public void setStyleSelector(StyleSelector value) {
@@ -298,12 +275,10 @@ public class Pair
 
   /**
    * Creates a new instance of {@link Style} and set it to styleSelector.
-   * <p>
-   * This method is a short version for:    <code>
+   *   
+   * This method is a short version for:     &lt;code&gt;
    * Style style = new Style();
-   * this.setStyleSelector(style); </code>
-   * <p>
-   * <p>
+   * this.setStyleSelector(style);  &lt;/code&gt;
    */
   public Style createAndSetStyle() {
     Style newValue = new Style();
@@ -313,12 +288,10 @@ public class Pair
 
   /**
    * Creates a new instance of {@link StyleMap} and set it to styleSelector.
-   * <p>
-   * This method is a short version for:    <code>
+   *   
+   * This method is a short version for:     &lt;code&gt;
    * StyleMap styleMap = new StyleMap();
-   * this.setStyleSelector(styleMap); </code>
-   * <p>
-   * <p>
+   * this.setStyleSelector(styleMap);  &lt;/code&gt;
    */
   public StyleMap createAndSetStyleMap() {
     StyleMap newValue = new StyleMap();
@@ -340,7 +313,7 @@ public class Pair
    *
    * @param pairSimpleExtension Objects of the following type are allowed in the
    *                            list: {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Pair addToPairSimpleExtension(final Object pairSimpleExtension) {
     this.getPairSimpleExtension().add(pairSimpleExtension);
@@ -361,7 +334,7 @@ public class Pair
    *
    * @param pairObjectExtension Objects of the following type are allowed in the
    *                            list: {@link AbstractObject}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Pair addToPairObjectExtension(final AbstractObject pairObjectExtension) {
     this.getPairObjectExtension().add(pairObjectExtension);
@@ -424,7 +397,7 @@ public class Pair
   /**
    * fluent setter
    *
-   * @see #setPairSimpleExtension(List<Object>)
+   * @see #setPairSimpleExtension(List &lt;Object&gt;)
    *
    * @param pairSimpleExtension required parameter
    */
@@ -436,7 +409,7 @@ public class Pair
   /**
    * fluent setter
    *
-   * @see #setPairObjectExtension(List<AbstractObject>)
+   * @see #setPairObjectExtension(List &lt;AbstractObject&gt;)
    *
    * @param pairObjectExtension required parameter
    */

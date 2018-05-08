@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml.gx;
 
@@ -22,7 +22,7 @@ import javax.xml.bind.annotation.*;
 import net.opengis.kml.AbstractObject;
 import net.opengis.kml.annotations.Obvious;
 
-/**
+/*
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -32,8 +32,8 @@ import net.opengis.kml.annotations.Obvious;
 })
 @XmlRootElement(name = "SimpleArrayData", namespace = "http://www.google.com/kml/ext/2.2")
 public class SimpleArrayData
-        extends AbstractObject
-        implements Cloneable {
+  extends AbstractObject
+  implements Cloneable {
 
   protected List<String> value;
   @XmlElement(name = "SimpleArrayDataExtension")
@@ -45,7 +45,7 @@ public class SimpleArrayData
     super();
   }
 
-  /**
+  /*
    *
    */
   public List<String> getValue() {
@@ -55,7 +55,7 @@ public class SimpleArrayData
     return this.value;
   }
 
-  /**
+  /*
    *
    */
   public List<Object> getSimpleArrayDataExtension() {
@@ -66,7 +66,6 @@ public class SimpleArrayData
   }
 
   /**
-   *
    * @return possible object is {@link String}
    *
    */
@@ -75,7 +74,6 @@ public class SimpleArrayData
   }
 
   /**
-   *
    * @param value allowed object is {@link String}
    *
    */
@@ -134,13 +132,12 @@ public class SimpleArrayData
 
   /**
    * Sets the value of the value property Objects of the following type(s) are
-   * allowed in the list List<String>.
-   * <p>
+   * allowed in the list List &lt;String&gt;.
+   *   
    * Note:
-   * <p>
+   *   
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withValue} instead.
-   *
    *
    * @param value
    */
@@ -153,7 +150,7 @@ public class SimpleArrayData
    *
    * @param value Objects of the following type are allowed in the list:
    *              {@link String}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public SimpleArrayData addToValue(final String value) {
     this.getValue().add(value);
@@ -162,13 +159,12 @@ public class SimpleArrayData
 
   /**
    * Sets the value of the simpleArrayDataExtension property Objects of the
-   * following type(s) are allowed in the list List<Object>.
-   * <p>
+   * following type(s) are allowed in the list List &lt;Object&gt;.
+   *   
    * Note:
-   * <p>
+   *   
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withSimpleArrayDataExtension} instead.
-   *
    *
    * @param simpleArrayDataExtension
    */
@@ -181,7 +177,7 @@ public class SimpleArrayData
    *
    * @param simpleArrayDataExtension Objects of the following type are allowed
    *                                 in the list: {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public SimpleArrayData addToSimpleArrayDataExtension(final Object simpleArrayDataExtension) {
     this.getSimpleArrayDataExtension().add(simpleArrayDataExtension);
@@ -204,7 +200,7 @@ public class SimpleArrayData
   /**
    * fluent setter
    *
-   * @see #setValue(List<String>)
+   * @see #setValue(List &lt;String&gt;)
    *
    * @param value required parameter
    */
@@ -216,7 +212,7 @@ public class SimpleArrayData
   /**
    * fluent setter
    *
-   * @see #setSimpleArrayDataExtension(List<Object>)
+   * @see #setSimpleArrayDataExtension(List &lt;Object&gt;)
    *
    * @param simpleArrayDataExtension required parameter
    */

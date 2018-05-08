@@ -32,11 +32,21 @@
 
     This library uses code from the micromata.de Jave API for KML (JAK) project.
 
+    Usage:
+
+    Read:
+    Kml kml = Kml.unmarshall( [document.kml] );
+    GisFeature gisFeature = KmlReader.read(kml);
+
+    Write:
+    Kml kml = KmlWriter.write(gisFeature);
+
+
     History:
     v0.0.1 - create new project and compile
     v1.0.0 - KML writer working just fine, thank you
     v1.0.1 - update lib dependencies
-    v1.1.0 - remove DTO KML writer - this lib is KML only
+    v1.1.0 - remove DTO KML writer - this lib is KML only - IO is in gis-dto library
 
   </description>
 
@@ -55,11 +65,12 @@
   </properties>
 
   <dependencies>
+
     <dependency>
-      <groupId>org.geotools</groupId>
-      <artifactId>gt-api</artifactId>
-      <version>${geotools.version}</version>
-      <type>jar</type>
+      <groupId>com.vividsolutions</groupId>
+      <artifactId>jts</artifactId>
+      <version>1.13</version>
+      <scope>provided</scope>
     </dependency>
 
 

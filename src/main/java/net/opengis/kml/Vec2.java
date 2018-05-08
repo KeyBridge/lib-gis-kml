@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -21,12 +21,8 @@ import javax.xml.bind.annotation.*;
 /**
  * Vec2
  * <p>
- * x=double xunits=kml:unitsEnum y=double yunits=kml:unitsEnum
- * </p>
- * <p>
- * See Also: See <hotSpot> in <IconStyle>, <ScreenOverlay>
- * <p>
- * <p>
+ * x=double xunits=kml:unitsEnum y=double yunits=kml:unitsEnum See Also: See
+ * &lt;hotSpot&gt; in &lt;IconStyle&gt;, &lt;ScreenOverlay&gt;
  * <p>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -35,13 +31,9 @@ import javax.xml.bind.annotation.*;
 public class Vec2 implements Cloneable {
 
   /**
-   * <x>, <y>, <w>, <h>
+   * &lt;x&gt;, &lt;y&gt;, &lt;w&gt;, &lt;h&gt;
    * <p>
-   * Use of these elements within <Icon> has been deprecated.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * Use of these elements within &lt;Icon&gt; has been deprecated.
    */
   @XmlAttribute(name = "x")
   protected double x;
@@ -50,12 +42,8 @@ public class Vec2 implements Cloneable {
   /**
    * Units
    * <p>
-   * fraction, pixels, insetPixels
-   * </p>
-   * <p>
-   * See Also: See <hotSpot> in <IconStyle>, <ScreenOverlay>
-   * <p>
-   * <p>
+   * fraction, pixels, insetPixels See Also: See &lt;hotSpot&gt; in
+   * &lt;IconStyle&gt;, &lt;ScreenOverlay&gt;
    * <p>
    */
   @XmlAttribute(name = "xunits")
@@ -63,12 +51,8 @@ public class Vec2 implements Cloneable {
   /**
    * Units
    * <p>
-   * fraction, pixels, insetPixels
-   * </p>
-   * <p>
-   * See Also: See <hotSpot> in <IconStyle>, <ScreenOverlay>
-   * <p>
-   * <p>
+   * fraction, pixels, insetPixels See Also: See &lt;hotSpot&gt; in
+   * &lt;IconStyle&gt;, &lt;ScreenOverlay&gt;
    * <p>
    */
   @XmlAttribute(name = "yunits")

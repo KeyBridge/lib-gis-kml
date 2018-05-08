@@ -12,24 +12,24 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 
 public final class BooleanConverter
-        extends XmlAdapter<Integer, Boolean> {
+  extends XmlAdapter<Integer, Boolean> {
 
   @Override
   public Boolean unmarshal(final Integer i)
-          throws Exception {
+    throws Exception {
     return ((i == null) ? null : (i == 1));
   }
 
   @Override
   public Integer marshal(final Boolean b)
-          throws Exception {
+    throws Exception {
     return ((b == null) ? null : (b ? 1 : 0));
   }
 

@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml.gx;
 
@@ -22,26 +22,19 @@ import net.opengis.kml.Update;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- * <gx:AnimatedUpdate>
+ * &lt;gx:AnimatedUpdate&gt;
  * <p>
- * <gx:AnimatedUpdate> controls changes during a tour to KML features, using
- * <Update>. Changes to KML features will not modify the DOM - that is, any
- * changes will be reverted when the tour is over, and will not be saved in the
- * KML at any time.
- * </p>
- * <p>
- * <gx:AnimatedUpdate> should also contain a <gx:duration> value to specify the
- * length of time in seconds over which the update takes place. Integer, float,
- * and color fields are smoothly animated from original to new value across the
- * duration; boolean, string, and other values that don't lend to interpolation
- * are updated at the end of the duration.
- * </p>
- * <p>
- * Refer to Tour timelines in the Touring chapter of the KML Developer's Guide
- * for information about <gx:AnimatedUpdate> and the tour timeline.
- * </p>
- * <p>
- * Syntax:
+ * &lt;gx:AnimatedUpdate&gt; controls changes during a tour to KML features,
+ * using &lt;Update&gt;. Changes to KML features will not modify the DOM - that
+ * is, any changes will be reverted when the tour is over, and will not be saved
+ * in the KML at any time. &lt;gx:AnimatedUpdate&gt; should also contain a
+ * &lt;gx:duration&gt; value to specify the length of time in seconds over which
+ * the update takes place. Integer, float, and color fields are smoothly
+ * animated from original to new value across the duration; boolean, string, and
+ * other values that don't lend to interpolation are updated at the end of the
+ * duration. Refer to Tour timelines in the Touring chapter of the KML
+ * Developer's Guide for information about &lt;gx:AnimatedUpdate&gt; and the
+ * tour timeline. Syntax:
  * <pre>&lt;gx:AnimatedUpdate&gt;
  *   &lt;gx:duration&gt;0.0&lt;/gx:duration&gt;    &lt;!-- double, specifies time in seconds --&gt;
  *   &lt;Update&gt;
@@ -51,17 +44,15 @@ import net.opengis.kml.annotations.Obvious;
  *     &lt;Create&gt;...&lt;/Create&gt;
  *     &lt;Delete&gt;...&lt;/Delete&gt;
  *   &lt;/Update&gt;
- * &lt;/gx:AnimatedUpdate&gt;</pre>
+ * &lt;/gx:AnimatedUpdate&gt; </pre>
  * <p>
  * Extends:
  *
- * @see: <gx:TourPrimitive>
+ * @see: &lt;gx:TourPrimitive&gt;
  *
  * Contains:
- * @see: <Update>
- * @see: <gx:duration>
- *
- *
+ * @see: &lt;Update&gt;
+ * @see: &lt;gx:duration&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -72,87 +63,62 @@ import net.opengis.kml.annotations.Obvious;
 })
 @XmlRootElement(name = "AnimatedUpdate", namespace = "http://www.google.com/kml/ext/2.2")
 public class AnimatedUpdate
-        extends TourPrimitive
-        implements Cloneable {
+  extends TourPrimitive
+  implements Cloneable {
 
   /**
-   * <gx:duration>
+   * &lt;gx:duration&gt;
    * <p>
-   * <gx:AnimatedUpdate> <gx:duration>5.0</gx:duration> <Update> .... </Update>
-   * </gx:AnimatedUpdate>
-   * </p>
-   * <p>
-   * <gx:FlyTo> <gx:flyToMode>bounce</gx:flyToMode>
-   * <gx:duration>10.2</gx:duration> <!--
-   * AbstractView --> ... <!-- /AbstractView --> </gx:FlyTo>
-   * </p>
-   * <p>
-   * <gx:duration> extends gx:TourPrimitive by specifying a time-span for
-   * events. The time is written as seconds using XML's double datatype.
-   * </p>
-   * <p>
-   * Duration and <gx:AnimatedUpdate>
-   * </p>
-   * <p>
-   * Duration and <gx:FlyTo>
-   * </p>
-   * <p>
-   * Specifies the length of time over which the update takes place. Integer,
-   * float, and color fields are smoothly animated from original to new value
-   * across the duration; boolean, string, and other values that don't lend to
-   * interpolation are updated at the end of the duration.
-   * </p>
-   * <p>
-   * When a duration is included within a <gx:FlyTo> element, it specifies the
-   * length of time that the browser takes to fly from the previous point to the
-   * specified point.
-   * </p>
-   * <p>
-   * Syntax:
+   * &lt;gx:AnimatedUpdate&gt; &lt;gx:duration&gt;5.0 &lt;/gx:duration&gt;
+   * &lt;Update&gt; .... &lt;/Update&gt; &lt;/gx:AnimatedUpdate&gt;
+   * &lt;gx:FlyTo&gt; &lt;gx:flyToMode&gt;bounce &lt;/gx:flyToMode&gt;
+   * &lt;gx:duration&gt;10.2 &lt;/gx:duration&gt; &lt;!-- AbstractView --&gt;
+   * ... &lt;!-- /AbstractView --&gt; &lt;/gx:FlyTo&gt; &lt;gx:duration&gt;
+   * extends gx:TourPrimitive by specifying a time-span for events. The time is
+   * written as seconds using XML's double datatype. Duration and
+   * &lt;gx:AnimatedUpdate&gt; Duration and &lt;gx:FlyTo&gt; Specifies the
+   * length of time over which the update takes place. Integer, float, and color
+   * fields are smoothly animated from original to new value across the
+   * duration; boolean, string, and other values that don't lend to
+   * interpolation are updated at the end of the duration. When a duration is
+   * included within a &lt;gx:FlyTo&gt; element, it specifies the length of time
+   * that the browser takes to fly from the previous point to the specified
+   * point. Syntax:
    * <pre>&lt;gx:duration&gt;0.0&lt;/gx:duration&gt;            &lt;!-- double --&gt;
    * </pre>
-   * <p>
-   * <p>
    * <p>
    */
   @XmlElement(defaultValue = "0.0")
   protected double duration;
   /**
-   * <Update>
+   * &lt;Update&gt;
    * <p>
    * Specifies an addition, change, or deletion to KML data that has already
-   * been loaded using the specified URL. The <targetHref> specifies the .kml or
-   * .kmz file whose data (within Google Earth) is to be modified. <Update> is
-   * always contained in a NetworkLinkControl. Furthermore, the file containing
-   * the NetworkLinkControl must have been loaded by a NetworkLink. See the
-   * "Topics in KML" page on Updates for a detailed example of how Update works.
-   * </p>
-   * <p>
-   * With <Update>, you can specify any number of Change, Create, and Delete
-   * tags for a .kml file or .kmz archive that has previously been loaded with a
-   * network link. See <Update>.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre><strong>&lt;Update&gt;
-   *   </strong>&lt;targetHref&gt;...&lt;targetHref&gt;    &lt;!-- URL --&gt;
+   * been loaded using the specified URL. The &lt;targetHref&gt; specifies the
+   * .kml or .kmz file whose data (within Google Earth) is to be modified.
+   * &lt;Update&gt; is always contained in a NetworkLinkControl. Furthermore,
+   * the file containing the NetworkLinkControl must have been loaded by a
+   * NetworkLink. See the "Topics in KML" page on Updates for a detailed example
+   * of how Update works. With &lt;Update&gt;, you can specify any number of
+   * Change, Create, and Delete tags for a .kml file or .kmz archive that has
+   * previously been loaded with a network link. See &lt;Update&gt;. Syntax:
+   * <pre> &lt;strong&gt;&lt;Update&gt;
+   *    &lt;/strong&gt;&lt;targetHref&gt;...&lt;targetHref&gt;    &lt;!-- URL --&gt;
    *   &lt;Change&gt;...&lt;/Change&gt;
    *   &lt;Create&gt;...&lt;/Create&gt;
    *   &lt;Delete&gt;...&lt;/Delete&gt;
-   * <strong>&lt;/Update&gt;</strong></pre>
+   *  &lt;strong&gt;&lt;/Update&gt; &lt;/strong&gt; </pre>
    * <p>
    * Contained By:
    *
-   * @see: <NetworkLinkControl>
+   * @see: &lt;NetworkLinkControl&gt;
    * @see: Note: This element was deprecated in KML Release 2.1 and is replaced
-   * by <Link>, which provides the additional functionality of Regions. The
-   * <Url> tag will still work in Google Earth, but use of the newer <Link> tag
-   * is encouraged.
+   * by &lt;Link&gt;, which provides the additional functionality of Regions.
+   * The &lt;Url&gt; tag will still work in Google Earth, but use of the newer
+   * &lt;Link&gt; tag is encouraged.
    * @see: Use this element to set the location of the link to the KML file, to
    * define the refresh options for the server and viewer changes, and to
    * populate a variable to return useful client information to the server.
-   *
-   *
    *
    */
   @XmlElement(name = "Update", namespace = "http://www.opengis.net/kml/2.2")
@@ -268,10 +234,8 @@ public class AnimatedUpdate
   /**
    * Creates a new instance of {@link Update} and set it to update.
    * <p>
-   * This method is a short version for:    <code>
-   * Update update = new Update();
-   * this.setUpdate(update); </code>
-   *
+   * This method is a short version for: &lt;code&gt; Update update = new
+   * Update(); this.setUpdate(update); &lt;/code&gt;
    *
    * @param createOrDeleteOrChange required parameter
    * @param targetHref             required parameter

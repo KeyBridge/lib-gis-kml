@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -25,79 +25,74 @@ import net.opengis.kml.atom.Link;
 import net.opengis.kml.xal.AddressDetails;
 
 /**
- * <ScreenOverlay>
+ * &lt;ScreenOverlay&gt;
  * <p>
- * The <href> child of <Icon> specifies the image to be used as the overlay.
- * This file can be either on a local file system or on a web server. If this
- * element is omitted or contains no <href>, a rectangle is drawn using the
- * color and size defined by the screen overlay.
- * </p>
- * <p>
+ * The &lt;href&gt; child of &lt;Icon&gt; specifies the image to be used as the
+ * overlay. This file can be either on a local file system or on a web server.
+ * If this element is omitted or contains no &lt;href&gt;, a rectangle is drawn
+ * using the color and size defined by the screen overlay. This element draws an
+ * image overlay fixed to the screen. Sample uses for ScreenOverlays are
+ * compasses, logos, and heads-up displays. ScreenOverlay sizing is determined
+ * by the &lt;size&gt; element. Positioning of the overlay is handled by mapping
+ * a point in the image specified by &lt;overlayXY&gt; to a point on the screen
+ * specified by &lt;screenXY&gt;. Then the image is rotated by &lt;rotation&gt;
+ * degrees about a point relative to the screen specified by &lt;rotationXY&gt;.
  * This element draws an image overlay fixed to the screen. Sample uses for
  * ScreenOverlays are compasses, logos, and heads-up displays. ScreenOverlay
- * sizing is determined by the <size> element. Positioning of the overlay is
- * handled by mapping a point in the image specified by <overlayXY> to a point
- * on the screen specified by <screenXY>. Then the image is rotated by
- * <rotation> degrees about a point relative to the screen specified by
- * <rotationXY>.
- * </p>
+ * sizing is determined by the &lt;size&gt; element. Positioning of the overlay
+ * is handled by mapping a point in the image specified by &lt;overlayXY&gt; to
+ * a point on the screen specified by &lt;screenXY&gt;. Then the image is
+ * rotated by &lt;rotation&gt; degrees about a point relative to the screen
+ * specified by &lt;rotationXY&gt;. Syntax: &lt;pre&gt;
+ * &lt;strong&gt;&lt;ScreenOverlay id="ID"&gt; &lt;/strong&gt; &lt;!-- inherited
+ * from &lt;em&gt;Feature &lt;/em&gt; element --&gt; &lt;name&gt; &lt;em&gt;...
+ * &lt;/em&gt;&lt;/name&gt; &lt;!-- string --&gt;
+ * &lt;visibility&gt;1&lt;/visibility&gt; &lt;!-- boolean --&gt;
+ * &lt;open&gt;0&lt;/open&gt; &lt;!-- boolean --&gt;
+ * &lt;span&gt;&lt;atom:author&gt;...&lt;atom:author&gt; &lt;!-- xmlns:atom
+ * --&gt; &lt;atom:link&gt;...&lt;/atom:link&gt; &lt;/span&gt; &lt;span&gt;
+ * &lt;!-- xmlns:atom --&gt; &lt;/span&gt; &lt;address&gt; &lt;em&gt;...
+ * &lt;/em&gt;&lt;/address&gt; &lt;!-- string --&gt;
+ * &lt;xal:AddressDetails&gt;...&lt;/xal:AddressDetails&gt; &lt;!-- xmlns:xal
+ * --&gt; &lt;br&gt; &lt;phoneNumber&gt;...&lt;/phoneNumber&gt; &lt;!-- string
+ * --&gt; &lt;br&gt; &lt;Snippet maxLines="2"&gt; &lt;em&gt;...
+ * &lt;/em&gt;&lt;/Snippet&gt; &lt;!-- string --&gt; &lt;description&gt;
+ * &lt;em&gt;... &lt;/em&gt;&lt;/description&gt; &lt;!-- string --&gt;
+ * &lt;span&gt; &lt;em&gt;&lt;AbstractView&gt;...&lt;/AbstractView&gt;
+ * &lt;/em&gt; &lt;!-- Camera &lt;em&gt;or &lt;/em&gt; LookAt --&gt;
+ * &lt;/span&gt; &lt; &lt;em&gt;TimePrimitive &lt;/em&gt;&gt;...&lt;/
+ * &lt;em&gt;TimePrimitive &lt;/em&gt;&gt; &lt;styleUrl&gt; &lt;em&gt;...
+ * &lt;/em&gt;&lt;/styleUrl&gt; &lt;!-- anyURI --&gt; &lt;
+ * &lt;em&gt;StyleSelector&gt;...&lt;/StyleSelector&gt; &lt;/em&gt;
+ * &lt;Region&gt;...&lt;/Region&gt;
+ * &lt;span&gt;&lt;Metadata&gt;...&lt;/Metadata&gt; &lt;!-- deprecated in KML
+ * 2.2 --&gt; &lt;ExtendedData&gt;...&lt;/ExtendedData&gt; &lt;!-- new in KML
+ * 2.2 --&gt;
  * <p>
- * This element draws an image overlay fixed to the screen. Sample uses for
- * ScreenOverlays are compasses, logos, and heads-up displays. ScreenOverlay
- * sizing is determined by the <size> element. Positioning of the overlay is
- * handled by mapping a point in the image specified by <overlayXY> to a point
- * on the screen specified by <screenXY>. Then the image is rotated by
- * <rotation> degrees about a point relative to the screen specified by
- * <rotationXY>.
- * </p>
+ * &lt;/span&gt;&lt;!-- inherited from &lt;em&gt;Overlay &lt;/em&gt; element
+ * --&gt; &lt;color&gt;ffffffff&lt;/color&gt; &lt;!-- kml:color --&gt;
+ * &lt;drawOrder&gt;0&lt;/drawOrder&gt; &lt;!-- int --&gt;
+ * &lt;Icon&gt;...&lt;/Icon&gt;
  * <p>
- * Syntax:
- * <pre><strong>&lt;ScreenOverlay id="ID"&gt;</strong>
- *   &lt;!-- inherited from <em>Feature</em> element --&gt;
- *   &lt;name&gt;<em>...</em>&lt;/name&gt;                      &lt;!-- string --&gt;
- *   &lt;visibility&gt;1&lt;/visibility&gt;            &lt;!-- boolean --&gt;
- *   &lt;open&gt;0&lt;/open&gt;                        &lt;!-- boolean --&gt;
- *   <span>&lt;atom:author&gt;...&lt;atom:author&gt;         &lt;!-- xmlns:atom --&gt;
- *   &lt;atom:link&gt;...&lt;/atom:link&gt;</span><span>            &lt;!-- xmlns:atom --&gt;</span>
- *   &lt;address&gt;<em>...</em>&lt;/address&gt;                &lt;!-- string --&gt;
- *   &lt;xal:AddressDetails&gt;...&lt;/xal:AddressDetails&gt;  &lt;!-- xmlns:xal --&gt;<br>  &lt;phoneNumber&gt;...&lt;/phoneNumber&gt;        &lt;!-- string --&gt;<br>  &lt;Snippet maxLines="2"&gt;<em>...</em>&lt;/Snippet&gt;   &lt;!-- string --&gt;
- *   &lt;description&gt;<em>...</em>&lt;/description&gt;        &lt;!-- string --&gt;
- *   <span><em>&lt;AbstractView&gt;...&lt;/AbstractView&gt;</em>      &lt;!-- Camera <em>or</em> LookAt --&gt;</span>
- *   &lt;<em>TimePrimitive</em>&gt;...&lt;/<em>TimePrimitive</em>&gt;
- *   &lt;styleUrl&gt;<em>...</em>&lt;/styleUrl&gt;              &lt;!-- anyURI --&gt;
- *   &lt;<em>StyleSelector&gt;...&lt;/StyleSelector&gt;</em>
- *   &lt;Region&gt;...&lt;/Region&gt;
- *   <span>&lt;Metadata&gt;...&lt;/Metadata&gt;              &lt;!-- deprecated in KML 2.2 --&gt;
- *   &lt;ExtendedData&gt;...&lt;/ExtendedData&gt;      &lt;!-- new in KML 2.2 --&gt;
- * <p>
- *   </span>&lt;!-- inherited from <em>Overlay</em> element --&gt;
- *   &lt;color&gt;ffffffff&lt;/color&gt;                  &lt;!-- kml:color --&gt;
- *   &lt;drawOrder&gt;0&lt;/drawOrder&gt;                 &lt;!-- int --&gt;
- *   &lt;Icon&gt;...&lt;/Icon&gt;
- * <p>
- *   &lt;!-- specific to ScreenOverlay --&gt;
- *   &lt;overlayXY x="double" y="double" xunits="fraction" yunits="fraction"/&gt;
- *     &lt;!-- vec2 --&gt;
- *     &lt;!-- xunits and yunits can be one of: fraction, pixels, <em>or</em> insetPixels --&gt;
- *   &lt;screenXY x="double" y="double" xunits="fraction" yunits="fraction"<em>/</em>&gt;
- *     &lt;!-- vec2 --&gt;
- *   &lt;rotationXY x="double" y="double" xunits="fraction" yunits"fraction"<em>/</em>&gt;
- *     &lt;!-- vec2 --&gt;
- *   &lt;size x="double" y="double" xunits="fraction" yunits="fraction"<em>/</em>&gt;
- *     &lt;!-- vec2 --&gt;
- *   &lt;rotation&gt;0&lt;/rotation&gt;                   &lt;!-- float --&gt;
- *  <strong>&lt;/ScreenOverlay&gt;</strong></pre>
+ * &lt;!-- specific to ScreenOverlay --&gt; &lt;overlayXY x="double" y="double"
+ * xunits="fraction" yunits="fraction"/&gt; &lt;!-- vec2 --&gt; &lt;!-- xunits
+ * and yunits can be one of: fraction, pixels, &lt;em&gt;or &lt;/em&gt;
+ * insetPixels --&gt; &lt;screenXY x="double" y="double" xunits="fraction"
+ * yunits="fraction" &lt;em&gt;/ &lt;/em&gt;&gt; &lt;!-- vec2 --&gt;
+ * &lt;rotationXY x="double" y="double" xunits="fraction" yunits"fraction"
+ * &lt;em&gt;/ &lt;/em&gt;&gt; &lt;!-- vec2 --&gt; &lt;size x="double"
+ * y="double" xunits="fraction" yunits="fraction" &lt;em&gt;/ &lt;/em&gt;&gt;
+ * &lt;!-- vec2 --&gt; &lt;rotation&gt;0&lt;/rotation&gt; &lt;!-- float --&gt;
+ * &lt;strong&gt;&lt;/ScreenOverlay&gt; &lt;/strong&gt; </pre>
  * <p>
  * Extends:
  *
- * @see: <Feature>
- * @see: <Overlay>
+ * @see: &lt;Feature&gt;
+ * @see: &lt;Overlay&gt;
  *
  * Contained By:
- * @see: <Document>
- * @see: <Folder>
- *
- *
+ * @see: &lt;Document&gt;
+ * @see: &lt;Folder&gt;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -112,157 +107,105 @@ import net.opengis.kml.xal.AddressDetails;
 })
 @XmlRootElement(name = "ScreenOverlay", namespace = "http://www.opengis.net/kml/2.2")
 public class ScreenOverlay
-        extends Overlay
-        implements Cloneable {
+  extends Overlay
+  implements Cloneable {
 
   /**
-   * <overlayxy>
+   * &lt;overlayxy&gt;
    * <p>
    * Specifies a point on (or outside of) the overlay image that is mapped to
-   * the screen coordinate (<screenXY>). It requires x and y values, and the
-   * units for those values.
-   * </p>
-   * <p>
-   * The x and y values can be specified in three different ways: as pixels
-   * ("pixels"), as fractions of the image ("fraction"), or as inset pixels
-   * ("insetPixels"), which is an offset in pixels from the upper right corner
-   * of the image. The x and y positions can be specified in different ways—for
-   * example, x can be in pixels and y can be a fraction. The origin of the
-   * coordinate system is in the lower left corner of the image. x - Either the
-   * number of pixels, a fractional component of the image, or a pixel inset
-   * indicating the x component of a point on the overlay image. y - Either the
-   * number of pixels, a fractional component of the image, or a pixel inset
-   * indicating the y component of a point on the overlay image. xunits - Units
-   * in which the x value is specified. A value of "fraction" indicates the x
-   * value is a fraction of the image. A value of "pixels" indicates the x value
-   * in pixels. A value of "insetPixels" indicates the indent from the right
-   * edge of the image. yunits - Units in which the y value is specified. A
-   * value of "fraction" indicates the y value is a fraction of the image. A
-   * value of "pixels" indicates the y value in pixels. A value of "insetPixels"
-   * indicates the indent from the top edge of the image.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * the screen coordinate ( &lt;screenXY&gt;). It requires x and y values, and
+   * the units for those values. The x and y values can be specified in three
+   * different ways: as pixels ("pixels"), as fractions of the image
+   * ("fraction"), or as inset pixels ("insetPixels"), which is an offset in
+   * pixels from the upper right corner of the image. The x and y positions can
+   * be specified in different ways—for example, x can be in pixels and y can be
+   * a fraction. The origin of the coordinate system is in the lower left corner
+   * of the image. x - Either the number of pixels, a fractional component of
+   * the image, or a pixel inset indicating the x component of a point on the
+   * overlay image. y - Either the number of pixels, a fractional component of
+   * the image, or a pixel inset indicating the y component of a point on the
+   * overlay image. xunits - Units in which the x value is specified. A value of
+   * "fraction" indicates the x value is a fraction of the image. A value of
+   * "pixels" indicates the x value in pixels. A value of "insetPixels"
+   * indicates the indent from the right edge of the image. yunits - Units in
+   * which the y value is specified. A value of "fraction" indicates the y value
+   * is a fraction of the image. A value of "pixels" indicates the y value in
+   * pixels. A value of "insetPixels" indicates the indent from the top edge of
+   * the image.
    */
   protected Vec2 overlayXY;
   /**
-   * <screenxy>
+   * &lt;screenxy&gt;
    * <p>
-   * Center the image:
-   * </p>
-   * <p>
-   * Center the image: <ScreenOverlay>
-   * <overlayXY x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
-   * <screenXY x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
-   * </ScreenOverlay>
-   * Place the image on the top left: <ScreenOverlay> <overlayXY x="0" y="1" xunits="fraction"
-   * yunits="fraction"/>
-   * <screenXY x="0" y="1" xunits="fraction" yunits="fraction"/>
-   * </ScreenOverlay> Place the image at the right of the screen:
-   * <ScreenOverlay> <overlayXY
-   * x="1" y="1" xunits="fraction" yunits="fraction"/> <screenXY x="1" y="1" xunits="fraction"
-   * yunits="fraction"/> </ScreenOverlay>
-   * </p>
-   * <p>
-   * For example, <screenXY x=".5" y=".5" xunits="fraction" yunits="fraction"/>
-   * indicates a point in the middle of the screen.
-   * </p>
-   * <p>
-   * Here are some examples:
-   * </p>
-   * <p>
-   * Place the image at the right of the screen:
-   * </p>
-   * <p>
-   * Place the image on the top left:
-   * </p>
-   * <p>
-   * Specifies a point relative to the screen origin that the overlay image is
-   * mapped to. The x and y values can be specified in three different ways: as
-   * pixels ("pixels"), as fractions of the screen ("fraction"), or as inset
-   * pixels ("insetPixels"), which is an offset in pixels from the upper right
-   * corner of the screen. The x and y positions can be specified in different
-   * ways—for example, x can be in pixels and y can be a fraction. The origin of
-   * the coordinate system is in the lower left corner of the screen. x - Either
-   * the number of pixels, a fractional component of the screen, or a pixel
-   * inset indicating the x component of a point on the screen. y - Either the
-   * number of pixels, a fractional component of the screen, or a pixel inset
-   * indicating the y component of a point on the screen. xunits - Units in
-   * which the x value is specified. A value of "fraction" indicates the x value
-   * is a fraction of the screen. A value of "pixels" indicates the x value in
-   * pixels. A value of "insetPixels" indicates the indent from the right edge
-   * of the screen. yunits - Units in which the y value is specified. A value of
-   * fraction indicates the y value is a fraction of the screen. A value of
-   * "pixels" indicates the y value in pixels. A value of "insetPixels"
-   * indicates the indent from the top edge of the screen.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * Center the image: Center the image: &lt;ScreenOverlay&gt; &lt;overlayXY
+   * x="0.5" y="0.5" xunits="fraction" yunits="fraction"/&gt; &lt;screenXY
+   * x="0.5" y="0.5" xunits="fraction" yunits="fraction"/&gt;
+   * &lt;/ScreenOverlay&gt; Place the image on the top left:
+   * &lt;ScreenOverlay&gt; &lt;overlayXY x="0" y="1" xunits="fraction"
+   * yunits="fraction"/&gt; &lt;screenXY x="0" y="1" xunits="fraction"
+   * yunits="fraction"/&gt; &lt;/ScreenOverlay&gt; Place the image at the right
+   * of the screen: &lt;ScreenOverlay&gt; &lt;overlayXY x="1" y="1"
+   * xunits="fraction" yunits="fraction"/&gt; &lt;screenXY x="1" y="1"
+   * xunits="fraction" yunits="fraction"/&gt; &lt;/ScreenOverlay&gt; For
+   * example, &lt;screenXY x=".5" y=".5" xunits="fraction"
+   * yunits="fraction"/&gt; indicates a point in the middle of the screen. Here
+   * are some examples: Place the image at the right of the screen: Place the
+   * image on the top left: Specifies a point relative to the screen origin that
+   * the overlay image is mapped to. The x and y values can be specified in
+   * three different ways: as pixels ("pixels"), as fractions of the screen
+   * ("fraction"), or as inset pixels ("insetPixels"), which is an offset in
+   * pixels from the upper right corner of the screen. The x and y positions can
+   * be specified in different ways—for example, x can be in pixels and y can be
+   * a fraction. The origin of the coordinate system is in the lower left corner
+   * of the screen. x - Either the number of pixels, a fractional component of
+   * the screen, or a pixel inset indicating the x component of a point on the
+   * screen. y - Either the number of pixels, a fractional component of the
+   * screen, or a pixel inset indicating the y component of a point on the
+   * screen. xunits - Units in which the x value is specified. A value of
+   * "fraction" indicates the x value is a fraction of the screen. A value of
+   * "pixels" indicates the x value in pixels. A value of "insetPixels"
+   * indicates the indent from the right edge of the screen. yunits - Units in
+   * which the y value is specified. A value of fraction indicates the y value
+   * is a fraction of the screen. A value of "pixels" indicates the y value in
+   * pixels. A value of "insetPixels" indicates the indent from the top edge of
+   * the screen.
    */
   protected Vec2 screenXY;
   /**
-   * <rotationxy>
+   * &lt;rotationxy&gt;
    * <p>
    * Point relative to the screen about which the screen overlay is rotated.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   protected Vec2 rotationXY;
   /**
-   * <size>
+   * &lt;size&gt;
    * <p>
-   * For example:
-   * </p>
-   * <p>
-   * Specifies the size of the image for the screen overlay, as follows: A value
-   * of −1 indicates to use the native dimension A value of 0 indicates to
-   * maintain the aspect ratio A value of n sets the value of the dimension
-   * </p>
-   * <p>
-   * To force the image to resize to 100px by 500px:
-   * </p>
-   * <p>
-   * To force the image to retain its horizontal dimension, but to take up 20
-   * percent of the vertical screen space:
-   * </p>
-   * <p>
-   * To force the image to retain its original x and y dimensions, set the
-   * values to −1:
-   * </p>
-   * <p>
-   * To force the image to retain its original x and y dimensions, set the
-   * values to −1: <size x="-1" y="-1" xunits="fraction" yunits="fraction"/> To
-   * force the image to retain its horizontal dimension, but to take up 20
-   * percent of the vertical screen space:
-   * <size x="-1" y="0.2" xunits="fraction" yunits="fraction"/> To force the
-   * image to resize to 100px by 500px:
-   * <size x="100" y="500" xunits="pixels" yunits="pixels"/>
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * For example: Specifies the size of the image for the screen overlay, as
+   * follows: A value of −1 indicates to use the native dimension A value of 0
+   * indicates to maintain the aspect ratio A value of n sets the value of the
+   * dimension To force the image to resize to 100px by 500px: To force the
+   * image to retain its horizontal dimension, but to take up 20 percent of the
+   * vertical screen space: To force the image to retain its original x and y
+   * dimensions, set the values to −1: To force the image to retain its original
+   * x and y dimensions, set the values to −1: &lt;size x="-1" y="-1"
+   * xunits="fraction" yunits="fraction"/&gt; To force the image to retain its
+   * horizontal dimension, but to take up 20 percent of the vertical screen
+   * space: &lt;size x="-1" y="0.2" xunits="fraction" yunits="fraction"/&gt; To
+   * force the image to resize to 100px by 500px: &lt;size x="100" y="500"
+   * xunits="pixels" yunits="pixels"/&gt;
    */
   protected Vec2 size;
   /**
-   * <rotation>
+   * &lt;rotation&gt;
    * <p>
    * Adjusts how the photo is placed inside the field of view. This element is
    * useful if your photo has been rotated and deviates slightly from a desired
-   * horizontal view.
-   * </p>
-   * <p>
-   * Indicates the angle of rotation of the parent object. A value of 0 means no
-   * rotation. The value is an angle in degrees counterclockwise starting from
-   * north. Use ±180 to indicate the rotation of the parent object from 0. The
-   * center of the <rotation>, if not (.5,.5), is specified in <rotationXY>.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * horizontal view. Indicates the angle of rotation of the parent object. A
+   * value of 0 means no rotation. The value is an angle in degrees
+   * counterclockwise starting from north. Use ±180 to indicate the rotation of
+   * the parent object from 0. The center of the &lt;rotation&gt;, if not
+   * (.5,.5), is specified in &lt;rotationXY&gt;.
    */
   @XmlElement(defaultValue = "0.0")
   protected double rotation;
@@ -270,21 +213,16 @@ public class ScreenOverlay
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> screenOverlaySimpleExtension;
   /**
-   * <Object>
+   * &lt;Object&gt;
    * <p>
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the <Update> mechanism is to be used.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;<strong>
-   * &lt;!-- <em>Object</em> id="ID" targetId="NCName" --&gt;
-   * &lt;!-- /<em>Object</em>&gt; --&gt;</strong></pre>
-   * <p>
-   * <p>
+   * assigned if the &lt;Update&gt; mechanism is to be used. Syntax:
+   * <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
+   * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
    * <p>
    */
   @XmlElement(name = "ScreenOverlayObjectExtensionGroup")
@@ -498,11 +436,8 @@ public class ScreenOverlay
   /**
    * Creates a new instance of {@link Vec2} and set it to overlayXY.
    * <p>
-   * This method is a short version for:    <code>
-   * Vec2 vec2 = new Vec2();
-   * this.setOverlayXY(vec2); </code>
-   * <p>
-   * <p>
+   * This method is a short version for: &lt;code&gt; Vec2 vec2 = new Vec2();
+   * this.setOverlayXY(vec2); &lt;/code&gt;
    */
   public Vec2 createAndSetOverlayXY() {
     Vec2 newValue = new Vec2();
@@ -513,11 +448,8 @@ public class ScreenOverlay
   /**
    * Creates a new instance of {@link Vec2} and set it to screenXY.
    * <p>
-   * This method is a short version for:    <code>
-   * Vec2 vec2 = new Vec2();
-   * this.setScreenXY(vec2); </code>
-   * <p>
-   * <p>
+   * This method is a short version for: &lt;code&gt; Vec2 vec2 = new Vec2();
+   * this.setScreenXY(vec2); &lt;/code&gt;
    */
   public Vec2 createAndSetScreenXY() {
     Vec2 newValue = new Vec2();
@@ -528,11 +460,8 @@ public class ScreenOverlay
   /**
    * Creates a new instance of {@link Vec2} and set it to rotationXY.
    * <p>
-   * This method is a short version for:    <code>
-   * Vec2 vec2 = new Vec2();
-   * this.setRotationXY(vec2); </code>
-   * <p>
-   * <p>
+   * This method is a short version for: &lt;code&gt; Vec2 vec2 = new Vec2();
+   * this.setRotationXY(vec2); &lt;/code&gt;
    */
   public Vec2 createAndSetRotationXY() {
     Vec2 newValue = new Vec2();
@@ -543,11 +472,8 @@ public class ScreenOverlay
   /**
    * Creates a new instance of {@link Vec2} and set it to size.
    * <p>
-   * This method is a short version for:    <code>
-   * Vec2 vec2 = new Vec2();
-   * this.setSize(vec2); </code>
-   * <p>
-   * <p>
+   * This method is a short version for: &lt;code&gt; Vec2 vec2 = new Vec2();
+   * this.setSize(vec2); &lt;/code&gt;
    */
   public Vec2 createAndSetSize() {
     Vec2 newValue = new Vec2();
@@ -569,7 +495,8 @@ public class ScreenOverlay
    *
    * @param screenOverlaySimpleExtension Objects of the following type are
    *                                     allowed in the list: {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public ScreenOverlay addToScreenOverlaySimpleExtension(final Object screenOverlaySimpleExtension) {
     this.getScreenOverlaySimpleExtension().add(screenOverlaySimpleExtension);
@@ -591,7 +518,8 @@ public class ScreenOverlay
    * @param screenOverlayObjectExtension Objects of the following type are
    *                                     allowed in the list:
    *                                     {@link AbstractObject}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
+   *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public ScreenOverlay addToScreenOverlayObjectExtension(final AbstractObject screenOverlayObjectExtension) {
     this.getScreenOverlayObjectExtension().add(screenOverlayObjectExtension);
@@ -763,7 +691,7 @@ public class ScreenOverlay
   /**
    * fluent setter
    *
-   * @see #setScreenOverlaySimpleExtension(List<Object>)
+   * @see #setScreenOverlaySimpleExtension(List &lt;Object&gt;)
    *
    * @param screenOverlaySimpleExtension required parameter
    */
@@ -775,7 +703,7 @@ public class ScreenOverlay
   /**
    * fluent setter
    *
-   * @see #setScreenOverlayObjectExtension(List<AbstractObject>)
+   * @see #setScreenOverlayObjectExtension(List &lt;AbstractObject&gt;)
    *
    * @param screenOverlayObjectExtension required parameter
    */

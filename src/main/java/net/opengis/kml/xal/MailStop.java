@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml.xal;
 
@@ -23,7 +23,7 @@ import java.util.Map;
 import javax.xml.bind.annotation.*;
 import javax.xml.namespace.QName;
 
-/**
+/*
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -54,7 +54,7 @@ public class MailStop implements Cloneable {
     super();
   }
 
-  /**
+  /*
    *
    */
   public List<AddressLine> getAddressLine() {
@@ -65,7 +65,6 @@ public class MailStop implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link MailStop.MailStopName}
    *
    */
@@ -74,7 +73,6 @@ public class MailStop implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link MailStop.MailStopName}
    *
    */
@@ -83,7 +81,6 @@ public class MailStop implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link MailStop.MailStopNumber}
    *
    */
@@ -92,7 +89,6 @@ public class MailStop implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link MailStop.MailStopNumber}
    *
    */
@@ -100,7 +96,7 @@ public class MailStop implements Cloneable {
     this.mailStopNumber = value;
   }
 
-  /**
+  /*
    *
    */
   public List<Object> getAny() {
@@ -111,7 +107,6 @@ public class MailStop implements Cloneable {
   }
 
   /**
-   *
    * @return possible object is {@link String}
    *
    */
@@ -120,7 +115,6 @@ public class MailStop implements Cloneable {
   }
 
   /**
-   *
    * @param value allowed object is {@link String}
    *
    */
@@ -129,7 +123,6 @@ public class MailStop implements Cloneable {
   }
 
   /**
-   *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
@@ -200,11 +193,9 @@ public class MailStop implements Cloneable {
 
   /**
    * Creates a new instance of {@link AddressLine} and adds it to addressLine.
-   * This method is a short version for:    <code>
+   * This method is a short version for:     &lt;code&gt;
    * AddressLine addressLine = new AddressLine();
-   * this.getAddressLine().add(addressLine); </code>
-   * <p>
-   * <p>
+   * this.getAddressLine().add(addressLine);  &lt;/code&gt;
    */
   public AddressLine createAndAddAddressLine() {
     AddressLine newValue = new AddressLine();
@@ -215,12 +206,10 @@ public class MailStop implements Cloneable {
   /**
    * Creates a new instance of {@link MailStop.MailStopName} and set it to
    * mailStopName.
-   * <p>
-   * This method is a short version for:    <code>
+   *   
+   * This method is a short version for:     &lt;code&gt;
    * MailStopName mailStopName = new MailStopName();
-   * this.setMailStopName(mailStopName); </code>
-   * <p>
-   * <p>
+   * this.setMailStopName(mailStopName);  &lt;/code&gt;
    */
   public MailStop.MailStopName createAndSetMailStopName() {
     MailStop.MailStopName newValue = new MailStop.MailStopName();
@@ -231,12 +220,10 @@ public class MailStop implements Cloneable {
   /**
    * Creates a new instance of {@link MailStop.MailStopNumber} and set it to
    * mailStopNumber.
-   * <p>
-   * This method is a short version for:    <code>
+   *   
+   * This method is a short version for:     &lt;code&gt;
    * MailStopNumber mailStopNumber = new MailStopNumber();
-   * this.setMailStopNumber(mailStopNumber); </code>
-   * <p>
-   * <p>
+   * this.setMailStopNumber(mailStopNumber);  &lt;/code&gt;
    */
   public MailStop.MailStopNumber createAndSetMailStopNumber() {
     MailStop.MailStopNumber newValue = new MailStop.MailStopNumber();
@@ -246,13 +233,12 @@ public class MailStop implements Cloneable {
 
   /**
    * Sets the value of the addressLine property Objects of the following type(s)
-   * are allowed in the list List<AddressLine>.
-   * <p>
+   * are allowed in the list List &lt;AddressLine&gt;.
+   *   
    * Note:
-   * <p>
+   *   
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withAddressLine} instead.
-   *
    *
    * @param addressLine
    */
@@ -265,7 +251,7 @@ public class MailStop implements Cloneable {
    *
    * @param addressLine Objects of the following type are allowed in the list:
    *                    {@link AddressLine}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public MailStop addToAddressLine(final AddressLine addressLine) {
     this.getAddressLine().add(addressLine);
@@ -274,13 +260,12 @@ public class MailStop implements Cloneable {
 
   /**
    * Sets the value of the any property Objects of the following type(s) are
-   * allowed in the list List<Object>.
-   * <p>
+   * allowed in the list List &lt;Object&gt;.
+   *   
    * Note:
-   * <p>
+   *   
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withAny} instead.
-   *
    *
    * @param any
    */
@@ -293,7 +278,7 @@ public class MailStop implements Cloneable {
    *
    * @param any Objects of the following type are allowed in the list:
    *            {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public MailStop addToAny(final Object any) {
     this.getAny().add(any);
@@ -303,7 +288,7 @@ public class MailStop implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setAddressLine(List<AddressLine>)
+   * @see #setAddressLine(List &lt;AddressLine&gt;)
    *
    * @param addressLine required parameter
    */
@@ -339,7 +324,7 @@ public class MailStop implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setAny(List<Object>)
+   * @see #setAny(List &lt;Object&gt;)
    *
    * @param any required parameter
    */
@@ -381,7 +366,7 @@ public class MailStop implements Cloneable {
     return copy;
   }
 
-  /**
+  /*
    *
    */
   @XmlAccessorType(XmlAccessType.FIELD)
@@ -407,7 +392,6 @@ public class MailStop implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -416,7 +400,6 @@ public class MailStop implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -425,7 +408,6 @@ public class MailStop implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -434,7 +416,6 @@ public class MailStop implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -443,7 +424,6 @@ public class MailStop implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -452,7 +432,6 @@ public class MailStop implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -461,7 +440,6 @@ public class MailStop implements Cloneable {
     }
 
     /**
-     *
      * @return always non-null
      */
     public Map<QName, String> getOtherAttributes() {
@@ -563,7 +541,7 @@ public class MailStop implements Cloneable {
 
   }
 
-  /**
+  /*
    *
    */
   @XmlAccessorType(XmlAccessType.FIELD)
@@ -589,7 +567,6 @@ public class MailStop implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -598,7 +575,6 @@ public class MailStop implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -607,7 +583,6 @@ public class MailStop implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -616,7 +591,6 @@ public class MailStop implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -625,7 +599,6 @@ public class MailStop implements Cloneable {
     }
 
     /**
-     *
      * @return possible object is {@link String}
      *
      */
@@ -634,7 +607,6 @@ public class MailStop implements Cloneable {
     }
 
     /**
-     *
      * @param value allowed object is {@link String}
      *
      */
@@ -643,7 +615,6 @@ public class MailStop implements Cloneable {
     }
 
     /**
-     *
      * @return always non-null
      */
     public Map<QName, String> getOtherAttributes() {

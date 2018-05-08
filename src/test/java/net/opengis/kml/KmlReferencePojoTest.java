@@ -58,7 +58,7 @@ public final class KmlReferencePojoTest implements IKMLReference {
     balloonstyle.setBgColor("ffffffbb");
     balloonstyle.setTextColor("ff000000");
     balloonstyle
-            .setText("<![CDATA[" + "<b><font color='#CC0000' size='+3'>$[name]</font></b>" + "<br/><br/>" + "<font face='Courier'>$[description]</font>" + "<br/><br/>" + "Extra text that will appear in the description balloon" + "<br/><br/>" + "<!-- insert the to/from hyperlinks -->" + "$[geDirections]]]>");
+      .setText("<![CDATA[" + "<b><font color='#CC0000' size='+3'>$[name]</font></b>" + "<br/><br/>" + "<font face='Courier'>$[description]</font>" + "<br/><br/>" + "Extra text that will appear in the description balloon" + "<br/><br/>" + "<!-- insert the to/from hyperlinks -->" + "$[geDirections]]]>");
 
     final Placemark placemark = new Placemark();
     document.getFeature().add(placemark);
@@ -140,7 +140,7 @@ public final class KmlReferencePojoTest implements IKMLReference {
     PostBox postBox = new PostBox(new PostBox.PostBoxNumber());
     PostalRoute postalRoute = new PostalRoute(new ArrayList<>(), new PostalRoute.PostalRouteNumber());
     Premise.PremiseNumberRange premisenumberrange = new Premise.PremiseNumberRange(new Premise.PremiseNumberRange.PremiseNumberRangeFrom(
-            new ArrayList<>()), new Premise.PremiseNumberRange.PremiseNumberRangeTo(new ArrayList<>()));
+      new ArrayList<>()), new Premise.PremiseNumberRange.PremiseNumberRangeTo(new ArrayList<>()));
     Premise premise = new Premise(new Premise.PremiseLocation(), new ArrayList<>(), premisenumberrange);
 
     AddressDetails.Address xalAddress = new AddressDetails.Address();

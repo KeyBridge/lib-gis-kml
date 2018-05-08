@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml.gx;
 
@@ -22,7 +22,7 @@ import javax.xml.bind.annotation.*;
 import net.opengis.kml.AbstractObject;
 import net.opengis.kml.annotations.Obvious;
 
-/**
+/*
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -31,8 +31,8 @@ import net.opengis.kml.annotations.Obvious;
 })
 @XmlRootElement(name = "ViewerOptions", namespace = "http://www.google.com/kml/ext/2.2")
 public class ViewerOptions
-        extends AbstractObject
-        implements Cloneable {
+  extends AbstractObject
+  implements Cloneable {
 
   @XmlElement(required = true)
   protected List<Option> option;
@@ -51,14 +51,14 @@ public class ViewerOptions
    * Default no-arg constructor is private. Use overloaded constructor instead!
    * (Temporary solution, till a better and more suitable ObjectFactory is
    * created.)
-   * <p>
+   *   
    */
   @Deprecated
   private ViewerOptions() {
     super();
   }
 
-  /**
+  /*
    *
    */
   public List<Option> getOption() {
@@ -103,11 +103,9 @@ public class ViewerOptions
 
   /**
    * Creates a new instance of {@link Option} and adds it to option. This method
-   * is a short version for:    <code>
+   * is a short version for:     &lt;code&gt;
    * Option option = new Option();
-   * this.getOption().add(option); </code>
-   * <p>
-   * <p>
+   * this.getOption().add(option);  &lt;/code&gt;
    */
   public Option createAndAddOption() {
     Option newValue = new Option();
@@ -117,13 +115,12 @@ public class ViewerOptions
 
   /**
    * Sets the value of the option property Objects of the following type(s) are
-   * allowed in the list List<Option>.
-   * <p>
+   * allowed in the list List &lt;Option&gt;.
+   *   
    * Note:
-   * <p>
+   *   
    * This method does not make use of the fluent pattern.If you would like to
    * make it fluent, use {@link #withOption} instead.
-   *
    *
    * @param option
    */
@@ -136,7 +133,7 @@ public class ViewerOptions
    *
    * @param option Objects of the following type are allowed in the list:
    *               {@link Option}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public ViewerOptions addToOption(final Option option) {
     this.getOption().add(option);

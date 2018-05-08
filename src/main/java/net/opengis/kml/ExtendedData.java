@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -22,46 +22,31 @@ import javax.xml.bind.annotation.*;
 import org.w3c.dom.Element;
 
 /**
- * <extendeddata>
- * <p>
- * Adding untyped data/value pairs using the <Data> element (basic) Declaring
- * new typed fields using the <Schema> element and then instancing them using
- * the <SchemaData>
+ *  &lt;extendeddata&gt;
+ *   
+ * Adding untyped data/value pairs using the  &lt;Data&gt; element (basic) Declaring
+ * new typed fields using the  &lt;Schema&gt; element and then instancing them using
+ * the  &lt;SchemaData&gt;
  * element (advanced) Referring to XML elements defined in other namespaces by
- * referencing the external namespace within the KML file (basic)
- * </p>
- * <p>
- * Allows you to add custom data to a KML file. This data can be (1) data that
- * references an external XML schema, (2) untyped data/value pairs, or (3) typed
- * data. A given KML Feature can contain a combination of these types of custom
- * data.
- * </p>
- * <p>
- * For more information, see Adding Custom Data in "Topics in KML."
- * </p>
- * <p>
- * The ExtendedData element offers three techniques for adding custom data to a
- * KML Feature (NetworkLink, Placemark, GroundOverlay, PhotoOverlay,
- * ScreenOverlay, Document, Folder). These techniques are
- * </p>
- * <p>
- * These techniques can be combined within a single KML file or Feature for
- * different pieces of data.
- * </p>
- * <p>
- * Syntax:
- * <pre>&lt;ExtendedData&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>  &lt;Data name="string"&gt;<br>&nbsp;   &lt;displayName&gt;...&lt;/displayName&gt;&nbsp;&nbsp;&nbsp; &lt;!-- string --&gt;<br> &nbsp;&nbsp; &lt;value&gt;...&lt;/value&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;!-- string --&gt;<br>  &lt;/Data&gt;
- *   &lt;SchemaData schemaUrl="<em>anyURI</em>"&gt;<br>    &lt;SimpleData name=""&gt; ... &lt;/SimpleData&gt;&nbsp;&nbsp; &lt;!-- string --&gt;<br>  &lt;/SchemaData&gt;
+ * referencing the external namespace within the KML file (basic) Allows you to
+ * add custom data to a KML file. This data can be (1) data that references an
+ * external XML schema, (2) untyped data/value pairs, or (3) typed data. A given
+ * KML Feature can contain a combination of these types of custom data. For more
+ * information, see Adding Custom Data in "Topics in KML." The ExtendedData
+ * element offers three techniques for adding custom data to a KML Feature
+ * (NetworkLink, Placemark, GroundOverlay, PhotoOverlay, ScreenOverlay,
+ * Document, Folder). These techniques are These techniques can be combined
+ * within a single KML file or Feature for different pieces of data. Syntax:
+ *  &lt;pre&gt;&lt;ExtendedData&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;br&gt;  &lt;Data name="string"&gt; &lt;br&gt;&nbsp;   &lt;displayName&gt;...&lt;/displayName&gt;&nbsp;&nbsp;&nbsp; &lt;!-- string --&gt; &lt;br&gt; &nbsp;&nbsp; &lt;value&gt;...&lt;/value&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;!-- string --&gt; &lt;br&gt;  &lt;/Data&gt;
+ *   &lt;SchemaData schemaUrl=" &lt;em&gt;anyURI &lt;/em&gt;"&gt; &lt;br&gt;    &lt;SimpleData name=""&gt; ... &lt;/SimpleData&gt;&nbsp;&nbsp; &lt;!-- string --&gt; &lt;br&gt;  &lt;/SchemaData&gt;
  *   &lt;namespace_prefix:other&gt;...&lt;/namespace_prefix:other&gt;
- * &lt;/ExtendedData&gt;</pre>
- * <p>
+ * &lt;/ExtendedData&gt; </pre>
+ *   
  * Contained By:
  *
- * @see: <Feature>
+ * @see:  &lt;Feature&gt;
  *
  * See Also: Schema
- *
- *
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -74,45 +59,33 @@ import org.w3c.dom.Element;
 public class ExtendedData implements Cloneable {
 
   /**
-   * <data name ="string">
-   * <p>
+   *  &lt;data name ="string"&gt;
+   *   
    * Creates an untyped name/value pair. The name can have two versions: name
    * and displayName. The name attribute is used to identify the data pair
    * within the KML file. The displayName element is used when a properly
    * formatted name, with spaces and HTML formatting, is displayed in Google
-   * Earth. In the <text> element of <BalloonStyle>, the notation
-   * $[name:displayName] is replaced with <displayName>. If you substitute the
-   * value of the name attribute of the <Data> element in this format (for
-   * example, $[holeYardage], the attribute value is replaced with <value>. By
+   * Earth. In the  &lt;text&gt; element of  &lt;BalloonStyle&gt;, the notation
+   * $[name:displayName] is replaced with  &lt;displayName&gt;. If you substitute the
+   * value of the name attribute of the  &lt;Data&gt; element in this format (for
+   * example, $[holeYardage], the attribute value is replaced with  &lt;value&gt;. By
    * default, the Placemark's balloon displays the name/value pairs associated
    * with it.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
    */
   @XmlElement(name = "Data")
   protected List<Data> data;
   /**
-   * <schemadata schemaurl="anyuri">
-   * <p>
-   * The <schemaURL> can be a full URL, a reference to a Schema ID defined in an
+   *  &lt;schemadata schemaurl="anyuri"&gt;
+   *   
+   * The  &lt;schemaURL&gt; can be a full URL, a reference to a Schema ID defined in an
    * external KML file, or a reference to a Schema ID defined in the same KML
-   * file. All of the following specifications are acceptable:
-   * </p>
-   * <p>
-   * The Schema element is always a child of Document. The ExtendedData element
-   * is a child of the Feature that contains the custom data.
-   * </p>
-   * <p>
-   * This element is used in conjunction with <Schema> to add typed custom data
-   * to a KML Feature. The Schema element (identified by the schemaUrl
-   * attribute) declares the custom data type. The actual data objects
-   * ("instances" of the custom data) are defined using the SchemaData element.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * file. All of the following specifications are acceptable: The Schema
+   * element is always a child of Document. The ExtendedData element is a child
+   * of the Feature that contains the custom data. This element is used in
+   * conjunction with  &lt;Schema&gt; to add typed custom data to a KML Feature. The
+   * Schema element (identified by the schemaUrl attribute) declares the custom
+   * data type. The actual data objects ("instances" of the custom data) are
+   * defined using the SchemaData element.
    */
   @XmlElement(name = "SchemaData")
   protected List<SchemaData> schemaData;
@@ -204,10 +177,9 @@ public class ExtendedData implements Cloneable {
 
   /**
    * Creates a new instance of {@link Data} and adds it to data. This method is
-   * a short version for:    <code>
+   * a short version for:     &lt;code&gt;
    * Data data = new Data();
-   * this.getData().add(data); </code>
-   *
+   * this.getData().add(data);  &lt;/code&gt;
    *
    * @param value required parameter
    */
@@ -219,11 +191,9 @@ public class ExtendedData implements Cloneable {
 
   /**
    * Creates a new instance of {@link SchemaData} and adds it to schemaData.
-   * This method is a short version for:    <code>
+   * This method is a short version for:     &lt;code&gt;
    * SchemaData schemaData = new SchemaData();
-   * this.getSchemaData().add(schemaData); </code>
-   * <p>
-   * <p>
+   * this.getSchemaData().add(schemaData);  &lt;/code&gt;
    */
   public SchemaData createAndAddSchemaData() {
     SchemaData newValue = new SchemaData();
@@ -245,7 +215,7 @@ public class ExtendedData implements Cloneable {
    *
    * @param data Objects of the following type are allowed in the list:
    *             {@link Data}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public ExtendedData addToData(final Data data) {
     this.getData().add(data);
@@ -266,7 +236,7 @@ public class ExtendedData implements Cloneable {
    *
    * @param schemaData Objects of the following type are allowed in the list:
    *                   {@link SchemaData}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public ExtendedData addToSchemaData(final SchemaData schemaData) {
     this.getSchemaData().add(schemaData);
@@ -287,7 +257,7 @@ public class ExtendedData implements Cloneable {
    *
    * @param any Objects of the following type are allowed in the list:
    *            {@link Object}{@link Element}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public ExtendedData addToAny(final Object any) {
     this.getAny().add(any);
@@ -297,7 +267,7 @@ public class ExtendedData implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setData(List<Data>)
+   * @see #setData(List &lt;Data&gt;)
    *
    * @param data required parameter
    */
@@ -309,7 +279,7 @@ public class ExtendedData implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setSchemaData(List<SchemaData>)
+   * @see #setSchemaData(List &lt;SchemaData&gt;)
    *
    * @param schemaData required parameter
    */
@@ -321,7 +291,7 @@ public class ExtendedData implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setAny(List<Object>)
+   * @see #setAny(List &lt;Object&gt;)
    *
    * @param any required parameter
    */

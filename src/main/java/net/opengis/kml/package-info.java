@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 @javax.xml.bind.annotation.XmlSchema(namespace = "http://www.opengis.net/kml/2.2", xmlns = {
   @javax.xml.bind.annotation.XmlNs(prefix = "kml", namespaceURI = "http://www.opengis.net/kml/2.2")

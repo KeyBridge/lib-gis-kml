@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -22,9 +22,7 @@ import javax.xml.bind.annotation.*;
 import org.w3c.dom.Element;
 
 /**
- * <metadata> (deprecated in kml 2.2; use <extendeddata> instead)
- * <p>
- * <p>
+ *  &lt;metadata&gt; (deprecated in kml 2.2; use  &lt;extendeddata&gt; instead)
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "MetadataType", propOrder = {
@@ -96,7 +94,7 @@ public class Metadata implements Cloneable {
    *
    * @param any Objects of the following type are allowed in the list:
    *            {@link Object}{@link Element}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Metadata addToAny(final Object any) {
     this.getAny().add(any);
@@ -106,7 +104,7 @@ public class Metadata implements Cloneable {
   /**
    * fluent setter
    *
-   * @see #setAny(List<Object>)
+   * @see #setAny(List &lt;Object&gt;)
    *
    * @param any required parameter
    */

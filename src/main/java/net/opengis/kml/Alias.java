@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see  http://www.gnu.org/licenses.
  */
 package net.opengis.kml;
 
@@ -22,17 +22,13 @@ import javax.xml.bind.annotation.*;
 import net.opengis.kml.annotations.Obvious;
 
 /**
- * <alias> contains a mapping from a <sourcehref> to a <targethref>:
- * <p>
- * <targetHref> Specifies the texture file to be fetched by Google Earth. This
+ *  &lt;alias&gt; contains a mapping from a  &lt;sourcehref&gt; to a  &lt;targethref&gt;:
+ *   
+ *  &lt;targetHref&gt; Specifies the texture file to be fetched by Google Earth. This
  * reference can be a relative reference to an image file within the .kmz
  * archive, or it can be an absolute reference to the file (for example, a URL).
- * <sourceHref> Is the path specified for the texture file in the Collada .dae
+ *  &lt;sourceHref&gt; Is the path specified for the texture file in the Collada .dae
  * file.
- * </p>
- * <p>
- * <p>
- * <p>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "AliasType", propOrder = {
@@ -43,58 +39,41 @@ import net.opengis.kml.annotations.Obvious;
 })
 @XmlRootElement(name = "Alias", namespace = "http://www.opengis.net/kml/2.2")
 public class Alias
-        extends AbstractObject
-        implements Cloneable {
+  extends AbstractObject
+  implements Cloneable {
 
   /**
-   * <targethref> (required)
-   * <p>
+   *  &lt;targethref&gt; (required)
+   *   
    * A URL that specifies the .kml or .kmz file whose data (within Google Earth)
-   * is to be modified by an <Update> element. This KML file must already have
-   * been loaded via a <NetworkLink>. In that file, the element to be modified
-   * must already have an explicit id attribute defined for it.
-   * </p>
-   * <p>
-   * Specifies the texture file to be fetched by Google Earth. This reference
-   * can be a relative reference to an image file within the .kmz archive, or it
-   * can be an absolute reference to the file (for example, a URL).
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * is to be modified by an  &lt;Update&gt; element. This KML file must already have
+   * been loaded via a  &lt;NetworkLink&gt;. In that file, the element to be modified
+   * must already have an explicit id attribute defined for it. Specifies the
+   * texture file to be fetched by Google Earth. This reference can be a
+   * relative reference to an image file within the .kmz archive, or it can be
+   * an absolute reference to the file (for example, a URL).
    */
   @XmlSchemaType(name = "anyURI")
   protected String targetHref;
   /**
-   * <sourcehref>
-   * <p>
-   * <targetHref> Specifies the texture file to be fetched by Google Earth. This
+   *  &lt;sourcehref&gt;
+   *   
+   *  &lt;targetHref&gt; Specifies the texture file to be fetched by Google Earth. This
    * reference can be a relative reference to an image file within the .kmz
    * archive, or it can be an absolute reference to the file (for example, a
-   * URL). <sourceHref> Is the path specified for the texture file in the
-   * Collada .dae file.
-   * </p>
-   * <p>
-   * In Google Earth, if this mapping is not supplied, the following rules are
-   * used to locate the textures referenced in the Collada (.dae) file: No path:
-   * If the texture name does not include a path, Google Earth looks for the
-   * texture in the same directory as the .dae file that references it. Relative
-   * path: If the texture name includes a relative path (for example,
-   * ../images/mytexture.jpg), Google Earth interprets the path as being
-   * relative to the .dae file that references it. Absolute path: If the texture
-   * name is an absolute path (c:\mytexture.jpg) or a network path (for example,
-   * http://myserver.com/mytexture.jpg), Google Earth looks for the file in the
-   * specified location, regardless of where the .dae file is located.
-   * </p>
-   * <p>
-   * Is the path specified for the texture file in the Collada .dae file.
-   * </p>
-   * <p>
-   * Is the path specified for the texture file in the Collada .dae file.
-   * </p>
-   * <p>
-   * <p>
-   * <p>
+   * URL).  &lt;sourceHref&gt; Is the path specified for the texture file in the
+   * Collada .dae file. In Google Earth, if this mapping is not supplied, the
+   * following rules are used to locate the textures referenced in the Collada
+   * (.dae) file: No path: If the texture name does not include a path, Google
+   * Earth looks for the texture in the same directory as the .dae file that
+   * references it. Relative path: If the texture name includes a relative path
+   * (for example, ../images/mytexture.jpg), Google Earth interprets the path as
+   * being relative to the .dae file that references it. Absolute path: If the
+   * texture name is an absolute path (c:\mytexture.jpg) or a network path (for
+   * example, http://myserver.com/mytexture.jpg), Google Earth looks for the
+   * file in the specified location, regardless of where the .dae file is
+   * located. Is the path specified for the texture file in the Collada .dae
+   * file. Is the path specified for the texture file in the Collada .dae file.
    */
   @XmlSchemaType(name = "anyURI")
   protected String sourceHref;
@@ -102,22 +81,17 @@ public class Alias
   @XmlSchemaType(name = "anySimpleType")
   protected List<Object> aliasSimpleExtension;
   /**
-   * <Object>
-   * <p>
+   *  &lt;Object&gt;
+   *   
    * This is an abstract base class and cannot be used directly in a KML file.
    * It provides the id attribute, which allows unique identification of a KML
    * element, and the targetId attribute, which is used to reference objects
    * that have already been loaded into Google Earth. The id attribute must be
-   * assigned if the <Update> mechanism is to be used.
-   * </p>
-   * <p>
-   * Syntax:
-   * <pre>&lt;!-- abstract element; do not create --&gt;<strong>
-   * &lt;!-- <em>Object</em> id="ID" targetId="NCName" --&gt;
-   * &lt;!-- /<em>Object</em>&gt; --&gt;</strong></pre>
-   * <p>
-   * <p>
-   * <p>
+   * assigned if the  &lt;Update&gt; mechanism is to be used. Syntax:
+   *  <pre>&lt;!-- abstract element; do not create --&gt; &lt;strong&gt;
+   * &lt;!--  &lt;em&gt;Object &lt;/em&gt; id="ID" targetId="NCName" --&gt;
+   * &lt;!-- / &lt;em&gt;Object &lt;/em&gt;&gt; --&gt; &lt;/strong&gt; </pre>
+   *   
    */
   @XmlElement(name = "AliasObjectExtensionGroup")
   protected List<AbstractObject> aliasObjectExtension;
@@ -259,7 +233,7 @@ public class Alias
    *
    * @param aliasSimpleExtension Objects of the following type are allowed in
    *                             the list: {@link Object}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Alias addToAliasSimpleExtension(final Object aliasSimpleExtension) {
     this.getAliasSimpleExtension().add(aliasSimpleExtension);
@@ -280,7 +254,7 @@ public class Alias
    *
    * @param aliasObjectExtension Objects of the following type are allowed in
    *                             the list: {@link AbstractObject}
-   * @return <tt>true</tt> (as general contract of <tt>Collection.add</tt>).
+   * @return  &lt;tt&gt;true &lt;/tt&gt; (as general contract of  &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
   public Alias addToAliasObjectExtension(final AbstractObject aliasObjectExtension) {
     this.getAliasObjectExtension().add(aliasObjectExtension);
@@ -331,7 +305,7 @@ public class Alias
   /**
    * fluent setter
    *
-   * @see #setAliasSimpleExtension(List<Object>)
+   * @see #setAliasSimpleExtension(List &lt;Object&gt;)
    *
    * @param aliasSimpleExtension required parameter
    */
@@ -343,7 +317,7 @@ public class Alias
   /**
    * fluent setter
    *
-   * @see #setAliasObjectExtension(List<AbstractObject>)
+   * @see #setAliasObjectExtension(List &lt;AbstractObject&gt;)
    *
    * @param aliasObjectExtension required parameter
    */
