@@ -26,7 +26,7 @@ be used for validating the corresponding KML files. The semantic application
 layer, which is found on top of the JAXB layer, is abstracted from the raw generated
 classes and defines a well-shaped API.
 
-This library started with a fork of code from the micromata.de Java API for KML 
+This library started with a fork of code from the micromata.de Java API for KML
 (JAK) project, then made a quick u-turn to provide only standard-compliant
 functionality in support of our GIS DTO library.
 
@@ -45,6 +45,6 @@ Copyright (C) 2017 Key Bridge. GNU General Public License Version 3.
 
   * [OGC KML v2.2](doc/xsd/ogckml22.xsd)  XML Schema Document for OGC KML
   * [KML Extension v2.2](doc/xsd/kml22gx.xsd)  Google extensions to OGC KML
-  
-  
-  
+
+
+
