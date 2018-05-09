@@ -232,7 +232,7 @@ public class LatLonQuad
   }
 
   /**
-   * Creates a new instance of {@link List}{@link Coordinate} and set it to
+   * Creates a new instance of {@code List}{@code Coordinate} and set it to
    * this.coordinates.
    * <p>
    * This method is a short version for:

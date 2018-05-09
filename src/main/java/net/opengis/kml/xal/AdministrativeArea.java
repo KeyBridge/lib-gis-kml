@@ -111,7 +111,7 @@ public class AdministrativeArea implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link AdministrativeArea.SubAdministrativeArea}
+   * @return possible object is {@code AdministrativeArea.SubAdministrativeArea}
    *
    */
   public AdministrativeArea.SubAdministrativeArea getSubAdministrativeArea() {
@@ -120,7 +120,7 @@ public class AdministrativeArea implements Cloneable {
 
   /**
    * @param value allowed object is
-   *              {@link AdministrativeArea.SubAdministrativeArea}
+   *              {@code AdministrativeArea.SubAdministrativeArea}
    *
    */
   public void setSubAdministrativeArea(AdministrativeArea.SubAdministrativeArea value) {
@@ -128,7 +128,7 @@ public class AdministrativeArea implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link Locality}
+   * @return possible object is {@code Locality}
    *
    */
   public Locality getLocality() {
@@ -136,7 +136,7 @@ public class AdministrativeArea implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link Locality}
+   * @param value allowed object is {@code Locality}
    *
    */
   public void setLocality(Locality value) {
@@ -144,7 +144,7 @@ public class AdministrativeArea implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link PostOffice}
+   * @return possible object is {@code PostOffice}
    *
    */
   public PostOffice getPostOffice() {
@@ -152,7 +152,7 @@ public class AdministrativeArea implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link PostOffice}
+   * @param value allowed object is {@code PostOffice}
    *
    */
   public void setPostOffice(PostOffice value) {
@@ -160,7 +160,7 @@ public class AdministrativeArea implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link PostalCode}
+   * @return possible object is {@code PostalCode}
    *
    */
   public PostalCode getPostalCode() {
@@ -168,7 +168,7 @@ public class AdministrativeArea implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link PostalCode}
+   * @param value allowed object is {@code PostalCode}
    *
    */
   public void setPostalCode(PostalCode value) {
@@ -186,7 +186,7 @@ public class AdministrativeArea implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getUnderscore() {
@@ -194,7 +194,7 @@ public class AdministrativeArea implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setUnderscore(String value) {
@@ -202,7 +202,7 @@ public class AdministrativeArea implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getUsage() {
@@ -210,7 +210,7 @@ public class AdministrativeArea implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setUsage(String value) {
@@ -218,7 +218,7 @@ public class AdministrativeArea implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getIndicator() {
@@ -226,7 +226,7 @@ public class AdministrativeArea implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setIndicator(String value) {
@@ -343,7 +343,7 @@ public class AdministrativeArea implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link AddressLine} and adds it to addressLine.
+   * Creates a new instance of {@code AddressLine} and adds it to addressLine.
    * This method is a short version for: &lt;code&gt; AddressLine addressLine =
    * new AddressLine(); this.getAddressLine().add(addressLine); &lt;/code&gt;
    */
@@ -354,7 +354,7 @@ public class AdministrativeArea implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link AdministrativeArea.AdministrativeAreaName}
+   * Creates a new instance of {@code AdministrativeArea.AdministrativeAreaName}
    * and adds it to administrativeAreaName. This method is a short version for:
    * &lt;code&gt; AdministrativeAreaName administrativeAreaName = new
    * AdministrativeAreaName();
@@ -367,7 +367,7 @@ public class AdministrativeArea implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link AdministrativeArea.SubAdministrativeArea}
+   * Creates a new instance of {@code AdministrativeArea.SubAdministrativeArea}
    * and set it to subAdministrativeArea.
    * <p>
    * This method is a short version for: &lt;code&gt; SubAdministrativeArea
@@ -385,7 +385,7 @@ public class AdministrativeArea implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Locality} and set it to locality.
+   * Creates a new instance of {@code Locality} and set it to locality.
    * <p>
    * This method is a short version for: &lt;code&gt; Locality locality = new
    * Locality(); this.setLocality(locality); &lt;/code&gt;
@@ -402,7 +402,7 @@ public class AdministrativeArea implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link PostOffice} and set it to postOffice.
+   * Creates a new instance of {@code PostOffice} and set it to postOffice.
    * <p>
    * This method is a short version for: &lt;code&gt; PostOffice postOffice =
    * new PostOffice(); this.setPostOffice(postOffice); &lt;/code&gt;
@@ -414,7 +414,7 @@ public class AdministrativeArea implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link PostalCode} and set it to postalCode.
+   * Creates a new instance of {@code PostalCode} and set it to postalCode.
    * <p>
    * This method is a short version for: &lt;code&gt; PostalCode postalCode =
    * new PostalCode(); this.setPostalCode(postalCode); &lt;/code&gt;
@@ -432,7 +432,7 @@ public class AdministrativeArea implements Cloneable {
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withAddressLine} instead.
+   * make it fluent, use {@code #withAddressLine} instead.
    *
    * @param addressLine
    */
@@ -444,7 +444,7 @@ public class AdministrativeArea implements Cloneable {
    * add a value to the addressLine property collection
    *
    * @param addressLine Objects of the following type are allowed in the list:
-   *                    {@link AddressLine}
+   *                    {@code AddressLine}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -461,7 +461,7 @@ public class AdministrativeArea implements Cloneable {
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withAdministrativeAreaName} instead.
+   * make it fluent, use {@code #withAdministrativeAreaName} instead.
    *
    * @param administrativeAreaName
    */
@@ -474,7 +474,7 @@ public class AdministrativeArea implements Cloneable {
    *
    * @param administrativeAreaName Objects of the following type are allowed in
    *                               the list:
-   *                               {@link AdministrativeArea.AdministrativeAreaName}
+   *                               {@code AdministrativeArea.AdministrativeAreaName}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -490,7 +490,7 @@ public class AdministrativeArea implements Cloneable {
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withAny} instead.
+   * make it fluent, use {@code #withAny} instead.
    *
    * @param any
    */
@@ -502,7 +502,7 @@ public class AdministrativeArea implements Cloneable {
    * add a value to the any property collection
    *
    * @param any Objects of the following type are allowed in the list:
-   *            {@link Object}
+   *            {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -648,7 +648,7 @@ public class AdministrativeArea implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getContent() {
@@ -656,7 +656,7 @@ public class AdministrativeArea implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setContent(String value) {
@@ -664,7 +664,7 @@ public class AdministrativeArea implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getUnderscore() {
@@ -672,7 +672,7 @@ public class AdministrativeArea implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setUnderscore(String value) {
@@ -680,7 +680,7 @@ public class AdministrativeArea implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getCode() {
@@ -688,7 +688,7 @@ public class AdministrativeArea implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setCode(String value) {
@@ -882,7 +882,7 @@ public class AdministrativeArea implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link Locality}
+     * @return possible object is {@code Locality}
      *
      */
     public Locality getLocality() {
@@ -890,7 +890,7 @@ public class AdministrativeArea implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link Locality}
+     * @param value allowed object is {@code Locality}
      *
      */
     public void setLocality(Locality value) {
@@ -898,7 +898,7 @@ public class AdministrativeArea implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link PostOffice}
+     * @return possible object is {@code PostOffice}
      *
      */
     public PostOffice getPostOffice() {
@@ -906,7 +906,7 @@ public class AdministrativeArea implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link PostOffice}
+     * @param value allowed object is {@code PostOffice}
      *
      */
     public void setPostOffice(PostOffice value) {
@@ -914,7 +914,7 @@ public class AdministrativeArea implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link PostalCode}
+     * @return possible object is {@code PostalCode}
      *
      */
     public PostalCode getPostalCode() {
@@ -922,7 +922,7 @@ public class AdministrativeArea implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link PostalCode}
+     * @param value allowed object is {@code PostalCode}
      *
      */
     public void setPostalCode(PostalCode value) {
@@ -940,7 +940,7 @@ public class AdministrativeArea implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getUnderscore() {
@@ -948,7 +948,7 @@ public class AdministrativeArea implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setUnderscore(String value) {
@@ -956,7 +956,7 @@ public class AdministrativeArea implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getUsage() {
@@ -964,7 +964,7 @@ public class AdministrativeArea implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setUsage(String value) {
@@ -972,7 +972,7 @@ public class AdministrativeArea implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getIndicator() {
@@ -980,7 +980,7 @@ public class AdministrativeArea implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setIndicator(String value) {
@@ -1089,7 +1089,7 @@ public class AdministrativeArea implements Cloneable {
     }
 
     /**
-     * Creates a new instance of {@link AddressLine} and adds it to addressLine.
+     * Creates a new instance of {@code AddressLine} and adds it to addressLine.
      * This method is a short version for: &lt;code&gt; AddressLine addressLine
      * = new AddressLine(); this.getAddressLine().add(addressLine);
      * &lt;/code&gt;
@@ -1102,7 +1102,7 @@ public class AdministrativeArea implements Cloneable {
 
     /**
      * Creates a new instance of
-     * {@link AdministrativeArea.SubAdministrativeArea.SubAdministrativeAreaName}
+     * {@code AdministrativeArea.SubAdministrativeArea.SubAdministrativeAreaName}
      * and adds it to subAdministrativeAreaName. This method is a short version
      * for: &lt;code&gt; SubAdministrativeAreaName subAdministrativeAreaName =
      * new SubAdministrativeAreaName();
@@ -1116,7 +1116,7 @@ public class AdministrativeArea implements Cloneable {
     }
 
     /**
-     * Creates a new instance of {@link Locality} and set it to locality.
+     * Creates a new instance of {@code Locality} and set it to locality.
      * <p>
      * This method is a short version for: &lt;code&gt; Locality locality = new
      * Locality(); this.setLocality(locality); &lt;/code&gt;
@@ -1133,7 +1133,7 @@ public class AdministrativeArea implements Cloneable {
     }
 
     /**
-     * Creates a new instance of {@link PostOffice} and set it to postOffice.
+     * Creates a new instance of {@code PostOffice} and set it to postOffice.
      * <p>
      * This method is a short version for: &lt;code&gt; PostOffice postOffice =
      * new PostOffice(); this.setPostOffice(postOffice); &lt;/code&gt;
@@ -1145,7 +1145,7 @@ public class AdministrativeArea implements Cloneable {
     }
 
     /**
-     * Creates a new instance of {@link PostalCode} and set it to postalCode.
+     * Creates a new instance of {@code PostalCode} and set it to postalCode.
      * <p>
      * This method is a short version for: &lt;code&gt; PostalCode postalCode =
      * new PostalCode(); this.setPostalCode(postalCode); &lt;/code&gt;
@@ -1163,7 +1163,7 @@ public class AdministrativeArea implements Cloneable {
      * Note:
      * <p>
      * This method does not make use of the fluent pattern.If you would like to
-     * make it fluent, use {@link #withAddressLine} instead.
+     * make it fluent, use {@code #withAddressLine} instead.
      *
      * @param addressLine
      */
@@ -1175,7 +1175,7 @@ public class AdministrativeArea implements Cloneable {
      * add a value to the addressLine property collection
      *
      * @param addressLine Objects of the following type are allowed in the list:
-     *                    {@link AddressLine}
+     *                    {@code AddressLine}
      * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
      *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
      */
@@ -1192,7 +1192,7 @@ public class AdministrativeArea implements Cloneable {
      * Note:
      * <p>
      * This method does not make use of the fluent pattern.If you would like to
-     * make it fluent, use {@link #withSubAdministrativeAreaName} instead.
+     * make it fluent, use {@code #withSubAdministrativeAreaName} instead.
      *
      * @param subAdministrativeAreaName
      */
@@ -1205,7 +1205,7 @@ public class AdministrativeArea implements Cloneable {
      *
      * @param subAdministrativeAreaName Objects of the following type are
      *                                  allowed in the list:
-     *                                  {@link AdministrativeArea.SubAdministrativeArea.SubAdministrativeAreaName}
+     *                                  {@code AdministrativeArea.SubAdministrativeArea.SubAdministrativeAreaName}
      * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
      *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
      */
@@ -1221,7 +1221,7 @@ public class AdministrativeArea implements Cloneable {
      * Note:
      * <p>
      * This method does not make use of the fluent pattern.If you would like to
-     * make it fluent, use {@link #withAny} instead.
+     * make it fluent, use {@code #withAny} instead.
      *
      * @param any
      */
@@ -1233,7 +1233,7 @@ public class AdministrativeArea implements Cloneable {
      * add a value to the any property collection
      *
      * @param any Objects of the following type are allowed in the list:
-     *            {@link Object}
+     *            {@code Object}
      * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
      *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
      */
@@ -1367,7 +1367,7 @@ public class AdministrativeArea implements Cloneable {
       }
 
       /**
-       * @return possible object is {@link String}
+       * @return possible object is {@code String}
        *
        */
       public String getContent() {
@@ -1375,7 +1375,7 @@ public class AdministrativeArea implements Cloneable {
       }
 
       /**
-       * @param value allowed object is {@link String}
+       * @param value allowed object is {@code String}
        *
        */
       public void setContent(String value) {
@@ -1383,7 +1383,7 @@ public class AdministrativeArea implements Cloneable {
       }
 
       /**
-       * @return possible object is {@link String}
+       * @return possible object is {@code String}
        *
        */
       public String getUnderscore() {
@@ -1391,7 +1391,7 @@ public class AdministrativeArea implements Cloneable {
       }
 
       /**
-       * @param value allowed object is {@link String}
+       * @param value allowed object is {@code String}
        *
        */
       public void setUnderscore(String value) {
@@ -1399,7 +1399,7 @@ public class AdministrativeArea implements Cloneable {
       }
 
       /**
-       * @return possible object is {@link String}
+       * @return possible object is {@code String}
        *
        */
       public String getCode() {
@@ -1407,7 +1407,7 @@ public class AdministrativeArea implements Cloneable {
       }
 
       /**
-       * @param value allowed object is {@link String}
+       * @param value allowed object is {@code String}
        *
        */
       public void setCode(String value) {

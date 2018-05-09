@@ -105,7 +105,7 @@ public class Location
   /**
    * @see longitude
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getLongitude() {
@@ -115,7 +115,7 @@ public class Location
   /**
    * @see longitude
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setLongitude(double value) {
@@ -125,7 +125,7 @@ public class Location
   /**
    * @see latitude
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getLatitude() {
@@ -135,7 +135,7 @@ public class Location
   /**
    * @see latitude
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setLatitude(double value) {
@@ -145,7 +145,7 @@ public class Location
   /**
    * @see altitude
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getAltitude() {
@@ -155,7 +155,7 @@ public class Location
   /**
    * @see altitude
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setAltitude(double value) {
@@ -254,7 +254,7 @@ public class Location
    * add a value to the locationSimpleExtension property collection
    *
    * @param locationSimpleExtension Objects of the following type are allowed in
-   *                                the list: {@link Object}
+   *                                the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -276,7 +276,7 @@ public class Location
    * add a value to the locationObjectExtension property collection
    *
    * @param locationObjectExtension Objects of the following type are allowed in
-   *                                the list: {@link AbstractObject}
+   *                                the list: {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

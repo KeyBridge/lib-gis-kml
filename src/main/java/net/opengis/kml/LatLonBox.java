@@ -92,7 +92,7 @@ public class LatLonBox
   /**
    * @see rotation
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getRotation() {
@@ -102,7 +102,7 @@ public class LatLonBox
   /**
    * @see rotation
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setRotation(double value) {
@@ -191,7 +191,7 @@ public class LatLonBox
    * add a value to the latLonBoxSimpleExtension property collection
    *
    * @param latLonBoxSimpleExtension Objects of the following type are allowed
-   *                                 in the list: {@link Object}
+   *                                 in the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -213,7 +213,7 @@ public class LatLonBox
    * add a value to the latLonBoxObjectExtension property collection
    *
    * @param latLonBoxObjectExtension Objects of the following type are allowed
-   *                                 in the list: {@link AbstractObject}
+   *                                 in the list: {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

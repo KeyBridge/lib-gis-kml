@@ -168,7 +168,7 @@ public class GroundOverlay
   /**
    * @see altitude
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getAltitude() {
@@ -178,7 +178,7 @@ public class GroundOverlay
   /**
    * @see altitude
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setAltitude(double value) {
@@ -188,9 +188,9 @@ public class GroundOverlay
   /**
    * @see altitudeMode
    *
-   * @return possible object is null null null null null null null null null null   {@link Object}
-     *     {@link net.opengis.kml.AltitudeMode}
-   *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
+   * @return possible object is null null null null null null null null null null   {@code Object}
+     *     {@code net.opengis.kml.AltitudeMode}
+   *     {@code de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
    */
   public AltitudeMode getAltitudeMode() {
@@ -200,9 +200,9 @@ public class GroundOverlay
   /**
    * @see altitudeMode
    *
-   * @param value allowed object is null null null null null null null null null null   {@link Object}
-     *     {@link net.opengis.kml.AltitudeMode}
-   *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
+   * @param value allowed object is null null null null null null null null null null   {@code Object}
+     *     {@code net.opengis.kml.AltitudeMode}
+   *     {@code de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
    */
   public void setAltitudeMode(AltitudeMode value) {
@@ -212,7 +212,7 @@ public class GroundOverlay
   /**
    * @see latLonBox
    *
-   * @return possible object is {@link LatLonBox}
+   * @return possible object is {@code LatLonBox}
    *
    */
   public LatLonBox getLatLonBox() {
@@ -222,7 +222,7 @@ public class GroundOverlay
   /**
    * @see latLonBox
    *
-   * @param value allowed object is {@link LatLonBox}
+   * @param value allowed object is {@code LatLonBox}
    *
    */
   public void setLatLonBox(LatLonBox value) {
@@ -315,7 +315,7 @@ public class GroundOverlay
   }
 
   /**
-   * Creates a new instance of {@link LatLonBox} and set it to latLonBox.
+   * Creates a new instance of {@code LatLonBox} and set it to latLonBox.
    * <p>
    * This method is a short version for: &lt;code&gt; LatLonBox latLonBox = new
    * LatLonBox(); this.setLatLonBox(latLonBox); &lt;/code&gt;
@@ -339,7 +339,7 @@ public class GroundOverlay
    * add a value to the groundOverlaySimpleExtension property collection
    *
    * @param groundOverlaySimpleExtension Objects of the following type are
-   *                                     allowed in the list: {@link Object}
+   *                                     allowed in the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -362,7 +362,7 @@ public class GroundOverlay
    *
    * @param groundOverlayObjectExtension Objects of the following type are
    *                                     allowed in the list:
-   *                                     {@link LatLonQuad}{@link JAXBElement}{@link AbstractObject}
+   *                                     {@code LatLonQuad}{@code JAXBElement}{@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

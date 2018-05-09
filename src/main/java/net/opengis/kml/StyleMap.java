@@ -177,7 +177,7 @@ public class StyleMap
   }
 
   /**
-   * Creates a new instance of {@link Pair} and adds it to pair. This method is
+   * Creates a new instance of {@code Pair} and adds it to pair. This method is
    * a short version for: &lt;code&gt; Pair pair = new Pair();
    * this.getPair().add(pair); &lt;/code&gt;
    */
@@ -200,7 +200,7 @@ public class StyleMap
    * add a value to the pair property collection
    *
    * @param pair Objects of the following type are allowed in the list:
-   *             {@link Pair}
+   *             {@code Pair}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -222,7 +222,7 @@ public class StyleMap
    * add a value to the styleMapSimpleExtension property collection
    *
    * @param styleMapSimpleExtension Objects of the following type are allowed in
-   *                                the list: {@link Object}
+   *                                the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -244,7 +244,7 @@ public class StyleMap
    * add a value to the styleMapObjectExtension property collection
    *
    * @param styleMapObjectExtension Objects of the following type are allowed in
-   *                                the list: {@link AbstractObject}
+   *                                the list: {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

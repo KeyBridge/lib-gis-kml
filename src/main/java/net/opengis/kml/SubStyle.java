@@ -116,7 +116,7 @@ public abstract class SubStyle
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withSubStyleSimpleExtension} instead.
+   * make it fluent, use {@code #withSubStyleSimpleExtension} instead.
    *
    * @param subStyleSimpleExtension
    */
@@ -128,7 +128,7 @@ public abstract class SubStyle
    * add a value to the subStyleSimpleExtension property collection
    *
    * @param subStyleSimpleExtension Objects of the following type are allowed in
-   *                                the list: {@link Object}
+   *                                the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -144,7 +144,7 @@ public abstract class SubStyle
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withSubStyleObjectExtension} instead.
+   * make it fluent, use {@code #withSubStyleObjectExtension} instead.
    *
    * @param subStyleObjectExtension
    */
@@ -156,7 +156,7 @@ public abstract class SubStyle
    * add a value to the subStyleObjectExtension property collection
    *
    * @param subStyleObjectExtension Objects of the following type are allowed in
-   *                                the list: {@link AbstractObject}
+   *                                the list: {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

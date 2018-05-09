@@ -153,7 +153,7 @@ public class ResourceMap
   }
 
   /**
-   * Creates a new instance of {@link Alias} and adds it to alias. This method
+   * Creates a new instance of {@code Alias} and adds it to alias. This method
    * is a short version for: &lt;code&gt; Alias alias = new Alias();
    * this.getAlias().add(alias); &lt;/code&gt;
    */
@@ -176,7 +176,7 @@ public class ResourceMap
    * add a value to the alias property collection
    *
    * @param alias Objects of the following type are allowed in the list:
-   *              {@link Alias}
+   *              {@code Alias}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -198,7 +198,7 @@ public class ResourceMap
    * add a value to the resourceMapSimpleExtension property collection
    *
    * @param resourceMapSimpleExtension Objects of the following type are allowed
-   *                                   in the list: {@link Object}
+   *                                   in the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -220,7 +220,7 @@ public class ResourceMap
    * add a value to the resourceMapObjectExtension property collection
    *
    * @param resourceMapObjectExtension Objects of the following type are allowed
-   *                                   in the list: {@link AbstractObject}
+   *                                   in the list: {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

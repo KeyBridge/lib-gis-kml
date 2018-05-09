@@ -210,7 +210,7 @@ public class NetworkLink
   }
 
   /**
-   * @return possible object is {@link Boolean}
+   * @return possible object is {@code Boolean}
    *
    */
   public Boolean isRefreshVisibility() {
@@ -220,7 +220,7 @@ public class NetworkLink
   /**
    * @see refreshVisibility
    *
-   * @param value allowed object is {@link Boolean}
+   * @param value allowed object is {@code Boolean}
    *
    */
   public void setRefreshVisibility(Boolean value) {
@@ -228,7 +228,7 @@ public class NetworkLink
   }
 
   /**
-   * @return possible object is {@link Boolean}
+   * @return possible object is {@code Boolean}
    *
    */
   public Boolean isFlyToView() {
@@ -238,7 +238,7 @@ public class NetworkLink
   /**
    * @see flyToView
    *
-   * @param value allowed object is {@link Boolean}
+   * @param value allowed object is {@code Boolean}
    *
    */
   public void setFlyToView(Boolean value) {
@@ -248,7 +248,7 @@ public class NetworkLink
   /**
    * @see url
    *
-   * @return possible object is {@link net.opengis.kml.Link}
+   * @return possible object is {@code net.opengis.kml.Link}
    *
    */
   public net.opengis.kml.Link getUrl() {
@@ -258,7 +258,7 @@ public class NetworkLink
   /**
    * @see url
    *
-   * @param value allowed object is {@link net.opengis.kml.Link}
+   * @param value allowed object is {@code net.opengis.kml.Link}
    *
    */
   public void setUrl(net.opengis.kml.Link value) {
@@ -268,7 +268,7 @@ public class NetworkLink
   /**
    * @see link
    *
-   * @return possible object is {@link net.opengis.kml.Link}
+   * @return possible object is {@code net.opengis.kml.Link}
    *
    */
   public net.opengis.kml.Link getLink() {
@@ -278,7 +278,7 @@ public class NetworkLink
   /**
    * @see link
    *
-   * @param value allowed object is {@link net.opengis.kml.Link}
+   * @param value allowed object is {@code net.opengis.kml.Link}
    *
    */
   public void setLink(net.opengis.kml.Link value) {
@@ -381,7 +381,7 @@ public class NetworkLink
   }
 
   /**
-   * Creates a new instance of {@link net.opengis.kml.Link} and set it to url.
+   * Creates a new instance of {@code net.opengis.kml.Link} and set it to url.
    * <p>
    * This method is a short version for: &lt;code&gt; Link link = new Link();
    * this.setUrl(link); &lt;/code&gt;
@@ -393,7 +393,7 @@ public class NetworkLink
   }
 
   /**
-   * Creates a new instance of {@link net.opengis.kml.Link} and set it to link.
+   * Creates a new instance of {@code net.opengis.kml.Link} and set it to link.
    * <p>
    * This method is a short version for: &lt;code&gt; Link link = new Link();
    * this.setLink(link); &lt;/code&gt;
@@ -417,7 +417,7 @@ public class NetworkLink
    * add a value to the networkLinkSimpleExtension property collection
    *
    * @param networkLinkSimpleExtension Objects of the following type are allowed
-   *                                   in the list: {@link Object}
+   *                                   in the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -439,7 +439,7 @@ public class NetworkLink
    * add a value to the networkLinkObjectExtension property collection
    *
    * @param networkLinkObjectExtension Objects of the following type are allowed
-   *                                   in the list: {@link AbstractObject}
+   *                                   in the list: {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

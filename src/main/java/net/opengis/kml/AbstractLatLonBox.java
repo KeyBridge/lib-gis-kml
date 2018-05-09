@@ -114,7 +114,7 @@ public abstract class AbstractLatLonBox
   /**
    * @see north
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getNorth() {
@@ -124,7 +124,7 @@ public abstract class AbstractLatLonBox
   /**
    * @see north
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setNorth(double value) {
@@ -134,7 +134,7 @@ public abstract class AbstractLatLonBox
   /**
    * @see south
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getSouth() {
@@ -144,7 +144,7 @@ public abstract class AbstractLatLonBox
   /**
    * @see south
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setSouth(double value) {
@@ -154,7 +154,7 @@ public abstract class AbstractLatLonBox
   /**
    * @see east
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getEast() {
@@ -164,7 +164,7 @@ public abstract class AbstractLatLonBox
   /**
    * @see east
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setEast(double value) {
@@ -174,7 +174,7 @@ public abstract class AbstractLatLonBox
   /**
    * @see west
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getWest() {
@@ -184,7 +184,7 @@ public abstract class AbstractLatLonBox
   /**
    * @see west
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setWest(double value) {
@@ -288,7 +288,7 @@ public abstract class AbstractLatLonBox
    * add a value to the abstractLatLonBoxSimpleExtension property collection
    *
    * @param abstractLatLonBoxSimpleExtension Objects of the following type are
-   *                                         allowed in the list: {@link Object}
+   *                                         allowed in the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -311,7 +311,7 @@ public abstract class AbstractLatLonBox
    *
    * @param abstractLatLonBoxObjectExtension Objects of the following type are
    *                                         allowed in the list:
-   *                                         {@link AbstractObject}
+   *                                         {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

@@ -101,7 +101,7 @@ public class SimpleData implements Cloneable {
   /**
    * @see value
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getValue() {
@@ -111,7 +111,7 @@ public class SimpleData implements Cloneable {
   /**
    * @see value
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setValue(String value) {
@@ -121,7 +121,7 @@ public class SimpleData implements Cloneable {
   /**
    * @see name
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getName() {
@@ -131,7 +131,7 @@ public class SimpleData implements Cloneable {
   /**
    * @see name
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setName(String value) {

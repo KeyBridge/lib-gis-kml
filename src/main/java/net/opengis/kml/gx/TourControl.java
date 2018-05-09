@@ -40,7 +40,7 @@ public class TourControl
   }
 
   /**
-   * @return possible object is {@link PlayMode}
+   * @return possible object is {@code PlayMode}
    *
    */
   public PlayMode getPlayMode() {
@@ -48,7 +48,7 @@ public class TourControl
   }
 
   /**
-   * @param value allowed object is {@link PlayMode}
+   * @param value allowed object is {@code PlayMode}
    *
    */
   public void setPlayMode(PlayMode value) {

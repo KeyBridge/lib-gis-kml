@@ -159,7 +159,7 @@ public abstract class StyleSelector extends AbstractObject implements Cloneable 
    * add a value to the styleSelectorSimpleExtension property collection
    *
    * @param styleSelectorSimpleExtension Objects of the following type are
-   *                                     allowed in the list: {@link Object}
+   *                                     allowed in the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -182,7 +182,7 @@ public abstract class StyleSelector extends AbstractObject implements Cloneable 
    *
    * @param styleSelectorObjectExtension Objects of the following type are
    *                                     allowed in the list:
-   *                                     {@link AbstractObject}
+   *                                     {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

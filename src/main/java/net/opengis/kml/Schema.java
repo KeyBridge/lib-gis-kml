@@ -113,7 +113,7 @@ public class Schema implements Cloneable {
   /**
    * @see name
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getName() {
@@ -123,7 +123,7 @@ public class Schema implements Cloneable {
   /**
    * @see name
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setName(String value) {
@@ -133,7 +133,7 @@ public class Schema implements Cloneable {
   /**
    * @see id
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getId() {
@@ -143,7 +143,7 @@ public class Schema implements Cloneable {
   /**
    * @see id
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setId(String value) {
@@ -205,7 +205,7 @@ public class Schema implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link SimpleField} and adds it to simpleField.
+   * Creates a new instance of {@code SimpleField} and adds it to simpleField.
    * This method is a short version for: &lt;code&gt; SimpleField simpleField =
    * new SimpleField(); this.getSimpleField().add(simpleField); &lt;/code&gt;
    */
@@ -228,7 +228,7 @@ public class Schema implements Cloneable {
    * add a value to the simpleField property collection
    *
    * @param simpleField Objects of the following type are allowed in the list:
-   *                    {@link SimpleField}
+   *                    {@code SimpleField}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -251,7 +251,7 @@ public class Schema implements Cloneable {
    *
    * @param schemaExtension Objects of the following type are allowed in the
    *                        list:
-   *                        {@link SimpleArrayField}{@link JAXBElement}{@link Object}
+   *                        {@code SimpleArrayField}{@code JAXBElement}{@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

@@ -120,7 +120,7 @@ public class SchemaData
   /**
    * @see schemaUrl
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getSchemaUrl() {
@@ -130,7 +130,7 @@ public class SchemaData
   /**
    * @see schemaUrl
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setSchemaUrl(String value) {
@@ -187,7 +187,7 @@ public class SchemaData
   }
 
   /**
-   * Creates a new instance of {@link SimpleData} and adds it to simpleData.
+   * Creates a new instance of {@code SimpleData} and adds it to simpleData.
    * This method is a short version for: &lt;code&gt; SimpleData simpleData =
    * new SimpleData(); this.getSimpleData().add(simpleData); &lt;/code&gt;
    *
@@ -212,7 +212,7 @@ public class SchemaData
    * add a value to the simpleData property collection
    *
    * @param simpleData Objects of the following type are allowed in the list:
-   *                   {@link SimpleData}
+   *                   {@code SimpleData}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -235,7 +235,7 @@ public class SchemaData
    *
    * @param schemaDataExtension Objects of the following type are allowed in the
    *                            list:
-   *                            {@link SimpleArrayData}{@link JAXBElement}{@link Object}
+   *                            {@code SimpleArrayData}{@code JAXBElement}{@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

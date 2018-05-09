@@ -179,7 +179,7 @@ public class PhotoOverlay
   /**
    * @see rotation
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getRotation() {
@@ -189,7 +189,7 @@ public class PhotoOverlay
   /**
    * @see rotation
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setRotation(double value) {
@@ -199,7 +199,7 @@ public class PhotoOverlay
   /**
    * @see viewVolume
    *
-   * @return possible object is {@link ViewVolume}
+   * @return possible object is {@code ViewVolume}
    *
    */
   public ViewVolume getViewVolume() {
@@ -209,7 +209,7 @@ public class PhotoOverlay
   /**
    * @see viewVolume
    *
-   * @param value allowed object is {@link ViewVolume}
+   * @param value allowed object is {@code ViewVolume}
    *
    */
   public void setViewVolume(ViewVolume value) {
@@ -219,7 +219,7 @@ public class PhotoOverlay
   /**
    * @see imagePyramid
    *
-   * @return possible object is {@link ImagePyramid}
+   * @return possible object is {@code ImagePyramid}
    *
    */
   public ImagePyramid getImagePyramid() {
@@ -229,7 +229,7 @@ public class PhotoOverlay
   /**
    * @see imagePyramid
    *
-   * @param value allowed object is {@link ImagePyramid}
+   * @param value allowed object is {@code ImagePyramid}
    *
    */
   public void setImagePyramid(ImagePyramid value) {
@@ -239,7 +239,7 @@ public class PhotoOverlay
   /**
    * @see point
    *
-   * @return possible object is {@link Point}
+   * @return possible object is {@code Point}
    *
    */
   public Point getPoint() {
@@ -249,7 +249,7 @@ public class PhotoOverlay
   /**
    * @see point
    *
-   * @param value allowed object is {@link Point}
+   * @param value allowed object is {@code Point}
    *
    */
   public void setPoint(Point value) {
@@ -259,7 +259,7 @@ public class PhotoOverlay
   /**
    * @see shape
    *
-   * @return possible object is {@link Shape}
+   * @return possible object is {@code Shape}
    *
    */
   public Shape getShape() {
@@ -269,7 +269,7 @@ public class PhotoOverlay
   /**
    * @see shape
    *
-   * @param value allowed object is {@link Shape}
+   * @param value allowed object is {@code Shape}
    *
    */
   public void setShape(Shape value) {
@@ -378,7 +378,7 @@ public class PhotoOverlay
   }
 
   /**
-   * Creates a new instance of {@link ViewVolume} and set it to viewVolume.
+   * Creates a new instance of {@code ViewVolume} and set it to viewVolume.
    * <p>
    * This method is a short version for: &lt;code&gt; ViewVolume viewVolume =
    * new ViewVolume(); this.setViewVolume(viewVolume); &lt;/code&gt;
@@ -390,7 +390,7 @@ public class PhotoOverlay
   }
 
   /**
-   * Creates a new instance of {@link ImagePyramid} and set it to imagePyramid.
+   * Creates a new instance of {@code ImagePyramid} and set it to imagePyramid.
    * <p>
    * This method is a short version for: &lt;code&gt; ImagePyramid imagePyramid
    * = new ImagePyramid(); this.setImagePyramid(imagePyramid); &lt;/code&gt;
@@ -402,7 +402,7 @@ public class PhotoOverlay
   }
 
   /**
-   * Creates a new instance of {@link Point} and set it to point.
+   * Creates a new instance of {@code Point} and set it to point.
    * <p>
    * This method is a short version for: &lt;code&gt; Point point = new Point();
    * this.setPoint(point); &lt;/code&gt;
@@ -426,7 +426,7 @@ public class PhotoOverlay
    * add a value to the photoOverlaySimpleExtension property collection
    *
    * @param photoOverlaySimpleExtension Objects of the following type are
-   *                                    allowed in the list: {@link Object}
+   *                                    allowed in the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -449,7 +449,7 @@ public class PhotoOverlay
    *
    * @param photoOverlayObjectExtension Objects of the following type are
    *                                    allowed in the list:
-   *                                    {@link AbstractObject}
+   *                                    {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

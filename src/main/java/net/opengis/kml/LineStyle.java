@@ -100,7 +100,7 @@ public class LineStyle
   /**
    * @see width
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getWidth() {
@@ -110,7 +110,7 @@ public class LineStyle
   /**
    * @see width
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setWidth(double value) {
@@ -200,7 +200,7 @@ public class LineStyle
    *
    * @param lineStyleSimpleExtension Objects of the following type are allowed
    *                                 in the list:
-   *                                 {@link Object}{@link JAXBElement}{@link byte[]}{@code &gt;}{@link JAXBElement}{@link Float}{@link JAXBElement}{@link Float}
+   *                                 {@code Object}{@code JAXBElement}{@code byte[]}{@code &gt;}{@code JAXBElement}{@code Float}{@code JAXBElement}{@code Float}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -222,7 +222,7 @@ public class LineStyle
    * add a value to the lineStyleObjectExtension property collection
    *
    * @param lineStyleObjectExtension Objects of the following type are allowed
-   *                                 in the list: {@link AbstractObject}
+   *                                 in the list: {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

@@ -40,7 +40,7 @@ public class Wait
   }
 
   /**
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getDuration() {
@@ -48,7 +48,7 @@ public class Wait
   }
 
   /**
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setDuration(double value) {

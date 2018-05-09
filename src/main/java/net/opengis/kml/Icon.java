@@ -182,7 +182,7 @@ public class Icon
   /**
    * @see refreshMode
    *
-   * @return possible object is {@link RefreshMode}
+   * @return possible object is {@code RefreshMode}
    *
    */
   public RefreshMode getRefreshMode() {
@@ -192,7 +192,7 @@ public class Icon
   /**
    * @see refreshMode
    *
-   * @param value allowed object is {@link RefreshMode}
+   * @param value allowed object is {@code RefreshMode}
    *
    */
   public void setRefreshMode(RefreshMode value) {
@@ -202,7 +202,7 @@ public class Icon
   /**
    * @see refreshInterval
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getRefreshInterval() {
@@ -212,7 +212,7 @@ public class Icon
   /**
    * @see refreshInterval
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setRefreshInterval(double value) {
@@ -222,7 +222,7 @@ public class Icon
   /**
    * @see viewRefreshMode
    *
-   * @return possible object is {@link ViewRefreshMode}
+   * @return possible object is {@code ViewRefreshMode}
    *
    */
   public ViewRefreshMode getViewRefreshMode() {
@@ -232,7 +232,7 @@ public class Icon
   /**
    * @see viewRefreshMode
    *
-   * @param value allowed object is {@link ViewRefreshMode}
+   * @param value allowed object is {@code ViewRefreshMode}
    *
    */
   public void setViewRefreshMode(ViewRefreshMode value) {
@@ -242,7 +242,7 @@ public class Icon
   /**
    * @see viewRefreshTime
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getViewRefreshTime() {
@@ -252,7 +252,7 @@ public class Icon
   /**
    * @see viewRefreshTime
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setViewRefreshTime(double value) {
@@ -262,7 +262,7 @@ public class Icon
   /**
    * @see viewBoundScale
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getViewBoundScale() {
@@ -272,7 +272,7 @@ public class Icon
   /**
    * @see viewBoundScale
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setViewBoundScale(double value) {
@@ -282,7 +282,7 @@ public class Icon
   /**
    * @see viewFormat
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getViewFormat() {
@@ -292,7 +292,7 @@ public class Icon
   /**
    * @see viewFormat
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setViewFormat(String value) {
@@ -302,7 +302,7 @@ public class Icon
   /**
    * @see httpQuery
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getHttpQuery() {
@@ -312,7 +312,7 @@ public class Icon
   /**
    * @see httpQuery
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setHttpQuery(String value) {
@@ -443,7 +443,7 @@ public class Icon
    * add a value to the linkSimpleExtension property collection
    *
    * @param linkSimpleExtension Objects of the following type are allowed in the
-   *                            list: {@link Object}
+   *                            list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -465,7 +465,7 @@ public class Icon
    * add a value to the linkObjectExtension property collection
    *
    * @param linkObjectExtension Objects of the following type are allowed in the
-   *                            list: {@link AbstractObject}
+   *                            list: {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

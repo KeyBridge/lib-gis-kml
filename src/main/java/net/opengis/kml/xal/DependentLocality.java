@@ -134,7 +134,7 @@ public class DependentLocality implements Cloneable {
 
   /**
    * @return possible object is
-   *         {@link DependentLocality.DependentLocalityNumber}
+   *         {@code DependentLocality.DependentLocalityNumber}
    *
    */
   public DependentLocality.DependentLocalityNumber getDependentLocalityNumber() {
@@ -143,7 +143,7 @@ public class DependentLocality implements Cloneable {
 
   /**
    * @param value allowed object is
-   *              {@link DependentLocality.DependentLocalityNumber}
+   *              {@code DependentLocality.DependentLocalityNumber}
    *
    */
   public void setDependentLocalityNumber(DependentLocality.DependentLocalityNumber value) {
@@ -151,7 +151,7 @@ public class DependentLocality implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link PostBox}
+   * @return possible object is {@code PostBox}
    *
    */
   public PostBox getPostBox() {
@@ -159,7 +159,7 @@ public class DependentLocality implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link PostBox}
+   * @param value allowed object is {@code PostBox}
    *
    */
   public void setPostBox(PostBox value) {
@@ -167,7 +167,7 @@ public class DependentLocality implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link LargeMailUser}
+   * @return possible object is {@code LargeMailUser}
    *
    */
   public LargeMailUser getLargeMailUser() {
@@ -175,7 +175,7 @@ public class DependentLocality implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link LargeMailUser}
+   * @param value allowed object is {@code LargeMailUser}
    *
    */
   public void setLargeMailUser(LargeMailUser value) {
@@ -183,7 +183,7 @@ public class DependentLocality implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link PostOffice}
+   * @return possible object is {@code PostOffice}
    *
    */
   public PostOffice getPostOffice() {
@@ -191,7 +191,7 @@ public class DependentLocality implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link PostOffice}
+   * @param value allowed object is {@code PostOffice}
    *
    */
   public void setPostOffice(PostOffice value) {
@@ -199,7 +199,7 @@ public class DependentLocality implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link PostalRoute}
+   * @return possible object is {@code PostalRoute}
    *
    */
   public PostalRoute getPostalRoute() {
@@ -207,7 +207,7 @@ public class DependentLocality implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link PostalRoute}
+   * @param value allowed object is {@code PostalRoute}
    *
    */
   public void setPostalRoute(PostalRoute value) {
@@ -215,7 +215,7 @@ public class DependentLocality implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link Thoroughfare}
+   * @return possible object is {@code Thoroughfare}
    *
    */
   public Thoroughfare getThoroughfare() {
@@ -223,7 +223,7 @@ public class DependentLocality implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link Thoroughfare}
+   * @param value allowed object is {@code Thoroughfare}
    *
    */
   public void setThoroughfare(Thoroughfare value) {
@@ -231,7 +231,7 @@ public class DependentLocality implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link Premise}
+   * @return possible object is {@code Premise}
    *
    */
   public Premise getPremise() {
@@ -239,7 +239,7 @@ public class DependentLocality implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link Premise}
+   * @param value allowed object is {@code Premise}
    *
    */
   public void setPremise(Premise value) {
@@ -247,7 +247,7 @@ public class DependentLocality implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link DependentLocality}
+   * @return possible object is {@code DependentLocality}
    *
    */
   public DependentLocality getDependentLocality() {
@@ -255,7 +255,7 @@ public class DependentLocality implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link DependentLocality}
+   * @param value allowed object is {@code DependentLocality}
    *
    */
   public void setDependentLocality(DependentLocality value) {
@@ -263,7 +263,7 @@ public class DependentLocality implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link PostalCode}
+   * @return possible object is {@code PostalCode}
    *
    */
   public PostalCode getPostalCode() {
@@ -271,7 +271,7 @@ public class DependentLocality implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link PostalCode}
+   * @param value allowed object is {@code PostalCode}
    *
    */
   public void setPostalCode(PostalCode value) {
@@ -289,7 +289,7 @@ public class DependentLocality implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getUnderscore() {
@@ -297,7 +297,7 @@ public class DependentLocality implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setUnderscore(String value) {
@@ -305,7 +305,7 @@ public class DependentLocality implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getUsage() {
@@ -313,7 +313,7 @@ public class DependentLocality implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setUsage(String value) {
@@ -321,7 +321,7 @@ public class DependentLocality implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getConnector() {
@@ -329,7 +329,7 @@ public class DependentLocality implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setConnector(String value) {
@@ -337,7 +337,7 @@ public class DependentLocality implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getIndicator() {
@@ -345,7 +345,7 @@ public class DependentLocality implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setIndicator(String value) {
@@ -510,7 +510,7 @@ public class DependentLocality implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link AddressLine} and adds it to addressLine.
+   * Creates a new instance of {@code AddressLine} and adds it to addressLine.
    * This method is a short version for: &lt;code&gt; AddressLine addressLine =
    * new AddressLine(); this.getAddressLine().add(addressLine); &lt;/code&gt;
    */
@@ -521,7 +521,7 @@ public class DependentLocality implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link DependentLocality.DependentLocalityName}
+   * Creates a new instance of {@code DependentLocality.DependentLocalityName}
    * and adds it to dependentLocalityName. This method is a short version for:
    * &lt;code&gt; DependentLocalityName dependentLocalityName = new
    * DependentLocalityName();
@@ -534,7 +534,7 @@ public class DependentLocality implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link DependentLocality.DependentLocalityNumber}
+   * Creates a new instance of {@code DependentLocality.DependentLocalityNumber}
    * and set it to dependentLocalityNumber.
    * <p>
    * This method is a short version for: &lt;code&gt; DependentLocalityNumber
@@ -548,7 +548,7 @@ public class DependentLocality implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link PostBox} and set it to postBox.
+   * Creates a new instance of {@code PostBox} and set it to postBox.
    * <p>
    * This method is a short version for: &lt;code&gt; PostBox postBox = new
    * PostBox(); this.setPostBox(postBox); &lt;/code&gt;
@@ -562,7 +562,7 @@ public class DependentLocality implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link LargeMailUser} and set it to
+   * Creates a new instance of {@code LargeMailUser} and set it to
    * largeMailUser.
    * <p>
    * This method is a short version for: &lt;code&gt; LargeMailUser
@@ -576,7 +576,7 @@ public class DependentLocality implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link PostOffice} and set it to postOffice.
+   * Creates a new instance of {@code PostOffice} and set it to postOffice.
    * <p>
    * This method is a short version for: &lt;code&gt; PostOffice postOffice =
    * new PostOffice(); this.setPostOffice(postOffice); &lt;/code&gt;
@@ -588,7 +588,7 @@ public class DependentLocality implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link PostalRoute} and set it to postalRoute.
+   * Creates a new instance of {@code PostalRoute} and set it to postalRoute.
    * <p>
    * This method is a short version for: &lt;code&gt; PostalRoute postalRoute =
    * new PostalRoute(); this.setPostalRoute(postalRoute); &lt;/code&gt;
@@ -603,7 +603,7 @@ public class DependentLocality implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Thoroughfare} and set it to thoroughfare.
+   * Creates a new instance of {@code Thoroughfare} and set it to thoroughfare.
    * <p>
    * This method is a short version for: &lt;code&gt; Thoroughfare thoroughfare
    * = new Thoroughfare(); this.setThoroughfare(thoroughfare); &lt;/code&gt;
@@ -620,7 +620,7 @@ public class DependentLocality implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Premise} and set it to premise.
+   * Creates a new instance of {@code Premise} and set it to premise.
    * <p>
    * This method is a short version for: &lt;code&gt; Premise premise = new
    * Premise(); this.setPremise(premise); &lt;/code&gt;
@@ -636,7 +636,7 @@ public class DependentLocality implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link DependentLocality} and set it to
+   * Creates a new instance of {@code DependentLocality} and set it to
    * dependentLocality.
    * <p>
    * This method is a short version for: &lt;code&gt; DependentLocality
@@ -655,7 +655,7 @@ public class DependentLocality implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link PostalCode} and set it to postalCode.
+   * Creates a new instance of {@code PostalCode} and set it to postalCode.
    * <p>
    * This method is a short version for: &lt;code&gt; PostalCode postalCode =
    * new PostalCode(); this.setPostalCode(postalCode); &lt;/code&gt;
@@ -673,7 +673,7 @@ public class DependentLocality implements Cloneable {
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withAddressLine} instead.
+   * make it fluent, use {@code #withAddressLine} instead.
    *
    * @param addressLine
    */
@@ -685,7 +685,7 @@ public class DependentLocality implements Cloneable {
    * add a value to the addressLine property collection
    *
    * @param addressLine Objects of the following type are allowed in the list:
-   *                    {@link AddressLine}
+   *                    {@code AddressLine}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -702,7 +702,7 @@ public class DependentLocality implements Cloneable {
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withDependentLocalityName} instead.
+   * make it fluent, use {@code #withDependentLocalityName} instead.
    *
    * @param dependentLocalityName
    */
@@ -715,7 +715,7 @@ public class DependentLocality implements Cloneable {
    *
    * @param dependentLocalityName Objects of the following type are allowed in
    *                              the list:
-   *                              {@link DependentLocality.DependentLocalityName}
+   *                              {@code DependentLocality.DependentLocalityName}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -731,7 +731,7 @@ public class DependentLocality implements Cloneable {
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withAny} instead.
+   * make it fluent, use {@code #withAny} instead.
    *
    * @param any
    */
@@ -743,7 +743,7 @@ public class DependentLocality implements Cloneable {
    * add a value to the any property collection
    *
    * @param any Objects of the following type are allowed in the list:
-   *            {@link Object}
+   *            {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -954,7 +954,7 @@ public class DependentLocality implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getContent() {
@@ -962,7 +962,7 @@ public class DependentLocality implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setContent(String value) {
@@ -970,7 +970,7 @@ public class DependentLocality implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getUnderscore() {
@@ -978,7 +978,7 @@ public class DependentLocality implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setUnderscore(String value) {
@@ -986,7 +986,7 @@ public class DependentLocality implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getCode() {
@@ -994,7 +994,7 @@ public class DependentLocality implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setCode(String value) {
@@ -1129,7 +1129,7 @@ public class DependentLocality implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getContent() {
@@ -1137,7 +1137,7 @@ public class DependentLocality implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setContent(String value) {
@@ -1145,7 +1145,7 @@ public class DependentLocality implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getNameNumberOccurrence() {
@@ -1153,7 +1153,7 @@ public class DependentLocality implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setNameNumberOccurrence(String value) {
@@ -1161,7 +1161,7 @@ public class DependentLocality implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getCode() {
@@ -1169,7 +1169,7 @@ public class DependentLocality implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setCode(String value) {

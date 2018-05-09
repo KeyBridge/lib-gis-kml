@@ -128,7 +128,7 @@ public class AddressLines implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link AddressLine} and adds it to addressLine.
+   * Creates a new instance of {@code AddressLine} and adds it to addressLine.
    * This method is a short version for: &lt;code&gt; AddressLine addressLine =
    * new AddressLine(); this.getAddressLine().add(addressLine); &lt;/code&gt;
    */
@@ -145,7 +145,7 @@ public class AddressLines implements Cloneable {
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withAddressLine} instead.
+   * make it fluent, use {@code #withAddressLine} instead.
    *
    * @param addressLine
    */
@@ -157,7 +157,7 @@ public class AddressLines implements Cloneable {
    * add a value to the addressLine property collection
    *
    * @param addressLine Objects of the following type are allowed in the list:
-   *                    {@link AddressLine}
+   *                    {@code AddressLine}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -173,7 +173,7 @@ public class AddressLines implements Cloneable {
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withAny} instead.
+   * make it fluent, use {@code #withAny} instead.
    *
    * @param any
    */
@@ -185,7 +185,7 @@ public class AddressLines implements Cloneable {
    * add a value to the any property collection
    *
    * @param any Objects of the following type are allowed in the list:
-   *            {@link Object}
+   *            {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

@@ -105,7 +105,7 @@ public class Author implements Cloneable {
    *
    * @param nameOrUriOrEmail Objects of the following type are allowed in the
    *                         list:
-   *                         {@link String}{@link JAXBElement}{@link String}{@link JAXBElement}{@link String}
+   *                         {@code String}{@code JAXBElement}{@code String}{@code JAXBElement}{@code String}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

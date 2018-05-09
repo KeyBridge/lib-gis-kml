@@ -79,7 +79,7 @@ public class Scale
   /**
    * @see x
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getX() {
@@ -89,7 +89,7 @@ public class Scale
   /**
    * @see x
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setX(double value) {
@@ -99,7 +99,7 @@ public class Scale
   /**
    * @see y
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getY() {
@@ -109,7 +109,7 @@ public class Scale
   /**
    * @see y
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setY(double value) {
@@ -119,7 +119,7 @@ public class Scale
   /**
    * @see z
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getZ() {
@@ -129,7 +129,7 @@ public class Scale
   /**
    * @see z
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setZ(double value) {
@@ -228,7 +228,7 @@ public class Scale
    * add a value to the scaleSimpleExtension property collection
    *
    * @param scaleSimpleExtension Objects of the following type are allowed in
-   *                             the list: {@link Object}
+   *                             the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -250,7 +250,7 @@ public class Scale
    * add a value to the scaleObjectExtension property collection
    *
    * @param scaleObjectExtension Objects of the following type are allowed in
-   *                             the list: {@link AbstractObject}
+   *                             the list: {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

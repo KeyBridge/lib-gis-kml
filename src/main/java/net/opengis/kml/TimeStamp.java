@@ -90,7 +90,7 @@ public class TimeStamp
   /**
    * @see when
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getWhen() {
@@ -100,7 +100,7 @@ public class TimeStamp
   /**
    * @see when
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setWhen(String value) {
@@ -191,7 +191,7 @@ public class TimeStamp
    * add a value to the timeStampSimpleExtension property collection
    *
    * @param timeStampSimpleExtension Objects of the following type are allowed
-   *                                 in the list: {@link Object}
+   *                                 in the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -213,7 +213,7 @@ public class TimeStamp
    * add a value to the timeStampObjectExtension property collection
    *
    * @param timeStampObjectExtension Objects of the following type are allowed
-   *                                 in the list: {@link AbstractObject}
+   *                                 in the list: {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

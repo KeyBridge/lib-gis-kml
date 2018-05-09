@@ -125,7 +125,7 @@ public class Pair
   /**
    * @see key
    *
-   * @return possible object is {@link StyleState}
+   * @return possible object is {@code StyleState}
    *
    */
   public StyleState getKey() {
@@ -135,7 +135,7 @@ public class Pair
   /**
    * @see key
    *
-   * @param value allowed object is {@link StyleState}
+   * @param value allowed object is {@code StyleState}
    *
    */
   public void setKey(StyleState value) {
@@ -145,7 +145,7 @@ public class Pair
   /**
    * @see styleUrl
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getStyleUrl() {
@@ -155,7 +155,7 @@ public class Pair
   /**
    * @see styleUrl
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setStyleUrl(String value) {
@@ -165,9 +165,9 @@ public class Pair
   /**
    * @see styleSelector
    *
-   * @return possible object is null null null null null null null null null   {@link Style}
-     *     {@link StyleSelector}
-   *     {@link StyleMap}
+   * @return possible object is null null null null null null null null null   {@code Style}
+     *     {@code StyleSelector}
+   *     {@code StyleMap}
    *
    */
   public StyleSelector getStyleSelector() {
@@ -177,9 +177,9 @@ public class Pair
   /**
    * @see styleSelector
    *
-   * @param value allowed object is null null null null null null null null null   {@link Style}
-     *     {@link StyleSelector}
-   *     {@link StyleMap}
+   * @param value allowed object is null null null null null null null null null   {@code Style}
+     *     {@code StyleSelector}
+   *     {@code StyleMap}
    *
    */
   public void setStyleSelector(StyleSelector value) {
@@ -274,7 +274,7 @@ public class Pair
   }
 
   /**
-   * Creates a new instance of {@link Style} and set it to styleSelector.
+   * Creates a new instance of {@code Style} and set it to styleSelector.
    * <p>
    * This method is a short version for: &lt;code&gt; Style style = new Style();
    * this.setStyleSelector(style); &lt;/code&gt;
@@ -286,7 +286,7 @@ public class Pair
   }
 
   /**
-   * Creates a new instance of {@link StyleMap} and set it to styleSelector.
+   * Creates a new instance of {@code StyleMap} and set it to styleSelector.
    * <p>
    * This method is a short version for: &lt;code&gt; StyleMap styleMap = new
    * StyleMap(); this.setStyleSelector(styleMap); &lt;/code&gt;
@@ -310,7 +310,7 @@ public class Pair
    * add a value to the pairSimpleExtension property collection
    *
    * @param pairSimpleExtension Objects of the following type are allowed in the
-   *                            list: {@link Object}
+   *                            list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -332,7 +332,7 @@ public class Pair
    * add a value to the pairObjectExtension property collection
    *
    * @param pairObjectExtension Objects of the following type are allowed in the
-   *                            list: {@link AbstractObject}
+   *                            list: {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

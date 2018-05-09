@@ -68,7 +68,7 @@ public class Track
   }
 
   /**
-   * @return possible object is {@link Boolean}
+   * @return possible object is {@code Boolean}
    *
    */
   public Boolean isExtrude() {
@@ -76,7 +76,7 @@ public class Track
   }
 
   /**
-   * @param value allowed object is {@link Boolean}
+   * @param value allowed object is {@code Boolean}
    *
    */
   public void setExtrude(Boolean value) {
@@ -84,7 +84,7 @@ public class Track
   }
 
   /**
-   * @return possible object is {@link Boolean}
+   * @return possible object is {@code Boolean}
    *
    */
   public Boolean isTessellate() {
@@ -92,7 +92,7 @@ public class Track
   }
 
   /**
-   * @param value allowed object is {@link Boolean}
+   * @param value allowed object is {@code Boolean}
    *
    */
   public void setTessellate(Boolean value) {
@@ -100,9 +100,9 @@ public class Track
   }
 
   /**
-   * @return possible object is null null null null null null null null null   {@link Object}
-     *     {@link net.opengis.kml.AltitudeMode}
-   *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
+   * @return possible object is null null null null null null null null null   {@code Object}
+     *     {@code net.opengis.kml.AltitudeMode}
+   *     {@code de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
    */
   public AltitudeMode getAltitudeMode() {
@@ -110,9 +110,9 @@ public class Track
   }
 
   /**
-   * @param value allowed object is null null null null null null null null null   {@link Object}
-     *     {@link net.opengis.kml.AltitudeMode}
-   *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
+   * @param value allowed object is null null null null null null null null null   {@code Object}
+     *     {@code net.opengis.kml.AltitudeMode}
+   *     {@code de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
    */
   public void setAltitudeMode(AltitudeMode value) {
@@ -150,7 +150,7 @@ public class Track
   }
 
   /**
-   * @return possible object is {@link Model}
+   * @return possible object is {@code Model}
    *
    */
   public Model getModel() {
@@ -158,7 +158,7 @@ public class Track
   }
 
   /**
-   * @param value allowed object is {@link Model}
+   * @param value allowed object is {@code Model}
    *
    */
   public void setModel(Model value) {
@@ -166,7 +166,7 @@ public class Track
   }
 
   /**
-   * @return possible object is {@link ExtendedData}
+   * @return possible object is {@code ExtendedData}
    *
    */
   public ExtendedData getExtendedData() {
@@ -174,7 +174,7 @@ public class Track
   }
 
   /**
-   * @param value allowed object is {@link ExtendedData}
+   * @param value allowed object is {@code ExtendedData}
    *
    */
   public void setExtendedData(ExtendedData value) {
@@ -289,7 +289,7 @@ public class Track
   }
 
   /**
-   * Creates a new instance of {@link Model} and set it to model.
+   * Creates a new instance of {@code Model} and set it to model.
    * <p>
    * This method is a short version for: &lt;code&gt; Model model = new Model();
    * this.setModel(model); &lt;/code&gt;
@@ -301,7 +301,7 @@ public class Track
   }
 
   /**
-   * Creates a new instance of {@link ExtendedData} and set it to extendedData.
+   * Creates a new instance of {@code ExtendedData} and set it to extendedData.
    * <p>
    * This method is a short version for: &lt;code&gt; ExtendedData extendedData
    * = new ExtendedData(); this.setExtendedData(extendedData); &lt;/code&gt;
@@ -319,7 +319,7 @@ public class Track
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withWhen} instead.
+   * make it fluent, use {@code #withWhen} instead.
    *
    * @param when
    */
@@ -331,7 +331,7 @@ public class Track
    * add a value to the when property collection
    *
    * @param when Objects of the following type are allowed in the list:
-   *             {@link String}
+   *             {@code String}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -347,7 +347,7 @@ public class Track
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withCoord} instead.
+   * make it fluent, use {@code #withCoord} instead.
    *
    * @param coord
    */
@@ -359,7 +359,7 @@ public class Track
    * add a value to the coord property collection
    *
    * @param coord Objects of the following type are allowed in the list:
-   *              {@link String}
+   *              {@code String}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -375,7 +375,7 @@ public class Track
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withAngles} instead.
+   * make it fluent, use {@code #withAngles} instead.
    *
    * @param angles
    */
@@ -387,7 +387,7 @@ public class Track
    * add a value to the angles property collection
    *
    * @param angles Objects of the following type are allowed in the list:
-   *               {@link String}
+   *               {@code String}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -403,7 +403,7 @@ public class Track
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withTrackSimpleExtension} instead.
+   * make it fluent, use {@code #withTrackSimpleExtension} instead.
    *
    * @param trackSimpleExtension
    */
@@ -415,7 +415,7 @@ public class Track
    * add a value to the trackSimpleExtension property collection
    *
    * @param trackSimpleExtension Objects of the following type are allowed in
-   *                             the list: {@link Object}
+   *                             the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

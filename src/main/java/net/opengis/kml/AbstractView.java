@@ -114,7 +114,7 @@ public abstract class AbstractView extends AbstractObject implements Cloneable {
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withAbstractViewSimpleExtension} instead.
+   * make it fluent, use {@code #withAbstractViewSimpleExtension} instead.
    *
    * @param abstractViewSimpleExtension
    */
@@ -126,7 +126,7 @@ public abstract class AbstractView extends AbstractObject implements Cloneable {
    * add a value to the abstractViewSimpleExtension property collection
    *
    * @param abstractViewSimpleExtension Objects of the following type are
-   *                                    allowed in the list: {@link Object}
+   *                                    allowed in the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -142,7 +142,7 @@ public abstract class AbstractView extends AbstractObject implements Cloneable {
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withAbstractViewObjectExtension} instead.
+   * make it fluent, use {@code #withAbstractViewObjectExtension} instead.
    *
    * @param abstractViewObjectExtension
    */
@@ -155,7 +155,7 @@ public abstract class AbstractView extends AbstractObject implements Cloneable {
    *
    * @param abstractViewObjectExtension Objects of the following type are
    *                                    allowed in the list:
-   *                                    {@link TimeSpan}{@link JAXBElement}{@link AbstractObject}{@link JAXBElement}{@link TimeStamp}{@link JAXBElement}{@link ViewerOptions}
+   *                                    {@code TimeSpan}{@code JAXBElement}{@code AbstractObject}{@code JAXBElement}{@code TimeStamp}{@code JAXBElement}{@code ViewerOptions}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

@@ -130,7 +130,7 @@ public class Create implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Folder} and adds it to container. This
+   * Creates a new instance of {@code Folder} and adds it to container. This
    * method is a short version for: &lt;code&gt; Folder folder = new Folder();
    * this.getContainer().add(folder); &lt;/code&gt;
    */
@@ -141,7 +141,7 @@ public class Create implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Document} and adds it to container. This
+   * Creates a new instance of {@code Document} and adds it to container. This
    * method is a short version for: &lt;code&gt; Document document = new
    * Document(); this.getContainer().add(document); &lt;/code&gt;
    */
@@ -164,7 +164,7 @@ public class Create implements Cloneable {
    * add a value to the container property collection
    *
    * @param container Objects of the following type are allowed in the list:
-   *                  {@link Container}{@link JAXBElement}{@link Folder}{@link JAXBElement}{@link Document}
+   *                  {@code Container}{@code JAXBElement}{@code Folder}{@code JAXBElement}{@code Document}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

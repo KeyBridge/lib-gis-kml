@@ -133,7 +133,7 @@ public class Region
   /**
    * @see latLonAltBox
    *
-   * @return possible object is {@link LatLonAltBox}
+   * @return possible object is {@code LatLonAltBox}
    *
    */
   public LatLonAltBox getLatLonAltBox() {
@@ -143,7 +143,7 @@ public class Region
   /**
    * @see latLonAltBox
    *
-   * @param value allowed object is {@link LatLonAltBox}
+   * @param value allowed object is {@code LatLonAltBox}
    *
    */
   public void setLatLonAltBox(LatLonAltBox value) {
@@ -153,7 +153,7 @@ public class Region
   /**
    * @see lod
    *
-   * @return possible object is {@link Lod}
+   * @return possible object is {@code Lod}
    *
    */
   public Lod getLod() {
@@ -163,7 +163,7 @@ public class Region
   /**
    * @see lod
    *
-   * @param value allowed object is {@link Lod}
+   * @param value allowed object is {@code Lod}
    *
    */
   public void setLod(Lod value) {
@@ -250,7 +250,7 @@ public class Region
   }
 
   /**
-   * Creates a new instance of {@link LatLonAltBox} and set it to latLonAltBox.
+   * Creates a new instance of {@code LatLonAltBox} and set it to latLonAltBox.
    * <p>
    * This method is a short version for: &lt;code&gt; LatLonAltBox latLonAltBox
    * = new LatLonAltBox(); this.setLatLonAltBox(latLonAltBox); &lt;/code&gt;
@@ -262,7 +262,7 @@ public class Region
   }
 
   /**
-   * Creates a new instance of {@link Lod} and set it to lod.
+   * Creates a new instance of {@code Lod} and set it to lod.
    * <p>
    * This method is a short version for: &lt;code&gt; Lod lod = new Lod();
    * this.setLod(lod); &lt;/code&gt;
@@ -286,7 +286,7 @@ public class Region
    * add a value to the regionSimpleExtension property collection
    *
    * @param regionSimpleExtension Objects of the following type are allowed in
-   *                              the list: {@link Object}
+   *                              the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -308,7 +308,7 @@ public class Region
    * add a value to the regionObjectExtension property collection
    *
    * @param regionObjectExtension Objects of the following type are allowed in
-   *                              the list: {@link AbstractObject}
+   *                              the list: {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

@@ -89,7 +89,7 @@ public class LatLonAltBox
   /**
    * @see minAltitude
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getMinAltitude() {
@@ -99,7 +99,7 @@ public class LatLonAltBox
   /**
    * @see minAltitude
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setMinAltitude(double value) {
@@ -109,7 +109,7 @@ public class LatLonAltBox
   /**
    * @see maxAltitude
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getMaxAltitude() {
@@ -119,7 +119,7 @@ public class LatLonAltBox
   /**
    * @see maxAltitude
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setMaxAltitude(double value) {
@@ -129,9 +129,9 @@ public class LatLonAltBox
   /**
    * @see altitudeMode
    *
-   * @return possible object is null null null null null null null null null null   {@link Object}
-     *     {@link net.opengis.kml.AltitudeMode}
-   *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
+   * @return possible object is null null null null null null null null null null   {@code Object}
+     *     {@code net.opengis.kml.AltitudeMode}
+   *     {@code de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
    */
   public AltitudeMode getAltitudeMode() {
@@ -141,9 +141,9 @@ public class LatLonAltBox
   /**
    * @see altitudeMode
    *
-   * @param value allowed object is null null null null null null null null null null   {@link Object}
-     *     {@link net.opengis.kml.AltitudeMode}
-   *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
+   * @param value allowed object is null null null null null null null null null null   {@code Object}
+     *     {@code net.opengis.kml.AltitudeMode}
+   *     {@code de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
    */
   public void setAltitudeMode(AltitudeMode value) {
@@ -245,7 +245,7 @@ public class LatLonAltBox
    * add a value to the latLonAltBoxSimpleExtension property collection
    *
    * @param latLonAltBoxSimpleExtension Objects of the following type are
-   *                                    allowed in the list: {@link Object}
+   *                                    allowed in the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -268,7 +268,7 @@ public class LatLonAltBox
    *
    * @param latLonAltBoxObjectExtension Objects of the following type are
    *                                    allowed in the list:
-   *                                    {@link AbstractObject}
+   *                                    {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

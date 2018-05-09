@@ -102,7 +102,7 @@ public class ViewerOptions
   }
 
   /**
-   * Creates a new instance of {@link Option} and adds it to option. This method
+   * Creates a new instance of {@code Option} and adds it to option. This method
    * is a short version for: &lt;code&gt; Option option = new Option();
    * this.getOption().add(option); &lt;/code&gt;
    */
@@ -119,7 +119,7 @@ public class ViewerOptions
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withOption} instead.
+   * make it fluent, use {@code #withOption} instead.
    *
    * @param option
    */
@@ -131,7 +131,7 @@ public class ViewerOptions
    * add a value to the option property collection
    *
    * @param option Objects of the following type are allowed in the list:
-   *               {@link Option}
+   *               {@code Option}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

@@ -116,7 +116,7 @@ public class Data
   /**
    * @see displayName
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getDisplayName() {
@@ -126,7 +126,7 @@ public class Data
   /**
    * @see displayName
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setDisplayName(String value) {
@@ -136,7 +136,7 @@ public class Data
   /**
    * @see value
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getValue() {
@@ -146,7 +146,7 @@ public class Data
   /**
    * @see value
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setValue(String value) {
@@ -167,7 +167,7 @@ public class Data
   /**
    * @see name
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getName() {
@@ -177,7 +177,7 @@ public class Data
   /**
    * @see name
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setName(String value) {
@@ -254,7 +254,7 @@ public class Data
    * add a value to the dataExtension property collection
    *
    * @param dataExtension Objects of the following type are allowed in the list:
-   *                      {@link Object}
+   *                      {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

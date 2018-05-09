@@ -28,7 +28,7 @@ import net.opengis.kml.xal.*;
 public final class KmlFactory {
 
   /**
-   * Create an instance of {@link Alias}
+   * Create an instance of {@code Alias}
    * <p>
    */
   public static Alias createAlias() {
@@ -36,7 +36,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link BalloonStyle}
+   * Create an instance of {@code BalloonStyle}
    * <p>
    */
   public static BalloonStyle createBalloonStyle() {
@@ -44,7 +44,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link BasicLink}
+   * Create an instance of {@code BasicLink}
    * <p>
    */
   public static BasicLink createBasicLink() {
@@ -52,7 +52,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Boundary}
+   * Create an instance of {@code Boundary}
    * <p>
    */
   public static Boundary createBoundary() {
@@ -60,7 +60,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Camera}
+   * Create an instance of {@code Camera}
    * <p>
    */
   public static Camera createCamera() {
@@ -68,7 +68,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Change}
+   * Create an instance of {@code Change}
    * <p>
    */
   public static Change createChange() {
@@ -76,7 +76,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Coordinate}
+   * Create an instance of {@code Coordinate}
    *
    * @param longitude required parameter
    * @param latitude  required parameter
@@ -86,7 +86,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Coordinate}
+   * Create an instance of {@code Coordinate}
    *
    * @param longitude required parameter
    * @param latitude  required parameter
@@ -97,7 +97,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Coordinate}
+   * Create an instance of {@code Coordinate}
    *
    * @param coordinates required parameter
    */
@@ -106,7 +106,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Create}
+   * Create an instance of {@code Create}
    * <p>
    */
   public static Create createCreate() {
@@ -114,7 +114,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Data}
+   * Create an instance of {@code Data}
    *
    * @param value required parameter
    */
@@ -123,7 +123,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Delete}
+   * Create an instance of {@code Delete}
    * <p>
    */
   public static Delete createDelete() {
@@ -131,7 +131,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Document}
+   * Create an instance of {@code Document}
    * <p>
    */
   public static Document createDocument() {
@@ -139,7 +139,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link ExtendedData}
+   * Create an instance of {@code ExtendedData}
    * <p>
    */
   public static ExtendedData createExtendedData() {
@@ -147,7 +147,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Folder}
+   * Create an instance of {@code Folder}
    * <p>
    */
   public static Folder createFolder() {
@@ -155,7 +155,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link GroundOverlay}
+   * Create an instance of {@code GroundOverlay}
    * <p>
    */
   public static GroundOverlay createGroundOverlay() {
@@ -163,7 +163,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Icon}
+   * Create an instance of {@code Icon}
    * <p>
    */
   public static Icon createIcon() {
@@ -171,7 +171,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link IconStyle}
+   * Create an instance of {@code IconStyle}
    * <p>
    */
   public static IconStyle createIconStyle() {
@@ -179,7 +179,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link ImagePyramid}
+   * Create an instance of {@code ImagePyramid}
    * <p>
    */
   public static ImagePyramid createImagePyramid() {
@@ -187,7 +187,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link ItemIcon}
+   * Create an instance of {@code ItemIcon}
    * <p>
    */
   public static ItemIcon createItemIcon() {
@@ -195,7 +195,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Kml}
+   * Create an instance of {@code Kml}
    * <p>
    */
   public static Kml createKml() {
@@ -203,7 +203,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link LabelStyle}
+   * Create an instance of {@code LabelStyle}
    * <p>
    */
   public static LabelStyle createLabelStyle() {
@@ -211,7 +211,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link LatLonAltBox}
+   * Create an instance of {@code LatLonAltBox}
    * <p>
    */
   public static LatLonAltBox createLatLonAltBox() {
@@ -219,7 +219,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link LatLonBox}
+   * Create an instance of {@code LatLonBox}
    * <p>
    */
   public static LatLonBox createLatLonBox() {
@@ -227,7 +227,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link LineString}
+   * Create an instance of {@code LineString}
    * <p>
    */
   public static LineString createLineString() {
@@ -235,7 +235,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link LineStyle}
+   * Create an instance of {@code LineStyle}
    * <p>
    */
   public static LineStyle createLineStyle() {
@@ -243,7 +243,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link LinearRing}
+   * Create an instance of {@code LinearRing}
    * <p>
    */
   public static LinearRing createLinearRing() {
@@ -251,7 +251,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link net.opengis.kml.Link}
+   * Create an instance of {@code net.opengis.kml.Link}
    * <p>
    */
   public static net.opengis.kml.Link createLink() {
@@ -259,7 +259,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link ListStyle}
+   * Create an instance of {@code ListStyle}
    * <p>
    */
   public static ListStyle createListStyle() {
@@ -267,7 +267,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Location}
+   * Create an instance of {@code Location}
    * <p>
    */
   public static Location createLocation() {
@@ -275,7 +275,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Lod}
+   * Create an instance of {@code Lod}
    * <p>
    */
   public static Lod createLod() {
@@ -283,7 +283,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link LookAt}
+   * Create an instance of {@code LookAt}
    * <p>
    */
   public static LookAt createLookAt() {
@@ -291,7 +291,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Metadata}
+   * Create an instance of {@code Metadata}
    * <p>
    */
   public static Metadata createMetadata() {
@@ -299,7 +299,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Model}
+   * Create an instance of {@code Model}
    * <p>
    */
   public static Model createModel() {
@@ -307,7 +307,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link MultiGeometry}
+   * Create an instance of {@code MultiGeometry}
    * <p>
    */
   public static MultiGeometry createMultiGeometry() {
@@ -315,7 +315,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link NetworkLink}
+   * Create an instance of {@code NetworkLink}
    * <p>
    */
   public static NetworkLink createNetworkLink() {
@@ -323,7 +323,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link NetworkLinkControl}
+   * Create an instance of {@code NetworkLinkControl}
    * <p>
    */
   public static NetworkLinkControl createNetworkLinkControl() {
@@ -331,7 +331,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Orientation}
+   * Create an instance of {@code Orientation}
    * <p>
    */
   public static Orientation createOrientation() {
@@ -339,7 +339,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Pair}
+   * Create an instance of {@code Pair}
    * <p>
    */
   public static Pair createPair() {
@@ -347,7 +347,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link PhotoOverlay}
+   * Create an instance of {@code PhotoOverlay}
    * <p>
    */
   public static PhotoOverlay createPhotoOverlay() {
@@ -355,7 +355,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Placemark}
+   * Create an instance of {@code Placemark}
    * <p>
    */
   public static Placemark createPlacemark() {
@@ -363,7 +363,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Point}
+   * Create an instance of {@code Point}
    * <p>
    */
   public static Point createPoint() {
@@ -371,7 +371,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link PolyStyle}
+   * Create an instance of {@code PolyStyle}
    * <p>
    */
   public static PolyStyle createPolyStyle() {
@@ -379,7 +379,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Polygon}
+   * Create an instance of {@code Polygon}
    * <p>
    */
   public static Polygon createPolygon() {
@@ -387,7 +387,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Region}
+   * Create an instance of {@code Region}
    * <p>
    */
   public static Region createRegion() {
@@ -395,7 +395,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link ResourceMap}
+   * Create an instance of {@code ResourceMap}
    * <p>
    */
   public static ResourceMap createResourceMap() {
@@ -403,7 +403,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Scale}
+   * Create an instance of {@code Scale}
    * <p>
    */
   public static Scale createScale() {
@@ -411,7 +411,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Schema}
+   * Create an instance of {@code Schema}
    * <p>
    */
   public static Schema createSchema() {
@@ -419,7 +419,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link SchemaData}
+   * Create an instance of {@code SchemaData}
    * <p>
    */
   public static SchemaData createSchemaData() {
@@ -427,7 +427,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link ScreenOverlay}
+   * Create an instance of {@code ScreenOverlay}
    * <p>
    */
   public static ScreenOverlay createScreenOverlay() {
@@ -435,7 +435,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link SimpleData}
+   * Create an instance of {@code SimpleData}
    *
    * @param name required parameter
    */
@@ -444,7 +444,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link SimpleField}
+   * Create an instance of {@code SimpleField}
    * <p>
    */
   public static SimpleField createSimpleField() {
@@ -452,7 +452,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Snippet}
+   * Create an instance of {@code Snippet}
    * <p>
    */
   public static Snippet createSnippet() {
@@ -460,7 +460,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Style}
+   * Create an instance of {@code Style}
    * <p>
    */
   public static Style createStyle() {
@@ -468,7 +468,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link StyleMap}
+   * Create an instance of {@code StyleMap}
    * <p>
    */
   public static StyleMap createStyleMap() {
@@ -476,7 +476,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link TimeSpan}
+   * Create an instance of {@code TimeSpan}
    * <p>
    */
   public static TimeSpan createTimeSpan() {
@@ -484,7 +484,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link TimeStamp}
+   * Create an instance of {@code TimeStamp}
    * <p>
    */
   public static TimeStamp createTimeStamp() {
@@ -492,7 +492,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Update}
+   * Create an instance of {@code Update}
    *
    * @param createOrDeleteOrChange required parameter
    * @param targetHref             required parameter
@@ -502,7 +502,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Vec2}
+   * Create an instance of {@code Vec2}
    * <p>
    */
   public static Vec2 createVec2() {
@@ -510,7 +510,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link ViewVolume}
+   * Create an instance of {@code ViewVolume}
    * <p>
    */
   public static ViewVolume createViewVolume() {
@@ -518,7 +518,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Author}
+   * Create an instance of {@code Author}
    * <p>
    */
   public static Author createAtomAuthor() {
@@ -526,7 +526,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link net.opengis.kml.atom.Link}
+   * Create an instance of {@code net.opengis.kml.atom.Link}
    *
    * @param href required parameter
    */
@@ -535,7 +535,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link AnimatedUpdate}
+   * Create an instance of {@code AnimatedUpdate}
    * <p>
    */
   public static AnimatedUpdate createGxAnimatedUpdate() {
@@ -543,7 +543,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link FlyTo}
+   * Create an instance of {@code FlyTo}
    * <p>
    */
   public static FlyTo createGxFlyTo() {
@@ -551,7 +551,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link LatLonQuad}
+   * Create an instance of {@code LatLonQuad}
    * <p>
    */
   public static LatLonQuad createGxLatLonQuad() {
@@ -559,7 +559,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link MultiTrack}
+   * Create an instance of {@code MultiTrack}
    * <p>
    */
   public static MultiTrack createGxMultiTrack() {
@@ -567,7 +567,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Option}
+   * Create an instance of {@code Option}
    * <p>
    */
   public static Option createGxOption() {
@@ -575,7 +575,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Playlist}
+   * Create an instance of {@code Playlist}
    * <p>
    */
   public static Playlist createGxPlaylist() {
@@ -583,7 +583,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link SimpleArrayData}
+   * Create an instance of {@code SimpleArrayData}
    * <p>
    */
   public static SimpleArrayData createGxSimpleArrayData() {
@@ -591,7 +591,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link SimpleArrayField}
+   * Create an instance of {@code SimpleArrayField}
    * <p>
    */
   public static SimpleArrayField createGxSimpleArrayField() {
@@ -599,7 +599,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link SoundCue}
+   * Create an instance of {@code SoundCue}
    * <p>
    */
   public static SoundCue createGxSoundCue() {
@@ -607,7 +607,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Tour}
+   * Create an instance of {@code Tour}
    * <p>
    */
   public static Tour createGxTour() {
@@ -615,7 +615,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link TourControl}
+   * Create an instance of {@code TourControl}
    * <p>
    */
   public static TourControl createGxTourControl() {
@@ -623,7 +623,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Track}
+   * Create an instance of {@code Track}
    * <p>
    */
   public static Track createGxTrack() {
@@ -631,7 +631,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link ViewerOptions}
+   * Create an instance of {@code ViewerOptions}
    *
    * @param option required parameter
    */
@@ -640,7 +640,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Wait}
+   * Create an instance of {@code Wait}
    * <p>
    */
   public static Wait createGxWait() {
@@ -648,7 +648,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link AddressDetails}
+   * Create an instance of {@code AddressDetails}
    *
    * @param xalAddress         required parameter
    * @param addressLines       required parameter
@@ -662,7 +662,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link AddressLine}
+   * Create an instance of {@code AddressLine}
    * <p>
    */
   public static AddressLine createXalAddressLine() {
@@ -670,7 +670,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link AddressLines}
+   * Create an instance of {@code AddressLines}
    *
    * @param addressLine required parameter
    */
@@ -679,7 +679,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link AdministrativeArea}
+   * Create an instance of {@code AdministrativeArea}
    *
    * @param postalCode required parameter
    * @param locality   required parameter
@@ -690,7 +690,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link BuildingName}
+   * Create an instance of {@code BuildingName}
    * <p>
    */
   public static BuildingName createXalBuildingName() {
@@ -698,7 +698,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link CountryName}
+   * Create an instance of {@code CountryName}
    * <p>
    */
   public static CountryName createXalCountryName() {
@@ -706,7 +706,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Department}
+   * Create an instance of {@code Department}
    * <p>
    */
   public static Department createXalDepartment() {
@@ -714,7 +714,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link DependentLocality}
+   * Create an instance of {@code DependentLocality}
    *
    * @param postBox       required parameter
    * @param postOffice    required parameter
@@ -726,7 +726,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Firm}
+   * Create an instance of {@code Firm}
    * <p>
    */
   public static Firm createXalFirm() {
@@ -734,7 +734,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link LargeMailUser}
+   * Create an instance of {@code LargeMailUser}
    * <p>
    */
   public static LargeMailUser createXalLargeMailUser() {
@@ -742,7 +742,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Locality}
+   * Create an instance of {@code Locality}
    *
    * @param postBox       required parameter
    * @param postOffice    required parameter
@@ -754,7 +754,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link MailStop}
+   * Create an instance of {@code MailStop}
    * <p>
    */
   public static MailStop createXalMailStop() {
@@ -762,7 +762,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link PostBox}
+   * Create an instance of {@code PostBox}
    *
    * @param postBoxNumber required parameter
    */
@@ -771,7 +771,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link PostOffice}
+   * Create an instance of {@code PostOffice}
    * <p>
    */
   public static PostOffice createXalPostOffice() {
@@ -779,7 +779,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link PostalCode}
+   * Create an instance of {@code PostalCode}
    * <p>
    */
   public static PostalCode createXalPostalCode() {
@@ -787,7 +787,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link PostalRoute}
+   * Create an instance of {@code PostalRoute}
    *
    * @param postalRouteName   required parameter
    * @param postalRouteNumber required parameter
@@ -797,7 +797,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Premise}
+   * Create an instance of {@code Premise}
    *
    * @param premiseNumber      required parameter
    * @param premiseNumberRange required parameter
@@ -808,7 +808,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link PremiseNumber}
+   * Create an instance of {@code PremiseNumber}
    * <p>
    */
   public static PremiseNumber createXalPremiseNumber() {
@@ -816,7 +816,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link PremiseNumberPrefix}
+   * Create an instance of {@code PremiseNumberPrefix}
    * <p>
    */
   public static PremiseNumberPrefix createXalPremiseNumberPrefix() {
@@ -824,7 +824,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link PremiseNumberSuffix}
+   * Create an instance of {@code PremiseNumberSuffix}
    * <p>
    */
   public static PremiseNumberSuffix createXalPremiseNumberSuffix() {
@@ -832,7 +832,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link SubPremise}
+   * Create an instance of {@code SubPremise}
    *
    * @param subPremiseLocation required parameter
    */
@@ -841,7 +841,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link Thoroughfare}
+   * Create an instance of {@code Thoroughfare}
    *
    * @param postalCode        required parameter
    * @param premise           required parameter
@@ -853,7 +853,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link ThoroughfareLeadingType}
+   * Create an instance of {@code ThoroughfareLeadingType}
    * <p>
    */
   public static ThoroughfareLeadingType createXalThoroughfareLeadingType() {
@@ -861,7 +861,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link ThoroughfareName}
+   * Create an instance of {@code ThoroughfareName}
    * <p>
    */
   public static ThoroughfareName createXalThoroughfareName() {
@@ -869,7 +869,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link ThoroughfareNumber}
+   * Create an instance of {@code ThoroughfareNumber}
    * <p>
    */
   public static ThoroughfareNumber createXalThoroughfareNumber() {
@@ -877,7 +877,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link ThoroughfareNumberPrefix}
+   * Create an instance of {@code ThoroughfareNumberPrefix}
    * <p>
    */
   public static ThoroughfareNumberPrefix createXalThoroughfareNumberPrefix() {
@@ -885,7 +885,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link ThoroughfareNumberSuffix}
+   * Create an instance of {@code ThoroughfareNumberSuffix}
    * <p>
    */
   public static ThoroughfareNumberSuffix createXalThoroughfareNumberSuffix() {
@@ -893,7 +893,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link ThoroughfarePostDirection}
+   * Create an instance of {@code ThoroughfarePostDirection}
    * <p>
    */
   public static ThoroughfarePostDirection createXalThoroughfarePostDirection() {
@@ -901,7 +901,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link ThoroughfarePreDirection}
+   * Create an instance of {@code ThoroughfarePreDirection}
    * <p>
    */
   public static ThoroughfarePreDirection createXalThoroughfarePreDirection() {
@@ -909,7 +909,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link ThoroughfareTrailingType}
+   * Create an instance of {@code ThoroughfareTrailingType}
    * <p>
    */
   public static ThoroughfareTrailingType createXalThoroughfareTrailingType() {
@@ -917,7 +917,7 @@ public final class KmlFactory {
   }
 
   /**
-   * Create an instance of {@link XAL}
+   * Create an instance of {@code XAL}
    *
    * @param xalAddressDetails required parameter
    */

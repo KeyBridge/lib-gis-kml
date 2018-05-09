@@ -151,7 +151,7 @@ public class AddressDetails implements Cloneable {
   /**
    * @see postalServiceElements
    *
-   * @return possible object is {@link AddressDetails.PostalServiceElements}
+   * @return possible object is {@code AddressDetails.PostalServiceElements}
    *
    */
   public AddressDetails.PostalServiceElements getPostalServiceElements() {
@@ -161,7 +161,7 @@ public class AddressDetails implements Cloneable {
   /**
    * @see postalServiceElements
    *
-   * @param value allowed object is {@link AddressDetails.PostalServiceElements}
+   * @param value allowed object is {@code AddressDetails.PostalServiceElements}
    *
    */
   public void setPostalServiceElements(AddressDetails.PostalServiceElements value) {
@@ -171,7 +171,7 @@ public class AddressDetails implements Cloneable {
   /**
    * @see xalAddress
    *
-   * @return possible object is {@link AddressDetails.Address}
+   * @return possible object is {@code AddressDetails.Address}
    *
    */
   public AddressDetails.Address getXalAddress() {
@@ -181,7 +181,7 @@ public class AddressDetails implements Cloneable {
   /**
    * @see xalAddress
    *
-   * @param value allowed object is {@link AddressDetails.Address}
+   * @param value allowed object is {@code AddressDetails.Address}
    *
    */
   public void setXalAddress(AddressDetails.Address value) {
@@ -191,7 +191,7 @@ public class AddressDetails implements Cloneable {
   /**
    * @see addressLines
    *
-   * @return possible object is {@link AddressLines}
+   * @return possible object is {@code AddressLines}
    *
    */
   public AddressLines getAddressLines() {
@@ -201,7 +201,7 @@ public class AddressDetails implements Cloneable {
   /**
    * @see addressLines
    *
-   * @param value allowed object is {@link AddressLines}
+   * @param value allowed object is {@code AddressLines}
    *
    */
   public void setAddressLines(AddressLines value) {
@@ -211,7 +211,7 @@ public class AddressDetails implements Cloneable {
   /**
    * @see country
    *
-   * @return possible object is {@link AddressDetails.Country}
+   * @return possible object is {@code AddressDetails.Country}
    *
    */
   public AddressDetails.Country getCountry() {
@@ -221,7 +221,7 @@ public class AddressDetails implements Cloneable {
   /**
    * @see country
    *
-   * @param value allowed object is {@link AddressDetails.Country}
+   * @param value allowed object is {@code AddressDetails.Country}
    *
    */
   public void setCountry(AddressDetails.Country value) {
@@ -231,7 +231,7 @@ public class AddressDetails implements Cloneable {
   /**
    * @see administrativeArea
    *
-   * @return possible object is {@link AdministrativeArea}
+   * @return possible object is {@code AdministrativeArea}
    *
    */
   public AdministrativeArea getAdministrativeArea() {
@@ -241,7 +241,7 @@ public class AddressDetails implements Cloneable {
   /**
    * @see administrativeArea
    *
-   * @param value allowed object is {@link AdministrativeArea}
+   * @param value allowed object is {@code AdministrativeArea}
    *
    */
   public void setAdministrativeArea(AdministrativeArea value) {
@@ -251,7 +251,7 @@ public class AddressDetails implements Cloneable {
   /**
    * @see locality
    *
-   * @return possible object is {@link Locality}
+   * @return possible object is {@code Locality}
    *
    */
   public Locality getLocality() {
@@ -261,7 +261,7 @@ public class AddressDetails implements Cloneable {
   /**
    * @see locality
    *
-   * @param value allowed object is {@link Locality}
+   * @param value allowed object is {@code Locality}
    *
    */
   public void setLocality(Locality value) {
@@ -271,7 +271,7 @@ public class AddressDetails implements Cloneable {
   /**
    * @see thoroughfare
    *
-   * @return possible object is {@link Thoroughfare}
+   * @return possible object is {@code Thoroughfare}
    *
    */
   public Thoroughfare getThoroughfare() {
@@ -281,7 +281,7 @@ public class AddressDetails implements Cloneable {
   /**
    * @see thoroughfare
    *
-   * @param value allowed object is {@link Thoroughfare}
+   * @param value allowed object is {@code Thoroughfare}
    *
    */
   public void setThoroughfare(Thoroughfare value) {
@@ -302,7 +302,7 @@ public class AddressDetails implements Cloneable {
   /**
    * @see address
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getAddress() {
@@ -312,7 +312,7 @@ public class AddressDetails implements Cloneable {
   /**
    * @see address
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setAddress(String value) {
@@ -322,7 +322,7 @@ public class AddressDetails implements Cloneable {
   /**
    * @see currentStatus
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getCurrentStatus() {
@@ -332,7 +332,7 @@ public class AddressDetails implements Cloneable {
   /**
    * @see currentStatus
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setCurrentStatus(String value) {
@@ -342,7 +342,7 @@ public class AddressDetails implements Cloneable {
   /**
    * @see validFromDate
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getValidFromDate() {
@@ -352,7 +352,7 @@ public class AddressDetails implements Cloneable {
   /**
    * @see validFromDate
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setValidFromDate(String value) {
@@ -362,7 +362,7 @@ public class AddressDetails implements Cloneable {
   /**
    * @see validToDate
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getValidToDate() {
@@ -372,7 +372,7 @@ public class AddressDetails implements Cloneable {
   /**
    * @see validToDate
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setValidToDate(String value) {
@@ -382,7 +382,7 @@ public class AddressDetails implements Cloneable {
   /**
    * @see usage
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getUsage() {
@@ -392,7 +392,7 @@ public class AddressDetails implements Cloneable {
   /**
    * @see usage
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setUsage(String value) {
@@ -402,7 +402,7 @@ public class AddressDetails implements Cloneable {
   /**
    * @see addressDetailsKey
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getAddressDetailsKey() {
@@ -412,7 +412,7 @@ public class AddressDetails implements Cloneable {
   /**
    * @see addressDetailsKey
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setAddressDetailsKey(String value) {
@@ -422,7 +422,7 @@ public class AddressDetails implements Cloneable {
   /**
    * @see code
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getCode() {
@@ -432,7 +432,7 @@ public class AddressDetails implements Cloneable {
   /**
    * @see code
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setCode(String value) {
@@ -591,7 +591,7 @@ public class AddressDetails implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link AddressDetails.PostalServiceElements} and
+   * Creates a new instance of {@code AddressDetails.PostalServiceElements} and
    * set it to postalServiceElements.
    * <p>
    * This method is a short version for: &lt;code&gt; PostalServiceElements
@@ -605,7 +605,7 @@ public class AddressDetails implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link AddressDetails.Address} and set it to
+   * Creates a new instance of {@code AddressDetails.Address} and set it to
    * xalAddress.
    * <p>
    * This method is a short version for: &lt;code&gt; Address address = new
@@ -618,7 +618,7 @@ public class AddressDetails implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link AddressLines} and set it to addressLines.
+   * Creates a new instance of {@code AddressLines} and set it to addressLines.
    * <p>
    * This method is a short version for: &lt;code&gt; AddressLines addressLines
    * = new AddressLines(); this.setAddressLines(addressLines); &lt;/code&gt;
@@ -632,7 +632,7 @@ public class AddressDetails implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link AddressDetails.Country} and set it to
+   * Creates a new instance of {@code AddressDetails.Country} and set it to
    * country.
    * <p>
    * This method is a short version for: &lt;code&gt; Country country = new
@@ -649,7 +649,7 @@ public class AddressDetails implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link AdministrativeArea} and set it to
+   * Creates a new instance of {@code AdministrativeArea} and set it to
    * administrativeArea.
    * <p>
    * This method is a short version for: &lt;code&gt; AdministrativeArea
@@ -667,7 +667,7 @@ public class AddressDetails implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Locality} and set it to locality.
+   * Creates a new instance of {@code Locality} and set it to locality.
    * <p>
    * This method is a short version for: &lt;code&gt; Locality locality = new
    * Locality(); this.setLocality(locality); &lt;/code&gt;
@@ -684,7 +684,7 @@ public class AddressDetails implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Thoroughfare} and set it to thoroughfare.
+   * Creates a new instance of {@code Thoroughfare} and set it to thoroughfare.
    * <p>
    * This method is a short version for: &lt;code&gt; Thoroughfare thoroughfare
    * = new Thoroughfare(); this.setThoroughfare(thoroughfare); &lt;/code&gt;
@@ -713,7 +713,7 @@ public class AddressDetails implements Cloneable {
    * add a value to the any property collection
    *
    * @param any Objects of the following type are allowed in the list:
-   *            {@link Object}
+   *            {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -888,7 +888,7 @@ public class AddressDetails implements Cloneable {
     /**
      * @see content
      *
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getContent() {
@@ -898,7 +898,7 @@ public class AddressDetails implements Cloneable {
     /**
      * @see content
      *
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setContent(String value) {
@@ -908,7 +908,7 @@ public class AddressDetails implements Cloneable {
     /**
      * @see underscore
      *
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getUnderscore() {
@@ -918,7 +918,7 @@ public class AddressDetails implements Cloneable {
     /**
      * @see underscore
      *
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setUnderscore(String value) {
@@ -928,7 +928,7 @@ public class AddressDetails implements Cloneable {
     /**
      * @see code
      *
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getCode() {
@@ -938,7 +938,7 @@ public class AddressDetails implements Cloneable {
     /**
      * @see code
      *
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setCode(String value) {
@@ -1138,7 +1138,7 @@ public class AddressDetails implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link AdministrativeArea}
+     * @return possible object is {@code AdministrativeArea}
      *
      */
     public AdministrativeArea getAdministrativeArea() {
@@ -1146,7 +1146,7 @@ public class AddressDetails implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link AdministrativeArea}
+     * @param value allowed object is {@code AdministrativeArea}
      *
      */
     public void setAdministrativeArea(AdministrativeArea value) {
@@ -1154,7 +1154,7 @@ public class AddressDetails implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link Locality}
+     * @return possible object is {@code Locality}
      *
      */
     public Locality getLocality() {
@@ -1162,7 +1162,7 @@ public class AddressDetails implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link Locality}
+     * @param value allowed object is {@code Locality}
      *
      */
     public void setLocality(Locality value) {
@@ -1170,7 +1170,7 @@ public class AddressDetails implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link Thoroughfare}
+     * @return possible object is {@code Thoroughfare}
      *
      */
     public Thoroughfare getThoroughfare() {
@@ -1178,7 +1178,7 @@ public class AddressDetails implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link Thoroughfare}
+     * @param value allowed object is {@code Thoroughfare}
      *
      */
     public void setThoroughfare(Thoroughfare value) {
@@ -1281,7 +1281,7 @@ public class AddressDetails implements Cloneable {
     }
 
     /**
-     * Creates a new instance of {@link AddressLine} and adds it to addressLine.
+     * Creates a new instance of {@code AddressLine} and adds it to addressLine.
      * This method is a short version for: &lt;code&gt; AddressLine addressLine
      * = new AddressLine(); this.getAddressLine().add(addressLine);
      * &lt;/code&gt;
@@ -1293,7 +1293,7 @@ public class AddressDetails implements Cloneable {
     }
 
     /**
-     * Creates a new instance of {@link AddressDetails.Country.CountryNameCode}
+     * Creates a new instance of {@code AddressDetails.Country.CountryNameCode}
      * and adds it to countryNameCode. This method is a short version for:
      * &lt;code&gt; CountryNameCode countryNameCode = new CountryNameCode();
      * this.getCountryNameCode().add(countryNameCode); &lt;/code&gt;
@@ -1305,7 +1305,7 @@ public class AddressDetails implements Cloneable {
     }
 
     /**
-     * Creates a new instance of {@link CountryName} and adds it to countryName.
+     * Creates a new instance of {@code CountryName} and adds it to countryName.
      * This method is a short version for: &lt;code&gt; CountryName countryName
      * = new CountryName(); this.getCountryName().add(countryName);
      * &lt;/code&gt;
@@ -1317,7 +1317,7 @@ public class AddressDetails implements Cloneable {
     }
 
     /**
-     * Creates a new instance of {@link AdministrativeArea} and set it to
+     * Creates a new instance of {@code AdministrativeArea} and set it to
      * administrativeArea.
      * <p>
      * This method is a short version for: &lt;code&gt; AdministrativeArea
@@ -1335,7 +1335,7 @@ public class AddressDetails implements Cloneable {
     }
 
     /**
-     * Creates a new instance of {@link Locality} and set it to locality.
+     * Creates a new instance of {@code Locality} and set it to locality.
      * <p>
      * This method is a short version for: &lt;code&gt; Locality locality = new
      * Locality(); this.setLocality(locality); &lt;/code&gt;
@@ -1352,7 +1352,7 @@ public class AddressDetails implements Cloneable {
     }
 
     /**
-     * Creates a new instance of {@link Thoroughfare} and set it to
+     * Creates a new instance of {@code Thoroughfare} and set it to
      * thoroughfare.
      * <p>
      * This method is a short version for: &lt;code&gt; Thoroughfare
@@ -1377,7 +1377,7 @@ public class AddressDetails implements Cloneable {
      * Note:
      * <p>
      * This method does not make use of the fluent pattern.If you would like to
-     * make it fluent, use {@link #withAddressLine} instead.
+     * make it fluent, use {@code #withAddressLine} instead.
      *
      * @param addressLine
      */
@@ -1389,7 +1389,7 @@ public class AddressDetails implements Cloneable {
      * add a value to the addressLine property collection
      *
      * @param addressLine Objects of the following type are allowed in the list:
-     *                    {@link AddressLine}
+     *                    {@code AddressLine}
      * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
      *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
      */
@@ -1405,7 +1405,7 @@ public class AddressDetails implements Cloneable {
      * Note:
      * <p>
      * This method does not make use of the fluent pattern.If you would like to
-     * make it fluent, use {@link #withCountryNameCode} instead.
+     * make it fluent, use {@code #withCountryNameCode} instead.
      *
      * @param countryNameCode
      */
@@ -1418,7 +1418,7 @@ public class AddressDetails implements Cloneable {
      *
      * @param countryNameCode Objects of the following type are allowed in the
      *                        list:
-     *                        {@link AddressDetails.Country.CountryNameCode}
+     *                        {@code AddressDetails.Country.CountryNameCode}
      * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
      *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
      */
@@ -1434,7 +1434,7 @@ public class AddressDetails implements Cloneable {
      * Note:
      * <p>
      * This method does not make use of the fluent pattern.If you would like to
-     * make it fluent, use {@link #withCountryName} instead.
+     * make it fluent, use {@code #withCountryName} instead.
      *
      * @param countryName
      */
@@ -1446,7 +1446,7 @@ public class AddressDetails implements Cloneable {
      * add a value to the countryName property collection
      *
      * @param countryName Objects of the following type are allowed in the list:
-     *                    {@link CountryName}
+     *                    {@code CountryName}
      * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
      *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
      */
@@ -1462,7 +1462,7 @@ public class AddressDetails implements Cloneable {
      * Note:
      * <p>
      * This method does not make use of the fluent pattern.If you would like to
-     * make it fluent, use {@link #withAny} instead.
+     * make it fluent, use {@code #withAny} instead.
      *
      * @param any
      */
@@ -1474,7 +1474,7 @@ public class AddressDetails implements Cloneable {
      * add a value to the any property collection
      *
      * @param any Objects of the following type are allowed in the list:
-     *            {@link Object}
+     *            {@code Object}
      * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
      *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
      */
@@ -1587,7 +1587,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @return possible object is {@link String}
+       * @return possible object is {@code String}
        *
        */
       public String getContent() {
@@ -1595,7 +1595,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @param value allowed object is {@link String}
+       * @param value allowed object is {@code String}
        *
        */
       public void setContent(String value) {
@@ -1603,7 +1603,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @return possible object is {@link String}
+       * @return possible object is {@code String}
        *
        */
       public String getScheme() {
@@ -1611,7 +1611,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @param value allowed object is {@link String}
+       * @param value allowed object is {@code String}
        *
        */
       public void setScheme(String value) {
@@ -1619,7 +1619,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @return possible object is {@link String}
+       * @return possible object is {@code String}
        *
        */
       public String getCode() {
@@ -1627,7 +1627,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @param value allowed object is {@link String}
+       * @param value allowed object is {@code String}
        *
        */
       public void setCode(String value) {
@@ -1802,7 +1802,7 @@ public class AddressDetails implements Cloneable {
 
     /**
      * @return possible object is
-     *         {@link AddressDetails.PostalServiceElements.EndorsementLineCode}
+     *         {@code AddressDetails.PostalServiceElements.EndorsementLineCode}
      *
      */
     public AddressDetails.PostalServiceElements.EndorsementLineCode getEndorsementLineCode() {
@@ -1811,7 +1811,7 @@ public class AddressDetails implements Cloneable {
 
     /**
      * @param value allowed object is
-     *              {@link AddressDetails.PostalServiceElements.EndorsementLineCode}
+     *              {@code AddressDetails.PostalServiceElements.EndorsementLineCode}
      *
      */
     public void setEndorsementLineCode(AddressDetails.PostalServiceElements.EndorsementLineCode value) {
@@ -1820,7 +1820,7 @@ public class AddressDetails implements Cloneable {
 
     /**
      * @return possible object is
-     *         {@link AddressDetails.PostalServiceElements.KeyLineCode}
+     *         {@code AddressDetails.PostalServiceElements.KeyLineCode}
      *
      */
     public AddressDetails.PostalServiceElements.KeyLineCode getKeyLineCode() {
@@ -1829,7 +1829,7 @@ public class AddressDetails implements Cloneable {
 
     /**
      * @param value allowed object is
-     *              {@link AddressDetails.PostalServiceElements.KeyLineCode}
+     *              {@code AddressDetails.PostalServiceElements.KeyLineCode}
      *
      */
     public void setKeyLineCode(AddressDetails.PostalServiceElements.KeyLineCode value) {
@@ -1838,7 +1838,7 @@ public class AddressDetails implements Cloneable {
 
     /**
      * @return possible object is
-     *         {@link AddressDetails.PostalServiceElements.Barcode}
+     *         {@code AddressDetails.PostalServiceElements.Barcode}
      *
      */
     public AddressDetails.PostalServiceElements.Barcode getBarcode() {
@@ -1847,7 +1847,7 @@ public class AddressDetails implements Cloneable {
 
     /**
      * @param value allowed object is
-     *              {@link AddressDetails.PostalServiceElements.Barcode}
+     *              {@code AddressDetails.PostalServiceElements.Barcode}
      *
      */
     public void setBarcode(AddressDetails.PostalServiceElements.Barcode value) {
@@ -1856,7 +1856,7 @@ public class AddressDetails implements Cloneable {
 
     /**
      * @return possible object is
-     *         {@link AddressDetails.PostalServiceElements.SortingCode}
+     *         {@code AddressDetails.PostalServiceElements.SortingCode}
      *
      */
     public AddressDetails.PostalServiceElements.SortingCode getSortingCode() {
@@ -1865,7 +1865,7 @@ public class AddressDetails implements Cloneable {
 
     /**
      * @param value allowed object is
-     *              {@link AddressDetails.PostalServiceElements.SortingCode}
+     *              {@code AddressDetails.PostalServiceElements.SortingCode}
      *
      */
     public void setSortingCode(AddressDetails.PostalServiceElements.SortingCode value) {
@@ -1874,7 +1874,7 @@ public class AddressDetails implements Cloneable {
 
     /**
      * @return possible object is
-     *         {@link AddressDetails.PostalServiceElements.AddressLatitude}
+     *         {@code AddressDetails.PostalServiceElements.AddressLatitude}
      *
      */
     public AddressDetails.PostalServiceElements.AddressLatitude getAddressLatitude() {
@@ -1883,7 +1883,7 @@ public class AddressDetails implements Cloneable {
 
     /**
      * @param value allowed object is
-     *              {@link AddressDetails.PostalServiceElements.AddressLatitude}
+     *              {@code AddressDetails.PostalServiceElements.AddressLatitude}
      *
      */
     public void setAddressLatitude(AddressDetails.PostalServiceElements.AddressLatitude value) {
@@ -1892,7 +1892,7 @@ public class AddressDetails implements Cloneable {
 
     /**
      * @return possible object is
-     *         {@link AddressDetails.PostalServiceElements.AddressLatitudeDirection}
+     *         {@code AddressDetails.PostalServiceElements.AddressLatitudeDirection}
      *
      */
     public AddressDetails.PostalServiceElements.AddressLatitudeDirection getAddressLatitudeDirection() {
@@ -1901,7 +1901,7 @@ public class AddressDetails implements Cloneable {
 
     /**
      * @param value allowed object is
-     *              {@link AddressDetails.PostalServiceElements.AddressLatitudeDirection}
+     *              {@code AddressDetails.PostalServiceElements.AddressLatitudeDirection}
      *
      */
     public void setAddressLatitudeDirection(AddressDetails.PostalServiceElements.AddressLatitudeDirection value) {
@@ -1910,7 +1910,7 @@ public class AddressDetails implements Cloneable {
 
     /**
      * @return possible object is
-     *         {@link AddressDetails.PostalServiceElements.AddressLongitude}
+     *         {@code AddressDetails.PostalServiceElements.AddressLongitude}
      *
      */
     public AddressDetails.PostalServiceElements.AddressLongitude getAddressLongitude() {
@@ -1919,7 +1919,7 @@ public class AddressDetails implements Cloneable {
 
     /**
      * @param value allowed object is
-     *              {@link AddressDetails.PostalServiceElements.AddressLongitude}
+     *              {@code AddressDetails.PostalServiceElements.AddressLongitude}
      *
      */
     public void setAddressLongitude(AddressDetails.PostalServiceElements.AddressLongitude value) {
@@ -1928,7 +1928,7 @@ public class AddressDetails implements Cloneable {
 
     /**
      * @return possible object is
-     *         {@link AddressDetails.PostalServiceElements.AddressLongitudeDirection}
+     *         {@code AddressDetails.PostalServiceElements.AddressLongitudeDirection}
      *
      */
     public AddressDetails.PostalServiceElements.AddressLongitudeDirection getAddressLongitudeDirection() {
@@ -1937,7 +1937,7 @@ public class AddressDetails implements Cloneable {
 
     /**
      * @param value allowed object is
-     *              {@link AddressDetails.PostalServiceElements.AddressLongitudeDirection}
+     *              {@code AddressDetails.PostalServiceElements.AddressLongitudeDirection}
      *
      */
     public void setAddressLongitudeDirection(AddressDetails.PostalServiceElements.AddressLongitudeDirection value) {
@@ -1965,7 +1965,7 @@ public class AddressDetails implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getUnderscore() {
@@ -1973,7 +1973,7 @@ public class AddressDetails implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setUnderscore(String value) {
@@ -2107,7 +2107,7 @@ public class AddressDetails implements Cloneable {
 
     /**
      * Creates a new instance of
-     * {@link AddressDetails.PostalServiceElements.AddressIdentifier} and adds
+     * {@code AddressDetails.PostalServiceElements.AddressIdentifier} and adds
      * it to addressIdentifier. This method is a short version for: &lt;code&gt;
      * AddressIdentifier addressIdentifier = new AddressIdentifier();
      * this.getAddressIdentifier().add(addressIdentifier); &lt;/code&gt;
@@ -2120,7 +2120,7 @@ public class AddressDetails implements Cloneable {
 
     /**
      * Creates a new instance of
-     * {@link AddressDetails.PostalServiceElements.EndorsementLineCode} and set
+     * {@code AddressDetails.PostalServiceElements.EndorsementLineCode} and set
      * it to endorsementLineCode.
      * <p>
      * This method is a short version for: &lt;code&gt; EndorsementLineCode
@@ -2135,7 +2135,7 @@ public class AddressDetails implements Cloneable {
 
     /**
      * Creates a new instance of
-     * {@link AddressDetails.PostalServiceElements.KeyLineCode} and set it to
+     * {@code AddressDetails.PostalServiceElements.KeyLineCode} and set it to
      * keyLineCode.
      * <p>
      * This method is a short version for: &lt;code&gt; KeyLineCode keyLineCode
@@ -2149,7 +2149,7 @@ public class AddressDetails implements Cloneable {
 
     /**
      * Creates a new instance of
-     * {@link AddressDetails.PostalServiceElements.Barcode} and set it to
+     * {@code AddressDetails.PostalServiceElements.Barcode} and set it to
      * barcode.
      * <p>
      * This method is a short version for: &lt;code&gt; Barcode barcode = new
@@ -2163,7 +2163,7 @@ public class AddressDetails implements Cloneable {
 
     /**
      * Creates a new instance of
-     * {@link AddressDetails.PostalServiceElements.SortingCode} and set it to
+     * {@code AddressDetails.PostalServiceElements.SortingCode} and set it to
      * sortingCode.
      * <p>
      * This method is a short version for: &lt;code&gt; SortingCode sortingCode
@@ -2177,7 +2177,7 @@ public class AddressDetails implements Cloneable {
 
     /**
      * Creates a new instance of
-     * {@link AddressDetails.PostalServiceElements.AddressLatitude} and set it
+     * {@code AddressDetails.PostalServiceElements.AddressLatitude} and set it
      * to addressLatitude.
      * <p>
      * This method is a short version for: &lt;code&gt; AddressLatitude
@@ -2192,7 +2192,7 @@ public class AddressDetails implements Cloneable {
 
     /**
      * Creates a new instance of
-     * {@link AddressDetails.PostalServiceElements.AddressLatitudeDirection} and
+     * {@code AddressDetails.PostalServiceElements.AddressLatitudeDirection} and
      * set it to addressLatitudeDirection.
      * <p>
      * This method is a short version for: &lt;code&gt; AddressLatitudeDirection
@@ -2207,7 +2207,7 @@ public class AddressDetails implements Cloneable {
 
     /**
      * Creates a new instance of
-     * {@link AddressDetails.PostalServiceElements.AddressLongitude} and set it
+     * {@code AddressDetails.PostalServiceElements.AddressLongitude} and set it
      * to addressLongitude.
      * <p>
      * This method is a short version for: &lt;code&gt; AddressLongitude
@@ -2222,7 +2222,7 @@ public class AddressDetails implements Cloneable {
 
     /**
      * Creates a new instance of
-     * {@link AddressDetails.PostalServiceElements.AddressLongitudeDirection}
+     * {@code AddressDetails.PostalServiceElements.AddressLongitudeDirection}
      * and set it to addressLongitudeDirection.
      * <p>
      * This method is a short version for: &lt;code&gt;
@@ -2239,7 +2239,7 @@ public class AddressDetails implements Cloneable {
 
     /**
      * Creates a new instance of
-     * {@link AddressDetails.PostalServiceElements.SupplementaryPostalServiceData}
+     * {@code AddressDetails.PostalServiceElements.SupplementaryPostalServiceData}
      * and adds it to supplementaryPostalServiceData. This method is a short
      * version for: &lt;code&gt; SupplementaryPostalServiceData
      * supplementaryPostalServiceData = new SupplementaryPostalServiceData();
@@ -2259,7 +2259,7 @@ public class AddressDetails implements Cloneable {
      * Note:
      * <p>
      * This method does not make use of the fluent pattern.If you would like to
-     * make it fluent, use {@link #withAddressIdentifier} instead.
+     * make it fluent, use {@code #withAddressIdentifier} instead.
      *
      * @param addressIdentifier
      */
@@ -2272,7 +2272,7 @@ public class AddressDetails implements Cloneable {
      *
      * @param addressIdentifier Objects of the following type are allowed in the
      *                          list:
-     *                          {@link AddressDetails.PostalServiceElements.AddressIdentifier}
+     *                          {@code AddressDetails.PostalServiceElements.AddressIdentifier}
      * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
      *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
      */
@@ -2289,7 +2289,7 @@ public class AddressDetails implements Cloneable {
      * Note:
      * <p>
      * This method does not make use of the fluent pattern.If you would like to
-     * make it fluent, use {@link #withSupplementaryPostalServiceData} instead.
+     * make it fluent, use {@code #withSupplementaryPostalServiceData} instead.
      *
      * @param supplementaryPostalServiceData
      */
@@ -2302,7 +2302,7 @@ public class AddressDetails implements Cloneable {
      *
      * @param supplementaryPostalServiceData Objects of the following type are
      *                                       allowed in the list:
-     *                                       {@link AddressDetails.PostalServiceElements.SupplementaryPostalServiceData}
+     *                                       {@code AddressDetails.PostalServiceElements.SupplementaryPostalServiceData}
      * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
      *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
      */
@@ -2318,7 +2318,7 @@ public class AddressDetails implements Cloneable {
      * Note:
      * <p>
      * This method does not make use of the fluent pattern.If you would like to
-     * make it fluent, use {@link #withAny} instead.
+     * make it fluent, use {@code #withAny} instead.
      *
      * @param any
      */
@@ -2330,7 +2330,7 @@ public class AddressDetails implements Cloneable {
      * add a value to the any property collection
      *
      * @param any Objects of the following type are allowed in the list:
-     *            {@link Object}
+     *            {@code Object}
      * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
      *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
      */
@@ -2544,7 +2544,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @return possible object is {@link String}
+       * @return possible object is {@code String}
        *
        */
       public String getContent() {
@@ -2552,7 +2552,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @param value allowed object is {@link String}
+       * @param value allowed object is {@code String}
        *
        */
       public void setContent(String value) {
@@ -2560,7 +2560,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @return possible object is {@link String}
+       * @return possible object is {@code String}
        *
        */
       public String getIdentifier() {
@@ -2568,7 +2568,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @param value allowed object is {@link String}
+       * @param value allowed object is {@code String}
        *
        */
       public void setIdentifier(String value) {
@@ -2576,7 +2576,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @return possible object is {@link String}
+       * @return possible object is {@code String}
        *
        */
       public String getUnderscore() {
@@ -2584,7 +2584,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @param value allowed object is {@link String}
+       * @param value allowed object is {@code String}
        *
        */
       public void setUnderscore(String value) {
@@ -2592,7 +2592,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @return possible object is {@link String}
+       * @return possible object is {@code String}
        *
        */
       public String getCode() {
@@ -2600,7 +2600,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @param value allowed object is {@link String}
+       * @param value allowed object is {@code String}
        *
        */
       public void setCode(String value) {
@@ -2755,7 +2755,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @return possible object is {@link String}
+       * @return possible object is {@code String}
        *
        */
       public String getContent() {
@@ -2763,7 +2763,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @param value allowed object is {@link String}
+       * @param value allowed object is {@code String}
        *
        */
       public void setContent(String value) {
@@ -2771,7 +2771,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @return possible object is {@link String}
+       * @return possible object is {@code String}
        *
        */
       public String getUnderscore() {
@@ -2779,7 +2779,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @param value allowed object is {@link String}
+       * @param value allowed object is {@code String}
        *
        */
       public void setUnderscore(String value) {
@@ -2787,7 +2787,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @return possible object is {@link String}
+       * @return possible object is {@code String}
        *
        */
       public String getCode() {
@@ -2795,7 +2795,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @param value allowed object is {@link String}
+       * @param value allowed object is {@code String}
        *
        */
       public void setCode(String value) {
@@ -2930,7 +2930,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @return possible object is {@link String}
+       * @return possible object is {@code String}
        *
        */
       public String getContent() {
@@ -2938,7 +2938,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @param value allowed object is {@link String}
+       * @param value allowed object is {@code String}
        *
        */
       public void setContent(String value) {
@@ -2946,7 +2946,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @return possible object is {@link String}
+       * @return possible object is {@code String}
        *
        */
       public String getUnderscore() {
@@ -2954,7 +2954,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @param value allowed object is {@link String}
+       * @param value allowed object is {@code String}
        *
        */
       public void setUnderscore(String value) {
@@ -2962,7 +2962,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @return possible object is {@link String}
+       * @return possible object is {@code String}
        *
        */
       public String getCode() {
@@ -2970,7 +2970,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @param value allowed object is {@link String}
+       * @param value allowed object is {@code String}
        *
        */
       public void setCode(String value) {
@@ -3105,7 +3105,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @return possible object is {@link String}
+       * @return possible object is {@code String}
        *
        */
       public String getContent() {
@@ -3113,7 +3113,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @param value allowed object is {@link String}
+       * @param value allowed object is {@code String}
        *
        */
       public void setContent(String value) {
@@ -3121,7 +3121,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @return possible object is {@link String}
+       * @return possible object is {@code String}
        *
        */
       public String getUnderscore() {
@@ -3129,7 +3129,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @param value allowed object is {@link String}
+       * @param value allowed object is {@code String}
        *
        */
       public void setUnderscore(String value) {
@@ -3137,7 +3137,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @return possible object is {@link String}
+       * @return possible object is {@code String}
        *
        */
       public String getCode() {
@@ -3145,7 +3145,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @param value allowed object is {@link String}
+       * @param value allowed object is {@code String}
        *
        */
       public void setCode(String value) {
@@ -3280,7 +3280,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @return possible object is {@link String}
+       * @return possible object is {@code String}
        *
        */
       public String getContent() {
@@ -3288,7 +3288,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @param value allowed object is {@link String}
+       * @param value allowed object is {@code String}
        *
        */
       public void setContent(String value) {
@@ -3296,7 +3296,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @return possible object is {@link String}
+       * @return possible object is {@code String}
        *
        */
       public String getUnderscore() {
@@ -3304,7 +3304,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @param value allowed object is {@link String}
+       * @param value allowed object is {@code String}
        *
        */
       public void setUnderscore(String value) {
@@ -3312,7 +3312,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @return possible object is {@link String}
+       * @return possible object is {@code String}
        *
        */
       public String getCode() {
@@ -3320,7 +3320,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @param value allowed object is {@link String}
+       * @param value allowed object is {@code String}
        *
        */
       public void setCode(String value) {
@@ -3455,7 +3455,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @return possible object is {@link String}
+       * @return possible object is {@code String}
        *
        */
       public String getContent() {
@@ -3463,7 +3463,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @param value allowed object is {@link String}
+       * @param value allowed object is {@code String}
        *
        */
       public void setContent(String value) {
@@ -3471,7 +3471,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @return possible object is {@link String}
+       * @return possible object is {@code String}
        *
        */
       public String getUnderscore() {
@@ -3479,7 +3479,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @param value allowed object is {@link String}
+       * @param value allowed object is {@code String}
        *
        */
       public void setUnderscore(String value) {
@@ -3487,7 +3487,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @return possible object is {@link String}
+       * @return possible object is {@code String}
        *
        */
       public String getCode() {
@@ -3495,7 +3495,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @param value allowed object is {@link String}
+       * @param value allowed object is {@code String}
        *
        */
       public void setCode(String value) {
@@ -3630,7 +3630,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @return possible object is {@link String}
+       * @return possible object is {@code String}
        *
        */
       public String getContent() {
@@ -3638,7 +3638,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @param value allowed object is {@link String}
+       * @param value allowed object is {@code String}
        *
        */
       public void setContent(String value) {
@@ -3646,7 +3646,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @return possible object is {@link String}
+       * @return possible object is {@code String}
        *
        */
       public String getUnderscore() {
@@ -3654,7 +3654,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @param value allowed object is {@link String}
+       * @param value allowed object is {@code String}
        *
        */
       public void setUnderscore(String value) {
@@ -3662,7 +3662,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @return possible object is {@link String}
+       * @return possible object is {@code String}
        *
        */
       public String getCode() {
@@ -3670,7 +3670,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @param value allowed object is {@link String}
+       * @param value allowed object is {@code String}
        *
        */
       public void setCode(String value) {
@@ -3805,7 +3805,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @return possible object is {@link String}
+       * @return possible object is {@code String}
        *
        */
       public String getContent() {
@@ -3813,7 +3813,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @param value allowed object is {@link String}
+       * @param value allowed object is {@code String}
        *
        */
       public void setContent(String value) {
@@ -3821,7 +3821,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @return possible object is {@link String}
+       * @return possible object is {@code String}
        *
        */
       public String getUnderscore() {
@@ -3829,7 +3829,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @param value allowed object is {@link String}
+       * @param value allowed object is {@code String}
        *
        */
       public void setUnderscore(String value) {
@@ -3837,7 +3837,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @return possible object is {@link String}
+       * @return possible object is {@code String}
        *
        */
       public String getCode() {
@@ -3845,7 +3845,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @param value allowed object is {@link String}
+       * @param value allowed object is {@code String}
        *
        */
       public void setCode(String value) {
@@ -3974,7 +3974,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @return possible object is {@link String}
+       * @return possible object is {@code String}
        *
        */
       public String getUnderscore() {
@@ -3982,7 +3982,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @param value allowed object is {@link String}
+       * @param value allowed object is {@code String}
        *
        */
       public void setUnderscore(String value) {
@@ -3990,7 +3990,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @return possible object is {@link String}
+       * @return possible object is {@code String}
        *
        */
       public String getCode() {
@@ -3998,7 +3998,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @param value allowed object is {@link String}
+       * @param value allowed object is {@code String}
        *
        */
       public void setCode(String value) {
@@ -4106,7 +4106,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @return possible object is {@link String}
+       * @return possible object is {@code String}
        *
        */
       public String getContent() {
@@ -4114,7 +4114,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @param value allowed object is {@link String}
+       * @param value allowed object is {@code String}
        *
        */
       public void setContent(String value) {
@@ -4122,7 +4122,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @return possible object is {@link String}
+       * @return possible object is {@code String}
        *
        */
       public String getUnderscore() {
@@ -4130,7 +4130,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @param value allowed object is {@link String}
+       * @param value allowed object is {@code String}
        *
        */
       public void setUnderscore(String value) {
@@ -4138,7 +4138,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @return possible object is {@link String}
+       * @return possible object is {@code String}
        *
        */
       public String getCode() {
@@ -4146,7 +4146,7 @@ public class AddressDetails implements Cloneable {
       }
 
       /**
-       * @param value allowed object is {@link String}
+       * @param value allowed object is {@code String}
        *
        */
       public void setCode(String value) {

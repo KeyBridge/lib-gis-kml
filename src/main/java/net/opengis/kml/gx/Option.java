@@ -36,7 +36,7 @@ public class Option implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getName() {
@@ -44,7 +44,7 @@ public class Option implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setName(String value) {

@@ -172,7 +172,7 @@ public abstract class Container extends Feature implements Cloneable {
    * add a value to the containerSimpleExtension property collection
    *
    * @param containerSimpleExtension Objects of the following type are allowed
-   *                                 in the list: {@link Object}
+   *                                 in the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -194,7 +194,7 @@ public abstract class Container extends Feature implements Cloneable {
    * add a value to the containerObjectExtension property collection
    *
    * @param containerObjectExtension Objects of the following type are allowed
-   *                                 in the list: {@link AbstractObject}
+   *                                 in the list: {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

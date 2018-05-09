@@ -235,7 +235,7 @@ public class ScreenOverlay
   /**
    * @see overlayXY
    *
-   * @return possible object is {@link Vec2}
+   * @return possible object is {@code Vec2}
    *
    */
   public Vec2 getOverlayXY() {
@@ -245,7 +245,7 @@ public class ScreenOverlay
   /**
    * @see overlayXY
    *
-   * @param value allowed object is {@link Vec2}
+   * @param value allowed object is {@code Vec2}
    *
    */
   public void setOverlayXY(Vec2 value) {
@@ -255,7 +255,7 @@ public class ScreenOverlay
   /**
    * @see screenXY
    *
-   * @return possible object is {@link Vec2}
+   * @return possible object is {@code Vec2}
    *
    */
   public Vec2 getScreenXY() {
@@ -265,7 +265,7 @@ public class ScreenOverlay
   /**
    * @see screenXY
    *
-   * @param value allowed object is {@link Vec2}
+   * @param value allowed object is {@code Vec2}
    *
    */
   public void setScreenXY(Vec2 value) {
@@ -275,7 +275,7 @@ public class ScreenOverlay
   /**
    * @see rotationXY
    *
-   * @return possible object is {@link Vec2}
+   * @return possible object is {@code Vec2}
    *
    */
   public Vec2 getRotationXY() {
@@ -285,7 +285,7 @@ public class ScreenOverlay
   /**
    * @see rotationXY
    *
-   * @param value allowed object is {@link Vec2}
+   * @param value allowed object is {@code Vec2}
    *
    */
   public void setRotationXY(Vec2 value) {
@@ -295,7 +295,7 @@ public class ScreenOverlay
   /**
    * @see size
    *
-   * @return possible object is {@link Vec2}
+   * @return possible object is {@code Vec2}
    *
    */
   public Vec2 getSize() {
@@ -305,7 +305,7 @@ public class ScreenOverlay
   /**
    * @see size
    *
-   * @param value allowed object is {@link Vec2}
+   * @param value allowed object is {@code Vec2}
    *
    */
   public void setSize(Vec2 value) {
@@ -315,7 +315,7 @@ public class ScreenOverlay
   /**
    * @see rotation
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getRotation() {
@@ -325,7 +325,7 @@ public class ScreenOverlay
   /**
    * @see rotation
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setRotation(double value) {
@@ -434,7 +434,7 @@ public class ScreenOverlay
   }
 
   /**
-   * Creates a new instance of {@link Vec2} and set it to overlayXY.
+   * Creates a new instance of {@code Vec2} and set it to overlayXY.
    * <p>
    * This method is a short version for: &lt;code&gt; Vec2 vec2 = new Vec2();
    * this.setOverlayXY(vec2); &lt;/code&gt;
@@ -446,7 +446,7 @@ public class ScreenOverlay
   }
 
   /**
-   * Creates a new instance of {@link Vec2} and set it to screenXY.
+   * Creates a new instance of {@code Vec2} and set it to screenXY.
    * <p>
    * This method is a short version for: &lt;code&gt; Vec2 vec2 = new Vec2();
    * this.setScreenXY(vec2); &lt;/code&gt;
@@ -458,7 +458,7 @@ public class ScreenOverlay
   }
 
   /**
-   * Creates a new instance of {@link Vec2} and set it to rotationXY.
+   * Creates a new instance of {@code Vec2} and set it to rotationXY.
    * <p>
    * This method is a short version for: &lt;code&gt; Vec2 vec2 = new Vec2();
    * this.setRotationXY(vec2); &lt;/code&gt;
@@ -470,7 +470,7 @@ public class ScreenOverlay
   }
 
   /**
-   * Creates a new instance of {@link Vec2} and set it to size.
+   * Creates a new instance of {@code Vec2} and set it to size.
    * <p>
    * This method is a short version for: &lt;code&gt; Vec2 vec2 = new Vec2();
    * this.setSize(vec2); &lt;/code&gt;
@@ -494,7 +494,7 @@ public class ScreenOverlay
    * add a value to the screenOverlaySimpleExtension property collection
    *
    * @param screenOverlaySimpleExtension Objects of the following type are
-   *                                     allowed in the list: {@link Object}
+   *                                     allowed in the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -517,7 +517,7 @@ public class ScreenOverlay
    *
    * @param screenOverlayObjectExtension Objects of the following type are
    *                                     allowed in the list:
-   *                                     {@link AbstractObject}
+   *                                     {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

@@ -105,7 +105,7 @@ public class ItemIcon
   /**
    * @see href
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getHref() {
@@ -115,7 +115,7 @@ public class ItemIcon
   /**
    * @see href
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setHref(String value) {
@@ -214,7 +214,7 @@ public class ItemIcon
    * add a value to the state property collection
    *
    * @param state Objects of the following type are allowed in the list:
-   *              {@link ItemIconState}
+   *              {@code ItemIconState}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -236,7 +236,7 @@ public class ItemIcon
    * add a value to the itemIconSimpleExtension property collection
    *
    * @param itemIconSimpleExtension Objects of the following type are allowed in
-   *                                the list: {@link Object}
+   *                                the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -258,7 +258,7 @@ public class ItemIcon
    * add a value to the itemIconObjectExtension property collection
    *
    * @param itemIconObjectExtension Objects of the following type are allowed in
-   *                                the list: {@link AbstractObject}
+   *                                the list: {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

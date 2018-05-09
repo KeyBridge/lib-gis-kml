@@ -94,7 +94,7 @@ public class PolyStyle
   }
 
   /**
-   * @return possible object is {@link Boolean}
+   * @return possible object is {@code Boolean}
    *
    */
   public Boolean isFill() {
@@ -104,7 +104,7 @@ public class PolyStyle
   /**
    * @see fill
    *
-   * @param value allowed object is {@link Boolean}
+   * @param value allowed object is {@code Boolean}
    *
    */
   public void setFill(Boolean value) {
@@ -112,7 +112,7 @@ public class PolyStyle
   }
 
   /**
-   * @return possible object is {@link Boolean}
+   * @return possible object is {@code Boolean}
    *
    */
   public Boolean isOutline() {
@@ -122,7 +122,7 @@ public class PolyStyle
   /**
    * @see outline
    *
-   * @param value allowed object is {@link Boolean}
+   * @param value allowed object is {@code Boolean}
    *
    */
   public void setOutline(Boolean value) {
@@ -221,7 +221,7 @@ public class PolyStyle
    * add a value to the polyStyleSimpleExtension property collection
    *
    * @param polyStyleSimpleExtension Objects of the following type are allowed
-   *                                 in the list: {@link Object}
+   *                                 in the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -243,7 +243,7 @@ public class PolyStyle
    * add a value to the polyStyleObjectExtension property collection
    *
    * @param polyStyleObjectExtension Objects of the following type are allowed
-   *                                 in the list: {@link AbstractObject}
+   *                                 in the list: {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

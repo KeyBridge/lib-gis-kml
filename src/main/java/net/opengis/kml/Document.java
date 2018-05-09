@@ -280,7 +280,7 @@ public class Document extends Container implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Schema} and adds it to schema. This method
+   * Creates a new instance of {@code Schema} and adds it to schema. This method
    * is a short version for: &lt;code&gt; Schema schema = new Schema();
    * this.getSchema().add(schema); &lt;/code&gt;
    */
@@ -291,7 +291,7 @@ public class Document extends Container implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Tour} and adds it to feature. This method
+   * Creates a new instance of {@code Tour} and adds it to feature. This method
    * is a short version for: &lt;code&gt; Tour tour = new Tour();
    * this.getFeature().add(tour); &lt;/code&gt;
    */
@@ -302,7 +302,7 @@ public class Document extends Container implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link ScreenOverlay} and adds it to feature.
+   * Creates a new instance of {@code ScreenOverlay} and adds it to feature.
    * This method is a short version for: &lt;code&gt; ScreenOverlay
    * screenOverlay = new ScreenOverlay(); this.getFeature().add(screenOverlay);
    * &lt;/code&gt;
@@ -314,7 +314,7 @@ public class Document extends Container implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link PhotoOverlay} and adds it to feature. This
+   * Creates a new instance of {@code PhotoOverlay} and adds it to feature. This
    * method is a short version for: &lt;code&gt; PhotoOverlay photoOverlay = new
    * PhotoOverlay(); this.getFeature().add(photoOverlay); &lt;/code&gt;
    */
@@ -325,7 +325,7 @@ public class Document extends Container implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link GroundOverlay} and adds it to feature.
+   * Creates a new instance of {@code GroundOverlay} and adds it to feature.
    * This method is a short version for: &lt;code&gt; GroundOverlay
    * groundOverlay = new GroundOverlay(); this.getFeature().add(groundOverlay);
    * &lt;/code&gt;
@@ -337,7 +337,7 @@ public class Document extends Container implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link NetworkLink} and adds it to feature. This
+   * Creates a new instance of {@code NetworkLink} and adds it to feature. This
    * method is a short version for: &lt;code&gt; NetworkLink networkLink = new
    * NetworkLink(); this.getFeature().add(networkLink); &lt;/code&gt;
    */
@@ -348,7 +348,7 @@ public class Document extends Container implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Folder} and adds it to feature. This
+   * Creates a new instance of {@code Folder} and adds it to feature. This
    * method is a short version for: &lt;code&gt; Folder folder = new Folder();
    * this.getFeature().add(folder); &lt;/code&gt;
    */
@@ -359,7 +359,7 @@ public class Document extends Container implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Document} and adds it to feature. This
+   * Creates a new instance of {@code Document} and adds it to feature. This
    * method is a short version for: &lt;code&gt; Document document = new
    * Document(); this.getFeature().add(document); &lt;/code&gt;
    */
@@ -370,7 +370,7 @@ public class Document extends Container implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Placemark} and adds it to feature. This
+   * Creates a new instance of {@code Placemark} and adds it to feature. This
    * method is a short version for: &lt;code&gt; Placemark placemark = new
    * Placemark(); this.getFeature().add(placemark); &lt;/code&gt;
    */
@@ -393,7 +393,7 @@ public class Document extends Container implements Cloneable {
    * add a value to the schema property collection
    *
    * @param schema Objects of the following type are allowed in the list:
-   *               {@link Schema}
+   *               {@code Schema}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -415,7 +415,7 @@ public class Document extends Container implements Cloneable {
    * add a value to the feature property collection
    *
    * @param feature Objects of the following type are allowed in the list:
-   *                {@link Container}{@link JAXBElement}{@link GroundOverlay}{@link JAXBElement}{@link NetworkLink}{@link JAXBElement}{@link Folder}{@link JAXBElement}{@link PhotoOverlay}{@link JAXBElement}{@link Document}{@link JAXBElement}{@link Tour}{@link JAXBElement}{@link ScreenOverlay}{@link JAXBElement}{@link Feature}{@link JAXBElement}{@link Placemark}{@link JAXBElement}{@link Overlay}
+   *                {@code Container}{@code JAXBElement}{@code GroundOverlay}{@code JAXBElement}{@code NetworkLink}{@code JAXBElement}{@code Folder}{@code JAXBElement}{@code PhotoOverlay}{@code JAXBElement}{@code Document}{@code JAXBElement}{@code Tour}{@code JAXBElement}{@code ScreenOverlay}{@code JAXBElement}{@code Feature}{@code JAXBElement}{@code Placemark}{@code JAXBElement}{@code Overlay}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -437,7 +437,7 @@ public class Document extends Container implements Cloneable {
    * add a value to the documentSimpleExtension property collection
    *
    * @param documentSimpleExtension Objects of the following type are allowed in
-   *                                the list: {@link Object}
+   *                                the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -459,7 +459,7 @@ public class Document extends Container implements Cloneable {
    * add a value to the documentObjectExtension property collection
    *
    * @param documentObjectExtension Objects of the following type are allowed in
-   *                                the list: {@link AbstractObject}
+   *                                the list: {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

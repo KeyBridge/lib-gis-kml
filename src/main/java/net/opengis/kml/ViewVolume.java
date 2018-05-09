@@ -124,7 +124,7 @@ public class ViewVolume
   /**
    * @see leftFov
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getLeftFov() {
@@ -134,7 +134,7 @@ public class ViewVolume
   /**
    * @see leftFov
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setLeftFov(double value) {
@@ -144,7 +144,7 @@ public class ViewVolume
   /**
    * @see rightFov
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getRightFov() {
@@ -154,7 +154,7 @@ public class ViewVolume
   /**
    * @see rightFov
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setRightFov(double value) {
@@ -164,7 +164,7 @@ public class ViewVolume
   /**
    * @see bottomFov
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getBottomFov() {
@@ -174,7 +174,7 @@ public class ViewVolume
   /**
    * @see bottomFov
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setBottomFov(double value) {
@@ -184,7 +184,7 @@ public class ViewVolume
   /**
    * @see topFov
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getTopFov() {
@@ -194,7 +194,7 @@ public class ViewVolume
   /**
    * @see topFov
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setTopFov(double value) {
@@ -204,7 +204,7 @@ public class ViewVolume
   /**
    * @see near
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getNear() {
@@ -214,7 +214,7 @@ public class ViewVolume
   /**
    * @see near
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setNear(double value) {
@@ -323,7 +323,7 @@ public class ViewVolume
    * add a value to the viewVolumeSimpleExtension property collection
    *
    * @param viewVolumeSimpleExtension Objects of the following type are allowed
-   *                                  in the list: {@link Object}
+   *                                  in the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -345,7 +345,7 @@ public class ViewVolume
    * add a value to the viewVolumeObjectExtension property collection
    *
    * @param viewVolumeObjectExtension Objects of the following type are allowed
-   *                                  in the list: {@link AbstractObject}
+   *                                  in the list: {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

@@ -118,7 +118,7 @@ public abstract class ColorStyle
   /**
    * @see color
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getColor() {
@@ -128,7 +128,7 @@ public abstract class ColorStyle
   /**
    * @see color
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setColor(String value) {
@@ -138,7 +138,7 @@ public abstract class ColorStyle
   /**
    * @see colorMode
    *
-   * @return possible object is {@link ColorMode}
+   * @return possible object is {@code ColorMode}
    *
    */
   public ColorMode getColorMode() {
@@ -148,7 +148,7 @@ public abstract class ColorStyle
   /**
    * @see colorMode
    *
-   * @param value allowed object is {@link ColorMode}
+   * @param value allowed object is {@code ColorMode}
    *
    */
   public void setColorMode(ColorMode value) {
@@ -247,7 +247,7 @@ public abstract class ColorStyle
    * add a value to the colorStyleSimpleExtension property collection
    *
    * @param colorStyleSimpleExtension Objects of the following type are allowed
-   *                                  in the list: {@link Object}
+   *                                  in the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -269,7 +269,7 @@ public abstract class ColorStyle
    * add a value to the colorStyleObjectExtension property collection
    *
    * @param colorStyleObjectExtension Objects of the following type are allowed
-   *                                  in the list: {@link AbstractObject}
+   *                                  in the list: {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

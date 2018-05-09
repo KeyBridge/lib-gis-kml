@@ -136,15 +136,15 @@ public class Placemark extends Feature implements Cloneable {
   /**
    * @see geometry
    *
-   * @return possible object is null null null null null null null null null   {@link Geometry}
-     *     {@link Point}
-   *     {@link LinearRing}
-   *     {@link Polygon}
-   *     {@link Track}
-   *     {@link MultiTrack}
-   *     {@link Model}
-   *     {@link LineString}
-   *     {@link MultiGeometry}
+   * @return possible object is null null null null null null null null null   {@code Geometry}
+     *     {@code Point}
+   *     {@code LinearRing}
+   *     {@code Polygon}
+   *     {@code Track}
+   *     {@code MultiTrack}
+   *     {@code Model}
+   *     {@code LineString}
+   *     {@code MultiGeometry}
    *
    */
   public Geometry getGeometry() {
@@ -154,15 +154,15 @@ public class Placemark extends Feature implements Cloneable {
   /**
    * @see geometry
    *
-   * @param value allowed object is null null null null null null null null null   {@link Geometry}
-     *     {@link Point}
-   *     {@link LinearRing}
-   *     {@link Polygon}
-   *     {@link Track}
-   *     {@link MultiTrack}
-   *     {@link Model}
-   *     {@link LineString}
-   *     {@link MultiGeometry}
+   * @param value allowed object is null null null null null null null null null   {@code Geometry}
+     *     {@code Point}
+   *     {@code LinearRing}
+   *     {@code Polygon}
+   *     {@code Track}
+   *     {@code MultiTrack}
+   *     {@code Model}
+   *     {@code LineString}
+   *     {@code MultiGeometry}
    *
    */
   public void setGeometry(Geometry value) {
@@ -241,7 +241,7 @@ public class Placemark extends Feature implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link MultiTrack} and set it to geometry.
+   * Creates a new instance of {@code MultiTrack} and set it to geometry.
    * <p>
    * This method is a short version for: &lt;code&gt; MultiTrack multiTrack =
    * new MultiTrack(); this.setGeometry(multiTrack); &lt;/code&gt;
@@ -253,7 +253,7 @@ public class Placemark extends Feature implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Track} and set it to geometry.
+   * Creates a new instance of {@code Track} and set it to geometry.
    * <p>
    * This method is a short version for: &lt;code&gt; Track track = new Track();
    * this.setGeometry(track); &lt;/code&gt;
@@ -265,7 +265,7 @@ public class Placemark extends Feature implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link LinearRing} and set it to geometry.
+   * Creates a new instance of {@code LinearRing} and set it to geometry.
    * <p>
    * This method is a short version for: &lt;code&gt; LinearRing linearRing =
    * new LinearRing(); this.setGeometry(linearRing); &lt;/code&gt;
@@ -277,7 +277,7 @@ public class Placemark extends Feature implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Point} and set it to geometry.
+   * Creates a new instance of {@code Point} and set it to geometry.
    * <p>
    * This method is a short version for: &lt;code&gt; Point point = new Point();
    * this.setGeometry(point); &lt;/code&gt;
@@ -289,7 +289,7 @@ public class Placemark extends Feature implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Model} and set it to geometry.
+   * Creates a new instance of {@code Model} and set it to geometry.
    * <p>
    * This method is a short version for: &lt;code&gt; Model model = new Model();
    * this.setGeometry(model); &lt;/code&gt;
@@ -301,7 +301,7 @@ public class Placemark extends Feature implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link MultiGeometry} and set it to geometry.
+   * Creates a new instance of {@code MultiGeometry} and set it to geometry.
    * <p>
    * This method is a short version for: &lt;code&gt; MultiGeometry
    * multiGeometry = new MultiGeometry(); this.setGeometry(multiGeometry);
@@ -314,7 +314,7 @@ public class Placemark extends Feature implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link LineString} and set it to geometry.
+   * Creates a new instance of {@code LineString} and set it to geometry.
    * <p>
    * This method is a short version for: &lt;code&gt; LineString lineString =
    * new LineString(); this.setGeometry(lineString); &lt;/code&gt;
@@ -326,7 +326,7 @@ public class Placemark extends Feature implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Polygon} and set it to geometry.
+   * Creates a new instance of {@code Polygon} and set it to geometry.
    * <p>
    * This method is a short version for: &lt;code&gt; Polygon polygon = new
    * Polygon(); this.setGeometry(polygon); &lt;/code&gt;
@@ -350,7 +350,7 @@ public class Placemark extends Feature implements Cloneable {
    * add a value to the placemarkSimpleExtension property collection
    *
    * @param placemarkSimpleExtension Objects of the following type are allowed
-   *                                 in the list: {@link Object}
+   *                                 in the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -372,7 +372,7 @@ public class Placemark extends Feature implements Cloneable {
    * add a value to the placemarkObjectExtension property collection
    *
    * @param placemarkObjectExtension Objects of the following type are allowed
-   *                                 in the list: {@link AbstractObject}
+   *                                 in the list: {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

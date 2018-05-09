@@ -119,7 +119,7 @@ public class FlyTo
   /**
    * @see duration
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getDuration() {
@@ -129,7 +129,7 @@ public class FlyTo
   /**
    * @see duration
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setDuration(double value) {
@@ -139,7 +139,7 @@ public class FlyTo
   /**
    * @see flyToMode
    *
-   * @return possible object is {@link FlyToMode}
+   * @return possible object is {@code FlyToMode}
    *
    */
   public FlyToMode getFlyToMode() {
@@ -149,7 +149,7 @@ public class FlyTo
   /**
    * @see flyToMode
    *
-   * @param value allowed object is {@link FlyToMode}
+   * @param value allowed object is {@code FlyToMode}
    *
    */
   public void setFlyToMode(FlyToMode value) {
@@ -159,9 +159,9 @@ public class FlyTo
   /**
    * @see abstractView
    *
-   * @return possible object is null null null null null null null null null null   {@link AbstractView}
-     *     {@link LookAt}
-   *     {@link Camera}
+   * @return possible object is null null null null null null null null null null   {@code AbstractView}
+     *     {@code LookAt}
+   *     {@code Camera}
    *
    */
   public AbstractView getAbstractView() {
@@ -171,9 +171,9 @@ public class FlyTo
   /**
    * @see abstractView
    *
-   * @param value allowed object is null null null null null null null null null null   {@link AbstractView}
-     *     {@link LookAt}
-   *     {@link Camera}
+   * @param value allowed object is null null null null null null null null null null   {@code AbstractView}
+     *     {@code LookAt}
+   *     {@code Camera}
    *
    */
   public void setAbstractView(AbstractView value) {
@@ -225,7 +225,7 @@ public class FlyTo
   }
 
   /**
-   * Creates a new instance of {@link LookAt} and set it to abstractView.
+   * Creates a new instance of {@code LookAt} and set it to abstractView.
    * <p>
    * This method is a short version for: &lt;code&gt; LookAt lookAt = new
    * LookAt(); this.setAbstractView(lookAt); &lt;/code&gt;
@@ -237,7 +237,7 @@ public class FlyTo
   }
 
   /**
-   * Creates a new instance of {@link Camera} and set it to abstractView.
+   * Creates a new instance of {@code Camera} and set it to abstractView.
    * <p>
    * This method is a short version for: &lt;code&gt; Camera camera = new
    * Camera(); this.setAbstractView(camera); &lt;/code&gt;

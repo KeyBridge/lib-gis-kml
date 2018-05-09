@@ -89,7 +89,7 @@ public class LargeMailUser implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link LargeMailUser.LargeMailUserIdentifier}
+   * @return possible object is {@code LargeMailUser.LargeMailUserIdentifier}
    *
    */
   public LargeMailUser.LargeMailUserIdentifier getLargeMailUserIdentifier() {
@@ -98,7 +98,7 @@ public class LargeMailUser implements Cloneable {
 
   /**
    * @param value allowed object is
-   *              {@link LargeMailUser.LargeMailUserIdentifier}
+   *              {@code LargeMailUser.LargeMailUserIdentifier}
    *
    */
   public void setLargeMailUserIdentifier(LargeMailUser.LargeMailUserIdentifier value) {
@@ -116,7 +116,7 @@ public class LargeMailUser implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link Department}
+   * @return possible object is {@code Department}
    *
    */
   public Department getDepartment() {
@@ -124,7 +124,7 @@ public class LargeMailUser implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link Department}
+   * @param value allowed object is {@code Department}
    *
    */
   public void setDepartment(Department value) {
@@ -132,7 +132,7 @@ public class LargeMailUser implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link PostBox}
+   * @return possible object is {@code PostBox}
    *
    */
   public PostBox getPostBox() {
@@ -140,7 +140,7 @@ public class LargeMailUser implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link PostBox}
+   * @param value allowed object is {@code PostBox}
    *
    */
   public void setPostBox(PostBox value) {
@@ -148,7 +148,7 @@ public class LargeMailUser implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link Thoroughfare}
+   * @return possible object is {@code Thoroughfare}
    *
    */
   public Thoroughfare getThoroughfare() {
@@ -156,7 +156,7 @@ public class LargeMailUser implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link Thoroughfare}
+   * @param value allowed object is {@code Thoroughfare}
    *
    */
   public void setThoroughfare(Thoroughfare value) {
@@ -164,7 +164,7 @@ public class LargeMailUser implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link PostalCode}
+   * @return possible object is {@code PostalCode}
    *
    */
   public PostalCode getPostalCode() {
@@ -172,7 +172,7 @@ public class LargeMailUser implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link PostalCode}
+   * @param value allowed object is {@code PostalCode}
    *
    */
   public void setPostalCode(PostalCode value) {
@@ -190,7 +190,7 @@ public class LargeMailUser implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getUnderscore() {
@@ -198,7 +198,7 @@ public class LargeMailUser implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setUnderscore(String value) {
@@ -315,7 +315,7 @@ public class LargeMailUser implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link AddressLine} and adds it to addressLine.
+   * Creates a new instance of {@code AddressLine} and adds it to addressLine.
    * This method is a short version for: &lt;code&gt; AddressLine addressLine =
    * new AddressLine(); this.getAddressLine().add(addressLine); &lt;/code&gt;
    */
@@ -326,7 +326,7 @@ public class LargeMailUser implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link LargeMailUser.LargeMailUserName} and adds
+   * Creates a new instance of {@code LargeMailUser.LargeMailUserName} and adds
    * it to largeMailUserName. This method is a short version for: &lt;code&gt;
    * LargeMailUserName largeMailUserName = new LargeMailUserName();
    * this.getLargeMailUserName().add(largeMailUserName); &lt;/code&gt;
@@ -338,7 +338,7 @@ public class LargeMailUser implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link LargeMailUser.LargeMailUserIdentifier} and
+   * Creates a new instance of {@code LargeMailUser.LargeMailUserIdentifier} and
    * set it to largeMailUserIdentifier.
    * <p>
    * This method is a short version for: &lt;code&gt; LargeMailUserIdentifier
@@ -352,7 +352,7 @@ public class LargeMailUser implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link BuildingName} and adds it to buildingName.
+   * Creates a new instance of {@code BuildingName} and adds it to buildingName.
    * This method is a short version for: &lt;code&gt; BuildingName buildingName
    * = new BuildingName(); this.getBuildingName().add(buildingName);
    * &lt;/code&gt;
@@ -364,7 +364,7 @@ public class LargeMailUser implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Department} and set it to department.
+   * Creates a new instance of {@code Department} and set it to department.
    * <p>
    * This method is a short version for: &lt;code&gt; Department department =
    * new Department(); this.setDepartment(department); &lt;/code&gt;
@@ -376,7 +376,7 @@ public class LargeMailUser implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link PostBox} and set it to postBox.
+   * Creates a new instance of {@code PostBox} and set it to postBox.
    * <p>
    * This method is a short version for: &lt;code&gt; PostBox postBox = new
    * PostBox(); this.setPostBox(postBox); &lt;/code&gt;
@@ -390,7 +390,7 @@ public class LargeMailUser implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Thoroughfare} and set it to thoroughfare.
+   * Creates a new instance of {@code Thoroughfare} and set it to thoroughfare.
    * <p>
    * This method is a short version for: &lt;code&gt; Thoroughfare thoroughfare
    * = new Thoroughfare(); this.setThoroughfare(thoroughfare); &lt;/code&gt;
@@ -407,7 +407,7 @@ public class LargeMailUser implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link PostalCode} and set it to postalCode.
+   * Creates a new instance of {@code PostalCode} and set it to postalCode.
    * <p>
    * This method is a short version for: &lt;code&gt; PostalCode postalCode =
    * new PostalCode(); this.setPostalCode(postalCode); &lt;/code&gt;
@@ -425,7 +425,7 @@ public class LargeMailUser implements Cloneable {
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withAddressLine} instead.
+   * make it fluent, use {@code #withAddressLine} instead.
    *
    * @param addressLine
    */
@@ -437,7 +437,7 @@ public class LargeMailUser implements Cloneable {
    * add a value to the addressLine property collection
    *
    * @param addressLine Objects of the following type are allowed in the list:
-   *                    {@link AddressLine}
+   *                    {@code AddressLine}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -453,7 +453,7 @@ public class LargeMailUser implements Cloneable {
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withLargeMailUserName} instead.
+   * make it fluent, use {@code #withLargeMailUserName} instead.
    *
    * @param largeMailUserName
    */
@@ -465,7 +465,7 @@ public class LargeMailUser implements Cloneable {
    * add a value to the largeMailUserName property collection
    *
    * @param largeMailUserName Objects of the following type are allowed in the
-   *                          list: {@link LargeMailUser.LargeMailUserName}
+   *                          list: {@code LargeMailUser.LargeMailUserName}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -481,7 +481,7 @@ public class LargeMailUser implements Cloneable {
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withBuildingName} instead.
+   * make it fluent, use {@code #withBuildingName} instead.
    *
    * @param buildingName
    */
@@ -493,7 +493,7 @@ public class LargeMailUser implements Cloneable {
    * add a value to the buildingName property collection
    *
    * @param buildingName Objects of the following type are allowed in the list:
-   *                     {@link BuildingName}
+   *                     {@code BuildingName}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -509,7 +509,7 @@ public class LargeMailUser implements Cloneable {
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withAny} instead.
+   * make it fluent, use {@code #withAny} instead.
    *
    * @param any
    */
@@ -521,7 +521,7 @@ public class LargeMailUser implements Cloneable {
    * add a value to the any property collection
    *
    * @param any Objects of the following type are allowed in the list:
-   *            {@link Object}
+   *            {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -710,7 +710,7 @@ public class LargeMailUser implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getContent() {
@@ -718,7 +718,7 @@ public class LargeMailUser implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setContent(String value) {
@@ -726,7 +726,7 @@ public class LargeMailUser implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getUnderscore() {
@@ -734,7 +734,7 @@ public class LargeMailUser implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setUnderscore(String value) {
@@ -742,7 +742,7 @@ public class LargeMailUser implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getIndicator() {
@@ -750,7 +750,7 @@ public class LargeMailUser implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setIndicator(String value) {
@@ -758,7 +758,7 @@ public class LargeMailUser implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getCode() {
@@ -766,7 +766,7 @@ public class LargeMailUser implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setCode(String value) {
@@ -919,7 +919,7 @@ public class LargeMailUser implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getContent() {
@@ -927,7 +927,7 @@ public class LargeMailUser implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setContent(String value) {
@@ -935,7 +935,7 @@ public class LargeMailUser implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getUnderscore() {
@@ -943,7 +943,7 @@ public class LargeMailUser implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setUnderscore(String value) {
@@ -951,7 +951,7 @@ public class LargeMailUser implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getCode() {
@@ -959,7 +959,7 @@ public class LargeMailUser implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setCode(String value) {

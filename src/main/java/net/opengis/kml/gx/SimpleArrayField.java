@@ -45,7 +45,7 @@ public class SimpleArrayField implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getDisplayName() {
@@ -53,7 +53,7 @@ public class SimpleArrayField implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setDisplayName(String value) {
@@ -71,7 +71,7 @@ public class SimpleArrayField implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getType() {
@@ -79,7 +79,7 @@ public class SimpleArrayField implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setType(String value) {
@@ -87,7 +87,7 @@ public class SimpleArrayField implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getName() {
@@ -95,7 +95,7 @@ public class SimpleArrayField implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setName(String value) {
@@ -163,7 +163,7 @@ public class SimpleArrayField implements Cloneable {
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withSimpleArrayFieldExtension} instead.
+   * make it fluent, use {@code #withSimpleArrayFieldExtension} instead.
    *
    * @param simpleArrayFieldExtension
    */
@@ -175,7 +175,7 @@ public class SimpleArrayField implements Cloneable {
    * add a value to the simpleArrayFieldExtension property collection
    *
    * @param simpleArrayFieldExtension Objects of the following type are allowed
-   *                                  in the list: {@link Object}
+   *                                  in the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

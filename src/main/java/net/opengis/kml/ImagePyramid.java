@@ -110,7 +110,7 @@ public class ImagePyramid
   /**
    * @see tileSize
    *
-   * @return possible object is {@link Integer}
+   * @return possible object is {@code Integer}
    *
    */
   public int getTileSize() {
@@ -120,7 +120,7 @@ public class ImagePyramid
   /**
    * @see tileSize
    *
-   * @param value allowed object is {@link Integer}
+   * @param value allowed object is {@code Integer}
    *
    */
   public void setTileSize(int value) {
@@ -130,7 +130,7 @@ public class ImagePyramid
   /**
    * @see maxWidth
    *
-   * @return possible object is {@link Integer}
+   * @return possible object is {@code Integer}
    *
    */
   public int getMaxWidth() {
@@ -140,7 +140,7 @@ public class ImagePyramid
   /**
    * @see maxWidth
    *
-   * @param value allowed object is {@link Integer}
+   * @param value allowed object is {@code Integer}
    *
    */
   public void setMaxWidth(int value) {
@@ -150,7 +150,7 @@ public class ImagePyramid
   /**
    * @see maxHeight
    *
-   * @return possible object is {@link Integer}
+   * @return possible object is {@code Integer}
    *
    */
   public int getMaxHeight() {
@@ -160,7 +160,7 @@ public class ImagePyramid
   /**
    * @see maxHeight
    *
-   * @param value allowed object is {@link Integer}
+   * @param value allowed object is {@code Integer}
    *
    */
   public void setMaxHeight(int value) {
@@ -170,7 +170,7 @@ public class ImagePyramid
   /**
    * @see gridOrigin
    *
-   * @return possible object is {@link GridOrigin}
+   * @return possible object is {@code GridOrigin}
    *
    */
   public GridOrigin getGridOrigin() {
@@ -180,7 +180,7 @@ public class ImagePyramid
   /**
    * @see gridOrigin
    *
-   * @param value allowed object is {@link GridOrigin}
+   * @param value allowed object is {@code GridOrigin}
    *
    */
   public void setGridOrigin(GridOrigin value) {
@@ -283,7 +283,7 @@ public class ImagePyramid
    * add a value to the imagePyramidSimpleExtension property collection
    *
    * @param imagePyramidSimpleExtension Objects of the following type are
-   *                                    allowed in the list: {@link Object}
+   *                                    allowed in the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -306,7 +306,7 @@ public class ImagePyramid
    *
    * @param imagePyramidObjectExtension Objects of the following type are
    *                                    allowed in the list:
-   *                                    {@link AbstractObject}
+   *                                    {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

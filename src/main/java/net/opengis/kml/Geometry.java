@@ -234,7 +234,7 @@ public abstract class Geometry extends AbstractObject implements Cloneable {
    *
    * @param geometrySimpleExtension Objects of the following type are allowed in
    *                                the list:
-   *                                {@link Object}{@link JAXBElement}{@link BigInteger}{@link JAXBElement}{@link Double}
+   *                                {@code Object}{@code JAXBElement}{@code BigInteger}{@code JAXBElement}{@code Double}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -256,7 +256,7 @@ public abstract class Geometry extends AbstractObject implements Cloneable {
    * add a value to the geometryObjectExtension property collection
    *
    * @param geometryObjectExtension Objects of the following type are allowed in
-   *                                the list: {@link AbstractObject}
+   *                                the list: {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

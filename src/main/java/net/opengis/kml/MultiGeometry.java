@@ -183,7 +183,7 @@ public class MultiGeometry extends Geometry implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link MultiTrack} and adds it to geometry. This
+   * Creates a new instance of {@code MultiTrack} and adds it to geometry. This
    * method is a short version for: &lt;code&gt; MultiTrack multiTrack = new
    * MultiTrack(); this.getGeometry().add(multiTrack); &lt;/code&gt;
    */
@@ -194,7 +194,7 @@ public class MultiGeometry extends Geometry implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Track} and adds it to geometry. This
+   * Creates a new instance of {@code Track} and adds it to geometry. This
    * method is a short version for: &lt;code&gt; Track track = new Track();
    * this.getGeometry().add(track); &lt;/code&gt;
    */
@@ -205,7 +205,7 @@ public class MultiGeometry extends Geometry implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link LinearRing} and adds it to geometry. This
+   * Creates a new instance of {@code LinearRing} and adds it to geometry. This
    * method is a short version for: &lt;code&gt; LinearRing linearRing = new
    * LinearRing(); this.getGeometry().add(linearRing); &lt;/code&gt;
    */
@@ -216,7 +216,7 @@ public class MultiGeometry extends Geometry implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Point} and adds it to geometry. This
+   * Creates a new instance of {@code Point} and adds it to geometry. This
    * method is a short version for: &lt;code&gt; Point point = new Point();
    * this.getGeometry().add(point); &lt;/code&gt;
    */
@@ -227,7 +227,7 @@ public class MultiGeometry extends Geometry implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Model} and adds it to geometry. This
+   * Creates a new instance of {@code Model} and adds it to geometry. This
    * method is a short version for: &lt;code&gt; Model model = new Model();
    * this.getGeometry().add(model); &lt;/code&gt;
    */
@@ -238,7 +238,7 @@ public class MultiGeometry extends Geometry implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link MultiGeometry} and adds it to geometry.
+   * Creates a new instance of {@code MultiGeometry} and adds it to geometry.
    * This method is a short version for: &lt;code&gt; MultiGeometry
    * multiGeometry = new MultiGeometry(); this.getGeometry().add(multiGeometry);
    * &lt;/code&gt;
@@ -250,7 +250,7 @@ public class MultiGeometry extends Geometry implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link LineString} and adds it to geometry. This
+   * Creates a new instance of {@code LineString} and adds it to geometry. This
    * method is a short version for: &lt;code&gt; LineString lineString = new
    * LineString(); this.getGeometry().add(lineString); &lt;/code&gt;
    */
@@ -261,7 +261,7 @@ public class MultiGeometry extends Geometry implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Polygon} and adds it to geometry. This
+   * Creates a new instance of {@code Polygon} and adds it to geometry. This
    * method is a short version for: &lt;code&gt; Polygon polygon = new
    * Polygon(); this.getGeometry().add(polygon); &lt;/code&gt;
    */
@@ -284,7 +284,7 @@ public class MultiGeometry extends Geometry implements Cloneable {
    * add a value to the geometry property collection
    *
    * @param geometry Objects of the following type are allowed in the list:
-   *                 {@link Geometry}{@link JAXBElement}{@link Point}{@link JAXBElement}{@link LinearRing}{@link JAXBElement}{@link Polygon}{@link JAXBElement}{@link Track}{@link JAXBElement}{@link MultiTrack}{@link JAXBElement}{@link Model}{@link JAXBElement}{@link LineString}{@link JAXBElement}{@link MultiGeometry}
+   *                 {@code Geometry}{@code JAXBElement}{@code Point}{@code JAXBElement}{@code LinearRing}{@code JAXBElement}{@code Polygon}{@code JAXBElement}{@code Track}{@code JAXBElement}{@code MultiTrack}{@code JAXBElement}{@code Model}{@code JAXBElement}{@code LineString}{@code JAXBElement}{@code MultiGeometry}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -306,7 +306,7 @@ public class MultiGeometry extends Geometry implements Cloneable {
    * add a value to the multiGeometrySimpleExtension property collection
    *
    * @param multiGeometrySimpleExtension Objects of the following type are
-   *                                     allowed in the list: {@link Object}
+   *                                     allowed in the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -329,7 +329,7 @@ public class MultiGeometry extends Geometry implements Cloneable {
    *
    * @param multiGeometryObjectExtension Objects of the following type are
    *                                     allowed in the list:
-   *                                     {@link AbstractObject}
+   *                                     {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

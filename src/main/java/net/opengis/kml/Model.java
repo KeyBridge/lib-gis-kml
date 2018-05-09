@@ -213,9 +213,9 @@ public class Model extends Geometry implements Cloneable {
   /**
    * @see altitudeMode
    *
-   * @return possible object is null null null null null null null null null   {@link Object}
-     *     {@link net.opengis.kml.AltitudeMode}
-   *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
+   * @return possible object is null null null null null null null null null   {@code Object}
+     *     {@code net.opengis.kml.AltitudeMode}
+   *     {@code de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
    */
   public AltitudeMode getAltitudeMode() {
@@ -225,9 +225,9 @@ public class Model extends Geometry implements Cloneable {
   /**
    * @see altitudeMode
    *
-   * @param value allowed object is null null null null null null null null null   {@link Object}
-     *     {@link net.opengis.kml.AltitudeMode}
-   *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
+   * @param value allowed object is null null null null null null null null null   {@code Object}
+     *     {@code net.opengis.kml.AltitudeMode}
+   *     {@code de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
    */
   public void setAltitudeMode(AltitudeMode value) {
@@ -237,7 +237,7 @@ public class Model extends Geometry implements Cloneable {
   /**
    * @see location
    *
-   * @return possible object is {@link Location}
+   * @return possible object is {@code Location}
    *
    */
   public Location getLocation() {
@@ -247,7 +247,7 @@ public class Model extends Geometry implements Cloneable {
   /**
    * @see location
    *
-   * @param value allowed object is {@link Location}
+   * @param value allowed object is {@code Location}
    *
    */
   public void setLocation(Location value) {
@@ -257,7 +257,7 @@ public class Model extends Geometry implements Cloneable {
   /**
    * @see orientation
    *
-   * @return possible object is {@link Orientation}
+   * @return possible object is {@code Orientation}
    *
    */
   public Orientation getOrientation() {
@@ -267,7 +267,7 @@ public class Model extends Geometry implements Cloneable {
   /**
    * @see orientation
    *
-   * @param value allowed object is {@link Orientation}
+   * @param value allowed object is {@code Orientation}
    *
    */
   public void setOrientation(Orientation value) {
@@ -277,7 +277,7 @@ public class Model extends Geometry implements Cloneable {
   /**
    * @see scale
    *
-   * @return possible object is {@link Scale}
+   * @return possible object is {@code Scale}
    *
    */
   public Scale getScale() {
@@ -287,7 +287,7 @@ public class Model extends Geometry implements Cloneable {
   /**
    * @see scale
    *
-   * @param value allowed object is {@link Scale}
+   * @param value allowed object is {@code Scale}
    *
    */
   public void setScale(Scale value) {
@@ -297,7 +297,7 @@ public class Model extends Geometry implements Cloneable {
   /**
    * @see link
    *
-   * @return possible object is {@link Link}
+   * @return possible object is {@code Link}
    *
    */
   public Link getLink() {
@@ -307,7 +307,7 @@ public class Model extends Geometry implements Cloneable {
   /**
    * @see link
    *
-   * @param value allowed object is {@link Link}
+   * @param value allowed object is {@code Link}
    *
    */
   public void setLink(Link value) {
@@ -317,7 +317,7 @@ public class Model extends Geometry implements Cloneable {
   /**
    * @see resourceMap
    *
-   * @return possible object is {@link ResourceMap}
+   * @return possible object is {@code ResourceMap}
    *
    */
   public ResourceMap getResourceMap() {
@@ -327,7 +327,7 @@ public class Model extends Geometry implements Cloneable {
   /**
    * @see resourceMap
    *
-   * @param value allowed object is {@link ResourceMap}
+   * @param value allowed object is {@code ResourceMap}
    *
    */
   public void setResourceMap(ResourceMap value) {
@@ -446,7 +446,7 @@ public class Model extends Geometry implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Location} and set it to location.
+   * Creates a new instance of {@code Location} and set it to location.
    * <p>
    * This method is a short version for: &lt;code&gt; Location location = new
    * Location(); this.setLocation(location); &lt;/code&gt;
@@ -458,7 +458,7 @@ public class Model extends Geometry implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Orientation} and set it to orientation.
+   * Creates a new instance of {@code Orientation} and set it to orientation.
    * <p>
    * This method is a short version for: &lt;code&gt; Orientation orientation =
    * new Orientation(); this.setOrientation(orientation); &lt;/code&gt;
@@ -470,7 +470,7 @@ public class Model extends Geometry implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Scale} and set it to scale.
+   * Creates a new instance of {@code Scale} and set it to scale.
    * <p>
    * This method is a short version for: &lt;code&gt; Scale scale = new Scale();
    * this.setScale(scale); &lt;/code&gt;
@@ -482,7 +482,7 @@ public class Model extends Geometry implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Link} and set it to link.
+   * Creates a new instance of {@code Link} and set it to link.
    * <p>
    * This method is a short version for: &lt;code&gt; Link link = new Link();
    * this.setLink(link); &lt;/code&gt;
@@ -494,7 +494,7 @@ public class Model extends Geometry implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link ResourceMap} and set it to resourceMap.
+   * Creates a new instance of {@code ResourceMap} and set it to resourceMap.
    * <p>
    * This method is a short version for: &lt;code&gt; ResourceMap resourceMap =
    * new ResourceMap(); this.setResourceMap(resourceMap); &lt;/code&gt;
@@ -518,7 +518,7 @@ public class Model extends Geometry implements Cloneable {
    * add a value to the modelSimpleExtension property collection
    *
    * @param modelSimpleExtension Objects of the following type are allowed in
-   *                             the list: {@link Object}
+   *                             the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -540,7 +540,7 @@ public class Model extends Geometry implements Cloneable {
    * add a value to the modelObjectExtension property collection
    *
    * @param modelObjectExtension Objects of the following type are allowed in
-   *                             the list: {@link AbstractObject}
+   *                             the list: {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

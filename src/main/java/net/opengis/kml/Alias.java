@@ -105,7 +105,7 @@ public class Alias
   /**
    * @see targetHref
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getTargetHref() {
@@ -115,7 +115,7 @@ public class Alias
   /**
    * @see targetHref
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setTargetHref(String value) {
@@ -125,7 +125,7 @@ public class Alias
   /**
    * @see sourceHref
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getSourceHref() {
@@ -135,7 +135,7 @@ public class Alias
   /**
    * @see sourceHref
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setSourceHref(String value) {
@@ -234,7 +234,7 @@ public class Alias
    * add a value to the aliasSimpleExtension property collection
    *
    * @param aliasSimpleExtension Objects of the following type are allowed in
-   *                             the list: {@link Object}
+   *                             the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -256,7 +256,7 @@ public class Alias
    * add a value to the aliasObjectExtension property collection
    *
    * @param aliasObjectExtension Objects of the following type are allowed in
-   *                             the list: {@link AbstractObject}
+   *                             the list: {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

@@ -53,9 +53,9 @@ public class MultiTrack
   }
 
   /**
-   * @return possible object is null null null null null null null null null   {@link Object}
-     *     {@link net.opengis.kml.AltitudeMode}
-   *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
+   * @return possible object is null null null null null null null null null   {@code Object}
+     *     {@code net.opengis.kml.AltitudeMode}
+   *     {@code de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
    */
   public AltitudeMode getAltitudeMode() {
@@ -63,9 +63,9 @@ public class MultiTrack
   }
 
   /**
-   * @param value allowed object is null null null null null null null null null   {@link Object}
-     *     {@link net.opengis.kml.AltitudeMode}
-   *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
+   * @param value allowed object is null null null null null null null null null   {@code Object}
+     *     {@code net.opengis.kml.AltitudeMode}
+   *     {@code de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
    */
   public void setAltitudeMode(AltitudeMode value) {
@@ -73,7 +73,7 @@ public class MultiTrack
   }
 
   /**
-   * @return possible object is {@link Boolean}
+   * @return possible object is {@code Boolean}
    *
    */
   public Boolean isInterpolate() {
@@ -81,7 +81,7 @@ public class MultiTrack
   }
 
   /**
-   * @param value allowed object is {@link Boolean}
+   * @param value allowed object is {@code Boolean}
    *
    */
   public void setInterpolate(Boolean value) {
@@ -148,7 +148,7 @@ public class MultiTrack
   }
 
   /**
-   * Creates a new instance of {@link Track} and adds it to track. This method
+   * Creates a new instance of {@code Track} and adds it to track. This method
    * is a short version for: &lt;code&gt; Track track = new Track();
    * this.getTrack().add(track); &lt;/code&gt;
    */
@@ -165,7 +165,7 @@ public class MultiTrack
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withTrack} instead.
+   * make it fluent, use {@code #withTrack} instead.
    *
    * @param track
    */
@@ -177,7 +177,7 @@ public class MultiTrack
    * add a value to the track property collection
    *
    * @param track Objects of the following type are allowed in the list:
-   *              {@link Track}
+   *              {@code Track}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

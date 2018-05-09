@@ -180,7 +180,7 @@ public class IconStyle
   /**
    * @see scale
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getScale() {
@@ -190,7 +190,7 @@ public class IconStyle
   /**
    * @see scale
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setScale(double value) {
@@ -200,7 +200,7 @@ public class IconStyle
   /**
    * @see heading
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getHeading() {
@@ -210,7 +210,7 @@ public class IconStyle
   /**
    * @see heading
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setHeading(double value) {
@@ -220,7 +220,7 @@ public class IconStyle
   /**
    * @see icon
    *
-   * @return possible object is {@link BasicLink}
+   * @return possible object is {@code BasicLink}
    *
    */
   public Icon getIcon() {
@@ -230,7 +230,7 @@ public class IconStyle
   /**
    * @see icon
    *
-   * @param value allowed object is {@link BasicLink}
+   * @param value allowed object is {@code BasicLink}
    *
    */
   public void setIcon(Icon value) {
@@ -240,7 +240,7 @@ public class IconStyle
   /**
    * @see hotSpot
    *
-   * @return possible object is {@link Vec2}
+   * @return possible object is {@code Vec2}
    *
    */
   public Vec2 getHotSpot() {
@@ -250,7 +250,7 @@ public class IconStyle
   /**
    * @see hotSpot
    *
-   * @param value allowed object is {@link Vec2}
+   * @param value allowed object is {@code Vec2}
    *
    */
   public void setHotSpot(Vec2 value) {
@@ -348,7 +348,7 @@ public class IconStyle
   }
 
   /**
-   * Creates a new instance of {@link Icon} and set it to icon.
+   * Creates a new instance of {@code Icon} and set it to icon.
    * <p>
    * This method is a short version for: &lt;code&gt; Icon icon = new Icon();
    * this.setIcon(icon); &lt;/code&gt;
@@ -360,7 +360,7 @@ public class IconStyle
   }
 
   /**
-   * Creates a new instance of {@link Vec2} and set it to hotSpot.
+   * Creates a new instance of {@code Vec2} and set it to hotSpot.
    * <p>
    * This method is a short version for: &lt;code&gt; Vec2 vec2 = new Vec2();
    * this.setHotSpot(vec2); &lt;/code&gt;
@@ -384,7 +384,7 @@ public class IconStyle
    * add a value to the iconStyleSimpleExtension property collection
    *
    * @param iconStyleSimpleExtension Objects of the following type are allowed
-   *                                 in the list: {@link Object}
+   *                                 in the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -406,7 +406,7 @@ public class IconStyle
    * add a value to the iconStyleObjectExtension property collection
    *
    * @param iconStyleObjectExtension Objects of the following type are allowed
-   *                                 in the list: {@link AbstractObject}
+   *                                 in the list: {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

@@ -165,7 +165,7 @@ public class Kml implements Cloneable {
   /**
    * @see networkLinkControl
    *
-   * @return possible object is {@link NetworkLinkControl}
+   * @return possible object is {@code NetworkLinkControl}
    *
    */
   public NetworkLinkControl getNetworkLinkControl() {
@@ -175,7 +175,7 @@ public class Kml implements Cloneable {
   /**
    * @see networkLinkControl
    *
-   * @param value allowed object is {@link NetworkLinkControl}
+   * @param value allowed object is {@code NetworkLinkControl}
    *
    */
   public void setNetworkLinkControl(NetworkLinkControl value) {
@@ -185,17 +185,17 @@ public class Kml implements Cloneable {
   /**
    * @see feature
    *
-   * @return possible object {@link Container}
-   *     {@link GroundOverlay}
-   *     {@link NetworkLink}
-   *     {@link Folder}
-   *     {@link PhotoOverlay}
-   *     {@link Document}
-   *     {@link Tour}
-   *     {@link ScreenOverlay}
-   *     {@link Feature}
-   *     {@link Placemark}
-   *     {@link Overlay}
+   * @return possible object {@code Container}
+   *     {@code GroundOverlay}
+   *     {@code NetworkLink}
+   *     {@code Folder}
+   *     {@code PhotoOverlay}
+   *     {@code Document}
+   *     {@code Tour}
+   *     {@code ScreenOverlay}
+   *     {@code Feature}
+   *     {@code Placemark}
+   *     {@code Overlay}
    *
    */
   public Feature getFeature() {
@@ -205,17 +205,17 @@ public class Kml implements Cloneable {
   /**
    * @see feature
    *
-   * @param value allowed object is null null null null null null null null   {@link Container}
-     *     {@link GroundOverlay}
-   *     {@link NetworkLink}
-   *     {@link Folder}
-   *     {@link PhotoOverlay}
-   *     {@link Document}
-   *     {@link Tour}
-   *     {@link ScreenOverlay}
-   *     {@link Feature}
-   *     {@link Placemark}
-   *     {@link Overlay}
+   * @param value allowed object is null null null null null null null null   {@code Container}
+     *     {@code GroundOverlay}
+   *     {@code NetworkLink}
+   *     {@code Folder}
+   *     {@code PhotoOverlay}
+   *     {@code Document}
+   *     {@code Tour}
+   *     {@code ScreenOverlay}
+   *     {@code Feature}
+   *     {@code Placemark}
+   *     {@code Overlay}
    *
    */
   public void setFeature(Feature value) {
@@ -247,7 +247,7 @@ public class Kml implements Cloneable {
   /**
    * @see hint
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getHint() {
@@ -257,7 +257,7 @@ public class Kml implements Cloneable {
   /**
    * @see hint
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setHint(String value) {
@@ -327,7 +327,7 @@ public class Kml implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link NetworkLinkControl} and set it to
+   * Creates a new instance of {@code NetworkLinkControl} and set it to
    * networkLinkControl.
    * <p>
    * This method is a short version for: &lt;code&gt; NetworkLinkControl
@@ -341,7 +341,7 @@ public class Kml implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Tour} and set it to feature.
+   * Creates a new instance of {@code Tour} and set it to feature.
    * <p>
    * This method is a short version for: &lt;code&gt; Tour tour = new Tour();
    * this.setFeature(tour); &lt;/code&gt;
@@ -353,7 +353,7 @@ public class Kml implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link ScreenOverlay} and set it to feature.
+   * Creates a new instance of {@code ScreenOverlay} and set it to feature.
    * <p>
    * This method is a short version for: &lt;code&gt; ScreenOverlay
    * screenOverlay = new ScreenOverlay(); this.setFeature(screenOverlay);
@@ -366,7 +366,7 @@ public class Kml implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link PhotoOverlay} and set it to feature.
+   * Creates a new instance of {@code PhotoOverlay} and set it to feature.
    * <p>
    * This method is a short version for: &lt;code&gt; PhotoOverlay photoOverlay
    * = new PhotoOverlay(); this.setFeature(photoOverlay); &lt;/code&gt;
@@ -378,7 +378,7 @@ public class Kml implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link GroundOverlay} and set it to feature.
+   * Creates a new instance of {@code GroundOverlay} and set it to feature.
    * <p>
    * This method is a short version for: &lt;code&gt; GroundOverlay
    * groundOverlay = new GroundOverlay(); this.setFeature(groundOverlay);
@@ -391,7 +391,7 @@ public class Kml implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link NetworkLink} and set it to feature.
+   * Creates a new instance of {@code NetworkLink} and set it to feature.
    * <p>
    * This method is a short version for: &lt;code&gt; NetworkLink networkLink =
    * new NetworkLink(); this.setFeature(networkLink); &lt;/code&gt;
@@ -403,7 +403,7 @@ public class Kml implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Folder} and set it to feature.
+   * Creates a new instance of {@code Folder} and set it to feature.
    * <p>
    * This method is a short version for: &lt;code&gt; Folder folder = new
    * Folder(); this.setFeature(folder); &lt;/code&gt;
@@ -415,7 +415,7 @@ public class Kml implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Document} and set it to feature.
+   * Creates a new instance of {@code Document} and set it to feature.
    * <p>
    * This method is a short version for: &lt;code&gt; Document document = new
    * Document(); this.setFeature(document); &lt;/code&gt;
@@ -427,7 +427,7 @@ public class Kml implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Placemark} and set it to feature.
+   * Creates a new instance of {@code Placemark} and set it to feature.
    * <p>
    * This method is a short version for: &lt;code&gt; Placemark placemark = new
    * Placemark(); this.setFeature(placemark); &lt;/code&gt;
@@ -451,7 +451,7 @@ public class Kml implements Cloneable {
    * add a value to the kmlSimpleExtension property collection
    *
    * @param kmlSimpleExtension Objects of the following type are allowed in the
-   *                           list: {@link Object}
+   *                           list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -473,7 +473,7 @@ public class Kml implements Cloneable {
    * add a value to the kmlObjectExtension property collection
    *
    * @param kmlObjectExtension Objects of the following type are allowed in the
-   *                           list: {@link AbstractObject}
+   *                           list: {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -624,8 +624,8 @@ public class Kml implements Cloneable {
   /**
    * Java to KML The object graph is marshalled to a Contenthandler object.
    * Useful if marshaller cis needed to generate CDATA blocks. null null null
-   * null null null null null   {@link https://jaxb.dev.java.net/faq/}
-     * {@link http://code.google.com/p/javaapiforkml/issues/detail?id=7} The
+   * null null null null null   {@code https://jaxb.dev.java.net/faq/}
+     * {@code http://code.google.com/p/javaapiforkml/issues/detail?id=7} The
    * object is not saved as a zipped .kmz file.
    *
    * @see marshalKmz(String, Kml...)

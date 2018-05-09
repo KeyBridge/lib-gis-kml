@@ -179,7 +179,7 @@ public class Polygon extends Geometry implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link Boolean}
+   * @return possible object is {@code Boolean}
    *
    */
   public Boolean isExtrude() {
@@ -189,7 +189,7 @@ public class Polygon extends Geometry implements Cloneable {
   /**
    * @see extrude
    *
-   * @param value allowed object is {@link Boolean}
+   * @param value allowed object is {@code Boolean}
    *
    */
   public void setExtrude(Boolean value) {
@@ -197,7 +197,7 @@ public class Polygon extends Geometry implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link Boolean}
+   * @return possible object is {@code Boolean}
    *
    */
   public Boolean isTessellate() {
@@ -207,7 +207,7 @@ public class Polygon extends Geometry implements Cloneable {
   /**
    * @see tessellate
    *
-   * @param value allowed object is {@link Boolean}
+   * @param value allowed object is {@code Boolean}
    *
    */
   public void setTessellate(Boolean value) {
@@ -217,9 +217,9 @@ public class Polygon extends Geometry implements Cloneable {
   /**
    * @see altitudeMode
    *
-   * @return possible object is null null null null null null null null   {@link Object}
-     *     {@link net.opengis.kml.AltitudeMode}
-   *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
+   * @return possible object is null null null null null null null null   {@code Object}
+     *     {@code net.opengis.kml.AltitudeMode}
+   *     {@code de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
    */
   public AltitudeMode getAltitudeMode() {
@@ -229,9 +229,9 @@ public class Polygon extends Geometry implements Cloneable {
   /**
    * @see altitudeMode
    *
-   * @param value allowed object is null null null null null null null null   {@link Object}
-     *     {@link net.opengis.kml.AltitudeMode}
-   *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
+   * @param value allowed object is null null null null null null null null   {@code Object}
+     *     {@code net.opengis.kml.AltitudeMode}
+   *     {@code de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
    */
   public void setAltitudeMode(AltitudeMode value) {
@@ -241,7 +241,7 @@ public class Polygon extends Geometry implements Cloneable {
   /**
    * @see outerBoundaryIs
    *
-   * @return possible object is {@link Boundary}
+   * @return possible object is {@code Boundary}
    *
    */
   public Boundary getOuterBoundaryIs() {
@@ -251,7 +251,7 @@ public class Polygon extends Geometry implements Cloneable {
   /**
    * @see outerBoundaryIs
    *
-   * @param value allowed object is {@link Boundary}
+   * @param value allowed object is {@code Boundary}
    *
    */
   public void setOuterBoundaryIs(Boundary value) {
@@ -373,7 +373,7 @@ public class Polygon extends Geometry implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Boundary} and set it to outerBoundaryIs.
+   * Creates a new instance of {@code Boundary} and set it to outerBoundaryIs.
    * <p>
    * This method is a short version for: &lt;code&gt; Boundary boundary = new
    * Boundary(); this.setOuterBoundaryIs(boundary); &lt;/code&gt;
@@ -385,7 +385,7 @@ public class Polygon extends Geometry implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Boundary} and adds it to innerBoundaryIs.
+   * Creates a new instance of {@code Boundary} and adds it to innerBoundaryIs.
    * This method is a short version for: &lt;code&gt; Boundary boundary = new
    * Boundary(); this.getInnerBoundaryIs().add(boundary); &lt;/code&gt;
    */
@@ -408,7 +408,7 @@ public class Polygon extends Geometry implements Cloneable {
    * add a value to the innerBoundaryIs property collection
    *
    * @param innerBoundaryIs Objects of the following type are allowed in the
-   *                        list: {@link Boundary}
+   *                        list: {@code Boundary}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -430,7 +430,7 @@ public class Polygon extends Geometry implements Cloneable {
    * add a value to the polygonSimpleExtension property collection
    *
    * @param polygonSimpleExtension Objects of the following type are allowed in
-   *                               the list: {@link Object}
+   *                               the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -452,7 +452,7 @@ public class Polygon extends Geometry implements Cloneable {
    * add a value to the polygonObjectExtension property collection
    *
    * @param polygonObjectExtension Objects of the following type are allowed in
-   *                               the list: {@link AbstractObject}
+   *                               the list: {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

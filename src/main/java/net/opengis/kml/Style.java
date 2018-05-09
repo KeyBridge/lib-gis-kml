@@ -254,7 +254,7 @@ public class Style
   /**
    * @see iconStyle
    *
-   * @return possible object is {@link IconStyle}
+   * @return possible object is {@code IconStyle}
    *
    */
   public IconStyle getIconStyle() {
@@ -264,7 +264,7 @@ public class Style
   /**
    * @see iconStyle
    *
-   * @param value allowed object is {@link IconStyle}
+   * @param value allowed object is {@code IconStyle}
    *
    */
   public void setIconStyle(IconStyle value) {
@@ -274,7 +274,7 @@ public class Style
   /**
    * @see labelStyle
    *
-   * @return possible object is {@link LabelStyle}
+   * @return possible object is {@code LabelStyle}
    *
    */
   public LabelStyle getLabelStyle() {
@@ -284,7 +284,7 @@ public class Style
   /**
    * @see labelStyle
    *
-   * @param value allowed object is {@link LabelStyle}
+   * @param value allowed object is {@code LabelStyle}
    *
    */
   public void setLabelStyle(LabelStyle value) {
@@ -294,7 +294,7 @@ public class Style
   /**
    * @see lineStyle
    *
-   * @return possible object is {@link LineStyle}
+   * @return possible object is {@code LineStyle}
    *
    */
   public LineStyle getLineStyle() {
@@ -304,7 +304,7 @@ public class Style
   /**
    * @see lineStyle
    *
-   * @param value allowed object is {@link LineStyle}
+   * @param value allowed object is {@code LineStyle}
    *
    */
   public void setLineStyle(LineStyle value) {
@@ -314,7 +314,7 @@ public class Style
   /**
    * @see polyStyle
    *
-   * @return possible object is {@link PolyStyle}
+   * @return possible object is {@code PolyStyle}
    *
    */
   public PolyStyle getPolyStyle() {
@@ -324,7 +324,7 @@ public class Style
   /**
    * @see polyStyle
    *
-   * @param value allowed object is {@link PolyStyle}
+   * @param value allowed object is {@code PolyStyle}
    *
    */
   public void setPolyStyle(PolyStyle value) {
@@ -334,7 +334,7 @@ public class Style
   /**
    * @see balloonStyle
    *
-   * @return possible object is {@link BalloonStyle}
+   * @return possible object is {@code BalloonStyle}
    *
    */
   public BalloonStyle getBalloonStyle() {
@@ -344,7 +344,7 @@ public class Style
   /**
    * @see balloonStyle
    *
-   * @param value allowed object is {@link BalloonStyle}
+   * @param value allowed object is {@code BalloonStyle}
    *
    */
   public void setBalloonStyle(BalloonStyle value) {
@@ -354,7 +354,7 @@ public class Style
   /**
    * @see listStyle
    *
-   * @return possible object is {@link ListStyle}
+   * @return possible object is {@code ListStyle}
    *
    */
   public ListStyle getListStyle() {
@@ -364,7 +364,7 @@ public class Style
   /**
    * @see listStyle
    *
-   * @param value allowed object is {@link ListStyle}
+   * @param value allowed object is {@code ListStyle}
    *
    */
   public void setListStyle(ListStyle value) {
@@ -483,7 +483,7 @@ public class Style
   }
 
   /**
-   * Creates a new instance of {@link IconStyle} and set it to iconStyle.
+   * Creates a new instance of {@code IconStyle} and set it to iconStyle.
    * <p>
    * This method is a short version for: &lt;code&gt; IconStyle iconStyle = new
    * IconStyle(); this.setIconStyle(iconStyle); &lt;/code&gt;
@@ -495,7 +495,7 @@ public class Style
   }
 
   /**
-   * Creates a new instance of {@link LabelStyle} and set it to labelStyle.
+   * Creates a new instance of {@code LabelStyle} and set it to labelStyle.
    * <p>
    * This method is a short version for: &lt;code&gt; LabelStyle labelStyle =
    * new LabelStyle(); this.setLabelStyle(labelStyle); &lt;/code&gt;
@@ -507,7 +507,7 @@ public class Style
   }
 
   /**
-   * Creates a new instance of {@link LineStyle} and set it to lineStyle.
+   * Creates a new instance of {@code LineStyle} and set it to lineStyle.
    * <p>
    * This method is a short version for: &lt;code&gt; LineStyle lineStyle = new
    * LineStyle(); this.setLineStyle(lineStyle); &lt;/code&gt;
@@ -519,7 +519,7 @@ public class Style
   }
 
   /**
-   * Creates a new instance of {@link PolyStyle} and set it to polyStyle.
+   * Creates a new instance of {@code PolyStyle} and set it to polyStyle.
    * <p>
    * This method is a short version for: &lt;code&gt; PolyStyle polyStyle = new
    * PolyStyle(); this.setPolyStyle(polyStyle); &lt;/code&gt;
@@ -531,7 +531,7 @@ public class Style
   }
 
   /**
-   * Creates a new instance of {@link BalloonStyle} and set it to balloonStyle.
+   * Creates a new instance of {@code BalloonStyle} and set it to balloonStyle.
    * <p>
    * This method is a short version for: &lt;code&gt; BalloonStyle balloonStyle
    * = new BalloonStyle(); this.setBalloonStyle(balloonStyle); &lt;/code&gt;
@@ -543,7 +543,7 @@ public class Style
   }
 
   /**
-   * Creates a new instance of {@link ListStyle} and set it to listStyle.
+   * Creates a new instance of {@code ListStyle} and set it to listStyle.
    * <p>
    * This method is a short version for: &lt;code&gt; ListStyle listStyle = new
    * ListStyle(); this.setListStyle(listStyle); &lt;/code&gt;
@@ -567,7 +567,7 @@ public class Style
    * add a value to the styleSimpleExtension property collection
    *
    * @param styleSimpleExtension Objects of the following type are allowed in
-   *                             the list: {@link Object}
+   *                             the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -589,7 +589,7 @@ public class Style
    * add a value to the styleObjectExtension property collection
    *
    * @param styleObjectExtension Objects of the following type are allowed in
-   *                             the list: {@link AbstractObject}
+   *                             the list: {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

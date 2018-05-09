@@ -464,7 +464,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   /**
    * @see name
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getName() {
@@ -474,7 +474,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   /**
    * @see name
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setName(String value) {
@@ -482,7 +482,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link Boolean}
+   * @return possible object is {@code Boolean}
    *
    */
   public Boolean isVisibility() {
@@ -492,7 +492,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   /**
    * @see visibility
    *
-   * @param value allowed object is {@link Boolean}
+   * @param value allowed object is {@code Boolean}
    *
    */
   public void setVisibility(Boolean value) {
@@ -500,7 +500,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link Boolean}
+   * @return possible object is {@code Boolean}
    *
    */
   public Boolean isOpen() {
@@ -510,7 +510,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   /**
    * @see open
    *
-   * @param value allowed object is {@link Boolean}
+   * @param value allowed object is {@code Boolean}
    *
    */
   public void setOpen(Boolean value) {
@@ -520,7 +520,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   /**
    * @see atomAuthor
    *
-   * @return possible object is {@link Author}
+   * @return possible object is {@code Author}
    *
    */
   public Author getAtomAuthor() {
@@ -530,7 +530,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   /**
    * @see atomAuthor
    *
-   * @param value allowed object is {@link Author}
+   * @param value allowed object is {@code Author}
    *
    */
   public void setAtomAuthor(Author value) {
@@ -540,7 +540,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   /**
    * @see atomLink
    *
-   * @return possible object is {@link Link}
+   * @return possible object is {@code Link}
    *
    */
   public Link getAtomLink() {
@@ -550,7 +550,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   /**
    * @see atomLink
    *
-   * @param value allowed object is {@link Link}
+   * @param value allowed object is {@code Link}
    *
    */
   public void setAtomLink(Link value) {
@@ -560,7 +560,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   /**
    * @see address
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getAddress() {
@@ -570,7 +570,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   /**
    * @see address
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setAddress(String value) {
@@ -580,7 +580,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   /**
    * @see xalAddressDetails
    *
-   * @return possible object is {@link AddressDetails}
+   * @return possible object is {@code AddressDetails}
    *
    */
   public AddressDetails getXalAddressDetails() {
@@ -590,7 +590,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   /**
    * @see xalAddressDetails
    *
-   * @param value allowed object is {@link AddressDetails}
+   * @param value allowed object is {@code AddressDetails}
    *
    */
   public void setXalAddressDetails(AddressDetails value) {
@@ -600,7 +600,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   /**
    * @see phoneNumber
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getPhoneNumber() {
@@ -610,7 +610,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   /**
    * @see phoneNumber
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setPhoneNumber(String value) {
@@ -620,7 +620,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   /**
    * @see snippet
    *
-   * @return possible object is {@link Snippet}
+   * @return possible object is {@code Snippet}
    *
    */
   public Snippet getSnippet() {
@@ -630,7 +630,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   /**
    * @see snippet
    *
-   * @param value allowed object is {@link Snippet}
+   * @param value allowed object is {@code Snippet}
    *
    */
   public void setSnippet(Snippet value) {
@@ -640,7 +640,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   /**
    * @see snippetd
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getSnippetd() {
@@ -650,7 +650,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   /**
    * @see snippetd
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setSnippetd(String value) {
@@ -660,7 +660,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   /**
    * @see description
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getDescription() {
@@ -670,7 +670,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   /**
    * @see description
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setDescription(String value) {
@@ -680,9 +680,9 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   /**
    * @see abstractView
    *
-   * @return possible object is {@link AbstractView}
-   *     {@link LookAt}
-   *     {@link Camera}
+   * @return possible object is {@code AbstractView}
+   *     {@code LookAt}
+   *     {@code Camera}
    *
    */
   public AbstractView getAbstractView() {
@@ -692,9 +692,9 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   /**
    * @see abstractView
    *
-   * @param value allowed object is {@link AbstractView}
-   *     {@link LookAt}
-   *     {@link Camera}
+   * @param value allowed object is {@code AbstractView}
+   *     {@code LookAt}
+   *     {@code Camera}
    *
    */
   public void setAbstractView(AbstractView value) {
@@ -704,9 +704,9 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   /**
    * @see timePrimitive
    *
-   * @return possible object is {@link TimeSpan}
-   *     {@link TimeStamp}
-   *     {@link TimePrimitive}
+   * @return possible object is {@code TimeSpan}
+   *     {@code TimeStamp}
+   *     {@code TimePrimitive}
    *
    */
   public TimePrimitive getTimePrimitive() {
@@ -717,9 +717,9 @@ public abstract class Feature extends AbstractObject implements Cloneable {
    * @see timePrimitive
    *
    * @param value allowed object is null null null null null null null null null
-   *              null null null null null null null null null null null   {@link TimeSpan}
-     *     {@link TimeStamp}
-   *     {@link TimePrimitive}
+   *              null null null null null null null null null null null   {@code TimeSpan}
+     *     {@code TimeStamp}
+   *     {@code TimePrimitive}
    *
    */
   public void setTimePrimitive(TimePrimitive value) {
@@ -729,7 +729,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   /**
    * @see styleUrl
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getStyleUrl() {
@@ -739,7 +739,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   /**
    * @see styleUrl
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setStyleUrl(String value) {
@@ -760,7 +760,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   /**
    * @see region
    *
-   * @return possible object is {@link Region}
+   * @return possible object is {@code Region}
    *
    */
   public Region getRegion() {
@@ -770,7 +770,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   /**
    * @see region
    *
-   * @param value allowed object is {@link Region}
+   * @param value allowed object is {@code Region}
    *
    */
   public void setRegion(Region value) {
@@ -780,7 +780,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   /**
    * @see metadata
    *
-   * @return possible object is {@link Metadata}
+   * @return possible object is {@code Metadata}
    *
    */
   public Metadata getMetadata() {
@@ -790,7 +790,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   /**
    * @see metadata
    *
-   * @param value allowed object is {@link Metadata}
+   * @param value allowed object is {@code Metadata}
    *
    */
   public void setMetadata(Metadata value) {
@@ -800,7 +800,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   /**
    * @see extendedData
    *
-   * @return possible object is {@link ExtendedData}
+   * @return possible object is {@code ExtendedData}
    *
    */
   public ExtendedData getExtendedData() {
@@ -810,7 +810,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   /**
    * @see extendedData
    *
-   * @param value allowed object is {@link ExtendedData}
+   * @param value allowed object is {@code ExtendedData}
    *
    */
   public void setExtendedData(ExtendedData value) {
@@ -1025,7 +1025,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Author} and set it to atomAuthor. &lt;p
+   * Creates a new instance of {@code Author} and set it to atomAuthor. &lt;p
    * &gt; This method is a short version for: &lt;code&gt; Author author = new
    * Author(); this.setAtomAuthor(author); &lt;/code&gt;
    */
@@ -1036,7 +1036,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Link} and set it to atomLink. This method
+   * Creates a new instance of {@code Link} and set it to atomLink. This method
    * is a short version for: &lt;code&gt; Link link = new Link();
    * this.setAtomLink(link); &lt;/code&gt;
    *
@@ -1049,7 +1049,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link AddressDetails} and set it to
+   * Creates a new instance of {@code AddressDetails} and set it to
    * xalAddressDetails. This method is a short version for: &lt;code&gt;
    * AddressDetails addressDetails = new AddressDetails();
    * this.setXalAddressDetails(addressDetails); &lt;/code&gt;
@@ -1068,7 +1068,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Snippet} and set it to snippet. This
+   * Creates a new instance of {@code Snippet} and set it to snippet. This
    * method is a short version for: &lt;code&gt; Snippet snippet = new
    * Snippet(); this.setSnippet(snippet); &lt;/code&gt;
    */
@@ -1079,7 +1079,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link LookAt} and set it to abstractView. &lt;p
+   * Creates a new instance of {@code LookAt} and set it to abstractView. &lt;p
    * &gt; This method is a short version for: &lt;code&gt; LookAt lookAt = new
    * LookAt(); this.setAbstractView(lookAt); &lt;/code&gt;
    */
@@ -1090,7 +1090,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Camera} and set it to abstractView. &lt;p
+   * Creates a new instance of {@code Camera} and set it to abstractView. &lt;p
    * &gt; This method is a short version for: &lt;code&gt; Camera camera = new
    * Camera(); this.setAbstractView(camera); &lt;/code&gt;
    */
@@ -1101,7 +1101,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link TimeSpan} and set it to timePrimitive.
+   * Creates a new instance of {@code TimeSpan} and set it to timePrimitive.
    * This method is a short version for: &lt;code&gt; TimeSpan timeSpan = new
    * TimeSpan(); this.setTimePrimitive(timeSpan); &lt;/code&gt;
    */
@@ -1112,7 +1112,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link TimeStamp} and set it to timePrimitive.
+   * Creates a new instance of {@code TimeStamp} and set it to timePrimitive.
    * This method is a short version for: &lt;code&gt; TimeStamp timeStamp = new
    * TimeStamp(); this.setTimePrimitive(timeStamp); &lt;/code&gt;
    */
@@ -1123,7 +1123,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Style} and adds it to styleSelector. This
+   * Creates a new instance of {@code Style} and adds it to styleSelector. This
    * method is a short version for: &lt;code&gt; Style style = new Style();
    * this.getStyleSelector().add(style); &lt;/code&gt;
    */
@@ -1134,7 +1134,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link StyleMap} and adds it to styleSelector.
+   * Creates a new instance of {@code StyleMap} and adds it to styleSelector.
    * This method is a short version for: &lt;code&gt; StyleMap styleMap = new
    * StyleMap(); this.getStyleSelector().add(styleMap); &lt;/code&gt;
    */
@@ -1145,7 +1145,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Region} and set it to region. This method
+   * Creates a new instance of {@code Region} and set it to region. This method
    * is a short version for: &lt;code&gt; Region region = new Region();
    * this.setRegion(region); &lt;/code&gt;
    */
@@ -1156,7 +1156,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Metadata} and set it to metadata. &lt;p
+   * Creates a new instance of {@code Metadata} and set it to metadata. &lt;p
    * &gt; This method is a short version for: &lt;code&gt; Metadata metadata =
    * new Metadata(); this.setMetadata(metadata); &lt;/code&gt;
    */
@@ -1167,7 +1167,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link ExtendedData} and set it to extendedData.
+   * Creates a new instance of {@code ExtendedData} and set it to extendedData.
    * This method is a short version for: &lt;code&gt; ExtendedData extendedData
    * = new ExtendedData(); this.setExtendedData(extendedData); &lt;/code&gt;
    */
@@ -1190,7 +1190,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
    * add a value to the styleSelector property collection
    *
    * @param styleSelector Objects of the following type are allowed in the list:
-   *                      {@link Style}{@link JAXBElement}{@link StyleSelector}{@link JAXBElement}{@link StyleMap}
+   *                      {@code Style}{@code JAXBElement}{@code StyleSelector}{@code JAXBElement}{@code StyleMap}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of &lt;tt
    *         &gt;Collection.add &lt;/tt&gt;).
    */
@@ -1213,7 +1213,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
    *
    * @param featureSimpleExtension Objects of the following type are allowed in
    *                               the list:
-   *                               {@link Double}{@link JAXBElement}{@link Object}{@link JAXBElement}{@link Boolean}
+   *                               {@code Double}{@code JAXBElement}{@code Object}{@code JAXBElement}{@code Boolean}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of &lt;tt
    *         &gt;Collection.add &lt;/tt&gt;).
    */
@@ -1235,7 +1235,7 @@ public abstract class Feature extends AbstractObject implements Cloneable {
    * add a value to the featureObjectExtension property collection
    *
    * @param featureObjectExtension Objects of the following type are allowed in
-   *                               the list: {@link AbstractObject}
+   *                               the list: {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of &lt;tt
    *         &gt;Collection.add &lt;/tt&gt;).
    */

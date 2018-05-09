@@ -145,7 +145,7 @@ public class ListStyle
   /**
    * @see listItemType
    *
-   * @return possible object is {@link ListItemType}
+   * @return possible object is {@code ListItemType}
    *
    */
   public ListItemType getListItemType() {
@@ -155,7 +155,7 @@ public class ListStyle
   /**
    * @see listItemType
    *
-   * @param value allowed object is {@link ListItemType}
+   * @param value allowed object is {@code ListItemType}
    *
    */
   public void setListItemType(ListItemType value) {
@@ -165,7 +165,7 @@ public class ListStyle
   /**
    * @see bgColor
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getBgColor() {
@@ -175,7 +175,7 @@ public class ListStyle
   /**
    * @see bgColor
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setBgColor(String value) {
@@ -196,7 +196,7 @@ public class ListStyle
   /**
    * @see maxSnippetLines
    *
-   * @return possible object is {@link Integer}
+   * @return possible object is {@code Integer}
    *
    */
   public int getMaxSnippetLines() {
@@ -206,7 +206,7 @@ public class ListStyle
   /**
    * @see maxSnippetLines
    *
-   * @param value allowed object is {@link Integer}
+   * @param value allowed object is {@code Integer}
    *
    */
   public void setMaxSnippetLines(int value) {
@@ -305,7 +305,7 @@ public class ListStyle
   }
 
   /**
-   * Creates a new instance of {@link ItemIcon} and adds it to itemIcon. This
+   * Creates a new instance of {@code ItemIcon} and adds it to itemIcon. This
    * method is a short version for: &lt;code&gt; ItemIcon itemIcon = new
    * ItemIcon(); this.getItemIcon().add(itemIcon); &lt;/code&gt;
    */
@@ -328,7 +328,7 @@ public class ListStyle
    * add a value to the itemIcon property collection
    *
    * @param itemIcon Objects of the following type are allowed in the list:
-   *                 {@link ItemIcon}
+   *                 {@code ItemIcon}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -350,7 +350,7 @@ public class ListStyle
    * add a value to the listStyleSimpleExtension property collection
    *
    * @param listStyleSimpleExtension Objects of the following type are allowed
-   *                                 in the list: {@link Object}
+   *                                 in the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -372,7 +372,7 @@ public class ListStyle
    * add a value to the listStyleObjectExtension property collection
    *
    * @param listStyleObjectExtension Objects of the following type are allowed
-   *                                 in the list: {@link AbstractObject}
+   *                                 in the list: {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

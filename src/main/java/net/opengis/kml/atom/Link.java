@@ -136,7 +136,7 @@ public class Link implements Cloneable {
   /**
    * @see href
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getHref() {
@@ -146,7 +146,7 @@ public class Link implements Cloneable {
   /**
    * @see href
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setHref(String value) {
@@ -156,7 +156,7 @@ public class Link implements Cloneable {
   /**
    * @see rel
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getRel() {
@@ -166,7 +166,7 @@ public class Link implements Cloneable {
   /**
    * @see rel
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setRel(String value) {
@@ -176,7 +176,7 @@ public class Link implements Cloneable {
   /**
    * @see type
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getType() {
@@ -186,7 +186,7 @@ public class Link implements Cloneable {
   /**
    * @see type
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setType(String value) {
@@ -196,7 +196,7 @@ public class Link implements Cloneable {
   /**
    * @see hreflang
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getHreflang() {
@@ -206,7 +206,7 @@ public class Link implements Cloneable {
   /**
    * @see hreflang
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setHreflang(String value) {
@@ -216,7 +216,7 @@ public class Link implements Cloneable {
   /**
    * @see title
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getTitle() {
@@ -226,7 +226,7 @@ public class Link implements Cloneable {
   /**
    * @see title
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setTitle(String value) {
@@ -236,7 +236,7 @@ public class Link implements Cloneable {
   /**
    * @see length
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getLength() {
@@ -246,7 +246,7 @@ public class Link implements Cloneable {
   /**
    * @see length
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setLength(String value) {

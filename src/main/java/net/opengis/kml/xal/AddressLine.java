@@ -47,7 +47,7 @@ public class AddressLine implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getContent() {
@@ -55,7 +55,7 @@ public class AddressLine implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setContent(String value) {
@@ -63,7 +63,7 @@ public class AddressLine implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getUnderscore() {
@@ -71,7 +71,7 @@ public class AddressLine implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setUnderscore(String value) {
@@ -79,7 +79,7 @@ public class AddressLine implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getCode() {
@@ -87,7 +87,7 @@ public class AddressLine implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setCode(String value) {

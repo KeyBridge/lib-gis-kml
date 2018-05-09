@@ -97,7 +97,7 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link PostBox.PostBoxNumber}
+   * @return possible object is {@code PostBox.PostBoxNumber}
    *
    */
   public PostBox.PostBoxNumber getPostBoxNumber() {
@@ -105,7 +105,7 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link PostBox.PostBoxNumber}
+   * @param value allowed object is {@code PostBox.PostBoxNumber}
    *
    */
   public void setPostBoxNumber(PostBox.PostBoxNumber value) {
@@ -113,7 +113,7 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link PostBox.PostBoxNumberPrefix}
+   * @return possible object is {@code PostBox.PostBoxNumberPrefix}
    *
    */
   public PostBox.PostBoxNumberPrefix getPostBoxNumberPrefix() {
@@ -121,7 +121,7 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link PostBox.PostBoxNumberPrefix}
+   * @param value allowed object is {@code PostBox.PostBoxNumberPrefix}
    *
    */
   public void setPostBoxNumberPrefix(PostBox.PostBoxNumberPrefix value) {
@@ -129,7 +129,7 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link PostBox.PostBoxNumberSuffix}
+   * @return possible object is {@code PostBox.PostBoxNumberSuffix}
    *
    */
   public PostBox.PostBoxNumberSuffix getPostBoxNumberSuffix() {
@@ -137,7 +137,7 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link PostBox.PostBoxNumberSuffix}
+   * @param value allowed object is {@code PostBox.PostBoxNumberSuffix}
    *
    */
   public void setPostBoxNumberSuffix(PostBox.PostBoxNumberSuffix value) {
@@ -145,7 +145,7 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link PostBox.PostBoxNumberExtension}
+   * @return possible object is {@code PostBox.PostBoxNumberExtension}
    *
    */
   public PostBox.PostBoxNumberExtension getPostBoxNumberExtension() {
@@ -153,7 +153,7 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link PostBox.PostBoxNumberExtension}
+   * @param value allowed object is {@code PostBox.PostBoxNumberExtension}
    *
    */
   public void setPostBoxNumberExtension(PostBox.PostBoxNumberExtension value) {
@@ -161,7 +161,7 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link Firm}
+   * @return possible object is {@code Firm}
    *
    */
   public Firm getFirm() {
@@ -169,7 +169,7 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link Firm}
+   * @param value allowed object is {@code Firm}
    *
    */
   public void setFirm(Firm value) {
@@ -177,7 +177,7 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link PostalCode}
+   * @return possible object is {@code PostalCode}
    *
    */
   public PostalCode getPostalCode() {
@@ -185,7 +185,7 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link PostalCode}
+   * @param value allowed object is {@code PostalCode}
    *
    */
   public void setPostalCode(PostalCode value) {
@@ -203,7 +203,7 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getUnderscore() {
@@ -211,7 +211,7 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setUnderscore(String value) {
@@ -219,7 +219,7 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getIndicator() {
@@ -227,7 +227,7 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setIndicator(String value) {
@@ -344,7 +344,7 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link AddressLine} and adds it to addressLine.
+   * Creates a new instance of {@code AddressLine} and adds it to addressLine.
    * This method is a short version for: &lt;code&gt; AddressLine addressLine =
    * new AddressLine(); this.getAddressLine().add(addressLine); &lt;/code&gt;
    */
@@ -355,7 +355,7 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link PostBox.PostBoxNumber} and set it to
+   * Creates a new instance of {@code PostBox.PostBoxNumber} and set it to
    * postBoxNumber.
    * <p>
    * This method is a short version for: &lt;code&gt; PostBoxNumber
@@ -369,7 +369,7 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link PostBox.PostBoxNumberPrefix} and set it to
+   * Creates a new instance of {@code PostBox.PostBoxNumberPrefix} and set it to
    * postBoxNumberPrefix.
    * <p>
    * This method is a short version for: &lt;code&gt; PostBoxNumberPrefix
@@ -383,7 +383,7 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link PostBox.PostBoxNumberSuffix} and set it to
+   * Creates a new instance of {@code PostBox.PostBoxNumberSuffix} and set it to
    * postBoxNumberSuffix.
    * <p>
    * This method is a short version for: &lt;code&gt; PostBoxNumberSuffix
@@ -397,7 +397,7 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link PostBox.PostBoxNumberExtension} and set it
+   * Creates a new instance of {@code PostBox.PostBoxNumberExtension} and set it
    * to postBoxNumberExtension.
    * <p>
    * This method is a short version for: &lt;code&gt; PostBoxNumberExtension
@@ -411,7 +411,7 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Firm} and set it to firm.
+   * Creates a new instance of {@code Firm} and set it to firm.
    * <p>
    * This method is a short version for: &lt;code&gt; Firm firm = new Firm();
    * this.setFirm(firm); &lt;/code&gt;
@@ -423,7 +423,7 @@ public class PostBox implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link PostalCode} and set it to postalCode.
+   * Creates a new instance of {@code PostalCode} and set it to postalCode.
    * <p>
    * This method is a short version for: &lt;code&gt; PostalCode postalCode =
    * new PostalCode(); this.setPostalCode(postalCode); &lt;/code&gt;
@@ -441,7 +441,7 @@ public class PostBox implements Cloneable {
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withAddressLine} instead.
+   * make it fluent, use {@code #withAddressLine} instead.
    *
    * @param addressLine
    */
@@ -453,7 +453,7 @@ public class PostBox implements Cloneable {
    * add a value to the addressLine property collection
    *
    * @param addressLine Objects of the following type are allowed in the list:
-   *                    {@link AddressLine}
+   *                    {@code AddressLine}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -469,7 +469,7 @@ public class PostBox implements Cloneable {
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withAny} instead.
+   * make it fluent, use {@code #withAny} instead.
    *
    * @param any
    */
@@ -481,7 +481,7 @@ public class PostBox implements Cloneable {
    * add a value to the any property collection
    *
    * @param any Objects of the following type are allowed in the list:
-   *            {@link Object}
+   *            {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -646,7 +646,7 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getContent() {
@@ -654,7 +654,7 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setContent(String value) {
@@ -662,7 +662,7 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getCode() {
@@ -670,7 +670,7 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setCode(String value) {
@@ -782,7 +782,7 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getContent() {
@@ -790,7 +790,7 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setContent(String value) {
@@ -798,7 +798,7 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getNumberExtensionSeparator() {
@@ -806,7 +806,7 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setNumberExtensionSeparator(String value) {
@@ -921,7 +921,7 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getContent() {
@@ -929,7 +929,7 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setContent(String value) {
@@ -937,7 +937,7 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getNumberPrefixSeparator() {
@@ -945,7 +945,7 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setNumberPrefixSeparator(String value) {
@@ -953,7 +953,7 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getCode() {
@@ -961,7 +961,7 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setCode(String value) {
@@ -1096,7 +1096,7 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getContent() {
@@ -1104,7 +1104,7 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setContent(String value) {
@@ -1112,7 +1112,7 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getNumberSuffixSeparator() {
@@ -1120,7 +1120,7 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setNumberSuffixSeparator(String value) {
@@ -1128,7 +1128,7 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getCode() {
@@ -1136,7 +1136,7 @@ public class PostBox implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setCode(String value) {

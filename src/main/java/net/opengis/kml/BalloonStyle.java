@@ -171,7 +171,7 @@ public class BalloonStyle
   /**
    * @see color
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getColor() {
@@ -181,7 +181,7 @@ public class BalloonStyle
   /**
    * @see color
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setColor(String value) {
@@ -191,7 +191,7 @@ public class BalloonStyle
   /**
    * @see bgColor
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getBgColor() {
@@ -201,7 +201,7 @@ public class BalloonStyle
   /**
    * @see bgColor
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setBgColor(String value) {
@@ -211,7 +211,7 @@ public class BalloonStyle
   /**
    * @see textColor
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getTextColor() {
@@ -221,7 +221,7 @@ public class BalloonStyle
   /**
    * @see textColor
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setTextColor(String value) {
@@ -231,7 +231,7 @@ public class BalloonStyle
   /**
    * @see text
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getText() {
@@ -241,7 +241,7 @@ public class BalloonStyle
   /**
    * @see text
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setText(String value) {
@@ -251,7 +251,7 @@ public class BalloonStyle
   /**
    * @see displayMode
    *
-   * @return possible object is {@link DisplayMode}
+   * @return possible object is {@code DisplayMode}
    *
    */
   public DisplayMode getDisplayMode() {
@@ -261,7 +261,7 @@ public class BalloonStyle
   /**
    * @see displayMode
    *
-   * @param value allowed object is {@link DisplayMode}
+   * @param value allowed object is {@code DisplayMode}
    *
    */
   public void setDisplayMode(DisplayMode value) {
@@ -384,7 +384,7 @@ public class BalloonStyle
    * add a value to the balloonStyleSimpleExtension property collection
    *
    * @param balloonStyleSimpleExtension Objects of the following type are
-   *                                    allowed in the list: {@link Object}
+   *                                    allowed in the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -407,7 +407,7 @@ public class BalloonStyle
    *
    * @param balloonStyleObjectExtension Objects of the following type are
    *                                    allowed in the list:
-   *                                    {@link AbstractObject}
+   *                                    {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

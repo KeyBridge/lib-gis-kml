@@ -183,7 +183,7 @@ public class ExtendedData implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Data} and adds it to data. This method is
+   * Creates a new instance of {@code Data} and adds it to data. This method is
    * a short version for: &lt;code&gt; Data data = new Data();
    * this.getData().add(data); &lt;/code&gt;
    *
@@ -196,7 +196,7 @@ public class ExtendedData implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link SchemaData} and adds it to schemaData.
+   * Creates a new instance of {@code SchemaData} and adds it to schemaData.
    * This method is a short version for: &lt;code&gt; SchemaData schemaData =
    * new SchemaData(); this.getSchemaData().add(schemaData); &lt;/code&gt;
    */
@@ -219,7 +219,7 @@ public class ExtendedData implements Cloneable {
    * add a value to the data property collection
    *
    * @param data Objects of the following type are allowed in the list:
-   *             {@link Data}
+   *             {@code Data}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -241,7 +241,7 @@ public class ExtendedData implements Cloneable {
    * add a value to the schemaData property collection
    *
    * @param schemaData Objects of the following type are allowed in the list:
-   *                   {@link SchemaData}
+   *                   {@code SchemaData}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -263,7 +263,7 @@ public class ExtendedData implements Cloneable {
    * add a value to the any property collection
    *
    * @param any Objects of the following type are allowed in the list:
-   *            {@link Object}{@link Element}
+   *            {@code Object}{@code Element}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

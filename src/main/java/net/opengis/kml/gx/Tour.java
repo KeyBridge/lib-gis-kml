@@ -70,7 +70,7 @@ public class Tour
   /**
    * @see playlist
    *
-   * @return possible object is {@link Playlist}
+   * @return possible object is {@code Playlist}
    *
    */
   public Playlist getPlaylist() {
@@ -80,7 +80,7 @@ public class Tour
   /**
    * @see playlist
    *
-   * @param value allowed object is {@link Playlist}
+   * @param value allowed object is {@code Playlist}
    *
    */
   public void setPlaylist(Playlist value) {
@@ -121,7 +121,7 @@ public class Tour
   }
 
   /**
-   * Creates a new instance of {@link Playlist} and set it to playlist.
+   * Creates a new instance of {@code Playlist} and set it to playlist.
    * <p>
    * This method is a short version for: &lt;code&gt; Playlist playlist = new
    * Playlist(); this.setPlaylist(playlist); &lt;/code&gt;

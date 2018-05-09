@@ -133,7 +133,7 @@ public class AnimatedUpdate
   /**
    * @see duration
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getDuration() {
@@ -143,7 +143,7 @@ public class AnimatedUpdate
   /**
    * @see duration
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setDuration(double value) {
@@ -153,7 +153,7 @@ public class AnimatedUpdate
   /**
    * @see update
    *
-   * @return possible object is {@link Update}
+   * @return possible object is {@code Update}
    *
    */
   public Update getUpdate() {
@@ -163,7 +163,7 @@ public class AnimatedUpdate
   /**
    * @see update
    *
-   * @param value allowed object is {@link Update}
+   * @param value allowed object is {@code Update}
    *
    */
   public void setUpdate(Update value) {
@@ -173,7 +173,7 @@ public class AnimatedUpdate
   /**
    * @see delayedStart
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getDelayedStart() {
@@ -183,7 +183,7 @@ public class AnimatedUpdate
   /**
    * @see delayedStart
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setDelayedStart(double value) {
@@ -232,7 +232,7 @@ public class AnimatedUpdate
   }
 
   /**
-   * Creates a new instance of {@link Update} and set it to update.
+   * Creates a new instance of {@code Update} and set it to update.
    * <p>
    * This method is a short version for: &lt;code&gt; Update update = new
    * Update(); this.setUpdate(update); &lt;/code&gt;

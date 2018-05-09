@@ -97,7 +97,7 @@ public class Vec2 implements Cloneable {
   /**
    * @see xunits
    *
-   * @return possible object is {@link Units}
+   * @return possible object is {@code Units}
    *
    */
   public Units getXunits() {
@@ -111,7 +111,7 @@ public class Vec2 implements Cloneable {
   /**
    * @see xunits
    *
-   * @param value allowed object is {@link Units}
+   * @param value allowed object is {@code Units}
    *
    */
   public void setXunits(Units value) {
@@ -121,7 +121,7 @@ public class Vec2 implements Cloneable {
   /**
    * @see yunits
    *
-   * @return possible object is {@link Units}
+   * @return possible object is {@code Units}
    *
    */
   public Units getYunits() {
@@ -135,7 +135,7 @@ public class Vec2 implements Cloneable {
   /**
    * @see yunits
    *
-   * @param value allowed object is {@link Units}
+   * @param value allowed object is {@code Units}
    *
    */
   public void setYunits(Units value) {

@@ -43,7 +43,7 @@ public class SoundCue
   }
 
   /**
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getHref() {
@@ -51,7 +51,7 @@ public class SoundCue
   }
 
   /**
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setHref(String value) {
@@ -59,7 +59,7 @@ public class SoundCue
   }
 
   /**
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getDelayedStart() {
@@ -67,7 +67,7 @@ public class SoundCue
   }
 
   /**
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setDelayedStart(double value) {

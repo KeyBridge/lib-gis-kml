@@ -61,7 +61,7 @@ public class ThoroughfareNumber implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getContent() {
@@ -69,7 +69,7 @@ public class ThoroughfareNumber implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setContent(String value) {
@@ -77,7 +77,7 @@ public class ThoroughfareNumber implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getNumber() {
@@ -85,7 +85,7 @@ public class ThoroughfareNumber implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setNumber(String value) {
@@ -93,7 +93,7 @@ public class ThoroughfareNumber implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getUnderscore() {
@@ -101,7 +101,7 @@ public class ThoroughfareNumber implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setUnderscore(String value) {
@@ -109,7 +109,7 @@ public class ThoroughfareNumber implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getIndicator() {
@@ -117,7 +117,7 @@ public class ThoroughfareNumber implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setIndicator(String value) {
@@ -125,7 +125,7 @@ public class ThoroughfareNumber implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getIndicatorOccurrence() {
@@ -133,7 +133,7 @@ public class ThoroughfareNumber implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setIndicatorOccurrence(String value) {
@@ -141,7 +141,7 @@ public class ThoroughfareNumber implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getNumberOccurrence() {
@@ -149,7 +149,7 @@ public class ThoroughfareNumber implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setNumberOccurrence(String value) {
@@ -157,7 +157,7 @@ public class ThoroughfareNumber implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getCode() {
@@ -165,7 +165,7 @@ public class ThoroughfareNumber implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setCode(String value) {

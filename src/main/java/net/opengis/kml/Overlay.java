@@ -182,7 +182,7 @@ public abstract class Overlay
   /**
    * @see color
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getColor() {
@@ -192,7 +192,7 @@ public abstract class Overlay
   /**
    * @see color
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setColor(String value) {
@@ -202,7 +202,7 @@ public abstract class Overlay
   /**
    * @see drawOrder
    *
-   * @return possible object is {@link Integer}
+   * @return possible object is {@code Integer}
    *
    */
   public int getDrawOrder() {
@@ -212,7 +212,7 @@ public abstract class Overlay
   /**
    * @see drawOrder
    *
-   * @param value allowed object is {@link Integer}
+   * @param value allowed object is {@code Integer}
    *
    */
   public void setDrawOrder(int value) {
@@ -222,7 +222,7 @@ public abstract class Overlay
   /**
    * @see icon
    *
-   * @return possible object is {@link net.opengis.kml.Link}
+   * @return possible object is {@code net.opengis.kml.Link}
    *
    */
   public Icon getIcon() {
@@ -232,7 +232,7 @@ public abstract class Overlay
   /**
    * @see icon
    *
-   * @param value allowed object is {@link net.opengis.kml.Link}
+   * @param value allowed object is {@code net.opengis.kml.Link}
    *
    */
   public void setIcon(Icon value) {
@@ -323,7 +323,7 @@ public abstract class Overlay
   }
 
   /**
-   * Creates a new instance of {@link Icon} and set it to icon.
+   * Creates a new instance of {@code Icon} and set it to icon.
    * <p>
    * This method is a short version for: &lt;code&gt; Icon icon = new Icon();
    * this.setIcon(icon); &lt;/code&gt;
@@ -347,7 +347,7 @@ public abstract class Overlay
    * add a value to the overlaySimpleExtension property collection
    *
    * @param overlaySimpleExtension Objects of the following type are allowed in
-   *                               the list: {@link Object}
+   *                               the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -369,7 +369,7 @@ public abstract class Overlay
    * add a value to the overlayObjectExtension property collection
    *
    * @param overlayObjectExtension Objects of the following type are allowed in
-   *                               the list: {@link AbstractObject}
+   *                               the list: {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

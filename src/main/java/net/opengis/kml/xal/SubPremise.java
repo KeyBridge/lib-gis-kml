@@ -118,7 +118,7 @@ public class SubPremise implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link SubPremise.SubPremiseLocation}
+   * @return possible object is {@code SubPremise.SubPremiseLocation}
    *
    */
   public SubPremise.SubPremiseLocation getSubPremiseLocation() {
@@ -126,7 +126,7 @@ public class SubPremise implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link SubPremise.SubPremiseLocation}
+   * @param value allowed object is {@code SubPremise.SubPremiseLocation}
    *
    */
   public void setSubPremiseLocation(SubPremise.SubPremiseLocation value) {
@@ -174,7 +174,7 @@ public class SubPremise implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link Firm}
+   * @return possible object is {@code Firm}
    *
    */
   public Firm getFirm() {
@@ -182,7 +182,7 @@ public class SubPremise implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link Firm}
+   * @param value allowed object is {@code Firm}
    *
    */
   public void setFirm(Firm value) {
@@ -190,7 +190,7 @@ public class SubPremise implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link MailStop}
+   * @return possible object is {@code MailStop}
    *
    */
   public MailStop getMailStop() {
@@ -198,7 +198,7 @@ public class SubPremise implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link MailStop}
+   * @param value allowed object is {@code MailStop}
    *
    */
   public void setMailStop(MailStop value) {
@@ -206,7 +206,7 @@ public class SubPremise implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link PostalCode}
+   * @return possible object is {@code PostalCode}
    *
    */
   public PostalCode getPostalCode() {
@@ -214,7 +214,7 @@ public class SubPremise implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link PostalCode}
+   * @param value allowed object is {@code PostalCode}
    *
    */
   public void setPostalCode(PostalCode value) {
@@ -222,7 +222,7 @@ public class SubPremise implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link SubPremise}
+   * @return possible object is {@code SubPremise}
    *
    */
   public SubPremise getSubPremise() {
@@ -230,7 +230,7 @@ public class SubPremise implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link SubPremise}
+   * @param value allowed object is {@code SubPremise}
    *
    */
   public void setSubPremise(SubPremise value) {
@@ -248,7 +248,7 @@ public class SubPremise implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getUnderscore() {
@@ -256,7 +256,7 @@ public class SubPremise implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setUnderscore(String value) {
@@ -397,7 +397,7 @@ public class SubPremise implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link AddressLine} and adds it to addressLine.
+   * Creates a new instance of {@code AddressLine} and adds it to addressLine.
    * This method is a short version for: &lt;code&gt; AddressLine addressLine =
    * new AddressLine(); this.getAddressLine().add(addressLine); &lt;/code&gt;
    */
@@ -408,7 +408,7 @@ public class SubPremise implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link SubPremise.SubPremiseName} and adds it to
+   * Creates a new instance of {@code SubPremise.SubPremiseName} and adds it to
    * subPremiseName. This method is a short version for: &lt;code&gt;
    * SubPremiseName subPremiseName = new SubPremiseName();
    * this.getSubPremiseName().add(subPremiseName); &lt;/code&gt;
@@ -420,7 +420,7 @@ public class SubPremise implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link SubPremise.SubPremiseLocation} and set it
+   * Creates a new instance of {@code SubPremise.SubPremiseLocation} and set it
    * to subPremiseLocation.
    * <p>
    * This method is a short version for: &lt;code&gt; SubPremiseLocation
@@ -434,7 +434,7 @@ public class SubPremise implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link SubPremise.SubPremiseNumber} and adds it
+   * Creates a new instance of {@code SubPremise.SubPremiseNumber} and adds it
    * to subPremiseNumber. This method is a short version for: &lt;code&gt;
    * SubPremiseNumber subPremiseNumber = new SubPremiseNumber();
    * this.getSubPremiseNumber().add(subPremiseNumber); &lt;/code&gt;
@@ -446,7 +446,7 @@ public class SubPremise implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link SubPremise.SubPremiseNumberPrefix} and
+   * Creates a new instance of {@code SubPremise.SubPremiseNumberPrefix} and
    * adds it to subPremiseNumberPrefix. This method is a short version for:
    * &lt;code&gt; SubPremiseNumberPrefix subPremiseNumberPrefix = new
    * SubPremiseNumberPrefix();
@@ -459,7 +459,7 @@ public class SubPremise implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link SubPremise.SubPremiseNumberSuffix} and
+   * Creates a new instance of {@code SubPremise.SubPremiseNumberSuffix} and
    * adds it to subPremiseNumberSuffix. This method is a short version for:
    * &lt;code&gt; SubPremiseNumberSuffix subPremiseNumberSuffix = new
    * SubPremiseNumberSuffix();
@@ -472,7 +472,7 @@ public class SubPremise implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link BuildingName} and adds it to buildingName.
+   * Creates a new instance of {@code BuildingName} and adds it to buildingName.
    * This method is a short version for: &lt;code&gt; BuildingName buildingName
    * = new BuildingName(); this.getBuildingName().add(buildingName);
    * &lt;/code&gt;
@@ -484,7 +484,7 @@ public class SubPremise implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Firm} and set it to firm.
+   * Creates a new instance of {@code Firm} and set it to firm.
    * <p>
    * This method is a short version for: &lt;code&gt; Firm firm = new Firm();
    * this.setFirm(firm); &lt;/code&gt;
@@ -496,7 +496,7 @@ public class SubPremise implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link MailStop} and set it to mailStop.
+   * Creates a new instance of {@code MailStop} and set it to mailStop.
    * <p>
    * This method is a short version for: &lt;code&gt; MailStop mailStop = new
    * MailStop(); this.setMailStop(mailStop); &lt;/code&gt;
@@ -508,7 +508,7 @@ public class SubPremise implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link PostalCode} and set it to postalCode.
+   * Creates a new instance of {@code PostalCode} and set it to postalCode.
    * <p>
    * This method is a short version for: &lt;code&gt; PostalCode postalCode =
    * new PostalCode(); this.setPostalCode(postalCode); &lt;/code&gt;
@@ -520,7 +520,7 @@ public class SubPremise implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link SubPremise} and set it to subPremise.
+   * Creates a new instance of {@code SubPremise} and set it to subPremise.
    * <p>
    * This method is a short version for: &lt;code&gt; SubPremise subPremise =
    * new SubPremise(); this.setSubPremise(subPremise); &lt;/code&gt;
@@ -540,7 +540,7 @@ public class SubPremise implements Cloneable {
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withAddressLine} instead.
+   * make it fluent, use {@code #withAddressLine} instead.
    *
    * @param addressLine
    */
@@ -552,7 +552,7 @@ public class SubPremise implements Cloneable {
    * add a value to the addressLine property collection
    *
    * @param addressLine Objects of the following type are allowed in the list:
-   *                    {@link AddressLine}
+   *                    {@code AddressLine}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -568,7 +568,7 @@ public class SubPremise implements Cloneable {
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withSubPremiseName} instead.
+   * make it fluent, use {@code #withSubPremiseName} instead.
    *
    * @param subPremiseName
    */
@@ -580,7 +580,7 @@ public class SubPremise implements Cloneable {
    * add a value to the subPremiseName property collection
    *
    * @param subPremiseName Objects of the following type are allowed in the
-   *                       list: {@link SubPremise.SubPremiseName}
+   *                       list: {@code SubPremise.SubPremiseName}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -596,7 +596,7 @@ public class SubPremise implements Cloneable {
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withSubPremiseNumber} instead.
+   * make it fluent, use {@code #withSubPremiseNumber} instead.
    *
    * @param subPremiseNumber
    */
@@ -608,7 +608,7 @@ public class SubPremise implements Cloneable {
    * add a value to the subPremiseNumber property collection
    *
    * @param subPremiseNumber Objects of the following type are allowed in the
-   *                         list: {@link SubPremise.SubPremiseNumber}
+   *                         list: {@code SubPremise.SubPremiseNumber}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -625,7 +625,7 @@ public class SubPremise implements Cloneable {
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withSubPremiseNumberPrefix} instead.
+   * make it fluent, use {@code #withSubPremiseNumberPrefix} instead.
    *
    * @param subPremiseNumberPrefix
    */
@@ -638,7 +638,7 @@ public class SubPremise implements Cloneable {
    *
    * @param subPremiseNumberPrefix Objects of the following type are allowed in
    *                               the list:
-   *                               {@link SubPremise.SubPremiseNumberPrefix}
+   *                               {@code SubPremise.SubPremiseNumberPrefix}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -655,7 +655,7 @@ public class SubPremise implements Cloneable {
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withSubPremiseNumberSuffix} instead.
+   * make it fluent, use {@code #withSubPremiseNumberSuffix} instead.
    *
    * @param subPremiseNumberSuffix
    */
@@ -668,7 +668,7 @@ public class SubPremise implements Cloneable {
    *
    * @param subPremiseNumberSuffix Objects of the following type are allowed in
    *                               the list:
-   *                               {@link SubPremise.SubPremiseNumberSuffix}
+   *                               {@code SubPremise.SubPremiseNumberSuffix}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -684,7 +684,7 @@ public class SubPremise implements Cloneable {
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withBuildingName} instead.
+   * make it fluent, use {@code #withBuildingName} instead.
    *
    * @param buildingName
    */
@@ -696,7 +696,7 @@ public class SubPremise implements Cloneable {
    * add a value to the buildingName property collection
    *
    * @param buildingName Objects of the following type are allowed in the list:
-   *                     {@link BuildingName}
+   *                     {@code BuildingName}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -712,7 +712,7 @@ public class SubPremise implements Cloneable {
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withAny} instead.
+   * make it fluent, use {@code #withAny} instead.
    *
    * @param any
    */
@@ -724,7 +724,7 @@ public class SubPremise implements Cloneable {
    * add a value to the any property collection
    *
    * @param any Objects of the following type are allowed in the list:
-   *            {@link Object}
+   *            {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -942,7 +942,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getContent() {
@@ -950,7 +950,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setContent(String value) {
@@ -958,7 +958,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getCode() {
@@ -966,7 +966,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setCode(String value) {
@@ -1077,7 +1077,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getContent() {
@@ -1085,7 +1085,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setContent(String value) {
@@ -1093,7 +1093,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getUnderscore() {
@@ -1101,7 +1101,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setUnderscore(String value) {
@@ -1109,7 +1109,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getTypeOccurrence() {
@@ -1117,7 +1117,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setTypeOccurrence(String value) {
@@ -1125,7 +1125,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getCode() {
@@ -1133,7 +1133,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setCode(String value) {
@@ -1300,7 +1300,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getContent() {
@@ -1308,7 +1308,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setContent(String value) {
@@ -1316,7 +1316,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getIndicator() {
@@ -1324,7 +1324,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setIndicator(String value) {
@@ -1332,7 +1332,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getIndicatorOccurrence() {
@@ -1340,7 +1340,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setIndicatorOccurrence(String value) {
@@ -1348,7 +1348,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getNumberTypeOccurrence() {
@@ -1356,7 +1356,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setNumberTypeOccurrence(String value) {
@@ -1364,7 +1364,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getPremiseNumberSeparator() {
@@ -1372,7 +1372,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setPremiseNumberSeparator(String value) {
@@ -1380,7 +1380,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getUnderscore() {
@@ -1388,7 +1388,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setUnderscore(String value) {
@@ -1396,7 +1396,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getCode() {
@@ -1404,7 +1404,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setCode(String value) {
@@ -1622,7 +1622,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getContent() {
@@ -1630,7 +1630,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setContent(String value) {
@@ -1638,7 +1638,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getNumberPrefixSeparator() {
@@ -1646,7 +1646,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setNumberPrefixSeparator(String value) {
@@ -1654,7 +1654,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getUnderscore() {
@@ -1662,7 +1662,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setUnderscore(String value) {
@@ -1670,7 +1670,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getCode() {
@@ -1678,7 +1678,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setCode(String value) {
@@ -1836,7 +1836,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getContent() {
@@ -1844,7 +1844,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setContent(String value) {
@@ -1852,7 +1852,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getNumberSuffixSeparator() {
@@ -1860,7 +1860,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setNumberSuffixSeparator(String value) {
@@ -1868,7 +1868,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getUnderscore() {
@@ -1876,7 +1876,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setUnderscore(String value) {
@@ -1884,7 +1884,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getCode() {
@@ -1892,7 +1892,7 @@ public class SubPremise implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setCode(String value) {

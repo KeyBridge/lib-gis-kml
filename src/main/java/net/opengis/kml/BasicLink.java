@@ -51,7 +51,7 @@ public class BasicLink
   }
 
   /**
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getHref() {
@@ -59,7 +59,7 @@ public class BasicLink
   }
 
   /**
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setHref(String value) {
@@ -142,7 +142,7 @@ public class BasicLink
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withBasicLinkSimpleExtension} instead.
+   * make it fluent, use {@code #withBasicLinkSimpleExtension} instead.
    *
    * @param basicLinkSimpleExtension
    */
@@ -155,7 +155,7 @@ public class BasicLink
    *
    * @param basicLinkSimpleExtension Objects of the following type are allowed
    *                                 in the list:
-   *                                 {@link BigInteger}{@link JAXBElement}{@link BigInteger}{@link JAXBElement}{@link Object}{@link JAXBElement}{@link BigInteger}{@link JAXBElement}{@link BigInteger}
+   *                                 {@code BigInteger}{@code JAXBElement}{@code BigInteger}{@code JAXBElement}{@code Object}{@code JAXBElement}{@code BigInteger}{@code JAXBElement}{@code BigInteger}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -171,7 +171,7 @@ public class BasicLink
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withBasicLinkObjectExtension} instead.
+   * make it fluent, use {@code #withBasicLinkObjectExtension} instead.
    *
    * @param basicLinkObjectExtension
    */
@@ -183,7 +183,7 @@ public class BasicLink
    * add a value to the basicLinkObjectExtension property collection
    *
    * @param basicLinkObjectExtension Objects of the following type are allowed
-   *                                 in the list: {@link AbstractObject}
+   *                                 in the list: {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

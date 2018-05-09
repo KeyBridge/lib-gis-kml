@@ -101,7 +101,7 @@ public abstract class AbstractObject implements Cloneable {
   /**
    * @see id
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getId() {
@@ -111,7 +111,7 @@ public abstract class AbstractObject implements Cloneable {
   /**
    * @see id
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setId(String value) {
@@ -121,7 +121,7 @@ public abstract class AbstractObject implements Cloneable {
   /**
    * @see targetId
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getTargetId() {
@@ -131,7 +131,7 @@ public abstract class AbstractObject implements Cloneable {
   /**
    * @see targetId
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setTargetId(String value) {
@@ -197,7 +197,7 @@ public abstract class AbstractObject implements Cloneable {
    * add a value to the objectSimpleExtension property collection
    *
    * @param objectSimpleExtension Objects of the following type are allowed in
-   *                              the list: {@link Object}
+   *                              the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

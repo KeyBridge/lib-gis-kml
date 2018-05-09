@@ -183,7 +183,7 @@ public class LookAt
   /**
    * @see longitude
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getLongitude() {
@@ -193,7 +193,7 @@ public class LookAt
   /**
    * @see longitude
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setLongitude(double value) {
@@ -203,7 +203,7 @@ public class LookAt
   /**
    * @see latitude
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getLatitude() {
@@ -213,7 +213,7 @@ public class LookAt
   /**
    * @see latitude
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setLatitude(double value) {
@@ -223,7 +223,7 @@ public class LookAt
   /**
    * @see altitude
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getAltitude() {
@@ -233,7 +233,7 @@ public class LookAt
   /**
    * @see altitude
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setAltitude(double value) {
@@ -243,7 +243,7 @@ public class LookAt
   /**
    * @see heading
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getHeading() {
@@ -253,7 +253,7 @@ public class LookAt
   /**
    * @see heading
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setHeading(double value) {
@@ -263,7 +263,7 @@ public class LookAt
   /**
    * @see tilt
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getTilt() {
@@ -273,7 +273,7 @@ public class LookAt
   /**
    * @see tilt
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setTilt(double value) {
@@ -283,7 +283,7 @@ public class LookAt
   /**
    * @see range
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getRange() {
@@ -293,7 +293,7 @@ public class LookAt
   /**
    * @see range
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setRange(double value) {
@@ -303,9 +303,9 @@ public class LookAt
   /**
    * @see altitudeMode
    *
-   * @return possible object is null null null null null null null null null null   {@link Object}
-     *     {@link net.opengis.kml.AltitudeMode}
-   *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
+   * @return possible object is null null null null null null null null null null   {@code Object}
+     *     {@code net.opengis.kml.AltitudeMode}
+   *     {@code de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
    */
   public AltitudeMode getAltitudeMode() {
@@ -315,9 +315,9 @@ public class LookAt
   /**
    * @see altitudeMode
    *
-   * @param value allowed object is null null null null null null null null null null   {@link Object}
-     *     {@link net.opengis.kml.AltitudeMode}
-   *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
+   * @param value allowed object is null null null null null null null null null null   {@code Object}
+     *     {@code net.opengis.kml.AltitudeMode}
+   *     {@code de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
    */
   public void setAltitudeMode(AltitudeMode value) {
@@ -439,7 +439,7 @@ public class LookAt
    * add a value to the lookAtSimpleExtension property collection
    *
    * @param lookAtSimpleExtension Objects of the following type are allowed in
-   *                              the list: {@link Object}
+   *                              the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -461,7 +461,7 @@ public class LookAt
    * add a value to the lookAtObjectExtension property collection
    *
    * @param lookAtObjectExtension Objects of the following type are allowed in
-   *                              the list: {@link AbstractObject}
+   *                              the list: {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

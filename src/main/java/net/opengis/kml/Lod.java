@@ -133,7 +133,7 @@ public class Lod
   /**
    * @see minLodPixels
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getMinLodPixels() {
@@ -143,7 +143,7 @@ public class Lod
   /**
    * @see minLodPixels
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setMinLodPixels(double value) {
@@ -153,7 +153,7 @@ public class Lod
   /**
    * @see maxLodPixels
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getMaxLodPixels() {
@@ -163,7 +163,7 @@ public class Lod
   /**
    * @see maxLodPixels
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setMaxLodPixels(double value) {
@@ -173,7 +173,7 @@ public class Lod
   /**
    * @see minFadeExtent
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getMinFadeExtent() {
@@ -183,7 +183,7 @@ public class Lod
   /**
    * @see minFadeExtent
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setMinFadeExtent(double value) {
@@ -193,7 +193,7 @@ public class Lod
   /**
    * @see maxFadeExtent
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getMaxFadeExtent() {
@@ -203,7 +203,7 @@ public class Lod
   /**
    * @see maxFadeExtent
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setMaxFadeExtent(double value) {
@@ -307,7 +307,7 @@ public class Lod
    * add a value to the lodSimpleExtension property collection
    *
    * @param lodSimpleExtension Objects of the following type are allowed in the
-   *                           list: {@link Object}
+   *                           list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -329,7 +329,7 @@ public class Lod
    * add a value to the lodObjectExtension property collection
    *
    * @param lodObjectExtension Objects of the following type are allowed in the
-   *                           list: {@link AbstractObject}
+   *                           list: {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

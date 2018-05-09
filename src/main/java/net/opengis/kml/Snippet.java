@@ -66,7 +66,7 @@ public class Snippet implements Cloneable {
   /**
    * @see value
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getValue() {
@@ -76,7 +76,7 @@ public class Snippet implements Cloneable {
   /**
    * @see value
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setValue(String value) {

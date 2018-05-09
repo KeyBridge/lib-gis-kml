@@ -118,7 +118,7 @@ public class Orientation
   /**
    * @see heading
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getHeading() {
@@ -128,7 +128,7 @@ public class Orientation
   /**
    * @see heading
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setHeading(double value) {
@@ -138,7 +138,7 @@ public class Orientation
   /**
    * @see tilt
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getTilt() {
@@ -148,7 +148,7 @@ public class Orientation
   /**
    * @see tilt
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setTilt(double value) {
@@ -158,7 +158,7 @@ public class Orientation
   /**
    * @see roll
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getRoll() {
@@ -168,7 +168,7 @@ public class Orientation
   /**
    * @see roll
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setRoll(double value) {
@@ -267,7 +267,7 @@ public class Orientation
    * add a value to the orientationSimpleExtension property collection
    *
    * @param orientationSimpleExtension Objects of the following type are allowed
-   *                                   in the list: {@link Object}
+   *                                   in the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -289,7 +289,7 @@ public class Orientation
    * add a value to the orientationObjectExtension property collection
    *
    * @param orientationObjectExtension Objects of the following type are allowed
-   *                                   in the list: {@link AbstractObject}
+   *                                   in the list: {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

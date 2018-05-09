@@ -113,7 +113,7 @@ public class Update implements Cloneable {
   /**
    * @see targetHref
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getTargetHref() {
@@ -123,7 +123,7 @@ public class Update implements Cloneable {
   /**
    * @see targetHref
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setTargetHref(String value) {
@@ -212,7 +212,7 @@ public class Update implements Cloneable {
    *
    * @param createOrDeleteOrChange Objects of the following type are allowed in
    *                               the list:
-   *                               {@link Object}{@link Change}{@link Delete}{@link Create}
+   *                               {@code Object}{@code Change}{@code Delete}{@code Create}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -234,7 +234,7 @@ public class Update implements Cloneable {
    * add a value to the updateExtension property collection
    *
    * @param updateExtension Objects of the following type are allowed in the
-   *                        list: {@link Object}
+   *                        list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

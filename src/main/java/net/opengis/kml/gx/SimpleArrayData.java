@@ -66,7 +66,7 @@ public class SimpleArrayData
   }
 
   /**
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getName() {
@@ -74,7 +74,7 @@ public class SimpleArrayData
   }
 
   /**
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setName(String value) {
@@ -137,7 +137,7 @@ public class SimpleArrayData
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withValue} instead.
+   * make it fluent, use {@code #withValue} instead.
    *
    * @param value
    */
@@ -149,7 +149,7 @@ public class SimpleArrayData
    * add a value to the value property collection
    *
    * @param value Objects of the following type are allowed in the list:
-   *              {@link String}
+   *              {@code String}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -165,7 +165,7 @@ public class SimpleArrayData
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withSimpleArrayDataExtension} instead.
+   * make it fluent, use {@code #withSimpleArrayDataExtension} instead.
    *
    * @param simpleArrayDataExtension
    */
@@ -177,7 +177,7 @@ public class SimpleArrayData
    * add a value to the simpleArrayDataExtension property collection
    *
    * @param simpleArrayDataExtension Objects of the following type are allowed
-   *                                 in the list: {@link Object}
+   *                                 in the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

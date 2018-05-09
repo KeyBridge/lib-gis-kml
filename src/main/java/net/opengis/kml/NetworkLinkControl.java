@@ -217,7 +217,7 @@ public class NetworkLinkControl implements Cloneable {
   /**
    * @see minRefreshPeriod
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getMinRefreshPeriod() {
@@ -227,7 +227,7 @@ public class NetworkLinkControl implements Cloneable {
   /**
    * @see minRefreshPeriod
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setMinRefreshPeriod(double value) {
@@ -237,7 +237,7 @@ public class NetworkLinkControl implements Cloneable {
   /**
    * @see maxSessionLength
    *
-   * @return possible object is {@link Double}
+   * @return possible object is {@code Double}
    *
    */
   public double getMaxSessionLength() {
@@ -247,7 +247,7 @@ public class NetworkLinkControl implements Cloneable {
   /**
    * @see maxSessionLength
    *
-   * @param value allowed object is {@link Double}
+   * @param value allowed object is {@code Double}
    *
    */
   public void setMaxSessionLength(double value) {
@@ -257,7 +257,7 @@ public class NetworkLinkControl implements Cloneable {
   /**
    * @see cookie
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getCookie() {
@@ -267,7 +267,7 @@ public class NetworkLinkControl implements Cloneable {
   /**
    * @see cookie
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setCookie(String value) {
@@ -277,7 +277,7 @@ public class NetworkLinkControl implements Cloneable {
   /**
    * @see message
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getMessage() {
@@ -287,7 +287,7 @@ public class NetworkLinkControl implements Cloneable {
   /**
    * @see message
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setMessage(String value) {
@@ -297,7 +297,7 @@ public class NetworkLinkControl implements Cloneable {
   /**
    * @see linkName
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getLinkName() {
@@ -307,7 +307,7 @@ public class NetworkLinkControl implements Cloneable {
   /**
    * @see linkName
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setLinkName(String value) {
@@ -317,7 +317,7 @@ public class NetworkLinkControl implements Cloneable {
   /**
    * @see linkDescription
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getLinkDescription() {
@@ -327,7 +327,7 @@ public class NetworkLinkControl implements Cloneable {
   /**
    * @see linkDescription
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setLinkDescription(String value) {
@@ -337,7 +337,7 @@ public class NetworkLinkControl implements Cloneable {
   /**
    * @see linkSnippet
    *
-   * @return possible object is {@link Snippet}
+   * @return possible object is {@code Snippet}
    *
    */
   public Snippet getLinkSnippet() {
@@ -347,7 +347,7 @@ public class NetworkLinkControl implements Cloneable {
   /**
    * @see linkSnippet
    *
-   * @param value allowed object is {@link Snippet}
+   * @param value allowed object is {@code Snippet}
    *
    */
   public void setLinkSnippet(Snippet value) {
@@ -357,7 +357,7 @@ public class NetworkLinkControl implements Cloneable {
   /**
    * @see expires
    *
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getExpires() {
@@ -367,7 +367,7 @@ public class NetworkLinkControl implements Cloneable {
   /**
    * @see expires
    *
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setExpires(String value) {
@@ -377,7 +377,7 @@ public class NetworkLinkControl implements Cloneable {
   /**
    * @see update
    *
-   * @return possible object is {@link Update}
+   * @return possible object is {@code Update}
    *
    */
   public Update getUpdate() {
@@ -387,7 +387,7 @@ public class NetworkLinkControl implements Cloneable {
   /**
    * @see update
    *
-   * @param value allowed object is {@link Update}
+   * @param value allowed object is {@code Update}
    *
    */
   public void setUpdate(Update value) {
@@ -397,9 +397,9 @@ public class NetworkLinkControl implements Cloneable {
   /**
    * @see abstractView
    *
-   * @return possible object is null null null null null null null null null null   {@link AbstractView}
-     *     {@link LookAt}
-   *     {@link Camera}
+   * @return possible object is null null null null null null null null null null   {@code AbstractView}
+     *     {@code LookAt}
+   *     {@code Camera}
    *
    */
   public AbstractView getAbstractView() {
@@ -409,9 +409,9 @@ public class NetworkLinkControl implements Cloneable {
   /**
    * @see abstractView
    *
-   * @param value allowed object is null null null null null null null null null null   {@link AbstractView}
-     *     {@link LookAt}
-   *     {@link Camera}
+   * @param value allowed object is null null null null null null null null null null   {@code AbstractView}
+     *     {@code LookAt}
+   *     {@code Camera}
    *
    */
   public void setAbstractView(AbstractView value) {
@@ -554,7 +554,7 @@ public class NetworkLinkControl implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Snippet} and set it to linkSnippet.
+   * Creates a new instance of {@code Snippet} and set it to linkSnippet.
    * <p>
    * This method is a short version for: &lt;code&gt; Snippet snippet = new
    * Snippet(); this.setLinkSnippet(snippet); &lt;/code&gt;
@@ -566,7 +566,7 @@ public class NetworkLinkControl implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Update} and set it to update.
+   * Creates a new instance of {@code Update} and set it to update.
    * <p>
    * This method is a short version for: &lt;code&gt; Update update = new
    * Update(); this.setUpdate(update); &lt;/code&gt;
@@ -581,7 +581,7 @@ public class NetworkLinkControl implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link LookAt} and set it to abstractView.
+   * Creates a new instance of {@code LookAt} and set it to abstractView.
    * <p>
    * This method is a short version for: &lt;code&gt; LookAt lookAt = new
    * LookAt(); this.setAbstractView(lookAt); &lt;/code&gt;
@@ -593,7 +593,7 @@ public class NetworkLinkControl implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Camera} and set it to abstractView.
+   * Creates a new instance of {@code Camera} and set it to abstractView.
    * <p>
    * This method is a short version for: &lt;code&gt; Camera camera = new
    * Camera(); this.setAbstractView(camera); &lt;/code&gt;
@@ -618,7 +618,7 @@ public class NetworkLinkControl implements Cloneable {
    *
    * @param networkLinkControlSimpleExtension Objects of the following type are
    *                                          allowed in the list:
-   *                                          {@link Object}
+   *                                          {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -641,7 +641,7 @@ public class NetworkLinkControl implements Cloneable {
    *
    * @param networkLinkControlObjectExtension Objects of the following type are
    *                                          allowed in the list:
-   *                                          {@link AbstractObject}
+   *                                          {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */

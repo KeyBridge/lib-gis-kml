@@ -177,7 +177,7 @@ public class LinearRing
   }
 
   /**
-   * @return possible object is {@link Boolean}
+   * @return possible object is {@code Boolean}
    *
    */
   public Boolean isExtrude() {
@@ -187,7 +187,7 @@ public class LinearRing
   /**
    * @see extrude
    *
-   * @param value allowed object is {@link Boolean}
+   * @param value allowed object is {@code Boolean}
    *
    */
   public void setExtrude(Boolean value) {
@@ -195,7 +195,7 @@ public class LinearRing
   }
 
   /**
-   * @return possible object is {@link Boolean}
+   * @return possible object is {@code Boolean}
    *
    */
   public Boolean isTessellate() {
@@ -205,7 +205,7 @@ public class LinearRing
   /**
    * @see tessellate
    *
-   * @param value allowed object is {@link Boolean}
+   * @param value allowed object is {@code Boolean}
    *
    */
   public void setTessellate(Boolean value) {
@@ -215,9 +215,9 @@ public class LinearRing
   /**
    * @see altitudeMode
    *
-   * @return possible object is null null null null null null null null null   {@link Object}
-     *     {@link net.opengis.kml.AltitudeMode}
-   *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
+   * @return possible object is null null null null null null null null null   {@code Object}
+     *     {@code net.opengis.kml.AltitudeMode}
+   *     {@code de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
    */
   public AltitudeMode getAltitudeMode() {
@@ -227,9 +227,9 @@ public class LinearRing
   /**
    * @see altitudeMode
    *
-   * @param value allowed object is null null null null null null null null null   {@link Object}
-     *     {@link net.opengis.kml.AltitudeMode}
-   *     {@link de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
+   * @param value allowed object is null null null null null null null null null   {@code Object}
+     *     {@code net.opengis.kml.AltitudeMode}
+   *     {@code de.micromata.opengis.kml.v_2_2_0.gx.AltitudeMode}
    *
    */
   public void setAltitudeMode(AltitudeMode value) {
@@ -403,7 +403,7 @@ public class LinearRing
    * add a value to the linearRingSimpleExtension property collection
    *
    * @param linearRingSimpleExtension Objects of the following type are allowed
-   *                                  in the list: {@link Object}
+   *                                  in the list: {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -425,7 +425,7 @@ public class LinearRing
    * add a value to the linearRingObjectExtension property collection
    *
    * @param linearRingObjectExtension Objects of the following type are allowed
-   *                                  in the list: {@link AbstractObject}
+   *                                  in the list: {@code AbstractObject}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -593,7 +593,7 @@ public class LinearRing
   }
 
   /**
-   * Creates a new instance of {@link List}{@link Coordinate} and set it to
+   * Creates a new instance of {@code List}{@code Coordinate} and set it to
    * this.coordinates.
    * <p>
    * This method is a short version for:

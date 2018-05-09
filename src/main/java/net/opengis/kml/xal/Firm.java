@@ -91,7 +91,7 @@ public class Firm implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link MailStop}
+   * @return possible object is {@code MailStop}
    *
    */
   public MailStop getMailStop() {
@@ -99,7 +99,7 @@ public class Firm implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link MailStop}
+   * @param value allowed object is {@code MailStop}
    *
    */
   public void setMailStop(MailStop value) {
@@ -107,7 +107,7 @@ public class Firm implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link PostalCode}
+   * @return possible object is {@code PostalCode}
    *
    */
   public PostalCode getPostalCode() {
@@ -115,7 +115,7 @@ public class Firm implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link PostalCode}
+   * @param value allowed object is {@code PostalCode}
    *
    */
   public void setPostalCode(PostalCode value) {
@@ -133,7 +133,7 @@ public class Firm implements Cloneable {
   }
 
   /**
-   * @return possible object is {@link String}
+   * @return possible object is {@code String}
    *
    */
   public String getUnderscore() {
@@ -141,7 +141,7 @@ public class Firm implements Cloneable {
   }
 
   /**
-   * @param value allowed object is {@link String}
+   * @param value allowed object is {@code String}
    *
    */
   public void setUnderscore(String value) {
@@ -234,7 +234,7 @@ public class Firm implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link AddressLine} and adds it to addressLine.
+   * Creates a new instance of {@code AddressLine} and adds it to addressLine.
    * This method is a short version for: &lt;code&gt; AddressLine addressLine =
    * new AddressLine(); this.getAddressLine().add(addressLine); &lt;/code&gt;
    */
@@ -245,7 +245,7 @@ public class Firm implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Firm.FirmName} and adds it to firmName.
+   * Creates a new instance of {@code Firm.FirmName} and adds it to firmName.
    * This method is a short version for: &lt;code&gt; FirmName firmName = new
    * FirmName(); this.getFirmName().add(firmName); &lt;/code&gt;
    */
@@ -256,7 +256,7 @@ public class Firm implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link Department} and adds it to department.
+   * Creates a new instance of {@code Department} and adds it to department.
    * This method is a short version for: &lt;code&gt; Department department =
    * new Department(); this.getDepartment().add(department); &lt;/code&gt;
    */
@@ -267,7 +267,7 @@ public class Firm implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link MailStop} and set it to mailStop.
+   * Creates a new instance of {@code MailStop} and set it to mailStop.
    * <p>
    * This method is a short version for: &lt;code&gt; MailStop mailStop = new
    * MailStop(); this.setMailStop(mailStop); &lt;/code&gt;
@@ -279,7 +279,7 @@ public class Firm implements Cloneable {
   }
 
   /**
-   * Creates a new instance of {@link PostalCode} and set it to postalCode.
+   * Creates a new instance of {@code PostalCode} and set it to postalCode.
    * <p>
    * This method is a short version for: &lt;code&gt; PostalCode postalCode =
    * new PostalCode(); this.setPostalCode(postalCode); &lt;/code&gt;
@@ -297,7 +297,7 @@ public class Firm implements Cloneable {
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withAddressLine} instead.
+   * make it fluent, use {@code #withAddressLine} instead.
    *
    * @param addressLine
    */
@@ -309,7 +309,7 @@ public class Firm implements Cloneable {
    * add a value to the addressLine property collection
    *
    * @param addressLine Objects of the following type are allowed in the list:
-   *                    {@link AddressLine}
+   *                    {@code AddressLine}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -325,7 +325,7 @@ public class Firm implements Cloneable {
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withFirmName} instead.
+   * make it fluent, use {@code #withFirmName} instead.
    *
    * @param firmName
    */
@@ -337,7 +337,7 @@ public class Firm implements Cloneable {
    * add a value to the firmName property collection
    *
    * @param firmName Objects of the following type are allowed in the list:
-   *                 {@link Firm.FirmName}
+   *                 {@code Firm.FirmName}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -353,7 +353,7 @@ public class Firm implements Cloneable {
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withDepartment} instead.
+   * make it fluent, use {@code #withDepartment} instead.
    *
    * @param department
    */
@@ -365,7 +365,7 @@ public class Firm implements Cloneable {
    * add a value to the department property collection
    *
    * @param department Objects of the following type are allowed in the list:
-   *                   {@link Department}
+   *                   {@code Department}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -381,7 +381,7 @@ public class Firm implements Cloneable {
    * Note:
    * <p>
    * This method does not make use of the fluent pattern.If you would like to
-   * make it fluent, use {@link #withAny} instead.
+   * make it fluent, use {@code #withAny} instead.
    *
    * @param any
    */
@@ -393,7 +393,7 @@ public class Firm implements Cloneable {
    * add a value to the any property collection
    *
    * @param any Objects of the following type are allowed in the list:
-   *            {@link Object}
+   *            {@code Object}
    * @return &lt;tt&gt;true &lt;/tt&gt; (as general contract of
    *         &lt;tt&gt;Collection.add &lt;/tt&gt;).
    */
@@ -541,7 +541,7 @@ public class Firm implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getContent() {
@@ -549,7 +549,7 @@ public class Firm implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setContent(String value) {
@@ -557,7 +557,7 @@ public class Firm implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getUnderscore() {
@@ -565,7 +565,7 @@ public class Firm implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setUnderscore(String value) {
@@ -573,7 +573,7 @@ public class Firm implements Cloneable {
     }
 
     /**
-     * @return possible object is {@link String}
+     * @return possible object is {@code String}
      *
      */
     public String getCode() {
@@ -581,7 +581,7 @@ public class Firm implements Cloneable {
     }
 
     /**
-     * @param value allowed object is {@link String}
+     * @param value allowed object is {@code String}
      *
      */
     public void setCode(String value) {
