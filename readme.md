@@ -36,6 +36,8 @@ functionality in support of our GIS DTO library.
  * v1.0.0 - KML writer working just fine, thank you
  * v1.0.1 - update lib dependencies
  * v1.1.0 - remove DTO KML writer - this lib is KML only
+ * v1.2.0 - reverse v1.1.0 - add KML writer and reader, depends upon lib-gis-dto
+
 
 # License
 
