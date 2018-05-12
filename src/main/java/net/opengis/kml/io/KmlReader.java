@@ -20,10 +20,7 @@ import ch.keybridge.lib.gis.dto.GISFeatureCollection;
 import com.vividsolutions.jts.geom.GeometryCollection;
 import com.vividsolutions.jts.geom.GeometryFactory;
 import com.vividsolutions.jts.geom.PrecisionModel;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 import net.opengis.kml.*;
 
 /**
@@ -139,6 +136,17 @@ public class KmlReader {
       featureCollection.addFeatures(transformPlacemark((Placemark) feature));
     }
 
+    /**
+     * HACK: GISFeatureCollection does not requires a unique ID but we should
+     * provide one anyway. If the KML entry does not have an ID then generate
+     * one. Note that the {@code CollapsedStringAdapter} produces a "null"
+     * string when the field is not present, so we must also check for "null"
+     * here.
+     */
+    if (featureCollection.getId() == null || featureCollection.getId().isEmpty() || featureCollection.getId().equalsIgnoreCase("null")) {
+      featureCollection.setId(Math.abs(Objects.hashCode(feature)));
+    }
+
     return featureCollection;
   }
 
@@ -160,7 +168,6 @@ public class KmlReader {
     feature.setName(placemark.getName());
     feature.setDescription(placemark.getDescription());
     feature.addProperties(transformExtendedData(placemark));
-
     /**
      * A string value representing an unstructured address written as a standard
      * street, city, state address, and/or as a postal code. You can use the
@@ -172,6 +179,15 @@ public class KmlReader {
      * Set the geometry.
      */
     feature.setGeometry(transformGeometry(placemark.getGeometry()));
+    /**
+     * HACK: GISFeature requires a unique ID. If the KML entry does not have an
+     * ID then generate one. Note that the {@code CollapsedStringAdapter}
+     * produces a "null" string when the field is not present, so we must also
+     * check for "null" here.
+     */
+    if (feature.getId() == null || feature.getId().isEmpty() || feature.getId().equalsIgnoreCase("null")) {
+      feature.setId(Math.abs(Objects.hashCode(feature.getGeometry())));
+    }
     /**
      * Done.
      */
