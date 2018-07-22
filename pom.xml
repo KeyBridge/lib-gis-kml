@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>keybridge.lib</groupId>
   <artifactId>gis-kml</artifactId>
-  <version>1.2.0</version>
+  <version>1.3.0</version>
   <packaging>jar</packaging>
   <name>lib-gis-kml</name>
   <description>A KML reader and writer.
@@ -48,6 +48,8 @@
     v1.0.1 - update lib dependencies
     v1.1.0 - remove DTO KML writer - this lib is KML only - IO is in gis-dto library
     v1.2.0 - reverse v1.1.0 - add KML writer and reader, depends upon lib-gis-dto
+    v1.3.0 - bump versions and dependencies
+
 
   </description>
 
@@ -67,7 +69,26 @@
   </properties>
 
   <dependencies>
-
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>gis-dto</artifactId>
+      <version>1.6.0</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>xml-adapter</artifactId>
+      <version>1.5.0</version>
+      <type>jar</type>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.vividsolutions</groupId>
+      <artifactId>jts</artifactId>
+      <version>1.13</version>
+      <type>jar</type>
+      <scope>provided</scope>
+    </dependency>
 
     <!--use the following will enable the GeoTools Encoder-->
     <!--    <dependency>
@@ -87,11 +108,7 @@
       <version>4.12</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>gis-dto</artifactId>
-      <version>1.5.0</version>
-    </dependency>
+
   </dependencies>
 
 

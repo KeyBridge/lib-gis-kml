@@ -18,7 +18,7 @@ package net.opengis.kml.io;
 import ch.keybridge.lib.gis.dto.AbstractGISFeature;
 import ch.keybridge.lib.gis.dto.GISFeature;
 import ch.keybridge.lib.gis.dto.GISFeatureCollection;
-import ch.keybridge.lib.xml.JaxbUtility;
+import ch.keybridge.xml.JaxbUtility;
 import java.io.IOException;
 import java.util.Map;
 import javax.xml.bind.JAXBException;
