@@ -193,11 +193,11 @@ public class KmlWriter {
     GISFeature f = new GISFeature();
 
     LineStyle lineStyle = style.createAndSetLineStyle();
-    lineStyle.setColor(f.getStroke());  // TODO: append opacity
-    lineStyle.setWidth(f.getStrokeWidth());
+    lineStyle.setColor(f.getStroke() != null ? f.getStroke() : "999999");  // TODO: append opacity
+    lineStyle.setWidth(f.getStrokeWidth() != null ? f.getStrokeWidth() : 2.0);
 
     PolyStyle polyStyle = style.createAndSetPolyStyle();
-    polyStyle.setColor(f.getFill()); // TODO: append opacity
+    polyStyle.setColor(f.getFill() != null ? f.getFill() : "55555"); // TODO: append opacity
     polyStyle.setFill(true);
 
     return style;
