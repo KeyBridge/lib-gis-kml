@@ -154,7 +154,7 @@ public class KmlWriter {
     placemark.setId(feature.getId());
     placemark.setName(feature.getName());
     placemark.setDescription(feature.getDescription());
-    placemark.setGeometry(Geometry.getInstance(feature.getGeometry()));
+    placemark.setGeometry(Geometry.getInstance(feature.getShape()));
     placemark.setExtendedData(transformProperties(feature.getProperties()));
     placemark.getExtendedData().addToData(new Data("featureType", feature.getFeatureType()));
     placemark.getExtendedData().addToData(new Data("country", feature.getIso2()));

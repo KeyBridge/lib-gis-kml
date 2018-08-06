@@ -178,7 +178,7 @@ public class KmlReader {
     /**
      * Set the geometry.
      */
-    feature.setGeometry(transformGeometry(placemark.getGeometry()));
+    feature.setShape(transformGeometry(placemark.getGeometry()));
     /**
      * HACK: GISFeature requires a unique ID. If the KML entry does not have an
      * ID then generate one. Note that the {@code CollapsedStringAdapter}
@@ -186,7 +186,7 @@ public class KmlReader {
      * check for "null" here.
      */
     if (feature.getId() == null || feature.getId().isEmpty() || feature.getId().equalsIgnoreCase("null")) {
-      feature.setId(Math.abs(Objects.hashCode(feature.getGeometry())));
+      feature.setId(Math.abs(Objects.hashCode(feature.getShape())));
     }
     /**
      * Done.
