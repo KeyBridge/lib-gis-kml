@@ -13,15 +13,14 @@
  */
 package net.opengis.kml.io;
 
-import ch.keybridge.lib.gis.dto.GISFeature;
-import ch.keybridge.lib.gis.dto.GISFeatureCollection;
 import com.vividsolutions.jts.geom.Coordinate;
 import com.vividsolutions.jts.geom.Geometry;
 import com.vividsolutions.jts.geom.GeometryFactory;
 import com.vividsolutions.jts.io.ParseException;
 import com.vividsolutions.jts.io.WKTReader;
 import java.io.IOException;
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 import javax.xml.bind.JAXBException;
 import net.opengis.kml.Kml;
 import org.junit.Test;
@@ -30,9 +29,9 @@ import org.junit.Test;
  *
  * @author Key Bridge LLC
  */
-public class KMLWriterTest {
+public class KMLShapeWriterTest {
 
-  public KMLWriterTest() {
+  public KMLShapeWriterTest() {
   }
 
 //  @Test
@@ -40,51 +39,57 @@ public class KMLWriterTest {
     WKTReader reader = new WKTReader();
     Geometry geometry = reader.read("POLYGON((0 0, 10 20, 20 0, 0 0))");
 
-//    String kml = KmlWriter.write(geometry);
+//    String kml = KmlShapeWriter.write(geometry);
 //    System.out.println("KML");
 //    System.out.println(kml);
   }
 
   @Test
   public void testF() throws IOException, ParseException, JAXBException {
-    GISFeature feature = buildGISFeature();
+    KmlShape shape = buildShape();
 
-    String kml = KmlWriter.toText(feature);
+    Kml kml = KmlShapeWriter.write(shape);
     System.out.println("GIS Feature");
     System.out.println(kml);
+
   }
 
   @Test
   public void testFC() throws IOException, ParseException, JAXBException {
-    GISFeatureCollection featureCollection = buildFeatureCollection();
+    List<KmlShape> shapes = buildShapes();
 
-    Kml kml = KmlWriter.write(featureCollection);
+    Kml kml = KmlShapeWriter.write(shapes);
     System.out.println("GIS FeatureCollection");
     System.out.println(kml);
   }
 
-  private GISFeature buildGISFeature() throws ParseException {
+  private KmlShape buildShape() throws ParseException {
     String polyWKT = "POLYGON((-118.16327459206458 32.53051522923972,-118.16327459206458 33.715278650109425,-116.03675535110257 33.715278650109425,-116.03675535110257 32.53051522923972,-118.16327459206458 32.53051522923972))";
     WKTReader wktReader = new WKTReader();
-    return GISFeature.getInstance("GISFeature-name", wktReader.read(polyWKT));
+
+    return buildShape("shape name", wktReader.read(polyWKT));
+
   }
 
-  private GISFeatureCollection buildFeatureCollection() throws ParseException {
+  private List<KmlShape> buildShapes() throws ParseException {
     WKTReader wktReader = new WKTReader();
     GeometryFactory gf = new GeometryFactory();
     String polyWKT = "POLYGON((-118.16327459206458 32.53051522923972,-118.16327459206458 33.715278650109425,-116.03675535110257 33.715278650109425,-116.03675535110257 32.53051522923972,-118.16327459206458 32.53051522923972))";
+    List<KmlShape> shapes = new ArrayList<>();
 
-    GISFeature feature1 = GISFeature.getInstance("GISFeature-1", wktReader.read(polyWKT));
+    shapes.add(buildShape("shape-1", wktReader.read(polyWKT)));
 
-    GISFeature feature2 = GISFeature.getInstance("GISFeature-2", gf.createPoint(new Coordinate(-124, 52)));
+    shapes.add(buildShape("shape-2", gf.createPoint(new Coordinate(-124, 52))));
+    shapes.add(buildShape("shape-3", gf.createPoint(new Coordinate(-124, 52)).buffer(5)));
 
-    GISFeature feature3 = GISFeature.getInstance("GISFeature-3", gf.createPoint(new Coordinate(-124, 52)).buffer(5));
+    return shapes;
+  }
 
-    GISFeatureCollection featureCollection = GISFeatureCollection.getInstance("fc",
-                                                                              "collection",
-                                                                              "fc-name",
-                                                                              Arrays.asList(feature1, feature2, feature3));
-    return featureCollection;
+  private KmlShape buildShape(String name, Geometry geometry) {
+    KmlShape shape = new KmlShape();
+    shape.setName(name);
+    shape.setShape(geometry);
+    return shape;
   }
 
 }

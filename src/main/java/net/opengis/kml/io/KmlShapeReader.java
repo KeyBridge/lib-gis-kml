@@ -15,8 +15,6 @@
  */
 package net.opengis.kml.io;
 
-import ch.keybridge.lib.gis.dto.GISFeature;
-import ch.keybridge.lib.gis.dto.GISFeatureCollection;
 import com.vividsolutions.jts.geom.GeometryCollection;
 import com.vividsolutions.jts.geom.GeometryFactory;
 import com.vividsolutions.jts.geom.PrecisionModel;
@@ -33,7 +31,7 @@ import net.opengis.kml.*;
  * @since v1.4.0 added 05/08/18 to support KML ETL; rewrite 05/09/18 using
  * recursion
  */
-public class KmlReader {
+public class KmlShapeReader {
 
   /**
    * Supplies a set of utility methods for building Geometry objects from lists
@@ -44,7 +42,7 @@ public class KmlReader {
    */
   private final GeometryFactory geometryFactory;
 
-  public KmlReader() {
+  public KmlShapeReader() {
     /**
      * Initialize the GeometryFactory with a precision model.
      */
@@ -63,13 +61,16 @@ public class KmlReader {
    * @param kml a KML document object
    * @return a non-null ArrayList
    */
-  public GISFeatureCollection read(Kml kml) {
+  public List<KmlShape> read(Kml kml) {
     /**
      * Recursively transform the top level Kml Feature element into a collection
      * of GIS DTO features. The top level feature could be anything, but is
      * typically a Document or Folder.
      */
-    GISFeatureCollection featureCollection = transformFeature(kml.getFeature());
+    List<KmlShape> shapes = transformFeature(kml.getFeature());
+    return shapes;
+//    GISFeatureCollection featureCollection = transformFeature(kml.getFeature());
+//    return featureCollection;
     /**
      * Here we capture only three feature types. Others are for display and eye
      * candy and ignored.
@@ -86,7 +87,6 @@ public class KmlReader {
      * Tour
      * </pre>
      */
-    return featureCollection;
   }
 
   /**
@@ -103,22 +103,31 @@ public class KmlReader {
    * @param feature a KML Folder
    * @return a GISFeatureCollection instance.
    */
-  protected GISFeatureCollection transformFeature(Feature feature) {
+  protected List<KmlShape> transformFeature(Feature feature) {
     /**
      * Construct a new GIS Feature. If the feature has extended data then set
      * the feature properties.
      */
-    GISFeatureCollection featureCollection = new GISFeatureCollection();
-    featureCollection.setId(feature.getId());
-    featureCollection.setName(feature.getName());
-    featureCollection.setDescription(feature.getDescription());
-    featureCollection.addProperties(transformExtendedData(feature));
+    List<KmlShape> shapes = new ArrayList<>();
+
+//    GISFeatureCollection featureCollection = new GISFeatureCollection();
+//    featureCollection.setId(feature.getId());
+//    featureCollection.setName(feature.getName());
+//    featureCollection.setDescription(feature.getDescription());
+//    featureCollection.addProperties(transformExtendedData(feature));
+//    Map<String, String> data = transformExtendedData(feature);
+    /**
+     * Copy the parent feature properties to each shape. This typically includes
+     * top-level parameters like file name, version, creation date, etc.
+     */
+    transformExtendedData(feature).entrySet().forEach(e -> shapes.forEach(s -> s.setProperty(e.getKey(), e.getValue())));
     /**
      * Recursively seek into documents. Flatten into one feature collection.
      */
     if (feature instanceof Document) {
       for (Feature f : ((Document) feature).getFeature()) {
-        featureCollection.getFeatures().addAll(transformFeature(f).getFeatures());
+        shapes.addAll(transformFeature(f));
+        //        featureCollection.getFeatures().addAll(transformFeature(f).getFeatures());
       }
     }
     /**
@@ -126,14 +135,16 @@ public class KmlReader {
      */
     if (feature instanceof Folder) {
       for (Feature f : ((Folder) feature).getFeature()) {
-        featureCollection.getFeatures().addAll(transformFeature(f).getFeatures());
+        shapes.addAll(transformFeature(f));
+//        featureCollection.getFeatures().addAll(transformFeature(f).getFeatures());
       }
     }
     /**
      * Transform the feature if it is a Placemark.
      */
     if (feature instanceof Placemark) {
-      featureCollection.addFeatures(transformPlacemark((Placemark) feature));
+      shapes.add(transformPlacemark((Placemark) feature));
+//      featureCollection.addFeatures(transformPlacemark((Placemark) feature));
     }
 
     /**
@@ -143,11 +154,10 @@ public class KmlReader {
      * string when the field is not present, so we must also check for "null"
      * here.
      */
-    if (featureCollection.getId() == null || featureCollection.getId().isEmpty() || featureCollection.getId().equalsIgnoreCase("null")) {
-      featureCollection.setId(Math.abs(Objects.hashCode(feature)));
-    }
-
-    return featureCollection;
+//    if (featureCollection.getId() == null || featureCollection.getId().isEmpty() || featureCollection.getId().equalsIgnoreCase("null")) {
+//      featureCollection.setId(Math.abs(Objects.hashCode(feature)));
+//    }
+    return shapes;
   }
 
   /**
@@ -158,16 +168,18 @@ public class KmlReader {
    * @param placemark a KML Placemark
    * @return a GISFeature instance
    */
-  protected GISFeature transformPlacemark(Placemark placemark) {
+  protected KmlShape transformPlacemark(Placemark placemark) {
     /**
      * Construct a new GIS Feature. If the feature has extended data then set
      * the feature properties.
      */
-    GISFeature feature = new GISFeature();
-    feature.setId(placemark.getId());
-    feature.setName(placemark.getName());
-    feature.setDescription(placemark.getDescription());
-    feature.addProperties(transformExtendedData(placemark));
+    KmlShape shape = new KmlShape();
+
+//    GISFeature shape = new GISFeature();
+//    shape.setId(placemark.getId());
+    shape.setName(placemark.getName());
+    shape.setDescription(placemark.getDescription());
+    shape.setProperties(transformExtendedData(placemark));
     /**
      * A string value representing an unstructured address written as a standard
      * street, city, state address, and/or as a postal code. You can use the
@@ -178,20 +190,20 @@ public class KmlReader {
     /**
      * Set the geometry.
      */
-    feature.setShape(transformGeometry(placemark.getGeometry()));
+    shape.setShape(transformGeometry(placemark.getGeometry()));
     /**
      * HACK: GISFeature requires a unique ID. If the KML entry does not have an
      * ID then generate one. Note that the {@code CollapsedStringAdapter}
      * produces a "null" string when the field is not present, so we must also
      * check for "null" here.
      */
-    if (feature.getId() == null || feature.getId().isEmpty() || feature.getId().equalsIgnoreCase("null")) {
-      feature.setId(Math.abs(Objects.hashCode(feature.getShape())));
+    if (shape.getId() == null) {
+      shape.setId((long) Math.abs(Objects.hashCode(shape.getShape())));
     }
     /**
      * Done.
      */
-    return feature;
+    return shape;
   }
 
   /**

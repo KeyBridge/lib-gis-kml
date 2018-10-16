@@ -18,9 +18,9 @@
  */
 package net.opengis.kml.io;
 
-import ch.keybridge.lib.gis.dto.GISFeatureCollection;
 import java.io.File;
 import java.net.URL;
+import java.util.List;
 import net.opengis.kml.Kml;
 import org.junit.Assert;
 import org.junit.Before;
@@ -30,16 +30,16 @@ import org.junit.Test;
  *
  * @author Key Bridge
  */
-public class KmlReaderTest {
+public class KmlShapeReaderTest {
 
-  private KmlReader reader;
+  private KmlShapeReader reader;
 
-  public KmlReaderTest() {
+  public KmlShapeReaderTest() {
   }
 
   @Before
   public void setUp() {
-    this.reader = new KmlReader();
+    this.reader = new KmlShapeReader();
 
   }
 
@@ -49,11 +49,11 @@ public class KmlReaderTest {
     URL uri = getClass().getClassLoader().getResource("exampledata/worldBorders.kml"); // collection of GISFeature
     Kml kml = Kml.unmarshal(new File(uri.toURI()));
 
-    GISFeatureCollection fc = reader.read(kml);
+    List<KmlShape> fc = reader.read(kml);
 
-    System.out.println("GISFeatureCollection " + fc.getName() + " size " + fc.getFeatures().size());
+    System.out.println("KmlShape size " + fc.size());
 //    System.out.println(JaxbUtility.marshal(fc));
-    Assert.assertEquals(244, fc.getFeatures().size());
+    Assert.assertEquals(244, fc.size());
     System.out.println("KmlReaderTest success");
 
   }
