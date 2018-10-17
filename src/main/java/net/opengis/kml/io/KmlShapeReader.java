@@ -117,11 +117,6 @@ public class KmlShapeReader {
 //    featureCollection.addProperties(transformExtendedData(feature));
 //    Map<String, String> data = transformExtendedData(feature);
     /**
-     * Copy the parent feature properties to each shape. This typically includes
-     * top-level parameters like file name, version, creation date, etc.
-     */
-    transformExtendedData(feature).entrySet().forEach(e -> shapes.forEach(s -> s.setProperty(e.getKey(), e.getValue())));
-    /**
      * Recursively seek into documents. Flatten into one feature collection.
      */
     if (feature instanceof Document) {
@@ -146,7 +141,11 @@ public class KmlShapeReader {
       shapes.add(transformPlacemark((Placemark) feature));
 //      featureCollection.addFeatures(transformPlacemark((Placemark) feature));
     }
-
+    /**
+     * Copy the parent feature properties to each shape. This typically includes
+     * top-level parameters like file name, version, creation date, etc.
+     */
+    transformExtendedData(feature).entrySet().forEach(e -> shapes.forEach(s -> s.setProperty(e.getKey(), e.getValue())));
     /**
      * HACK: GISFeatureCollection does not requires a unique ID but we should
      * provide one anyway. If the KML entry does not have an ID then generate
