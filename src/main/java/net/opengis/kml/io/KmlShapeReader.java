@@ -175,7 +175,7 @@ public class KmlShapeReader {
     KmlShape shape = new KmlShape();
 
 //    GISFeature shape = new GISFeature();
-//    shape.setId(placemark.getId());
+    shape.setPlacemarkId(placemark.getId());
     shape.setName(placemark.getName());
     shape.setDescription(placemark.getDescription());
     shape.setProperties(transformExtendedData(placemark));

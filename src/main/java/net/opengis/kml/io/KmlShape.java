@@ -54,6 +54,10 @@ public class KmlShape implements Serializable {
    */
   private String name;
   /**
+   * The placemark ID.
+   */
+  private String placemarkId;
+  /**
    * The shape description. This is typically a place mark name.
    */
   private String description;
@@ -85,6 +89,14 @@ public class KmlShape implements Serializable {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  public String getPlacemarkId() {
+    return placemarkId;
+  }
+
+  public void setPlacemarkId(String placemarkId) {
+    this.placemarkId = placemarkId;
   }
 
   public String getDescription() {

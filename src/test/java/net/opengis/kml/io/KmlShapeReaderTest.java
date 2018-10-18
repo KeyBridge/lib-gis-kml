@@ -56,6 +56,14 @@ public class KmlShapeReaderTest {
     Assert.assertEquals(244, fc.size());
     System.out.println("KmlReaderTest success");
 
+    for (KmlShape kmlShape : fc) {
+//      System.out.println("  " + kmlShape.getId());
+      if ("ASM".equals(kmlShape.getPlacemarkId())) {
+        System.out.println("  ASM: " + kmlShape.getShape());
+      }
+
+    }
+
   }
 
 }
