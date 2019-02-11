@@ -135,7 +135,7 @@ public class Point extends Geometry implements Cloneable {
     super();
   }
 
-  public static Point getInstance(com.vividsolutions.jts.geom.Point point) {
+  public static Point getInstance(org.locationtech.jts.geom.Point point) {
     Point p = new Point();
     p.getCoordinates().add(new Coordinate(point.getX(), point.getY()));
     return p;

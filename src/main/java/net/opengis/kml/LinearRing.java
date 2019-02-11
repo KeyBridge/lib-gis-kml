@@ -160,17 +160,17 @@ public class LinearRing
     super();
   }
 
-  public static LinearRing getInstance(com.vividsolutions.jts.geom.LinearRing linearRing) {
+  public static LinearRing getInstance(org.locationtech.jts.geom.LinearRing linearRing) {
     LinearRing lr = new LinearRing();
-    for (com.vividsolutions.jts.geom.Coordinate coordinate : linearRing.getCoordinates()) {
+    for (org.locationtech.jts.geom.Coordinate coordinate : linearRing.getCoordinates()) {
       lr.getCoordinates().add(new Coordinate(coordinate.x, coordinate.y));
     }
     return lr;
   }
 
-  public static LinearRing getInstance(com.vividsolutions.jts.geom.LineString lineString) {
+  public static LinearRing getInstance(org.locationtech.jts.geom.LineString lineString) {
     LinearRing lr = new LinearRing();
-    for (com.vividsolutions.jts.geom.Coordinate coordinate : lineString.getCoordinates()) {
+    for (org.locationtech.jts.geom.Coordinate coordinate : lineString.getCoordinates()) {
       lr.getCoordinates().add(new Coordinate(coordinate.x, coordinate.y));
     }
     return lr;

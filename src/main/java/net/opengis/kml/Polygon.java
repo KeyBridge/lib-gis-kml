@@ -16,7 +16,7 @@
  */
 package net.opengis.kml;
 
-import com.vividsolutions.jts.geom.LineString;
+import org.locationtech.jts.geom.LineString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.*;
@@ -168,7 +168,7 @@ public class Polygon extends Geometry implements Cloneable {
     super();
   }
 
-  public static Polygon getInstance(com.vividsolutions.jts.geom.Polygon polygon) {
+  public static Polygon getInstance(org.locationtech.jts.geom.Polygon polygon) {
     Polygon p = new Polygon();
     p.setOuterBoundaryIs(new Boundary(LinearRing.getInstance(polygon.getExteriorRing())));
     for (int i = 0; i < polygon.getNumInteriorRing(); i++) {

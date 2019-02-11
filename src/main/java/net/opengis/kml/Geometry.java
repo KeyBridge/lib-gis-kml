@@ -101,7 +101,7 @@ public abstract class Geometry extends AbstractObject implements Cloneable {
     super();
   }
 
-  public static Geometry getInstance(com.vividsolutions.jts.geom.Geometry jtsGeometry) {
+  public static Geometry getInstance(org.locationtech.jts.geom.Geometry jtsGeometry) {
     Geometry geometry = null;
 
     switch (jtsGeometry.getClass().getSimpleName()) {
@@ -109,14 +109,14 @@ public abstract class Geometry extends AbstractObject implements Cloneable {
        * A closed line string, typically the outer boundary of a Polygon.
        */
       case "LinearRing": {
-        geometry = LinearRing.getInstance((com.vividsolutions.jts.geom.LinearRing) jtsGeometry);
+        geometry = LinearRing.getInstance((org.locationtech.jts.geom.LinearRing) jtsGeometry);
         break;
       }
       /**
        * A connected set of line segments.
        */
       case "LineString": {
-        geometry = LineString.getInstance((com.vividsolutions.jts.geom.LineString) jtsGeometry);
+        geometry = LineString.getInstance((org.locationtech.jts.geom.LineString) jtsGeometry);
         break;
       }
       /**
@@ -135,7 +135,7 @@ public abstract class Geometry extends AbstractObject implements Cloneable {
        * altitude.
        */
       case "Point": {
-        geometry = Point.getInstance((com.vividsolutions.jts.geom.Point) jtsGeometry);
+        geometry = Point.getInstance((org.locationtech.jts.geom.Point) jtsGeometry);
         break;
       }
       /**
@@ -143,7 +143,7 @@ public abstract class Geometry extends AbstractObject implements Cloneable {
        * boundaries. The boundaries, in turn, are defined by LinearRings.
        */
       case "Polygon": {
-        geometry = Polygon.getInstance((com.vividsolutions.jts.geom.Polygon) jtsGeometry);
+        geometry = Polygon.getInstance((org.locationtech.jts.geom.Polygon) jtsGeometry);
         break;
       }
 

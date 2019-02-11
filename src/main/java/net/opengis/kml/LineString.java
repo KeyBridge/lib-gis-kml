@@ -156,9 +156,9 @@ public class LineString extends Geometry implements Cloneable {
     super();
   }
 
-  public static LineString getInstance(com.vividsolutions.jts.geom.LineString lineString) {
+  public static LineString getInstance(org.locationtech.jts.geom.LineString lineString) {
     LineString ls = new LineString();
-    for (com.vividsolutions.jts.geom.Coordinate coordinate : lineString.getCoordinates()) {
+    for (org.locationtech.jts.geom.Coordinate coordinate : lineString.getCoordinates()) {
       ls.getCoordinates().add(new Coordinate(coordinate.x, coordinate.y));
     }
     return ls;

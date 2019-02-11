@@ -15,9 +15,9 @@
  */
 package net.opengis.kml.io;
 
-import com.vividsolutions.jts.geom.GeometryCollection;
-import com.vividsolutions.jts.geom.GeometryFactory;
-import com.vividsolutions.jts.geom.PrecisionModel;
+import org.locationtech.jts.geom.GeometryCollection;
+import org.locationtech.jts.geom.GeometryFactory;
+import org.locationtech.jts.geom.PrecisionModel;
 import java.util.*;
 import net.opengis.kml.*;
 
@@ -228,8 +228,8 @@ public class KmlShapeReader {
    * @param kmlGeometry a KML geometry type
    * @return a JTS geometry type
    */
-  protected com.vividsolutions.jts.geom.Geometry transformGeometry(Geometry kmlGeometry) {
-    com.vividsolutions.jts.geom.Geometry geometry = null;
+  protected org.locationtech.jts.geom.Geometry transformGeometry(Geometry kmlGeometry) {
+    org.locationtech.jts.geom.Geometry geometry = null;
 
     switch (kmlGeometry.getClass().getSimpleName()) {
       /**
@@ -310,7 +310,7 @@ public class KmlShapeReader {
    * @param point a KML Point
    * @return a JS Point
    */
-  protected com.vividsolutions.jts.geom.Point transformPoint(Point point) {
+  protected org.locationtech.jts.geom.Point transformPoint(Point point) {
     Coordinate coordinate = point.getCoordinates().get(0);
     return geometryFactory.createPoint(transformCoordinate(coordinate));
   }
@@ -325,11 +325,11 @@ public class KmlShapeReader {
    * @return a JTS GeometryCollection
    */
   protected GeometryCollection transformMultiGeometry(MultiGeometry multiGeometry) {
-    Collection<com.vividsolutions.jts.geom.Geometry> geometries = new ArrayList<>();
+    Collection<org.locationtech.jts.geom.Geometry> geometries = new ArrayList<>();
     for (Geometry geometry : multiGeometry.getGeometry()) {
       geometries.add(transformGeometry(geometry));
     }
-    return geometryFactory.createGeometryCollection(geometries.toArray(new com.vividsolutions.jts.geom.Geometry[geometries.size()]));
+    return geometryFactory.createGeometryCollection(geometries.toArray(new org.locationtech.jts.geom.Geometry[geometries.size()]));
   }
 
   /**
@@ -338,12 +338,12 @@ public class KmlShapeReader {
    * @param lineString a KML LineString
    * @return a JTS LineString
    */
-  protected com.vividsolutions.jts.geom.LineString transformLineString(LineString lineString) {
-    Collection<com.vividsolutions.jts.geom.Coordinate> coordinates = new ArrayList<>();
+  protected org.locationtech.jts.geom.LineString transformLineString(LineString lineString) {
+    Collection<org.locationtech.jts.geom.Coordinate> coordinates = new ArrayList<>();
     for (Coordinate coordinate : lineString.getCoordinates()) {
       coordinates.add(transformCoordinate(coordinate));
     }
-    return geometryFactory.createLineString(coordinates.toArray(new com.vividsolutions.jts.geom.Coordinate[coordinates.size()]));
+    return geometryFactory.createLineString(coordinates.toArray(new org.locationtech.jts.geom.Coordinate[coordinates.size()]));
   }
 
   /**
@@ -352,12 +352,12 @@ public class KmlShapeReader {
    * @param linearRing a KML LinearRing
    * @return a JTS LinearRing
    */
-  protected com.vividsolutions.jts.geom.LinearRing transformLinearRing(LinearRing linearRing) {
-    Collection<com.vividsolutions.jts.geom.Coordinate> coordinates = new ArrayList<>();
+  protected org.locationtech.jts.geom.LinearRing transformLinearRing(LinearRing linearRing) {
+    Collection<org.locationtech.jts.geom.Coordinate> coordinates = new ArrayList<>();
     for (Coordinate coordinate : linearRing.getCoordinates()) {
       coordinates.add(transformCoordinate(coordinate));
     }
-    return geometryFactory.createLinearRing(coordinates.toArray(new com.vividsolutions.jts.geom.Coordinate[coordinates.size()]));
+    return geometryFactory.createLinearRing(coordinates.toArray(new org.locationtech.jts.geom.Coordinate[coordinates.size()]));
   }
 
   /**
@@ -366,25 +366,25 @@ public class KmlShapeReader {
    * @param polygon a KML Polygon
    * @return a JTS polygon
    */
-  protected com.vividsolutions.jts.geom.Polygon transformPolygon(Polygon polygon) {
+  protected org.locationtech.jts.geom.Polygon transformPolygon(Polygon polygon) {
     /**
      * Outer ring
      */
-    com.vividsolutions.jts.geom.LinearRing outerRing = transformLinearRing(polygon.getOuterBoundaryIs().getLinearRing());
+    org.locationtech.jts.geom.LinearRing outerRing = transformLinearRing(polygon.getOuterBoundaryIs().getLinearRing());
     /**
      * Inner rings. A Polygon can contain multiple innerBoundaryIs elements,
      * which create multiple cut-outs inside the Polygon.
      */
-    Collection<com.vividsolutions.jts.geom.LinearRing> innerRings = new ArrayList<>();
+    Collection<org.locationtech.jts.geom.LinearRing> innerRings = new ArrayList<>();
     for (Boundary innerBoundary : polygon.getInnerBoundaryIs()) {
-      com.vividsolutions.jts.geom.LinearRing innerRing = transformLinearRing(innerBoundary.getLinearRing());
+      org.locationtech.jts.geom.LinearRing innerRing = transformLinearRing(innerBoundary.getLinearRing());
       innerRings.add(innerRing);
     }
     /**
      * Constructs a Polygon with the given exterior boundary and interior
      * boundaries.
      */
-    return geometryFactory.createPolygon(outerRing, innerRings.toArray(new com.vividsolutions.jts.geom.LinearRing[innerRings.size()]));
+    return geometryFactory.createPolygon(outerRing, innerRings.toArray(new org.locationtech.jts.geom.LinearRing[innerRings.size()]));
   }
 
   /**
@@ -393,8 +393,8 @@ public class KmlShapeReader {
    * @param coordinate a KML coordinate
    * @return a JTS coordinate.
    */
-  protected com.vividsolutions.jts.geom.Coordinate transformCoordinate(Coordinate coordinate) {
-    return new com.vividsolutions.jts.geom.Coordinate(coordinate.getLongitude(),
+  protected org.locationtech.jts.geom.Coordinate transformCoordinate(Coordinate coordinate) {
+    return new org.locationtech.jts.geom.Coordinate(coordinate.getLongitude(),
                                                       coordinate.getLatitude(),
                                                       coordinate.getAltitude());
   }

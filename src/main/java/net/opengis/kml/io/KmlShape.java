@@ -18,7 +18,7 @@
  */
 package net.opengis.kml.io;
 
-import com.vividsolutions.jts.geom.Geometry;
+import org.locationtech.jts.geom.Geometry;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
