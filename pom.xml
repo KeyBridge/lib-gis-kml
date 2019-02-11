@@ -3,8 +3,15 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>keybridge.lib</groupId>
   <artifactId>gis-kml</artifactId>
-  <version>2.0.0</version>
+  <version>2.0.1</version>
   <packaging>jar</packaging>
+
+  <parent>
+    <groupId>keybridge.lib</groupId>
+    <artifactId>gis</artifactId>
+    <version>1.0.0</version>
+  </parent>
+
   <name>lib-gis-kml</name>
   <description>A KML reader and writer.
 
@@ -52,31 +59,19 @@
     v1.3.1 - bump GIS DTO versions and dependencies
     v1.4.0 - refactor to use DTOs
     v2.0.0 - rewrite using internal "KmlShape" DTO, remove GIS DTO dependency
+    v2.0.1 - rewrite pom using 'gis' parent for improved dependency management
 
   </description>
 
-
-  <organization>
-    <name>Key Bridge</name>
-    <url>http://keybridge.ch</url>
-  </organization>
-
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
     <javadoc.opts>-Xdoclint:none</javadoc.opts>
     <additionalparam>-Xdoclint:none</additionalparam>
-    <geotools.version>10.8</geotools.version>
   </properties>
 
   <dependencies>
     <dependency>
       <groupId>com.vividsolutions</groupId>
       <artifactId>jts</artifactId>
-      <version>1.13</version>
-      <type>jar</type>
-      <scope>provided</scope>
     </dependency>
 
     <!--use the following will enable the GeoTools Encoder-->
@@ -91,45 +86,19 @@
       <version>${geotools.version}</version>
     </dependency>-->
 
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.12</version>
-      <scope>test</scope>
-    </dependency>
-
   </dependencies>
 
 
   <profiles>
     <profile>
-      <id>doclint-java8-disable</id>
+      <id>disable-java8-doclint</id>
       <activation>
         <jdk>[1.8,)</jdk>
       </activation>
-
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-javadoc-plugin</artifactId>
-            <version>2.9</version>
-            <configuration>
-              <additionalparam>-Xdoclint:none</additionalparam>
-            </configuration>
-          </plugin>
-        </plugins>
-      </build>
+      <properties>
+        <additionalparam>-Xdoclint:none</additionalparam>
+      </properties>
     </profile>
   </profiles>
-
-
-  <distributionManagement>
-    <repository>
-      <id>${repository.name}</id>
-      <url>${repository.url}</url>
-    </repository>
-  </distributionManagement>
-
 
 </project>
