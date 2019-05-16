@@ -65,7 +65,7 @@
 
     History: v3.x branch
     v3.0.0 - upgrade 02/11/19 with GeoTools v20.1 and JTS v1.16.0
-    v3.0.1 - upgrade GeoTools to version 21.1
+    v3.0.1 - upgrade gis parent reference
 
   </description>
 
