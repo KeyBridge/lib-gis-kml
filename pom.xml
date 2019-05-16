@@ -3,13 +3,13 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>keybridge.lib</groupId>
   <artifactId>gis-kml</artifactId>
-  <version>3.0.0</version>
+  <version>3.0.1</version>
   <packaging>jar</packaging>
 
   <parent>
     <groupId>keybridge.lib</groupId>
     <artifactId>gis</artifactId>
-    <version>2.0.0</version>
+    <version>2.1.0</version>
   </parent>
 
   <name>lib-gis-kml</name>
@@ -65,6 +65,7 @@
 
     History: v3.x branch
     v3.0.0 - upgrade 02/11/19 with GeoTools v20.1 and JTS v1.16.0
+    v3.0.1 - upgrade GeoTools to version 21.1
 
   </description>
 
