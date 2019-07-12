@@ -13,17 +13,18 @@
  */
 package net.opengis.kml.io;
 
-import org.locationtech.jts.geom.Coordinate;
-import org.locationtech.jts.geom.Geometry;
-import org.locationtech.jts.geom.GeometryFactory;
-import org.locationtech.jts.io.ParseException;
-import org.locationtech.jts.io.WKTReader;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.JAXBException;
 import net.opengis.kml.Kml;
 import org.junit.Test;
+import org.locationtech.jts.geom.Coordinate;
+import org.locationtech.jts.geom.Geometry;
+import org.locationtech.jts.geom.GeometryFactory;
+import org.locationtech.jts.io.ParseException;
+import org.locationtech.jts.io.WKTReader;
 
 /**
  *
@@ -51,6 +52,11 @@ public class KMLShapeWriterTest {
     Kml kml = KmlShapeWriter.write(shape);
     System.out.println("GIS Feature");
     System.out.println(kml);
+
+//    kml.marshal();
+    ByteArrayOutputStream os = new ByteArrayOutputStream();
+    kml.marshal(os);
+    System.out.println("OS: " + os.toString());
 
   }
 
