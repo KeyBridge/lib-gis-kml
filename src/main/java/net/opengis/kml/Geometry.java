@@ -16,10 +16,8 @@
  */
 package net.opengis.kml;
 
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.*;
 import net.opengis.kml.annotations.Obvious;
 import net.opengis.kml.gx.MultiTrack;
