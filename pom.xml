@@ -66,6 +66,7 @@
     History: v3.x branch
     v3.0.0 - upgrade 02/11/19 with GeoTools v20.1 and JTS v1.16.0
     v3.0.1 - upgrade gis parent reference
+    - change parent to geotools, make jts provided
 
   </description>
 
@@ -78,6 +79,7 @@
     <dependency>
       <groupId>org.locationtech.jts</groupId>
       <artifactId>jts-core</artifactId>
+      <scope>provided</scope>
     </dependency>
 
     <!--use the following will enable the GeoTools Encoder-->
