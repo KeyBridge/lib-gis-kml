@@ -8,8 +8,8 @@
 
   <parent>
     <groupId>keybridge.lib</groupId>
-    <artifactId>gis</artifactId>
-    <version>2.1.0</version>
+    <artifactId>geotools</artifactId>
+    <version>1.20.2</version>
   </parent>
 
   <name>lib-gis-kml</name>
