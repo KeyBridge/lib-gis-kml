@@ -15,11 +15,11 @@
  */
 package net.opengis.kml.io;
 
+import java.util.*;
+import net.opengis.kml.*;
 import org.locationtech.jts.geom.GeometryCollection;
 import org.locationtech.jts.geom.GeometryFactory;
 import org.locationtech.jts.geom.PrecisionModel;
-import java.util.*;
-import net.opengis.kml.*;
 
 /**
  * KML reader.
@@ -395,8 +395,8 @@ public class KmlShapeReader {
    */
   protected org.locationtech.jts.geom.Coordinate transformCoordinate(Coordinate coordinate) {
     return new org.locationtech.jts.geom.Coordinate(coordinate.getLongitude(),
-                                                      coordinate.getLatitude(),
-                                                      coordinate.getAltitude());
+                                                    coordinate.getLatitude(),
+                                                    coordinate.getAltitude());
   }
 
 }
