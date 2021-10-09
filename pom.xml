@@ -9,7 +9,7 @@
   <parent>
     <groupId>keybridge.lib</groupId>
     <artifactId>geotools</artifactId>
-    <version>25.18.1</version>
+    <version>25.18.2</version>
   </parent>
 
   <name>lib-gis-kml</name>
@@ -68,7 +68,7 @@
     v3.0.1 - upgrade gis parent reference
     - change parent to geotools, make jts provided
     v3.0.2 - bump parent to v1.20.5
-    v3.0.3 - bump parent to v25.18.1; fast forward geotools and jts
+    v3.0.3 - bump parent to v25.18.2; fast forward geotools and jts
 
   </description>
 
